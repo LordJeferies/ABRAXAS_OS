@@ -1,0 +1,36 @@
+{
+  "sequence": 16,
+  "content_id": "JH02",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "JH02_B90",
+  "child_beat_ids": [
+    "JH02_B90"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:26:58.000",
+  "source_end": "00:27:07.000",
+  "timeline_in_seconds": 452.243,
+  "timeline_out_seconds": 461.243,
+  "timeline_in": "00:07:32.243",
+  "timeline_out": "00:07:41.243",
+  "duration_seconds": 9.0,
+  "text": "si tú no las sabes aprovechar y no las sabes buscar y agarrar y pedirlas porque no es solamente que esperarte y quedarte sentado diciendo me va a llegar una oportunidad, me va",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0299.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0299",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La selección explica una relación o mapa conceptual que merece lectura progresiva.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

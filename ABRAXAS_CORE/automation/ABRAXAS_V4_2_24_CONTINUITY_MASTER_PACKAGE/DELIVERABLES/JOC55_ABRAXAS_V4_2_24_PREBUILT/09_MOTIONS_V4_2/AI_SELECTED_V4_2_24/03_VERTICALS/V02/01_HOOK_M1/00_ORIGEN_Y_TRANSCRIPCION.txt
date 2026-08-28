@@ -1,0 +1,11 @@
+CONTENT: V02
+ROL: HOOK
+FUENTE: 00:11:06.713 → 00:11:12.604
+TIMELINE: 00:00:07.713 → 00:00:13.604
+DURACIÓN: 5.891s
+
+TRANSCRIPCIÓN EXACTA
+para mí lo primero es la proactividad. ¿Por qué? Porque en la universidad, dependiendo de dónde estudies,
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0125.

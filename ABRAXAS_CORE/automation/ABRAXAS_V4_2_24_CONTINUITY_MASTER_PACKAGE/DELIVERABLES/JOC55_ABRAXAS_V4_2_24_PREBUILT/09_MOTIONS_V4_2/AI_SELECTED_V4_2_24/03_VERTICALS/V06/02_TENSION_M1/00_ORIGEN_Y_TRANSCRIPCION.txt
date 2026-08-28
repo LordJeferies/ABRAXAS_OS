@@ -1,0 +1,11 @@
+CONTENT: V06
+ROL: TENSION
+FUENTE: 00:26:46.978 → 00:26:54.513
+TIMELINE: 00:00:17.978 → 00:00:25.513
+DURACIÓN: 7.535s
+
+TRANSCRIPCIÓN EXACTA
+quieres crecer en lo que sea que quieras hacer, inclusive deportivamente, creo que si no eres proactivo y tú buscas tus propias oportunidades,
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0297.

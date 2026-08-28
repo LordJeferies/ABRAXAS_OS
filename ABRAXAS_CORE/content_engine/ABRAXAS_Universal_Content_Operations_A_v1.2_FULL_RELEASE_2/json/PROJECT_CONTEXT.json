@@ -1,0 +1,25 @@
+{
+  "project": "ABRAXAS",
+  "version": "1.2",
+  "definition": "Creative/Content Operations System: criterion → prompts/results → production → QA → calendar → publication.",
+  "aggregateRoot": "content_id",
+  "activeRuntime": "src/v120",
+  "presentationModes": [
+    "dashboard",
+    "story"
+  ],
+  "roles": [
+    "all",
+    "strategy",
+    "talent",
+    "copy",
+    "recording",
+    "design",
+    "editing",
+    "qa",
+    "publishing"
+  ],
+  "operationalStatusRule": "derive visible production/readiness status from tasks, assets and schedule; preserve lifecycle as historical source field.",
+  "automation": "SHIM_CONFIRMED_MANIFEST is the single confirmed selection consumed by Terminal and DaVinci; source read-only; carousels separate.",
+  "visual": "Apple-HIG-aligned functional Liquid Glass + ABRAXAS dark/gold identity; CleanMyMac-inspired task focus; Brain Navigator 4.0."
+}

@@ -1,0 +1,36 @@
+{
+  "sequence": 10,
+  "content_id": "JH02",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "JH02_B57",
+  "child_beat_ids": [
+    "JH02_B57"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:23:59.400",
+  "source_end": "00:24:06.000",
+  "timeline_in_seconds": 273.643,
+  "timeline_out_seconds": 280.243,
+  "timeline_in": "00:04:33.643",
+  "timeline_out": "00:04:40.243",
+  "duration_seconds": 6.6,
+  "text": "tengo mi modelo de negocio, por qué no podría hacerlo si ya hecho otras cosas en las que de repente no tenía la experiencia.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0270.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0270",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La selección explica una relación o mapa conceptual que merece lectura progresiva.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

@@ -1,0 +1,11 @@
+CONTENT: JV01
+ROL: HOOK
+FUENTE: 00:08:01.043 → 00:08:06.974
+TIMELINE: 00:00:00.000 → 00:00:04.932
+DURACIÓN: 5.931s
+
+TRANSCRIPCIÓN EXACTA
+Y al final depende de cada persona, También es cierto que hay mucha gente que ha
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0095.

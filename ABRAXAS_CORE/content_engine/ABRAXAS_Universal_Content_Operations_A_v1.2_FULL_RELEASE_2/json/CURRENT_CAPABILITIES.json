@@ -1,0 +1,41 @@
+{
+  "version": "1.2",
+  "current": [
+    "Dashboard | Product Story",
+    "Liquid Glass functional shell",
+    "Action Controller",
+    "Solo creator + agency role projections",
+    "Content Studio 3.0",
+    "Talent Reading/Teleprompter",
+    "Copy Desk",
+    "Recording Desk",
+    "Design Desk",
+    "Editing Desk",
+    "QA Desk",
+    "Publishing Desk",
+    "Calendar 2.0 Month/Week/List/Backlog",
+    "Planning Insight",
+    "Operational Status",
+    "Architect 4.0",
+    "Brain Navigator 4.0",
+    "Product Story 2.0",
+    "He piece/batch",
+    "Shim confirmed-manifest workflow",
+    "Terminal/FFmpeg Automation Bridge",
+    "DaVinci Resolve Automation Bridge",
+    "Assets mapping",
+    "AI Results mapping preview",
+    "Client Quality Packs",
+    "Technique Registry 41",
+    "Visual Fidelity Gate",
+    "LOCAL standalone",
+    "WEB modular/PWA-ready",
+    "Client Intelligence standalone"
+  ],
+  "limitations": [
+    "No secure remote LLM/API secrets in LOCAL",
+    "No real multi-user auth/sync without backend",
+    "Technique Registry lab items remain explicit lab/deferred",
+    "Product Story uses native/offline motion rather than mandatory external animation CDN"
+  ]
+}

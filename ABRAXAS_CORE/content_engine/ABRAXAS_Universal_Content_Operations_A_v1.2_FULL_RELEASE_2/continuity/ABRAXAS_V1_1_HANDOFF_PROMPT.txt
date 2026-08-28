@@ -1,0 +1,73 @@
+ABRAXAS · HANDOFF MAESTRO PARA CONTINUAR v1.1
+
+CONTEXTO
+Estás continuando el desarrollo de ABRAXAS, un Content Operating System local-first creado para organizar información de marca, convertirla en prompts de alta calidad, recibir de vuelta resultados generados por IA, ordenar producción/assets/QA/calendario y llevar cada pieza hasta PUBLISHED conservando un content_id estable. La base obligatoria es ABRAXAS A v1.0. Debes leer primero el FULL RELEASE y el HTML standalone; no reconstruyas el proyecto desde recuerdos ni simplifiques sus contratos.
+
+MODELO MENTAL
+Información / intención / transcripción → He o Shim → prompts separados de contenido y visual → ejecución externa en IA → resultado vuelve a la MISMA pieza → Production Queue ordena faltantes → Assets se vinculan por content_id + slot → Content Studio permite revisar/editar 1×1 → QA → Calendar → PUBLISHED.
+
+ARQUITECTURA QUE NO DEBES ROMPER
+1. Local-first y standalone: el HTML debe funcionar mediante file:// sin servidor y sin dependencias de runtime externas.
+2. Production Graph ligero: content_id es la identidad estable. Prompts, tasks, assets, sources y publication viven alrededor del mismo objeto. La arquitectura debe seguir siendo proyectable a nodos/dependencias en el futuro.
+3. Bootstrap único al FINAL de app.js. v0.9.6 falló porque el render arrancó antes de inicializar constantes del Home procedural. v0.9.6.1 lo corrigió. Ninguna versión futura puede reintroducir boot intermedio.
+4. Gate de standalone: no basta con que src/app.js pase tests; el HTML FINAL construido debe arrancar y navegar todas las rutas.
+5. El Arquitecto Local: assistant offline contextual, utility window fija a la derecha, respuestas in-place sin renderShell global. Preparar pregunta para IA genera contexto, pero no se incrustan API keys.
+6. Story/workspace split: Home, Clients, Brand Intelligence y Roadmap usan product-story. He, Shim, Production, Assets, AI Results, Calendar y Content Studio usan workspace operativo.
+
+DIRECCIÓN VISUAL OBLIGATORIA
+Apple gobierna la interfaz y la arquitectura de información. No hagas un “dashboard SaaS oscuro con blur”. Usa jerarquía, espacios, progressive disclosure, rail de highlights, módulos protagonistas y navegación mínima. Liquid Glass se reserva principalmente a navegación, controles, popovers, utility windows y overlays funcionales. Las superficies grandes de contenido permanecen estables.
+
+Home v1.0 incorpora Brain Navigator 2.0. El cerebro es la forma primaria, procedural, formado por chevrons/triángulos abiertos de ABRAXAS. El tamaño 100% equivale al baseline visual de v0.9.6.1 y es el mínimo. El usuario puede ampliar hasta 200%, nunca por debajo de 100% ni por encima de 200%. Los hotspots se escalan con el cerebro. Cada hotspot tiene nodo, leader line, icono de herramienta y popover con nombre, propósito y CTA. En scroll el sistema puede morph de brain a routes/queue/calendar/network según la sección, pero el cerebro debe ser claramente reconocible en el hero inicial.
+
+Las superficies que se colocan encima del cerebro usan Liquid Glass translúcido: deben permitir percibir las partículas detrás. No crear paneles opacos que tapen el cerebro.
+
+FUENTES DE INSPIRACIÓN Y REGLA DE PRIORIDAD
+1. Apple HIG / macOS / páginas actuales de MacBook Pro e iPhone Pro: fuente principal para jerarquía, composición, controles, motion, disclosure, rails, inspector/workspace y producto protagonista.
+2. CleanMyMac: referencia para herramientas operativas — módulo protagonista, una acción primaria, secuencia clara y estados de proceso visibles.
+3. Dala: únicamente referencia para el campo procedural del Home (constelación/partículas). Adaptar partículas a chevron ABRAXAS y paleta oro/bone/bronze; no copiar su sistema completo.
+4. OHZI: únicamente referencia secundaria para sensación de objeto inmersivo en void; no imponer su UI angular.
+5. Refero/Awwwards: referencias de ritmo, sliders, overlays y transiciones cuando no contradicen Apple.
+6. Cada cliente conserva identidad propia en sus contenidos. El shell es ABRAXAS; los assets/editorial de Moka/JOC/INENERGY no deben homogenizarse.
+
+HE - CONTENT FACTORY
+- Dos modos: Crear pieza / Crear lote.
+- Formato físico manda: Reel, Carrusel, Horizontal, LinkedIn, Newsletter, Nota, Stories, Imagen.
+- Pilares del cliente, patrón cliente y patrón universal añaden ADN/estructura; un patrón de otro medio se adapta, no se bloquea.
+- Micro-batch 1–6: Coverage Map debe crear ángulos distintos, no paráfrasis.
+- Crear lote: 1 semana / 2 semanas / 1 mes. Cadencias independientes L1/L2/L3 (Baja/Media/Alta). L1 conserva principales; L2 derivados/frecuencia; L3 soporte/historias/activación. Opción de reutilizar contenido existente.
+- Prompt de contenido y prompt visual siempre separados.
+
+SHIM
+Wizard de cinco pasos: Fuente → Outputs → Estructuras → Revisar → Exportar. Respeta transcript integrity y timestamps; no inventa palabras habladas. Puede pedir verticales/horizontales/carruseles/plataformas/estructuras. Exporta Prompt/TXT/JSON para ejecución externa y handoff posterior de automatización de cortes.
+
+CONTENT STUDIO
+Editor 1×1. Overview debe mostrar tipo físico y estado. Contenido + Producción integra guion/slide con dirección visual. Prompts largos se colapsan. Video: recording, B-roll, VFX/Omni, START/MIDDLE/END, still/foto, SFX, música. Carrusel: texto por slide + dirección visual + prompt CON texto + SIN texto. Prompt Composer recompila desde campos editables. Historial y granular exports se preservan.
+
+BRANDING METHOD / CLIENT INTELLIGENCE
+Brand Intelligence debe permitir entender el Branding Method general o verlo aplicado a un cliente. Mantener Brand Core, Identity, Client Explanation, Commercialization y las 25 tools. Aplicación por cliente debe usar Core, proof points, boundaries, pillars, patterns, copy profiles, visual rules y fuentes; no respuestas genéricas.
+
+NEXT ROADMAP — v1.1 Y DESPUÉS
+No implementes todo a la vez. Para v1.1 conserva como gate primario que v1.0 siga arrancando standalone y que Brain Navigator 2.0 / navegación / Arquitecto no se rompan. Candidatos de desarrollo, por prioridad estratégica histórica:
+A. P10 Automation Bridge: handoff ejecutable para Terminal/FFmpeg y DaVinci a partir de los cortes/timestamps elegidos en resultados de Shim. Debe poder exportar video unido, segmentos separados o ambos, para todos/selección/una pieza.
+B. Visual Composer Foundation (post-v1.0): editor local tipo Canva mediante Canvas/SVG/DOM o librería bundled; capas, imagen, texto, drag/resize/rotate, color/alineación, logos, shapes, undo/redo, export PNG/JPEG/WebP y proyecto JSON. Debe seguir siendo estático/offline. No usar backend salvo sync/collaboration/generación segura.
+C. El Arquitecto 2.x: mayor knowledge graph local, guías por paso, spotlight de controles y, solo con backend seguro, opción LLM conectada.
+D. Optional Graph View: visualización de nodos/dependencias sin cambiar el Production Graph subyacente.
+E. ABRAXAS C / Hybrid: auth, almacenamiento/sync y colaboración; nunca poner API keys secretas en el HTML.
+F. Operational analytics reales cuando exista uso suficiente: throughput, lead time, bottlenecks, publication cadence, rework.
+
+CRITERIOS PARA CAMBIOS FUTUROS
+- Nunca sacrificar funcionalidad por estética.
+- Cada feature nueva requiere test RED, GREEN y regresión sobre standalone final.
+- No crear múltiples bootstraps.
+- No perder estado guardado sin migración explícita.
+- No mostrar 100 tareas si el usuario necesita una siguiente acción.
+- No usar glass para todo.
+- No usar contenido genérico donde existe contexto de cliente.
+- No crear prompts superficiales. Deben contener rol, objetivo, contexto, qué es/qué no es, restricciones, criterios de aceptación, salida exacta y QA.
+
+PRIMERA ACCIÓN EN EL NUEVO CHAT
+1. Descomprime y lee el FULL RELEASE v1.0.
+2. Abre START_HERE.md, continuity/ABRAXAS_MASTER_PROJECT_CONTEXT.md, continuity/ABRAXAS_WHAT_HAS_BEEN_BUILT.md, continuity/ABRAXAS_WHAT_REMAINS.md, json/ROADMAP.json, json/ABRAXAS_VISUAL_MOTION_SYSTEM_v1.0.json y prompts/ABRAXAS_VISUAL_DIRECTION_PROMPT_v1.0.txt.
+3. Ejecuta baseline tests antes de tocar código.
+4. Pregunta qué lane de v1.1 se prioriza solo si el usuario no lo especificó en el nuevo chat.
+5. Implementa sin reescribir desde cero.

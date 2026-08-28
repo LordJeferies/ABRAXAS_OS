@@ -1,0 +1,42 @@
+{
+  "sequence": 7,
+  "content_id": "JH03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "JH03_B38",
+  "child_beat_ids": [
+    "JH03_B38"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:51:29.000",
+  "source_end": "00:51:37.000",
+  "timeline_in_seconds": 189.444,
+  "timeline_out_seconds": 197.444,
+  "timeline_in": "00:03:09.444",
+  "timeline_out": "00:03:17.444",
+  "duration_seconds": 8.0,
+  "text": "Pero fue algo increíble que me pasó hoy que fue... materializar ese impacto que puedes tener a través de tu propósito que también es rentable.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0549.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0549",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

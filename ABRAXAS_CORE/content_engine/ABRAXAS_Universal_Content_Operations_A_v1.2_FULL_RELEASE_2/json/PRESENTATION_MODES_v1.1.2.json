@@ -1,0 +1,26 @@
+{
+  "version": "1.1.2",
+  "globalSwitch": "Dashboard | Product Story",
+  "default": "dashboard",
+  "storyCapableSections": [
+    "dashboard",
+    "clients",
+    "branding",
+    "roadmap"
+  ],
+  "workspaceOnlySections": [
+    "factory",
+    "shim",
+    "production",
+    "airesults",
+    "assets",
+    "calendar"
+  ],
+  "rules": [
+    "same data/state in Dashboard and Product Story",
+    "sidebar visible in Dashboard",
+    "sidebar hidden in Product Story",
+    "selection persists",
+    "operational modules never become storytelling"
+  ]
+}

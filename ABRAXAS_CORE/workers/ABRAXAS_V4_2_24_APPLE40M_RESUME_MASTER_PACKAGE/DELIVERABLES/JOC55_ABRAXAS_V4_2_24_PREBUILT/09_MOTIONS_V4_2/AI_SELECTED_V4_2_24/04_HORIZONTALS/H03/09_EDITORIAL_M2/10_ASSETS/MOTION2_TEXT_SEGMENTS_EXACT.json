@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Y lo más increíble es que se conectan con profesores super interactivos, una comunidad que todo el está como remando hacia el mismo lado.",
+  "segments": [
+    "Y lo más increíble es que se conectan",
+    "con profesores super interactivos, una comunidad que todo",
+    "el está como remando hacia el mismo lado."
+  ],
+  "reconstructed_text": "Y lo más increíble es que se conectan con profesores super interactivos, una comunidad que todo el está como remando hacia el mismo lado."
+}

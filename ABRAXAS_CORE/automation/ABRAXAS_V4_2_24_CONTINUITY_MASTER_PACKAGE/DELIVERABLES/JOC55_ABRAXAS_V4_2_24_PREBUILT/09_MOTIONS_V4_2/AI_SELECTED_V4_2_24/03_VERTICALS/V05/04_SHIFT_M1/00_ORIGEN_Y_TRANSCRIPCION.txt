@@ -1,0 +1,11 @@
+CONTENT: V05
+ROL: SHIFT
+FUENTE: 00:18:26.000 → 00:18:32.000
+TIMELINE: 00:00:45.000 → 00:00:51.000
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+Y era algo diario que de repente añadía una hora, dos horas diarias de ese ejercicio de hacer.
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0213.

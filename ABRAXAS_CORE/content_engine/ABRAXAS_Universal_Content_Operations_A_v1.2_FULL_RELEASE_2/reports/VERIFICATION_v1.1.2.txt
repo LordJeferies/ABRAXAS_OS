@@ -1,0 +1,30 @@
+ABRAXAS A v1.1.2 · FINAL VERIFICATION
+
+SOURCE / RUNTIME
+- node --check src/app.js: PASS
+- node --check src/core.js: PASS
+- node --check src/data.js: PASS
+- node tests/test_core_node.js: PASS
+- node tests/test_runtime_node.js: PASS
+- node tests/test_browser_boot_node.js: PASS
+
+REGRESSION / CONTRACTS
+- python3 -m unittest tests/test_release.py tests/test_v112_presentation_mode.py tests/test_v112_automation_contract.py
+- Result: 186 tests · PASS
+
+PROMPT QUALITY
+- Total: 932
+- Minimum score: 100/100
+- Average score: 100/100
+- Minimum words: 324
+- Failed: 0
+- Short prompts: 0
+- Placeholder hits: 0
+
+BUILDS
+- LOCAL standalone build: PASS
+- WEB modular build: PASS
+- Standalone browser boot + all routes: PASS
+
+FINAL PACKAGE INSPECTION
+- Performed after packaging; see FINAL_PACKAGE_INSPECTION_v1.1.2.json and external SHA-256 outputs.

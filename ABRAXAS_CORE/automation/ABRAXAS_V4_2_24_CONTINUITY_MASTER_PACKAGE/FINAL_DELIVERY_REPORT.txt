@@ -1,0 +1,31 @@
+ABRAXAS V4.2.24 · FINAL DELIVERY REPORT
+
+STATUS: PASS WITH 10 DECLARED EDITORIAL DURATION WARNINGS
+BLOCKERS: 0
+
+HTMLS
+- JOC55_AMANDA_CONTENT_ENGINE_V4_2_24.html
+- JOC55_AMANDA_INTRO_LAB_V4_2_24.html
+
+CONTENT
+- 37 verticales
+- 222 motions verticales (6 por video)
+- 12 horizontales completos
+- 255 oportunidades horizontales (~2/min)
+- 477 ventanas Motion seleccionadas
+
+TRANSCRIPCIÓN
+- 953 cues originales
+- 842 ventanas de referencia de hasta 9 s
+- 15,562 tokens preservados en el mismo orden
+
+VALIDACIÓN
+- 37/37 tests de la base ejecutable
+- 12/12 tests específicos V4.2.24
+- Intro Lab core hash intacto
+- Fixed-time render slicing: prohibited/absent
+
+ADVERTENCIAS EDITORIALES
+V03, V08, V10, V13, JV03, MV01, MV02, MV03, MV05 y MV07 exceden 80 s.
+No se truncaron automáticamente porque hacerlo cambiaría contenido aprobado.
+

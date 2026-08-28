@@ -1,0 +1,1 @@
+const ABRAXAS_ASSETS={abraxasAppIcon:'assets/abraxas_app_icon_v100.png',architectAppIcon:'assets/el_arquitecto_app_icon_v100.png'};

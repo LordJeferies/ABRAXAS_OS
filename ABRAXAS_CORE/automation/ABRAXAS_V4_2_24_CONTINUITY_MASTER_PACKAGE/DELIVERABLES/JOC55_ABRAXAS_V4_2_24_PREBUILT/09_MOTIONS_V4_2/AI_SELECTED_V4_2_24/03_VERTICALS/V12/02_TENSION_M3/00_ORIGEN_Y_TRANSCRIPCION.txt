@@ -1,0 +1,11 @@
+CONTENT: V12
+ROL: TENSION
+FUENTE: 01:24:45.997 → 01:24:52.664
+TIMELINE: 00:00:15.997 → 00:00:22.664
+DURACIÓN: 6.667s
+
+TRANSCRIPCIÓN EXACTA
+pero pienso que siempre he sido una persona que las dificultades que he encontrado siempre le busco la oportunidad,
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0893.

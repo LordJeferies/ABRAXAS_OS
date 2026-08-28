@@ -1,0 +1,12 @@
+# HOTFIX
+- [ ] traceback completo leído
+- [ ] root cause identificada
+- [ ] prueba mínima creada
+- [ ] backup
+- [ ] payload acumulativo
+- [ ] configs preservadas
+- [ ] cache Python limpiada
+- [ ] módulos compilados
+- [ ] verificador específico
+- [ ] un clip/timeline probado
+- [ ] lote solo después

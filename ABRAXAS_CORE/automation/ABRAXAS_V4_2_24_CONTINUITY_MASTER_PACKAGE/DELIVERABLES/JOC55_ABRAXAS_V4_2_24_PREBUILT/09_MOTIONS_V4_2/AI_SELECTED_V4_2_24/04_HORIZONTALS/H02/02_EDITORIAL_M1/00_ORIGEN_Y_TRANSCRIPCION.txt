@@ -1,0 +1,11 @@
+CONTENT: H02
+ROL: EDITORIAL
+FUENTE: 00:36:17.000 → 00:36:25.000
+TIMELINE: 00:00:55.000 → 00:01:03.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Y mucha gente comentaba, yo no sabía que esto era así, nadie me había dicho que esto era así, qué bueno que ya lo sé, voy a empezar ontología, gracias.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0403.

@@ -1,0 +1,39 @@
+{
+  "sequence": 1,
+  "content_id": "JV08",
+  "narrative_role": "HOOK",
+  "source_part_id": "JV08_P01",
+  "child_beat_ids": [
+    "JV08_B01",
+    "JV08_B02"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:25:33.231",
+  "source_end": "00:25:40.695",
+  "timeline_in_seconds": 0.0,
+  "timeline_out_seconds": 7.464,
+  "timeline_in": "00:00:00.000",
+  "timeline_out": "00:00:07.464",
+  "duration_seconds": 7.464,
+  "text": "y fíjate cómo se conecta esto a que hablamos hace rato de que la universidad sí te da otras habilidades que igual te termina impactando.",
+  "reason": "Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0284.",
+  "semantic_score": 7.62,
+  "transcript_reference": "SRT_0284",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La tesis verbal es la imagen principal y funciona como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

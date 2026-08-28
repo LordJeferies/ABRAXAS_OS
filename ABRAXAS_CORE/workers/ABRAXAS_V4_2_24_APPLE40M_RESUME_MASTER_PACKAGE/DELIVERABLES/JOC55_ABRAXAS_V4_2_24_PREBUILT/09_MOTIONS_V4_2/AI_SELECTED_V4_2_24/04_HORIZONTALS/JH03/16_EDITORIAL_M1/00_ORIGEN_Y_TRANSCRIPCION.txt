@@ -1,0 +1,11 @@
+CONTENT: JH03
+ROL: EDITORIAL
+FUENTE: 01:28:57.000 → 01:29:05.000
+TIMELINE: 00:07:17.322 → 00:07:25.322
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+La gente siempre quiere el resultado, pero no muchas veces está dispuesto a escuchar el cómo llegar al resultado, porque no es gratis, no es algo que es de la noche a la mañana,
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0933.

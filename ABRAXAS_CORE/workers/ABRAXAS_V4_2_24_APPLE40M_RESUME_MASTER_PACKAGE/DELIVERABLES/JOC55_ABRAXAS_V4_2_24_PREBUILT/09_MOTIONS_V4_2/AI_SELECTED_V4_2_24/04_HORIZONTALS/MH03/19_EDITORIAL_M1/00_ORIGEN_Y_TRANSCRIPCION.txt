@@ -1,0 +1,11 @@
+CONTENT: MH03
+ROL: EDITORIAL
+FUENTE: 00:44:23.000 → 00:44:32.000
+TIMELINE: 00:09:16.736 → 00:09:25.736
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Porque al final tú trataste de resolver algo que inclusive, si creaste un producto... ese producto lo querías para ti o era una necesidad que tú también podías tener.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0481.

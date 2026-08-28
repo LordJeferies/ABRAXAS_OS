@@ -1,0 +1,7 @@
+RANGO FUENTE: 00:24:10.000 → 00:24:15.656
+RANGO EN VIDEO: 00:00:46.000 → 00:00:51.656
+DURACIÓN: 5.656s
+PISTA: V3
+MODO: REPLACE_VISUAL_KEEP_SOURCE_AUDIO
+
+Conservar el video fuente en V1 y su audio original en A1. Importar MOTION_FINAL sin audio y colocarlo exactamente en el rango indicado. No crear clips adicionales entre motions. Mantener captions aprobados en una pista superior. Si el motion debilita el gesto humano, usar la alternativa aprobada o mantener source y registrar la decisión.

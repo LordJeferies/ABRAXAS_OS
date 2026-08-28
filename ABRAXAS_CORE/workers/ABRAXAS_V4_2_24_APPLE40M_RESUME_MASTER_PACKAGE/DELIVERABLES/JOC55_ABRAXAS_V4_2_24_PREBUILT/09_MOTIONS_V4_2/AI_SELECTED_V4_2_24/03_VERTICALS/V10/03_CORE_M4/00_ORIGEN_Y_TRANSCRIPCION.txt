@@ -1,0 +1,11 @@
+CONTENT: V10
+ROL: CORE
+FUENTE: 00:54:01.640 → 00:54:06.825
+TIMELINE: 00:00:33.640 → 00:00:38.825
+DURACIÓN: 5.185s
+
+TRANSCRIPCIÓN EXACTA
+de lo que es el día del examen, sentarte por ocho horas, porque ocho horas es
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0575.

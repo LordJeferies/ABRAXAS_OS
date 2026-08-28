@@ -1,0 +1,39 @@
+{
+  "sequence": 6,
+  "content_id": "JV05",
+  "narrative_role": "CLOSE",
+  "source_part_id": "JV05_P14",
+  "child_beat_ids": [
+    "JV05_B15",
+    "JV05_B16"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:43:42.435",
+  "source_end": "00:43:48.729",
+  "timeline_in_seconds": 71.666,
+  "timeline_out_seconds": 77.96,
+  "timeline_in": "00:01:11.666",
+  "timeline_out": "00:01:17.960",
+  "duration_seconds": 6.294,
+  "text": "estoy más o menos, ya lo pasé, pero sigo asociada de cierta manera porque sigo en academia también,",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0475.",
+  "semantic_score": 7.3768,
+  "transcript_reference": "SRT_0475",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La frase tiene fuerza autónoma y debe resolverse como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

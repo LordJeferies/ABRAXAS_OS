@@ -1,0 +1,11 @@
+CONTENT: V05
+ROL: TENSION
+FUENTE: 00:17:58.000 → 00:18:07.000
+TIMELINE: 00:00:17.000 → 00:00:26.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+¿Qué es lo que no sé hacer? ¿Qué tengo que hacer para llegar al nivel donde quiero estar? Y más esto. Entonces, ¿qué tengo que hacer todos los días para llegar a esto?
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0204.

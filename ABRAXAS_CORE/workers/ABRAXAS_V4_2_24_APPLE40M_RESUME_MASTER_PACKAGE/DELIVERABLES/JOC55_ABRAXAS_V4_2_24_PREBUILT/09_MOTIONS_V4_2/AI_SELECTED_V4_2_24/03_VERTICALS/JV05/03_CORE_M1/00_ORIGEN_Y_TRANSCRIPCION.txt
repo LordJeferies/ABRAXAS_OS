@@ -1,0 +1,11 @@
+CONTENT: JV05
+ROL: CORE
+FUENTE: 00:43:04.000 → 00:43:08.000
+TIMELINE: 00:00:33.231 → 00:00:37.231
+DURACIÓN: 4.000s
+
+TRANSCRIPCIÓN EXACTA
+Me estoy enterando ahora de que habían cambiado el examen, fuiste de la primera que tomó el examen.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0469.

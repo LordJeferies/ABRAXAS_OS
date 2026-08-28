@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 01:00:54.471 → 01:01:00.318
+TIMELINE: 00:07:40.471 → 00:07:46.318
+DURACIÓN: 5.847s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, por ejemplo, tenemos entre los productos que tenemos, tenemos asesoría como inicial del proceso
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0648.

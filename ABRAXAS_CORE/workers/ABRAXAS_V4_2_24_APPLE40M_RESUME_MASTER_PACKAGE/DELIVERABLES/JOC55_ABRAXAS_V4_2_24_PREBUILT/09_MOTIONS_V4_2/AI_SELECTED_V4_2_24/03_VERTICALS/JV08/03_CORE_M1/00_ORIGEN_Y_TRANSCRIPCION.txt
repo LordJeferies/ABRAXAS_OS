@@ -1,0 +1,11 @@
+CONTENT: JV08
+ROL: CORE
+FUENTE: 00:25:53.983 → 00:26:00.355
+TIMELINE: 00:00:20.752 → 00:00:27.124
+DURACIÓN: 6.372s
+
+TRANSCRIPCIÓN EXACTA
+es literalmente otra faceta, Y cómo muchas de esas habilidades realmente sí pueden trasladarse a otros ramos.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0288.

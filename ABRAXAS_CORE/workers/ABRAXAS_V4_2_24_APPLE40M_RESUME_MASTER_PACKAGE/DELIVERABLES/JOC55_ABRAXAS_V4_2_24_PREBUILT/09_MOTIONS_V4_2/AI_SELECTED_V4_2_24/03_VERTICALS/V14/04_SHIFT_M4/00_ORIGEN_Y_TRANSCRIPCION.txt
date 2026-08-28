@@ -1,0 +1,11 @@
+CONTENT: V14
+ROL: SHIFT
+FUENTE: 00:24:10.000 → 00:24:15.656
+TIMELINE: 00:00:46.000 → 00:00:51.656
+DURACIÓN: 5.656s
+
+TRANSCRIPCIÓN EXACTA
+Entonces con esa misma mentalidad pienso que me pasó desde el principio de la carrera
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0272.

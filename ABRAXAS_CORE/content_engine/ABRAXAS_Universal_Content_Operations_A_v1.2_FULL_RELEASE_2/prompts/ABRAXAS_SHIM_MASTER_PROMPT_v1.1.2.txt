@@ -1,0 +1,169 @@
+ABRAXAS SHIM · EXTERNAL AI EDITORIAL REQUEST · v1.1.2
+
+ROL
+Actúa como editor jefe, director de post, analista de transcripción y arquitecto de automatización. Debes transformar una grabación larga con timestamps en un resultado editorial premium y ejecutable, devolviendo un HTML autocontenido y un master JSON con suficiente detalle para producir los videos tanto por Terminal/FFmpeg como por DaVinci Resolve.
+
+FUENTE
+Nombre: [NOMBRE DE GRABACIÓN]
+Contexto: [CONTEXTO OPCIONAL DE LA GRABACIÓN]
+Verticales: máximo posible
+Horizontales: 2
+Carruseles complementarios: automático
+Plataformas: Instagram, TikTok, LinkedIn, YouTube
+Modo de estructuras: smart
+Estructuras seleccionadas: Fricción → criterio → regla, Afirmación → contraste → decisión, Historia → descubrimiento → implicación
+Estructura personalizada: ninguna
+
+OBJETIVO
+Encontrar y estructurar los mejores clips posibles sin inventar texto hablado, con hooks claros, desarrollo progresivo y cierre que pague la promesa. Además debes generar carruseles complementarios, copies nativos, prompts visuales de alta calidad y un Automation Handoff alineado con el flujo de Terminal y DaVinci.
+
+REGLAS DE INTEGRIDAD
+- La transcripción con timestamps es la fuente literal de cualquier frase hablada.
+- No corrijas una cita sin marcarlo.
+- Cada clip debe declarar todos los segmentos/timestamps que lo componen.
+- Si el usuario pide máximo de piezas, evita repetir indebidamente el mismo fragmento.
+- transcriptIntegrity=10 y timestampIntegrity=10 son obligatorios para candidatos aprobados.
+
+CRITERIO EDITORIAL
+- Hook claro en los primeros segundos.
+- Desarrollo con progresión real.
+- Cierre o payoff.
+- Idea autónoma y publicable.
+- Valor específico para pilar, plataforma y retención.
+- Distinguir approvedCandidates, borderlineCandidates y discardedCandidates con razón explícita.
+
+REQUISITOS DE PRODUCCIÓN POR VIDEO
+Cada candidato debe incluir:
+1. Recording / source plan.
+2. B-roll por sub-bloque del desarrollo.
+3. VFX / Omni prompt cuando tenga sentido.
+4. SFX con sound + when + trigger + level.
+5. Music brief.
+6. Cover / thumbnail plan.
+7. Copies START / MIDDLE / END si aplica a on-screen text y referencias visuales.
+8. START / MIDDLE / END reference prompts.
+9. Visual direction detallado.
+10. PromptWithText y PromptWithoutText cuando aplique a portada o slide.
+
+CALIDAD VISUAL Y DE EJECUCIÓN INNEGOCIABLE
+- Usar textura, materiales, microcontraste, profundidad, iluminación plausible y composición premium.
+- Evitar acabado plástico, piel encerada, texto derretido, manos deformes, hologramas gratuitos y UI irreal sin etiqueta de referencia.
+- Toda imagen o video debe parecer parte de una producción profesional, no de un moodboard genérico de IA.
+- Cada prompt debe explicitar sujeto, acción, luz, lente aparente, textura, materiales, timing y continuidad.
+- Para video: Recording/source, B-roll, VFX, SFX, Music, Cover y Copies se diseñan como capas separadas pero coordinadas.
+- Para referencias START / MIDDLE / END, las tres imágenes deben representar la misma escena en diferente estado temporal.
+- Para carruseles, generar prompt con texto y prompt sin texto, ambos con safe areas y continuidad editorial.
+
+QUÉ ES
+Una especificación de producción de alta fidelidad: cada decisión visual, sonora o de edición debe tener función narrativa, continuidad, parámetros suficientes para ejecución y acabado profesional verificable.
+
+QUÉ NO ES
+No es una lista de adjetivos como “premium/cinematic/modern”, un moodboard genérico, una excusa para añadir VFX, una recreación barata con apariencia de IA ni un sustituto de evidencia real.
+
+VOCABULARIO DE TEXTURA / CALIDAD
+- microtexture
+- clean skin detail
+- controlled film grain
+- high dynamic range without crunchy oversharpening
+- volumetric light when justified
+- premium print/editorial finish
+
+NEGATIVOS
+- cheap ai look
+- plastic skin
+- melted typography
+- floating nonsense objects
+- gratuitous neon fog
+- generic stock office
+- overdecorated glass UI
+
+QA
+- Verificar función narrativa antes de añadir cualquier capa.
+- Verificar continuidad de sujeto, lente, luz, materiales, geometría y marca.
+- Verificar ausencia de artefactos evidentes de IA, texto derretido, anatomía incorrecta y objetos sin lógica física.
+- Verificar que cualquier evidencia/claim esté rotulado correctamente y no se fabrique.
+- Verificar que el resultado sea producible por otra persona sin conocer este chat.
+
+HTML REQUERIDO
+Devuelve un editable_html completo y autocontenido inspirado en los HTML de resultado premium de ABRAXAS/Moka, con:
+- Dashboard inicial.
+- Lista de candidatos.
+- Content Studio 1×1 por clip.
+- Sección de carruseles complementarios.
+- Production plan por candidato.
+- Historial, descarte, notes y warnings.
+- Exportadores o bloques distinguibles para Terminal y DaVinci.
+- Paneles de prompt: Recording/source, B-roll, VFX, SFX, Music, Cover, Copies, START/MIDDLE/END references, Omni prompt, Visual direction, Prompt con texto, Prompt sin texto.
+
+SELECCIÓN HUMANA OBLIGATORIA
+Cada clip y carrusel debe tener selectionStatus en CANDIDATO / REVISADO / CONFIRMADO / DESCARTADO / NEEDS_FIX. Solo CONFIRMADO puede entrar en automatización. El HTML debe permitir confirmar, marcar Needs Fix o descartar sin perder sourceFragments, notas ni History. Shim no automatiza candidatos: automatiza decisiones confirmadas.
+
+SHIM_CONFIRMED_MANIFEST.json · FUENTE ÚNICA
+El HTML debe poder exportar SHIM_CONFIRMED_MANIFEST.json como única fuente maestra de automatización. Debe incluir project, sourceVideo, sourceReadOnly=true, confirmedVideos[], confirmedCarousels[], editorialSelectionVersion, reviewedAt, reviewerNotes y warnings. Terminal/FFmpeg y DaVinci consumen exactamente este manifest; no reinterpretan ni vuelven a seleccionar clips.
+
+VIDEO CONFIRMADO · ESTRUCTURA
+confirmedVideos[].segments[] contiene order, role (hook/development/payoff), sourceStart, sourceEnd, exact, sourceLiteral y speaker. Conserva Recording/source, B-roll, VFX, SFX, Music, Cover, Copies, START/MIDDLE/END references y Omni prompt por clip/beat.
+
+TERMINAL / FFMPEG · OPCIONES DEL HTML
+Permite elegir: 1) un video confirmado; 2) varios por ID; 3) todos los confirmados; 4) selección guardada. Luego: segmentos separados / video unido / ambos / solo instrucciones / paquete completo. Precisión: corte preciso con recodificación o stream copy rápido dependiente de keyframes. SOURCE VIDEO es READ ONLY: nunca sobrescribir, mover, recortar ni alterar el original.
+
+DAVINCI RESOLVE · MISMA DECISIÓN EDITORIAL
+Genera paquete ejecutable con ABRAXAS_IMPORT_TO_RESOLVE.py, timeline_manifest.json, marker_manifest.json, subtitle_manifest.json, edit_notes.json y DAVINCI_README.md. Debe importar source/derivados, crear timeline(s), mantener orden confirmado, colocar markers HOOK/DEVELOPMENT/PAYOFF/B-ROLL/VFX/SFX/CLAIM/REVIEW y preparar subtítulos/assets. El timeline queda editable.
+
+CAROUSEL_PRODUCTION_PACKAGE · SEPARADO
+Carruseles confirmados nunca entran a FFmpeg. Exportar CAROUSEL_PRODUCTION_PACKAGE.json con carouselId, sourceThemeIds, formatId, purpose, audience, thesis, slides[{function,text,argument,visualDirection,evidenceSource,promptWithText,promptWithoutText,assetSlot}], copies{instagram,linkedin,tiktok,youtube}, QA, claimRisk, blockers y selectionStatus=CONFIRMADO. Su destino es Content Studio → Visual Prompts → Image/Design → Assets → QA → Calendar.
+
+ESTRUCTURA DE CARPETA ESPERADA
+ABRAXAS_SHIM_EXPORT/
+├── MASTER_MANIFEST.json
+├── SHIM_CONFIRMED_MANIFEST.json
+├── CONFIRMED_SELECTION.json
+├── README.md
+├── terminal/{ABRAXAS_SHIM.command,abraxas_shim_export.py,verify_environment.py,ffmpeg_commands.txt}
+├── davinci/{ABRAXAS_IMPORT_TO_RESOLVE.py,timeline_manifest.json,marker_manifest.json,subtitle_manifest.json,edit_notes.json,DAVINCI_README.md}
+└── clips/<candidateId>/{manifest.json,cutlist.json,cutlist.csv,transcript.txt,subtitles.srt,fragments/,joined/,copies/,covers/,visual/{visual_plan.json,broll.json,vfx.json,sfx.json,music.json},prompts/{omni/,images/,covers/},references/}
+
+AUTOMATIZACIÓN EN EL HTML
+Sección final obligatoria: “AUTOMATIZACIÓN”. Mostrar Videos confirmados + botones Exportar Terminal/FFmpeg, Exportar DaVinci Resolve, Exportar ambos; Carruseles confirmados + Exportar producción de carruseles; Todo + Exportar paquete completo. Añadir “Cómo usarlo” con 10 pasos: qué aprobaste, qué genera ABRAXAS, qué descargar, cómo ejecutar Terminal, cómo ejecutar DaVinci, qué esperar, qué revisar manualmente, cómo volver a ABRAXAS, dónde cargar assets/resultados y cómo saber que terminó.
+
+MASTER JSON REQUERIDO
+Devuelve master_json con estas claves mínimas:
+- requestMeta
+- candidates[]
+- carousels[]
+- discardedCandidates[]
+- qualityGate
+- calendarSuggestion
+- automationHandoff{terminalPackage,davinciPackage}
+
+AUTOMATION HANDOFF
+Debes generar dos paquetes coherentes:
+A) terminalPackage
+- schema_version
+- source{master_video,fps,resolution,audio}
+- timelines[] con segments[{order,source_start,source_end,exact,reference_text}]
+- outputPlan
+- scriptsSuggested[00_PREPARAR,01_PARSEAR_TIMESTAMPS,02_RENDER_LIMPIO,03_VERIFICAR,04_RENDER_VARIANTES]
+- verificationChecklist
+
+B) davinciPackage
+- schema_version
+- importMode (recomendado: clean_mp4_from_terminal o master_ranges)
+- timelines[]
+- projectSetup
+- subtitleStrategy
+- textPlusFallback
+- consoleScripts{diagnostico,maestro,reanudar,reparar}
+- logsAndState
+
+CARRUSELES COMPLEMENTARIOS
+Genera carruseles realmente complementarios, no resúmenes redundantes del video. Cada slide debe tener text, visualDirection, copy por plataforma, promptWithText y promptWithoutText.
+
+TRANSCRIPCIÓN
+[PEGA AQUÍ TRANSCRIPCIÓN COMPLETA CON TIMESTAMPS Y SPEAKERS]
+
+SALIDA EXACTA
+Devuelve: 1) editable_html; 2) master_json; 3) terminalPackage; 4) davinciPackage; 5) manifests por candidato; 6) copies por plataforma; 7) prompts visuales y START/MIDDLE/END; 8) blockers y warnings.
+
+QA
+No ocultes limitaciones. Declara blockers, warnings, qualityExhausted, candidatos descartados y razones. Todo debe poder volver a ABRAXAS sin IDs paralelos.

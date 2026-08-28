@@ -1,0 +1,11 @@
+CONTENT: V04
+ROL: CORE
+FUENTE: 00:15:12.286 → 00:15:18.000
+TIMELINE: 00:00:20.286 → 00:00:26.000
+DURACIÓN: 5.714s
+
+TRANSCRIPCIÓN EXACTA
+alguien extraordinario y algo que he descubierto con los años es que, y es una frase que
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0171.

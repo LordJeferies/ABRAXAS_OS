@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 00:55:38.000 → 00:55:45.000
+TIMELINE: 00:02:24.000 → 00:02:31.000
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+Porque además ellos se toman su tiempo en hacer el examen y toda la cosa y llegas tú y le dices, mira, aquí está 1, 2, 3 y lo pasa.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0590.

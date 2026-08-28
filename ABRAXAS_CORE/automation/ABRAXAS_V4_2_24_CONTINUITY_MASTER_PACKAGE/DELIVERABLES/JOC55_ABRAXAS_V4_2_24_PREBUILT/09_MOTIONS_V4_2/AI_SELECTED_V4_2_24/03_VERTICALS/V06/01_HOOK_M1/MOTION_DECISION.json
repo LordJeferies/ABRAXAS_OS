@@ -1,0 +1,39 @@
+{
+  "sequence": 1,
+  "content_id": "V06",
+  "narrative_role": "HOOK",
+  "source_part_id": "V06_P02",
+  "child_beat_ids": [
+    "V06_B02",
+    "V06_B03"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:26:34.887",
+  "source_end": "00:26:40.855",
+  "timeline_in_seconds": 5.887,
+  "timeline_out_seconds": 11.855,
+  "timeline_in": "00:00:05.887",
+  "timeline_out": "00:00:11.855",
+  "duration_seconds": 5.968,
+  "text": "Ser proactivo es para mí una de las cualidades más importantes porque independientemente de lo que hagas,",
+  "reason": "Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0296.",
+  "semantic_score": 9.5637,
+  "transcript_reference": "SRT_0296",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "La idea se aclara con observación documental y close-ups, sin sustituir el testimonio.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

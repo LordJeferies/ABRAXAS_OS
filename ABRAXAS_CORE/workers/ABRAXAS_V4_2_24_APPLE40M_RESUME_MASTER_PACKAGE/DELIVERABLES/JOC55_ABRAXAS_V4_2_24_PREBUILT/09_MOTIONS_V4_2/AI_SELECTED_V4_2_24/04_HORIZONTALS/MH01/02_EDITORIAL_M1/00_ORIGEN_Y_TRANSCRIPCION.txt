@@ -1,0 +1,11 @@
+CONTENT: MH01
+ROL: EDITORIAL
+FUENTE: 00:05:19.000 → 00:05:27.000
+TIMELINE: 00:01:01.203 → 00:01:09.203
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+disponible, vamos a decirlo así, me parece que es algo súper positivo y como todo en la vida siempre va a haber carreras que va a necesitar existir la universidad.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0061.

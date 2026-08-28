@@ -1,0 +1,11 @@
+CONTENT: MH04
+ROL: EDITORIAL
+FUENTE: 01:19:32.000 → 01:19:40.000
+TIMELINE: 00:00:00.995 → 00:00:08.995
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Le parece de verdad que ha sido extraordinario el camino y habiéndolo escuchado completo. Fantástico. De verdad que felicitaciones por todo eso.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0841.

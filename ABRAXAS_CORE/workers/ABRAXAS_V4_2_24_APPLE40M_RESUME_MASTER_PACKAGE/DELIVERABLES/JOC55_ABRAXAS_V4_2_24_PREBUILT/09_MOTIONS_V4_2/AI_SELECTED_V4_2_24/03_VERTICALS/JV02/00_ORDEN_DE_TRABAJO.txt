@@ -1,0 +1,9 @@
+ABRAXAS V4.2.24 · JV02
+El video completo se conserva. Solo trabajar estas ventanas semánticas en orden:
+
+01. HOOK · M3 · 00:00:05.495 → 00:00:10.839 · 01_HOOK_M3
+02. TENSION · M3 · 00:00:18.779 → 00:00:26.752 · 02_TENSION_M3
+03. CORE · M1 · 00:00:26.752 → 00:00:31.475 · 03_CORE_M1
+04. SHIFT · M4 · 00:00:36.199 → 00:00:43.145 · 04_SHIFT_M4
+05. MEMORABLE · M3 · 00:00:50.180 → 00:00:54.889 · 05_MEMORABLE_M3
+06. CLOSE · M3 · 00:01:00.975 → 00:01:05.176 · 06_CLOSE_M3

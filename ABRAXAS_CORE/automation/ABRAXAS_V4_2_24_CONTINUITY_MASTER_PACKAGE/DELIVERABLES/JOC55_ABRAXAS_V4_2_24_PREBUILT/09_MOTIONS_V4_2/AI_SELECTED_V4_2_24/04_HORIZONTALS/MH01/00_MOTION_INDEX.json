@@ -1,0 +1,192 @@
+{
+  "content_id": "MH01",
+  "type": "HORIZONTAL",
+  "program_preserved": true,
+  "selected_motion_count": 23,
+  "motions": [
+    {
+      "sequence": 1,
+      "folder": "01_EDITORIAL_M2",
+      "role": "EDITORIAL",
+      "motion": "M2",
+      "timeline_in": "00:00:02.203",
+      "timeline_out": "00:00:11.203"
+    },
+    {
+      "sequence": 2,
+      "folder": "02_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:01:01.203",
+      "timeline_out": "00:01:09.203"
+    },
+    {
+      "sequence": 3,
+      "folder": "03_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:01:19.334",
+      "timeline_out": "00:01:28.203"
+    },
+    {
+      "sequence": 4,
+      "folder": "04_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:02:15.203",
+      "timeline_out": "00:02:23.203"
+    },
+    {
+      "sequence": 5,
+      "folder": "05_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:02:32.203",
+      "timeline_out": "00:02:41.203"
+    },
+    {
+      "sequence": 6,
+      "folder": "06_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:03:36.203",
+      "timeline_out": "00:03:44.203"
+    },
+    {
+      "sequence": 7,
+      "folder": "07_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:03:44.203",
+      "timeline_out": "00:03:51.203"
+    },
+    {
+      "sequence": 8,
+      "folder": "08_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:04:09.203",
+      "timeline_out": "00:04:18.203"
+    },
+    {
+      "sequence": 9,
+      "folder": "09_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:04:30.203",
+      "timeline_out": "00:04:39.203"
+    },
+    {
+      "sequence": 10,
+      "folder": "10_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:05:11.729",
+      "timeline_out": "00:05:16.858"
+    },
+    {
+      "sequence": 11,
+      "folder": "11_EDITORIAL_M5",
+      "role": "EDITORIAL",
+      "motion": "M5",
+      "timeline_in": "00:05:26.203",
+      "timeline_out": "00:05:34.203"
+    },
+    {
+      "sequence": 12,
+      "folder": "12_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:06:16.203",
+      "timeline_out": "00:06:24.203"
+    },
+    {
+      "sequence": 13,
+      "folder": "13_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:06:24.203",
+      "timeline_out": "00:06:30.203"
+    },
+    {
+      "sequence": 14,
+      "folder": "14_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:07:01.203",
+      "timeline_out": "00:07:09.203"
+    },
+    {
+      "sequence": 15,
+      "folder": "15_EDITORIAL_M3",
+      "role": "EDITORIAL",
+      "motion": "M3",
+      "timeline_in": "00:07:35.203",
+      "timeline_out": "00:07:44.203"
+    },
+    {
+      "sequence": 16,
+      "folder": "16_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:08:04.203",
+      "timeline_out": "00:08:12.203"
+    },
+    {
+      "sequence": 17,
+      "folder": "17_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:08:25.203",
+      "timeline_out": "00:08:31.203"
+    },
+    {
+      "sequence": 18,
+      "folder": "18_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:09:29.679",
+      "timeline_out": "00:09:36.522"
+    },
+    {
+      "sequence": 19,
+      "folder": "19_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:09:48.508",
+      "timeline_out": "00:09:56.481"
+    },
+    {
+      "sequence": 20,
+      "folder": "20_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:10:19.809",
+      "timeline_out": "00:10:24.618"
+    },
+    {
+      "sequence": 21,
+      "folder": "21_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:10:34.203",
+      "timeline_out": "00:10:43.203"
+    },
+    {
+      "sequence": 22,
+      "folder": "22_EDITORIAL_M2",
+      "role": "EDITORIAL",
+      "motion": "M2",
+      "timeline_in": "00:11:15.203",
+      "timeline_out": "00:11:23.203"
+    },
+    {
+      "sequence": 23,
+      "folder": "23_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:11:23.203",
+      "timeline_out": "00:11:30.203"
+    }
+  ]
+}

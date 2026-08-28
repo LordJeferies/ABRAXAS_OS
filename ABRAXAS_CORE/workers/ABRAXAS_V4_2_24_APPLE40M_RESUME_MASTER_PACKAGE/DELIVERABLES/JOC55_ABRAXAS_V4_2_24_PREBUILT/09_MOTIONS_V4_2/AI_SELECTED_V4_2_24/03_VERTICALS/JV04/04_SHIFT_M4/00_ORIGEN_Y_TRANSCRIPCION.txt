@@ -1,0 +1,11 @@
+CONTENT: JV04
+ROL: SHIFT
+FUENTE: 00:29:02.000 → 00:29:07.000
+TIMELINE: 00:00:49.537 → 00:00:54.537
+DURACIÓN: 5.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces sí estás dando un poco más de ti para que eso funcione de esa manera.
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0323.

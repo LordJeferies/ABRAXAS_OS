@@ -1,0 +1,11 @@
+CONTENT: JH03
+ROL: EDITORIAL
+FUENTE: 01:30:23.000 → 01:30:32.000
+TIMELINE: 00:08:41.786 → 00:08:50.786
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+que tú decías, en una posición inferior, en una superior, que estén buscando conectar o lo que sea, cualquiera que sea el caso, pero la intención acá también es darle la oportunidad
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0946.

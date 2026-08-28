@@ -1,0 +1,11 @@
+CONTENT: V16
+ROL: CORE
+FUENTE: 01:05:57.063 → 01:06:04.000
+TIMELINE: 00:00:27.063 → 00:00:34.000
+DURACIÓN: 6.937s
+
+TRANSCRIPCIÓN EXACTA
+para mí porque he aprendido de todo, absolutamente todo. Me encanta el diseño gráfico, me encanta la parte que yo antes hacía absolutamente todo.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0693.

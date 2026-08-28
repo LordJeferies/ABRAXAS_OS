@@ -1,0 +1,137 @@
+[
+  {
+    "path": "00_LEEME_PRIMERO.md",
+    "bytes": 1673,
+    "sha256": "d2c931cf50995bb916a5cdfe02663e7dc2e8886b58526a72b53beb5dfff6f763"
+  },
+  {
+    "path": "CHECKLISTS/01_ANTES_DE_CORTAR.md",
+    "bytes": 301,
+    "sha256": "c3ee7c26f12f06045f97c7e95a646cea720a17d6654adb0a9ddc2ca97a935616"
+  },
+  {
+    "path": "CHECKLISTS/02_ANTES_DE_DAVINCI.md",
+    "bytes": 312,
+    "sha256": "616947f9d03a6ffea2917241fb3524c6683563158494f7b07c4136df0cd4c2b6"
+  },
+  {
+    "path": "CHECKLISTS/03_HOTFIX.md",
+    "bytes": 304,
+    "sha256": "f1f1d8a739151b9576cdc5e4a437f764b7afd1f06d6e433d2c1ed74bc90925f6"
+  },
+  {
+    "path": "CONFIG/cliente.example.json",
+    "bytes": 1440,
+    "sha256": "919319c6cb8e08ac235d5549174f1b66cd862ad59c50217dc5fb32349b31b243"
+  },
+  {
+    "path": "CONFIG/glosario.example.json",
+    "bytes": 87,
+    "sha256": "99859f63710bdac7865e1e842300d68a121eb76b9027dfc98ee02a68c553227d"
+  },
+  {
+    "path": "CONTEXTO/01_CONTEXTO_MAESTRO.md",
+    "bytes": 5502,
+    "sha256": "b3a2f3f775aa782fe4c0027bd2e5834edc59804b4eaa758ba6144f558b8004c4"
+  },
+  {
+    "path": "CONTEXTO/02_COMO_INTERPRETAR_ARCHIVO_TIMESTAMPS.md",
+    "bytes": 943,
+    "sha256": "72be16d1572cc2d6444dd86b52dc6a1a939ec50c9fbe1d40bc37f931f6299cdf"
+  },
+  {
+    "path": "CONTEXTO/03_PIPELINE_TERMINAL.md",
+    "bytes": 883,
+    "sha256": "b478a3f84749f68bd7ae8b25f45dd82242e6d2e18cb1113d330e67943b5057ad"
+  },
+  {
+    "path": "CONTEXTO/04_PIPELINE_DAVINCI.md",
+    "bytes": 1350,
+    "sha256": "ffaf9d406399e9358db984a94a35dc795f2a564ae0022651431823633724ae37"
+  },
+  {
+    "path": "CONTEXTO/05_MODULOS_EDITABLES.md",
+    "bytes": 739,
+    "sha256": "d40287481077f811beddde56ab932fa073b1f6190ea4c5d418e80d24e72186d0"
+  },
+  {
+    "path": "CONTEXTO/06_REGLAS_DEBUG_HOTFIX.md",
+    "bytes": 627,
+    "sha256": "0c2fbbfd12f5fc5554ae82f1e7873af1851fe7243a927cc16250b200ac3e2206"
+  },
+  {
+    "path": "EJEMPLOS/BRIEF_NUEVO_CLIENTE.md",
+    "bytes": 552,
+    "sha256": "ca1a084562f9422591a2780ce1cfc48cc2437d8e67e283dd95bb52cce6c2621b"
+  },
+  {
+    "path": "ESQUEMAS/estado_pipeline.example.json",
+    "bytes": 331,
+    "sha256": "6a418cd972e31b8c321fd0ef7dad94bb8edacc4b5c0cd4483c0cdfa3e791339c"
+  },
+  {
+    "path": "ESQUEMAS/manifest.example.json",
+    "bytes": 674,
+    "sha256": "f23b625392325c979ebb0bde4ee408eee611e531479bb42de2ae5ef18a2822c2"
+  },
+  {
+    "path": "PROMPTS/00_PROMPT_MAESTRO.txt",
+    "bytes": 688,
+    "sha256": "c260a4f715d8a7f83e54c5f156aa867f1f58be6d7888e7819567712a219aca0c"
+  },
+  {
+    "path": "PROMPTS/01_ANALIZAR_TIMESTAMPS.txt",
+    "bytes": 470,
+    "sha256": "10c847a02a80d5925cd4a0109b1a116f1e53a1fe1d1d76e5e079b37fd5249cc5"
+  },
+  {
+    "path": "PROMPTS/02_CREAR_AUTOMATIZACION_TERMINAL.txt",
+    "bytes": 448,
+    "sha256": "8f00f27b422729c28d2aea382f1a5249fcdeefb884703e914b0ddd6b2cd7c898"
+  },
+  {
+    "path": "PROMPTS/03_CREAR_AUTOMATIZACION_DAVINCI.txt",
+    "bytes": 491,
+    "sha256": "30c72a3ec686caf1445a75c5c5ff513ef5d1fc706cf2cd1db775c42fb2e6b91a"
+  },
+  {
+    "path": "PROMPTS/04_AGREGAR_SUBTITULOS_DAVINCI.txt",
+    "bytes": 460,
+    "sha256": "b8c3820458b46573a8716faeade973e012b64f16f15743a3e937304fd8cda627"
+  },
+  {
+    "path": "PROMPTS/05_AGREGAR_VOZ_Y_MOVIMIENTO.txt",
+    "bytes": 462,
+    "sha256": "854e8c734fccc0061b4157846b62bf7fb67f6ecdb61e9b0fb44d073cf4837913"
+  },
+  {
+    "path": "PROMPTS/06_CREAR_HOTFIX.txt",
+    "bytes": 503,
+    "sha256": "a728084c1f084d56483635f2847a4aaa4165fc7f4fac63a0ba506aef2a774c9a"
+  },
+  {
+    "path": "PROMPTS/07_REANUDAR_PROYECTO.txt",
+    "bytes": 441,
+    "sha256": "0a9d26e0583836aa6eeb851c8de6e8c1bbdfb07343d0991d8525b08c511b5776"
+  },
+  {
+    "path": "PROMPTS/08_AUDITAR_RESULTADOS.txt",
+    "bytes": 408,
+    "sha256": "a77848f89d119e4f0ca0fcb9027459ba81928cf824c705bb48a96787cb014d58"
+  },
+  {
+    "path": "PROMPTS/09_NUEVO_CLIENTE.txt",
+    "bytes": 435,
+    "sha256": "bfe2aca72b9342c02d44a608ec6d4c415af042b4f07087dde62906bb76474706"
+  },
+  {
+    "path": "PROMPTS/10_ACTUALIZAR_RESPALDO.txt",
+    "bytes": 399,
+    "sha256": "5942d2b8b161fbd7b4fe26c6e0d60448e454f0d17016055d8fdec0edb59c0924"
+  },
+  {
+    "path": "PROMPT_UNICO_PARA_CUALQUIER_IA.txt",
+    "bytes": 941,
+    "sha256": "921998fbd59f899eabb46067de34fa8f53449881e123fb7bc0c619dbbf49a8cc"
+  }
+]

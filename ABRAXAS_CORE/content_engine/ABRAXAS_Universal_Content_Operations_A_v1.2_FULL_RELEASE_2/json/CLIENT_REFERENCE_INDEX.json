@@ -1,0 +1,58 @@
+{
+  "version": "0.9.3",
+  "clients": [
+    {
+      "clientId": "abraxas",
+      "name": "ABRAXAS",
+      "accent": "#D8B46C",
+      "sources": [
+        "ABRAXAS project context",
+        "Branding Method action book",
+        "JOC/Moka/INENERGY systems"
+      ],
+      "visualRules": "Mac Spatial Dark: graphite/black/white con oro como accent; contenido sólido, navegación/controles con material translúcido selectivo; iconografía monoline y jerarquía calmada."
+    },
+    {
+      "clientId": "moka",
+      "name": "Moka Bio",
+      "accent": "#57C378",
+      "sources": [
+        "manualvisual_mokabio.pdf",
+        "MokaBio investor deck",
+        "Moka editorial systems"
+      ],
+      "visualRules": "Paleta oficial: Pure #FFFFFF, Sage #4E7060, Deep Forest #0D2D26, Fresh Green #57C378, Charcoal #111111, Birch #DEDEDE. Codec Pro principal, Century Expanded para énfasis. Líneas finas, nodos, módulos, espacio amplio; lab/botánica/microfotografía/data con función."
+    },
+    {
+      "clientId": "joc",
+      "name": "JOC",
+      "accent": "#A91616",
+      "sources": [
+        "JOC OS V5.7",
+        "JOC agosto 2026 visual references"
+      ],
+      "visualRules": "Base dark/editorial con rojo vino #A91616/#65171C, textura y contraste; VoxRock para filosofía; JOC en portada/cierre cuando aporte; UI CRM para ventas."
+    },
+    {
+      "clientId": "inenergy",
+      "name": "INENERGY",
+      "accent": "#38B1A5",
+      "sources": [
+        "INENERGY Strategic System",
+        "INENERGY copy toolkit"
+      ],
+      "visualRules": "Graphite/white con teal #38B1A5 y deep teal #05677A; mapas, capas, esquemas engineering, UI sobria y motion de navegación con propósito."
+    }
+  ],
+  "releaseReferences": [
+    "references/manualvisual_mokabio.pdf",
+    "references/Ejemplos_de_disenos_Moka.pdf",
+    "references/ejemplos_moka_bio.pdf",
+    "references/MokaBio_EN_Investor_SyEx.pdf",
+    "references/JOC_OS_V5_7_AGOSTO_2026.html",
+    "references/INENERGY_Strategic_Content_System.html",
+    "references/The_branding_method.pdf",
+    "references/abraxas_content_ops_strategic_os-4.html",
+    "references/user_v093_requirements.txt"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Y yo dije, wow, veces uno no calcula como el impacto que está teniendo en las personas, pero no solo eso, sino que me dijeron también como, no sabes lo que me sirvió y le",
+  "segments": [
+    "Y yo dije, wow, veces uno no calcula como el impacto que",
+    "está teniendo en las personas, pero no solo eso, sino que",
+    "me dijeron también como, no sabes lo que me sirvió y le"
+  ],
+  "reconstructed_text": "Y yo dije, wow, veces uno no calcula como el impacto que está teniendo en las personas, pero no solo eso, sino que me dijeron también como, no sabes lo que me sirvió y le"
+}

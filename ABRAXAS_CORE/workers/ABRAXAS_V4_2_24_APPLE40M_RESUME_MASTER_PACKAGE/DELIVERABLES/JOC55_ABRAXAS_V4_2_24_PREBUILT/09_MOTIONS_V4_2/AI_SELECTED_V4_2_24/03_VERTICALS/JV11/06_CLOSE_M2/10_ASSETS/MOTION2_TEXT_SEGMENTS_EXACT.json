@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "que, completamente a tu orden y de nuevo, thank you so much por contar. tu experiencia y por todo el tiempo que nos has dedicado.",
+  "segments": [
+    "que, completamente a tu orden y de nuevo,",
+    "thank you so much por contar. tu experiencia y",
+    "por todo el tiempo que nos has dedicado."
+  ],
+  "reconstructed_text": "que, completamente a tu orden y de nuevo, thank you so much por contar. tu experiencia y por todo el tiempo que nos has dedicado."
+}

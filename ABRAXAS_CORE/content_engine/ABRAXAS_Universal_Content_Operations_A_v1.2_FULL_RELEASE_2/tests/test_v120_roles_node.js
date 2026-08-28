@@ -1,0 +1,5 @@
+'use strict';const assert=require('assert');global.ABRAXAS_DATA=require('../src/data.js');global.ABRAXAS_CORE=require('../src/core.js');global.V120_STORE=require('../src/v120/store.js');global.V120_DOMAIN=require('../src/v120/domain.js');global.V120_COMPONENTS=require('../src/v120/components.js');global.V120_ACTIONS=require('../src/v120/actions.js');
+const D=require('../src/v120/dashboard.js');const P=require('../src/v120/production.js');
+for(const role of ['all','strategy','talent','copy','recording','design','editing','qa','publishing']){global.V120_STORE.set({roleMode:role});const h=D.render();assert(h.includes('data-action="production.role"'),'dashboard role shortcuts');const p=P.render();assert(p.includes('v120-production'),'production root');}
+global.V120_STORE.set({roleMode:'recording'});const rec=P.render();assert(rec.includes('Grabación'));global.V120_STORE.set({roleMode:'editing'});const edit=P.render();assert(edit.includes('Edición'));assert(edit.includes('Recording/source')||edit.includes('Bloquead')||edit.includes('Montar'));
+console.log('v1.2 role workspaces PASS');

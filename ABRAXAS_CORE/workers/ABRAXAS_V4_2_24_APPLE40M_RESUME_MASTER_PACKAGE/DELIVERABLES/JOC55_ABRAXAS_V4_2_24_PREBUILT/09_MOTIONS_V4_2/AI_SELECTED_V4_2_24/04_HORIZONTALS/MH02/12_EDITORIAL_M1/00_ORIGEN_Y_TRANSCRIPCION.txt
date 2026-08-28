@@ -1,0 +1,11 @@
+CONTENT: MH02
+ROL: EDITORIAL
+FUENTE: 00:25:33.000 → 00:25:40.000
+TIMELINE: 00:06:14.437 → 00:06:21.437
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+y fíjate cómo se conecta esto a que hablamos hace rato de que la universidad sí te da otras habilidades que igual te termina impactando.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0284.

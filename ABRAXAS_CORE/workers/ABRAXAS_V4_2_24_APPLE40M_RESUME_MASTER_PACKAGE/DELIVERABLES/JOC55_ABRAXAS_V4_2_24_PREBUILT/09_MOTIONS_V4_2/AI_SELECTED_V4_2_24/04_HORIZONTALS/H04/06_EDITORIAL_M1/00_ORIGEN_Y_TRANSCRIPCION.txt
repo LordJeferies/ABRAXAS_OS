@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:16:24.358 → 01:16:31.000
+TIMELINE: 00:02:54.358 → 00:03:01.000
+DURACIÓN: 6.642s
+
+TRANSCRIPCIÓN EXACTA
+superestructurado, que es básicamente nuestra plataforma de EdTech, no solamente el curso, sino ahora también el app.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0808.

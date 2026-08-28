@@ -1,0 +1,8 @@
+M3 · Pure editorial typography
+
+Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa.
+
+ARCHIVOS OBLIGATORIOS
+- TYPE_01_SETUP.png
+- TYPE_02_CONTRADICTION.png
+- TYPE_03_PAYOFF.png

@@ -1,0 +1,7 @@
+RANGO FUENTE: 00:27:20.236 → 00:27:28.000
+RANGO EN VIDEO: 00:00:51.236 → 00:00:59.000
+DURACIÓN: 7.764s
+PISTA: V2
+MODO: COMPOSITE_BEHIND_SPEAKER
+
+Conservar el video fuente en V1 y su audio original en A1. Importar MOTION_FINAL sin audio y colocarlo exactamente en el rango indicado. No crear clips adicionales entre motions. Mantener captions aprobados en una pista superior. Si el motion debilita el gesto humano, usar la alternativa aprobada o mantener source y registrar la decisión.

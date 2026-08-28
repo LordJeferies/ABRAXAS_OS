@@ -1,0 +1,11 @@
+# ANTES DE DAVINCI
+- [ ] proyecto correcto
+- [ ] Studio/versión registrada
+- [ ] Workspace Console Py3
+- [ ] diagnóstico API ejecutado
+- [ ] launcher UTF-8
+- [ ] no flush=True
+- [ ] plantillas vertical/horizontal listas
+- [ ] preset render existe
+- [ ] entrada limpia verificada
+- [ ] estado reanudable creado

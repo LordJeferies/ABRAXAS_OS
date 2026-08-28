@@ -1,0 +1,596 @@
+{
+  "source": "UPLOAD",
+  "destination": "EXTRACTED",
+  "unique_archives": 42,
+  "records": [
+    {
+      "archive": "UPLOAD/ABRAXAS_CONTENT_LAB_V3_1_VERIFIED.zip",
+      "sha256": "1ab17ac50ebc60172bd05e7df3f91502cf5d70562c4cab0f8aa1c43c51bd9699",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/001_ABRAXAS_CONTENT_LAB_V3_1_VERIFIED",
+      "members": 22,
+      "declared_bytes": 15306214,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".html": 2,
+        ".json": 5,
+        ".md": 11,
+        ".py": 2,
+        ".txt": 2
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5.zip",
+      "sha256": "d604e42484bfa024f10dfe6119531ae8af4f18db4397653f40a0630a3c9b3a08",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/002_ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5",
+      "members": 32,
+      "declared_bytes": 67644960,
+      "nested_zip_count": 1,
+      "extensions": {
+        ".command": 3,
+        ".html": 4,
+        ".md": 1,
+        ".py": 4,
+        ".txt": 8,
+        ".zip": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5_ACTUALIZADA.zip",
+      "sha256": "ed107ed1886b17107b35c5ede085ceea63020be257fac166c93347288a2adc76",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/003_ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5_ACTUALIZADA",
+      "members": 36,
+      "declared_bytes": 72142930,
+      "nested_zip_count": 1,
+      "extensions": {
+        ".command": 3,
+        ".html": 4,
+        ".md": 2,
+        ".png": 1,
+        ".py": 4,
+        ".txt": 9,
+        ".zip": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_6_ESTADO_43_DE_73.zip",
+      "sha256": "fe9f9e9dd1ce9b057eb84726350aa2cf868344077d5bc24fdacef8435d5f6f81",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/004_ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_6_ESTADO_43_DE_73",
+      "members": 37,
+      "declared_bytes": 76914822,
+      "nested_zip_count": 1,
+      "extensions": {
+        ".command": 3,
+        ".html": 4,
+        ".md": 2,
+        ".png": 2,
+        ".py": 4,
+        ".txt": 9,
+        ".zip": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_CONTINUIDAD_V4_2_NUEVO_CHAT.zip",
+      "sha256": "bb552c3deb163f614d65a40dadd5918672b7c2b20b44caa6f1161a74441868b8",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/005_ABRAXAS_CONTINUIDAD_V4_2_NUEVO_CHAT",
+      "members": 6,
+      "declared_bytes": 2557,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".md": 4,
+        ".txt": 2
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V3_1_EXECUTABLE_AUTOMATION.zip",
+      "sha256": "e460380ba3897937e71cf98706da37b1d00432938930223931b13544a49bdde6",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/006_ABRAXAS_V3_1_EXECUTABLE_AUTOMATION",
+      "members": 64,
+      "declared_bytes": 8203728,
+      "nested_zip_count": 1,
+      "extensions": {
+        ".command": 24,
+        ".html": 2,
+        ".json": 2,
+        ".md": 5,
+        ".py": 28,
+        ".sh": 1,
+        ".txt": 1,
+        ".zip": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_24_CONTINUITY_MASTER_PACKAGE(1).zip",
+      "sha256": "997f41337018aa614cd33ba3df49a93ee76beddd49e995a38dc7b7be5f20949c",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/007_ABRAXAS_V4_2_24_CONTINUITY_MASTER_PACKAGE(1)",
+      "members": 15,
+      "declared_bytes": 1341,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".md": 13,
+        ".txt": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_24_CONTINUITY_MASTER_PACKAGE.zip",
+      "sha256": "997f41337018aa614cd33ba3df49a93ee76beddd49e995a38dc7b7be5f20949c",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_24_CONTINUITY_MASTER_PACKAGE(1).zip"
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_5_HORIZONTAL_LONGFORM_HOTFIX.zip",
+      "sha256": "88ac982cbd26b1e587f30ff9dbe78962ab5627eb178d3d5f8eef9aa2546a07b9",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/008_ABRAXAS_V4_2_5_HORIZONTAL_LONGFORM_HOTFIX",
+      "members": 17,
+      "declared_bytes": 28356184,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 3,
+        ".html": 2,
+        ".py": 4,
+        ".txt": 2
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION.zip",
+      "sha256": "73840421d801d51aad51d57eb49c8f83a4561dff2aeff41623345d278e771853",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/009_ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION",
+      "members": 111,
+      "declared_bytes": 50907353,
+      "nested_zip_count": 1,
+      "extensions": {
+        ".command": 30,
+        ".html": 5,
+        ".jpg": 4,
+        ".json": 4,
+        ".md": 13,
+        ".png": 1,
+        ".py": 34,
+        ".sh": 1,
+        ".txt": 5,
+        ".zip": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_6_RENDER_RESUME_SAFE_TERMINAL_HOTFIX.zip",
+      "sha256": "4ba98f74185cb3f35798f3a4e65629d4c98628a442bf3357af787d6a5c0a7e2f",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/010_ABRAXAS_V4_2_6_RENDER_RESUME_SAFE_TERMINAL_HOTFIX",
+      "members": 4,
+      "declared_bytes": 1978,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".py": 1,
+        ".txt": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_6_RENDER_RESUME_SAFE_TERMINAL_HOTFIX_V2.zip",
+      "sha256": "ed96faea0ddfe01118dfc727ba9832335bce76aa5e98fd63ccefd7f6a9b7c865",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/011_ABRAXAS_V4_2_6_RENDER_RESUME_SAFE_TERMINAL_HOTFIX_V2",
+      "members": 2,
+      "declared_bytes": 1513,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".txt": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (1).zip",
+      "sha256": "e2c9725b1535f3901103f75dbfcc1852afe27a3d7c5548fc352aed160e9a9fad",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/012_ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (1)",
+      "members": 3,
+      "declared_bytes": 2099,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".py": 1,
+        ".txt": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (2).zip",
+      "sha256": "e2c9725b1535f3901103f75dbfcc1852afe27a3d7c5548fc352aed160e9a9fad",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (1).zip"
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX.zip",
+      "sha256": "e2c9725b1535f3901103f75dbfcc1852afe27a3d7c5548fc352aed160e9a9fad",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (1).zip"
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_7_RESILIENT_WORKER_HOTFIX.zip",
+      "sha256": "91b9a31bdcdc8363295ee0e953d52be38da492340586ce6fa77bfbbbe870df76",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/013_ABRAXAS_V4_2_7_RESILIENT_WORKER_HOTFIX",
+      "members": 3,
+      "declared_bytes": 1951,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".py": 1,
+        ".txt": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_8_MEDIA_STRUCTURE_HOTFIX.zip",
+      "sha256": "10bd00231c9fae4ed0f0f50c212bc69fb74be8ebc60a8f937544b2478de2d9c4",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/014_ABRAXAS_V4_2_8_MEDIA_STRUCTURE_HOTFIX",
+      "members": 3,
+      "declared_bytes": 1918,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".py": 1,
+        ".txt": 1
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_8_MONITOR_AND_MEDIA_HOTFIX.zip",
+      "sha256": "577077b7ba26d143d78e9217b9f6dc0b2f236de7f5f73c88571a6eb1e4fd8044",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/015_ABRAXAS_V4_2_8_MONITOR_AND_MEDIA_HOTFIX",
+      "members": 3,
+      "declared_bytes": 2537,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".py": 2
+      }
+    },
+    {
+      "archive": "UPLOAD/ABRAXAS_V4_2_9_MEDIA_ORGANIZER_FAILED_REPAIR.zip",
+      "sha256": "2d68a0ed3e280c6099932e375f00a994f787f24626450d795ddc2112b3e32dca",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/016_ABRAXAS_V4_2_9_MEDIA_ORGANIZER_FAILED_REPAIR",
+      "members": 3,
+      "declared_bytes": 2415,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".py": 2
+      }
+    },
+    {
+      "archive": "UPLOAD/Archivo.zip",
+      "sha256": "1fa8e05b9b58a1e20c2dccd2731fafa728ff85f1ff8b8d02ef0f980afb8dde31",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/017_Archivo",
+      "members": 62,
+      "declared_bytes": 116746045,
+      "nested_zip_count": 40,
+      "extensions": {
+        ".command": 4,
+        ".html": 8,
+        ".txt": 2,
+        ".zip": 40,
+        "[none]": 4
+      }
+    },
+    {
+      "archive": "EXTRACTED/002_ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5/CONTINUIDAD_CHAT_NUEVO_ABRAXAS_V4_2_5/CODIGO_COMPLETO/ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION.zip",
+      "sha256": "73840421d801d51aad51d57eb49c8f83a4561dff2aeff41623345d278e771853",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION.zip"
+    },
+    {
+      "archive": "EXTRACTED/003_ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5_ACTUALIZADA/CONTINUIDAD_CHAT_NUEVO_ABRAXAS_V4_2_5/CODIGO_COMPLETO/ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION.zip",
+      "sha256": "73840421d801d51aad51d57eb49c8f83a4561dff2aeff41623345d278e771853",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION.zip"
+    },
+    {
+      "archive": "EXTRACTED/004_ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_6_ESTADO_43_DE_73/ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_6_ESTADO_43_DE_73/CODIGO_COMPLETO/ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION.zip",
+      "sha256": "73840421d801d51aad51d57eb49c8f83a4561dff2aeff41623345d278e771853",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION.zip"
+    },
+    {
+      "archive": "EXTRACTED/006_ABRAXAS_V3_1_EXECUTABLE_AUTOMATION/ABRAXAS_V3_1_EXECUTABLE_AUTOMATION/SYSTEM/ABRAXAS_CONTENT_LAB_V3_1_VERIFIED.zip",
+      "sha256": "1ab17ac50ebc60172bd05e7df3f91502cf5d70562c4cab0f8aa1c43c51bd9699",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_CONTENT_LAB_V3_1_VERIFIED.zip"
+    },
+    {
+      "archive": "EXTRACTED/009_ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION/v42/ABRAXAS_V4_2_HTML_DRIVEN_AUTOMATION/SYSTEM/ABRAXAS_CONTENT_LAB_V3_1_VERIFIED.zip",
+      "sha256": "1ab17ac50ebc60172bd05e7df3f91502cf5d70562c4cab0f8aa1c43c51bd9699",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_CONTENT_LAB_V3_1_VERIFIED.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5.zip",
+      "sha256": "d604e42484bfa024f10dfe6119531ae8af4f18db4397653f40a0630a3c9b3a08",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5_ACTUALIZADA.zip",
+      "sha256": "ed107ed1886b17107b35c5ede085ceea63020be257fac166c93347288a2adc76",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5_ACTUALIZADA.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_6_ESTADO_43_DE_73.zip",
+      "sha256": "fe9f9e9dd1ce9b057eb84726350aa2cf868344077d5bc24fdacef8435d5f6f81",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_6_ESTADO_43_DE_73.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_CONTINUIDAD_V4_2_NUEVO_CHAT.zip",
+      "sha256": "bb552c3deb163f614d65a40dadd5918672b7c2b20b44caa6f1161a74441868b8",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_CONTINUIDAD_V4_2_NUEVO_CHAT.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_10_MASTER_REFRESH_SAFE_HOTFIX.zip",
+      "sha256": "339ab13261f7eb5b4195c25383c080cf4d8550db4d2f2d2b99b43001b49a4a67",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/018_ABRAXAS_V4_2_10_MASTER_REFRESH_SAFE_HOTFIX",
+      "members": 3,
+      "declared_bytes": 2958,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".py": 1,
+        ".txt": 1
+      }
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_11_ONE_COMMAND_COMPLETE_FINISH.zip",
+      "sha256": "ca51182569b70f63542066126cf251a138c93f30e420cbf9b361973d7989c808",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/019_ABRAXAS_V4_2_11_ONE_COMMAND_COMPLETE_FINISH",
+      "members": 2,
+      "declared_bytes": 1095,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".txt": 1
+      }
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_12_MASTER_REFRESH_ONE_COMMAND.zip",
+      "sha256": "265a050441dbe3f8656bd7330ae9f37c1fb1c76f7c87ddb57a2b365f066d327a",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/020_ABRAXAS_V4_2_12_MASTER_REFRESH_ONE_COMMAND",
+      "members": 2,
+      "declared_bytes": 775,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".txt": 1
+      }
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_4_DASHBOARDS_MOTION.zip",
+      "sha256": "5c98f3e9a13423fb063623cd7b318eb17ef6d6760a040b2aa955a4fa06aee360",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/021_ABRAXAS_V4_2_4_DASHBOARDS_MOTION",
+      "members": 14,
+      "declared_bytes": 42933130,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".html": 2,
+        ".json": 4,
+        ".txt": 2
+      }
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_5_HORIZONTAL_LONGFORM_HOTFIX.zip",
+      "sha256": "88ac982cbd26b1e587f30ff9dbe78962ab5627eb178d3d5f8eef9aa2546a07b9",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_5_HORIZONTAL_LONGFORM_HOTFIX.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION.zip",
+      "sha256": "73840421d801d51aad51d57eb49c8f83a4561dff2aeff41623345d278e771853",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_6_RENDER_RESUME_SAFE_TERMINAL_HOTFIX.zip",
+      "sha256": "4ba98f74185cb3f35798f3a4e65629d4c98628a442bf3357af787d6a5c0a7e2f",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_6_RENDER_RESUME_SAFE_TERMINAL_HOTFIX.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_6_RENDER_RESUME_SAFE_TERMINAL_HOTFIX_V2.zip",
+      "sha256": "ed96faea0ddfe01118dfc727ba9832335bce76aa5e98fd63ccefd7f6a9b7c865",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_6_RENDER_RESUME_SAFE_TERMINAL_HOTFIX_V2.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (1).zip",
+      "sha256": "e2c9725b1535f3901103f75dbfcc1852afe27a3d7c5548fc352aed160e9a9fad",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (1).zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (2).zip",
+      "sha256": "e2c9725b1535f3901103f75dbfcc1852afe27a3d7c5548fc352aed160e9a9fad",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (1).zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX.zip",
+      "sha256": "e2c9725b1535f3901103f75dbfcc1852afe27a3d7c5548fc352aed160e9a9fad",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (1).zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_7_RESILIENT_WORKER_HOTFIX.zip",
+      "sha256": "91b9a31bdcdc8363295ee0e953d52be38da492340586ce6fa77bfbbbe870df76",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_7_RESILIENT_WORKER_HOTFIX.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_8_MEDIA_STRUCTURE_HOTFIX.zip",
+      "sha256": "10bd00231c9fae4ed0f0f50c212bc69fb74be8ebc60a8f937544b2478de2d9c4",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_8_MEDIA_STRUCTURE_HOTFIX.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_8_MONITOR_AND_MEDIA_HOTFIX.zip",
+      "sha256": "577077b7ba26d143d78e9217b9f6dc0b2f236de7f5f73c88571a6eb1e4fd8044",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_8_MONITOR_AND_MEDIA_HOTFIX.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_8_SAFE_FINISH_AND_ORGANIZE_HOTFIX.zip",
+      "sha256": "1c35b21712cb552a8ab01e7cc20e4631a187dfa7afee867744b8009ffb075303",
+      "status": "EXTRACTED",
+      "destination": "EXTRACTED/022_ABRAXAS_V4_2_8_SAFE_FINISH_AND_ORGANIZE_HOTFIX",
+      "members": 3,
+      "declared_bytes": 2043,
+      "nested_zip_count": 0,
+      "extensions": {
+        ".command": 1,
+        ".py": 1,
+        ".txt": 1
+      }
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/ABRAXAS_V4_2_9_MEDIA_ORGANIZER_FAILED_REPAIR.zip",
+      "sha256": "2d68a0ed3e280c6099932e375f00a994f787f24626450d795ddc2112b3e32dca",
+      "status": "DUPLICATE",
+      "same_as": "UPLOAD/ABRAXAS_V4_2_9_MEDIA_ORGANIZER_FAILED_REPAIR.zip"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5.zip",
+      "sha256": "591c24086f6103cbf11b73257b22668643773f8ad26d08f8d2cf76ab9a2e1841",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_5_ACTUALIZADA.zip",
+      "sha256": "5c13c5556c34e15be7da7435381a510c19c37a806c45ae561b8b90e69b51dc6a",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_CONTINUIDAD_CHAT_NUEVO_V4_2_6_ESTADO_43_DE_73.zip",
+      "sha256": "b82a5eeb1f68ee10f5ca41f9309238d85e57e65bfbd58bebd4ee4c99cb980f4e",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_CONTINUIDAD_V4_2_NUEVO_CHAT.zip",
+      "sha256": "da2972cc729bff36affad41041335b485a951734ceff2fb52427d9acdabd16e6",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_10_MASTER_REFRESH_SAFE_HOTFIX.zip",
+      "sha256": "fd85abf8761578f02ee3ff702fc29fe741410b45f6175e3afbef11d4346afbcd",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_11_ONE_COMMAND_COMPLETE_FINISH.zip",
+      "sha256": "feba8f9a4f9ba69e167063bb3fbf1be9fa8681f2ee386a3ff5be63686f05c0de",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_12_MASTER_REFRESH_ONE_COMMAND.zip",
+      "sha256": "42ca239f6326b4669d292135313504656befba8aad581918ce15049869f670ad",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_4_DASHBOARDS_MOTION.zip",
+      "sha256": "a61dcc390341f61c997fb3b9ab7fe15526a34416593a088c22d5eeb1922ac456",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_5_HORIZONTAL_LONGFORM_HOTFIX.zip",
+      "sha256": "a1f41eb1fc38f98df823f5a674270817e7161ebae7332ea06a12f2fcd91ff847",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_5_HTML_DRIVEN_AUTOMATION.zip",
+      "sha256": "247f54986e9ec58160d13baa6a3e2ceaa4fde3dadc7d0f032a16d7b94cfe067a",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_6_RENDER_RESUME_SAFE_TERMINAL_HOTFIX.zip",
+      "sha256": "7ec6078df43713494231c8d75002099acb1be38e4082879ecbcc520d002fdb2d",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_6_RENDER_RESUME_SAFE_TERMINAL_HOTFIX_V2.zip",
+      "sha256": "660c740f3d05c8bf23fa06cce0ffe59bb609082ad1964e5371792dc9c57c5da9",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (1).zip",
+      "sha256": "a76aad14f940754548822387d790575bb5c34e699fa7a909626cf1b80c19cf81",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX (2).zip",
+      "sha256": "4cede2f26d80681cd04caee64afab8f3d38e55b050e5925b6706ce4ad9c032e6",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_6_RESILIENT_QUEUE_HOTFIX.zip",
+      "sha256": "f5b2a9cc28fefa8546b10ab90d45df14a064123c949da27c96d70c7373a17494",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_7_RESILIENT_WORKER_HOTFIX.zip",
+      "sha256": "0f447db3eb071c41a96e81820ae68debb608ee7f48e98f4e419bddee6fa24d13",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_8_MEDIA_STRUCTURE_HOTFIX.zip",
+      "sha256": "0e686a23cdbf81e1d411194efbf4ab00057134517f13bf2edc0d2d65943d6576",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_8_MONITOR_AND_MEDIA_HOTFIX.zip",
+      "sha256": "75f6cffe09698a71ed2663cdff6b0ac1fcdd36ad9aa687043be8848b216c8fc5",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_8_SAFE_FINISH_AND_ORGANIZE_HOTFIX.zip",
+      "sha256": "1e6456f9cf5e27c8abcf86cec58b95f55ecb676b99cbc9758954395d738b3b2c",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    },
+    {
+      "archive": "EXTRACTED/017_Archivo/__MACOSX/._ABRAXAS_V4_2_9_MEDIA_ORGANIZER_FAILED_REPAIR.zip",
+      "sha256": "7655c6427aa3cd1f171c1cc3d107ecbf2984de092262843d74e5b61ebca637cf",
+      "status": "BAD_ZIP",
+      "error": "File is not a zip file"
+    }
+  ]
+}

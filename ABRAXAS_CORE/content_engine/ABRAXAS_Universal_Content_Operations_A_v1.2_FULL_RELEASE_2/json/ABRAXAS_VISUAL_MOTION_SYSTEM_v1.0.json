@@ -1,0 +1,122 @@
+{
+  "version": "1.0",
+  "name": "ABRAXAS Visual + Motion System v1.0",
+  "source_priority": [
+    "Apple HIG / macOS / product pages",
+    "CleanMyMac operational flow",
+    "Dala procedural particle field",
+    "OHZI immersive object",
+    "Refero/Awwwards interaction"
+  ],
+  "home": {
+    "primary_object": "procedural brain",
+    "brain_zoom": {
+      "min": 1.0,
+      "max": 2.0,
+      "baseline": "v0.9.6.1 at 1.0",
+      "step": 0.05
+    },
+    "particle_glyph": "open ABRAXAS chevron",
+    "palette": [
+      "#f4ead6",
+      "#d8b46c",
+      "#b78338",
+      "#8a6532",
+      "#ffffff"
+    ],
+    "hotspots": [
+      "He",
+      "Shim",
+      "Production",
+      "Calendar",
+      "Assets",
+      "Brand Intelligence"
+    ],
+    "hotspot_pattern": "visible app-like node + leader line + tool icon + hover/focus popover"
+  },
+  "liquid_glass": {
+    "scope": [
+      "navigation",
+      "functional overlays",
+      "brain copy/status/zoom",
+      "popovers",
+      "architect"
+    ],
+    "brain_overlay_rgba": "rgba(18,18,20,.42)",
+    "rule": "brain remains visible through overlay; no opaque coverage"
+  },
+  "story": {
+    "sections": [
+      "Home",
+      "Clients",
+      "Brand Intelligence",
+      "Roadmap"
+    ],
+    "patterns": [
+      "hero",
+      "highlight rail",
+      "closer look tabs",
+      "disclosure",
+      "media/data module"
+    ],
+    "text_only": true
+  },
+  "workspace": {
+    "sections": [
+      "He",
+      "Shim",
+      "Production",
+      "Assets",
+      "AI Results",
+      "Calendar",
+      "Content Studio"
+    ],
+    "principle": "one primary task/action at a time"
+  },
+  "motion": {
+    "micro_ms": [
+      120,
+      180
+    ],
+    "selection_ms": [
+      160,
+      220
+    ],
+    "disclosure_ms": [
+      220,
+      320
+    ],
+    "popover_ms": [
+      240,
+      380
+    ],
+    "story_reveal_ms": [
+      420,
+      620
+    ],
+    "brain_morph": "spring-like position interpolation",
+    "reduced_motion": true,
+    "home_brain_morph": {
+      "alias_of": "brain_morph",
+      "behavior": "spring-like position interpolation",
+      "zoom_min": 1.0,
+      "zoom_max": 2.0
+    }
+  },
+  "v11_gate": "Standalone boot + all route navigation + prompt QA must remain green before new features.",
+  "layout_patterns": {
+    "hero": {
+      "composition": "brain-led product story; glass copy overlay; no opaque brain coverage"
+    },
+    "highlight_rail": {
+      "behavior": "horizontal native scroll + x mandatory snap",
+      "content": "one idea + one visual anchor + one action"
+    },
+    "closer_look": {
+      "behavior": "small selector + contextual media/copy"
+    },
+    "workspace": {
+      "behavior": "inset navigation + dominant task + contextual inspector"
+    }
+  }
+}

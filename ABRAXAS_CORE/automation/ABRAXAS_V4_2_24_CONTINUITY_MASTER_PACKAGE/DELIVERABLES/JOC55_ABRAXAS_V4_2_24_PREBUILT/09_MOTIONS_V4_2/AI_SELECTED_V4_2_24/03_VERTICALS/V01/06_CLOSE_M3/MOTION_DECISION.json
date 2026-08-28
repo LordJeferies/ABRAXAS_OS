@@ -1,0 +1,38 @@
+{
+  "sequence": 6,
+  "content_id": "V01",
+  "narrative_role": "CLOSE",
+  "source_part_id": "V01_P12",
+  "child_beat_ids": [
+    "V01_B13"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:04:02.909",
+  "source_end": "00:04:07.852",
+  "timeline_in_seconds": 71.909,
+  "timeline_out_seconds": 76.852,
+  "timeline_in": "00:01:11.909",
+  "timeline_out": "00:01:16.852",
+  "duration_seconds": 4.943,
+  "text": "pero no solamente sobrevivir, sino disfrutar y ser feliz haciendo lo que haces.",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0045.",
+  "semantic_score": 9.8649,
+  "transcript_reference": "SRT_0045",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La frase tiene fuerza autónoma y debe resolverse como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

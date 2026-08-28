@@ -1,0 +1,11 @@
+# ANTES DE CORTAR
+- [ ] master existe
+- [ ] FPS confirmado
+- [ ] timestamps parseados
+- [ ] aproximados marcados
+- [ ] orden editorial preservado
+- [ ] manifest guardado
+- [ ] duración master cubre todos los rangos
+- [ ] espacio libre
+- [ ] output separado del master
+- [ ] backup/config versionados

@@ -1,0 +1,11 @@
+CONTENT: JH01
+ROL: EDITORIAL
+FUENTE: 00:09:44.000 → 00:09:52.000
+TIMELINE: 00:03:10.423 → 00:03:18.423
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+conocer, entender un sistema, hacer networking también en la universidad también es importante, no que sea la única manera de hacerlo, pero también se ha convertido como un
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0113.

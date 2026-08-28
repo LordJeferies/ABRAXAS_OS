@@ -1,0 +1,30 @@
+ABRAXAS V4.2.24 · PAQUETE MAESTRO DE CONTINUIDAD Y PRODUCCIÓN
+
+NO REINICIAR EL PROYECTO.
+NO REDISEÑAR LA ARQUITECTURA.
+NO BORRAR OUTPUT, CACHE, TXT, JSON, PROMPTS NI MANIFESTS.
+NO VOLVER A PARTIR VERTICALES U HORIZONTALES EN TROZOS PERIÓDICOS.
+
+Este paquete continúa desde la base ejecutable V4.2.5 y consolida las reglas
+válidas encontradas hasta V4.2.23. Los ZIP históricos son evidencia; el mapa,
+los HTML y los contratos V4.2.24 incluidos aquí son el estado operativo.
+
+EJECUCIÓN RECOMENDADA EN MAC
+
+1. Descomprimir el ZIP en Descargas.
+2. Abrir Terminal y ejecutar:
+
+cd "$HOME/Downloads/ABRAXAS_V4_2_24_CONTINUITY_MASTER_PACKAGE"
+chmod +x TERMINAL/*.command
+./TERMINAL/GENERAR_PRODUCCION_COMPLETA.command
+
+Para crear solo mapa, carpetas, TXT, HTML y clips de referencia seleccionados:
+
+./TERMINAL/CREAR_HOTFIX.command
+
+La ruta mostrada en Finder se detecta automáticamente:
+~/Desktop/Joc podcast next ep 55/00_MASTERS_OFICIALES/
+
+La Terminal organiza, valida y ejecuta. La decisión creativa ya está en:
+DELIVERABLES/.../00_MANIFEST/FINAL_AI_MOTION_MAP_V4_2_24.json
+

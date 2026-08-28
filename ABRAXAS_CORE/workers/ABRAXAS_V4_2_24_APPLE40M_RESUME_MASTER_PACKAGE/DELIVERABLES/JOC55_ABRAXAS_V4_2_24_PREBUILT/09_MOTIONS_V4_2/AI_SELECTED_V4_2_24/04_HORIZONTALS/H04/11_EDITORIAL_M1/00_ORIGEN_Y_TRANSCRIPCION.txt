@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:18:32.000 → 01:18:39.000
+TIMELINE: 00:05:02.000 → 00:05:09.000
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+esta crecer orgánico porque les está yendo muy bien y el múltiplo de crecimiento es grande, it up, you know what mean?
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0832.

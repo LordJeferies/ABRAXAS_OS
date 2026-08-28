@@ -1,0 +1,69 @@
+{
+  "client_id": "CLIENTE_DEMO",
+  "project_name": "CLIENTE_DEMO_VIDEO_AUTOMATION",
+  "master_video": "/ruta/al/video_master.mp4",
+  "timestamps_file": "/ruta/a/clips_timestamps.txt",
+  "fps_source": 30,
+  "timestamp_format": "HH:MM:SS:FF",
+  "output_root": "~/Desktop/CLIENTE_DEMO_Video_Automation",
+  "backend": {
+    "terminal": true,
+    "davinci": true,
+    "recommended_mode": "hybrid"
+  },
+  "outputs": {
+    "clean": true,
+    "subtitled": true,
+    "davinci_project": true
+  },
+  "formats": {
+    "vertical": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "horizontal": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30
+    }
+  },
+  "editing": {
+    "movement": {
+      "enabled": true,
+      "profile": "balanced",
+      "interval_seconds_min": 8,
+      "interval_seconds_max": 12,
+      "vertical_zoom_percent": [
+        100,
+        106,
+        100,
+        105,
+        107
+      ],
+      "horizontal_zoom_percent": [
+        100,
+        104,
+        100,
+        103,
+        105
+      ]
+    },
+    "voice": {
+      "enabled": false,
+      "engine": "davinci_template",
+      "voice_isolation_percent": 35,
+      "dialogue_leveler": true
+    },
+    "subtitles": {
+      "enabled": false,
+      "engine": "davinci_ai",
+      "language": "Spanish",
+      "editable_final_layer": "native_or_textplus"
+    }
+  },
+  "glossary": {
+    "enabled": true,
+    "path": "CONFIG/glosario.json"
+  }
+}

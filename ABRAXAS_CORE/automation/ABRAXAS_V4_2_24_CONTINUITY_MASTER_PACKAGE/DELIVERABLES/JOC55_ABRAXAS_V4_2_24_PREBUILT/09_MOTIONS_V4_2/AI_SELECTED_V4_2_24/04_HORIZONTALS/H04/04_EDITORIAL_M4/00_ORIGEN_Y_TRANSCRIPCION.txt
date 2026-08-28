@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:15:23.000 → 01:15:32.000
+TIMELINE: 00:01:53.000 → 00:02:02.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+haciendo lo que te das cuenta en qué tienes que mejorar, qué le importa más al cliente, en qué tienes que invertir versus en qué de repente no vale la pena ahorita invertir sino más
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0799.

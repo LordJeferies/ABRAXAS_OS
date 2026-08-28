@@ -1,0 +1,11 @@
+CONTENT: V01
+ROL: SHIFT
+FUENTE: 00:03:36.000 → 00:03:45.000
+TIMELINE: 00:00:45.000 → 00:00:54.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Y creo que lo que me disfruto primero es que estoy haciendo lo que me gusta y estoy estudiando lo que me gusta y ayuda a cambiar la vida de las personas.
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0042.

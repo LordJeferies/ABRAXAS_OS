@@ -1,0 +1,11 @@
+CONTENT: V11
+ROL: CORE
+FUENTE: 01:10:50.553 → 01:10:59.000
+TIMELINE: 00:00:30.553 → 00:00:39.000
+DURACIÓN: 8.447s
+
+TRANSCRIPCIÓN EXACTA
+A la persona lo que le comunica es, esta persona sabe o esta compañía sabe lo que están hablando, quiero saber más y estas son las personas que me van a enseñar porque mira lo
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0743.

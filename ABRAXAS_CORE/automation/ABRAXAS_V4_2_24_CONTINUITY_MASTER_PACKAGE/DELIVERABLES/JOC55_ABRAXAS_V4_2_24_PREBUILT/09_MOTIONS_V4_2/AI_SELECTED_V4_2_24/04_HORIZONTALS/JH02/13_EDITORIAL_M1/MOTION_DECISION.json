@@ -1,0 +1,38 @@
+{
+  "sequence": 13,
+  "content_id": "JH02",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "JH02_B74",
+  "child_beat_ids": [
+    "JH02_B74"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:25:33.000",
+  "source_end": "00:25:40.000",
+  "timeline_in_seconds": 367.243,
+  "timeline_out_seconds": 374.243,
+  "timeline_in": "00:06:07.243",
+  "timeline_out": "00:06:14.243",
+  "duration_seconds": 7.0,
+  "text": "y fíjate cómo se conecta esto a que hablamos hace rato de que la universidad sí te da otras habilidades que igual te termina impactando.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0284.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0284",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "La idea se aclara con observación documental y close-ups, sin sustituir el testimonio.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

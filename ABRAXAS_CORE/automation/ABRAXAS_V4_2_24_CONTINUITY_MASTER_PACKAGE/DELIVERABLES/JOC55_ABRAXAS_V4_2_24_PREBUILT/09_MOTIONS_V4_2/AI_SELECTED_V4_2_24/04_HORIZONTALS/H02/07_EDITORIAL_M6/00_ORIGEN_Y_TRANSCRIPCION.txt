@@ -1,0 +1,11 @@
+CONTENT: H02
+ROL: EDITORIAL
+FUENTE: 00:38:58.000 → 00:39:04.000
+TIMELINE: 00:03:36.000 → 00:03:42.000
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+Porque esta misma información que yo estoy haciendo y que estoy haciendo todas estas guías para lograr estos pasos.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0431.

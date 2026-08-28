@@ -1,0 +1,39 @@
+{
+  "sequence": 5,
+  "content_id": "V18",
+  "narrative_role": "MEMORABLE",
+  "source_part_id": "V18_P09",
+  "child_beat_ids": [
+    "V18_B09",
+    "V18_B10"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:17:42.046",
+  "source_end": "01:17:48.897",
+  "timeline_in_seconds": 56.046,
+  "timeline_out_seconds": 62.897,
+  "timeline_in": "00:00:56.046",
+  "timeline_out": "00:01:02.897",
+  "duration_seconds": 6.851,
+  "text": "es increíble entonces ha sido super interesante en verdad.",
+  "reason": "Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0820.",
+  "semantic_score": 7.2272,
+  "transcript_reference": "SRT_0820",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La frase tiene fuerza autónoma y debe resolverse como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

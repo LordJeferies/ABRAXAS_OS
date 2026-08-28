@@ -1,0 +1,11 @@
+CONTENT: V05
+ROL: HOOK
+FUENTE: 00:17:49.000 → 00:17:58.000
+TIMELINE: 00:00:08.000 → 00:00:17.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Pero, ¿cuál es la cosa? ¿Qué es lo que tengo que hacer? sea, ¿cuáles son? Vamos a desglosar esto que yo tengo que mejorar porque para mejorar tengo que entender qué está pasando.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0200.

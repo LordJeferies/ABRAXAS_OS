@@ -1,0 +1,11 @@
+CONTENT: V11
+ROL: SHIFT
+FUENTE: 01:10:59.000 → 01:11:05.000
+TIMELINE: 00:00:39.000 → 00:00:45.000
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+que me están enseñando de manera gratuita, sea, no se están resalvando el conocimiento, pero también demuestras que tanto sabes.
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0744.

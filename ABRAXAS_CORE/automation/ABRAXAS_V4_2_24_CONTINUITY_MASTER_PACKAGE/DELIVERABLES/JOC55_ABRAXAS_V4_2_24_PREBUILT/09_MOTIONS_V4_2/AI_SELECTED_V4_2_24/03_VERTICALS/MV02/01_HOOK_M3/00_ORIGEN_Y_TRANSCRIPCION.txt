@@ -1,0 +1,11 @@
+CONTENT: MV02
+ROL: HOOK
+FUENTE: 00:48:42.335 → 00:48:48.787
+TIMELINE: 00:00:20.506 → 00:00:26.958
+DURACIÓN: 6.452s
+
+TRANSCRIPCIÓN EXACTA
+esto es algo que verdad puede beneficiar a muchísimas personas, entonces creo que es la verdad.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0520.

@@ -1,0 +1,11 @@
+CONTENT: JV03
+ROL: CORE
+FUENTE: 00:20:13.000 → 00:20:22.000
+TIMELINE: 00:00:34.630 → 00:00:43.630
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Pero la realidad es que la vida es más que eso. O sea, la vida te lleva... con retos, la vida te va dar trancasos, la vida te va llevar por zonas que no son cómodas.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0233.

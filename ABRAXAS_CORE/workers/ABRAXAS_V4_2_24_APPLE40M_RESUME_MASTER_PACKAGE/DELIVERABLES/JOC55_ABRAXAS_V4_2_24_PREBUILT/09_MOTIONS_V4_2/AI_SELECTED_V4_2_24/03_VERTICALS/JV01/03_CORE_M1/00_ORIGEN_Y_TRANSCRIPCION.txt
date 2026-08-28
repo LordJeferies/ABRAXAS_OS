@@ -1,0 +1,11 @@
+CONTENT: JV01
+ROL: CORE
+FUENTE: 00:08:32.949 → 00:08:38.363
+TIMELINE: 00:00:30.907 → 00:00:36.321
+DURACIÓN: 5.414s
+
+TRANSCRIPCIÓN EXACTA
+que estuvo en la misma mesa donde estábamos nosotros, de hecho, hablando sobre el tema educativo.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0102.

@@ -1,0 +1,11 @@
+CONTENT: V07
+ROL: HOOK
+FUENTE: 00:29:44.000 → 00:29:51.000
+TIMELINE: 00:00:05.000 → 00:00:12.000
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+Yo siempre pienso que la grandeza está en las pequeñas cosas y como tú eres en las pequeñas cosas eres en todo lo demás.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0329.

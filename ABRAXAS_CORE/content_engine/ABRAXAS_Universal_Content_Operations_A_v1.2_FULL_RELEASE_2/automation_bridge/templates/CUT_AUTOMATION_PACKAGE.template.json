@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.2",
+  "manifestType": "CUT_AUTOMATION_PACKAGE",
+  "sourceManifest": "SHIM_CONFIRMED_MANIFEST.json",
+  "sourceReadOnly": true,
+  "selectionPolicy": "CONFIRMADO_ONLY",
+  "processSelection": [
+    "ONE_CONFIRMED",
+    "MULTIPLE_BY_ID",
+    "ALL_CONFIRMED",
+    "CURRENT_SAVED_SELECTION"
+  ],
+  "outputModes": [
+    "SEGMENTS_SEPARATE",
+    "JOINED_FINAL",
+    "BOTH",
+    "INSTRUCTIONS_ONLY",
+    "FULL_PACKAGE"
+  ],
+  "precisionModes": [
+    "PRECISE_TRANSCODE",
+    "FAST_STREAM_COPY_KEYFRAME_DEPENDENT"
+  ],
+  "confirmedVideos": []
+}

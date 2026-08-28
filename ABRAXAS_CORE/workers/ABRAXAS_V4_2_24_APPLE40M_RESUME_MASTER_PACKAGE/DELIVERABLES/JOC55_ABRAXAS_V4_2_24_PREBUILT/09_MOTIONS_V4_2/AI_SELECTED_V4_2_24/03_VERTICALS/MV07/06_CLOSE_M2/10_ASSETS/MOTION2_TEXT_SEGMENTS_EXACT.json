@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "como tú lo estabas haciendo y ver distintas perspectivas y sentirte supo y sentirte apoyado y sentirte inspirado.",
+  "segments": [
+    "como tú lo estabas haciendo y",
+    "ver distintas perspectivas y sentirte supo",
+    "y sentirte apoyado y sentirte inspirado."
+  ],
+  "reconstructed_text": "como tú lo estabas haciendo y ver distintas perspectivas y sentirte supo y sentirte apoyado y sentirte inspirado."
+}

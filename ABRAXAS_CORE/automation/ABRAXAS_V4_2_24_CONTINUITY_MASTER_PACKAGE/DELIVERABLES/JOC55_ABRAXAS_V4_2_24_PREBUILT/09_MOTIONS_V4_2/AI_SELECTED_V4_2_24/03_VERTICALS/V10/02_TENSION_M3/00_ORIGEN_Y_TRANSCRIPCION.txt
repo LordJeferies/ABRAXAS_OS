@@ -1,0 +1,11 @@
+CONTENT: V10
+ROL: TENSION
+FUENTE: 00:53:47.000 → 00:53:56.000
+TIMELINE: 00:00:19.000 → 00:00:28.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+O sea, es desde la parte de entender el porqué del examen, cómo está constituido el examen, el tiempo que tienes para responder, velocidad de respuesta, entender el sistema
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0574.

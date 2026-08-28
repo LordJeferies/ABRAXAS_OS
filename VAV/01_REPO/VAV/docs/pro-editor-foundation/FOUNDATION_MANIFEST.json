@@ -1,0 +1,22 @@
+{
+  "name": "VAV Captions Pro Editor Foundation",
+  "version": "1.0",
+  "date": "2026-08-27",
+  "outOfScope": [
+    "AI avatar",
+    "image generator",
+    "stock media",
+    "filters",
+    "color grading",
+    "background removal",
+    "video transitions",
+    "beat editing",
+    "B-roll generator",
+    "music library",
+    "general clip cutting",
+    "noise removal suite",
+    "recording studio",
+    "livestream"
+  ],
+  "priority": "architecture from C01; deep implementation C05-C06+"
+}

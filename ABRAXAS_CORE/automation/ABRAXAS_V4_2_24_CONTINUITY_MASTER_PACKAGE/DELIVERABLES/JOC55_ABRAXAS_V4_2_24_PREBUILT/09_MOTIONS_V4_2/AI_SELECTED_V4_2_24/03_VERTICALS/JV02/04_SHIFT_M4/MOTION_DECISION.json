@@ -1,0 +1,38 @@
+{
+  "sequence": 4,
+  "content_id": "JV02",
+  "narrative_role": "SHIFT",
+  "source_part_id": "JV02_P05_S01",
+  "child_beat_ids": [
+    "JV02_B07",
+    "JV02_B08",
+    "JV02_B09"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:14:23.725",
+  "source_end": "00:14:30.671",
+  "timeline_in_seconds": 36.199,
+  "timeline_out_seconds": 43.145,
+  "timeline_in": "00:00:36.199",
+  "timeline_out": "00:00:43.145",
+  "duration_seconds": 6.946,
+  "text": "potencial entonces cuando hablabas de que tiene ese extra mile, esa resiliencia,",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0163.",
+  "semantic_score": 7.4673,
+  "transcript_reference": "SRT_0163",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La idea central se entiende mejor como relación o proceso visual.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

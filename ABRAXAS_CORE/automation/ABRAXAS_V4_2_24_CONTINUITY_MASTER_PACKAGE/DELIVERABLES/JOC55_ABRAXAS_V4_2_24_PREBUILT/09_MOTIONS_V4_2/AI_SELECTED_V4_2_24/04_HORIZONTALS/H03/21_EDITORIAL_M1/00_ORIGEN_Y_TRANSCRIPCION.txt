@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 01:03:21.000 → 01:03:29.000
+TIMELINE: 00:10:07.000 → 00:10:15.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Y algo muy cool, que es muy diferente, es que también tenemos la posibilidad de que practiques literalmente como si fuera un simulacro el día del examen, tal cual como se ve
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0671.

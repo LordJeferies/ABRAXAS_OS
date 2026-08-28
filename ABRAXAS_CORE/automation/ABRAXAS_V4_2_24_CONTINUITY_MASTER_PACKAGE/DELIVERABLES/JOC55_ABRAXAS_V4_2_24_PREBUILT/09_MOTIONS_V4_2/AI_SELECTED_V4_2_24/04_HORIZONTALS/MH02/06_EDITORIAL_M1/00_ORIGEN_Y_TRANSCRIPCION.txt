@@ -1,0 +1,11 @@
+CONTENT: MH02
+ROL: EDITORIAL
+FUENTE: 00:22:30.000 → 00:22:38.000
+TIMELINE: 00:03:11.437 → 00:03:19.437
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+eso lo que me gusta la ontología, que desde la universidad estás atendiendo pacientes y y dividiendo con los pacientes y el
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0255.

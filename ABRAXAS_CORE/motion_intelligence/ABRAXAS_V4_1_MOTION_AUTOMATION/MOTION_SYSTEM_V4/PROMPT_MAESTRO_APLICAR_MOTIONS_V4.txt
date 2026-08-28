@@ -1,0 +1,187 @@
+PROMPT MAESTRO — ASIGNADOR DE MOTIONS PARA CONTENIDOS YA DEFINIDOS
+
+INPUTS:
+1. Este HTML como manual de Motion.
+2. Un ZIP del cliente con assets, referencias, manuales, footage o documentación relevante.
+3. Una serie de contenidos ya determinada: transcripciones, guiones, clips, capítulos o content_ids.
+
+OBJETIVO:
+NO reescribir la serie.
+Añadir a cada beat la propuesta audiovisual más funcional según lo que se está diciendo.
+
+PROCESO:
+
+A. IDENTIFICAR
+- CLIENTE
+- FORMATO: podcast intro / podcast clip / vertical grabado / horizontal grabado / voice over
+- SOURCE AUDIO
+- SI EXISTE SPEAKER EN FOOTAGE
+- TRANSCRIPCIÓN EXACTA
+- IDEA CONCEPTUAL
+- FUNCIÓN DEL BEAT
+- QUÉ DEBE ENTENDERSE AUN SIN AUDIO
+- REFERENCIA VISUAL MÁS FUNCIONAL DEL HTML
+
+B. CLASIFICAR
+DETAIL / EXPLORATION → Motion 1
+PROGRESSION / TRANSFORMATION → Motion 2
+STATEMENT / CONTRADICTION / PAYOFF → Motion 3
+PROCESS / TIMELINE / RELATIONSHIP → Motion 4
+PHYSICAL ACTION / MICRO-STORY → Motion 5
+SOFTWARE / DATA / DIGITAL PROCESS → Motion 6
+
+NO ELEGIR POR PALABRA CLAVE.
+Ejemplo: que aparezca “Moka” no obliga a Motion 6.
+
+C. PARA CADA BEAT DEVOLVER
+
+CONTENT_ID:
+BEAT_ID:
+TIMECODE:
+TRANSCRIPCIÓN:
+
+MOTION_SUGERIDO:
+MOTION_ALTERNATIVO:
+POR_QUÉ_EL_MOTION_PRINCIPAL:
+
+RESUMEN_HUMANO:
+2–4 frases que expliquen exactamente qué verá el espectador.
+
+RELACIÓN_CON_LO_DICHO:
+Cómo la imagen vuelve visible el significado del beat.
+
+FUNCIÓN_VISUAL:
+CONTEXT / EVIDENCE / METAPHOR / IDENTITY / PROCESS / LOCATION / SCALE / EMOTION / TRANSITION / RESULT.
+
+CAPA_SIMBÓLICA_ALEGÓRICA:
+Explicar la metáfora. Debe ser creativa, específica y corporativamente creíble.
+
+SPEAKER_BEHAVIOR:
+- remains_visible
+- composited_over_plate
+- source_footage_replaced_temporarily
+- voice_over_only
+
+REFERENCE_LOGIC:
+Qué referencia del HTML se toma y qué principio visual se traduce.
+
+FRAMES:
+Para cada frame:
+1. FUNCIÓN NARRATIVA.
+2. SUCESO EXACTO DENTRO DE LA ESCENA.
+3. RESUMEN DE QUÉ HAY EN LA IMAGEN.
+4. RELACIÓN CON LA FRASE.
+5. CONTINUIDAD: qué permanece idéntico.
+6. QUÉ CAMBIA.
+7. IMAGEN EXACTA A GENERAR:
+   - escenario
+   - protagonista
+   - secundarios
+   - posiciones y escala
+   - materiales
+   - texturas
+   - ambiente
+   - cámara y lente equivalente
+   - ángulo
+   - profundidad de campo
+   - luz
+   - paleta
+   - espacio negativo
+   - texto integrado
+   - emoción visual
+   - restricciones
+8. TEXTO EXACTO DENTRO DE LA IMAGEN o NONE.
+9. CÓMO SE INTEGRA EL TEXTO:
+   superficie/materialidad/perspectiva/sombra/reflejo/relieve.
+10. PROMPT FINAL DE IMAGEN, production-ready.
+11. ANIMACIÓN OPCIONAL.
+12. PROMPT FINAL DE ANIMACIÓN.
+13. NEGATIVOS.
+14. PUENTE AL SIGUIENTE FRAME.
+
+D. REGLAS ESPECÍFICAS
+
+MOTION 1:
+- NO generar al speaker dentro del plate.
+- Background flexible para speaker izquierda/derecha/centro o dos personas.
+- Laterales 20–25% de baja densidad.
+- Contenido crítico central y desplazable ±10–15%.
+- Zoom seguro 100–106%.
+- En voice over: 3 close-ups coherentes.
+
+MOTION 2:
+- Usar EXACTAMENTE las palabras del fragmento de transcripción asignado.
+- Dividir el fragmento en 3 segmentos consecutivos sin parafrasear ni resumir.
+- Prioridad 1: coherencia de cláusula/unidad de sentido. Prioridad 2: cantidades de palabras parecidas.
+- Si no pueden quedar equilibrados sin romper la idea, aceptar segmentos desiguales.
+- Si el beat es demasiado corto para 3 segmentos con sentido, NO forzar Motion 2; elegir otro Motion.
+- Crear 4 clean plates.
+- Frame 2 muestra segmento 1; Frame 3 muestra segmentos 1+2; Frame 4 muestra 1+2+3.
+- El texto se integra físicamente en el mundo: nubes, bosque, roca, pared, vidrio, papel, etiqueta, sombra, UI, señalética, etc.
+- Los tiempos de Frames 2–4 siguen la duración real de cada segmento en el audio. No imponer 3/3/3.
+- Si no hay timestamps, estimar tiempos proporcionales al número de palabras.
+
+MOTION 3:
+- Tipografía pura.
+- Una idea dominante por estado.
+- Alternar contraste sin efectos gratuitos.
+
+MOTION 4:
+- Una sola infografía master 4K+.
+- Recorrido en Z.
+- Cada zona debe entenderse en ~2 segundos.
+- No cuatro slides independientes.
+
+MOTION 5:
+- Wide → detail → result.
+- Acción física real.
+- Sin texto editorial integrado.
+- No usar como solución principal de intro.
+
+MOTION 6:
+- Input → process → output.
+- Premium UI = jerarquía, espacio, easing, focus, pocas capas.
+- No HUD/cyberpunk.
+
+E. FORMATOS
+
+PODCAST INTRO:
+ACT 1 footage real abre pregunta.
+ACT 2 Motion seleccionado desarrolla contexto/stakes.
+Una combinación frecuente: Motion 4 ~9 s → Motion 3 ~9 s.
+ACT 3 regreso al podcast con tensión no resuelta.
+
+VERTICAL/HORIZONTAL GRABADO:
+No inventar discurso. El audio real manda.
+Motion entra donde ayuda a entender.
+Speaker puede regresar después del insert.
+
+VOICE OVER:
+Los Motions pueden ocupar pantalla completa.
+
+F. CLIENTE
+Aplicar Client Quality Pack real. No adaptar solo cambiando logo/color.
+
+G. CONTINUIDAD
+El último frame deja un puente: objeto, línea, dirección, color, forma, foco, textura o posición.
+
+H. QA
+FAIL si:
+- la imagen es decorativa;
+- el frame se describe con vaguedades;
+- un editor todavía pregunta “¿qué pongo exactamente?”;
+- la metáfora es cliché sin mecanismo;
+- el texto integrado parece pegado encima;
+- el Motion contradice el beat;
+- el visual no parece del cliente;
+- se inventa evidencia/claim/cita/proyecto;
+- el movimiento intenta rescatar una imagen débil.
+
+OUTPUT:
+Devolver la serie completa beat por beat con esta estructura.
+
+BIBLIOTECA VISUAL:
+Antes de escribir cada prompt de imagen, seleccionar REF A–E por su gramática. Declarar qué se toma de ella: jerarquía, densidad, profundidad, textura, comportamiento tipográfico, metáfora y color. No copiar sujeto, logo, headline o escenario original.
+
+DESCRIPCIÓN DE IMAGEN OBLIGATORIA:
+La salida debe contener primero un RESUMEN VISUAL RÁPIDO y después una IMAGEN EXACTA A GENERAR extensa, espacial y sensorial: primer plano, plano medio, fondo, materiales, textura, luz, cámara, profundidad, perspectiva, posiciones, ambiente, acción y relación narrativa. La descripción larga nunca puede ser reemplazada por el resumen.

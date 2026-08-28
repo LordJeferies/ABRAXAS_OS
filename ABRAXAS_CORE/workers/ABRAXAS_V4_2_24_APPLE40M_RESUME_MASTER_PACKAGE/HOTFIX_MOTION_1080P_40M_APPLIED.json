@@ -1,0 +1,19 @@
+{
+  "schema_version": "abraxas.hotfix-application.v4.2.24.motion1080p40m-r1",
+  "hotfix_id": "ABRAXAS_V4_2_24_MOTION_1080P_40M_R1",
+  "applied_at": "2026-08-21T08:05:28.829411+00:00",
+  "target": "/Users/lordjef/Downloads/ABRAXAS_V4_2_24_APPLE40M_RESUME_MASTER_PACKAGE",
+  "status": "APPLIED",
+  "backup": "/Users/lordjef/Downloads/ABRAXAS_V4_2_24_APPLE40M_RESUME_MASTER_PACKAGE/BACKUPS/HOTFIX_MOTION_1080P_40M_20260821_040528",
+  "motion_reference_profile": "APPLE_VT_H264_1080P_40M_V1",
+  "vertical_resolution": "1080x1920",
+  "horizontal_resolution": "1920x1080",
+  "full_programs_preserved": true,
+  "output_media_deleted": false,
+  "changed_files": [
+    "ENGINE/ai_motion_engine_v4_2_24.py",
+    "ENGINE/monitor_apple40m_v4_2_24.py",
+    "TESTS/test_package_v4_2_24.py",
+    "DOCS/15_HOTFIX_MOTION_1080P_40M.md"
+  ]
+}

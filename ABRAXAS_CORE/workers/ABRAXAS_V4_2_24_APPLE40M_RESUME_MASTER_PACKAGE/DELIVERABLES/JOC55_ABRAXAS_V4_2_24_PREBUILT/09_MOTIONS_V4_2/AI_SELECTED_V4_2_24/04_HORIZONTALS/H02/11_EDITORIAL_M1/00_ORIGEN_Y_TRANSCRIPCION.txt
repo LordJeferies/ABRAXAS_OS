@@ -1,0 +1,11 @@
+CONTENT: H02
+ROL: EDITORIAL
+FUENTE: 00:40:48.000 → 00:40:56.000
+TIMELINE: 00:05:26.000 → 00:05:34.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Porque más nadie ha presentado el examen, nadie lo conoce y ya yo tengo un seguimiento orgánico de todo esto que yo he vivido.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0449.

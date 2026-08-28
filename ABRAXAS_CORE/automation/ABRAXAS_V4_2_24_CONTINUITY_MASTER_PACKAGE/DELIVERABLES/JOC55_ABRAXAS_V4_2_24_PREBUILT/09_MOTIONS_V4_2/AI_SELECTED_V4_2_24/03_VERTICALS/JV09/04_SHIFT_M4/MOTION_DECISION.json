@@ -1,0 +1,37 @@
+{
+  "sequence": 4,
+  "content_id": "JV09",
+  "narrative_role": "SHIFT",
+  "source_part_id": "JV09_P07",
+  "child_beat_ids": [
+    "JV09_B08",
+    "JV09_B09"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:07:34.934",
+  "source_end": "01:07:41.334",
+  "timeline_in_seconds": 43.479,
+  "timeline_out_seconds": 49.879,
+  "timeline_in": "00:00:43.479",
+  "timeline_out": "00:00:49.879",
+  "duration_seconds": 6.4,
+  "text": "Estabas ahí, you're in the middle of it. Entonces, como que, OK, aprendes sobre la marcha y aparte lo que hablábamos del mismo punto de estudiar.",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0709.",
+  "semantic_score": 9.608,
+  "transcript_reference": "SRT_0709",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La selección explica una relación o mapa conceptual que merece lectura progresiva.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

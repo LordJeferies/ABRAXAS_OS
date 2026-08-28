@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Pero pienso que eso me dio como un extra fire, básicamente, de convertir ese legado",
+  "segments": [
+    "Pero pienso que eso me",
+    "dio como un extra fire,",
+    "básicamente, de convertir ese legado"
+  ],
+  "reconstructed_text": "Pero pienso que eso me dio como un extra fire, básicamente, de convertir ese legado"
+}

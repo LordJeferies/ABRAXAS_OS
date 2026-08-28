@@ -1,0 +1,11 @@
+CONTENT: V13
+ROL: TENSION
+FUENTE: 00:22:11.723 → 00:22:19.834
+TIMELINE: 00:00:27.723 → 00:00:35.834
+DURACIÓN: 8.111s
+
+TRANSCRIPCIÓN EXACTA
+tu propio negocio o tienes socios con los que trabajas o trabajas en una clínica, pero en la mayoría del tiempo tú eres tu propio jefe, básicamente.
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0253.

@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 00:59:30.000 → 00:59:39.000
+TIMELINE: 00:06:16.000 → 00:06:25.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Es lo que tú dices, no tienes una persona aquí atrás diciendo que vas a hacer, no tienes un cheat code en el momento. sea, es como que, ok, tienes el conocimiento pero igual lo tienes que presentar.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0630.

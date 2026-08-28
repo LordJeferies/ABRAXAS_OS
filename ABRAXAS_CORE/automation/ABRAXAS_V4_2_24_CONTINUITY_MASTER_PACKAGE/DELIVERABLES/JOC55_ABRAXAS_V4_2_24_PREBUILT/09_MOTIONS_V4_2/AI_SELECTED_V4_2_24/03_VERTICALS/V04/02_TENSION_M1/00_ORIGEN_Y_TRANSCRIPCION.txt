@@ -1,0 +1,11 @@
+CONTENT: V04
+ROL: TENSION
+FUENTE: 00:15:07.275 → 00:15:12.286
+TIMELINE: 00:00:15.275 → 00:00:20.286
+DURACIÓN: 5.011s
+
+TRANSCRIPCIÓN EXACTA
+que hacer cosas gigantes o cosas como increíbles todos los días para convertirte en
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0170.

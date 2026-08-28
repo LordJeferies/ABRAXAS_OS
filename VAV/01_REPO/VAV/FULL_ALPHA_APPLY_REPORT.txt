@@ -1,0 +1,123 @@
+============================================================
+VAV CAPTIONS — FULL ALPHA END-TO-END
+Project: /Users/lordjef/Developer/VAV
+============================================================
+
+=== PROVIDER DISCOVERY ===
+{
+  "generatedAt": "2026-08-28T00:28:14.857Z",
+  "platform": "darwin",
+  "arch": "arm64",
+  "whisperCpp": {
+    "available": true,
+    "executable": "/opt/homebrew/bin/whisper-cli",
+    "model": {
+      "id": "large-v3-turbo",
+      "label": "Large V3 Turbo FULL",
+      "path": "/Users/lordjef/Library/Application Support/VAV/models/whisper/ggml-large-v3-turbo.bin",
+      "installed": true
+    }
+  },
+  "mlx": {
+    "supported": true,
+    "available": true,
+    "reason": null,
+    "executable": "/Users/lordjef/Desktop/ABRAXAS_V3_1_EXECUTABLE_AUTOMATION/.venv-mlx/bin/mlx_whisper",
+    "models": [
+      {
+        "id": "large-v3-turbo",
+        "label": "Large V3 Turbo",
+        "path": "/Users/lordjef/Desktop/Moka_Terminal_Cortes_48_FrameMatched_FINAL/Modelos_MLX/whisper-large-v3-turbo",
+        "installed": true
+      },
+      {
+        "id": "large-v3",
+        "label": "Large V3",
+        "path": "/Users/lordjef/Desktop/Moka_Terminal_Cortes_48_FrameMatched_FINAL/Modelos_MLX/whisper-large-v3",
+        "installed": true
+      }
+    ]
+  }
+}
+
+=== BACKUP ===
+✓ Backup: /Users/lordjef/Developer/VAV/.vav-backups/full-alpha-20260827_202814
+
+=== TAURI DIALOG DEPENDENCY ===
+Scope: all 31 workspace projects
+✓ Lockfile passes supply-chain policies (verified 1h ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 249, reused 145, downloaded 0, added 0
+Packages: +1
++
+Progress: resolved 249, reused 145, downloaded 1, added 1, done
+
+Done in 1.6s using pnpm v11.24.0
+
+=== APPLY FULL ALPHA SOURCES ===
+
+=== TAURI ASSET PROTOCOL — DEVELOPMENT ALPHA SCOPE ===
+
+=== TARGETED FULL ALPHA TESTS ===
+$ vitest run -- services/local-engine/src/full-alpha.test.ts apps/captions-desktop/src/fullAlphaDomain.test.ts
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/Users/lordjef/Developer/VAV[39m
+
+ [32m✓[39m packages/engine-registry/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m apps/captions-desktop/src/workflow.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m apps/captions-desktop/src/fullAlphaDomain.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m packages/caption-compiler/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/time-mapping/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m .vav-backups/full-alpha-20260827_202814/apps/captions-desktop/src/workflow.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m services/local-engine/src/full-alpha.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m packages/transcription/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m .vav-backups/full-alpha-20260827_202814/apps/captions-desktop/src/editorData.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m .vav-backups/c01-6-20260827_194301/apps/captions-desktop/src/editorData.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m packages/timebase/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m packages/editor-foundation/src/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m packages/export-system/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/project-session/src/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/vav-schema/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m apps/captions-desktop/src/editorData.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/motion-caption-policy/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m17 passed[39m[22m[90m (17)[39m
+[2m      Tests [22m [1m[32m40 passed[39m[22m[90m (40)[39m
+[2m   Start at [22m 20:28:26
+[2m   Duration [22m 712ms[2m (transform 1.13s, setup 0ms, import 1.79s, tests 55ms, environment 1ms)[22m
+
+
+=== FULL TEST SUITE ===
+$ vitest run
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/Users/lordjef/Developer/VAV[39m
+
+ [32m✓[39m .vav-backups/full-alpha-20260827_202814/apps/captions-desktop/src/workflow.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m .vav-backups/full-alpha-20260827_202814/apps/captions-desktop/src/editorData.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/timebase/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/vav-schema/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m apps/captions-desktop/src/workflow.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m apps/captions-desktop/src/fullAlphaDomain.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m services/local-engine/src/full-alpha.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m .vav-backups/c01-6-20260827_194301/apps/captions-desktop/src/editorData.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m packages/editor-foundation/src/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/motion-caption-policy/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m apps/captions-desktop/src/editorData.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m packages/time-mapping/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/caption-compiler/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/project-session/src/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/engine-registry/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/export-system/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m packages/transcription/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m17 passed[39m[22m[90m (17)[39m
+[2m      Tests [22m [1m[32m40 passed[39m[22m[90m (40)[39m
+[2m   Start at [22m 20:28:28
+[2m   Duration [22m 748ms[2m (transform 1.11s, setup 0ms, import 1.79s, tests 117ms, environment 1ms)[22m
+
+
+=== TYPECHECK ===
+$ tsc -p tsconfig.check.json --noEmit
+services/local-engine/src/full-alpha-media.ts(13,64): error TS18048: 'a' is possibly 'undefined'.
+services/local-engine/src/full-alpha-media.ts(13,68): error TS18048: 'b' is possibly 'undefined'.
+[ELIFECYCLE] Command failed with exit code 1.

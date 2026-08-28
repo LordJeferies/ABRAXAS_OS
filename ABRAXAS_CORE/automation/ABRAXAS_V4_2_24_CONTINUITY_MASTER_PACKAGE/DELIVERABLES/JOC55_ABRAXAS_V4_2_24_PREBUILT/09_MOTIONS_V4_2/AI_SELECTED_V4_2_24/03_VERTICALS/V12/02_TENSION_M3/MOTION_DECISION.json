@@ -1,0 +1,39 @@
+{
+  "sequence": 2,
+  "content_id": "V12",
+  "narrative_role": "TENSION",
+  "source_part_id": "V12_P03",
+  "child_beat_ids": [
+    "V12_B04",
+    "V12_B05"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:24:45.997",
+  "source_end": "01:24:52.664",
+  "timeline_in_seconds": 15.997,
+  "timeline_out_seconds": 22.664,
+  "timeline_in": "00:00:15.997",
+  "timeline_out": "00:00:22.664",
+  "duration_seconds": 6.667,
+  "text": "pero pienso que siempre he sido una persona que las dificultades que he encontrado siempre le busco la oportunidad,",
+  "reason": "Expone el problema, contradicción o costo narrativo. Referencia SRT_0893.",
+  "semantic_score": 9.5407,
+  "transcript_reference": "SRT_0893",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La selección funciona como tesis, contradicción o payoff editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

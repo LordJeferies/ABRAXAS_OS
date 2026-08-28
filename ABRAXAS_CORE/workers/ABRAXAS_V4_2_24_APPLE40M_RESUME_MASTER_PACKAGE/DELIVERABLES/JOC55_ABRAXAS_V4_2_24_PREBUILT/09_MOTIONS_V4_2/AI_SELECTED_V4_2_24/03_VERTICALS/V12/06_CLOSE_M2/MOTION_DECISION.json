@@ -1,0 +1,42 @@
+{
+  "sequence": 6,
+  "content_id": "V12",
+  "narrative_role": "CLOSE",
+  "source_part_id": "V12_P11",
+  "child_beat_ids": [
+    "V12_B17"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:25:39.342",
+  "source_end": "01:25:46.100",
+  "timeline_in_seconds": 69.342,
+  "timeline_out_seconds": 76.1,
+  "timeline_in": "00:01:09.342",
+  "timeline_out": "00:01:16.100",
+  "duration_seconds": 6.758,
+  "text": "Pero siento la responsabilidad aún más grande de continuar su legado a mi manera de",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0902.",
+  "semantic_score": 8.0678,
+  "transcript_reference": "SRT_0902",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

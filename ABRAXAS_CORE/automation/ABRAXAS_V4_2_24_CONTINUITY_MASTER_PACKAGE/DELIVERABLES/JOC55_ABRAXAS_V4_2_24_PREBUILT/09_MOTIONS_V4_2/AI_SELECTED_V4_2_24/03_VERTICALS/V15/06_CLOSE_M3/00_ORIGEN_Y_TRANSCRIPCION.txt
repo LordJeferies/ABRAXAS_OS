@@ -1,0 +1,11 @@
+CONTENT: V15
+ROL: CLOSE
+FUENTE: 01:05:15.120 → 01:05:24.000
+TIMELINE: 00:00:52.120 → 00:01:01.000
+DURACIÓN: 8.880s
+
+TRANSCRIPCIÓN EXACTA
+Y seguimos creciendo y aumentando, digamos, la cantidad de personas que trabajan con nosotros y reinventándonos en cuanto a modelo de negocio.
+
+MOTIVO
+Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0688.

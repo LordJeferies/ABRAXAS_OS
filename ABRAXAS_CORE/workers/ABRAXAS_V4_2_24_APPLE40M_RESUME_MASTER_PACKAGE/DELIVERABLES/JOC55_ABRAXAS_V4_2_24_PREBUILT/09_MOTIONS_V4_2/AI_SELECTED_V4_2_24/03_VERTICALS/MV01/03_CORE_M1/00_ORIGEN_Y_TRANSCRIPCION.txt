@@ -1,0 +1,11 @@
+CONTENT: MV01
+ROL: CORE
+FUENTE: 00:07:13.484 → 00:07:19.276
+TIMELINE: 00:00:39.907 → 00:00:45.699
+DURACIÓN: 5.792s
+
+TRANSCRIPCIÓN EXACTA
+ideas digamos contrarias hay algo que también pasa mucho y es que hay un gran malentendido
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0088.

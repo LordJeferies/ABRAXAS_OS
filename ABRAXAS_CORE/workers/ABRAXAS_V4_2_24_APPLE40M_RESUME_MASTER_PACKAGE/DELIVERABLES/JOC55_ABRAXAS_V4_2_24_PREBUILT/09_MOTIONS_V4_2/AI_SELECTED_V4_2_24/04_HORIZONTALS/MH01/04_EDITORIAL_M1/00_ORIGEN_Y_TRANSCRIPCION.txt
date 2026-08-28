@@ -1,0 +1,11 @@
+CONTENT: MH01
+ROL: EDITORIAL
+FUENTE: 00:06:33.000 → 00:06:41.000
+TIMELINE: 00:02:15.203 → 00:02:23.203
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Comparte tu opinión. Además que yo nunca dejaría que un mecánico me sacara una muela, pues.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0074.

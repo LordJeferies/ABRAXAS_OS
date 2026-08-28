@@ -1,0 +1,38 @@
+{
+  "sequence": 2,
+  "content_id": "V03",
+  "narrative_role": "TENSION",
+  "source_part_id": "V03_P03",
+  "child_beat_ids": [
+    "V03_B03"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:12:30.905",
+  "source_end": "00:12:36.837",
+  "timeline_in_seconds": 14.905,
+  "timeline_out_seconds": 20.837,
+  "timeline_in": "00:00:14.905",
+  "timeline_out": "00:00:20.837",
+  "duration_seconds": 5.932,
+  "text": "sea, es tener esa capacidad de entender de que las correcciones o las críticas que",
+  "reason": "Expone el problema, contradicción o costo narrativo. Referencia SRT_0143.",
+  "semantic_score": 6.5472,
+  "transcript_reference": "SRT_0143",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La selección funciona como tesis, contradicción o payoff editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

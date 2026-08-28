@@ -1,0 +1,11 @@
+CONTENT: V06
+ROL: CORE
+FUENTE: 00:27:02.866 → 00:27:10.403
+TIMELINE: 00:00:33.866 → 00:00:41.403
+DURACIÓN: 7.537s
+
+TRANSCRIPCIÓN EXACTA
+porque no es solamente que esperarte y quedarte sentado diciendo me va a llegar una oportunidad, me va a llegar una oportunidad porque puede ser que te llegue pero puede ser que no.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0300.

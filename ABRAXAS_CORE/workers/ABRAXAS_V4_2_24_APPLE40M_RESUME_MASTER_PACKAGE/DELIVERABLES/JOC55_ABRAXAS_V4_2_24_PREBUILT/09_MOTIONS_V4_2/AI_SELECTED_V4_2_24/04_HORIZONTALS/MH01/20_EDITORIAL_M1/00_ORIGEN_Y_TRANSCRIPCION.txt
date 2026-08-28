@@ -1,0 +1,11 @@
+CONTENT: MH01
+ROL: EDITORIAL
+FUENTE: 00:14:37.606 → 00:14:42.415
+TIMELINE: 00:10:19.809 → 00:10:24.618
+DURACIÓN: 4.809s
+
+TRANSCRIPCIÓN EXACTA
+sea tienes que irte un nivel más arriba para poder llegar a eso y ser
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0165.

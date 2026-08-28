@@ -1,0 +1,205 @@
+
+# BEGIN ABRAXAS_OS_GITHUB_BOUNDARY
+# Machine / OS
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# Dependency/runtime/build state
+**/node_modules/
+**/.pnpm-store/
+**/.yarn/
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.cache/
+**/site-packages/
+**/target/
+**/dist/
+**/build/
+**/.next/
+**/.turbo/
+**/coverage/
+**/.vite/
+
+# Local VAV runtime / generated state
+**/.vav-backups/
+**/.vav-patches/
+**/.vav-runtime/
+**/provider-cache/
+**/model-cache/
+
+# Large binary archives/installers/models
+*.zip
+*.7z
+*.rar
+*.tar
+*.tgz
+*.gz
+*.bz2
+*.xz
+*.dmg
+*.iso
+*.pkg
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.gguf
+*.bin
+
+# Video / audio working media
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.mxf
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.flac
+
+# Logs / temp
+*.log
+*.tmp
+*.temp
+*.swp
+
+# Heavy continuity, evidence, backup and quarantine surfaces.
+# They remain physically on this Mac but are not Git history.
+VAV/05_EVIDENCE/
+VAV/06_CHAT_HANDOFFS/
+VAV/07_BACKUPS/
+VAV/08_FORENSIC_AUDITS/
+VAV/90_RUNTIME_POINTERS/historical_machine_state/
+VAV_ORGANIZATION_REPORTS/
+VAV_CLEANUP_QUARANTINE/
+ARCHIVE/
+
+# Superseded external/historical VAV package stores.
+VAV/02_PRODUCTS/vavcaptions/01_REPOS_Y_HANDOFFS/
+VAV/02_PRODUCTS/vavcaptions/02_BACKUPS_LOCAL/
+VAV/02_PRODUCTS/vavcaptions/05_PACKAGES_HISTORY/
+VAV/02_PRODUCTS/vavcaptions/05_PAQUETES_HISTORICOS_VAV/
+VAV/02_PRODUCTS/vavcaptions/08_CONTEXTO_EXTERNO_VAV/
+
+# Absolute local compatibility symlinks at ABRAXAS root.
+vavcaptions
+vavmotions
+vavshim
+vavcuts
+VAV_CONTINUITY_HUB
+
+# END ABRAXAS_OS_GITHUB_BOUNDARY
+
+# Machine-specific absolute symlinks auto-excluded
+/VAV/04_REFERENCES/abraxas/VAVCAPTIONS_EXTERNAL_CONTEXT_PENDING_ABRAXAS_AUDIT
+/VAV/04_REFERENCES/motions/VAVMOTIONS_OFFICIAL_REFERENCE_V1
+
+# BEGIN ABRAXAS_OS_RESUME_BOUNDARY
+
+# macOS / editor noise
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# dependencies, caches, builds and local environments
+**/node_modules/
+**/.pnpm-store/
+**/.yarn/
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.cache/
+**/site-packages/
+**/target/
+**/dist/
+**/build/
+**/.next/
+**/.turbo/
+**/coverage/
+**/.vite/
+
+# VAV local/generated runtime
+**/.vav-backups/
+**/.vav-patches/
+**/.vav-runtime/
+**/provider-cache/
+**/model-cache/
+
+# archives / installers / model payloads
+*.zip
+*.7z
+*.rar
+*.tar
+*.tgz
+*.gz
+*.bz2
+*.xz
+*.dmg
+*.iso
+*.pkg
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.gguf
+
+# working audiovisual media
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.mxf
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.flac
+
+# temp/logs
+*.log
+*.tmp
+*.temp
+*.swp
+
+# Root-level forensic / backup / reporting surfaces: LOCAL ONLY
+VAV_ECOSYSTEM_FORENSIC_AUDIT_*/
+VAV_ORGANIZATION_REPORTS/
+VAV_CLEANUP_QUARANTINE/
+VAV_GIT_SETUP_BACKUPS/
+ARCHIVE/
+
+# VAV heavy/non-source preservation surfaces: LOCAL ONLY
+VAV/05_EVIDENCE/
+VAV/06_CHAT_HANDOFFS/
+VAV/07_BACKUPS/
+VAV/08_FORENSIC_AUDITS/
+VAV/90_RUNTIME_POINTERS/historical_machine_state/
+
+# Historical/external package stores retained physically, not source history
+VAV/02_PRODUCTS/vavcaptions/01_REPOS_Y_HANDOFFS/
+VAV/02_PRODUCTS/vavcaptions/02_BACKUPS_LOCAL/
+VAV/02_PRODUCTS/vavcaptions/05_PACKAGES_HISTORY/
+VAV/02_PRODUCTS/vavcaptions/05_PAQUETES_HISTORICOS_VAV/
+VAV/02_PRODUCTS/vavcaptions/08_CONTEXTO_EXTERNO_VAV/
+
+# Root compatibility symlinks are machine-specific
+/vavcaptions
+/vavmotions
+/vavshim
+/vavcuts
+/VAV_CONTINUITY_HUB
+
+# END ABRAXAS_OS_RESUME_BOUNDARY

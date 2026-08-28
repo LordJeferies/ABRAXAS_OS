@@ -1,0 +1,37 @@
+{
+  "sequence": 3,
+  "content_id": "V07",
+  "narrative_role": "CORE",
+  "source_part_id": "V07_P06",
+  "child_beat_ids": [
+    "V07_B07",
+    "V07_B08"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:30:09.508",
+  "source_end": "00:30:14.818",
+  "timeline_in_seconds": 30.508,
+  "timeline_out_seconds": 35.818,
+  "timeline_in": "00:00:30.508",
+  "timeline_out": "00:00:35.818",
+  "duration_seconds": 5.31,
+  "text": "haces, que eso se nota, esa diferencia se nota porque hay millones de personas que son",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0332.",
+  "semantic_score": 9.6182,
+  "transcript_reference": "SRT_0332",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La idea central se entiende mejor como relación o proceso visual.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

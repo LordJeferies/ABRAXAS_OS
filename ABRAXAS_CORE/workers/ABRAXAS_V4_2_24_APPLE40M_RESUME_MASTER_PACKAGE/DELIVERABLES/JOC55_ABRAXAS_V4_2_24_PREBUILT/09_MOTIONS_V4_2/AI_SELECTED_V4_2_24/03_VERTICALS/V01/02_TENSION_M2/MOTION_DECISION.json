@@ -1,0 +1,42 @@
+{
+  "sequence": 2,
+  "content_id": "V01",
+  "narrative_role": "TENSION",
+  "source_part_id": "V01_P05",
+  "child_beat_ids": [
+    "V01_B05"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:03:14.244",
+  "source_end": "00:03:19.000",
+  "timeline_in_seconds": 23.244,
+  "timeline_out_seconds": 28.0,
+  "timeline_in": "00:00:23.244",
+  "timeline_out": "00:00:28.000",
+  "duration_seconds": 4.756,
+  "text": "infeliz completamente y todo el tiempo te quejas y todo el tiempo estás diciendo por qué hice esto, por qué no hice esto.",
+  "reason": "Expone el problema, contradicción o costo narrativo. Referencia SRT_0038.",
+  "semantic_score": 11.7063,
+  "transcript_reference": "SRT_0038",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

@@ -1,0 +1,11 @@
+CONTENT: V01
+ROL: TENSION
+FUENTE: 00:03:14.244 → 00:03:19.000
+TIMELINE: 00:00:23.244 → 00:00:28.000
+DURACIÓN: 4.756s
+
+TRANSCRIPCIÓN EXACTA
+infeliz completamente y todo el tiempo te quejas y todo el tiempo estás diciendo por qué hice esto, por qué no hice esto.
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0038.

@@ -1,0 +1,6 @@
+{
+  "version":"1.1.3",
+  "LOCAL":{"artifact":"ABRAXAS_Universal_Content_Operations_A_v1.1.3.html","protocol":"file://","offline":true,"singleFile":true,"serviceWorker":false,"secrets":false},
+  "WEB":{"artifact":"ABRAXAS_Universal_Content_Operations_WEB_v1.1.3.zip","protocol":"http(s)","modular":true,"serviceWorker":true,"pwaReady":true,"secretsInFrontend":false},
+  "sharedDomain":["content_id","clients","formats","contents","tasks","assets","sources","history","prompts","qa","automation contracts"]
+}

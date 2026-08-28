@@ -1,0 +1,42 @@
+{
+  "sequence": 9,
+  "content_id": "H03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H03_B55",
+  "child_beat_ids": [
+    "H03_B55"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:57:29.000",
+  "source_end": "00:57:37.000",
+  "timeline_in_seconds": 255.0,
+  "timeline_out_seconds": 263.0,
+  "timeline_in": "00:04:15.000",
+  "timeline_out": "00:04:23.000",
+  "duration_seconds": 8.0,
+  "text": "Y lo más increíble es que se conectan con profesores super interactivos, una comunidad que todo el está como remando hacia el mismo lado.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0608.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0608",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

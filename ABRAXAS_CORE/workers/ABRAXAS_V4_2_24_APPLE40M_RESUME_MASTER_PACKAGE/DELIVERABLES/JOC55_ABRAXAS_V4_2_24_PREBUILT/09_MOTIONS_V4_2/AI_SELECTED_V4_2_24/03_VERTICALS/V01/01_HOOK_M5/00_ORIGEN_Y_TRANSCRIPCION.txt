@@ -1,0 +1,11 @@
+CONTENT: V01
+ROL: HOOK
+FUENTE: 00:02:51.000 → 00:02:59.000
+TIMELINE: 00:00:00.000 → 00:00:08.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+sea, debe haber personas que digan mi pasión es estudiar, pero honestamente mi pasión nunca fue estudiar, convertirme en odontóloga.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0035.

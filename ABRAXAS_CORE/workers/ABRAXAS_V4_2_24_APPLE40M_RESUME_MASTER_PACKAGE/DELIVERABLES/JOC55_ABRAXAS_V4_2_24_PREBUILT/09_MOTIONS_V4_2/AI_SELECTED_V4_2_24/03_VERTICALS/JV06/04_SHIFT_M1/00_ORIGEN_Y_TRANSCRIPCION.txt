@@ -1,0 +1,11 @@
+CONTENT: JV06
+ROL: SHIFT
+FUENTE: 01:12:05.744 → 01:12:10.398
+TIMELINE: 00:00:35.848 → 00:00:40.502
+DURACIÓN: 4.654s
+
+TRANSCRIPCIÓN EXACTA
+importantísima que tú no manejas y lo que te va costar a ti hacerlo.
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0759.

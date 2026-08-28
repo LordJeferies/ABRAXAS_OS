@@ -1,0 +1,38 @@
+{
+  "sequence": 3,
+  "content_id": "V03",
+  "narrative_role": "CORE",
+  "source_part_id": "V03_P06",
+  "child_beat_ids": [
+    "V03_B07"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:12:49.409",
+  "source_end": "00:12:54.000",
+  "timeline_in_seconds": 33.409,
+  "timeline_out_seconds": 38.0,
+  "timeline_in": "00:00:33.409",
+  "timeline_out": "00:00:38.000",
+  "duration_seconds": 4.591,
+  "text": "en una fase de que es que este profesor me odia o esto es injusto, lo que sea.",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0146.",
+  "semantic_score": 10.4642,
+  "transcript_reference": "SRT_0146",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

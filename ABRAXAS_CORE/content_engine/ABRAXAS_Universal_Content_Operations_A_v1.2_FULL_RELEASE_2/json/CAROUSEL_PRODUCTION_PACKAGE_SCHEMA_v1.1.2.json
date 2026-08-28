@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ABRAXAS Carousel Production Package v1.1.2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "manifestType",
+    "sourceManifest",
+    "selectionPolicy",
+    "confirmedCarousels",
+    "destinations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.2"
+    },
+    "manifestType": {
+      "const": "CAROUSEL_PRODUCTION_PACKAGE"
+    },
+    "sourceManifest": {
+      "const": "SHIM_CONFIRMED_MANIFEST.json"
+    },
+    "selectionPolicy": {
+      "const": "CONFIRMADO_ONLY"
+    },
+    "confirmedCarousels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "carouselId",
+          "formatId",
+          "thesis",
+          "slides",
+          "copies",
+          "qa"
+        ],
+        "properties": {
+          "carouselId": {
+            "type": "string"
+          },
+          "formatId": {
+            "type": "string"
+          },
+          "themeSources": {
+            "type": "array"
+          },
+          "thesis": {
+            "type": "string"
+          },
+          "slides": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "function",
+                "text",
+                "visualDirection",
+                "promptWithText",
+                "promptWithoutText"
+              ]
+            }
+          },
+          "copies": {
+            "type": "object"
+          },
+          "qa": {
+            "type": "object"
+          },
+          "blockers": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "destinations": {
+      "type": "array"
+    }
+  }
+}

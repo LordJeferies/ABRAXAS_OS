@@ -1,0 +1,11 @@
+CONTENT: JV05
+ROL: TENSION
+FUENTE: 00:42:43.680 → 00:42:48.206
+TIMELINE: 00:00:12.911 → 00:00:17.437
+DURACIÓN: 4.526s
+
+TRANSCRIPCIÓN EXACTA
+lo tuyo, es como que te estás yendo hacia otro lado pero al mismo tiempo
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0466.

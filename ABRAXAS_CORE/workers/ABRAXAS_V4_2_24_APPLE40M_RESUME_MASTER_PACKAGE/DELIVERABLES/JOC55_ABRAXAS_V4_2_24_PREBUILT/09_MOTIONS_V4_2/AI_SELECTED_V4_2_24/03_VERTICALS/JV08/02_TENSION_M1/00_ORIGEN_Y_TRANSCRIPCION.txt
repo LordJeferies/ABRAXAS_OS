@@ -1,0 +1,11 @@
+CONTENT: JV08
+ROL: TENSION
+FUENTE: 00:25:48.829 → 00:25:53.983
+TIMELINE: 00:00:15.598 → 00:00:20.752
+DURACIÓN: 5.154s
+
+TRANSCRIPCIÓN EXACTA
+O si está involucrado, ahorita vamos hablar sobre eso, pero es un mundo empresarial,
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0287.

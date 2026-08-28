@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "alguien extraordinario y algo que he descubierto con los años es que, y es una frase que",
+  "segments": [
+    "alguien extraordinario y algo que he",
+    "descubierto con los años es",
+    "que, y es una frase que"
+  ],
+  "reconstructed_text": "alguien extraordinario y algo que he descubierto con los años es que, y es una frase que"
+}

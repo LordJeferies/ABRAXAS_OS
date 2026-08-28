@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "pero realmente en el mercado hispanohablante no hay mucha competencia, entonces eso es algo muy positivo.",
+  "segments": [
+    "pero realmente en el mercado",
+    "hispanohablante no hay mucha competencia, entonces",
+    "eso es algo muy positivo."
+  ],
+  "reconstructed_text": "pero realmente en el mercado hispanohablante no hay mucha competencia, entonces eso es algo muy positivo."
+}

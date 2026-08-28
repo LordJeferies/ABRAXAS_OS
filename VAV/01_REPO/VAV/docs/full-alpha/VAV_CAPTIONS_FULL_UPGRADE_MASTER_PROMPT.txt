@@ -1,0 +1,293 @@
+VAV CAPTIONS — MASTER PROMPT FOR FULL HARDENING / FUTURE IMPROVEMENTS
+Version: FULL-ALPHA-HANDOFF-2026-08-28
+
+PURPOSE
+Use this file in any future AI chat to continue improving the real local VAV
+Captions application without losing architecture, product scope, or quality
+criteria. The AI must inspect the current repository before editing and must
+treat "Alpha works" and "production-ready" as different states.
+
+LOCAL REPOSITORY
+Default:
+~/Developer/VAV
+
+PRODUCT
+VAV Captions is the caption/subtitle module of the VAV family.
+
+Primary pipeline:
+ingest video
+→ probe / normalize
+→ transcribe
+→ correct
+→ segment / group
+→ emphasize
+→ style
+→ structure
+→ caption motion
+→ scene/context-aware placement
+→ preview
+→ bake/render
+→ export burned-caption MP4
+
+VAV Captions is NOT a generic video editor. Keep these out of the captions core:
+AI avatar, image generator, stock media, color-grading suite, general clip
+cutting, video transitions, background removal, B-roll generator, music library,
+noise-removal suite, recording studio, livestream.
+
+FROZEN ARCHITECTURE
+Desktop shell: Tauri 2, minimal Rust bridge.
+UI: React, TypeScript, Vite, Tailwind v4, shadcn/ui where useful, Lucide,
+Zustand, TanStack Virtual.
+Editor: @remotion/player, wavesurfer.js, Moveable.
+Contracts: Zod 4.
+Central local runtime: VAV Node sidecar/local-engine, FFmpeg/ffprobe,
+Remotion Renderer, Job Engine, Project Engine, Cache, CLI.
+No Electron. No Next.js. No mandatory cloud.
+
+REMOTION
+Remotion is central:
+CaptionPlan
+→ CaptionComposition.tsx
+→ @remotion/player for preview
+→ @remotion/renderer for final advanced export.
+
+FFmpeg remains responsible for probe, audio extraction, proxy, frame sampling,
+scene detection, mux/codecs/VideoToolbox and optional ASS fast path.
+
+TRANSCRIPTION POLICY
+TranscriptionProvider
+├── WhisperCppProvider — universal default
+├── MlxWhisperProvider — optional Apple Silicon
+└── ImportSrtProvider
+
+DEFAULT = Whisper.cpp + Large V3 Turbo FULL.
+Do not auto-download more Whisper models.
+MLX is selectable only when runtime/model discovery is valid.
+Known MLX choices on the development Mac:
+- large-v3-turbo
+- large-v3
+
+TIMEBASE
+Integer microseconds are source of truth.
+Never use floating seconds as the project timebase.
+Keep rational FPS metadata when relevant.
+
+CORE SEMANTIC RULE
+semantics ≠ scene ≠ presentation
+
+Keep separate:
+- SemanticCaption
+- VisualSegment
+- Scene Map
+- MotionContext
+- ContentCandidate / ContentProjection
+- CaptionPlan / RenderPlan
+
+STYLE FAMILIES
+1. VAV Hybrid Inspirational
+2. VAV Hollow Glow
+3. VAV Impact Motion
+4. VAV Clean Bold
+
+STRUCTURES
+- Hero Stack
+- Balanced
+- Progressive
+
+MOTION PRIMITIVES
+ENTER: Slide Up, Slide Down, Pop, Fade, Blur In, Slide+Blur Lite
+ACTIVE: Flicker, Shake, Glow Pulse, Scale Punch, Highlight Reveal
+EXIT: Slide Right, Slide Left, Drop, Blur Out, Fade, Scale Out
+
+MOTION CONTEXT POLICY
+Motion manifests can come from TXT/MD/JSON or future Vav-motions output.
+Each MotionContext can define:
+- startUs / endUs
+- motion family
+- visual mode
+- text ownership
+- caption visibility
+- Scene Smart mode
+- placement hints
+- safe-zone constraints
+
+Example:
+00:10-00:14 ABRAXAS_MOTION_03 center title
+
+ABRAXAS_MOTION_03:
+visual-motion owns center text;
+standard captions may be suppressed;
+Scene Smart is restricted.
+
+GENERIC_BROLL:
+caption engine keeps text ownership;
+captions remain visible;
+Scene Smart is required to find functional placement.
+
+CONTENT PROJECTION
+VAV Captions must accept TXT, MD, HTML or JSON with timestamp ranges such as:
+00:02-00:07 hook: Strong opening
+00:07-00:18 development: Explain the idea
+00:18-00:24 close: Final statement
+
+Roles can influence structure, emphasis, style scale, motion policy and Scene
+Smart, but must never silently rewrite spoken transcript.
+
+FULL CAPTION DOCUMENT
+Always keep a Riverside-like complete subtitle surface:
+- all blocks
+- click-to-seek
+- active highlight
+- inline correction
+- split
+- merge
+- approve/review
+- same source of truth as timeline and inspector
+
+UI DIRECTION
+Professional dark desktop editor, not SaaS dashboard.
+Use near-black canvas, charcoal matte panels, subtle luminance hierarchy, thin
+borders, restrained blur, violet primary accent, cyan analysis accent, green
+success, semantic timeline colors, compact desktop density, contextual inspector,
+dominant viewer and full Caption Document.
+
+Main workflow must remain obvious:
+1. Importar video
+2. Crear subtítulos
+3. Revisar texto
+4. Diseñar captions
+5. Exportar
+
+FULL ALPHA EXPECTATION
+The Full Alpha package is intended to make these features testable together:
+- native media picker
+- ffprobe metadata
+- source video preview
+- Whisper.cpp real transcription
+- optional MLX
+- deterministic segmentation
+- edit/split/merge/approve
+- undo/redo
+- 4 styles
+- 3 structures
+- caption motions
+- manual/auto placement
+- FFmpeg Scene Smart Lite
+- safe zones
+- content projection import
+- motion context import
+- project save/load
+- SRT export
+- Alpha MP4 export
+- diagnostics
+
+DO NOT CALL THESE PRODUCTION-GRADE YET.
+
+ALPHA → PRODUCTION HARDENING, IN PRIORITY ORDER
+
+H1 — REMOTION RENDERER PARITY
+Make preview and final export consume the exact same CaptionPlan/composition.
+Replace Alpha FFmpeg/ASS as the primary advanced renderer with
+@remotion/renderer. Keep ASS only as optional fast path.
+Acceptance: preview/golden-frame parity, deterministic renders, progress,
+cancel/retry, clean temp handling.
+
+H2 — REAL WORD ALIGNMENT
+Create AlignmentProvider separate from TranscriptionProvider.
+Support timingQuality = word / segment / estimated.
+Do not invent word timing or confidence.
+Acceptance: progressive/highlight styles use true word timing where available.
+
+H3 — SCENE SMART PRO
+Add FFmpeg frame sampling, Sharp metrics, MediaPipe face/body detection,
+face/eyes/mouth penalties, negative space, contrast/detail, platform safe zones,
+continuity/hysteresis and motion/context priors.
+Do not make captions chase faces frame-by-frame.
+Acceptance: debug overlay with candidate scores/rejection reasons and stable
+visual segments.
+
+H4 — DOCKING / MULTI-WINDOW
+Resizable panels, workspace presets, hide/show, detach/reattach Tauri windows,
+shared synchronized state, saved geometry.
+Never duplicate project mutation state per window.
+
+H5 — AUTOSAVE / CRASH RECOVERY
+Dirty state, debounced autosave, atomic writes, rolling checkpoints, recovery
+UI, migrations, relink and backup retention.
+Acceptance: kill app mid-edit and recover safely.
+
+H6 — JOB ENGINE
+Every long process gets id/type/status/progress/cancel/retry/logs/temp/error
+classification. React must never freeze or force the user to guess if work is alive.
+
+H7 — CACHE / INVALIDATION
+Hash dependencies for probe, audio, transcript, scenes, frames, vision,
+CaptionPlan and render intermediates.
+
+H8 — PERFORMANCE
+Virtualize long transcript/timeline data, memoize selectors, background workers,
+waveform decimation and lazy thumbnails. Define measurable budgets.
+
+H9 — PACKAGING
+Ship VAV.app without requiring end users to manually install Node, FFmpeg,
+whisper.cpp or developer tooling. Bundle/resolve runtimes safely and include
+license/version registry. Never hardcode one user's paths.
+
+H10 — PRODUCTION FILE SECURITY
+Alpha development may use broad local asset scope.
+Production must limit file access to user-authorized project/media roots.
+
+H11 — AI BRIDGE
+AI is optional. It may only produce validated VAV Actions.
+Never execute arbitrary AI-generated code or mutate state without schema
+validation and review.
+
+H12 — VISUAL / INTERACTION QUALITY
+Continue toward Apple-quality hierarchy and the user's CapCut/DaVinci/Riverside
+references: interruptible springs, keyboard shortcuts, context menus,
+accessibility, reduced-motion and high-density desktop editing.
+
+H13 — GOLDEN QA
+Unit + integration + Playwright where practical + golden-frame visual tests +
+fixture media + corrupted-project fixtures + provider fallback + render parity.
+
+MANDATORY FUTURE DEVELOPMENT PROTOCOL
+1. Inspect current repo and continuity docs.
+2. State one measurable objective.
+3. Back up or use Git/worktree before risky changes.
+4. Write a failing test first for deterministic new logic.
+5. Implement real behavior, not a fake successful UI.
+6. Run targeted tests.
+7. Run full verification.
+8. Open VAV for observable QA after UI changes.
+9. Update continuity docs and this prompt.
+10. Never claim PASS without evidence.
+
+MANDATORY VERIFICATION GATE
+When these scripts exist:
+cd "$HOME/Developer/VAV"
+pnpm test
+pnpm typecheck
+pnpm build
+pnpm bridge:health
+pnpm foundation:health
+pnpm engine:health
+cargo check --manifest-path apps/captions-desktop/src-tauri/Cargo.toml
+./RUN_VAV_DEV.command
+
+For render work, run a real fixture render and inspect:
+duration, resolution, audio, burned captions and representative frames.
+
+HOW TO USE THIS IN ANY NEW CHAT
+Upload this TXT and say:
+
+"Continue VAV Captions using the attached master prompt. Inspect my current repo
+or logs before changing anything. Pick the highest-priority unfinished
+hardening item that matches the current state. Make it real end-to-end. I do
+not use Codex, so deliver a safe ZIP with .command installer, VERIFY and
+ROLLBACK files, automatic backup and a report path. Run/define verification
+gates and update the handoff prompt after the change."
+
+USER WORKFLOW
+The user wants safe ZIP + `.command` files and Terminal commands on macOS.
+Do not require Codex. Prefer automatic backup, verification, rollback and reports.

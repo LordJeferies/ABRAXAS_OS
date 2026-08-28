@@ -1,0 +1,11 @@
+CONTENT: V18
+ROL: HOOK
+FUENTE: 01:16:46.000 → 01:16:54.000
+TIMELINE: 00:00:00.000 → 00:00:08.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Nunca hemos tenido levantamiento de capital y hasta el momento no lo hemos necesitado. sea, ha sido increíble en ese sentido.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0813.

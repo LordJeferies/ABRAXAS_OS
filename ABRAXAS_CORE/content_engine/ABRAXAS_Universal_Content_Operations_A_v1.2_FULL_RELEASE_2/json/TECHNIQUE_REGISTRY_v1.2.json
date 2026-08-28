@@ -1,0 +1,1105 @@
+{
+  "version": "1.2",
+  "techniques": [
+    {
+      "id": "T01",
+      "name": "Motion avanzado / FLIP nativo",
+      "status": "selective",
+      "purpose": "Aplicar Motion avanzado / FLIP nativo únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "factory",
+        "shim",
+        "studio",
+        "production",
+        "calendar",
+        "story"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "Apple sidebar/workspace",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T02",
+      "name": "Arquitectura Data-Driven",
+      "status": "implemented",
+      "purpose": "Aplicar Arquitectura Data-Driven únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "factory",
+        "shim",
+        "studio",
+        "production",
+        "assets",
+        "calendar",
+        "library",
+        "architect"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "Apple sidebar/workspace",
+        "video-5 Explorer",
+        "Apple inspector",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "Apple search/sidebar",
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T03",
+      "name": "CRO / retención / brand alignment",
+      "status": "selective",
+      "purpose": "Aplicar CRO / retención / brand alignment únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "factory",
+        "clients",
+        "branding",
+        "qa"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "Apple inspector",
+        "CleanMyMac review state"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T04",
+      "name": "Rendimiento + lazy + CLS",
+      "status": "implemented",
+      "purpose": "Aplicar Rendimiento + lazy + CLS únicamente cuando mejora una tarea real.",
+      "modules": [
+        "shim",
+        "studio",
+        "assets",
+        "library",
+        "story"
+      ],
+      "references": [
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "video-5 Explorer",
+        "Apple inspector",
+        "Apple search/sidebar",
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "lazy + cleanup + one active loop"
+    },
+    {
+      "id": "T05",
+      "name": "Estado reactivo",
+      "status": "implemented",
+      "purpose": "Aplicar Estado reactivo únicamente cuando mejora una tarea real.",
+      "modules": [
+        "factory",
+        "shim",
+        "studio",
+        "production",
+        "calendar",
+        "library",
+        "architect"
+      ],
+      "references": [
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "CleanMyMac Smart Care",
+        "Apple sidebar/workspace",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "video-5 Explorer",
+        "Apple search/sidebar",
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T06",
+      "name": "Smooth Scroll nativo",
+      "status": "selective",
+      "purpose": "Aplicar Smooth Scroll nativo únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "clients",
+        "branding",
+        "calendar"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T07",
+      "name": "Intersection media coordination",
+      "status": "selective",
+      "purpose": "Aplicar Intersection media coordination únicamente cuando mejora una tarea real.",
+      "modules": [
+        "shim",
+        "studio",
+        "assets",
+        "story"
+      ],
+      "references": [
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "video-5 Explorer",
+        "Apple inspector",
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "lazy + cleanup + one active loop"
+    },
+    {
+      "id": "T08",
+      "name": "3D local/fallback",
+      "status": "lab",
+      "purpose": "Aplicar 3D local/fallback únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding",
+        "dashboard"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer",
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG"
+      ],
+      "fallback": "2D / CSS / disclosure equivalente",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T09",
+      "name": "Preloader funcional",
+      "status": "selective",
+      "purpose": "Aplicar Preloader funcional únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "airesults",
+        "assets"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "Apple source-anchored sheets",
+        "CleanMyMac results review",
+        "video-5 Explorer",
+        "Apple inspector"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T10",
+      "name": "Parallax multicapa",
+      "status": "selective",
+      "purpose": "Aplicar Parallax multicapa únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "lazy + cleanup + one active loop"
+    },
+    {
+      "id": "T11",
+      "name": "Magnetic CTA + focus",
+      "status": "selective",
+      "purpose": "Aplicar Magnetic CTA + focus únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "story",
+        "studio"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "Apple pro app inspector",
+        "video-3 macOS"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T12",
+      "name": "Horizontal rails",
+      "status": "implemented",
+      "purpose": "Aplicar Horizontal rails únicamente cuando mejora una tarea real.",
+      "modules": [
+        "branding",
+        "studio",
+        "calendar",
+        "story"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "video-6 Brain",
+        "Apple Product Story"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T13",
+      "name": "Typography reveal",
+      "status": "selective",
+      "purpose": "Aplicar Typography reveal únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T14",
+      "name": "WebGL distortion",
+      "status": "lab",
+      "purpose": "Aplicar WebGL distortion únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer"
+      ],
+      "fallback": "2D / CSS / disclosure equivalente",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "lazy + cleanup + one active loop"
+    },
+    {
+      "id": "T15",
+      "name": "View transitions / return context",
+      "status": "implemented",
+      "purpose": "Aplicar View transitions / return context únicamente cuando mejora una tarea real.",
+      "modules": [
+        "library",
+        "branding",
+        "production",
+        "airesults",
+        "shim",
+        "calendar",
+        "factory",
+        "architect"
+      ],
+      "references": [
+        "video-5 Explorer",
+        "Apple search/sidebar",
+        "video-2 MacBook Pro",
+        "CleanMyMac Smart Care",
+        "Apple sidebar/workspace",
+        "Apple source-anchored sheets",
+        "CleanMyMac results review",
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T16",
+      "name": "Variable typography",
+      "status": "selective",
+      "purpose": "Aplicar Variable typography únicamente cuando mejora una tarea real.",
+      "modules": [
+        "studio",
+        "branding",
+        "dashboard",
+        "story"
+      ],
+      "references": [
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "video-6 Brain",
+        "Apple Product Story"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T17",
+      "name": "Film grain",
+      "status": "selective",
+      "purpose": "Aplicar Film grain únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T18",
+      "name": "Smart marquee",
+      "status": "selective",
+      "purpose": "Aplicar Smart marquee únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding",
+        "calendar"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T19",
+      "name": "3D card split",
+      "status": "selective",
+      "purpose": "Aplicar 3D card split únicamente cuando mejora una tarea real.",
+      "modules": [
+        "branding",
+        "story",
+        "calendar"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "video-6 Brain",
+        "Apple Product Story",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T20",
+      "name": "Timeline scrubbing",
+      "status": "selective",
+      "purpose": "Aplicar Timeline scrubbing únicamente cuando mejora una tarea real.",
+      "modules": [
+        "shim",
+        "studio",
+        "story"
+      ],
+      "references": [
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "lazy + cleanup + one active loop"
+    },
+    {
+      "id": "T21",
+      "name": "Typography Window",
+      "status": "selective",
+      "purpose": "Aplicar Typography Window únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T22",
+      "name": "Tactile drag/reorder",
+      "status": "implemented",
+      "purpose": "Aplicar Tactile drag/reorder únicamente cuando mejora una tarea real.",
+      "modules": [
+        "studio",
+        "shim",
+        "assets",
+        "calendar",
+        "branding"
+      ],
+      "references": [
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "video-5 Explorer",
+        "Apple inspector",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "video-2 MacBook Pro"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T23",
+      "name": "Functional spotlight",
+      "status": "selective",
+      "purpose": "Aplicar Functional spotlight únicamente cuando mejora una tarea real.",
+      "modules": [
+        "architect",
+        "factory",
+        "airesults",
+        "story"
+      ],
+      "references": [
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet",
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "Apple source-anchored sheets",
+        "CleanMyMac results review",
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T24",
+      "name": "SVG path / trace",
+      "status": "selective",
+      "purpose": "Aplicar SVG path / trace únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding",
+        "qa",
+        "calendar"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer",
+        "Apple inspector",
+        "CleanMyMac review state",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T25",
+      "name": "Brain Navigator",
+      "status": "implemented",
+      "purpose": "Aplicar Brain Navigator únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "story",
+        "architect"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "lazy + cleanup + one active loop"
+    },
+    {
+      "id": "T26",
+      "name": "Adaptive navigation + Command Palette",
+      "status": "implemented",
+      "purpose": "Aplicar Adaptive navigation + Command Palette únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "production",
+        "library",
+        "story"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "Apple sidebar/workspace",
+        "video-5 Explorer",
+        "Apple search/sidebar",
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T27",
+      "name": "Intent / attention Home",
+      "status": "implemented",
+      "purpose": "Aplicar Intent / attention Home únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "architect"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T28",
+      "name": "Apple Product Story",
+      "status": "implemented",
+      "purpose": "Aplicar Apple Product Story únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding",
+        "calendar"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T29",
+      "name": "Wizard",
+      "status": "implemented",
+      "purpose": "Aplicar Wizard únicamente cuando mejora una tarea real.",
+      "modules": [
+        "factory",
+        "shim",
+        "airesults",
+        "assets"
+      ],
+      "references": [
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple source-anchored sheets",
+        "CleanMyMac results review",
+        "video-5 Explorer",
+        "Apple inspector"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T30",
+      "name": "El Arquitecto contextual",
+      "status": "implemented",
+      "purpose": "Aplicar El Arquitecto contextual únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "branding",
+        "factory",
+        "shim",
+        "airesults",
+        "studio",
+        "production",
+        "assets",
+        "qa",
+        "calendar",
+        "library",
+        "architect"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple source-anchored sheets",
+        "CleanMyMac results review",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "Apple sidebar/workspace",
+        "Apple inspector",
+        "CleanMyMac review state",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "Apple search/sidebar",
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T31",
+      "name": "Design System",
+      "status": "implemented",
+      "purpose": "Aplicar Design System únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "factory",
+        "shim",
+        "studio",
+        "production",
+        "assets",
+        "calendar",
+        "library",
+        "architect",
+        "story"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "Apple sidebar/workspace",
+        "video-5 Explorer",
+        "Apple inspector",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "Apple search/sidebar",
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet",
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T32",
+      "name": "Sticky showcase",
+      "status": "implemented",
+      "purpose": "Aplicar Sticky showcase únicamente cuando mejora una tarea real.",
+      "modules": [
+        "branding",
+        "studio",
+        "qa",
+        "story"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "Apple inspector",
+        "CleanMyMac review state",
+        "video-6 Brain",
+        "Apple Product Story"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T33",
+      "name": "Context color transitions",
+      "status": "selective",
+      "purpose": "Aplicar Context color transitions únicamente cuando mejora una tarea real.",
+      "modules": [
+        "branding",
+        "calendar",
+        "story",
+        "studio"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "video-6 Brain",
+        "Apple Product Story",
+        "Apple pro app inspector",
+        "video-3 macOS"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T34",
+      "name": "Editorial kinetic type",
+      "status": "selective",
+      "purpose": "Aplicar Editorial kinetic type únicamente cuando mejora una tarea real.",
+      "modules": [
+        "branding",
+        "story",
+        "calendar",
+        "studio"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "video-6 Brain",
+        "Apple Product Story",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "Apple pro app inspector",
+        "video-3 macOS"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T35",
+      "name": "Progress rail",
+      "status": "implemented",
+      "purpose": "Aplicar Progress rail únicamente cuando mejora una tarea real.",
+      "modules": [
+        "factory",
+        "dashboard",
+        "branding",
+        "shim",
+        "airesults",
+        "studio",
+        "production",
+        "calendar",
+        "assets",
+        "qa",
+        "library",
+        "architect"
+      ],
+      "references": [
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple source-anchored sheets",
+        "CleanMyMac results review",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "Apple sidebar/workspace",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "Apple inspector",
+        "CleanMyMac review state",
+        "Apple search/sidebar",
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T36",
+      "name": "Explorer / filters / saved views",
+      "status": "implemented",
+      "purpose": "Aplicar Explorer / filters / saved views únicamente cuando mejora una tarea real.",
+      "modules": [
+        "library",
+        "assets",
+        "production",
+        "calendar",
+        "branding",
+        "qa"
+      ],
+      "references": [
+        "video-5 Explorer",
+        "Apple search/sidebar",
+        "Apple inspector",
+        "CleanMyMac Smart Care",
+        "Apple sidebar/workspace",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "video-2 MacBook Pro",
+        "CleanMyMac review state"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T37",
+      "name": "Gradient mesh / blobs",
+      "status": "selective",
+      "purpose": "Aplicar Gradient mesh / blobs únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding",
+        "calendar",
+        "dashboard"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "lazy + cleanup + one active loop"
+    },
+    {
+      "id": "T38",
+      "name": "Spatial WebGL portals",
+      "status": "lab",
+      "purpose": "Aplicar Spatial WebGL portals únicamente cuando mejora una tarea real.",
+      "modules": [
+        "story",
+        "branding"
+      ],
+      "references": [
+        "video-2 MacBook Pro",
+        "video-6 Brain",
+        "Apple Product Story",
+        "video-5 Explorer"
+      ],
+      "fallback": "2D / CSS / disclosure equivalente",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "lazy + cleanup + one active loop"
+    },
+    {
+      "id": "T39",
+      "name": "Dominant functional object",
+      "status": "implemented",
+      "purpose": "Aplicar Dominant functional object únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "branding",
+        "calendar",
+        "factory",
+        "shim",
+        "airesults",
+        "studio",
+        "production",
+        "assets",
+        "qa",
+        "library",
+        "architect"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "video-3 macOS app demos",
+        "CleanMyMac task flow",
+        "Apple source-anchored sheets",
+        "CleanMyMac results review",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "Apple sidebar/workspace",
+        "Apple inspector",
+        "CleanMyMac review state",
+        "Apple search/sidebar",
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T40",
+      "name": "Radial / bubble visualization",
+      "status": "selective",
+      "purpose": "Aplicar Radial / bubble visualization únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "calendar",
+        "production",
+        "qa"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "Apple sidebar/workspace",
+        "Apple inspector",
+        "CleanMyMac review state"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    },
+    {
+      "id": "T41",
+      "name": "Semantic theming",
+      "status": "implemented",
+      "purpose": "Aplicar Semantic theming únicamente cuando mejora una tarea real.",
+      "modules": [
+        "dashboard",
+        "factory",
+        "airesults",
+        "production",
+        "studio",
+        "calendar",
+        "branding",
+        "architect"
+      ],
+      "references": [
+        "CleanMyMac Smart Care",
+        "Apple macOS HIG",
+        "CleanMyMac task focus",
+        "Apple forms/controls",
+        "Apple source-anchored sheets",
+        "CleanMyMac results review",
+        "Apple sidebar/workspace",
+        "Apple pro app inspector",
+        "video-3 macOS",
+        "Apple Calendar-like spatial logic",
+        "CleanMyMac state feedback",
+        "video-2 MacBook Pro",
+        "video-5 Explorer",
+        "Gemini utility-window pattern on macOS",
+        "Apple popover/sheet"
+      ],
+      "fallback": "Interacción nativa sin efecto avanzado",
+      "reducedMotion": "Eliminar desplazamiento/parallax; conservar estado, foco y contenido.",
+      "performanceBudget": "sin trabajo continuo fuera de interacción"
+    }
+  ]
+}

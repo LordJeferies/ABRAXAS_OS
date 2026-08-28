@@ -1,0 +1,20 @@
+ABRAXAS V4.2.24 · HOTFIX MOTION 1080P / 40M
+
+ANTES DE APLICAR:
+
+1. En la Terminal del render actual, presione Control+C una sola vez.
+2. Espere hasta volver a ver el prompt: lordjef@M1pJ ... %
+3. No borre el OUTPUT ni el paquete maestro.
+
+Este hotfix modifica únicamente el renderer y monitor de referencias Motion.
+No cambia timecodes, selección narrativa, intros ni videos completos.
+
+COMANDO PRINCIPAL:
+
+cd "$HOME/Downloads/ABRAXAS_V4_2_24_MOTION_1080P_40M_HOTFIX" && chmod +x TERMINAL/*.command && ./TERMINAL/APLICAR_Y_REANUDAR_MOTION_1080P_40M.command
+
+RESTAURACIÓN OPCIONAL DEL CÓDIGO ANTERIOR:
+
+./TERMINAL/RESTAURAR_ULTIMO_BACKUP.command
+
+La restauración tampoco elimina el OUTPUT de video.

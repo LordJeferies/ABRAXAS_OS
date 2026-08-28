@@ -1,0 +1,23 @@
+{
+  "name": "@vav/remotion-composition",
+  "version": "0.0.1-dev",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.518",
+    "@remotion/player": "4.0.518",
+    "@remotion/renderer": "4.0.518",
+    "@remotion/captions": "4.0.518",
+    "@remotion/layout-utils": "4.0.518",
+    "@remotion/fonts": "4.0.518",
+    "@remotion/media": "4.0.518",
+    "@remotion/motion-blur": "4.0.518",
+    "@vav/abraxas-import": "workspace:*",
+    "@vav/caption-hierarchy": "workspace:*",
+    "@vav/caption-motion": "workspace:*",
+    "@vav/caption-styles": "workspace:*"
+  }
+}

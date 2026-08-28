@@ -1,0 +1,38 @@
+{
+  "sequence": 4,
+  "content_id": "JV03",
+  "narrative_role": "SHIFT",
+  "source_part_id": "JV03_P07",
+  "child_beat_ids": [
+    "JV03_B08"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:20:22.000",
+  "source_end": "00:20:31.000",
+  "timeline_in_seconds": 43.63,
+  "timeline_out_seconds": 52.63,
+  "timeline_in": "00:00:43.630",
+  "timeline_out": "00:00:52.630",
+  "duration_seconds": 9.0,
+  "text": "Entonces yo creo que lo más importante es lo que tú hablabas hace rato del tech skin y la capacidad de adaptabilidad, applies for everything, porque al final hay que terminar de",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0236.",
+  "semantic_score": 8.781,
+  "transcript_reference": "SRT_0236",
+  "motion_primary": "M6",
+  "motion_name": "SOFTWARE_INPUT_PROCESS_OUTPUT",
+  "motion_alternative": "M4",
+  "why_motion": "La frase describe un flujo digital verificable: input, proceso y resultado.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "SaaS or data: input / process / output",
+    "asset_files": [
+      "UI_01_INPUT.png",
+      "UI_02_PROCESS.png",
+      "UI_03_OUTPUT.png"
+    ],
+    "instruction": "Representar un flujo funcional de software o datos: input, proceso y output. UI sobria y legible; prohibidos HUD, cyberpunk, métricas, marcas o funciones inventadas."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

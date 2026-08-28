@@ -1,0 +1,11 @@
+CONTENT: V11
+ROL: HOOK
+FUENTE: 01:10:25.937 → 01:10:31.137
+TIMELINE: 00:00:05.937 → 00:00:11.137
+DURACIÓN: 5.200s
+
+TRANSCRIPCIÓN EXACTA
+o lo que sea, a veces las personas piensan que por compartir la información estás
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0739.

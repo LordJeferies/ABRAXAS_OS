@@ -1,0 +1,19 @@
+{
+  "name": "@vav/local-engine",
+  "version": "0.0.1-dev",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "health": "node src/cli.ts health"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.0.1",
+    "sharp": "0.35.3",
+    "@vav/abraxas-import": "workspace:*",
+    "@vav/vision-contracts": "workspace:*",
+    "@vav/remotion-composition": "workspace:*",
+    "@remotion/bundler": "4.0.518",
+    "@remotion/renderer": "4.0.518",
+    "remotion": "4.0.518"
+  }
+}

@@ -1,0 +1,11 @@
+CONTENT: MV01
+ROL: HOOK
+FUENTE: 00:06:33.527 → 00:06:42.029
+TIMELINE: 00:00:00.000 → 00:00:08.502
+DURACIÓN: 8.502s
+
+TRANSCRIPCIÓN EXACTA
+Comparte tu opinión. Además que yo nunca dejaría que un mecánico me sacara una muela, pues.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0074.

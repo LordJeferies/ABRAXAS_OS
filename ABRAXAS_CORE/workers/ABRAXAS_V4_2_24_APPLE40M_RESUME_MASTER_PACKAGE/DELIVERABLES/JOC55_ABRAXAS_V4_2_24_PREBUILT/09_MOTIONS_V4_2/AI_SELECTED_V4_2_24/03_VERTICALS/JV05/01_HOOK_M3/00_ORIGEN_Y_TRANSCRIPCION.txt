@@ -1,0 +1,11 @@
+CONTENT: JV05
+ROL: HOOK
+FUENTE: 00:42:37.299 → 00:42:43.680
+TIMELINE: 00:00:06.530 → 00:00:12.911
+DURACIÓN: 6.381s
+
+TRANSCRIPCIÓN EXACTA
+además avanzarlo porque de nuevo es lo que hablábamos al principio como que no era
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0465.

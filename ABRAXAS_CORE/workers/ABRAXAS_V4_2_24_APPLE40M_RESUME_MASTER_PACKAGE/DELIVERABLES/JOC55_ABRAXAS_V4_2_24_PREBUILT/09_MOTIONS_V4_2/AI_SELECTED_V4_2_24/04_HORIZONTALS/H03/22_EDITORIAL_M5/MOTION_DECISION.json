@@ -1,0 +1,38 @@
+{
+  "sequence": 22,
+  "content_id": "H03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H03_B116",
+  "child_beat_ids": [
+    "H03_B116"
+  ],
+  "speaker": "MIXED",
+  "source_start": "01:03:42.000",
+  "source_end": "01:03:49.000",
+  "timeline_in_seconds": 628.0,
+  "timeline_out_seconds": 635.0,
+  "timeline_in": "00:10:28.000",
+  "timeline_out": "00:10:35.000",
+  "duration_seconds": 7.0,
+  "text": "Qué es lo que vas a ver, en qué botón le tienes que dar, cuánto tiempo tienes, sino que es algo que tú puedes practicar desde la comodidad de tu casa.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0675.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0675",
+  "motion_primary": "M5",
+  "motion_name": "CINEMATIC_MICROSEQUENCE",
+  "motion_alternative": "M1",
+  "why_motion": "La idea puede mostrarse como acción física: plano general, detalle y resultado.",
+  "track": "V2",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Cinematic physical action: wide / detail / result",
+    "asset_files": [
+      "FRAME_01_WIDE_ACTION.png",
+      "FRAME_02_DETAIL_ACTION.png",
+      "FRAME_03_RESULT.png"
+    ],
+    "instruction": "Mostrar una acción física comprobable en tres cámaras: plano general, detalle y resultado. No usar como intro genérica ni inventar acciones que el texto no sostenga."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

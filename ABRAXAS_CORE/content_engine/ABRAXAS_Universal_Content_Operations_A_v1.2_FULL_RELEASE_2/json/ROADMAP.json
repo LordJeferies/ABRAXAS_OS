@@ -1,0 +1,21 @@
+{
+  "version": "1.2",
+  "current": {
+    "id": "V1.2",
+    "name": "Product Recovery",
+    "goal": "restore correct flows, readable Apple-grade shell, coherent roles/status, useful Calendar and Architect, and regression-safe packaging"
+  },
+  "next": [
+    {
+      "id": "V1.3",
+      "name": "Learning + Operations Intelligence",
+      "goal": "Coverage Engine, Collision Detection, Format/Template Performance, Prompt Lab, Source Truth Graph, approvals/roles real and Automation Center."
+    }
+  ],
+  "future": [
+    "Visual Composer",
+    "LLM Architect via secure backend",
+    "backend/sync/auth",
+    "performance analytics"
+  ]
+}

@@ -1,0 +1,11 @@
+CONTENT: MH01
+ROL: EDITORIAL
+FUENTE: 00:08:27.000 → 00:08:36.000
+TIMELINE: 00:04:09.203 → 00:04:18.203
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Pero sí hay un punto, de hecho lo conversaba con Santiago Pereira, el secretario general de la UNIMED, que estuvo en la misma mesa donde estábamos nosotros, de hecho, hablando
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0101.

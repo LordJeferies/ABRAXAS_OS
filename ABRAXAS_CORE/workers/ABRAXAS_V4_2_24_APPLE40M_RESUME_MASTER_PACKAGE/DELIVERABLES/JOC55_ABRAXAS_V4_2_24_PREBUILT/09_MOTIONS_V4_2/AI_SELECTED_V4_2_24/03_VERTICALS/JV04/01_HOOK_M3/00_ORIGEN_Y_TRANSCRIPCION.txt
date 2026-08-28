@@ -1,0 +1,11 @@
+CONTENT: JV04
+ROL: HOOK
+FUENTE: 00:28:16.373 → 00:28:22.091
+TIMELINE: 00:00:03.910 → 00:00:09.628
+DURACIÓN: 5.718s
+
+TRANSCRIPCIÓN EXACTA
+pero es como que hay que hacer su, no buscar un camino que esté hecho, hacer nuestro propio camino y aparte dejar
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0316.

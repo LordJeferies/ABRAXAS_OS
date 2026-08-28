@@ -1,0 +1,11 @@
+CONTENT: JV06
+ROL: CORE
+FUENTE: 01:11:57.878 → 01:12:05.744
+TIMELINE: 00:00:27.982 → 00:00:35.848
+DURACIÓN: 7.866s
+
+TRANSCRIPCIÓN EXACTA
+es como que yo quiero conseguir más los mejores. No es que te van a arreglar la vida, te van a dar una experiencia
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0758.

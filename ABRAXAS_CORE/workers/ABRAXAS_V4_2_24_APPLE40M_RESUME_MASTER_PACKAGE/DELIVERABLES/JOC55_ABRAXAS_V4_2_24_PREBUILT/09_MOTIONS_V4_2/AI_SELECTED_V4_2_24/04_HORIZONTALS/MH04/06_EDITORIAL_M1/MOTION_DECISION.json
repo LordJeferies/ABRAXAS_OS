@@ -1,0 +1,38 @@
+{
+  "sequence": 6,
+  "content_id": "MH04",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH04_B34",
+  "child_beat_ids": [
+    "MH04_B34"
+  ],
+  "speaker": "MIXED",
+  "source_start": "01:22:37.000",
+  "source_end": "01:22:45.000",
+  "timeline_in_seconds": 185.995,
+  "timeline_out_seconds": 193.995,
+  "timeline_in": "00:03:05.995",
+  "timeline_out": "00:03:13.995",
+  "duration_seconds": 8.0,
+  "text": "Y siento que mucha, de hecho ya entrevistaba a varias personas y hablábamos ahí inclusive con la gente, Creo que ese era el sentir de todos.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0876.",
+  "semantic_score": 3.7,
+  "transcript_reference": "SRT_0876",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

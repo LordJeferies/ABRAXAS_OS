@@ -1,0 +1,11 @@
+CONTENT: MH02
+ROL: EDITORIAL
+FUENTE: 00:29:52.000 → 00:29:58.000
+TIMELINE: 00:10:33.437 → 00:10:39.437
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+Y el legado para mí es no es lo que dejas para los demás, sino lo que dejas en los demás.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0330.

@@ -1,0 +1,5 @@
+(function(root,factory){const api=factory(root.V113_DOMAIN,root.V113_COMPONENTS);root.V113_ROADMAP=api;if(typeof module!=='undefined'&&module.exports)module.exports=api;})(typeof globalThis!=='undefined'?globalThis:this,function(DOMAIN,C){
+'use strict';
+function render(){return `<section class="v113-roadmap">${C.sectionTitle('Roadmap','v1.1.3 resuelve la deuda de presentación; v1.2 profundiza aprendizaje, colaboración y automatización.')}<div class="v113-roadmap-list">${(DOMAIN.data.roadmap||[]).map((x,i)=>`<article class="v113-panel ${x.status||''}"><span>${String(i+1).padStart(2,'0')} · ${C.esc(x.status||'')}</span><h2>${C.esc(x.name||x.id)}</h2><p>${C.esc(x.subtitle||x.detail||'')}</p></article>`).join('')}</div><section class="v113-panel v113-roadmap-v12"><span>v1.2 · CANDIDATOS</span><h2>Más inteligencia operacional.</h2><div class="v113-quality-strip"><span>Coverage Engine</span><span>Collision Detection</span><span>Template Performance</span><span>Prompt Lab</span><span>Source Truth Graph</span><span>Roles reales</span><span>Automation Center</span><span>Visual Composer</span><span>LLM Architect</span></div></section></section>`;}
+return{render};
+});

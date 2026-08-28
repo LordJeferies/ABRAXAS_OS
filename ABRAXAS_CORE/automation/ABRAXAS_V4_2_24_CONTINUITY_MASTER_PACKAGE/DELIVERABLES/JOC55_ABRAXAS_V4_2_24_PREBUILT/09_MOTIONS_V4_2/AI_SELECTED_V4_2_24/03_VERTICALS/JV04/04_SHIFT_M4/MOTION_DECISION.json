@@ -1,0 +1,36 @@
+{
+  "sequence": 4,
+  "content_id": "JV04",
+  "narrative_role": "SHIFT",
+  "source_part_id": "JV04_P09",
+  "child_beat_ids": [
+    "JV04_B11"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:29:02.000",
+  "source_end": "00:29:07.000",
+  "timeline_in_seconds": 49.537,
+  "timeline_out_seconds": 54.537,
+  "timeline_in": "00:00:49.537",
+  "timeline_out": "00:00:54.537",
+  "duration_seconds": 5.0,
+  "text": "Entonces sí estás dando un poco más de ti para que eso funcione de esa manera.",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0323.",
+  "semantic_score": 8.077,
+  "transcript_reference": "SRT_0323",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La idea central se entiende mejor como relación o proceso visual.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

@@ -1,0 +1,38 @@
+{
+  "sequence": 5,
+  "content_id": "JV02",
+  "narrative_role": "MEMORABLE",
+  "source_part_id": "JV02_P06",
+  "child_beat_ids": [
+    "JV02_B10"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:14:37.706",
+  "source_end": "00:14:42.415",
+  "timeline_in_seconds": 50.18,
+  "timeline_out_seconds": 54.889,
+  "timeline_in": "00:00:50.180",
+  "timeline_out": "00:00:54.889",
+  "duration_seconds": 4.709,
+  "text": "sea tienes que irte un nivel más arriba para poder llegar a eso y ser",
+  "reason": "Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0165.",
+  "semantic_score": 7.8135,
+  "transcript_reference": "SRT_0165",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La tesis verbal es la imagen principal y funciona como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

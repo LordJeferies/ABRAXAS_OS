@@ -1,0 +1,42 @@
+{
+  "sequence": 3,
+  "content_id": "V12",
+  "narrative_role": "CORE",
+  "source_part_id": "V12_P06",
+  "child_beat_ids": [
+    "V12_B09"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:25:08.960",
+  "source_end": "01:25:15.616",
+  "timeline_in_seconds": 38.96,
+  "timeline_out_seconds": 45.616,
+  "timeline_in": "00:00:38.960",
+  "timeline_out": "00:00:45.616",
+  "duration_seconds": 6.656,
+  "text": "Pero pienso que eso me dio como un extra fire, básicamente, de convertir ese legado",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0898.",
+  "semantic_score": 9.9253,
+  "transcript_reference": "SRT_0898",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

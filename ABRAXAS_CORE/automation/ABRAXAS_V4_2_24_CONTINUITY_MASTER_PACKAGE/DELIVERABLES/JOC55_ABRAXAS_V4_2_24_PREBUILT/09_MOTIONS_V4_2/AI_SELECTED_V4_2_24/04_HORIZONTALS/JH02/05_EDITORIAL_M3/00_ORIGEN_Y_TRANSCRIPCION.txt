@@ -1,0 +1,11 @@
+CONTENT: JH02
+ROL: EDITORIAL
+FUENTE: 00:22:09.000 → 00:22:18.000
+TIMELINE: 00:02:43.243 → 00:02:52.243
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+bien sea o el dueño de tu propia clínica, tu propio negocio o tienes socios con los que trabajas o trabajas en una clínica, pero en la mayoría del tiempo tú eres tu propio jefe,
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0252.

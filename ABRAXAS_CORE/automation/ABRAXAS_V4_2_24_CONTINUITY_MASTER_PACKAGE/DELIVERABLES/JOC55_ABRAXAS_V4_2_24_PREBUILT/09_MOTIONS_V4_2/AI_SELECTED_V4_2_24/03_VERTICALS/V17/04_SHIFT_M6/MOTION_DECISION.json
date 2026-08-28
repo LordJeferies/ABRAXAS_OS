@@ -1,0 +1,38 @@
+{
+  "sequence": 4,
+  "content_id": "V17",
+  "narrative_role": "SHIFT",
+  "source_part_id": "V17_P07",
+  "child_beat_ids": [
+    "V17_B11"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:08:52.000",
+  "source_end": "01:08:58.000",
+  "timeline_in_seconds": 38.0,
+  "timeline_out_seconds": 44.0,
+  "timeline_in": "00:00:38.000",
+  "timeline_out": "00:00:44.000",
+  "duration_seconds": 6.0,
+  "text": "Y el tema del app si es más por suscripción porque es un producto que la gente utiliza por más tiempo.",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0724.",
+  "semantic_score": 9.8669,
+  "transcript_reference": "SRT_0724",
+  "motion_primary": "M6",
+  "motion_name": "SOFTWARE_INPUT_PROCESS_OUTPUT",
+  "motion_alternative": "M4",
+  "why_motion": "La frase describe un flujo digital verificable: input, proceso y resultado.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "SaaS or data: input / process / output",
+    "asset_files": [
+      "UI_01_INPUT.png",
+      "UI_02_PROCESS.png",
+      "UI_03_OUTPUT.png"
+    ],
+    "instruction": "Representar un flujo funcional de software o datos: input, proceso y output. UI sobria y legible; prohibidos HUD, cyberpunk, métricas, marcas o funciones inventadas."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

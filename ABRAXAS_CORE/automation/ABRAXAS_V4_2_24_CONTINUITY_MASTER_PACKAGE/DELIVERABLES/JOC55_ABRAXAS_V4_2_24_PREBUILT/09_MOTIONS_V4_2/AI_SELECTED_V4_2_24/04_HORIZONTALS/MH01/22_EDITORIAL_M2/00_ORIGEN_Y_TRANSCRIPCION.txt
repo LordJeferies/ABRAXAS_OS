@@ -1,0 +1,11 @@
+CONTENT: MH01
+ROL: EDITORIAL
+FUENTE: 00:15:33.000 → 00:15:41.000
+TIMELINE: 00:11:15.203 → 00:11:23.203
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Dando ese, das un 100%, dar un 1 % más todos los días y ese acúmulo de ese 1 % todos los días.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0175.

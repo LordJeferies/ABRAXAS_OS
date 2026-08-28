@@ -1,0 +1,38 @@
+{
+  "sequence": 5,
+  "content_id": "H03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H03_B27",
+  "child_beat_ids": [
+    "H03_B27"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:55:24.000",
+  "source_end": "00:55:32.000",
+  "timeline_in_seconds": 130.0,
+  "timeline_out_seconds": 138.0,
+  "timeline_in": "00:02:10.000",
+  "timeline_out": "00:02:18.000",
+  "duration_seconds": 8.0,
+  "text": "la estrategia de cómo enfrentarte al examen en sí el y a la experiencia es que está genial genial eso y eso me lleva a una pregunta aquí sólo por curiosidad",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0588.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0588",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "La idea se aclara con observación documental y close-ups, sin sustituir el testimonio.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

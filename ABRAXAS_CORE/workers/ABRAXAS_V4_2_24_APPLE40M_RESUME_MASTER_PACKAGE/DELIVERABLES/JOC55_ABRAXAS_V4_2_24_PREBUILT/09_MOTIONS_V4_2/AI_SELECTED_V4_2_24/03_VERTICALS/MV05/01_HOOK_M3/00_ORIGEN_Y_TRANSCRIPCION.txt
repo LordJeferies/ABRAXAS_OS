@@ -1,0 +1,11 @@
+CONTENT: MV05
+ROL: HOOK
+FUENTE: 00:43:04.079 → 00:43:08.190
+TIMELINE: 00:00:04.022 → 00:00:08.133
+DURACIÓN: 4.111s
+
+TRANSCRIPCIÓN EXACTA
+Me estoy enterando ahora de que habían cambiado el examen, fuiste de la primera que tomó el examen.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0469.

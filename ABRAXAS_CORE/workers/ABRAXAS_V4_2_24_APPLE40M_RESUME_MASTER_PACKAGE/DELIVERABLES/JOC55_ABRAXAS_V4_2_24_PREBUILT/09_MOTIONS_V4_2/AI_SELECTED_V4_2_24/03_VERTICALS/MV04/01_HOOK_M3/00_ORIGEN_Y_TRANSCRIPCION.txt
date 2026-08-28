@@ -1,0 +1,11 @@
+CONTENT: MV04
+ROL: HOOK
+FUENTE: 01:16:46.559 → 01:16:50.720
+TIMELINE: 00:00:00.000 → 00:00:04.161
+DURACIÓN: 4.161s
+
+TRANSCRIPCIÓN EXACTA
+Nunca hemos tenido levantamiento de capital y hasta el momento no lo hemos necesitado.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0813.

@@ -1,0 +1,11 @@
+CONTENT: JV10
+ROL: SHIFT
+FUENTE: 01:27:47.878 → 01:27:54.559
+TIMELINE: 00:00:46.331 → 00:00:53.012
+DURACIÓN: 6.681s
+
+TRANSCRIPCIÓN EXACTA
+diré que conozco a la doctora Amanda Vicari, que acaba de hacer un proyecto interesantísimo y está ayudando a muchísima gente.
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0923.

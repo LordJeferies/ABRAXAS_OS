@@ -1,0 +1,11 @@
+CONTENT: JV01
+ROL: MEMORABLE
+FUENTE: 00:09:04.630 → 00:09:09.088
+TIMELINE: 00:01:02.588 → 00:01:07.046
+DURACIÓN: 4.458s
+
+TRANSCRIPCIÓN EXACTA
+terminado de trabajar, ingresan a la universidad, igual van a aprender cosas que no ven afuera.
+
+MOTIVO
+Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0107.

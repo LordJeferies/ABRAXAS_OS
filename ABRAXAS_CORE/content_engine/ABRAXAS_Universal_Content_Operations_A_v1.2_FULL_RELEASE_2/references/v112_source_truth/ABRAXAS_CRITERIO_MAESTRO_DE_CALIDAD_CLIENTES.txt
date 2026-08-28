@@ -1,0 +1,2267 @@
+ABRAXAS v1.1.1
+CRITERIO MAESTRO DE CALIDAD, CONTENIDO, PROMPTS Y CLIENT INTELLIGENCE
+SOURCE OF TRUTH PARA CONTENIDOS, TEXTOS, COPIES, IMÁGENES, VIDEO, PROMPTS, QA Y CONTEXTO DE CLIENTES
+
+Documento complementario a:
+ABRAXAS v1.1.1 · DEFINICIÓN MAESTRA DE PRODUCTO Y OPERACIÓN
+
+OBJETIVO DEL DOCUMENTO
+
+Este archivo define qué significa “calidad ABRAXAS” y cómo debe cambiar ese criterio según el cliente, el formato, la campaña y la pieza concreta.
+
+No es un manual de estilo superficial.
+No es una lista de adjetivos como “premium, moderno, humano, cinematográfico”.
+No es una colección de prompts sueltos.
+
+Es un sistema de decisión.
+
+Debe permitir que una IA, un estratega, un copywriter, un diseñador, un editor o una persona que continúe el desarrollo de ABRAXAS pueda responder con precisión:
+
+- ¿Qué hace que una pieza merezca publicarse?
+- ¿Qué hace que una pieza sea genérica aunque esté bien escrita?
+- ¿Qué debe cambiar cuando el cliente cambia?
+- ¿Qué cosas pertenecen al criterio universal ABRAXAS y cuáles pertenecen al cliente?
+- ¿Qué reglas debe respetar un formato específico?
+- ¿Qué significa una imagen “correcta” para cada marca?
+- ¿Qué diferencia un copy funcional de uno redundante?
+- ¿Qué debe contener un prompt para ser realmente reutilizable?
+- ¿Qué debe bloquear QA?
+- ¿Qué puede inferirse y qué no?
+- ¿Qué debe conservarse al producir contenido en lote?
+
+===============================================================================
+1. TESIS CENTRAL DE CALIDAD ABRAXAS
+===============================================================================
+
+ABRAXAS no busca producir contenido que simplemente sea correcto.
+
+Busca producir contenido que combine:
+
+    VERDAD
+    + IDEA
+    + ESTRUCTURA
+    + IDENTIDAD
+    + ESPECIFICIDAD
+    + UTILIDAD
+    + PRODUCCIÓN
+    + TRAZABILIDAD
+
+La calidad no se define por longitud, ornamentación o sofisticación aparente.
+
+Una pieza ABRAXAS puede ser simple, pero no puede ser accidental.
+
+Cada decisión debe responder a una función:
+
+- ¿por qué existe esta pieza?
+- ¿qué idea defiende?
+- ¿para quién?
+- ¿qué formato usa?
+- ¿por qué ese formato?
+- ¿qué hace cada beat/slide?
+- ¿qué aporta el copy?
+- ¿qué aporta la imagen?
+- ¿qué evidencia necesita?
+- ¿qué debe pasar después?
+
+La frase que resume el estándar es:
+
+    ABRAXAS considera de calidad una pieza cuando la idea es defendible, la estructura cumple una función, la identidad es reconocible, el contenido aporta algo específico, el visual ayuda a entender o sentir la idea, el copy complementa, las fuentes son seguras, la producción es ejecutable y el resultado no podría confundirse con contenido genérico generado por IA.
+
+===============================================================================
+2. LA JERARQUÍA DE CRITERIO
+===============================================================================
+
+Toda decisión debe pasar por cinco niveles.
+
+NIVEL 1 — ABRAXAS UNIVERSAL
+Reglas que deben cumplirse para cualquier cliente.
+
+NIVEL 2 — CLIENTE
+Brand Core, voz, audiencia, visual, claims, límites y contexto.
+
+NIVEL 3 — FORMATO
+Reglas específicas del formato seleccionado.
+
+NIVEL 4 — CAMPAÑA
+Objetivo, mensaje, CTA, timing y prioridad de una campaña concreta.
+
+NIVEL 5 — PIEZA FIJADA
+Decisiones humanas ya aprobadas para un content_id.
+
+Precedencia normal:
+
+    PIEZA FIJADA
+        > CAMPAÑA
+        > FORMATO
+        > CLIENTE
+        > UNIVERSAL
+
+Pero una decisión inferior nunca puede violar una restricción de seguridad superior.
+
+Ejemplo:
+
+Una campaña puede pedir “más agresividad comercial”.
+
+Eso no permite inventar resultados o claims que Brand Intelligence marca como no verificados.
+
+===============================================================================
+3. QUÉ SÍ ES CALIDAD ABRAXAS
+===============================================================================
+
+Una pieza ABRAXAS de calidad:
+
+1. Tiene una razón concreta para existir.
+2. Tiene una tesis, no únicamente un tema.
+3. El hook crea una razón legítima para continuar.
+4. El payoff cumple la promesa del hook.
+5. Cada unidad añade información nueva.
+6. Evita repetición semántica.
+7. Explica mecanismos cuando el tema lo requiere.
+8. Utiliza ejemplos concretos.
+9. Distingue hecho, interpretación, hipótesis y aspiración.
+10. Respeta el cliente.
+11. Respeta el formato.
+12. Respeta la plataforma.
+13. Tiene un visual con función narrativa.
+14. Tiene un copy con función propia.
+15. Puede ser producido por otra persona sin adivinar qué quiso decir el estratega.
+16. Conserva fuente y trazabilidad cuando corresponde.
+17. Puede ser versionado y revisado.
+18. Puede coexistir en un lote sin canibalizar otras piezas.
+19. Tiene criterio suficiente para justificar por qué se publica.
+20. Se siente creado para esa marca, no “adaptado” al final cambiando el logo.
+
+===============================================================================
+4. QUÉ NO ES CALIDAD ABRAXAS
+===============================================================================
+
+ABRAXAS no considera suficiente:
+
+- gramática correcta;
+- diseño bonito;
+- frases inspiradoras;
+- hooks exagerados;
+- listas genéricas;
+- “tips” intercambiables;
+- conclusiones previsibles;
+- grandes palabras sin mecanismo;
+- imágenes decorativas;
+- copy que repite la pieza;
+- CTA automático;
+- B-roll de stock sin relación;
+- prompts llenos de adjetivos;
+- usar “premium” como especificación;
+- usar “cinematográfico” sin describir cámara, luz, ritmo y función;
+- usar “hazlo como Apple” sin traducirlo a principios concretos;
+- inventar experiencia personal;
+- atribuir citas no verificadas;
+- generar una serie donde cada visual parece de una marca diferente;
+- producir seis piezas que son seis versiones de la misma tesis.
+
+===============================================================================
+5. AI SLOP: CRITERIO EXPLÍCITO ANTI-GENERICIDAD
+===============================================================================
+
+ABRAXAS debe combatir el AI slop de manera activa.
+
+Se considera señal de slop:
+
+- “En un mundo donde…”
+- “¿Alguna vez te has preguntado…?” sin necesidad real.
+- “No se trata de X, se trata de Y” usado mecánicamente.
+- “El secreto que nadie te cuenta”.
+- “Esto cambiará tu forma de…” sin demostrarlo.
+- “Potencia / transforma / revoluciona” sin mecanismo.
+- enumeraciones arbitrarias de 3, 5 o 7 puntos.
+- tono de gurú.
+- metáforas cliché.
+- falsa tensión.
+- CTA estándar tipo “guarda este post”.
+- frase de cierre que repite el hook.
+- uso excesivo de simetrías y contraposiciones.
+- lenguaje que suena a IA aunque sea correcto.
+
+El prompt debe contener anti-patrones reales del cliente y formato, no solo “evita clichés”.
+
+===============================================================================
+6. TEMA VS IDEA
+===============================================================================
+
+TEMA:
+CRM.
+
+No es suficiente.
+
+IDEA:
+Un CRM empieza a ser útil cuando otra persona puede retomar una oportunidad sin reconstruir la conversación desde cero.
+
+La idea contiene una relación causal o interpretativa.
+
+Otro ejemplo:
+
+TEMA:
+Validación de bioactivos.
+
+IDEA MOKA:
+Un resultado positivo aislado no permite decidir que existe una solución reproducible; la decisión necesita repetibilidad, diseño experimental y una cadena de evidencia.
+
+Una pieza debe ser capaz de responder:
+
+    ¿Qué afirmamos realmente?
+
+===============================================================================
+7. HOOK
+===============================================================================
+
+El hook no existe para “captar atención” de cualquier manera.
+
+Crea un contrato narrativo.
+
+Un buen hook produce una combinación de:
+- relevancia;
+- contradicción;
+- reconocimiento;
+- pérdida potencial;
+- curiosidad;
+- tensión;
+- promesa específica.
+
+MALO:
+“¿Quieres mejorar tus ventas?”
+
+GENÉRICO:
+“El error que está destruyendo tus ventas.”
+
+MÁS ABRAXAS:
+“Tu CRM tiene 800 contactos. Dime cuál conversación toca mover hoy.”
+
+El último ejemplo es específico, visualizable y abre un problema operativo real. Ese tipo de construcción aparece en el sistema editorial JOC ya desarrollado. 
+
+===============================================================================
+8. HOOK–PAYOFF CONTRACT
+===============================================================================
+
+Toda apertura crea una deuda.
+
+Si se dice:
+
+“Tu CRM no está fallando.”
+
+la pieza debe explicar qué está ocurriendo en realidad.
+
+Si se plantea:
+
+“Una señal positiva no basta.”
+
+la pieza debe demostrar por qué una señal aislada es insuficiente y qué decisión exige mayor evidencia.
+
+FAIL automático si el hook crea una expectativa y el cierre se desplaza a otra conclusión.
+
+===============================================================================
+9. DESARROLLO
+===============================================================================
+
+Cada slide, beat, capítulo o bloque necesita una función.
+
+Funciones útiles:
+
+HOOK
+CONTEXT
+CONTRADICTION
+DIAGNOSIS
+MECHANISM
+EVIDENCE
+EXAMPLE
+COMPARISON
+CONSEQUENCE
+DECISION
+PAYOFF
+CTA
+
+Test de cada unidad:
+
+    ¿Qué sabe o entiende la audiencia después de esta unidad que no sabía antes?
+
+Si la respuesta es “lo mismo dicho diferente”, esa unidad probablemente debe eliminarse.
+
+===============================================================================
+10. PROFUNDIDAD
+===============================================================================
+
+Profundidad no equivale a más palabras.
+
+Profundidad significa llegar al mecanismo.
+
+SUPERFICIAL:
+“Debes escuchar a tus clientes.”
+
+MEJOR:
+“Escuchar no cambia una operación si el equipo no distingue una objeción individual de un patrón repetido. El valor aparece cuando conversaciones dispersas se convierten en señales comparables.”
+
+ABRAXAS busca explicar:
+
+    qué ocurre;
+    por qué ocurre;
+    qué cambia la decisión.
+
+===============================================================================
+11. ESPECIFICIDAD
+===============================================================================
+
+Preferir:
+
+“Un pipeline con 40 oportunidades sin next action”
+
+sobre:
+
+“Un pipeline desorganizado.”
+
+Preferir:
+
+“Una prueba salió bien y nueve repeticiones después no apareció el mismo resultado”
+
+sobre:
+
+“Un experimento puede fallar.”
+
+La especificidad aumenta credibilidad y utilidad.
+
+===============================================================================
+12. UTILIDAD
+===============================================================================
+
+Una pieza debe producir al menos una consecuencia mental u operativa:
+
+- entender algo;
+- decidir algo;
+- ver un problema de otra manera;
+- adoptar un criterio;
+- usar un framework;
+- hacer una pregunta mejor;
+- actuar;
+- descartar una mala decisión.
+
+Contenido que solo deja “bonita reflexión” es débil para ABRAXAS salvo que el objetivo explícito del formato sea puramente emocional/editorial.
+
+===============================================================================
+13. VOZ
+===============================================================================
+
+La voz no puede definirse solo con adjetivos.
+
+“Directa, cercana, profesional” es insuficiente.
+
+Debe expresarse en comportamientos.
+
+Ejemplos de variables:
+
+- afirma antes de explicar;
+- pregunta antes de afirmar;
+- utiliza primera persona o no;
+- confronta ideas;
+- nivel técnico;
+- nivel de vulnerabilidad;
+- humor;
+- longitud de frase;
+- vocabulario permitido;
+- vocabulario prohibido;
+- frecuencia de CTA;
+- grado de seguridad de las afirmaciones.
+
+Cada cliente necesita su propio Voice Behavior Profile.
+
+===============================================================================
+14. COPIES
+===============================================================================
+
+El copy no es una sinopsis automática.
+
+Funciones posibles:
+
+CONTEXTUALIZE
+EXTEND
+TRANSFER
+CONVERT
+DISCUSS
+SOURCE
+FRAME
+
+Ejemplo malo:
+
+Carrusel:
+“Tu CRM no está fallando…”
+
+Copy:
+“Tu CRM no está fallando. Mira el carrusel para descubrir por qué.”
+
+Ejemplo mejor:
+
+“Cuando un equipo dice que ‘el CRM no funciona’, muchas veces el problema aparece antes del software: nadie ha definido qué debe ocurrir después de cada conversación comercial.
+
+El CRM solo lo vuelve visible.
+
+¿Qué parte de tu proceso sigue dependiendo de memoria?”
+
+El copy añade contexto y abre otra capa.
+
+===============================================================================
+15. COPY POR PLATAFORMA
+===============================================================================
+
+No existe “el copy” como una sola pieza replicada.
+
+INSTAGRAM
+- puede ampliar contexto;
+- conversación;
+- acompañamiento visual;
+- CTA social cuando tiene sentido.
+
+LINKEDIN
+- puede funcionar autónomamente;
+- desarrolla tesis;
+- experiencia;
+- razonamiento profesional.
+
+YOUTUBE
+- framing;
+- claridad temática;
+- título/descripción;
+- discovery cuando aplique.
+
+TIKTOK
+- puede ser más directo;
+- menos contexto externo.
+
+La plataforma cambia ejecución, no Brand Core.
+
+===============================================================================
+16. CARRUSELES
+===============================================================================
+
+Un carrusel no es un artículo dividido en pantallas.
+
+Cada slide debe:
+- cumplir una función;
+- avanzar;
+- conservar continuidad;
+- poder comprenderse rápidamente;
+- tener una jerarquía visual específica.
+
+No todos los slides necesitan:
+headline + párrafo + bullets + quote + badge + CTA.
+
+Una idea dominante por lámina es una buena regla base.
+
+===============================================================================
+17. VIDEO VERTICAL
+===============================================================================
+
+El guion debe sobrevivir al oído.
+
+No basta con que se lea bien.
+
+Debe considerar:
+- respiración;
+- pausas;
+- pronunciabilidad;
+- ritmo;
+- energía;
+- mirada;
+- cámara;
+- edición.
+
+MALO:
+“En consecuencia, la implementación de herramientas…”
+
+MEJOR:
+“Muchas empresas instalan el CRM antes de tener un proceso comercial.
+
+Ahí empieza el problema.
+
+El software guarda información.
+Pero nadie decidió qué pasa después de cada llamada.”
+
+===============================================================================
+18. HORIZONTAL
+===============================================================================
+
+No es un vertical largo.
+
+Necesita:
+- tesis;
+- capítulos;
+- progresión;
+- resets de atención;
+- ejemplos;
+- payoff.
+
+Cada bloque necesita justificar su duración.
+
+===============================================================================
+19. PODCAST CLIPS
+===============================================================================
+
+Todo clip debe funcionar fuera del episodio.
+
+Necesita:
+- contexto suficiente;
+- speaker correcto;
+- timestamps reales;
+- tesis comprensible;
+- consecuencia/payoff.
+
+No inventar discurso.
+No reescribir la voz del speaker como cita.
+No seleccionar únicamente porque una frase “suena fuerte”.
+
+===============================================================================
+20. INTRO CINEMATOGRÁFICO DE PODCAST
+===============================================================================
+
+No es un montaje de frases intensas.
+
+Debe construir necesidad narrativa.
+
+ACT 1
+Podcast footage que abre preguntas.
+
+ACT 2
+Voice-over que añade contexto, identidad y stakes + B-roll/archivo.
+
+ACT 3
+Regreso al podcast y tensión no resuelta.
+
+La VO no repite el audio fuente.
+
+===============================================================================
+21. B-ROLL
+===============================================================================
+
+B-roll tiene función.
+
+CONTEXT
+EVIDENCE
+METAPHOR
+IDENTITY
+PROCESS
+LOCATION
+SCALE
+EMOTION
+TRANSITION
+
+MALO:
+Persona escribiendo en laptop porque el tema es trabajo.
+
+MEJOR:
+Si se habla de oportunidades envejeciendo sin next action, visualizar registros que acumulan días sin siguiente paso.
+
+===============================================================================
+22. VFX
+===============================================================================
+
+VFX no demuestra destreza técnica.
+
+Sirve para:
+- aclarar;
+- visualizar;
+- enfatizar;
+- conectar;
+- transformar estado.
+
+No usar:
+“efecto futurista”.
+
+Definir:
+qué cambia;
+cuándo;
+por qué.
+
+===============================================================================
+23. SFX
+===============================================================================
+
+Un SFX debe declarar:
+
+SOUND
+WHEN
+TRIGGER
+LEVEL
+FUNCTION
+
+Si no hay evento que lo justifique:
+
+    no_sfx_needed
+
+===============================================================================
+24. MÚSICA
+===============================================================================
+
+No:
+“música inspiradora”.
+
+Definir:
+style
+BPM
+tonalidad/texture cuando ayude
+energy
+entry
+build
+ducking
+resolution
+
+===============================================================================
+25. IMAGEN — PRINCIPIO GENERAL
+===============================================================================
+
+Una imagen no existe “para decorar”.
+
+Debe cumplir al menos una función:
+
+EXPLAIN
+CONTRAST
+ANCHOR
+PROVE
+ORIENT
+HUMANIZE
+SYMBOLIZE
+CREATE TENSION
+SHOW PROCESS
+SHOW RESULT
+
+La pregunta obligatoria:
+
+    ¿Qué perderíamos si esta imagen desaparece?
+
+Si nada cambia, la imagen probablemente es decorativa.
+
+===============================================================================
+26. PROMPT VISUAL
+===============================================================================
+
+No aceptar:
+
+“Crea una imagen premium, moderna, cinematográfica, profesional.”
+
+Un prompt visual necesita:
+
+ROLE
+PURPOSE
+CANVAS/RATIO
+SUBJECT
+SCENE
+COMPOSITION
+CAMERA
+LIGHT
+MATERIAL/TEXTURE
+PALETTE
+BRAND ELEMENTS
+TEXT ZONES
+CONTINUITY
+NEGATIVE CONSTRAINTS
+OUTPUT
+
+===============================================================================
+27. CONTINUIDAD VISUAL
+===============================================================================
+
+Consistencia no es igualdad.
+
+Una serie mantiene ADN:
+
+FIJO
+- paleta;
+- comportamiento tipográfico;
+- tratamiento fotográfico;
+- textura;
+- logo;
+- motivos;
+- densidad.
+
+VARIABLE
+- escena;
+- sujeto;
+- metáfora;
+- composición dentro del sistema.
+
+===============================================================================
+28. PROMPTS — ESTÁNDAR ABRAXAS
+===============================================================================
+
+Un prompt ABRAXAS es una especificación de producción.
+
+Debe contener:
+
+ROLE
+OBJECTIVE
+CONTEXT
+INPUTS
+WHAT IT IS
+WHAT IT IS NOT
+STRUCTURE
+CLIENT RULES
+FORMAT RULES
+EVIDENCE
+RESTRICTIONS
+NEGATIVES
+OUTPUT CONTRACT
+ACCEPTANCE CRITERIA
+QA
+HANDOFF
+CONTINUITY
+
+No todos los campos necesitan cientos de palabras.
+
+Pero todos los conceptos necesarios deben existir.
+
+===============================================================================
+29. PROMPT: WHAT IT IS / WHAT IT IS NOT
+===============================================================================
+
+Esta dupla es fundamental.
+
+Ejemplo JOC Philosophical:
+
+ES:
+Una interpretación práctica donde un filósofo y una referencia verificable ayudan a examinar una decisión actual.
+
+NO ES:
+- quote account;
+- biografía;
+- resumen académico;
+- motivación genérica;
+- “7 enseñanzas de…”.
+
+Las definiciones negativas reducen ambigüedad.
+
+===============================================================================
+30. OUTPUT CONTRACT
+===============================================================================
+
+Si ABRAXAS espera estructura, la IA debe devolver estructura.
+
+Ejemplo:
+
+{
+  "contentId":"...",
+  "title":"...",
+  "thesis":"...",
+  "slides":[
+    {
+      "id":"slide-01",
+      "function":"hook",
+      "text":"...",
+      "visualIntent":"..."
+    }
+  ],
+  "copies":{},
+  "qa":{}
+}
+
+No depender de parsing de texto libre cuando puede definirse un schema.
+
+===============================================================================
+31. CALIDAD EN LOTES
+===============================================================================
+
+Un lote no es bueno porque cada pieza aislada parece aceptable.
+
+Debe evaluarse como conjunto.
+
+Set-level QA:
+
+DIVERSITY
+COVERAGE
+CANNIBALIZATION
+FORMAT MIX
+PILLAR MIX
+CAMPAIGN ROLE
+SEQUENCE
+ENERGY
+
+Test útil:
+
+Si dos piezas pueden intercambiar sus hooks y seguir funcionando sin cambios, posiblemente son demasiado similares.
+
+===============================================================================
+32. SOURCE TRUTH
+===============================================================================
+
+Todo cliente debe tener fuentes clasificadas.
+
+APPROVED PRIMARY
+APPROVED SECONDARY
+UNVERIFIED
+CONTRADICTED
+BLOCKED
+
+Y cada afirmación puede tener estado:
+
+FACT
+INFERENCE
+HYPOTHESIS
+ASPIRATION
+UNVERIFIED
+
+ABRAXAS no transforma una hipótesis en hecho por repetición.
+
+===============================================================================
+33. CLAIMS
+===============================================================================
+
+No inventar precisión.
+
+Los claims deben poder marcarse:
+
+VERIFIED
+APPROVED
+DRAFT
+UNVERIFIED
+BLOCKED
+
+Publicación debe bloquear claims críticos no aprobados.
+
+===============================================================================
+34. CITAS
+===============================================================================
+
+Una cita entre comillas implica atribución literal.
+
+Si no puede verificarse:
+- usar paráfrasis rotulada;
+- o bloquear.
+
+Especialmente crítico para:
+- filosofía JOC;
+- ciencia;
+- testimonios;
+- invitados de podcast.
+
+===============================================================================
+35. EJEMPLOS
+===============================================================================
+
+Ejemplos pueden ser:
+
+REAL
+HYPOTHETICAL
+COMPOSITE
+
+Nunca presentar un ejemplo hipotético como caso real.
+
+===============================================================================
+36. HUMAN-IN-THE-LOOP
+===============================================================================
+
+La IA produce candidatos.
+
+No aprobación final.
+
+Human reviewer decide:
+- posición;
+- gusto;
+- claims de alto riesgo;
+- formato final;
+- publicación.
+
+ABRAXAS automatiza lo repetible para reservar criterio humano a decisiones importantes.
+
+===============================================================================
+37. MATRIZ DE QA UNIVERSAL
+===============================================================================
+
+IDEA /10
+HOOK /10
+STRUCTURE /10
+DEPTH /10
+SPECIFICITY /10
+BRAND FIT /10
+FORMAT FIT /10
+VISUAL FIT /10
+PLATFORM FIT /10
+EVIDENCE /10
+COPY /10
+PRODUCTION READINESS /10
+
+El score ayuda.
+
+No reemplaza critical fails.
+
+===============================================================================
+38. CRITICAL FAILS UNIVERSALES
+===============================================================================
+
+Bloquear si existe:
+
+- cita fabricada;
+- claim crítico no sustentado;
+- speaker incorrecto;
+- timestamp inexistente;
+- formato específico roto;
+- cliente equivocado;
+- contenido aprobado sobrescrito;
+- resultado IA tratado como aprobado automáticamente;
+- visual muy fuera de identidad;
+- schema imposible de hidratar;
+- hook sin payoff;
+- asset crítico incorrecto.
+
+===============================================================================
+39. CLIENT INTELLIGENCE COMO PARTE DE LA CALIDAD
+===============================================================================
+
+La calidad no puede vivir separada de Client Intelligence.
+
+Cada cliente necesita un “Quality Context Pack” con:
+
+1. WHO WE ARE
+2. WHO WE SERVE
+3. WHAT WE BELIEVE
+4. WHAT WE PROMISE
+5. WHAT WE CAN PROVE
+6. WHAT WE CANNOT CLAIM
+7. HOW WE SOUND
+8. HOW WE LOOK
+9. WHAT FORMATS WE USE
+10. WHAT GOOD LOOKS LIKE
+11. WHAT BAD LOOKS LIKE
+12. SOURCE TRUTH
+13. FORMAT-SPECIFIC QA
+14. VISUAL QA
+15. COPY QA
+
+===============================================================================
+40. JOC — CONTEXTO DE CALIDAD
+===============================================================================
+
+JOC combina marca personal, negocios, marketing, ventas, CRM, liderazgo, filosofía aplicada y podcast.
+
+Su calidad no se logra “hablando de emprendimiento”.
+
+La marca necesita postura, criterio, experiencia/observación y traducción operativa.
+
+El contenido debe sentirse autoral.
+
+No como contenido educativo genérico.
+
+Dentro del sistema de agosto ya existen ejemplos donde la tesis, el formato, la fuente, la función del copy, la dirección visual y QA aparecen explícitos por pieza. Por ejemplo, el carrusel filosófico de Marco Aurelio se plantea como conversación entre filosofía y operación, con continuidad histórica, fuente/paráfrasis rotulada y copy que amplía la aplicación contemporánea; el carrusel CRM utiliza una escena concreta, cuatro campos operativos y una prueba de relevo. Esos son patrones de calidad, no solamente contenidos aislados.
+
+===============================================================================
+41. JOC — QUÉ SÍ ES
+===============================================================================
+
+JOC SÍ:
+
+- tiene una posición;
+- puede afirmar o negar directamente;
+- aterriza conceptos a negocios/operación;
+- puede utilizar filosofía como lente;
+- explica con escenas reconocibles;
+- usa ejemplos antes de elevarse a abstracción;
+- puede ser confrontativo sin ser efectista;
+- utiliza voz hablable;
+- admite vulnerabilidad cuando es real;
+- puede utilizar herramientas concretas;
+- separa marca personal y voz de invitados.
+
+===============================================================================
+42. JOC — QUÉ NO ES
+===============================================================================
+
+JOC NO es:
+
+- influencer motivacional;
+- quote account;
+- gurú de ventas;
+- cuenta de “5 hacks”;
+- divulgador académico de filosofía;
+- CRM vendor genérico;
+- presentador que convierte cualquier frase del invitado en tesis propia;
+- marca de lujo basada en negro/dorado sin contenido de fondo;
+- creador que usa hologramas de negocios como atajo visual.
+
+===============================================================================
+43. JOC — VOZ
+===============================================================================
+
+Comportamientos:
+
+- abre rápido;
+- reconoce situaciones reales;
+- utiliza frases hablables;
+- puede decir “esto no funciona” si puede explicar por qué;
+- evita sentencia universal;
+- muestra mecanismo;
+- prefiere objeto/escena concreta a abstracción;
+- no fuerza CTA;
+- no fabrica experiencia.
+
+El sistema editorial JOC existente especifica explícitamente evitar tono de manual, gurú o sentencia universal, y usar ejemplo antes de conclusión abstracta. 
+
+===============================================================================
+44. JOC — VISUAL
+===============================================================================
+
+Patrones ya fijados en contenidos aprobados/desarrollados:
+
+- off-white / charcoal / rojo JOC controlado (#A91616 en el sistema actual);
+- una idea dominante por lámina;
+- espacio real para texto;
+- continuidad de luz, sujeto, objeto y escena;
+- cambio de encuadre cuando cambia la función narrativa;
+- no recurrir a hologramas corporativos genéricos;
+- rostro de JOC solo cuando el formato lo requiere;
+- objeto conductor cuando puede explicar la tesis;
+- visual que representa una capa del argumento.
+
+En el formato filosófico pueden coexistir códigos históricos/editoriales con tensión actual, conservando continuidad visual entre slides. 
+
+===============================================================================
+45. JOC — CARRUSEL FILOSÓFICO
+===============================================================================
+
+Debe:
+
+- comenzar con JOC afirmando o negando una idea;
+- introducir al filósofo con relevancia real;
+- usar cita verificada o paráfrasis claramente rotulada;
+- hacer que el filósofo sea estructuralmente necesario;
+- traducir filosofía a una decisión actual;
+- evitar enseñanza académica;
+- evitar motivación superficial;
+- mantener una progresión clara;
+- cerrar regresando a la posición de JOC.
+
+Ejemplo existente:
+Marco Aurelio → práctica → presencia editorial → urgencia por vender.
+
+No es:
+“4 lecciones de Marco Aurelio para tu negocio”.
+
+===============================================================================
+46. JOC — CARRUSEL DE CONCEPTO
+===============================================================================
+
+Debe tomar una idea operativa abstracta y volverla comprensible mediante:
+
+TENSIÓN
+DEFINICIÓN
+ANALOGÍA
+TRADUCCIÓN
+PRUEBA
+CIERRE
+
+Ejemplo existente:
+cuello de botella → autopista de cuatro carriles → una caseta → fila → proceso empresarial.
+
+La analogía no debe convertirse en decoración.
+
+Debe explicar el mecanismo.
+
+===============================================================================
+47. JOC — CRM
+===============================================================================
+
+JOC CRM debe explicar CRM como sistema de continuidad, decisión y seguimiento, no como pantalla futurista.
+
+Ejemplo de criterio existente:
+
+Cada oportunidad debería hacer visible:
+- qué quiere;
+- qué la frena;
+- en qué punto está;
+- qué pasa después.
+
+Visual:
+- tarjetas limpias;
+- escritorio real;
+- flujo de información;
+- no hologramas.
+
+===============================================================================
+48. JOC — PODCAST
+===============================================================================
+
+Las fuentes mandan.
+
+Si falta:
+- episodio;
+- transcripción;
+- timestamps;
+
+el contenido debe quedar BLOQUEADO POR FUENTE.
+
+No se inventa clip, quote, título ni portada basada en una tensión no verificada.
+
+El copy contextualiza al invitado y conversación sin convertir automáticamente su tesis en tesis de JOC.
+
+===============================================================================
+49. JOC — IMAGEN Y PRODUCCIÓN
+===============================================================================
+
+Para los contenidos desarrollados en el sistema JOC actual existe además una restricción operativa específica: las imágenes finales y la tipografía integrada en ellas se producen mediante ChatGPT Image, no mediante Python/canvas/SVG/HTML como compositor visual. Esa regla es un criterio de producción del sistema JOC existente y debe conservarse donde siga aplicando.
+
+===============================================================================
+50. JOC — QA RESUMIDO
+===============================================================================
+
+¿Tiene postura?
+¿Suena a JOC?
+¿Hay escena o mecanismo?
+¿Evita gurú/motivación genérica?
+¿Respeta el formato exacto?
+¿Copy amplía?
+¿Visual explica?
+¿Fuente correcta?
+¿Cita/timestamp verificable?
+¿Puede confundirse con otra cuenta?
+
+Si la última respuesta es sí:
+FAIL / NEEDS FIX.
+
+===============================================================================
+51. MOKA BIO — CONTEXTO DE CALIDAD
+===============================================================================
+
+Moka Bio se mueve en un territorio donde la calidad editorial está inseparablemente ligada a rigor científico y precisión de claims.
+
+La marca trabaja alrededor de bioactivos naturales, plantas, I+D, evidencia, MokaDex, Virtual Lab, patent search, descubrimiento, validación, decisiones de producto y conocimiento científico.
+
+Una pieza Moka no puede “simplificar” ciencia hasta volverla falsa.
+
+Tampoco debe parecer una publicación académica ilegible.
+
+Su estándar busca traducir complejidad sin destruir rigor.
+
+===============================================================================
+52. MOKA — QUÉ SÍ ES
+===============================================================================
+
+Moka SÍ:
+
+- ciencia aplicada a decisiones;
+- investigación y desarrollo;
+- exploración de relaciones entre planta, efecto y evidencia;
+- explicación de procesos;
+- diferenciación entre señal y validación;
+- visibilización del costo de incertidumbre;
+- visualización de datos y conexiones;
+- pensamiento de producto basado en evidencia;
+- founder expertise cuando está respaldado por fuente.
+
+===============================================================================
+53. MOKA — QUÉ NO ES
+===============================================================================
+
+Moka NO es:
+
+- wellness genérico;
+- suplemento lifestyle;
+- “plantas milagrosas”;
+- health claim marketing;
+- ciencia ficción biotech;
+- laboratorio futurista genérico;
+- marca verde de sostenibilidad superficial;
+- cuenta de curiosidades botánicas sin relación con I+D;
+- plataforma que “reemplaza” validación experimental.
+
+===============================================================================
+54. MOKA — FUENTE Y CLAIMS
+===============================================================================
+
+Moka necesita criterio de evidencia más estricto que una marca personal general.
+
+Ejemplos de riesgos ya identificados en contenidos reales:
+
+- plazos de investigación;
+- “minutos/días”;
+- porcentajes de ahorro;
+- magnitud de aceleración;
+- generalizaciones como “la mayoría de las plantas”;
+- estabilidad/actividad por especie;
+- beneficios biológicos.
+
+Algunos contenidos ya incluyen estado de riesgo alto/medio/bajo y requieren aprobación antes de publicación.
+
+Eso debe convertirse en criterio formal de Moka QA.
+
+===============================================================================
+55. MOKA — VOZ
+===============================================================================
+
+Debe sonar:
+
+- rigurosa;
+- clara;
+- curiosa;
+- técnica cuando hace falta;
+- orientada a decisión;
+- no grandilocuente.
+
+No debe afirmar más de lo que la evidencia permite.
+
+Debe poder decir:
+“esto todavía requiere validación”.
+
+Eso fortalece la marca.
+
+===============================================================================
+56. MOKA — ESTRUCTURA EDITORIAL
+===============================================================================
+
+Buenos contenidos Moka suelen funcionar cuando:
+
+1. parten de un problema real de I+D;
+2. muestran por qué la intuición inicial es insuficiente;
+3. explican la evidencia/mecanismo;
+4. muestran qué decisión cambia;
+5. conectan con Moka solo cuando corresponde.
+
+No empezar siempre hablando de la plataforma.
+
+El problema científico debe ser real antes de la solución.
+
+===============================================================================
+57. MOKA — EJEMPLO: UNA SEÑAL POSITIVA NO ALCANZA
+===============================================================================
+
+El contenido existente usa:
+
+HOOK REAL:
+una prueba sale bien y múltiples repeticiones no reproducen el resultado.
+
+EXPLICACIÓN:
+repetición + estadística + diseño experimental.
+
+RUTA:
+validación como camino con etapas.
+
+CIERRE:
+un resultado positivo no determina automáticamente producto/solución.
+
+Este es un buen patrón Moka porque la pieza no vende antes de explicar el problema científico.
+
+===============================================================================
+58. MOKA — VISUAL
+===============================================================================
+
+Sistema visual existente:
+
+- fotografía editorial científica premium;
+- laboratorio contemporáneo;
+- botánica realista;
+- composición limpia y rigurosa;
+- verde bosque profundo;
+- marfil cálido;
+- blanco;
+- grafito;
+- verde Moka como acento;
+- sans serif moderna y limpia;
+- luz natural o controlada de laboratorio;
+- logo oficial pequeño y con aire.
+
+Restricciones explícitas existentes:
+
+- sin claims no sustentados;
+- sin texto adicional;
+- sin equipos científicos deformados;
+- sin estética genérica de stock;
+- reproducir texto aprobado exactamente cuando la pieza lo exige.
+
+===============================================================================
+59. MOKA — LENGUAJE VISUAL
+===============================================================================
+
+La marca puede utilizar:
+
+- nodos;
+- conexiones;
+- redes;
+- diagramas;
+- flujos;
+- moléculas;
+- plantas;
+- laboratorio;
+- microfotografía;
+- mapas de relaciones;
+- UI científica;
+- sistemas modulares.
+
+Pero esos elementos deben responder al contenido.
+
+No añadir moléculas porque “se ve científico”.
+
+===============================================================================
+60. MOKA — COPY
+===============================================================================
+
+El copy debe:
+
+- contextualizar el fenómeno;
+- marcar límites;
+- traducir consecuencia;
+- evitar overclaiming;
+- distinguir plataforma de experimento;
+- poder incorporar CTA profesional.
+
+Evitar:
+
+“descubre el poder de la naturaleza”.
+
+Ese framing sería demasiado genérico y wellness.
+
+===============================================================================
+61. MOKA — QA RESUMIDO
+===============================================================================
+
+¿La afirmación está sustentada?
+¿La fuente es correcta?
+¿Estamos presentando correlación como causalidad?
+¿Estamos simplificando demasiado?
+¿La pieza ayuda a tomar una decisión?
+¿La plataforma aparece en el momento correcto?
+¿El visual parece ciencia real y no stock/fantasy?
+¿El logo/texto son correctos?
+¿El copy conserva cautela científica?
+
+===============================================================================
+62. INENERGY — CONTEXTO DE CALIDAD
+===============================================================================
+
+INENERGY es una consultoría de ingeniería y regulación para infraestructura energética regulada.
+
+Su territorio incluye:
+
+- LPG;
+- natural gas;
+- hydrogen-ready infrastructure;
+- safety studies;
+- asset integrity;
+- codes;
+- authority-facing design;
+- feasibility;
+- Pre-FEED;
+- FEED;
+- detailed engineering.
+
+Su contenido debe transmitir competencia técnica y claridad, no marketing corporativo genérico.
+
+===============================================================================
+63. INENERGY — QUÉ SÍ ES
+===============================================================================
+
+INENERGY SÍ:
+
+- ingeniería senior-led;
+- conexión entre ingeniería, regulación, seguridad y operación;
+- decision support;
+- risk reduction;
+- authority readiness;
+- technically defensible decisions;
+- experiencia en sistemas energéticos regulados.
+
+===============================================================================
+64. INENERGY — QUÉ NO ES
+===============================================================================
+
+INENERGY NO es:
+
+- consultoría corporativa genérica;
+- “green energy” aspiracional sin ingeniería;
+- campaña de sostenibilidad;
+- futurismo de hidrógeno;
+- stock de ejecutivos dándose la mano;
+- marketing de “free quote” para servicios técnicos complejos;
+- una firma que debe simular proyectos no autorizados.
+
+===============================================================================
+65. INENERGY — VOZ
+===============================================================================
+
+Debe ser:
+
+- técnica;
+- precisa;
+- senior;
+- sobria;
+- orientada a decisiones;
+- directa;
+- sin hype.
+
+Ejemplo de mejor framing:
+
+“Engineering certainty for regulated energy infrastructure”
+
+frente a promesas amplias de “transforming the energy future”.
+
+===============================================================================
+66. INENERGY — CONTENIDO EN VIDEO
+===============================================================================
+
+Criterio previamente definido:
+
+- videos de aproximadamente 20–45 s cuando se trate de respuestas cortas;
+- una pregunta por toma;
+- fondo tranquilo;
+- audio claro;
+- respuesta directa;
+- explicación breve;
+- implicación práctica;
+- cierre opcional.
+
+Evitar:
+- lecciones técnicas profundas en formatos demasiado cortos;
+- claims no sustentados;
+- respuestas memorizadas que suenan a copy corporativo.
+
+===============================================================================
+67. INENERGY — VISUAL
+===============================================================================
+
+Dirección desarrollada:
+
+- editorial industrial documentary photography;
+- infraestructura técnicamente plausible;
+- contexto UAE/internacional realista;
+- deep green / teal / ice-blue accents;
+- luz natural;
+- high detail;
+- PPE auténtico;
+- composición limpia;
+- espacio negativo para copy cuando corresponda.
+
+Negativos explícitos:
+
+- no generic corporate handshake;
+- no futuristic fantasy;
+- no exaggerated hydrogen flames;
+- no oversaturated greenwashing imagery;
+- no logos/watermarks falsos;
+- no simular evidencia de un proyecto nombrado.
+
+===============================================================================
+68. INENERGY — IMÁGENES DE PROYECTOS
+===============================================================================
+
+Regla crítica:
+
+Si se nombra un proyecto real, utilizar imagen real autorizada cuando se presente como evidencia del proyecto.
+
+Una imagen generada puede representar una categoría.
+
+No puede presentarse como evidencia visual del proyecto real.
+
+El sistema de actualización INENERGY existente lo deja explícito: proyectos nombrados requieren imágenes reales autorizadas; prompts genéricos no son evidencia.
+
+===============================================================================
+69. INENERGY — EJEMPLO DE CRITERIO
+===============================================================================
+
+Problema:
+“Engineering, regulation and safety treated as separate workstreams.”
+
+Contenido bueno:
+explica cómo interpretaciones tardías de códigos o interfaces sin resolver producen rediseño, comentarios y riesgo de aprobación.
+
+Contenido malo:
+“INENERGY helps companies navigate the energy transition with innovative solutions.”
+
+El segundo es correcto pero intercambiable con cientos de consultoras.
+
+===============================================================================
+70. INENERGY — COPY
+===============================================================================
+
+CTA y copy deben hablar a una persona que tiene una decisión técnica.
+
+Mejor:
+“Bring us the scope, the constraint and the decision that needs to be made.”
+
+Peor:
+“Get your free quote today.”
+
+El primero corresponde a una consultoría senior.
+
+===============================================================================
+71. INENERGY — QA RESUMIDO
+===============================================================================
+
+¿Es técnicamente defendible?
+¿Evita claims no verificados?
+¿Se siente senior-led?
+¿Explica una decisión?
+¿El lenguaje evita hype?
+¿La imagen es técnicamente plausible?
+¿Un proyecto real usa evidencia visual autorizada?
+¿Se distingue engineering de sustainability marketing?
+
+===============================================================================
+72. ABRAXAS — MARCA DEL SISTEMA
+===============================================================================
+
+ABRAXAS no es un cliente operativo en v1.1.1, pero sí tiene identidad propia como producto.
+
+La calidad de sus propios textos, documentación, UI y prompts debe cumplir el mismo principio de criterio.
+
+ABRAXAS debe sentirse:
+
+- exacto;
+- avanzado;
+- estructurado;
+- editorial;
+- tecnológico;
+- con una ligera dimensión retro/arquitectónica;
+- sin convertirse en sci-fi genérico.
+
+La interfaz puede usar negro, gris, blanco y acentos dorados como sistema propio.
+
+Pero el color no es la identidad central.
+
+La identidad central es:
+
+    arquitectura de información + precisión + control + navegación clara.
+
+===============================================================================
+73. ABRAXAS — UI COPY
+===============================================================================
+
+Debe ser corto y operativo.
+
+MEJOR:
+“3 piezas necesitan grabación.”
+
+PEOR:
+“Recording workflow pending tasks: 3.”
+
+MEJOR:
+“Resolver copies.”
+
+PEOR:
+“Manage copywriting resources.”
+
+La interfaz debe explicar complejidad con lenguaje simple.
+
+===============================================================================
+74. ABRAXAS — PROMPTS INTERNOS
+===============================================================================
+
+El prompt no es fuente de verdad.
+
+El prompt se compila desde:
+
+Brand Intelligence
+Format Library
+Campaign
+Content variables
+Sources
+Rules
+QA
+
+Editar una variable debe recompilar el prompt.
+
+No editar manualmente el megabloque como mecanismo principal.
+
+===============================================================================
+75. CRITERIO DE “HOW TO USE”
+===============================================================================
+
+Todo handoff hacia IA externa debe explicar:
+
+1. Qué es este prompt.
+2. Dónde ejecutarlo.
+3. Qué pegar.
+4. Qué resultado esperar.
+5. Qué no aceptar.
+6. Qué volver a copiar.
+7. A qué sección de ABRAXAS regresar.
+8. Qué content_id seleccionar.
+9. Qué mapping elegir.
+10. Cómo saber que terminó.
+
+Esto es parte del estándar de calidad, no documentación opcional.
+
+===============================================================================
+76. CRITERIO DE OUTPUT DE IA
+===============================================================================
+
+AI RESULT no equivale a approved.
+
+Siempre:
+
+AI RESULT
+→ REVIEW
+→ APPROVED / NEEDS FIX.
+
+ABRAXAS nunca debe omitir esa diferencia.
+
+===============================================================================
+77. QUALITY ERROR TAXONOMY
+===============================================================================
+
+Cuando algo falla, clasificar.
+
+GENERIC
+BRAND_DRIFT
+FORMAT_FAIL
+HOOK_FAIL
+PAYOFF_FAIL
+DEPTH_FAIL
+EVIDENCE_FAIL
+CLAIM_RISK
+COPY_REPEAT
+VISUAL_DRIFT
+VISUAL_FUNCTION_FAIL
+BATCH_DUPLICATION
+PLATFORM_FAIL
+SOURCE_FAIL
+PRODUCTION_INCOMPLETE
+
+No registrar simplemente “no me gusta”.
+
+===============================================================================
+78. LEARNING LOOP
+===============================================================================
+
+OUTPUT
+→ HUMAN REVIEW
+→ ERROR CLASSIFICATION
+→ TEMPLATE / FORMAT UPDATE
+→ VERSION
+→ NEW OUTPUT
+
+Así aprende ABRAXAS.
+
+No necesariamente mediante machine learning.
+
+Aprende a través de conocimiento editorial versionado.
+
+===============================================================================
+79. FORMAT VERSIONING
+===============================================================================
+
+Cada formato debe poder evolucionar:
+
+JOC_PHILOSOPHICAL_V6
+→ feedback
+→ JOC_PHILOSOPHICAL_V7
+
+MOKA_SCIENCE_EXPLAINER_V2
+→ feedback
+→ V3
+
+INENERGY_TECHNICAL_RESPONSE_V1
+→ feedback
+→ V2
+
+Debe conservarse qué versión produjo cada pieza.
+
+===============================================================================
+80. CLIENT QUALITY PACK — SCHEMA RECOMENDADO
+===============================================================================
+
+client_quality_pack = {
+  client_id,
+  brand_core,
+  voice_behavior,
+  audience,
+  editorial_principles,
+  visual_system,
+  source_truth,
+  claims_policy,
+  copy_profiles,
+  format_ids,
+  examples,
+  anti_examples,
+  universal_overrides,
+  qa_gates
+}
+
+===============================================================================
+81. FORMAT QUALITY PACK — SCHEMA RECOMENDADO
+===============================================================================
+
+format_quality_pack = {
+  format_id,
+  client_id,
+  physical_type,
+  purpose,
+  what_it_is,
+  what_it_is_not,
+  hook_logic,
+  structure,
+  development_logic,
+  payoff_logic,
+  copy_behavior,
+  visual_behavior,
+  sources,
+  examples,
+  anti_examples,
+  output_schema,
+  qa,
+  version
+}
+
+===============================================================================
+82. CONTENT QUALITY PACK — PIEZA INDIVIDUAL
+===============================================================================
+
+content_quality_context = {
+  content_id,
+  client_id,
+  campaign_id,
+  pillar_id,
+  format_id,
+  objective,
+  audience,
+  thesis,
+  source_ids,
+  fixed_decisions,
+  inherited_rules,
+  exceptions,
+  quality_status
+}
+
+===============================================================================
+83. MATRIZ: MISMO FORMATO FÍSICO, DIFERENTE CLIENTE
+===============================================================================
+
+FORMATO FÍSICO:
+Vertical Reel.
+
+JOC:
+- autoral;
+- postura;
+- escena/mecanismo;
+- voz hablable;
+- marca personal;
+- visual editorial JOC.
+
+MOKA:
+- precisión científica;
+- problema de I+D;
+- fuente;
+- diferencia entre señal y evidencia;
+- founder/science expertise;
+- laboratorio/botánica/datos.
+
+INENERGY:
+- decisión técnica;
+- senior expertise;
+- ingeniería + regulación + seguridad;
+- infraestructura plausible;
+- tono sobrio B2B.
+
+Misma duración no significa mismo contenido.
+
+===============================================================================
+84. MATRIZ: MISMO CARRUSEL, DIFERENTE CLIENTE
+===============================================================================
+
+JOC:
+puede usar una tensión personal/operativa y una escena reconocible.
+
+MOKA:
+puede usar una secuencia problema científico → evidencia → implicación.
+
+INENERGY:
+puede usar decisión de ingeniería → riesgo → criterio → pathway.
+
+No debe existir una única “plantilla universal de carrusel” que ignore esta diferencia.
+
+===============================================================================
+85. PROMPT COMPILER — CONTEXTO QUE DEBE SELECCIONAR
+===============================================================================
+
+Para cada generación:
+
+UNIVERSAL RULES
++
+CLIENT QUALITY PACK
++
+SELECTED FORMAT QUALITY PACK
++
+CAMPAIGN CONTEXT
++
+CONTENT VARIABLES
++
+SOURCE TRUTH RELEVANTE
++
+OUTPUT CONTRACT
++
+QA
+
+No cargar contexto irrelevante.
+
+Demasiado contexto también degrada.
+
+===============================================================================
+86. CRITERIO DE CONTEXT SELECTION
+===============================================================================
+
+Prompt Composer debe escoger solo lo necesario.
+
+Ejemplo:
+
+Para JOC CRM no necesita cargar reglas de carrusel filosófico.
+
+Para Moka bioactive validation no necesita cargar pricing del Investor Deck salvo que la pieza hable de negocio.
+
+Para INENERGY HAZOP no necesita todo el contenido de Who We Are.
+
+===============================================================================
+87. BUEN EJEMPLO VS MAL EJEMPLO — JOC
+===============================================================================
+
+MALO:
+“5 lecciones de Marco Aurelio para ser más disciplinado.”
+
+POR QUÉ:
+- genérico;
+- quote-account;
+- filosofía decorativa;
+- no JOC.
+
+MEJOR:
+“MARCO AURELIO ESCRIBÍA ANTES DE QUE AMANECIERA. No para publicar. Para no obedecer su propio ánimo.”
+
+Luego:
+paráfrasis → traducción de JOC → consecuencia contemporánea.
+
+===============================================================================
+88. BUEN EJEMPLO VS MAL EJEMPLO — MOKA
+===============================================================================
+
+MALO:
+“La naturaleza tiene secretos increíbles que pueden revolucionar nuestra salud.”
+
+POR QUÉ:
+- wellness;
+- claim implícito;
+- cero evidencia;
+- cero decisión I+D.
+
+MEJOR:
+“Un resultado aislado no permite decidir que existe un producto o una solución reproducible.”
+
+Luego:
+repetibilidad → estadística → diseño experimental → implicación.
+
+===============================================================================
+89. BUEN EJEMPLO VS MAL EJEMPLO — INENERGY
+===============================================================================
+
+MALO:
+“Leading the sustainable energy revolution with innovative engineering solutions.”
+
+POR QUÉ:
+- intercambiable;
+- hype;
+- poco técnico.
+
+MEJOR:
+“Complex energy projects stall when engineering, regulation, safety and operations are treated as separate workstreams.”
+
+Luego:
+interfaces → approvals → redesign → technically defensible pathway.
+
+===============================================================================
+90. QA CLIENTE + FORMATO
+===============================================================================
+
+Una pieza debe pasar dos gates.
+
+GATE A — CLIENT
+¿Es JOC/Moka/INENERGY?
+
+GATE B — FORMAT
+¿Es realmente el formato seleccionado?
+
+Un contenido puede ser muy JOC pero no cumplir JOC Philosophical.
+
+No es suficiente.
+
+===============================================================================
+91. CRITERIO DE IMÁGENES GENERADAS
+===============================================================================
+
+Toda imagen generada debe revisarse por:
+
+- composición;
+- función;
+- marca;
+- anatomía;
+- plausibilidad;
+- texto;
+- logo;
+- continuidad;
+- relación con la unidad;
+- resolución;
+- artefactos.
+
+Una imagen generada no está aprobada porque “salió bien”.
+
+===============================================================================
+92. CRITERIO DE LOGOS
+===============================================================================
+
+Usar únicamente assets oficiales aprobados.
+
+No reconstruir logotipos por aproximación en contenido final.
+
+Para JOC, usar logo oficial JOCLOPEZM cuando corresponda.
+
+Para Moka, usar logo oficial pequeño y con aire según sistema visual.
+
+Para INENERGY, no introducir marcas ajenas o seals no autorizados.
+
+===============================================================================
+93. CRITERIO DE TEXTO DENTRO DE IMÁGENES
+===============================================================================
+
+Debe ser:
+
+- exacto;
+- legible;
+- jerárquico;
+- correcto ortográficamente;
+- alineado al formato.
+
+No publicar texto IA corrupto.
+
+===============================================================================
+94. CRITERIO DE SERIES
+===============================================================================
+
+Una serie necesita memoria.
+
+series_id debe permitir conservar:
+
+palette
+layout behavior
+visual motifs
+format version
+copy profile
+intro/outro behavior
+logo behavior
+
+Una nueva pieza no redefine la serie.
+
+===============================================================================
+95. CRITERIO DE CAMPAÑA
+===============================================================================
+
+Una campaña no es tag.
+
+Cada pieza puede tener rol:
+
+AWARENESS
+PROBLEM
+MECHANISM
+EVIDENCE
+OBJECTION
+DECISION
+CTA
+
+La campaña completa debe tener progresión.
+
+===============================================================================
+96. CRITERIO DE L1 / L2 / L3
+===============================================================================
+
+L1:
+contenido principal; mayor profundidad y producción.
+
+L2:
+extensión / derivados de calidad.
+
+L3:
+soporte / frecuencia / activación.
+
+L2 no debe degradarse a contenido genérico solo porque tiene menor costo.
+
+L3 tampoco debe convertirse en filler.
+
+===============================================================================
+97. CRITERIO DE CONTENT READY
+===============================================================================
+
+CONTENT READY:
+editorial aprobado.
+
+No significa:
+publicable.
+
+READY TO PUBLISH requiere:
+
+- asset final;
+- copy;
+- QA;
+- plataforma;
+- fecha cuando corresponda.
+
+===============================================================================
+98. CRITERIO DE PRODUCTION READINESS
+===============================================================================
+
+Una pieza de video no está production ready si solo tiene guion.
+
+Debe incluir lo necesario según formato:
+
+- grabación;
+- planos;
+- visual;
+- B-roll;
+- edit notes;
+- audio;
+- asset requirements.
+
+===============================================================================
+99. CRITERIO DE DELEGACIÓN
+===============================================================================
+
+Una tarea está bien definida si una persona responsable puede ejecutarla sin pedir al estratega que traduzca qué quiso decir.
+
+Recording Desk debe mostrar instrucciones de grabación.
+
+Visual Desk debe mostrar brief visual.
+
+Copy Desk debe mostrar contexto de copy.
+
+Editing Desk debe mostrar estructura de edición.
+
+===============================================================================
+100. CRITERIO DE DOCUMENTACIÓN
+===============================================================================
+
+ABRAXAS debe preservar no solo qué se decidió, sino por qué cuando el cambio sea relevante.
+
+History:
+
+version
+change
+reason
+source
+reviewer
+
+Esto convierte feedback en aprendizaje.
+
+===============================================================================
+101. v1.1.1 Y LOS OTROS CLIENTES
+===============================================================================
+
+La instancia operativa v1.1.1 será JOC-only para validar el Proof of System.
+
+Eso NO significa eliminar del conocimiento del proyecto:
+
+- Moka Bio;
+- INENERGY;
+- criterios universales ABRAXAS.
+
+Sus Quality Packs deben conservarse como Source of Truth para reintroducción posterior.
+
+La separación es:
+
+RUNTIME DE PRUEBA v1.1.1:
+JOC.
+
+KNOWLEDGE ARCHITECTURE:
+universal + client packs preservados.
+
+===============================================================================
+102. POR QUÉ ESTA SEPARACIÓN ES IMPORTANTE
+===============================================================================
+
+Si v1.1.1 elimina el conocimiento de otros clientes, al reintroducirlos parecerá que ABRAXAS “solo funciona para JOC”.
+
+Si v1.1.1 muestra todos los clientes, será más difícil saber si el sistema funciona operativamente.
+
+Solución:
+
+validar JOC en UI/runtime,
+conservar otros clientes en knowledge/source packs.
+
+===============================================================================
+103. MASTER QA DE CONTENIDO
+===============================================================================
+
+¿Existe una idea real?
+¿El hook crea interés legítimo?
+¿Existe hook-payoff?
+¿Cada unidad avanza?
+¿Hay profundidad?
+¿Hay especificidad?
+¿Evita AI slop?
+¿Suena al cliente?
+¿Cumple formato?
+¿Cumple plataforma?
+¿Copy añade?
+¿Visual tiene función?
+¿Fuentes/claims están seguros?
+¿Puede producirse?
+¿Tiene trazabilidad?
+¿Merece existir dentro del lote/campaña?
+
+===============================================================================
+104. MASTER QA DE IMAGEN
+===============================================================================
+
+¿Tiene función narrativa?
+¿La composición ayuda?
+¿Mantiene serie?
+¿Mantiene cliente?
+¿Paleta correcta?
+¿Texto correcto?
+¿Logo correcto?
+¿Plausible?
+¿Sin artefactos?
+¿Funciona a tamaño final?
+¿Podría confundirse con stock genérico?
+
+===============================================================================
+105. MASTER QA DE COPY
+===============================================================================
+
+¿Añade?
+¿Es específico?
+¿Suena al cliente?
+¿Está adaptado a plataforma?
+¿Evita filler?
+¿Evita repetir la pieza?
+¿CTA tiene función?
+¿Claims seguros?
+
+===============================================================================
+106. MASTER QA DE PROMPT
+===============================================================================
+
+¿Role específico?
+¿Objective específico?
+¿Contexto suficiente y relevante?
+¿Cliente correcto?
+¿Formato explícito?
+¿What it is?
+¿What it is not?
+¿Inputs?
+¿Structure?
+¿Evidence rules?
+¿Visual rules?
+¿Negatives?
+¿Output schema?
+¿Acceptance criteria?
+¿QA?
+¿Handoff?
+
+Si faltan varias de estas capas, el prompt no está listo.
+
+===============================================================================
+107. MASTER QA DE LOTE
+===============================================================================
+
+¿Ángulos distintos?
+¿Pilares equilibrados?
+¿Formatos adecuados?
+¿Sin canibalización?
+¿Campaña progresa?
+¿L1 suficientemente fuerte?
+¿L2 extiende en lugar de repetir?
+¿L3 apoya en lugar de rellenar?
+¿Cada pieza merece publicación?
+
+===============================================================================
+108. MASTER PRINCIPLE: QUALITY IS OBSERVABLE
+===============================================================================
+
+ABRAXAS no debe decirle a una IA:
+
+“hazlo bueno”.
+
+Debe convertir “bueno” en condiciones observables.
+
+Ejemplo:
+
+Para este cliente,
+para esta audiencia,
+con este formato,
+con esta idea,
+con esta estructura,
+con estas fuentes,
+con este visual,
+con estas restricciones,
+el output debe tener estos campos
+y pasar estos QA gates.
+
+Eso es criterio operacionalizado.
+
+===============================================================================
+109. PARA OTRA IA / NUEVO CHAT
+===============================================================================
+
+Si otra IA recibe este documento:
+
+NO debe tratar Quality como Tone of Voice solamente.
+
+NO debe hacer una plantilla universal y cambiar nombre/color por cliente.
+
+NO debe crear prompts solo con adjetivos.
+
+NO debe aceptar contenido gramaticalmente correcto como suficiente.
+
+NO debe inventar estructuras cliente-específicas si no existen.
+
+NO debe borrar anti-ejemplos.
+
+NO debe sacrificar fuente/evidencia para simplificar contenido.
+
+NO debe asumir que una imagen bonita cumple función.
+
+NO debe asumir que un copy es resumen.
+
+DEBE:
+
+- cargar criterio universal;
+- cargar Client Quality Pack;
+- cargar Format Quality Pack;
+- cargar Campaign Context;
+- respetar decisiones fijadas;
+- compilar prompts;
+- devolver output estructurado;
+- ejecutar QA;
+- registrar errores por categoría;
+- usar feedback para versionar formatos/prompts.
+
+===============================================================================
+110. SOURCE REFERENCES ACTUALES DEL PROYECTO
+===============================================================================
+
+JOC:
+- JOC_AGOSTO_2026_GRILLA_LISTA_EDITABLE.html
+- sistema JOC V5.7 y referencias aprobadas asociadas.
+
+MOKA BIO:
+- Moka_Bio_Dashboard_Biblioteca_Calendario_3_Lotes_v4_EDITABLE.html
+- manualvisual_mokabio.pdf
+- Ejemplos de diseños de contenido Moka Bio de referencia.pdf
+- MokaBio_EN_Investor_SyEx.pdf, usando sus claims solo cuando estén validados para publicación.
+
+INENERGY:
+- inenergy-actualizacion-contenidos.html
+- INENERGY Content Creation / Copy Toolkit cuando esté disponible en el package.
+
+ABRAXAS:
+- ABRAXAS_v1.1.1_DEFINICION_MAESTRA_PRODUCTO_Y_OPERACION.txt
+- Full Release / handoff actual.
+
+===============================================================================
+111. FRASE FINAL
+===============================================================================
+
+ABRAXAS no busca que la IA escriba como un humano genérico.
+
+Busca que el sistema conserve suficiente criterio para que cada salida tenga una razón, una estructura, una identidad y un estándar verificable.
+
+El objetivo final no es generar más.
+
+Es lograr que una mayor cantidad de trabajo pueda producirse sin que calidad, contexto y conocimiento del cliente desaparezcan a medida que escala la operación.
+
+===============================================================================
+END
+===============================================================================

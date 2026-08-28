@@ -1,0 +1,36 @@
+{
+  "sequence": 1,
+  "content_id": "MH02",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH02_B06",
+  "child_beat_ids": [
+    "MH02_B06"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:19:50.000",
+  "source_end": "00:19:59.000",
+  "timeline_in_seconds": 31.437,
+  "timeline_out_seconds": 40.437,
+  "timeline_in": "00:00:31.437",
+  "timeline_out": "00:00:40.437",
+  "duration_seconds": 9.0,
+  "text": "toda mi carrera de estudiante hasta como que la universidad cuando se empezó a poner un poco más difícil porque también trabajaba y estudiaba al mismo tiempo, yo soy ingeniero.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0230.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0230",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La selección explica una relación o mapa conceptual que merece lectura progresiva.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

@@ -1,0 +1,11 @@
+CONTENT: V01
+ROL: CORE
+FUENTE: 00:03:27.000 → 00:03:36.000
+TIMELINE: 00:00:36.000 → 00:00:45.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces cada vez que alguien me pregunta, porque siempre me preguntan exactamente lo mismo que me acabas de decir, como que cómo haces, que cómo te disfrutas estudiar.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0041.

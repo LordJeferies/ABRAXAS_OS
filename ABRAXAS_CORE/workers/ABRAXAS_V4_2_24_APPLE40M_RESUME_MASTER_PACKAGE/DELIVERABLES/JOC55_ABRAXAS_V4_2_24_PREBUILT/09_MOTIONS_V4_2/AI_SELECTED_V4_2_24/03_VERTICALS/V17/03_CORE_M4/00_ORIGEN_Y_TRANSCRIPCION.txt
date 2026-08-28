@@ -1,0 +1,11 @@
+CONTENT: V17
+ROL: CORE
+FUENTE: 01:08:41.421 → 01:08:46.079
+TIMELINE: 00:00:27.421 → 00:00:32.079
+DURACIÓN: 4.658s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, por ejemplo, el método. que es nuestro curso, dura 4
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0722.

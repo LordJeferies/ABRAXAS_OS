@@ -1,0 +1,11 @@
+CONTENT: MH04
+ROL: EDITORIAL
+FUENTE: 01:26:58.000 → 01:27:06.000
+TIMELINE: 00:07:26.995 → 00:07:34.995
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Sabes que decías que hay dos posibles caminos, Quien enfrenta las cosas y los supera y quien no, que ambas son válidas.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0912.

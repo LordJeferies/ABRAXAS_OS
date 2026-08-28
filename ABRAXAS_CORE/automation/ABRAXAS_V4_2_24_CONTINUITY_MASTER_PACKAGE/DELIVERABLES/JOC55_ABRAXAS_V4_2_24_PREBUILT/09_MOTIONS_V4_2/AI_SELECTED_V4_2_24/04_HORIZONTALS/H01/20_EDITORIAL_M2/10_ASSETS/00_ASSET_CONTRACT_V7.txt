@@ -1,0 +1,12 @@
+M2 · Progressive scene + exact integrated text
+
+Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3.
+
+ARCHIVOS OBLIGATORIOS
+- PLATE_01_CLEAN.png
+- PLATE_02_CLEAN.png
+- PLATE_03_CLEAN.png
+- PLATE_04_CLEAN.png
+- TEXT_01_EXACT.png
+- TEXT_02_EXACT.png
+- TEXT_03_EXACT.png

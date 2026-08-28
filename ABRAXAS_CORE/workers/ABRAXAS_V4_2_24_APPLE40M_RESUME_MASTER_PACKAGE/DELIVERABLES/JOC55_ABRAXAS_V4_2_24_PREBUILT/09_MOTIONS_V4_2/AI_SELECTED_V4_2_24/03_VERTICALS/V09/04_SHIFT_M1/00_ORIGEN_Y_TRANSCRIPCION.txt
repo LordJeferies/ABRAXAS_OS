@@ -1,0 +1,11 @@
+CONTENT: V09
+ROL: SHIFT
+FUENTE: 00:46:05.052 → 00:46:10.235
+TIMELINE: 00:00:35.052 → 00:00:40.235
+DURACIÓN: 5.183s
+
+TRANSCRIPCIÓN EXACTA
+pero el hecho de que sea complicado no significa que no lo puedas desglosar en
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0497.

@@ -1,0 +1,11 @@
+CONTENT: MV08
+ROL: HOOK
+FUENTE: 01:23:45.074 → 01:23:50.889
+TIMELINE: 00:00:06.355 → 00:00:12.170
+DURACIÓN: 5.815s
+
+TRANSCRIPCIÓN EXACTA
+porque decías que tu papá básicamente fue la inspiración y tu ancla para todo esto.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0885.

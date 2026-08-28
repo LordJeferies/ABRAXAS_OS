@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 00:54:13.000 → 00:54:20.000
+TIMELINE: 00:00:59.000 → 00:01:06.000
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, nuestro método es como si fueras básicamente Messi, Cristiano Ronaldo, pero del IMBD.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0578.

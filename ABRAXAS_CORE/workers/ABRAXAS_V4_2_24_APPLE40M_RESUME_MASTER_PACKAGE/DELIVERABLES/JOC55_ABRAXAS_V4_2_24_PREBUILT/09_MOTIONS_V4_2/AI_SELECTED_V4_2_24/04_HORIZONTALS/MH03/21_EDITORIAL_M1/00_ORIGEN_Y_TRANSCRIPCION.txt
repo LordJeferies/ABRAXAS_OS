@@ -1,0 +1,11 @@
+CONTENT: MH03
+ROL: EDITORIAL
+FUENTE: 00:45:17.000 → 00:45:25.000
+TIMELINE: 00:10:10.736 → 00:10:18.736
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Más allá del cliente ideal, ¿qué solución haste precisamente, más allá del hecho de ayudarlos a pasar el examen?
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0492.

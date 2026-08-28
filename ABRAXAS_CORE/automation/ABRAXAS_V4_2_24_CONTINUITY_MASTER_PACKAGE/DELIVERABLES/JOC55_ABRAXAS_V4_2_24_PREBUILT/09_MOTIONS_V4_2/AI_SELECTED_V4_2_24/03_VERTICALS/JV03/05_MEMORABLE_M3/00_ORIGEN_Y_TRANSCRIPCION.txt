@@ -1,0 +1,11 @@
+CONTENT: JV03
+ROL: MEMORABLE
+FUENTE: 00:20:40.000 → 00:20:46.000
+TIMELINE: 00:01:01.630 → 00:01:07.630
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces yo creo que hay mucho de entender y parte de la filosofía del éxito en todos los aspectos académico.
+
+MOTIVO
+Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0238.

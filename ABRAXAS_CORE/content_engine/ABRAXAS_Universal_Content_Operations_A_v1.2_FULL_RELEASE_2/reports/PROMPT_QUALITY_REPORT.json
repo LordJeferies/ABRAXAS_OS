@@ -1,0 +1,12 @@
+{
+  "version": "1.2",
+  "total": 932,
+  "minimum": 100,
+  "average": 100.0,
+  "median": 100.0,
+  "minWords": 324,
+  "failed": 0,
+  "failures": [],
+  "status": "PASS",
+  "rubric": "context + role + objective + is/is-not + output + QA + >=180 words"
+}

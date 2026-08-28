@@ -1,0 +1,33 @@
+:root {
+  color-scheme: dark;
+  --vav-bg-canvas: #08090c;
+  --vav-bg-chrome: rgba(13,14,18,.94);
+  --vav-surface-0: #0b0c10;
+  --vav-surface-1: #111218;
+  --vav-surface-2: #171820;
+  --vav-surface-3: #1d1f28;
+  --vav-surface-elevated: rgba(30,31,40,.96);
+  --vav-border-subtle: rgba(255,255,255,.07);
+  --vav-border-strong: rgba(255,255,255,.14);
+  --vav-text-primary: #f5f5f7;
+  --vav-text-secondary: #aaaab5;
+  --vav-text-tertiary: #747580;
+  --vav-text-disabled: #51515c;
+  --vav-accent: #7b61ff;
+  --vav-accent-hover: #8d78ff;
+  --vav-accent-muted: rgba(123,97,255,.14);
+  --vav-info: #43c9ff;
+  --vav-success: #4fd59a;
+  --vav-warning: #efb54a;
+  --vav-danger: #ff667a;
+  --vav-lane-caption: #916cff;
+  --vav-lane-media: #2cabc9;
+  --vav-lane-audio: #43c986;
+  --vav-lane-motion: #e87484;
+  --vav-radius-control: 9px;
+  --vav-radius-panel: 12px;
+  --vav-radius-floating: 16px;
+  --vav-toolbar-h: 58px;
+  --vav-rail-w: 68px;
+  --vav-inspector-w: 324px;
+}

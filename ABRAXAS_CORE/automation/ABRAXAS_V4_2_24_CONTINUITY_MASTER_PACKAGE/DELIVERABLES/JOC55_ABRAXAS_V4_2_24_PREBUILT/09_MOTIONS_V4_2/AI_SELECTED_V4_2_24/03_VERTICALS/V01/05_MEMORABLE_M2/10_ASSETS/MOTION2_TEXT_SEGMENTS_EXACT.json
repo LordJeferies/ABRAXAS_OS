@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "lo que hago independientemente y aprender a disfrutar el proceso porque en estas carreras tan",
+  "segments": [
+    "lo que hago independientemente y",
+    "aprender a disfrutar el proceso",
+    "porque en estas carreras tan"
+  ],
+  "reconstructed_text": "lo que hago independientemente y aprender a disfrutar el proceso porque en estas carreras tan"
+}

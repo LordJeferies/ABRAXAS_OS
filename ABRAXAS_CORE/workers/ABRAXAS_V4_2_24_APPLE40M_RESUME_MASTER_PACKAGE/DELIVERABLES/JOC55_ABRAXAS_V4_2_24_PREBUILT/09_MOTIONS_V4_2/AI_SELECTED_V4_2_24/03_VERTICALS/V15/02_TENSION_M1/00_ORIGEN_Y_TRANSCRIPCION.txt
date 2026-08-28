@@ -1,0 +1,11 @@
+CONTENT: V15
+ROL: TENSION
+FUENTE: 01:04:41.070 → 01:04:47.082
+TIMELINE: 00:00:18.070 → 00:00:24.082
+DURACIÓN: 6.012s
+
+TRANSCRIPCIÓN EXACTA
+todo ese tipo de cosas, pero realmente es muy orgánico, o
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0683.

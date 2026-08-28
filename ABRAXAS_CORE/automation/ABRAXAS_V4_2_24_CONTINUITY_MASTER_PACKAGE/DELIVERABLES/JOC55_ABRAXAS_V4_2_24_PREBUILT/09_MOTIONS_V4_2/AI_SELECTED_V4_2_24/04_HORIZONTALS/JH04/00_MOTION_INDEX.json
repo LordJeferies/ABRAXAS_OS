@@ -1,0 +1,168 @@
+{
+  "content_id": "JH04",
+  "type": "HORIZONTAL",
+  "program_preserved": true,
+  "selected_motion_count": 20,
+  "motions": [
+    {
+      "sequence": 1,
+      "folder": "01_EDITORIAL_M4",
+      "role": "EDITORIAL",
+      "motion": "M4",
+      "timeline_in": "00:00:28.528",
+      "timeline_out": "00:00:36.528"
+    },
+    {
+      "sequence": 2,
+      "folder": "02_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:00:37.556",
+      "timeline_out": "00:00:44.666"
+    },
+    {
+      "sequence": 3,
+      "folder": "03_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:01:34.069",
+      "timeline_out": "00:01:40.528"
+    },
+    {
+      "sequence": 4,
+      "folder": "04_EDITORIAL_M4",
+      "role": "EDITORIAL",
+      "motion": "M4",
+      "timeline_in": "00:01:40.528",
+      "timeline_out": "00:01:47.528"
+    },
+    {
+      "sequence": 5,
+      "folder": "05_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:02:02.964",
+      "timeline_out": "00:02:10.528"
+    },
+    {
+      "sequence": 6,
+      "folder": "06_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:02:36.118",
+      "timeline_out": "00:02:41.118"
+    },
+    {
+      "sequence": 7,
+      "folder": "07_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:03:06.118",
+      "timeline_out": "00:03:12.118"
+    },
+    {
+      "sequence": 8,
+      "folder": "08_EDITORIAL_M6",
+      "role": "EDITORIAL",
+      "motion": "M6",
+      "timeline_in": "00:03:36.118",
+      "timeline_out": "00:03:42.118"
+    },
+    {
+      "sequence": 9,
+      "folder": "09_EDITORIAL_M6",
+      "role": "EDITORIAL",
+      "motion": "M6",
+      "timeline_in": "00:04:27.532",
+      "timeline_out": "00:04:33.532"
+    },
+    {
+      "sequence": 10,
+      "folder": "10_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:04:33.532",
+      "timeline_out": "00:04:42.532"
+    },
+    {
+      "sequence": 11,
+      "folder": "11_EDITORIAL_M3",
+      "role": "EDITORIAL",
+      "motion": "M3",
+      "timeline_in": "00:05:11.956",
+      "timeline_out": "00:05:16.825"
+    },
+    {
+      "sequence": 12,
+      "folder": "12_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:05:49.946",
+      "timeline_out": "00:05:55.532"
+    },
+    {
+      "sequence": 13,
+      "folder": "13_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:06:01.085",
+      "timeline_out": "00:06:09.608"
+    },
+    {
+      "sequence": 14,
+      "folder": "14_EDITORIAL_M4",
+      "role": "EDITORIAL",
+      "motion": "M4",
+      "timeline_in": "00:06:19.608",
+      "timeline_out": "00:06:28.608"
+    },
+    {
+      "sequence": 15,
+      "folder": "15_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:07:20.966",
+      "timeline_out": "00:07:27.608"
+    },
+    {
+      "sequence": 16,
+      "folder": "16_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:07:27.608",
+      "timeline_out": "00:07:36.608"
+    },
+    {
+      "sequence": 17,
+      "folder": "17_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:08:01.886",
+      "timeline_out": "00:08:10.886"
+    },
+    {
+      "sequence": 18,
+      "folder": "18_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:08:43.683",
+      "timeline_out": "00:08:50.596"
+    },
+    {
+      "sequence": 19,
+      "folder": "19_EDITORIAL_M1",
+      "role": "EDITORIAL",
+      "motion": "M1",
+      "timeline_in": "00:09:03.438",
+      "timeline_out": "00:09:11.438"
+    },
+    {
+      "sequence": 20,
+      "folder": "20_EDITORIAL_M3",
+      "role": "EDITORIAL",
+      "motion": "M3",
+      "timeline_in": "00:09:11.438",
+      "timeline_out": "00:09:20.438"
+    }
+  ]
+}

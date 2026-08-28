@@ -1,0 +1,38 @@
+{
+  "sequence": 22,
+  "content_id": "MH04",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH04_B127",
+  "child_beat_ids": [
+    "MH04_B127"
+  ],
+  "speaker": "MIXED",
+  "source_start": "01:30:32.000",
+  "source_end": "01:30:39.000",
+  "timeline_in_seconds": 660.995,
+  "timeline_out_seconds": 667.995,
+  "timeline_in": "00:11:00.995",
+  "timeline_out": "00:11:07.995",
+  "duration_seconds": 7.0,
+  "text": "a esas personas que realmente tienen una historia buena. que, completamente a tu orden y de nuevo, thank you so much por contar.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0947.",
+  "semantic_score": 2.9,
+  "transcript_reference": "SRT_0947",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

@@ -1,0 +1,11 @@
+CONTENT: JH01
+ROL: EDITORIAL
+FUENTE: 00:10:03.432 → 00:10:12.000
+TIMELINE: 00:03:29.855 → 00:03:38.423
+DURACIÓN: 8.568s
+
+TRANSCRIPCIÓN EXACTA
+cada quien quiera hacer básicamente. Pero desde mi punto de vista de la salud, creo que actualmente y creo que por muchos años en adelante no sé cómo
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0115.

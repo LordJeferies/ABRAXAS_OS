@@ -1,0 +1,36 @@
+{
+  "sequence": 1,
+  "content_id": "JH04",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "JH04_B09",
+  "child_beat_ids": [
+    "JH04_B09"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:04:52.000",
+  "source_end": "01:05:00.000",
+  "timeline_in_seconds": 28.528,
+  "timeline_out_seconds": 36.528,
+  "timeline_in": "00:00:28.528",
+  "timeline_out": "00:00:36.528",
+  "duration_seconds": 8.0,
+  "text": "Todo el advertisement que hacemos y todo el crecimiento que hemos tenido completamente orgánico ha sido de vos en vos, recomendado por nuestros clientes.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0685.",
+  "semantic_score": 3.7,
+  "transcript_reference": "SRT_0685",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La selección explica una relación o mapa conceptual que merece lectura progresiva.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

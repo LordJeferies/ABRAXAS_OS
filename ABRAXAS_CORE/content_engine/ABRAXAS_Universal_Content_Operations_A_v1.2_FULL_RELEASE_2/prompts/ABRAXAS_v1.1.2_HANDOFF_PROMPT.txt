@@ -1,0 +1,51 @@
+ABRAXAS v1.1.2 · HANDOFF MAESTRO
+
+BASE CANÓNICA
+Esta versión evolucionó desde ABRAXAS v1.0 FULL RELEASE. No uses v1.1.1 defectuoso como base. El código fuente actual está en src/. El HTML standalone es un build.
+
+QUÉ ES ABRAXAS
+ABRAXAS es un Content Operating System. Convierte criterio editorial, visual, estratégico y operativo en infraestructura reproducible. La IA es un motor intercambiable; el producto real es el sistema de datos, reglas, formatos, prompts, tareas, assets, QA, calendario, historial y handoffs.
+
+CONTRATOS NO NEGOCIABLES
+- `content_id` es aggregate root estable.
+- No duplicar Content entre Library, Production, Calendar, Campaign o AI Results.
+- Un solo bootstrap al final de `app.js`.
+- LOCAL debe seguir funcionando con file:// sin CDN, backend ni secretos.
+- WEB puede usar HTTP(S)/PWA y crecer hacia backend seguro.
+- Dashboard es la representación operativa; Product Story es una representación secundaria del mismo estado.
+- El selector `Dashboard | Product Story` vive arriba a la derecha y persiste.
+- Home/Clients/Brand Intelligence/Roadmap pueden cambiar representación. He/Shim/Production/Assets/AI Results/Calendar siguen siendo workspaces operativos.
+- Liquid Glass se usa como capa funcional: navegación, toolbar, sidebar, popovers, sheets y utility windows. No glass-on-glass indiscriminado.
+- Las 41 técnicas se seleccionan por tarea; si una técnica solo decora, no se implementa.
+
+EL ARQUITECTO 2.1
+Debe ser guía total de aplicación, no chatbot genérico. Contexto mínimo: module + content_id + campaign + lifecycle + selection + pending + flow stage. Cada sugerencia declara razón, target y success condition. Debe responder rutas como:
+- idea/brief/campaña → He;
+- grabación/transcripción/podcast → Shim;
+- pieza existente → Library/Content Studio;
+- tarea pendiente → Production;
+- asset → Assets;
+- resultado externo → AI Results.
+
+SHIM 2.1
+Arquitectura:
+Transcripción → Shim Master Prompt → HTML de análisis tipo Moka v3 → revisión humana → CONFIRMADO → SHIM_CONFIRMED_MANIFEST.json → Terminal/FFmpeg o DaVinci Resolve.
+
+Estados: CANDIDATO / REVISADO / CONFIRMADO / DESCARTADO / NEEDS_FIX. Solo CONFIRMADO entra a automatización.
+
+El HTML resultante debe incluir clips cronológicos, hook/desarrollo/payoff, source fragments exactos, timestamps, scores, claims, blocks with potential, carousels confirmables, Content Studio 1×1, production layers y sección AUTOMATIZACIÓN.
+
+Manifest único: Terminal y DaVinci consumen la misma decisión editorial. SOURCE VIDEO READ ONLY.
+
+VIDEO PACKAGE
+Conservar Recording/source, B-roll, VFX/Omni, SFX, Music, Cover, Copies y START/MIDDLE/END references.
+
+CAROUSEL PACKAGE
+Carruseles nunca entran a FFmpeg. Van a Content Studio → visual/image → Assets → QA → Calendar. Cada slide conserva function/text/argument/visualDirection/source/promptWithText/promptWithoutText.
+
+VISUAL QUALITY
+No usar “premium/cinematic” como sustituto de especificación. Describir función, sujeto, composición, cámara/lente aparente, luz, materiales, microtextura, profundidad, safe areas, continuidad, timing y negativos. Evitar cheap-AI look, plastic skin, melted text/logos, hologramas genéricos y stock corporativo intercambiable.
+
+ROADMAP
+v1.1.2 = estabilización Product/UX/Frontend + Automation Bridge Foundation.
+Siguiente gate recomendado = usar el sistema con material real, especialmente Shim + JOC/podcast, clasificar errores y versionar prompts/formatos antes de añadir otra capa grande.

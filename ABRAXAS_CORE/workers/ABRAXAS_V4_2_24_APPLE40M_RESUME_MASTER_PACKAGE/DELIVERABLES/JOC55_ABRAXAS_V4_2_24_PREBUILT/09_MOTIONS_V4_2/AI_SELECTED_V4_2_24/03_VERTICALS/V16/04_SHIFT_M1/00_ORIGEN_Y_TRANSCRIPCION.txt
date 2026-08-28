@@ -1,0 +1,11 @@
+CONTENT: V16
+ROL: SHIFT
+FUENTE: 01:06:11.757 → 01:06:17.326
+TIMELINE: 00:00:41.757 → 00:00:47.326
+DURACIÓN: 5.569s
+
+TRANSCRIPCIÓN EXACTA
+Pero eso también te da una ventaja que es que, a pesar de que ya
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0696.

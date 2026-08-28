@@ -1,0 +1,11 @@
+CONTENT: V02
+ROL: TENSION
+FUENTE: 00:11:20.000 → 00:11:27.000
+TIMELINE: 00:00:21.000 → 00:00:28.000
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+Y la realidad es que en este momento, si estás en la universidad, es el momento en el que...
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0128.

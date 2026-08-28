@@ -1,0 +1,139 @@
+{
+  "package": "ABRAXAS_CONTENT_LAB_V3_1_VERIFIED",
+  "version": "3.1",
+  "status": "VERIFIED_WITH_INTENTIONAL_BLOCKERS",
+  "document_types": [
+    "INTRO_LAB_V3_1",
+    "CONTENT_ENGINE_V3_1"
+  ],
+  "hard_gates": {
+    "intro_seconds": [
+      50,
+      80
+    ],
+    "vertical_seconds": [
+      50,
+      90
+    ],
+    "horizontal_seconds": [
+      480,
+      720
+    ],
+    "production_beat_max_seconds": 9,
+    "intros": 6,
+    "voiceovers_per_intro": 3,
+    "voiceover_beats": 2
+  },
+  "intentional_blockers": [
+    "H03_TRIM_REQUIRED_1S",
+    "8_CLAIMS_VERIFY_SOURCE",
+    "23_INTRO_MICROTRIMS_REQUIRE_AUDIO"
+  ],
+  "files": [
+    {
+      "path": "00_START/ATTACHMENT_MAP.md",
+      "bytes": 1145,
+      "sha256": "0f5dd4ed1159506af346d7a3a26045d0f68cb2fb40ca4cd940e4157caa0cd82e"
+    },
+    {
+      "path": "00_START/AUDIT_REPORT_V3_1.md",
+      "bytes": 4586,
+      "sha256": "032471f2c3c73d7e05db4c1ee0bd59d61062e7199b3b9516d5a59e9a8a35bcbc"
+    },
+    {
+      "path": "00_START/START_HERE.md",
+      "bytes": 1878,
+      "sha256": "8dac2718aa5bb08983d7e59eea0ce4044c48686eacae82a7e4a78ad23fe5de0e"
+    },
+    {
+      "path": "01_SHARED_CORE/REFERENCE_RESEARCH.json",
+      "bytes": 10529,
+      "sha256": "800c649067ec726b77f157bd4156804eb051842f8cf51c7eecf4e2fab906c0db"
+    },
+    {
+      "path": "01_SHARED_CORE/SHARED_CORE.md",
+      "bytes": 8746,
+      "sha256": "63326266f6513a62f9a377bb7f03bd90a31eb43ec0f6d405bdb8dbd91a56c014"
+    },
+    {
+      "path": "02_INTRO_LAB/INTRO_LAB_CRITERION.md",
+      "bytes": 6830,
+      "sha256": "4452ad3214f2387f150b9a6f98ced6b56cba572d70574ef6b6fecf137444ac3a"
+    },
+    {
+      "path": "02_INTRO_LAB/PROMPT_NEW_CHAT_INTRO_LAB.txt",
+      "bytes": 8621,
+      "sha256": "84eb440105cf531d984caea1688f72926c564f4903bc8620c1164880632a1e50"
+    },
+    {
+      "path": "03_CONTENT_ENGINE/CONTENT_ENGINE_CRITERION.md",
+      "bytes": 4248,
+      "sha256": "ec8130a2f3796bdccd81599ca8cb66ccd2e8eae3a9abfa1219def5f3cece18ef"
+    },
+    {
+      "path": "03_CONTENT_ENGINE/PROMPT_NEW_CHAT_CONTENT_ENGINE.txt",
+      "bytes": 6847,
+      "sha256": "377e6fa99a03145c15bffc21594a19e45ca6d0527f788696ab43c2c335326f83"
+    },
+    {
+      "path": "04_AUTOMATION/AUTOMATION_HTML_DAVINCI.md",
+      "bytes": 7173,
+      "sha256": "69811163de5e9a02d03d126e2e6944cc24e6bd123e49e2dd8814020c2933f9ab"
+    },
+    {
+      "path": "04_AUTOMATION/HTML_BRIDGE_V3_1.py",
+      "bytes": 2022,
+      "sha256": "ef23b95e65b200c1dd54c88a2cc8814859580970ff97079166ad645e7b58d680"
+    },
+    {
+      "path": "04_AUTOMATION/HTML_CONTRACT.md",
+      "bytes": 1448,
+      "sha256": "e2a1a85a684046b639eef825899a648064d1bfb9c9fd35b86cf8c8132f95472d"
+    },
+    {
+      "path": "05_QA_TESTS/CONTEXT_ZERO_TEST_REPORT.md",
+      "bytes": 2029,
+      "sha256": "6646318a3a92a1ee6c1d62b42f6b2cc93177daf45356098a8f7a475896afa4b1"
+    },
+    {
+      "path": "05_QA_TESTS/GOLDEN_FIXTURES.json",
+      "bytes": 53870,
+      "sha256": "0e0d322a4e1466e448a9df557c3bd635c39fda448973ad259285d68667d66d98"
+    },
+    {
+      "path": "05_QA_TESTS/QA_CONTEXT_ZERO.md",
+      "bytes": 2855,
+      "sha256": "47c5ef5665aab9668e26e4bc39958ab4150c56924664642285e2bbed85358391"
+    },
+    {
+      "path": "05_QA_TESTS/RUN_SELFTEST.py",
+      "bytes": 8605,
+      "sha256": "fcc01ac230b0ea6a11b6f2937384bc4f30f3a0296ce50416fb6dce12d27e8628"
+    },
+    {
+      "path": "06_CHANGELOG/CHANGELOG.md",
+      "bytes": 3193,
+      "sha256": "fa439f854ff6c2d3cf433241973c6865d995b836db41784c84a942bcf5e5a896"
+    },
+    {
+      "path": "07_EXAMPLE_JOC55/JOC55_AMANDA_CONTENT_ENGINE_V3_1.html",
+      "bytes": 5026154,
+      "sha256": "669b9d52116e7134be118249f085452cf0cb97ccb338acb38eb9c354b6379e90"
+    },
+    {
+      "path": "07_EXAMPLE_JOC55/JOC55_AMANDA_INTRO_LAB_V3_1.html",
+      "bytes": 2205712,
+      "sha256": "aacd576280fef44427f62e03b55b24338b6065f84fdb7cdeb921cce0532ca433"
+    },
+    {
+      "path": "07_EXAMPLE_JOC55/JOC55_CONTENT_DATA_V3_1.json",
+      "bytes": 5604172,
+      "sha256": "146f413ce3e1e803c884ee02d13992f0d78cb8862ae29716849acb3363392f7b"
+    },
+    {
+      "path": "07_EXAMPLE_JOC55/JOC55_INTRO_DATA_V3_1.json",
+      "bytes": 2331300,
+      "sha256": "6213202e9367804e56519639b4905c32a79352200fa2ac86a4f81166969bdf83"
+    }
+  ]
+}

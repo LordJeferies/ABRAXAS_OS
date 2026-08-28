@@ -1,0 +1,38 @@
+{
+  "sequence": 2,
+  "content_id": "MV05",
+  "narrative_role": "TENSION",
+  "source_part_id": "MV05_P05",
+  "child_beat_ids": [
+    "MV05_B05"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:43:18.084",
+  "source_end": "00:43:25.167",
+  "timeline_in_seconds": 18.027,
+  "timeline_out_seconds": 25.11,
+  "timeline_in": "00:00:18.027",
+  "timeline_out": "00:00:25.110",
+  "duration_seconds": 7.083,
+  "text": "porque siento que viene de la verdadera necesidad porque tú la tuviste y tú estás asumiendo la.",
+  "reason": "Expone el problema, contradicción o costo narrativo. Referencia SRT_0472.",
+  "semantic_score": 8.1726,
+  "transcript_reference": "SRT_0472",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "La idea se aclara con observación documental y close-ups, sin sustituir el testimonio.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

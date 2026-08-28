@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 01:01:14.000 → 01:01:23.000
+TIMELINE: 00:08:00.000 → 00:08:09.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Y a partir de ahí damos una hora de esta asesoría en donde te damos como el paso a paso esglosado de todo lo que tienes que hacer dependiendo de lo que tú quieres hacer, básicamente.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0651.

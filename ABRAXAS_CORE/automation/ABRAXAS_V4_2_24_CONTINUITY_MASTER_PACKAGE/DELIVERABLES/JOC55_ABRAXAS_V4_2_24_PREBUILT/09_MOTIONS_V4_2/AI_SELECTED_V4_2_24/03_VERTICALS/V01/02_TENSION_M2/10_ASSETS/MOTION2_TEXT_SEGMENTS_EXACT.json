@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "infeliz completamente y todo el tiempo te quejas y todo el tiempo estás diciendo por qué hice esto, por qué no hice esto.",
+  "segments": [
+    "infeliz completamente y todo el tiempo te quejas",
+    "y todo el tiempo estás diciendo por",
+    "qué hice esto, por qué no hice esto."
+  ],
+  "reconstructed_text": "infeliz completamente y todo el tiempo te quejas y todo el tiempo estás diciendo por qué hice esto, por qué no hice esto."
+}

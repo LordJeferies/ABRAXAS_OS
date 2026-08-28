@@ -1,0 +1,38 @@
+{
+  "sequence": 14,
+  "content_id": "H01",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H01_B78",
+  "child_beat_ids": [
+    "H01_B78"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:22:09.000",
+  "source_end": "00:22:18.000",
+  "timeline_in_seconds": 437.0,
+  "timeline_out_seconds": 446.0,
+  "timeline_in": "00:07:17.000",
+  "timeline_out": "00:07:26.000",
+  "duration_seconds": 9.0,
+  "text": "bien sea o el dueño de tu propia clínica, tu propio negocio o tienes socios con los que trabajas o trabajas en una clínica, pero en la mayoría del tiempo tú eres tu propio jefe,",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0252.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0252",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La selección funciona como tesis, contradicción o payoff editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

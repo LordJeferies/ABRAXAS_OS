@@ -1,0 +1,11 @@
+CONTENT: JV07
+ROL: TENSION
+FUENTE: 01:18:18.000 → 01:18:27.000
+TIMELINE: 00:00:15.441 → 00:00:24.441
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+De hecho, ningún inversionista te va a dar dinero simplemente por el hecho de que tu compañía vale. El dinero es para un propósito. Es como que, ok, yo te voy a dar este dinero, pero lo vas a usar en qué?
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0827.

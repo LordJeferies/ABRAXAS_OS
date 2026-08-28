@@ -1,0 +1,38 @@
+{
+  "sequence": 6,
+  "content_id": "V10",
+  "narrative_role": "CLOSE",
+  "source_part_id": "V10_P13",
+  "child_beat_ids": [
+    "V10_B15"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:54:42.000",
+  "source_end": "00:54:49.000",
+  "timeline_in_seconds": 74.0,
+  "timeline_out_seconds": 81.0,
+  "timeline_in": "00:01:14.000",
+  "timeline_out": "00:01:21.000",
+  "duration_seconds": 7.0,
+  "text": "No por la falta de conocimiento, sino por la falta de una estrategia y de un método que te lleve a pasar el examen, básicamente.",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0582.",
+  "semantic_score": 11.0744,
+  "transcript_reference": "SRT_0582",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "La idea se aclara con observación documental y close-ups, sin sustituir el testimonio.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

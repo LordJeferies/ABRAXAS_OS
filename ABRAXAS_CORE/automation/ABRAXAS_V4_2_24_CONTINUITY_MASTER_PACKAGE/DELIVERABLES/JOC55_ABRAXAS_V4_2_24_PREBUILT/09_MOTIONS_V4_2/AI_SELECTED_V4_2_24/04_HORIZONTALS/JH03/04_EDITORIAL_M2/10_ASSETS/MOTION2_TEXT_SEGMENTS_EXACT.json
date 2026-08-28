@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "básicamente estás inculcando un verdadero sentido de comunidad, me parece genial porque aparte es lo",
+  "segments": [
+    "básicamente estás inculcando un verdadero",
+    "sentido de comunidad, me parece",
+    "genial porque aparte es lo"
+  ],
+  "reconstructed_text": "básicamente estás inculcando un verdadero sentido de comunidad, me parece genial porque aparte es lo"
+}

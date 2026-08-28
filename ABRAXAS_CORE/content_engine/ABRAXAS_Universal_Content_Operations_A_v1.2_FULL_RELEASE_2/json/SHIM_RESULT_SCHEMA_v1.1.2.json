@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.1.2",
+  "required": [
+    "editable_html",
+    "master_json",
+    "terminalPackage",
+    "davinciPackage"
+  ],
+  "master_json_keys": [
+    "requestMeta",
+    "candidates",
+    "carousels",
+    "discardedCandidates",
+    "qualityGate",
+    "calendarSuggestion",
+    "automationHandoff"
+  ],
+  "automationHandoff_keys": [
+    "terminalPackage",
+    "davinciPackage"
+  ],
+  "quality_layers": [
+    "recording_source",
+    "broll",
+    "vfx_omni",
+    "sfx",
+    "music",
+    "cover",
+    "copies",
+    "start_middle_end_references",
+    "prompt_with_text",
+    "prompt_without_text"
+  ]
+}

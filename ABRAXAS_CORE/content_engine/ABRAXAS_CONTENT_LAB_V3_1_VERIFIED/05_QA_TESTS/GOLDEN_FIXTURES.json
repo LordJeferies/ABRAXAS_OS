@@ -1,0 +1,284 @@
+{
+  "schema_version": "abraxas.context-zero-golden.v3.1",
+  "purpose": "Examples of compliant outputs when no chat history is available.",
+  "scenarios": [
+    {
+      "id": "INTRO_NEW_CHAT",
+      "attachments": [
+        "SHARED_CORE.md",
+        "INTRO_LAB_CRITERION.md",
+        "PROMPT_NEW_CHAT_INTRO_LAB.txt",
+        "transcript_or_content_review.html",
+        "client_reference"
+      ],
+      "user_request": "Genera los intros.",
+      "must_infer_from_files_not_memory": [
+        "50–80 s",
+        "6 routes",
+        "3 guest-only + 3 mixed",
+        "beat <=9 s",
+        "3 VO x 2 beats",
+        "VO xor Source Replacement",
+        "START/MIDDLE/END with/no text"
+      ],
+      "golden_output": {
+        "id": "INTRO_M03",
+        "route_class": "MIXED_HOST_GUEST",
+        "title": "El capital no es el trofeo",
+        "runtime_recommended_seconds": 55.55,
+        "first_source_beat": {
+          "beat_id": "INTRO_M03_SRC_01",
+          "speaker": "Amanda Vicari",
+          "narrative_function": "HARD_HOOK",
+          "text": "Nunca hemos tenido levantamiento de capital y hasta el momento no lo hemos necesitado.",
+          "planned_seconds": 4.0,
+          "kind": "EXACT_CUE"
+        },
+        "vo_a": {
+          "id": "VO_A",
+          "beat_count": 2,
+          "texts": [
+            "Bootstrapping y levantar capital no son bandos. Son decisiones distintas sobre control, velocidad y recursos.",
+            "Amanda demuestra que pueden crecer autosuficientes; JOC añade el filtro: dinero externo solo tiene sentido si ya sabes para qué entra."
+          ]
+        },
+        "close": {
+          "type": "DECLARATIVE_PUNCH",
+          "text": "El dinero es para un propósito.",
+          "logic": "La línea más corta paga todo el debate: dinero como herramienta, no validación."
+        }
+      }
+    },
+    {
+      "id": "VERTICAL_NEW_CHAT",
+      "attachments": [
+        "SHARED_CORE.md",
+        "CONTENT_ENGINE_CRITERION.md",
+        "PROMPT_NEW_CHAT_CONTENT_ENGINE.txt",
+        "approved_manifest.json"
+      ],
+      "user_request": "Rehaz los verticales con VFX.",
+      "must_infer_from_files_not_memory": [
+        "50–90 s",
+        "semantic beats <=9 s",
+        "3–4 actionable visual opportunities",
+        "preserve source subtitles",
+        "legacy not overwritten"
+      ],
+      "golden_output": {
+        "id": "MV03",
+        "title": "Dar información gratis puede aumentar autoridad y confianza",
+        "visual_count": 4,
+        "example_treatment": {
+          "treatment_family": "SAAS_PRODUCT_MOTION",
+          "logic": "Visualizar cómo una pieza de conocimiento útil genera nuevas preguntas y confianza, sin UI de marca falsa.",
+          "spoken_context": "El hecho de que tú compartas la información demuestra autoridad, demuestra conocimiento,",
+          "duration_seconds": 4.44,
+          "scene": "Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza.",
+          "keyword": "INFORMACIÓN",
+          "states": {
+            "START": {
+              "description": "START: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza.",
+              "prompt_no_text": "ABRAXAS V3.1 · SAAS_PRODUCT_MOTION. Crear una imagen de referencia START para un beat de máximo 9 segundos. Contexto hablado: “El hecho de que tú compartas la información demuestra autoridad, demuestra conocimiento,”. Propósito: acompañar y aclarar la idea, no decorar. Formato 9:16 vertical social video. Escena: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza. estado inicial contenido; el motivo apenas empieza a entrar y deja claro de dónde viene el movimiento. Composición editorial premium: una idea dominante, foreground/midground/background claros, safe area de subtítulos protegida en el tercio inferior, sin cubrir rostro/manos ni captions existentes. Cámara/lente acordes a la escena: documental 35–50 mm para personas, 50–85 mm para objetos, macro 90–120 mm si el objeto requiere detalle; profundidad de campo físicamente plausible. Luz motivada con key direccional suave, fill controlado, highlight rolloff natural y contact shadows reales. Materiales con microtextura creíble: papel con fibra/bordes, vidrio con grosor/reflexión/refracción, metal con roughness real, piel sin acabado plástico. Identidad JOC dominante: vino #A91616 y #65171C, charcoal #111111, blanco roto #F7F3EC, con colores de soporte solo si armonizan y tienen función. No generar ninguna palabra, letra, número legible, caption, label ni UI text. Movimiento implícito suave, continuo y físicamente coherente con el estado anterior/siguiente. Evitar: stock corporativo genérico, HUD sci-fi, hologramas gratuitos, neon aleatorio, logos inventados, UI falsa de marcas, manos deformes, objetos flotantes sin razón, reflejos imposibles, texto basura, subtítulos regenerados, strike-through sobre captions, exceso de sharpen, estética plástica. Calidad publicitaria/cinematográfica 2026, nueva composición original, no copiar layout de Vox/DOAC.",
+              "prompt_with_text": "ABRAXAS V3.1 · SAAS_PRODUCT_MOTION. Crear una imagen de referencia START para un beat de máximo 9 segundos. Contexto hablado: “El hecho de que tú compartas la información demuestra autoridad, demuestra conocimiento,”. Propósito: acompañar y aclarar la idea, no decorar. Formato 9:16 vertical social video. Escena: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza. estado inicial contenido; el motivo apenas empieza a entrar y deja claro de dónde viene el movimiento. Composición editorial premium: una idea dominante, foreground/midground/background claros, safe area de subtítulos protegida en el tercio inferior, sin cubrir rostro/manos ni captions existentes. Cámara/lente acordes a la escena: documental 35–50 mm para personas, 50–85 mm para objetos, macro 90–120 mm si el objeto requiere detalle; profundidad de campo físicamente plausible. Luz motivada con key direccional suave, fill controlado, highlight rolloff natural y contact shadows reales. Materiales con microtextura creíble: papel con fibra/bordes, vidrio con grosor/reflexión/refracción, metal con roughness real, piel sin acabado plástico. Identidad JOC dominante: vino #A91616 y #65171C, charcoal #111111, blanco roto #F7F3EC, con colores de soporte solo si armonizan y tienen función. Incluir únicamente el texto editorial exacto “INFORMACIÓN”, grande y legible, como capa ambiental separada de subtítulos. Movimiento implícito suave, continuo y físicamente coherente con el estado anterior/siguiente. Evitar: stock corporativo genérico, HUD sci-fi, hologramas gratuitos, neon aleatorio, logos inventados, UI falsa de marcas, manos deformes, objetos flotantes sin razón, reflejos imposibles, texto basura, subtítulos regenerados, strike-through sobre captions, exceso de sharpen, estética plástica. Calidad publicitaria/cinematográfica 2026, nueva composición original, no copiar layout de Vox/DOAC."
+            },
+            "MIDDLE": {
+              "description": "MIDDLE: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza.",
+              "prompt_no_text": "ABRAXAS V3.1 · SAAS_PRODUCT_MOTION. Crear una imagen de referencia MIDDLE para un beat de máximo 9 segundos. Contexto hablado: “El hecho de que tú compartas la información demuestra autoridad, demuestra conocimiento,”. Propósito: acompañar y aclarar la idea, no decorar. Formato 9:16 vertical social video. Escena: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza. estado de máxima actividad legible; la relación visual está completamente formada sin saturar el cuadro. Composición editorial premium: una idea dominante, foreground/midground/background claros, safe area de subtítulos protegida en el tercio inferior, sin cubrir rostro/manos ni captions existentes. Cámara/lente acordes a la escena: documental 35–50 mm para personas, 50–85 mm para objetos, macro 90–120 mm si el objeto requiere detalle; profundidad de campo físicamente plausible. Luz motivada con key direccional suave, fill controlado, highlight rolloff natural y contact shadows reales. Materiales con microtextura creíble: papel con fibra/bordes, vidrio con grosor/reflexión/refracción, metal con roughness real, piel sin acabado plástico. Identidad JOC dominante: vino #A91616 y #65171C, charcoal #111111, blanco roto #F7F3EC, con colores de soporte solo si armonizan y tienen función. No generar ninguna palabra, letra, número legible, caption, label ni UI text. Movimiento implícito suave, continuo y físicamente coherente con el estado anterior/siguiente. Evitar: stock corporativo genérico, HUD sci-fi, hologramas gratuitos, neon aleatorio, logos inventados, UI falsa de marcas, manos deformes, objetos flotantes sin razón, reflejos imposibles, texto basura, subtítulos regenerados, strike-through sobre captions, exceso de sharpen, estética plástica. Calidad publicitaria/cinematográfica 2026, nueva composición original, no copiar layout de Vox/DOAC.",
+              "prompt_with_text": "ABRAXAS V3.1 · SAAS_PRODUCT_MOTION. Crear una imagen de referencia MIDDLE para un beat de máximo 9 segundos. Contexto hablado: “El hecho de que tú compartas la información demuestra autoridad, demuestra conocimiento,”. Propósito: acompañar y aclarar la idea, no decorar. Formato 9:16 vertical social video. Escena: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza. estado de máxima actividad legible; la relación visual está completamente formada sin saturar el cuadro. Composición editorial premium: una idea dominante, foreground/midground/background claros, safe area de subtítulos protegida en el tercio inferior, sin cubrir rostro/manos ni captions existentes. Cámara/lente acordes a la escena: documental 35–50 mm para personas, 50–85 mm para objetos, macro 90–120 mm si el objeto requiere detalle; profundidad de campo físicamente plausible. Luz motivada con key direccional suave, fill controlado, highlight rolloff natural y contact shadows reales. Materiales con microtextura creíble: papel con fibra/bordes, vidrio con grosor/reflexión/refracción, metal con roughness real, piel sin acabado plástico. Identidad JOC dominante: vino #A91616 y #65171C, charcoal #111111, blanco roto #F7F3EC, con colores de soporte solo si armonizan y tienen función. Incluir únicamente el texto editorial exacto “INFORMACIÓN”, grande y legible, como capa ambiental separada de subtítulos. Movimiento implícito suave, continuo y físicamente coherente con el estado anterior/siguiente. Evitar: stock corporativo genérico, HUD sci-fi, hologramas gratuitos, neon aleatorio, logos inventados, UI falsa de marcas, manos deformes, objetos flotantes sin razón, reflejos imposibles, texto basura, subtítulos regenerados, strike-through sobre captions, exceso de sharpen, estética plástica. Calidad publicitaria/cinematográfica 2026, nueva composición original, no copiar layout de Vox/DOAC."
+            },
+            "END": {
+              "description": "END: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza.",
+              "prompt_no_text": "ABRAXAS V3.1 · SAAS_PRODUCT_MOTION. Crear una imagen de referencia END para un beat de máximo 9 segundos. Contexto hablado: “El hecho de que tú compartas la información demuestra autoridad, demuestra conocimiento,”. Propósito: acompañar y aclarar la idea, no decorar. Formato 9:16 vertical social video. Escena: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza. estado de salida/resolución; los elementos se retraen, se ordenan o desaparecen dejando una composición limpia. Composición editorial premium: una idea dominante, foreground/midground/background claros, safe area de subtítulos protegida en el tercio inferior, sin cubrir rostro/manos ni captions existentes. Cámara/lente acordes a la escena: documental 35–50 mm para personas, 50–85 mm para objetos, macro 90–120 mm si el objeto requiere detalle; profundidad de campo físicamente plausible. Luz motivada con key direccional suave, fill controlado, highlight rolloff natural y contact shadows reales. Materiales con microtextura creíble: papel con fibra/bordes, vidrio con grosor/reflexión/refracción, metal con roughness real, piel sin acabado plástico. Identidad JOC dominante: vino #A91616 y #65171C, charcoal #111111, blanco roto #F7F3EC, con colores de soporte solo si armonizan y tienen función. No generar ninguna palabra, letra, número legible, caption, label ni UI text. Movimiento implícito suave, continuo y físicamente coherente con el estado anterior/siguiente. Evitar: stock corporativo genérico, HUD sci-fi, hologramas gratuitos, neon aleatorio, logos inventados, UI falsa de marcas, manos deformes, objetos flotantes sin razón, reflejos imposibles, texto basura, subtítulos regenerados, strike-through sobre captions, exceso de sharpen, estética plástica. Calidad publicitaria/cinematográfica 2026, nueva composición original, no copiar layout de Vox/DOAC.",
+              "prompt_with_text": "ABRAXAS V3.1 · SAAS_PRODUCT_MOTION. Crear una imagen de referencia END para un beat de máximo 9 segundos. Contexto hablado: “El hecho de que tú compartas la información demuestra autoridad, demuestra conocimiento,”. Propósito: acompañar y aclarar la idea, no decorar. Formato 9:16 vertical social video. Escena: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza. estado de salida/resolución; los elementos se retraen, se ordenan o desaparecen dejando una composición limpia. Composición editorial premium: una idea dominante, foreground/midground/background claros, safe area de subtítulos protegida en el tercio inferior, sin cubrir rostro/manos ni captions existentes. Cámara/lente acordes a la escena: documental 35–50 mm para personas, 50–85 mm para objetos, macro 90–120 mm si el objeto requiere detalle; profundidad de campo físicamente plausible. Luz motivada con key direccional suave, fill controlado, highlight rolloff natural y contact shadows reales. Materiales con microtextura creíble: papel con fibra/bordes, vidrio con grosor/reflexión/refracción, metal con roughness real, piel sin acabado plástico. Identidad JOC dominante: vino #A91616 y #65171C, charcoal #111111, blanco roto #F7F3EC, con colores de soporte solo si armonizan y tienen función. Incluir únicamente el texto editorial exacto “INFORMACIÓN”, grande y legible, como capa ambiental separada de subtítulos. Movimiento implícito suave, continuo y físicamente coherente con el estado anterior/siguiente. Evitar: stock corporativo genérico, HUD sci-fi, hologramas gratuitos, neon aleatorio, logos inventados, UI falsa de marcas, manos deformes, objetos flotantes sin razón, reflejos imposibles, texto basura, subtítulos regenerados, strike-through sobre captions, exceso de sharpen, estética plástica. Calidad publicitaria/cinematográfica 2026, nueva composición original, no copiar layout de Vox/DOAC."
+            }
+          },
+          "animation_prompt_no_text": "Animar durante 6–9 segundos la misma escena definida por START/MIDDLE/END. SAAS_PRODUCT_MOTION. Contexto hablado: “El hecho de que tú compartas la información demuestra autoridad, demuestra conocimiento,”. Formato 9:16. Escena/acción: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza. Entrada suave con anticipación mínima; aceleración natural; pico visual en MIDDLE; desaceleración y settle limpio en END. Usar easing orgánico, follow-through solo donde el material lo justifique, parallax moderado y cámara estable o movimiento motivado. Ningún salto de identidad, lente, iluminación, escala o material entre frames. Sin texto legible generado. Subtítulos originales son intocables y deben conservarse como capa superior si aparecen. Sonido/VFX no forman parte de la generación salvo que se solicite explícitamente. Evitar floaty motion, morphing arbitrario, manos que cambian, UI deformada, texto basura, hologramas, zooms repetidos, whoosh visual genérico. Movimiento premium y coherente.",
+          "animation_prompt_with_text": "Animar durante 6–9 segundos la misma escena definida por START/MIDDLE/END. SAAS_PRODUCT_MOTION. Contexto hablado: “El hecho de que tú compartas la información demuestra autoridad, demuestra conocimiento,”. Formato 9:16. Escena/acción: Tarjetas editoriales abstractas de conocimiento se conectan a nodos de pregunta/confianza. Entrada suave con anticipación mínima; aceleración natural; pico visual en MIDDLE; desaceleración y settle limpio en END. Usar easing orgánico, follow-through solo donde el material lo justifique, parallax moderado y cámara estable o movimiento motivado. Ningún salto de identidad, lente, iluminación, escala o material entre frames. Usar únicamente “INFORMACIÓN” como texto editorial ambiental; no generar otras palabras ni captions. Subtítulos originales son intocables y deben conservarse como capa superior si aparecen. Sonido/VFX no forman parte de la generación salvo que se solicite explícitamente. Evitar floaty motion, morphing arbitrario, manos que cambian, UI deformada, texto basura, hologramas, zooms repetidos, whoosh visual genérico. Movimiento premium y coherente.",
+          "subtitle_policy": "Si existen subtítulos del source, preservar texto, tipografía, color, posición y timing; el tratamiento vive detrás/lateral o se compone antes de la capa de captions.",
+          "why": "La representación vuelve visible el mecanismo/acción de la frase sin sustituir su significado.",
+          "negative_constraints": [
+            "no fake captions",
+            "no random holograms",
+            "no malformed anatomy",
+            "no invented metrics",
+            "no brand cloning"
+          ]
+        }
+      }
+    },
+    {
+      "id": "HORIZONTAL_NEW_CHAT",
+      "attachments": [
+        "SHARED_CORE.md",
+        "CONTENT_ENGINE_CRITERION.md",
+        "approved_manifest.json"
+      ],
+      "user_request": "Planifica B-roll del horizontal.",
+      "must_infer_from_files_not_memory": [
+        "8–12 min",
+        "~1 useful <=9 s treatment per assembled minute",
+        "not exact minute markers",
+        "source truth"
+      ],
+      "golden_output": {
+        "id": "JH04",
+        "duration_seconds": 589.237,
+        "treatment_count": 10
+      }
+    },
+    {
+      "id": "CAROUSEL_NEW_CHAT",
+      "attachments": [
+        "SHARED_CORE.md",
+        "CONTENT_ENGINE_CRITERION.md",
+        "episode_source.json"
+      ],
+      "user_request": "Genera los carruseles.",
+      "must_infer_from_files_not_memory": [
+        "pain + context cover",
+        "source-derived tips only",
+        "prompt with text + no text",
+        "highlight distribution 2/2/2"
+      ],
+      "golden_output": {
+        "principal": {
+          "id": "C04",
+          "type": "PRINCIPAL",
+          "title": "Muchos buscan una idea de negocio antes de entender un problema de verdad.",
+          "thesis": "El episodio muestra una secuencia más defendible: problema vivido → audiencia → señal → timing → oportunidad.",
+          "source": "00:35:22–00:44:23",
+          "editorial_mode": "ANALYSIS",
+          "slides": [
+            {
+              "slide": 1,
+              "function": "PAIN_HOOK",
+              "headline": "Buscar “la idea” primero puede hacerte ignorar la señal real",
+              "body": "Amanda no empezó con un pitch. Empezó resolviendo un problema que ella misma estaba viviendo.",
+              "visual_idea": "Mesa con pitch deck vacío y al lado evidencia del problema real.",
+              "source_mode": "PARAPHRASE_TRACEABLE",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 1 de C04. Lienzo 4:5, 1080x1350. Función narrativa: PAIN_HOOK. Idea visual: Mesa con pitch deck vacío y al lado evidencia del problema real. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 1 de C04. Lienzo 4:5, 1080x1350. Función narrativa: PAIN_HOOK. Idea visual: Mesa con pitch deck vacío y al lado evidencia del problema real. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “Buscar “la idea” primero puede hacerte ignorar la señal real”; supporting copy “Amanda no empezó con un pitch. Empezó resolviendo un problema que ella misma estaba viviendo.”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            },
+            {
+              "slide": 2,
+              "function": "CONTEXT",
+              "headline": "Primero fue una necesidad personal",
+              "body": "La información de reválida era contradictoria y abrumadora. Ella empezó a desglosarla para sí misma.",
+              "visual_idea": "Documentos desordenados se convierten en una guía ordenada.",
+              "source_mode": "PARAPHRASE_TRACEABLE",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 2 de C04. Lienzo 4:5, 1080x1350. Función narrativa: CONTEXT. Idea visual: Documentos desordenados se convierten en una guía ordenada. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 2 de C04. Lienzo 4:5, 1080x1350. Función narrativa: CONTEXT. Idea visual: Documentos desordenados se convierten en una guía ordenada. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “Primero fue una necesidad personal”; supporting copy “La información de reválida era contradictoria y abrumadora. Ella empezó a desglosarla para sí misma.”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            },
+            {
+              "slide": 3,
+              "function": "SIGNAL",
+              "headline": "Después apareció una audiencia con el mismo problema",
+              "body": "Personas que la seguían expresaban el mismo sentimiento y necesidad.",
+              "visual_idea": "Nodos anónimos repiten el mismo patrón sin métricas inventadas.",
+              "source_mode": "PARAPHRASE_TRACEABLE",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 3 de C04. Lienzo 4:5, 1080x1350. Función narrativa: SIGNAL. Idea visual: Nodos anónimos repiten el mismo patrón sin métricas inventadas. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 3 de C04. Lienzo 4:5, 1080x1350. Función narrativa: SIGNAL. Idea visual: Nodos anónimos repiten el mismo patrón sin métricas inventadas. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “Después apareció una audiencia con el mismo problema”; supporting copy “Personas que la seguían expresaban el mismo sentimiento y necesidad.”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            },
+            {
+              "slide": 4,
+              "function": "MECHANISM",
+              "headline": "El cambio de examen añadió timing",
+              "body": "Después de años con el mismo esquema, el examen cambió justo cuando ella ya tenía experiencia y audiencia.",
+              "visual_idea": "Línea temporal estable cambia de estado en el presente.",
+              "source_mode": "PARAPHRASE_TRACEABLE",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 4 de C04. Lienzo 4:5, 1080x1350. Función narrativa: MECHANISM. Idea visual: Línea temporal estable cambia de estado en el presente. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 4 de C04. Lienzo 4:5, 1080x1350. Función narrativa: MECHANISM. Idea visual: Línea temporal estable cambia de estado en el presente. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “El cambio de examen añadió timing”; supporting copy “Después de años con el mismo esquema, el examen cambió justo cuando ella ya tenía experiencia y audiencia.”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            },
+            {
+              "slide": 5,
+              "function": "TIP",
+              "headline": "Criterio · Mapea problema, señal y ventaja antes del producto",
+              "body": "Vivir el problema no garantiza un negocio; reduce distancia con el cliente y puede revelar una ventaja difícil de fabricar.",
+              "visual_idea": "Diagrama problema → audiencia → timing → ventaja con PRODUCTO aún vacío.",
+              "source_mode": "PARAPHRASE_TRACEABLE",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 5 de C04. Lienzo 4:5, 1080x1350. Función narrativa: TIP. Idea visual: Diagrama problema → audiencia → timing → ventaja con PRODUCTO aún vacío. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 5 de C04. Lienzo 4:5, 1080x1350. Función narrativa: TIP. Idea visual: Diagrama problema → audiencia → timing → ventaja con PRODUCTO aún vacío. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “Criterio · Mapea problema, señal y ventaja antes del producto”; supporting copy “Vivir el problema no garantiza un negocio; reduce distancia con el cliente y puede revelar una ventaja difícil de fabricar.”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            },
+            {
+              "slide": 6,
+              "function": "PUNCH",
+              "headline": "La oportunidad se volvió visible antes de saber cómo monetizarla",
+              "body": "Eso es más interesante que fingir que el producto apareció completo desde el primer día.",
+              "visual_idea": "Rostro/source con nodos convergiendo en una interrogación, no en un producto.",
+              "source_mode": "PARAPHRASE_TRACEABLE",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 6 de C04. Lienzo 4:5, 1080x1350. Función narrativa: PUNCH. Idea visual: Rostro/source con nodos convergiendo en una interrogación, no en un producto. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 6 de C04. Lienzo 4:5, 1080x1350. Función narrativa: PUNCH. Idea visual: Rostro/source con nodos convergiendo en una interrogación, no en un producto. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “La oportunidad se volvió visible antes de saber cómo monetizarla”; supporting copy “Eso es más interesante que fingir que el producto apareció completo desde el primer día.”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            }
+          ],
+          "copy": "Muchos buscan una idea de negocio antes de entender un problema de verdad.\n\nEl episodio muestra una secuencia más defendible: problema vivido → audiencia → señal → timing → oportunidad.\n\nCarrusel basado en el episodio de JOC con Amanda Vicari. El foco no es resumir la conversación, sino convertirla en un criterio aplicable."
+        },
+        "highlight": {
+          "id": "HCL_MIXED_01",
+          "type": "HIGHLIGHT",
+          "speaker_mode": "MIXED",
+          "title": "Dar conocimiento puede crear más confianza, no menos",
+          "source": "01:10:36–01:11:48",
+          "slides": [
+            {
+              "slide": 1,
+              "function": "HOOK",
+              "headline": "El hecho de que tú compartas la información demuestra autoridad",
+              "body": "demuestra conocimiento",
+              "source_mode": "SOURCE_EXCERPT",
+              "speaker_note": "MIXED",
+              "visual_idea": "Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: INFORMACIÓN. Amanda: conocimiento visible.",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 1 de HCL_MIXED_01. Lienzo 4:5, 1080x1350. Función narrativa: HOOK. Idea visual: Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: INFORMACIÓN. Amanda: conocimiento visible. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 1 de HCL_MIXED_01. Lienzo 4:5, 1080x1350. Función narrativa: HOOK. Idea visual: Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: INFORMACIÓN. Amanda: conocimiento visible. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “El hecho de que tú compartas la información demuestra autoridad”; supporting copy “demuestra conocimiento”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            },
+            {
+              "slide": 2,
+              "function": "PROGRESSION",
+              "headline": "esta persona sabe",
+              "body": "quiero saber más",
+              "source_mode": "SOURCE_EXCERPT",
+              "speaker_note": "MIXED",
+              "visual_idea": "Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: PERSONA. Amanda: señal de confianza.",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 2 de HCL_MIXED_01. Lienzo 4:5, 1080x1350. Función narrativa: PROGRESSION. Idea visual: Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: PERSONA. Amanda: señal de confianza. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 2 de HCL_MIXED_01. Lienzo 4:5, 1080x1350. Función narrativa: PROGRESSION. Idea visual: Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: PERSONA. Amanda: señal de confianza. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “esta persona sabe”; supporting copy “quiero saber más”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            },
+            {
+              "slide": 3,
+              "function": "PROGRESSION",
+              "headline": "surgen aún más preguntas para el cliente",
+              "body": "esta es la persona que me lo va a responder",
+              "source_mode": "SOURCE_EXCERPT",
+              "speaker_note": "MIXED",
+              "visual_idea": "Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: CLIENTE. Amanda: la respuesta abre profundidad.",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 3 de HCL_MIXED_01. Lienzo 4:5, 1080x1350. Función narrativa: PROGRESSION. Idea visual: Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: CLIENTE. Amanda: la respuesta abre profundidad. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 3 de HCL_MIXED_01. Lienzo 4:5, 1080x1350. Función narrativa: PROGRESSION. Idea visual: Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: CLIENTE. Amanda: la respuesta abre profundidad. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “surgen aún más preguntas para el cliente”; supporting copy “esta es la persona que me lo va a responder”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            },
+            {
+              "slide": 4,
+              "function": "PROGRESSION",
+              "headline": "mentalidad abundancia.",
+              "body": "Si das, vas a recibir.",
+              "source_mode": "SOURCE_EXCERPT",
+              "speaker_note": "MIXED",
+              "visual_idea": "Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: MENTAL. JOC: reframe de relación.",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 4 de HCL_MIXED_01. Lienzo 4:5, 1080x1350. Función narrativa: PROGRESSION. Idea visual: Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: MENTAL. JOC: reframe de relación. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 4 de HCL_MIXED_01. Lienzo 4:5, 1080x1350. Función narrativa: PROGRESSION. Idea visual: Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: MENTAL. JOC: reframe de relación. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “mentalidad abundancia.”; supporting copy “Si das, vas a recibir.”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            },
+            {
+              "slide": 5,
+              "function": "PUNCH",
+              "headline": "creas la conexión, creas la confianza",
+              "body": "más allá de la simple información.",
+              "source_mode": "SOURCE_EXCERPT",
+              "speaker_note": "MIXED",
+              "visual_idea": "Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: INFORMACIÓN. JOC: punch sobre vínculo.",
+              "prompt_no_text": "Carrusel JOC V3.1, slide 5 de HCL_MIXED_01. Lienzo 4:5, 1080x1350. Función narrativa: PUNCH. Idea visual: Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: INFORMACIÓN. JOC: punch sobre vínculo. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. No generar texto, letras, números, captions ni logos legibles; dejar zonas negativas limpias para tipografía posterior. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia.",
+              "prompt_with_text": "Carrusel JOC V3.1, slide 5 de HCL_MIXED_01. Lienzo 4:5, 1080x1350. Función narrativa: PUNCH. Idea visual: Retrato editorial del speaker como ancla; dos planos/fotos solo si representan momentos distintos de la misma idea. Metáfora/objeto secundario relacionado: INFORMACIÓN. JOC: punch sobre vínculo. Una sola imagen independiente, no collage. Composición editorial premium con sujeto/objeto dominante, profundidad real, negative space planificado, safe area 8–10%. Cámara/lente y perspectiva coherentes; materiales con microtextura realista, contact shadows y reflejos plausibles; luz motivada y contraste cinematográfico sobrio. Identidad JOC: charcoal #111111, vino #A91616/#65171C, blanco roto #F7F3EC; colores de soporte permitidos si armonizan y ayudan a explicar. Integrar exactamente este texto, perfectamente legible y sin errores: headline “creas la conexión, creas la confianza”; supporting copy “más allá de la simple información.”. Usar jerarquía clara, headline dominante y cuerpo secundario. Evitar: collage, contact sheet, múltiples slides, stock corporativo genérico, hologramas, texto ilegible, manos deformes, logos inventados, objetos decorativos sin relación, estética plástica. El resultado debe sentirse editorial 2026 y original, usando Vox/DOAC solo como principios de claridad/narrativa, no como copia."
+            }
+          ],
+          "copy": "Dar conocimiento puede crear más confianza, no menos\n\nHighlights trazables del episodio; no son frases aleatorias, sino una secuencia de una misma tensión."
+        }
+      }
+    }
+  ]
+}

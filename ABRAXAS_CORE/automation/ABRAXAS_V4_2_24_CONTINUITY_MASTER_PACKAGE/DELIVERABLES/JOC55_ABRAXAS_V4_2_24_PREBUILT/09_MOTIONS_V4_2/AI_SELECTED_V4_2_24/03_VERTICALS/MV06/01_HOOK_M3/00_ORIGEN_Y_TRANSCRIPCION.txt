@@ -1,0 +1,11 @@
+CONTENT: MV06
+ROL: HOOK
+FUENTE: 01:13:13.437 → 01:13:20.823
+TIMELINE: 00:00:00.000 → 00:00:07.386
+DURACIÓN: 7.386s
+
+TRANSCRIPCIÓN EXACTA
+Y esa es mi siguiente pregunta, como que ahora tienes 1500 odontólogos que han pasado por el sistema.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0777.

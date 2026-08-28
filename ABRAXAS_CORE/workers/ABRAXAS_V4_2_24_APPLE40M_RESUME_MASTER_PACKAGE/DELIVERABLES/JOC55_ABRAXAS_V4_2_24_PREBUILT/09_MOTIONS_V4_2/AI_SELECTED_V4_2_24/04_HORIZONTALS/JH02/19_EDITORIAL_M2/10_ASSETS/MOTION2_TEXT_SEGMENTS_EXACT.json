@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "básicamente, de hacer algo o no necesariamente de innovar porque tu legado puede ser tener",
+  "segments": [
+    "básicamente, de hacer algo o",
+    "no necesariamente de innovar porque",
+    "tu legado puede ser tener"
+  ],
+  "reconstructed_text": "básicamente, de hacer algo o no necesariamente de innovar porque tu legado puede ser tener"
+}

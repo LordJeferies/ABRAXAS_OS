@@ -1,0 +1,42 @@
+{
+  "sequence": 5,
+  "content_id": "V01",
+  "narrative_role": "MEMORABLE",
+  "source_part_id": "V01_P10",
+  "child_beat_ids": [
+    "V01_B11"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:03:52.070",
+  "source_end": "00:03:57.586",
+  "timeline_in_seconds": 61.07,
+  "timeline_out_seconds": 66.586,
+  "timeline_in": "00:01:01.070",
+  "timeline_out": "00:01:06.586",
+  "duration_seconds": 5.516,
+  "text": "lo que hago independientemente y aprender a disfrutar el proceso porque en estas carreras tan",
+  "reason": "Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0044.",
+  "semantic_score": 8.1189,
+  "transcript_reference": "SRT_0044",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

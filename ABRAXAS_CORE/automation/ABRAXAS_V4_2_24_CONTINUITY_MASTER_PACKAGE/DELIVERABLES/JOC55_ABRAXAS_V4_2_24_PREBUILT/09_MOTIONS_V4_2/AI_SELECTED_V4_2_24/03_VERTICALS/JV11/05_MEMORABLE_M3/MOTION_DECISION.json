@@ -1,0 +1,39 @@
+{
+  "sequence": 5,
+  "content_id": "JV11",
+  "narrative_role": "MEMORABLE",
+  "source_part_id": "JV11_P09",
+  "child_beat_ids": [
+    "JV11_B10",
+    "JV11_B11"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:30:28.593",
+  "source_end": "01:30:34.752",
+  "timeline_in_seconds": 46.334,
+  "timeline_out_seconds": 52.493,
+  "timeline_in": "00:00:46.334",
+  "timeline_out": "00:00:52.493",
+  "duration_seconds": 6.159,
+  "text": "cualquiera que sea el caso, pero la intención acá también es darle la oportunidad a esas personas que realmente tienen una historia buena.",
+  "reason": "Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0947.",
+  "semantic_score": 7.5608,
+  "transcript_reference": "SRT_0947",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La frase tiene fuerza autónoma y debe resolverse como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

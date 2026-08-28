@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Y when you embrace it, cuando de verdad lo personifica, ocurre la magia, que es lo que hemos visto que ha pasado acá.",
+  "segments": [
+    "Y when you embrace it, cuando de verdad",
+    "lo personifica, ocurre la magia, que es",
+    "lo que hemos visto que ha pasado acá."
+  ],
+  "reconstructed_text": "Y when you embrace it, cuando de verdad lo personifica, ocurre la magia, que es lo que hemos visto que ha pasado acá."
+}

@@ -1,0 +1,3528 @@
+ABRAXAS v1.1.1
+DEFINICIÓN MAESTRA DE PRODUCTO, OPERACIÓN, HERRAMIENTAS, FLUJOS Y CRITERIO
+SOURCE OF TRUTH PARA CONTINUAR EL DESARROLLO
+
+Versión objetivo: v1.1.1
+Documento: Product Definition + Editorial Operating Model + AI Operating Model + UX Operating Model
+Propósito: explicar con precisión qué es ABRAXAS, qué no es, qué intenta conseguir, cómo se relacionan sus herramientas, cómo se utiliza en escenarios reales y qué debe preservarse en versiones posteriores.
+
+================================================================================
+0. RESUMEN EJECUTIVO
+================================================================================
+
+ABRAXAS es un Content Operating System.
+
+No debe definirse simplemente como una plataforma para generar contenido, un generador de prompts, un calendario editorial, un gestor de proyectos o una biblioteca de archivos.
+
+ABRAXAS busca convertir conocimiento estratégico, editorial, creativo, visual y operativo —que normalmente vive en la cabeza de un estratega, un director creativo, un fundador o una agencia— en infraestructura reproducible.
+
+La tesis fundamental del producto es:
+
+    ABRAXAS convierte criterio en infraestructura.
+
+El sistema captura:
+- cómo es una marca;
+- qué defiende;
+- cómo habla;
+- cómo vende;
+- quién es su audiencia;
+- qué territorios editoriales puede ocupar;
+- qué formatos utiliza;
+- cómo debe funcionar cada formato;
+- qué estructura narrativa requiere;
+- qué no debe hacer;
+- qué criterios visuales debe respetar;
+- qué copies son correctos;
+- qué claims son seguros;
+- qué fuentes pueden utilizarse;
+- qué debe entregar una IA;
+- qué se debe revisar;
+- qué tareas faltan para terminar una pieza;
+- quién debe ejecutar cada tarea;
+- cuándo debe publicarse;
+- en qué campaña participa;
+- qué pasó con ese contenido hasta llegar a publicado.
+
+A partir de ese conocimiento, ABRAXAS puede transformar una necesidad como:
+
+    "Quiero cinco carruseles de JOC para las próximas dos semanas"
+
+en un sistema de producción que entiende:
+
+    qué pilar cubrir;
+    qué formatos de JOC son válidos;
+    qué estructura corresponde a cada formato;
+    qué territorios no deben repetirse;
+    qué prompt debe compilarse;
+    qué debe devolver la IA;
+    cómo vuelve ese resultado a la pieza original;
+    qué imágenes faltan;
+    qué copies faltan;
+    si necesita grabación;
+    quién debe actuar;
+    cuándo sale;
+    si pasó QA;
+    y si ya fue publicado.
+
+La IA es un motor intercambiable dentro de ABRAXAS.
+
+El producto no depende de que una IA concreta sea "la inteligencia" del sistema.
+
+La inteligencia principal de ABRAXAS es:
+- estructura;
+- criterio;
+- contexto;
+- memoria editorial;
+- reglas;
+- flujos;
+- QA;
+- trazabilidad;
+- relaciones entre objetos;
+- sistemas de prompts;
+- conocimiento de marca.
+
+Una IA puede cambiar.
+Un modelo puede quedar obsoleto.
+Una herramienta de imagen puede ser reemplazada.
+El conocimiento operativo no debe perderse.
+
+================================================================================
+1. LA DEFINICIÓN MÁS PRECISA DE ABRAXAS
+================================================================================
+
+ABRAXAS es un sistema operativo editorial para creadores, marcas y agencias que captura el conocimiento estratégico y creativo de una marca, lo transforma en estructuras y prompts reproducibles y coordina cada contenido desde la idea hasta su publicación.
+
+Su ventaja no consiste simplemente en producir más contenido automáticamente.
+
+Su ventaja consiste en hacer que:
+
+    calidad
+    + identidad
+    + estructura
+    + criterio
+    + proceso
+
+puedan repetirse a escala sin depender permanentemente de la memoria o capacidad individual de una sola persona.
+
+ABRAXAS integra conceptualmente:
+
+    Brand Intelligence
+    Branding Method
+    Pillars
+    Format Library
+    Campaigns
+    He - Content Factory
+    Shim
+    AI Handoffs
+    Content Studio
+    Production Graph
+    Production Queue
+    Role-based Desks
+    Assets
+    QA
+    Calendar
+    History
+    Analytics
+    El Arquitecto
+
+Todo alrededor de una misma identidad persistente:
+
+    CONTENT.
+
+================================================================================
+2. QUÉ SÍ ES ABRAXAS
+================================================================================
+
+ABRAXAS SÍ es:
+
+1. Un sistema de memoria estratégica de marca.
+2. Un compilador de contexto y criterio hacia prompts.
+3. Un sistema de estructuras editoriales.
+4. Una biblioteca de formatos probados.
+5. Un sistema para crear contenido individual o en lote.
+6. Un sistema para extraer oportunidades de contenido desde material largo.
+7. Un Production Graph.
+8. Un sistema de seguimiento de tareas editoriales.
+9. Un espacio de revisión pieza por pieza.
+10. Un sistema de handoff hacia IAs externas.
+11. Un puente para devolver resultados de IA a la misma pieza.
+12. Un sistema para organizar assets.
+13. Un calendario editorial.
+14. Un sistema de campañas.
+15. Un sistema de QA.
+16. Un sistema de historial y trazabilidad.
+17. Una interfaz para delegar trabajo por función.
+18. Una base de conocimiento que permite mejorar templates con el tiempo.
+19. Una infraestructura para agencias que necesitan mantener calidad entre clientes.
+20. Una infraestructura para creadores que necesitan operar como un equipo aunque sean una sola persona.
+
+================================================================================
+3. QUÉ NO ES ABRAXAS
+================================================================================
+
+ABRAXAS NO es:
+
+1. Un chatbot donde todo empieza escribiendo una pregunta abierta.
+2. Un simple prompt generator.
+3. Notion con otro diseño.
+4. Asana con prompts.
+5. Un calendario social.
+6. Un gestor genérico de archivos.
+7. Una librería de plantillas sin lógica.
+8. Una herramienta que sustituye el criterio humano.
+9. Una IA que "decide sola" qué es bueno.
+10. Un sistema donde todos los clientes usan los mismos formatos.
+11. Un sistema donde un formato específico puede cambiar arbitrariamente cada vez que se ejecuta.
+12. Un generador de 50 ideas genéricas.
+13. Un sistema que obliga a leer prompts de 3.000 palabras para cambiar un parámetro.
+14. Un sistema que expone al usuario toda la complejidad del grafo interno.
+15. Una herramienta donde crear un contenido equivale a publicarlo.
+16. Una herramienta cuya calidad dependa únicamente de "qué tan inteligente es el modelo".
+17. Un sistema que mezcla hechos, hipótesis y aspiraciones sin distinguirlos.
+18. Un sistema donde un asset no sabe a qué pieza pertenece.
+19. Un sistema donde un resultado de IA crea una copia nueva de una pieza existente.
+20. Una plataforma que oculta qué falta para terminar una publicación.
+
+================================================================================
+4. EL PROBLEMA REAL QUE ABRAXAS RESUELVE
+================================================================================
+
+Crear contenido no es el problema principal.
+
+La generación se ha vuelto relativamente barata.
+
+Los problemas reales son:
+
+A. INCONSISTENCIA
+La misma solicitud puede producir resultados muy diferentes.
+
+B. PÉRDIDA DE CRITERIO
+Una agencia sabe cómo debe hacerse algo, pero ese conocimiento no está estructurado.
+
+C. ONBOARDING
+Cada nueva persona tiene que aprender desde cero cómo piensa el cliente.
+
+D. CONTEXTO REPETITIVO
+Cada generación necesita volver a explicar marca, tono, audiencia, formato, etc.
+
+E. DEGRADACIÓN EN LOTES
+Mientras más piezas se generan, más probable es que:
+- se repitan;
+- sean genéricas;
+- pierdan tono;
+- no respeten formatos;
+- inventen ejemplos;
+- canibalicen ideas.
+
+F. FALTA DE TRAZABILIDAD
+No siempre sabemos:
+- de dónde salió la pieza;
+- qué prompt la creó;
+- qué versión estaba aprobada;
+- qué fuente sustentaba un claim.
+
+G. PRODUCCIÓN FRAGMENTADA
+Guion, visual, grabación, copy, portada y publicación terminan en herramientas distintas.
+
+H. FALTA DE NEXT ACTION
+El usuario sabe que "hay trabajo pendiente", pero no qué debe hacer ahora.
+
+ABRAXAS busca resolver estos problemas estructurando el proceso completo.
+
+================================================================================
+5. ABRAXAS COMO COMPILADOR DE CRITERIO
+================================================================================
+
+Una analogía central:
+
+    INPUT HUMANO / ESTRATÉGICO
+            ↓
+    ABRAXAS COMPILER
+            ↓
+    BRIEF EJECUTABLE
+            ↓
+    IA / PERSONA / HERRAMIENTA
+            ↓
+    RESULTADO
+            ↓
+    ABRAXAS
+            ↓
+    PRODUCCIÓN
+            ↓
+    QA
+            ↓
+    CALENDARIO
+            ↓
+    PUBLICACIÓN
+
+El compilador combina:
+
+    Brand Core
+    + Pillar
+    + Format
+    + Campaign
+    + Audience
+    + Objective
+    + Structure
+    + Copy Profile
+    + Visual Rules
+    + Evidence
+    + Restrictions
+    + Output Schema
+    + QA
+
+Esto produce un prompt que no depende de "inspiración aleatoria".
+
+================================================================================
+6. EL OBJETO CENTRAL: CONTENT
+================================================================================
+
+Todo el sistema debe girar alrededor de Content.
+
+Un contenido puede empezar como:
+
+    IDEA
+
+y terminar:
+
+    PUBLISHED
+
+pero mantiene el mismo content_id.
+
+Ejemplo:
+
+    joc-2026-08-philo-007
+
+No debe convertirse en:
+- idea_007;
+- prompt_007;
+- ai_result_007;
+- production_007;
+- calendar_007.
+
+Es la misma pieza evolucionando.
+
+Contenido conceptual:
+
+IDENTIDAD
+- content_id
+- client_id
+- campaign_id
+- pillar_id
+- format_id
+- physical_type
+- lot
+- series_id
+- batch_id
+
+ESTRATEGIA
+- audience
+- problem
+- objective
+- thesis
+- intention
+- CTA
+
+EDITORIAL
+- structure
+- hook
+- beats
+- slides
+- sections
+- close
+- copies
+
+VISUAL
+- visual direction
+- recording direction
+- B-roll
+- VFX
+- SFX
+- music
+- covers
+- visual prompts
+
+IA
+- prompt template versions
+- compiled prompts
+- execution instructions
+- imported results
+
+PRODUCCIÓN
+- tasks
+- dependencies
+- responsible
+- deadlines
+- asset requirements
+
+QA
+- brand fit
+- claims
+- sources
+- structure
+- platform
+- visual
+- technical
+
+DISTRIBUCIÓN
+- platforms
+- publish date
+- campaign
+- publication state
+
+HISTORY
+- revisions
+- reasons
+- previous values
+
+================================================================================
+7. PRODUCTION GRAPH
+================================================================================
+
+Production Graph es el modelo relacional interno.
+
+No significa que el usuario tenga que ver un mapa de nodos.
+
+Ejemplo interno:
+
+    CONTENT joc-007
+        ├── Script Task
+        ├── Recording Task
+        ├── Cover Task
+        ├── IG Copy Task
+        ├── LinkedIn Copy Task
+        ├── Visual QA
+        └── Publication
+
+Dependencies:
+
+    Recording
+        depends on
+    Script approved
+
+    Final edit
+        depends on
+    Recording + B-roll
+
+    Publication
+        depends on
+    QA + copy + final asset
+
+El usuario no debe ver esto como una matriz técnica.
+
+Debe ver:
+
+    "Este Reel está al 74%.
+     Falta:
+     - grabación
+     - portada
+     - LinkedIn copy"
+
+La complejidad pertenece al sistema.
+
+================================================================================
+8. v1.1.1 — PROPÓSITO DE ESTA VERSIÓN
+================================================================================
+
+La versión correcta es:
+
+    ABRAXAS v1.1.1
+
+No B1.1.1.
+
+v1.1.1 debe funcionar como un Proof of System centrado exclusivamente en JOC.
+
+El objetivo es dejar de validar arquitectura con cuatro clientes simultáneamente.
+
+La pregunta principal:
+
+    ¿Puede ABRAXAS operar dos semanas completas de JOC
+    manteniendo calidad, estructura, identidad y trazabilidad?
+
+Si funciona:
+
+    extender la prueba a un mes completo.
+
+v1.1.1 debe incluir:
+
+CLIENT
+- JOC
+
+BRAND INTELLIGENCE
+- JOC
+
+PILLARS
+- JOC
+
+FORMATS
+- Universal ABRAXAS
+- JOC-specific
+
+COPY PROFILES
+- JOC
+
+VISUAL SYSTEM
+- JOC
+
+CAMPAIGNS
+- JOC
+
+SHIM
+- JOC Podcast
+
+CALENDAR
+- JOC
+
+PRODUCTION
+- JOC
+
+No deben aparecer Moka, INENERGY o ABRAXAS como clientes operativos en esta prueba.
+
+La arquitectura sigue siendo universal.
+
+La instancia de validación es JOC-only.
+
+================================================================================
+9. HOME / DASHBOARD v1.1.1
+================================================================================
+
+QUÉ ES
+
+Centro de comando.
+
+QUÉ HACE
+
+Traduce intención humana a una ruta operativa.
+
+QUÉ NO ES
+
+Una pantalla de métricas decorativas.
+
+Primera pregunta:
+
+    ¿QUÉ QUIERES HACER?
+
+Rutas:
+
+    Crear una pieza
+    Crear un lote
+    Procesar un podcast
+    Revisar contenido
+    Ver qué publicar hoy
+    Ver esta semana
+    Resolver grabaciones
+    Resolver copies
+    Resolver visuales
+    Continuar producción
+    Calendarizar
+    Ver campañas
+
+EJEMPLO
+
+Usuario:
+
+    "Tengo que grabar todo lo pendiente hoy."
+
+No tiene que saber qué es Production Queue.
+
+Pulsa:
+
+    Resolver grabaciones
+
+ABRAXAS abre:
+
+    Recording Desk
+
+filtrado a:
+- pendiente;
+- JOC;
+- próximos contenidos;
+- ordenado por fecha.
+
+================================================================================
+10. DASHBOARD DE ESTADO
+================================================================================
+
+Debe mostrar información accionable.
+
+NO:
+
+    Assets 183
+    Prompts 48
+    Tasks 91
+
+SÍ:
+
+    HOY
+    3 contenidos salen hoy.
+    2 listos.
+    1 todavía necesita portada.
+
+    [Resolver portada]
+
+ESTA SEMANA
+
+    14 contenidos
+    9 READY
+    2 TO RECORD
+    2 PRODUCTION
+    1 NEEDS FIX
+
+PRÓXIMA DECISIÓN
+
+    Carrusel filosófico #07
+    Slide 04 todavía necesita aprobación.
+
+El Dashboard responde:
+
+    ¿qué requiere mi atención?
+
+================================================================================
+11. VISTAS POR RESPONSABILIDAD
+================================================================================
+
+ABRAXAS debe servir tanto a:
+- persona sola;
+- equipo;
+- agencia.
+
+Por ello se puede observar el mismo Production Graph desde distintas funciones.
+
+WRITE
+- Copy Desk
+
+RECORD
+- Recording Desk
+
+DESIGN
+- Visual Desk
+
+EDIT
+- Editing Desk
+
+VERIFY
+- QA Desk
+
+PUBLISH
+- Publishing Desk
+
+No son bases de datos distintas.
+
+Son filtros funcionales sobre Content + Production Tasks.
+
+================================================================================
+12. CLIENT / BRAND INTELLIGENCE
+================================================================================
+
+QUÉ ES
+
+Memoria estratégica estructurada del cliente.
+
+QUÉ NO ES
+
+Ficha administrativa.
+
+No basta con:
+    nombre;
+    nicho;
+    color.
+
+Debe responder:
+
+    ¿Quién es JOC?
+    ¿Qué defiende?
+    ¿Cómo piensa?
+    ¿Cómo habla?
+    ¿Cómo vende?
+    ¿Qué audiencias puede reclamar?
+    ¿Qué formatos utiliza?
+    ¿Qué no debe parecer?
+    ¿Qué visuales son válidos?
+    ¿Qué ejemplos están aprobados?
+
+CAPAS:
+
+Brand Core
+Brand Identity
+Audience
+Commercial Narrative
+Visual Identity
+Content Intelligence
+Source Truth
+
+================================================================================
+13. BRAND CORE JOC
+================================================================================
+
+Brand Core debe ser extenso.
+
+Debe contener como mínimo:
+
+1. Existencia
+¿Por qué existe JOC?
+
+2. Tensión
+¿Qué problema del mercado/cultura/profesión rechaza?
+
+3. Creencia
+¿Qué considera verdadero?
+
+4. Cambio
+¿Qué transformación intenta provocar?
+
+5. Territorio
+¿En qué conversación tiene autoridad?
+
+6. Promesa
+¿Qué debe obtener la audiencia?
+
+7. Enemigo conceptual
+¿Qué prácticas o formas de pensar rechaza?
+
+8. Límites
+¿Qué no debe prometer?
+
+9. Diferenciación
+¿Por qué no es otro creador de negocios?
+
+10. Criterio
+¿Cómo decide si un contenido "es JOC"?
+
+================================================================================
+14. BRAND IDENTITY JOC
+================================================================================
+
+Debe definir:
+
+PERSONALITY
+ENERGY
+LANGUAGE
+RHYTHM
+ATTITUDE
+HUMOR
+CONFRONTATION LEVEL
+AUTHORITY
+VULNERABILITY
+COMMERCIAL BEHAVIOR
+VISUAL CODES
+
+Debe incluir:
+
+DO
+DON'T
+
+Ejemplo conceptual:
+
+DO:
+    confrontar una idea débil;
+    aterrizar teoría a negocio;
+    usar criterio propio.
+
+DON'T:
+    sonar a frase motivacional genérica;
+    usar filosofía como decoración;
+    decir obviedades con tono grandilocuente.
+
+================================================================================
+15. BRANDING METHOD
+================================================================================
+
+DOS MODOS.
+
+A. METHOD EXPLAINER
+
+Explica:
+- qué son 5 Drivers;
+- qué son las 25 Tools;
+- qué intenta resolver cada una;
+- qué input produce;
+- qué output espera.
+
+B. APPLIED TO JOC
+
+Muestra las respuestas de JOC.
+
+No instrucciones.
+
+Ejemplo incorrecto:
+
+    "Pregunta al cliente qué riesgos considera importantes."
+
+Ejemplo correcto:
+
+    "Para JOC, el riesgo principal de diluir la marca aparece cuando..."
+
+En v1.1.1 el modo Applied to JOC es crítico.
+
+================================================================================
+16. PILLARS
+================================================================================
+
+Pillar es un dominio editorial.
+
+No una etiqueta.
+
+Schema:
+
+pillar_id
+name
+definition
+purpose
+audience
+problems
+topic universe
+exclusions
+preferred formats
+examples
+anti_examples
+tone
+visual behavior
+claims
+sources
+
+EJEMPLO:
+
+FILOSOFÍA APLICADA
+
+No significa:
+
+    hablar de filósofos.
+
+Significa:
+
+    utilizar marcos filosóficos para interpretar
+    decisiones, disciplina, ambición, control,
+    responsabilidad, ventas, liderazgo o ejecución.
+
+Un contenido de este pilar debe terminar siendo útil.
+
+No simplemente cultural.
+
+================================================================================
+17. FORMAT LIBRARY
+================================================================================
+
+Format Library es uno de los activos centrales de ABRAXAS.
+
+Un formato representa conocimiento probado.
+
+Schema recomendado:
+
+format_id
+client_id
+name
+physical_type
+purpose
+when_to_use
+when_not_to_use
+audience
+hook_logic
+structure
+development_logic
+close_logic
+copy_profile
+visual_rules
+recording_rules
+examples
+anti_examples
+prompt_template
+output_schema
+qa
+version
+
+================================================================================
+18. JOC PHILOSOPHICAL CAROUSEL
+================================================================================
+
+Ejemplo de por qué Format Library importa.
+
+Un JOC Philosophical Carousel no puede convertirse en:
+
+    "7 lecciones de Séneca para emprendedores"
+
+solo porque habla de filosofía.
+
+Debe conservar el criterio previamente definido para el formato.
+
+Entre las reglas ya definidas:
+
+- JOC abre afirmando o negando una idea.
+- Introduce claramente al filósofo relevante.
+- La cita elegida debe corresponder realmente con el tema.
+- El filósofo debe cumplir una función narrativa.
+- El contenido debe aterrizar en una interpretación útil.
+- El carrusel debe mantener identidad visual JOC.
+- El copy debe parecer nativo de JOC.
+- El cierre no puede ser una frase vacía.
+- La filosofía no se utiliza como adorno.
+
+He debe conocer esto automáticamente cuando format_id = joc_philosophical.
+
+================================================================================
+19. HE - CONTENT FACTORY
+================================================================================
+
+QUÉ ES
+
+Compilador de producción editorial.
+
+QUÉ NO ES
+
+Chat libre.
+
+QUÉ HACE
+
+Ayuda a especificar exactamente:
+- qué producir;
+- sobre qué;
+- para quién;
+- con qué estructura;
+- bajo qué restricciones;
+- qué output esperar.
+
+Después compila:
+- prompt editorial;
+- prompt visual;
+- QA;
+- output schema.
+
+================================================================================
+20. HE - SINGLE PIECE FLOW
+================================================================================
+
+1. Client
+JOC
+
+2. Physical Type
+Reel
+Carousel
+Horizontal
+LinkedIn
+Newsletter
+Note
+Story
+Image
+
+3. Pillar
+
+4. JOC Format
+
+5. Optional Universal Pattern
+
+6. Objective
+
+7. Audience
+
+8. Topic
+
+9. Context
+
+10. Quantity
+
+11. Coverage Map
+
+12. Structure
+
+13. Prompts
+
+14. Save as AI READY
+
+================================================================================
+21. UNIVERSAL PATTERNS
+================================================================================
+
+No sustituyen formatos JOC.
+
+Aportan lógica narrativa.
+
+Ejemplos:
+
+Contradiction
+Problem → Mechanism → Decision
+Myth → Reality
+Comparison
+Framework
+Objection
+Story
+Definition
+System
+
+Precedencia:
+
+    client-specific rules
+        >
+    universal rules
+
+================================================================================
+22. MULTI-CONTENT GENERATION
+================================================================================
+
+Cantidad:
+
+1–6.
+
+Cuando quantity > 1:
+
+ABRAXAS no genera inmediatamente.
+
+Primero genera Coverage Map.
+
+Objetivo:
+
+diferenciar:
+- thesis;
+- angle;
+- example;
+- payoff.
+
+Ejemplo:
+
+Tema:
+DISCIPLINA
+
+Output:
+
+01 Estoicismo
+02 Sistemas
+03 Motivación vs proceso
+04 Control
+05 Repetición
+06 Responsabilidad
+
+Cada pieza tiene identidad independiente.
+
+================================================================================
+23. HE - BATCH MODE
+================================================================================
+
+Segmented control:
+
+    CREATE PIECE
+    CREATE BATCH
+
+Batch windows:
+
+1 week
+2 weeks
+1 month
+
+Independent cadences:
+
+LOT 1
+Low / Medium / High
+
+LOT 2
+Low / Medium / High
+
+LOT 3
+Low / Medium / High
+
+================================================================================
+24. LOT 1
+================================================================================
+
+Premium layer.
+
+High effort.
+High depth.
+High strategic importance.
+
+Base rule:
+
+Weekly:
+    1 main Reel
+    +
+    1 main Carousel
+
+High cadence:
+    2 main Reels
+    +
+    2 main Carousels
+
+May include:
+- premium horizontal;
+- important article;
+- flagship post.
+
+================================================================================
+25. LOT 2
+================================================================================
+
+Derivative / frequency layer.
+
+Examples:
+- clips;
+- secondary reels;
+- opinion derivatives;
+- secondary carousels;
+- LinkedIn derivatives;
+- extracts.
+
+Purpose:
+
+extend L1 themes without duplicating them.
+
+================================================================================
+26. LOT 3
+================================================================================
+
+Support layer.
+
+Examples:
+- Stories;
+- questions;
+- quotes;
+- visual cards;
+- AI visuals;
+- reusable photography;
+- reminders;
+- lightweight activation.
+
+================================================================================
+27. CAMPAIGNS
+================================================================================
+
+Campaign is a first-class object.
+
+campaign_id
+name
+goal
+start
+end
+target
+pillars
+platforms
+content_ids
+status
+performance
+
+Campaign view answers:
+
+    ¿cuántos contenidos tenía?
+    ¿cuántos fueron publicados?
+    ¿cuántos están bloqueados?
+    ¿qué pilares estamos usando?
+    ¿cómo se distribuyen en el mes?
+
+================================================================================
+28. SHIM
+================================================================================
+
+QUÉ ES
+
+Long-form source → content opportunities compiler.
+
+QUÉ NO ES
+
+Transcription engine.
+Creative rewriting engine.
+Quote fabrication engine.
+
+Input must be preserved.
+
+Shim uses:
+
+    transcript
+    +
+    timestamps
+    +
+    speaker labels
+    +
+    context
+
+================================================================================
+29. SHIM GENERAL FLOW
+================================================================================
+
+STEP 1
+SOURCE
+
+Recording name
+Context
+Transcript
+Timestamps
+
+STEP 2
+OUTPUTS
+
+Verticals
+Horizontals
+Carousels
+Platforms
+
+STEP 3
+STRUCTURES
+
+Fixed
+Selected + Intelligent Distribution
+Custom
+
+STEP 4
+REVIEW
+
+What will be requested.
+
+STEP 5
+EXPORT
+
+Prompt
+TXT
+JSON
+
+================================================================================
+30. SHIM JOC PODCAST
+================================================================================
+
+Specialized engine.
+
+Input:
+
+episode transcript
+timestamps
+speaker labels
+
+Speakers:
+
+JOC
+Guest
+
+Outputs:
+
+Vertical clips
+Horizontal clips
+Podcast intro
+Carousels
+Potential notes
+Potential LinkedIn content
+
+================================================================================
+31. VERTICAL CLIPS
+================================================================================
+
+Target:
+
+50–90 sec.
+
+Ideal:
+
+50–80 sec.
+
+Each candidate includes:
+
+title
+theme
+pillar
+speaker
+hook
+development
+close
+timestamps
+duration
+selection criterion
+score
+copies
+visual notes
+editing notes
+
+================================================================================
+32. HORIZONTAL CLIPS
+================================================================================
+
+Target:
+
+8–12 minutes.
+
+Must have:
+
+clear opening
+coherent thesis
+chapters
+payoff
+standalone utility
+
+It can combine non-contiguous timestamp ranges if the final sequence is coherent.
+
+Every fragment remains traceable.
+
+================================================================================
+33. SPEAKER BALANCE
+================================================================================
+
+Rule:
+
+Quality first.
+
+Then balance.
+
+Do not enforce artificial 50/50.
+
+But detect systematic bias.
+
+If:
+- JOC has 8 strong candidates;
+- guest has 9 strong candidates;
+
+output should not become:
+- 1 JOC;
+- 12 guest.
+
+================================================================================
+34. PODCAST INTRO ENGINE
+================================================================================
+
+A specialized cinematic content engine.
+
+Target:
+
+~80 sec.
+
+Purpose:
+
+make the audience need to watch the episode.
+
+Not:
+
+a trailer consisting of random powerful quotes.
+
+Narrative architecture:
+
+ACT 1
+Podcast footage.
+
+ACT 2
+Voice-over + world building + B-roll.
+
+ACT 3
+Return to podcast + unresolved tension.
+
+================================================================================
+35. INTRO ACT 1
+================================================================================
+
+Uses real podcast footage.
+
+Purpose:
+- conflict;
+- curiosity;
+- contradiction;
+- open loop.
+
+Avoid:
+- long setup;
+- biography;
+- explanation.
+
+================================================================================
+36. INTRO ACT 2
+================================================================================
+
+Voice-over.
+
+Voice-over adds:
+- context;
+- identity;
+- stakes;
+- significance;
+- tension.
+
+It does NOT paraphrase podcast quotes.
+
+Visual layer:
+
+B-roll
+archive
+photography
+headlines
+timeline
+motion
+environment
+symbols
+
+================================================================================
+37. INTRO ACT 3
+================================================================================
+
+Return to source footage.
+
+Finish before resolution.
+
+The final question/tension should generate the desire to continue.
+
+Not:
+
+"Watch the full episode."
+
+The CTA can exist.
+
+But curiosity must already exist.
+
+================================================================================
+38. INTRO PRODUCTION OUTPUT
+================================================================================
+
+Timeline
+Timestamp ranges
+Dialogue
+Voice-over
+B-roll
+Music arc
+SFX
+VFX
+Still references
+Omni prompts
+Image prompts
+Editing notes
+Transition notes
+Payoff
+QA
+
+================================================================================
+39. PODCAST CAROUSELS
+================================================================================
+
+Not transcript slides.
+
+They are editorial derivatives.
+
+They can:
+- synthesize;
+- reinterpret;
+- teach;
+- contextualize;
+- turn an insight into a framework.
+
+The first defined main format:
+
+LINKEDIN EDITORIAL CAROUSEL
+
+Functions like:
+- insight;
+- analysis;
+- news;
+- lesson;
+- tips;
+- frontier thinking.
+
+Two additional flagship podcast carousel formats still need final design during v1.1.1.
+
+Do not invent those structures prematurely.
+
+================================================================================
+40. AI HANDOFF
+================================================================================
+
+ABRAXAS does not need to execute every AI internally.
+
+It can compile prompts.
+
+Every export must include:
+
+COPY
+TXT
+JSON
+HOW TO USE
+
+================================================================================
+41. HOW TO USE — UNIVERSAL COMPONENT
+================================================================================
+
+Every exported prompt has a Help action.
+
+Example:
+
+WHAT IS THIS?
+Prompt that generates the full carousel.
+
+WHERE DO I RUN IT?
+ChatGPT / Claude / compatible LLM.
+
+WHAT DO I PASTE?
+The entire compiled prompt.
+
+WHAT SHOULD IT RETURN?
+JSON:
+slides[]
+copies{}
+qa{}
+
+WHAT DO I DO WITH THE RESULT?
+ABRAXAS → AI Results.
+
+WHERE DO I PUT IT?
+Select content_id = joc-philo-007.
+
+WHAT HAPPENS NEXT?
+Content lifecycle:
+AI READY → AI RESULT.
+
+This component should exist for:
+- editorial prompts;
+- visual prompts;
+- image prompts;
+- B-roll prompts;
+- Omni prompts;
+- copy prompts;
+- Shim prompts;
+- Branding prompts.
+
+================================================================================
+42. AI RESULTS
+================================================================================
+
+Purpose:
+
+hydrate external result into existing Content.
+
+Flow:
+
+1. Select destination Content.
+2. Select result type.
+3. Paste/import.
+4. Preview mapping.
+5. Confirm.
+
+Result types:
+
+Content
+Structure
+Script
+Slides
+Copies
+Visual
+B-roll
+Cover
+Assets
+Full Package
+
+ABRAXAS must never silently overwrite approved sections.
+
+================================================================================
+43. CONTENT STUDIO
+================================================================================
+
+Purpose:
+
+work one piece at a time.
+
+It is the main editorial review environment.
+
+Opening a Content should feel like opening a working document, not database row.
+
+================================================================================
+44. CONTENT STUDIO OVERVIEW
+================================================================================
+
+Must show immediately:
+
+PHYSICAL TYPE
+FORMAT
+
+CLIENT
+JOC
+
+TITLE
+
+CAMPAIGN
+PILLAR
+LOT
+PLATFORMS
+PUBLISH DATE
+
+PRODUCTION %
+STATUS
+
+MISSING
+...
+
+User should understand the object in seconds.
+
+================================================================================
+45. EDITORIAL STRUCTURE
+================================================================================
+
+Use meaningful functional labels.
+
+Avoid generic:
+
+Development 1
+Development 2
+
+Prefer:
+
+CONTRADICTION
+DIAGNOSIS
+MECHANISM
+EVIDENCE
+EXAMPLE
+DECISION
+PAYOFF
+
+Each unit contains:
+
+function
+text
+transition
+evidence note
+visual intent
+
+================================================================================
+46. VISUAL PRODUCTION PER UNIT
+================================================================================
+
+For Reel/Video:
+
+RECORDING
+- shot;
+- framing;
+- body;
+- gaze;
+- hands;
+- movement;
+- rhythm;
+- simple version;
+- advanced version.
+
+B-ROLL
+- function;
+- content;
+- placement;
+- duration.
+
+VFX
+- effect name;
+- simple;
+- medium;
+- advanced;
+- Omni prompt.
+
+SFX
+- SOUND;
+- WHEN;
+- TRIGGER;
+- LEVEL;
+- generation/search prompt.
+
+MUSIC
+- style;
+- BPM;
+- energy;
+- entry;
+- ducking;
+- resolution.
+
+================================================================================
+47. CAROUSEL UNIT
+================================================================================
+
+Each slide:
+
+slide_id
+function
+text
+headline
+body
+hierarchy
+visual direction
+layout
+asset slot
+notes
+prompt with text
+prompt without text
+QA
+
+================================================================================
+48. PROMPT COMPOSER
+================================================================================
+
+Critical pattern:
+
+VARIABLES
+    ↓
+COMPILER
+    ↓
+PROMPT
+
+User edits:
+
+Audience
+Problem
+Desired change
+Pillar
+Format
+Structure
+Evidence
+Claims
+CTA
+Visual Direction
+Duration
+Platform
+Tone
+
+Prompt recompiles.
+
+User does NOT edit 2,500-word prompt to change one variable.
+
+================================================================================
+49. PROMPT SYSTEM
+================================================================================
+
+Every production prompt should contain:
+
+ROLE
+OBJECTIVE
+CONTEXT
+WHAT IT IS
+WHAT IT IS NOT
+STRUCTURE
+EVIDENCE
+RESTRICTIONS
+OUTPUT CONTRACT
+ACCEPTANCE CRITERIA
+QA
+
+Prompt should be autonomous.
+
+If pasted into another chat, it should work without needing this conversation.
+
+================================================================================
+50. PROMPT VERSIONING
+================================================================================
+
+Every template should have:
+
+template_id
+template_version
+
+Example:
+
+JOC_PHILOSOPHICAL_V7
+
+This enables:
+
+Template V6
+vs
+Template V7
+
+and eventually:
+
+performance comparison.
+
+ABRAXAS learns partly by improving templates.
+
+================================================================================
+51. FORMAT VERSIONING
+================================================================================
+
+Formats also evolve.
+
+Example:
+
+JOC Philosophical V1
+↓
+production
+↓
+QA
+↓
+client feedback
+↓
+V2
+
+History should preserve old definitions.
+
+================================================================================
+52. PRODUCTION QUEUE
+================================================================================
+
+Purpose:
+
+What must be finished?
+
+Not:
+
+What content exists?
+
+Start by category:
+
+WRITING
+RECORDING
+VISUAL
+EDITING
+QA
+PUBLISHING
+
+Then:
+
+client
+campaign
+format
+date
+
+Finally:
+
+Content.
+
+User should never open a 200-task matrix by default.
+
+================================================================================
+53. COPY DESK
+================================================================================
+
+Operational view.
+
+Answers:
+
+What copies are missing?
+
+Examples:
+
+Instagram pending: 4
+LinkedIn pending: 5
+YouTube pending: 3
+
+Each item:
+
+content
+campaign
+platform
+deadline
+current copy
+prompt
+manual edit
+AI import
+
+================================================================================
+54. RECORDING DESK
+================================================================================
+
+Critical for JOC.
+
+Answers:
+
+What must be recorded?
+
+Example list:
+
+Reel Opinion 021
+Reel CRM 024
+Podcast Intro VO
+Short 011
+
+Content detail:
+
+script
+duration
+location
+shot
+energy
+delivery
+hands
+movement
+checklist
+
+Recording operator does not need Branding Method on this screen.
+
+================================================================================
+55. VISUAL DESK
+================================================================================
+
+Answers:
+
+What must be designed?
+
+Categories:
+
+Covers
+Carousel Slides
+B-roll
+Still Images
+VFX
+
+Each task:
+
+content
+unit
+visual brief
+reference
+prompt
+asset slot
+upload
+review
+
+================================================================================
+56. EDITING DESK
+================================================================================
+
+Answers:
+
+What needs editing?
+
+Can include:
+
+raw footage
+timeline notes
+B-roll status
+subtitle status
+cover
+final render
+
+Future:
+
+DaVinci Automation Bridge.
+
+================================================================================
+57. ASSETS
+================================================================================
+
+Not generic drive.
+
+Asset is contextual.
+
+Schema:
+
+asset_id
+content_id
+unit_id
+type
+filename
+relative_path
+version
+status
+created_at
+approved_at
+
+Example:
+
+asset:
+slide_04_v3.png
+
+content:
+joc-philo-007
+
+unit:
+slide-04
+
+status:
+approved
+
+================================================================================
+58. CALENDAR
+================================================================================
+
+Purpose:
+
+When does content publish?
+
+Supports:
+
+month
+week
+list
+backlog
+
+Drag & drop:
+
+calendar → new date
+backlog → calendar
+calendar → backlog
+
+Card contains enough risk information:
+
+JOC
+Carousel · Philosophical
+Campaign
+L1
+READY
+
+or:
+
+⚠ COVER MISSING
+
+Calendar is not Production Queue.
+
+================================================================================
+59. UNSCHEDULED
+================================================================================
+
+Must always exist.
+
+Content can be created without date.
+
+User can park content in backlog.
+
+This is essential.
+
+================================================================================
+60. QA
+================================================================================
+
+QA is a gate system.
+
+GENERAL ABRAXAS
+
+Structure
+Evidence
+Claims
+Copy
+Visual
+Platform
+Technical
+Asset Completeness
+
+JOC-SPECIFIC
+
+Does it sound like JOC?
+Does it follow selected format?
+Is it generic?
+Does the copy match JOC?
+Does visual match JOC?
+Is the hook appropriate?
+Does payoff fulfill hook?
+Is it original enough?
+
+================================================================================
+61. JOC FORMAT COMPLIANCE
+================================================================================
+
+This is critical.
+
+If format:
+
+JOC PHILOSOPHICAL
+
+then QA must specifically test philosophical format rules.
+
+If format:
+
+JOC CRM
+
+different rules.
+
+Generic QA is insufficient.
+
+================================================================================
+62. HISTORY
+================================================================================
+
+History records meaningful revisions.
+
+Not every keystroke.
+
+Example:
+
+v3
+Hook:
+"A CRM doesn't fix your sales."
+
+v4
+Hook:
+"Your CRM isn't your sales problem."
+
+Reason:
+client review.
+
+User can inspect and restore.
+
+================================================================================
+63. SOURCE TRUTH
+================================================================================
+
+Every client needs trusted context.
+
+Sources:
+
+Website
+Brand documents
+Approved content
+Founder interviews
+Product documents
+Claims sheet
+Visual references
+Research
+Sales docs
+
+Each fact can conceptually be classified:
+
+FACT
+HYPOTHESIS
+ASPIRATION
+UNVERIFIED
+
+Prompt compiler respects status.
+
+================================================================================
+64. EL ARQUITECTO
+================================================================================
+
+El Arquitecto is not generic AI assistant.
+
+It is ABRAXAS navigation and operating assistant.
+
+It knows:
+
+current module
+current content
+current lifecycle
+pending tasks
+current campaign
+next action
+
+Example:
+
+User is in Recording Desk.
+
+Architect:
+
+    Estás en Recording Desk.
+    Aquí aparecen únicamente piezas que necesitan grabación.
+    Tienes 4.
+    La primera se publica mañana.
+    Te recomiendo abrir Reel 021.
+
+Predefined intents:
+
+What do I do first?
+Explain this screen.
+What do I paste here?
+What options should I choose?
+What will I get?
+Where does the result go?
+How do I know I'm finished?
+
+================================================================================
+65. THE ARCHITECT — WHAT IT IS NOT
+================================================================================
+
+Not:
+- support bot;
+- ChatGPT clone;
+- open-world assistant;
+- main generation engine.
+
+Its domain is ABRAXAS.
+
+Future:
+LLM-backed Architect can reason more deeply.
+
+Current/local:
+rule-based contextual intelligence.
+
+================================================================================
+66. LIBRARY
+================================================================================
+
+Answers:
+
+What content exists?
+
+Unlike Production Queue, Library includes everything regardless of state.
+
+Filters:
+
+Campaign
+Pillar
+Format
+Physical Type
+Lifecycle
+Platform
+Lot
+Responsible
+Date
+Series
+
+================================================================================
+67. SAVED VIEWS
+================================================================================
+
+Important.
+
+Examples:
+
+Today
+This Week
+AI Ready
+AI Results Pending Review
+Not Reviewed
+To Record
+Copy Pending
+Visual Pending
+Production
+Ready
+Published
+Unscheduled
+
+These are shortcuts over Content Graph.
+
+================================================================================
+68. ANALYTICS
+================================================================================
+
+Initial analytics are operational/editorial.
+
+Not performance marketing suite.
+
+Metrics:
+
+contents per campaign
+contents per pillar
+contents per format
+contents per platform
+contents per lifecycle
+publication rate
+production backlog
+format mix
+pillar coverage
+
+Questions:
+
+Are we overusing one format?
+Are we neglecting one pillar?
+Is a campaign falling behind?
+Where is the bottleneck?
+
+Future:
+
+real platform performance.
+
+================================================================================
+69. ROLE-BASED OPERATION
+================================================================================
+
+ABRAXAS must support:
+
+SOLO CREATOR
+One person does everything.
+
+AGENCY
+Different responsibilities.
+
+Possible roles:
+
+Strategist
+Copywriter
+Founder/Speaker
+Designer
+Editor
+QA
+Publisher
+
+The data model remains same.
+
+Interface filters relevant work.
+
+================================================================================
+70. SOLO CREATOR MODE
+================================================================================
+
+Person should see:
+
+Today
+Next action
+What to record
+What to write
+What to publish
+
+No need to manage team assignment.
+
+================================================================================
+71. AGENCY MODE
+================================================================================
+
+Team can see:
+
+My Tasks
+By Client
+By Campaign
+By Responsibility
+Blocked
+Due Soon
+
+Each person sees only context needed for execution.
+
+================================================================================
+72. EXAMPLE: CREATE ONE JOC CAROUSEL
+================================================================================
+
+User:
+
+"I want a philosophical carousel about discipline."
+
+FLOW:
+
+Dashboard
+→ Create Piece
+
+He:
+Client = JOC
+Physical Type = Carousel
+Pillar = Applied Philosophy
+Format = JOC Philosophical
+Topic = Discipline
+Objective = challenge motivation mindset
+Audience = entrepreneurs
+Quantity = 1
+
+ABRAXAS compiles:
+
+Editorial Prompt
+Visual Prompt
+Output Schema
+QA
+
+Save:
+AI READY
+
+User:
+Copy Editorial Prompt
+→ ChatGPT
+→ Run
+
+AI returns JSON.
+
+User:
+AI Results
+→ joc-philo-021
+→ Content
+→ Paste
+→ Preview
+→ Confirm
+
+Lifecycle:
+AI RESULT
+
+Content Studio:
+review Slides.
+
+User changes Slide 04.
+
+Fix revision.
+
+Visual:
+copy image prompts.
+
+Generate images.
+
+Assets:
+map slide-01 ... slide-07.
+
+QA.
+
+Schedule.
+
+Publish.
+
+History remains attached to content_id.
+
+================================================================================
+73. EXAMPLE: CREATE TWO-WEEK BATCH
+================================================================================
+
+Dashboard
+→ Create Batch
+
+Window:
+2 weeks
+
+L1:
+Medium
+
+L2:
+Medium
+
+L3:
+Low
+
+ABRAXAS blueprint:
+
+Week 1
+L1:
+1 Main Reel
+1 Main Carousel
+
+L2:
+derived pieces
+
+L3:
+support
+
+Week 2
+same base cadence.
+
+Before content generation:
+
+Coverage Map across two weeks.
+
+Avoid:
+two carousels making same argument.
+
+Preview grid.
+
+User adjusts.
+
+Save batch.
+
+All content becomes AI READY.
+
+Production Graph creates required tasks.
+
+================================================================================
+74. EXAMPLE: COPY DESK
+================================================================================
+
+Copywriter logs in.
+
+Dashboard
+→ Resolve Copies
+
+Copy Desk:
+
+7 pending.
+
+Opens:
+JOC Reel 021.
+
+Shows:
+Video thesis
+Script summary
+Platform = Instagram
+Copy Profile = JOC Instagram
+
+Options:
+
+Edit manually
+or
+Copy prompt
+
+If prompt:
+
+HOW TO USE
+
+1. Copy.
+2. Run in LLM.
+3. Return result here.
+4. Paste into copy slot.
+5. Review.
+6. Approve.
+
+Copy task complete.
+
+Production percentage increases.
+
+================================================================================
+75. EXAMPLE: RECORDING DESK
+================================================================================
+
+JOC opens:
+
+Resolve Recordings.
+
+3 pieces.
+
+First:
+
+Reel CRM
+Publish tomorrow.
+
+Recording instructions:
+
+Shot:
+medium close.
+
+Camera:
+eye level.
+
+Hook:
+...
+
+Body:
+...
+
+Hands:
+...
+
+Movement:
+...
+
+Duration:
+64 sec.
+
+Checklist:
+audio
+lighting
+framing
+script
+second take
+
+After recording:
+
+Upload / mark recorded.
+
+Lifecycle:
+RECORDED or PRODUCTION.
+
+Editor sees it in Editing Desk.
+
+================================================================================
+76. EXAMPLE: SHIM PODCAST
+================================================================================
+
+Input:
+
+2-hour podcast transcript
+timestamps
+JOC / Guest labels.
+
+User asks:
+
+Maximum quality verticals.
+2 horizontals.
+1 intro.
+carousels automatic.
+
+Shim compiles extraction prompt.
+
+External AI analyzes transcript.
+
+Returns:
+
+18 vertical candidates
+2 horizontal candidates
+1 intro structure
+8 carousel opportunities
+
+Each candidate contains timestamps.
+
+ABRAXAS imports candidates.
+
+User reviews scores.
+
+Selects 12 verticals.
+
+Production Graph creates:
+video cut task
+subtitle task
+copy tasks
+cover task
+QA
+publication.
+
+================================================================================
+77. EXAMPLE: PODCAST INTRO
+================================================================================
+
+Shim Intro Engine selects:
+
+ACT 1:
+3 quote fragments.
+
+ACT 2:
+voice-over.
+
+ACT 3:
+2 closing fragments.
+
+Visual plan:
+
+ACT 1:
+podcast closeups.
+
+ACT 2:
+guest archive
+company footage
+visual metaphor
+timeline
+headlines.
+
+ACT 3:
+return to studio.
+
+Audio:
+
+music arc
+SFX
+silence points.
+
+Output:
+
+editing brief
+timestamps
+VO
+Omni prompts
+still prompts
+timeline.
+
+================================================================================
+78. EXAMPLE: CAMPAIGN MANAGEMENT
+================================================================================
+
+Campaign:
+
+Ventas sin humo.
+
+Goal:
+position JOC on operational sales systems.
+
+12 planned pieces.
+
+Dashboard Campaign:
+
+12 planned
+4 published
+3 ready
+2 to record
+2 AI ready
+1 needs fix
+
+Timeline:
+Aug 10–31.
+
+User clicks:
+
+"Show blockers"
+
+ABRAXAS:
+Reel 04 → recording
+Carousel 07 → Slide 05
+LinkedIn Post 02 → copy
+
+Campaign manager can act.
+
+================================================================================
+79. EXAMPLE: ASSET HANDOFF
+================================================================================
+
+Content Studio:
+
+Slide 03.
+
+Expected asset:
+
+assets/joc/joc-philo-021/slides/slide-03.png
+
+User copies image prompt.
+
+Generates image.
+
+Returns to Assets.
+
+Select:
+Content = joc-philo-021
+Slot = slide-03
+Type = image
+
+Uploads file.
+
+ABRAXAS:
+binds asset.
+
+Content Studio preview updates.
+
+Visual Task resolved.
+
+================================================================================
+80. EXAMPLE: CALENDAR
+================================================================================
+
+Calendar shows:
+
+August 19
+JOC Philosophical Carousel
+READY
+
+August 20
+CRM Reel
+⚠ cover missing
+
+User drags CRM Reel to August 21.
+
+scheduled_at changes.
+
+No copy is duplicated.
+
+Same Content.
+
+================================================================================
+81. QUALITY AT SCALE
+================================================================================
+
+The purpose of structures is not to eliminate creativity.
+
+It is to eliminate low-quality variability.
+
+Freedom exists inside constraints.
+
+Instead of:
+
+"Create something viral."
+
+ABRAXAS says:
+
+For JOC,
+within this pillar,
+for this audience,
+using this format,
+with this purpose,
+respect these rules,
+avoid these anti-patterns,
+use these sources,
+return this schema,
+pass these QA gates.
+
+This is how ABRAXAS attempts scalable quality.
+
+================================================================================
+82. PROMPT QUALITY PRINCIPLE
+================================================================================
+
+A prompt can be long and still bad.
+
+Quality is not word count.
+
+Quality means:
+
+correct context
+clear role
+specific objective
+correct format
+explicit constraints
+brand rules
+examples
+anti-examples
+output contract
+QA
+handoff instructions
+
+Every prompt should be executable outside this chat.
+
+================================================================================
+83. OUTPUT SCHEMAS
+================================================================================
+
+Important.
+
+Prompt should not return arbitrary prose when system expects structured data.
+
+Example Carousel:
+
+{
+  "contentId": "...",
+  "title": "...",
+  "thesis": "...",
+  "slides": [
+    {
+      "id": "slide-01",
+      "function": "hook",
+      "text": "...",
+      "visualIntent": "..."
+    }
+  ],
+  "copies": {},
+  "qa": {}
+}
+
+This allows reliable hydration.
+
+================================================================================
+84. ERROR PREVENTION
+================================================================================
+
+ABRAXAS must prevent:
+
+- duplicate content IDs;
+- overwrite of approved content;
+- missing asset mappings;
+- missing source timestamps;
+- generic formats;
+- incompatible claims;
+- unfinished publication;
+- batch repetition;
+- visual style drift;
+- copy style drift;
+- wrong platform adaptation.
+
+Prevention should happen through:
+schemas
+rules
+warnings
+QA
+state machines.
+
+================================================================================
+85. CONTENT LIFECYCLE
+================================================================================
+
+Proposed detailed lifecycle:
+
+IDEA
+BUILD
+AI READY
+AI RESULT
+REVIEW
+NEEDS FIX
+CONTENT READY
+TO RECORD
+RECORDED
+PRODUCTION
+READY TO PUBLISH
+SCHEDULED
+PUBLISHED
+ARCHIVED
+
+UI may group states.
+
+Internal data can remain detailed.
+
+================================================================================
+86. NEXT ACTION ENGINE
+================================================================================
+
+A future key feature.
+
+Given Content state:
+
+ABRAXAS should compute:
+
+next_action.
+
+Example:
+
+Script approved.
+Needs recording.
+
+Next Action:
+Record.
+
+Another:
+
+All assets complete.
+Claims unchecked.
+
+Next Action:
+QA claims.
+
+The Architect can explain this.
+
+================================================================================
+87. SYSTEM OF KNOWLEDGE
+================================================================================
+
+ABRAXAS knowledge has multiple levels.
+
+LEVEL 1
+Universal ABRAXAS criteria.
+
+LEVEL 2
+Client-specific criteria.
+
+LEVEL 3
+Campaign-specific criteria.
+
+LEVEL 4
+Content-specific decisions.
+
+More specific level wins when conflict exists, unless higher-level safety restriction prohibits it.
+
+================================================================================
+88. UNIVERSAL ABRAXAS CRITERIA
+================================================================================
+
+Examples:
+
+Hooks must create a reason to continue.
+Closing must pay off the opening.
+Every unit adds new information.
+Copy complements the piece.
+Visuals have narrative function.
+Claims require evidence.
+Batch pieces need differentiation.
+A format must have explicit structure.
+Outputs must be traceable.
+
+================================================================================
+89. CLIENT CRITERIA
+================================================================================
+
+JOC can override generic style decisions.
+
+Example:
+
+Universal:
+carousel hook should create tension.
+
+JOC Philosophical:
+hook also follows JOC-specific philosopher/statement behavior.
+
+Specific wins.
+
+================================================================================
+90. CAMPAIGN CRITERIA
+================================================================================
+
+A campaign can add:
+
+goal
+CTA
+message hierarchy
+offer
+time constraint
+platform priority.
+
+But cannot violate Brand Core.
+
+================================================================================
+91. CONTENT-SPECIFIC DECISIONS
+================================================================================
+
+Human reviewer can fix:
+
+hook
+visual
+copy
+date
+CTA
+
+Once fixed:
+
+this becomes current truth for the piece.
+
+Template does not overwrite it.
+
+================================================================================
+92. HUMAN ROLE
+================================================================================
+
+ABRAXAS is human-in-the-loop.
+
+Human decides:
+
+brand positioning
+format approval
+high-stakes claims
+creative taste
+final content
+publication
+
+System handles:
+
+repetition
+context compilation
+task tracking
+prompt generation
+status
+routing
+traceability.
+
+================================================================================
+93. "FIX" / APPROVAL MODEL
+================================================================================
+
+When editing:
+
+changes autosave.
+
+But "Fix revision" creates a meaningful checkpoint.
+
+History:
+
+v7
+
+Reason:
+client feedback.
+
+This balances usability and traceability.
+
+================================================================================
+94. WHY JOC IS A GOOD PROOF
+================================================================================
+
+JOC is useful because it contains diverse formats:
+
+personal brand
+philosophy
+sales
+CRM
+educational
+opinion
+podcast
+horizontal
+vertical
+carousel
+LinkedIn.
+
+If ABRAXAS can preserve distinct structures across this mix, the system is proving real editorial intelligence.
+
+================================================================================
+95. v1.1.1 USER TEST
+================================================================================
+
+First:
+
+2 weeks.
+
+Then:
+
+1 month.
+
+Operational sequence:
+
+1. Load JOC system.
+2. Create batch.
+3. Review grid.
+4. Fix topics.
+5. Compile prompts.
+6. Execute.
+7. Import results.
+8. Review one-by-one.
+9. Prepare recordings.
+10. Generate copies.
+11. Generate visuals.
+12. Map assets.
+13. QA.
+14. Calendar.
+15. Publish.
+16. Audit history.
+
+================================================================================
+96. SUCCESS METRICS v1.1.1
+================================================================================
+
+QUALITY
+
+Random 10-piece sample:
+How many require full rewrite?
+
+Goal:
+70–80% usable with minor adjustments initially.
+
+Target maturity:
+85–90%.
+
+FORMAT COMPLIANCE
+
+Does each piece follow its defined format?
+
+BRAND FIT
+
+Could this content belong to another creator?
+
+If yes:
+fail / warning.
+
+PRODUCTION CLARITY
+
+Can we identify what is missing?
+
+TASK FINDABILITY
+
+Can a copywriter find all pending copies?
+
+Can JOC find all recordings?
+
+TRACEABILITY
+
+Can we find source/template/history?
+
+CALENDAR
+
+Can we see publication plan?
+
+PROMPT RELIABILITY
+
+Do repeated executions preserve expected structure?
+
+================================================================================
+97. WHAT v1.1.1 SHOULD NOT TRY TO SOLVE
+================================================================================
+
+Do not expand scope unnecessarily.
+
+v1.1.1 should not prioritize:
+
+Full multi-client SaaS
+Billing
+Enterprise auth
+Real-time collaboration
+Deep analytics
+Native mobile app
+Visual node editor
+Canva replacement
+Automatic social publishing
+Full LLM Architect
+
+The proof is editorial operations.
+
+================================================================================
+98. FUTURE ROADMAP
+================================================================================
+
+v1.1.1
+JOC Proof of System.
+
+v1.2
+Improve prompts/formats from real JOC results.
+
+v1.3
+Reintroduce second client.
+Moka is a strong candidate because it forces:
+scientific evidence
+different tone
+different visuals
+different formats.
+
+v1.4
+Multi-client validation.
+
+P10 / Automation lane
+Shim execution:
+FFmpeg
+Terminal
+DaVinci automation.
+
+Future:
+Backend
+Authentication
+Sync
+Roles
+Analytics
+Performance
+Visual Composer
+Graph Visualization
+LLM-backed Architect.
+
+================================================================================
+99. DIFFERENCE VS NOTION
+================================================================================
+
+Notion:
+stores information.
+
+ABRAXAS:
+understands production semantics.
+
+Notion:
+"This page is Reel 4."
+
+ABRAXAS:
+"This is JOC Founder Opinion Reel 4, Campaign X, L1, AI RESULT, needs recording, cover and LinkedIn copy, scheduled Thursday, using Template V6."
+
+================================================================================
+100. DIFFERENCE VS ASANA
+================================================================================
+
+Asana:
+"Create cover."
+
+ABRAXAS:
+
+Cover for:
+joc-reel-004
+
+Visual system:
+JOC Reel Cover V3
+
+Prompt:
+...
+
+Reference:
+...
+
+Asset slot:
+cover-a
+
+Acceptance criteria:
+...
+
+Dependency:
+script title fixed.
+
+================================================================================
+101. DIFFERENCE VS CHATGPT
+================================================================================
+
+ChatGPT:
+generation engine.
+
+ABRAXAS:
+orchestration and knowledge infrastructure.
+
+ChatGPT can write.
+
+ABRAXAS determines:
+what to request
+under what format
+with what context
+what result is valid
+where it belongs
+what happens next.
+
+================================================================================
+102. DIFFERENCE VS SOCIAL SCHEDULERS
+================================================================================
+
+Schedulers operate near the end.
+
+ABRAXAS starts at:
+
+Brand
+Strategy
+Campaign
+Idea
+Structure
+Generation
+Review
+Production
+QA
+Calendar
+Publication.
+
+================================================================================
+103. DIFFERENCE VS GENERIC AI CONTENT TOOLS
+================================================================================
+
+Generic tools often optimize:
+quantity
+speed
+templates.
+
+ABRAXAS optimizes:
+reproducible editorial judgment.
+
+A format is not aesthetic shell.
+
+It is:
+purpose
+narrative architecture
+tone
+visual behavior
+QA.
+
+================================================================================
+104. ABRAXAS AS INTELLECTUAL CAPITAL
+================================================================================
+
+An agency's hidden intellectual capital includes:
+
+why one hook works
+how a client's voice sounds
+how a carousel is structured
+what visual direction belongs to a format
+what claims are safe
+how a founder should speak
+what "good" means.
+
+ABRAXAS stores that as infrastructure.
+
+================================================================================
+105. WHY "WHAT IT IS NOT" MATTERS
+================================================================================
+
+Negative definitions are crucial for AI.
+
+Example:
+
+JOC Philosophical.
+
+WHAT IT IS:
+philosophy applied to practical decisions.
+
+WHAT IT IS NOT:
+quote account
+motivational carousel
+philosophy summary
+academic lecture
+random philosopher mention
+
+These anti-patterns dramatically improve generation.
+
+Every format should define both.
+
+================================================================================
+106. WHY EXAMPLES AND ANTI-EXAMPLES MATTER
+================================================================================
+
+Rules are abstract.
+
+Examples operationalize.
+
+Each format should include:
+
+Good Example
+Why it is good.
+
+Bad Example
+Why it is wrong.
+
+This creates stronger context for both humans and AI.
+
+================================================================================
+107. WHY "HOW TO USE" MATTERS
+================================================================================
+
+ABRAXAS will often hand work to external systems.
+
+Without instructions, user gets:
+
+Prompt copied.
+
+Then asks:
+
+"Now what?"
+
+Every handoff should explain:
+where
+what
+expected result
+return path
+success condition.
+
+This makes the system usable by non-experts.
+
+================================================================================
+108. UX PRINCIPLE
+================================================================================
+
+The system can be complex.
+
+The screen cannot.
+
+Primary UX principle:
+
+    Show the user the next useful decision,
+    not the entire system.
+
+Examples:
+
+Not:
+167 tasks.
+
+Instead:
+4 recordings pending.
+
+Not:
+all Branding Method drivers on Recording Desk.
+
+Instead:
+recording instructions.
+
+Not:
+full prompt.
+
+Instead:
+editable variables
++
+"View compiled prompt".
+
+================================================================================
+109. v1.1.1 VISUAL DIRECTION
+================================================================================
+
+For v1.1.1, operational clarity has priority.
+
+The UI can remain:
+dark
+Apple-like
+Liquid Glass
+high quality
+minimal.
+
+But the main application returns to a dashboard/workspace logic.
+
+Storytelling can exist as:
+secondary tab
+brand story
+overview.
+
+It is not the main operating metaphor.
+
+The important thing is proving the system.
+
+================================================================================
+110. APPLE-LIKE PRINCIPLES TO PRESERVE
+================================================================================
+
+Not copying Apple assets.
+
+Preserve product principles:
+
+hierarchy
+spacing
+progressive disclosure
+single primary action
+native-feeling controls
+functional glass
+clear navigation
+calm surfaces
+state feedback
+source-anchored menus
+reduced motion
+no unnecessary UI.
+
+Liquid Glass:
+navigation
+popover
+toolbar
+floating assistant
+sheets.
+
+Not:
+every content card.
+
+================================================================================
+111. DATA-FIRST, UI-SECOND
+================================================================================
+
+The UI is replaceable.
+
+Production data is not.
+
+This architecture must allow a future visual redesign without rebuilding:
+
+Brand Intelligence
+Formats
+Content
+Prompts
+Tasks
+Assets
+History.
+
+The presentation layer reads stable data contracts.
+
+================================================================================
+112. VERSION v1.1.1 — NON-NEGOTIABLES
+================================================================================
+
+1. JOC-only test environment.
+2. Universal ABRAXAS criteria preserved.
+3. JOC-specific formats preserved.
+4. Content IDs stable.
+5. Prompts editable through variables.
+6. Results return to same Content.
+7. Role desks are views, not duplicate data.
+8. Shim preserves transcript/timestamps.
+9. Intro engine is a specific format.
+10. Calendar supports backlog.
+11. Campaign is a real object.
+12. Every prompt has "How to Use".
+13. QA has generic + format-specific gates.
+14. History is preserved.
+15. Source Truth separates fact/hypothesis/aspiration.
+16. AI remains interchangeable.
+17. Human approval remains part of high-value decisions.
+18. UX surfaces next actions instead of graph complexity.
+19. Templates are versioned.
+20. System can learn through template iteration.
+
+================================================================================
+113. MASTER PRODUCT THESIS
+================================================================================
+
+ABRAXAS does not primarily automate creativity.
+
+It operationalizes creative judgment.
+
+The system captures what experienced people know and turns it into:
+
+    DATA
+    +
+    RULES
+    +
+    STRUCTURES
+    +
+    PROMPTS
+    +
+    WORKFLOWS
+    +
+    QA
+
+so that quality can be reproduced more reliably.
+
+================================================================================
+114. MASTER VALUE PROPOSITION
+================================================================================
+
+For creators:
+
+    Run content like a professional editorial team.
+
+For agencies:
+
+    Turn your best strategists' judgment into a repeatable operating system.
+
+For brands:
+
+    Preserve identity and quality while increasing content volume.
+
+================================================================================
+115. MASTER ONE-LINER
+================================================================================
+
+ABRAXAS convierte el criterio editorial de una marca en un sistema reproducible para crear, revisar, producir, organizar y publicar contenido de alta calidad sin empezar de cero cada vez.
+
+================================================================================
+116. MASTER OPERATIONAL LINE
+================================================================================
+
+Entras con:
+
+idea
+need
+campaign
+transcript
+existing content
+pending task
+
+Sales con:
+
+structured content
+prompts
+production plan
+reviewed assets
+calendar
+publication
+traceability.
+
+================================================================================
+117. DEFINITION FOR ANOTHER AI / NEW DEVELOPMENT CHAT
+================================================================================
+
+If another AI receives this file, it must understand:
+
+DO NOT rebuild ABRAXAS as a generic content generator.
+
+DO NOT replace structured workflows with chat.
+
+DO NOT flatten JOC-specific formats into universal templates.
+
+DO NOT create parallel data objects for every module.
+
+DO NOT expose Production Graph complexity unnecessarily.
+
+DO NOT assume AI output is final.
+
+DO NOT remove human review.
+
+DO NOT invent client-specific structures when source-of-truth is missing.
+
+DO:
+
+preserve stable IDs.
+preserve Prompt Quality standards.
+preserve He / Shim distinction.
+preserve Brand Intelligence.
+preserve Format Library.
+preserve campaign relationships.
+preserve role-specific views.
+preserve history.
+preserve QA.
+preserve AI handoff/return path.
+
+The next development target is:
+
+    ABRAXAS v1.1.1
+    JOC Editorial Proof of System
+
+Success means:
+the platform can organize, create, review, produce, calendarize and trace at least two weeks — ideally one month — of real JOC content while preserving the agreed editorial and visual formats.
+
+================================================================================
+END OF MASTER DEFINITION
+================================================================================

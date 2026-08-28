@@ -1,0 +1,11 @@
+CONTENT: V10
+ROL: HOOK
+FUENTE: 00:53:28.401 → 00:53:35.122
+TIMELINE: 00:00:00.401 → 00:00:07.122
+DURACIÓN: 6.721s
+
+TRANSCRIPCIÓN EXACTA
+Pero un approach que normalmente las personas no tomarían ante un examen, por ejemplo, nosotros
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0569.

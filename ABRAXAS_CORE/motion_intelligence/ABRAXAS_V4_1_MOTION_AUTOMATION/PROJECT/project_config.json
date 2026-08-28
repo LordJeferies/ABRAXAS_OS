@@ -1,0 +1,83 @@
+{
+  "schema_version": "abraxas.executable.project.v4.1",
+  "project_id": "JOC55_AMANDA",
+  "output_version": "V4_1",
+  "preserve_legacy": true,
+  "inputs": {
+    "content_html": "/Users/lordjef/Desktop/ABRAXAS_V4_1_MOTION_AUTOMATION/INPUT/JOC55_AMANDA_CONTENT_ENGINE_V3_1.html",
+    "intro_html": "/Users/lordjef/Desktop/ABRAXAS_V4_1_MOTION_AUTOMATION/INPUT/JOC55_AMANDA_INTRO_LAB_V3_1.html",
+    "vertical_master": "/Users/lordjef/Desktop/Joc podcast next ep 55/00_MASTERS_OFICIALES/JOC55_MASTER_VERTICAL_OFICIAL.mp4",
+    "horizontal_master": "/Users/lordjef/Desktop/Joc podcast next ep 55/00_MASTERS_OFICIALES/JOC55_MASTER_HORIZONTAL_OFICIAL.mp4",
+    "transcript": "",
+    "legacy_root": ""
+  },
+  "output_root": "/Users/lordjef/Desktop/Joc podcast next ep 55/JOC55_ABRAXAS_V4_1_OUTPUT",
+  "source_policy": {
+    "vertical_burned_subtitles": false,
+    "horizontal_burned_subtitles": false,
+    "microtrim_source": "vertical"
+  },
+  "render": {
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe",
+    "encoder": "h264_videotoolbox",
+    "bitrate": "40M",
+    "maxrate": "48M",
+    "bufsize": "80M",
+    "audio_bitrate": "192k",
+    "hardware_decode": true,
+    "hardware_encode_slots": 1
+  },
+  "motion": {
+    "enabled": true,
+    "strict_assets": false,
+    "selection_overrides": {},
+    "preview_encoder": "h264_videotoolbox"
+  },
+  "davinci": {
+    "revision": "V4_1",
+    "fps": 30,
+    "protect_existing_timelines": true
+  },
+  "mlx": {
+    "enabled": true,
+    "python": "/Users/lordjef/Desktop/ABRAXAS_V4_1_MOTION_AUTOMATION/.venv-mlx/bin/python3",
+    "turbo_model": "/Users/lordjef/Desktop/Moka_Terminal_Cortes_48_FrameMatched_FINAL/Modelos_MLX/whisper-large-v3-turbo",
+    "large_model": "/Users/lordjef/Desktop/Moka_Terminal_Cortes_48_FrameMatched_FINAL/Modelos_MLX/whisper-large-v3",
+    "language": "es",
+    "min_score": 0.72,
+    "max_delta": 0.45
+  },
+  "overrides": {
+    "content_overrides": {
+      "H03": {
+        "start": "00:53:15",
+        "duration_seconds": 720.0
+      }
+    },
+    "manual_microtrims": {}
+  },
+  "workers": {
+    "A": {
+      "intros": [
+        "INTRO_G01",
+        "INTRO_G03",
+        "INTRO_M02"
+      ],
+      "content_engine": [
+        "horizontals",
+        "potentials"
+      ]
+    },
+    "B": {
+      "intros": [
+        "INTRO_G02",
+        "INTRO_M01",
+        "INTRO_M03"
+      ],
+      "content_engine": [
+        "verticals"
+      ]
+    }
+  }
+}

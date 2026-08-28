@@ -1,0 +1,11 @@
+CONTENT: V14
+ROL: TENSION
+FUENTE: 00:23:42.870 → 00:23:47.802
+TIMELINE: 00:00:18.870 → 00:00:23.802
+DURACIÓN: 4.932s
+
+TRANSCRIPCIÓN EXACTA
+hago esto veo esta oportunidad de negocio, sé que hay una oportunidad de negocio, pero repito
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0268.

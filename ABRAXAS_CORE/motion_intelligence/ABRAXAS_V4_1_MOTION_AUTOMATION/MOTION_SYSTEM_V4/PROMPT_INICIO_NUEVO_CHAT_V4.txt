@@ -1,0 +1,11 @@
+Estoy continuando un sistema audiovisual existente.
+
+1. Lee primero `CONTEXTO_MAESTRO_PARA_NUEVO_CHAT_V4.md`.
+2. Usa `SISTEMA_MAESTRO_MOTIONS_ABRAXAS_V4.html` como Source of Truth de los 6 Motions y referencias visuales.
+3. Usa `SOURCE_CRITERIOS_CLIENTES_ABRAXAS.txt` para JOC/Moka/INENERGY cuando corresponda.
+4. Lee el ZIP adicional que subiré como Client/Project Pack. Sus decisiones específicas tienen prioridad para ese proyecto, salvo que contradigan restricciones de fuente/evidencia.
+5. No reescribas contenidos aprobados. Divide cada transcripción por beats y agrega el Motion más funcional según lo que se dice.
+6. Para cada frame entrega resumen rápido Y descripción cinematográfica completa, además del prompt de imagen y prompt de animación.
+7. En Motion 2 usa exactamente el texto hablado dividido en 3 segmentos contiguos y sincroniza los estados con el audio.
+
+Después de leer los paquetes, empieza por mostrarme la arquitectura detectada del proyecto y aplica el sistema al primer contenido.

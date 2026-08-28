@@ -1,0 +1,43 @@
+{
+  "sequence": 6,
+  "content_id": "JV10",
+  "narrative_role": "CLOSE",
+  "source_part_id": "JV10_P12",
+  "child_beat_ids": [
+    "JV10_B17",
+    "JV10_B18"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:28:09.488",
+  "source_end": "01:28:15.757",
+  "timeline_in_seconds": 67.941,
+  "timeline_out_seconds": 74.21,
+  "timeline_in": "00:01:07.941",
+  "timeline_out": "00:01:14.210",
+  "duration_seconds": 6.269,
+  "text": "La verdad que fue muy valiosa y yo siento que fue una experiencia increíble para mí inclusive. Así que gracias por tu tiempo.",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0926.",
+  "semantic_score": 11.1094,
+  "transcript_reference": "SRT_0926",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

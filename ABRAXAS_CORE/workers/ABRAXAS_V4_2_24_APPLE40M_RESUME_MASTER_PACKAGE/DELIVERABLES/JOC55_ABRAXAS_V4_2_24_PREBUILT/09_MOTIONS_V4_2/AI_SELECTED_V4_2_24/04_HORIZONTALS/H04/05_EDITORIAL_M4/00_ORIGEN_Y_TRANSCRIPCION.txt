@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:15:35.000 → 01:15:43.000
+TIMELINE: 00:02:05.000 → 00:02:13.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Y nos dimos cuenta que realmente lo que más le importa a la persona o a nuestro cliente es contenido de calidad, que sea interactivo y que obtengas el paz.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0801.

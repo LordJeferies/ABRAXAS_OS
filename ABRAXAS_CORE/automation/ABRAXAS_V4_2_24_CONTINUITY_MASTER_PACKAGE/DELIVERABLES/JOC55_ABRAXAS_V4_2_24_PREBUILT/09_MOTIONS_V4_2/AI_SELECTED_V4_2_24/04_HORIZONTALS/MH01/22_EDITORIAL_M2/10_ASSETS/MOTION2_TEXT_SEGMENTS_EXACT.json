@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Dando ese, das un 100%, dar un 1 % más todos los días y ese acúmulo de ese 1 % todos los días.",
+  "segments": [
+    "Dando ese, das un 100%, dar un 1",
+    "% más todos los días y ese",
+    "acúmulo de ese 1 % todos los días."
+  ],
+  "reconstructed_text": "Dando ese, das un 100%, dar un 1 % más todos los días y ese acúmulo de ese 1 % todos los días."
+}

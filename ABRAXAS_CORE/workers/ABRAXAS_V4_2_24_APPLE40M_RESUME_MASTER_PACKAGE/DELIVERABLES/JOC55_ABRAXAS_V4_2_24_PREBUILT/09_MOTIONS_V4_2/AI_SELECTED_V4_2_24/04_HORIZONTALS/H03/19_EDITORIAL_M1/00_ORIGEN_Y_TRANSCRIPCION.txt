@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 01:02:26.000 → 01:02:35.000
+TIMELINE: 00:09:12.000 → 00:09:21.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+System que es basado en la evidencia porque todas las referencias de las preguntas que ponemos y todo lo demás es basado en artículos científicos, en libros, documentos,
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0661.

@@ -1,0 +1,43 @@
+{
+  "version": "0.9.6",
+  "name": "ABRAXAS Product Story + Workspace Motion System",
+  "source_priority": ["Apple product pages / HIG / WWDC25", "CleanMyMac operational flow", "Dala particle field", "OHZI immersive object", "Refero/Awwwards interaction references"],
+  "layout_patterns": {
+    "hero": {"max_title_px": 56, "body_px": 17, "composition": "two-column or centered media-led; one thesis + one primary action", "min_height_vh": 64},
+    "highlight_rail": {"card_width": "min(72vw, 920px)", "snap": "x mandatory", "controls": "previous/next + drag/trackpad", "content": "one idea, one visual anchor, one action"},
+    "closer_look": {"pattern": "sticky visual stage + small selector/tabs + contextual copy", "use": ["Home system anatomy", "Clients", "Brand Intelligence"]},
+    "story_scene": {"title_max_px": 44, "body_max_px": 17, "min_height_vh": 52, "variants": ["visual-left", "visual-right", "full-media", "data-live-activity", "disclosure"]},
+    "workspace": {"pattern": "inset sidebar + dominant center stage + one primary action + contextual inspector", "use": ["He", "Shim", "Production", "Assets", "AI Results", "Content Studio"]}
+  },
+  "motion": {
+    "micro_feedback": {"duration_ms": [120,180], "curve": "ease-out", "transform": "opacity/scale <= 1.02"},
+    "selection": {"duration_ms": [160,220], "curve": "cubic-bezier(.2,.8,.2,1)"},
+    "disclosure": {"duration_ms": [220,320], "curve": "cubic-bezier(.22,.61,.36,1)"},
+    "popover": {"duration_ms": [240,380], "origin": "source control", "behavior": "materialize/morph; no arbitrary center popup"},
+    "story_reveal": {"duration_ms": [420,620], "offset_px": 18, "opacity": [0,1], "trigger_ratio": 0.18},
+    "highlight_rail": {"behavior": "native horizontal scroll + scroll snap", "scroll_behavior": "smooth unless reduced motion"},
+    "home_brain_morph": {
+      "particle_count_desktop": 980,
+      "particle_count_mobile": 480,
+      "glyph": "open ABRAXAS chevron / triangle without bottom stroke",
+      "palette": ["#f4ead6", "#d8b46c", "#b78338", "#6e4a1f", "#ffffff"],
+      "states": ["brain", "routes", "queue", "calendar", "network"],
+      "transition": "spring-like interpolation to target coordinates based on active Home story section",
+      "scroll_scope": "Home visual mode only",
+      "hotspots": ["He", "Shim", "Production", "Calendar", "Assets", "Brand Intelligence"]
+    }
+  },
+  "navigation": {
+    "global_trigger": "fixed top-right in every screen",
+    "route_rule": "navigation closes tools/global/more menus before rendering destination",
+    "story_internal": "minimal section menu + Visual/Text toggle",
+    "home_name": "Home"
+  },
+  "architect": {
+    "position": "fixed right utility window",
+    "width_px": [380,430],
+    "behavior": "updates answer in-place; never reloads the full page for preset/query interactions",
+    "context": "module + active story section + open content/task when available"
+  },
+  "accessibility": {"reduced_motion": "freeze morph into current target, remove smooth scroll/reveal transforms", "color": "status never encoded by color alone"}
+}

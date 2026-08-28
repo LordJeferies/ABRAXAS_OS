@@ -1,0 +1,11 @@
+CONTENT: H02
+ROL: EDITORIAL
+FUENTE: 00:39:22.000 → 00:39:30.000
+TIMELINE: 00:04:00.000 → 00:04:08.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces empecé a compartir de manera orgánica todo mi paso a paso, luego empezando a estudiar para este examen que se llama IMPD, que es parte del nombre de la compañía.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0434.

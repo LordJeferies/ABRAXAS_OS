@@ -1,0 +1,45 @@
+{
+  "schema_version": "abraxas.executable.project.v3.1",
+  "project_id": "CLIENT_EPISODE",
+  "output_version": "V3_1",
+  "preserve_legacy": true,
+  "inputs": {
+    "content_html": "/absolute/path/CONTENT_ENGINE_V3_1.html",
+    "intro_html": "/absolute/path/INTRO_LAB_V3_1.html",
+    "vertical_master": "/absolute/path/master_vertical.mp4",
+    "horizontal_master": "/absolute/path/master_horizontal.mp4",
+    "transcript": "",
+    "legacy_root": ""
+  },
+  "output_root": "/absolute/path/PROJECT_OUTPUT_V3_1",
+  "source_policy": {
+    "vertical_burned_subtitles": false,
+    "horizontal_burned_subtitles": true,
+    "microtrim_source": "vertical"
+  },
+  "render": {
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe",
+    "encoder": "h264_videotoolbox",
+    "bitrate": "40M",
+    "maxrate": "48M",
+    "bufsize": "80M",
+    "audio_bitrate": "192k",
+    "hardware_decode": true,
+    "hardware_encode_slots": 1
+  },
+  "mlx": {
+    "enabled": true,
+    "python": "python3",
+    "turbo_model": "",
+    "large_model": "",
+    "language": "es",
+    "min_score": 0.72,
+    "max_delta": 0.45,
+    "initial_prompt": "JOC, Amanda Vicari, INBDE, 123INBDE"
+  },
+  "overrides": {
+    "content_overrides": {},
+    "manual_microtrims": {}
+  }
+}

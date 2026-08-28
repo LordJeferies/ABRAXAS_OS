@@ -1,0 +1,11 @@
+CONTENT: H01
+ROL: EDITORIAL
+FUENTE: 00:17:58.000 → 00:18:07.000
+TIMELINE: 00:03:06.000 → 00:03:15.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+¿Qué es lo que no sé hacer? ¿Qué tengo que hacer para llegar al nivel donde quiero estar? Y más esto. Entonces, ¿qué tengo que hacer todos los días para llegar a esto?
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0204.

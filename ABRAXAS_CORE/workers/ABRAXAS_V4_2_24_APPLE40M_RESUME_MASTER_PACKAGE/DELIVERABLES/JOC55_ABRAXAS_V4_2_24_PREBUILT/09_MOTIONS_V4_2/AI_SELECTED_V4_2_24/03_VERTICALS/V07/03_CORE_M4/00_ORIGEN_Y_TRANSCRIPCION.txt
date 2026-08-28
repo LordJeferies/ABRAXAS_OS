@@ -1,0 +1,11 @@
+CONTENT: V07
+ROL: CORE
+FUENTE: 00:30:09.508 → 00:30:14.818
+TIMELINE: 00:00:30.508 → 00:00:35.818
+DURACIÓN: 5.310s
+
+TRANSCRIPCIÓN EXACTA
+haces, que eso se nota, esa diferencia se nota porque hay millones de personas que son
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0332.

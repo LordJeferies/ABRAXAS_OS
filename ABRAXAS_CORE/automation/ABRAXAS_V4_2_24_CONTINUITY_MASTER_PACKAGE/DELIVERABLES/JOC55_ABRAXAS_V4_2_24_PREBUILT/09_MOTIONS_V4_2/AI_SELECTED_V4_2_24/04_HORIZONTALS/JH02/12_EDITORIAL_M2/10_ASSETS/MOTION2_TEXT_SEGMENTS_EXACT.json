@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "pasando y adaptándote y cambiando de repente de 180 para continuar y seguir haciendo lo que quieres, básicamente.",
+  "segments": [
+    "pasando y adaptándote y cambiando de",
+    "repente de 180 para continuar y",
+    "seguir haciendo lo que quieres, básicamente."
+  ],
+  "reconstructed_text": "pasando y adaptándote y cambiando de repente de 180 para continuar y seguir haciendo lo que quieres, básicamente."
+}

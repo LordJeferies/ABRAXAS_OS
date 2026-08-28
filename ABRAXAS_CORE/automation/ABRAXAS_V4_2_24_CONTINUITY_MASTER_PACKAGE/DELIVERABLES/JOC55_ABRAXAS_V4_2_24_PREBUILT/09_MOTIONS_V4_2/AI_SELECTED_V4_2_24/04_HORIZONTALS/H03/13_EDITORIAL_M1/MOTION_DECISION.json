@@ -1,0 +1,38 @@
+{
+  "sequence": 13,
+  "content_id": "H03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H03_B73",
+  "child_beat_ids": [
+    "H03_B73"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:59:30.000",
+  "source_end": "00:59:39.000",
+  "timeline_in_seconds": 376.0,
+  "timeline_out_seconds": 385.0,
+  "timeline_in": "00:06:16.000",
+  "timeline_out": "00:06:25.000",
+  "duration_seconds": 9.0,
+  "text": "Es lo que tú dices, no tienes una persona aquí atrás diciendo que vas a hacer, no tienes un cheat code en el momento. sea, es como que, ok, tienes el conocimiento pero igual lo tienes que presentar.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0630.",
+  "semantic_score": 3.7,
+  "transcript_reference": "SRT_0630",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

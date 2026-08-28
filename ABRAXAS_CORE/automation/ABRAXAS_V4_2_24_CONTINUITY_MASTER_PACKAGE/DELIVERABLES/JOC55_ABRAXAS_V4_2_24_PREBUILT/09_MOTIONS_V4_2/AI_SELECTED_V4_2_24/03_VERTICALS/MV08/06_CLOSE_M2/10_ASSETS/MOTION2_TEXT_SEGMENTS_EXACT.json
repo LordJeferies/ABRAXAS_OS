@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "qué me va servir esto, qué puedo aprender de esto y cómo puedo convertir el dolor en propósito básicamente.",
+  "segments": [
+    "qué me va servir esto, qué",
+    "puedo aprender de esto y cómo puedo",
+    "convertir el dolor en propósito básicamente."
+  ],
+  "reconstructed_text": "qué me va servir esto, qué puedo aprender de esto y cómo puedo convertir el dolor en propósito básicamente."
+}

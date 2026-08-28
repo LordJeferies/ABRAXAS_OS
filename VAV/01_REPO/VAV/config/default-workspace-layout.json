@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "mode": "desktop-dockable",
+  "root": {
+    "type": "row",
+    "children": [
+      {"type": "panel", "id": "nav.rail", "size": 0.09},
+      {
+        "type": "column",
+        "size": 0.66,
+        "children": [
+          {"type": "panel", "id": "preview.player", "size": 0.58},
+          {
+            "type": "row",
+            "size": 0.42,
+            "children": [
+              {"type": "panel", "id": "timeline.main", "size": 0.58},
+              {"type": "panel", "id": "captions.document", "size": 0.42}
+            ]
+          }
+        ]
+      },
+      {"type": "panel", "id": "inspector.project", "size": 0.25}
+    ]
+  },
+  "detachable": [
+    "preview.player",
+    "timeline.main",
+    "captions.document",
+    "inspector.project"
+  ]
+}

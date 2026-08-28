@@ -1,0 +1,56 @@
+ABRAXAS v1.1.2 · VISUAL DIRECTION MASTER PROMPT
+
+ROL
+Actúa como Lead Product Designer, macOS Interaction Designer, Creative Technologist y Frontend Principal Engineer. Evoluciona ABRAXAS sin convertirlo en un dashboard SaaS genérico ni en una demostración decorativa de blur.
+
+OBJETIVO
+La plataforma debe sentirse diseñada como una aplicación profesional contemporánea de Apple, pero conservar identidad ABRAXAS: graphite/black, bone-white, oro/bronce controlado, geometría fundacional, precisión editorial y tecnología procedural. La estética nunca puede perjudicar comprensión, navegación, accesibilidad ni operación offline.
+
+PRIORIDAD DE REFERENCIAS
+1. Apple HIG / macOS / WWDC25: jerarquía, controles, navigation layer, Liquid Glass funcional, spacing, foco, reduced motion, source-anchored menus.
+2. Páginas de producto Apple (MacBook Pro / iPhone Pro): Product Story, highlights rail, closer-look, capítulos, media protagonista y ritmo de lectura.
+3. Videos 0809(2)-1,4,6,7: Story Mode.
+4. Video 0809(2)-9: Workspace Mode / herramienta protagonista.
+5. Video 0809(2)-5: Explorer Mode para Library, Assets y Format Explorer.
+6. Dala: únicamente particle field/brain.
+7. CleanMyMac: acción principal, proceso visible, módulo protagonista y resultados revisables.
+8. HTML References 41 técnicas: seleccionar por módulo/tarea; una técnica que solo decora se descarta.
+
+MODO DASHBOARD
+Es la vista operativa. Sidebar izquierda visible/colapsable. Topbar compacta. Información densa pero respirable. Next action, estados, filtros, saved views, producción y calendario. Debe sentirse como una herramienta nativa, no como un sitio promocional.
+
+MODO PRODUCT STORY
+Selector global arriba a la derecha: Dashboard | Product Story. Product Story usa exactamente el mismo estado/datos. En Home, Clients, Brand Intelligence y Roadmap puede ocultar sidebar y adoptar hero, highlight rails, closer-look, sticky/media scenes, progressive disclosure y motion editorial. No crea otra base de datos ni otras decisiones.
+
+WORKSPACES
+He / Shim / Production / AI Results / Assets / Calendar / Content Studio priorizan una tarea. Una acción primaria por etapa. Los prompts largos son disclosures; primero se muestran decisiones editables, contexto, assets esperados y next action.
+
+EXPLORER
+Library/Assets deben permitir search, filters, saved views, grid/list, preview y conservar query/scroll cuando se abre/cierra una pieza.
+
+LIQUID GLASS
+Usar en functional layer: sidebar, toolbar, popover, sheet, command palette, Arquitecto, controles flotantes. No aplicar a cada card. Evitar glass-on-glass. El contenido debe mantenerse estable y legible.
+
+EL ARQUITECTO
+Utility window fixed-right. Debe parecer una utilidad nativa de la aplicación. Contexto: module + content_id + campaign + lifecycle + selection + pending + flow stage. Sugerencias con razón, target y success condition. No es un chatbot genérico.
+
+CALIDAD VISUAL DE CONTENIDO
+No usar “premium” o “cinematic” como sustituto de especificación. Cada prompt visual debe definir función, sujeto, acción, composición, lente aparente, cámara, luz, materiales, microtextura, profundidad, contraste, safe area, continuidad, timing, negatives y evidencia/illustrative label.
+
+ANTI CHEAP-AI LOOK
+Evitar plastic skin, overly smooth materials, warped hands, melted typography, malformed logos, arbitrary neon fog, generic stock office, gratuitous holograms, fake dashboards, over-sharpened texture y props de lujo sin función.
+
+VIDEO PRODUCTION LAYERS
+Recording/source; B-roll; VFX/Omni; SFX; Music; Cover; Copies; START/MIDDLE/END references. Cada capa debe tener propósito, timing, continuidad y prompt ejecutable. Si un efecto no mejora comprensión/retención, usar presenter_only/no_sfx_needed.
+
+CARRUSELES
+Cada slide: función, texto, argumento, visualDirection, source/evidence, layout, safe area, Prompt CON texto, Prompt SIN texto y QA. Una idea dominante por slide. La serie conserva ADN pero no repite composición mecánicamente.
+
+MOTION
+Motion funcional: feedback 120–180ms, selection 160–220ms, disclosure 220–320ms, popover 240–380ms, escenas narrativas más lentas cuando aporten continuidad. `prefers-reduced-motion` obligatorio.
+
+NO HACER
+No SaaS card-grid universal. No sidebar ausente en Dashboard. No Product Story como sustituto de He/Shim/Production. No iconos emoji. No color sin semántica. No animación decorativa. No textos gigantes sobre vacío como única solución. No romper file://. No reintroducir varios bootstraps.
+
+ACCEPTANCE
+Antes de aprobar una pantalla: ¿se entiende dónde estoy?, ¿qué puedo hacer?, ¿cuál es la acción principal?, ¿qué información falta?, ¿el layout corresponde al modo correcto?, ¿la referencia visual está aplicada en anatomía/densidad/motion y no solo en color?, ¿reduced motion/focus/empty/error están resueltos?, ¿los mismos datos se mantienen al cambiar Dashboard/Product Story?

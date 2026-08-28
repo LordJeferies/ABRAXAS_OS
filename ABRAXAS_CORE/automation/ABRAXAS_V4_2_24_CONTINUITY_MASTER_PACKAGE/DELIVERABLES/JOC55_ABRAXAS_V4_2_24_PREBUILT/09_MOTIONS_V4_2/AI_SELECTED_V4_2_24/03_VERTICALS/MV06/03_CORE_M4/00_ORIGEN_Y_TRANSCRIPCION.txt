@@ -1,0 +1,11 @@
+CONTENT: MV06
+ROL: CORE
+FUENTE: 01:13:35.494 → 01:13:41.920
+TIMELINE: 00:00:20.406 → 00:00:26.832
+DURACIÓN: 6.426s
+
+TRANSCRIPCIÓN EXACTA
+Puedo decir que no fue como de la noche a la mañana porque,
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0783.

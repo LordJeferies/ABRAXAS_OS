@@ -1,0 +1,11 @@
+CONTENT: MH01
+ROL: EDITORIAL
+FUENTE: 00:09:29.526 → 00:09:34.655
+TIMELINE: 00:05:11.729 → 00:05:16.858
+DURACIÓN: 5.129s
+
+TRANSCRIPCIÓN EXACTA
+pero también es un poco peligroso en mi opinión porque se hace como una idealización
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0111.

@@ -1,0 +1,43 @@
+{
+  "content_id": "",
+  "beat_id": "",
+  "timecode": "",
+  "transcript_exact": "",
+  "motion_primary": 1,
+  "motion_alternative": 2,
+  "why_motion": "",
+  "format": "vertical|horizontal|podcast_intro|voice_over",
+  "speaker_behavior": "",
+  "reference_style": {
+    "primary": "REF A-E",
+    "principles_taken": []
+  },
+  "visual_summary": "",
+  "relation_to_spoken_text": "",
+  "symbolic_logic": "",
+  "frames": [
+    {
+      "frame_id": "",
+      "time_range": "",
+      "narrative_function": "",
+      "event": "",
+      "quick_visual_summary": "",
+      "exact_image_long_description": "",
+      "exact_text_on_image": "NONE",
+      "text_material_integration": "",
+      "image_prompt": "",
+      "optional_animation": "",
+      "animation_prompt": "",
+      "continuity_in": "",
+      "continuity_out": "",
+      "negatives": []
+    }
+  ],
+  "qa": {
+    "image_works_as_still": true,
+    "visual_has_function": true,
+    "client_fit": true,
+    "format_fit": true,
+    "no_fabricated_claims": true
+  }
+}

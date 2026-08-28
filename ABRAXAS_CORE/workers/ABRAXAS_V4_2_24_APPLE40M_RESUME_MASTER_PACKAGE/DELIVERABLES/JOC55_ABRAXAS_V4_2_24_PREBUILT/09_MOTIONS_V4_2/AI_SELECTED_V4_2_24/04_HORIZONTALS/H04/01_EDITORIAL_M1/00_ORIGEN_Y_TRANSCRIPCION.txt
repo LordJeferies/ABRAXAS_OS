@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:13:35.444 → 01:13:42.901
+TIMELINE: 00:00:05.444 → 00:00:12.901
+DURACIÓN: 7.457s
+
+TRANSCRIPCIÓN EXACTA
+Puedo decir que no fue como de la noche a la mañana porque, primero es
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0783.

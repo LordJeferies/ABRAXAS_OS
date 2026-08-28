@@ -1,0 +1,11 @@
+CONTENT: V09
+ROL: CORE
+FUENTE: 00:46:00.460 → 00:46:05.052
+TIMELINE: 00:00:30.460 → 00:00:35.052
+DURACIÓN: 4.592s
+
+TRANSCRIPCIÓN EXACTA
+No porque subestimemos el proceso, para nada, we acknowledge que es bien complicado,
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0497.

@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:15:09.000 → 01:15:16.000
+TIMELINE: 00:01:39.000 → 00:01:46.000
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+Y la gente es fascinada porque las personas también piensan que a veces el producto... Yo soy súper perfeccionista, súper detail-oriented.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0796.

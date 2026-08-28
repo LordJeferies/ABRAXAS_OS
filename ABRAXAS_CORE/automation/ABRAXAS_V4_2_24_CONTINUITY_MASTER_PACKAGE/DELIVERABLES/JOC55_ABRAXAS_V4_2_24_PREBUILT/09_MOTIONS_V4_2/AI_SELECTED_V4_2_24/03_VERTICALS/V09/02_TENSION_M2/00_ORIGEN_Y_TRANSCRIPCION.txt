@@ -1,0 +1,11 @@
+CONTENT: V09
+ROL: TENSION
+FUENTE: 00:45:47.000 → 00:45:56.000
+TIMELINE: 00:00:17.000 → 00:00:26.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Como todo, siento que nosotros lo que hicimos y la razón por la cual nos llamamos 123, IMPD, es que tomamos un proceso que es complejo.
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0495.

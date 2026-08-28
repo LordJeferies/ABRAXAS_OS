@@ -1,0 +1,39 @@
+{
+  "sequence": 6,
+  "content_id": "V14",
+  "narrative_role": "CLOSE",
+  "source_part_id": "V14_P13",
+  "child_beat_ids": [
+    "V14_B18",
+    "V14_B19"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:24:41.384",
+  "source_end": "00:24:48.213",
+  "timeline_in_seconds": 65.384,
+  "timeline_out_seconds": 72.213,
+  "timeline_in": "00:01:05.384",
+  "timeline_out": "00:01:12.213",
+  "duration_seconds": 6.829,
+  "text": "perseguir mis sueños y hacerlo de una manera intencional y organizada. Nada, no funcionó. Perfecto, hacemos pivot.",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0277.",
+  "semantic_score": 8.4028,
+  "transcript_reference": "SRT_0277",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La selección funciona como tesis, contradicción o payoff editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

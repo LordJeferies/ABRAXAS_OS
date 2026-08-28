@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Como todo, siento que nosotros lo que hicimos y la razón por la cual nos llamamos 123, IMPD, es que tomamos un proceso que es complejo.",
+  "segments": [
+    "Como todo, siento que nosotros lo que hicimos y",
+    "la razón por la cual nos llamamos 123,",
+    "IMPD, es que tomamos un proceso que es complejo."
+  ],
+  "reconstructed_text": "Como todo, siento que nosotros lo que hicimos y la razón por la cual nos llamamos 123, IMPD, es que tomamos un proceso que es complejo."
+}

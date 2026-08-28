@@ -1,0 +1,36 @@
+{
+  "sequence": 4,
+  "content_id": "V08",
+  "narrative_role": "SHIFT",
+  "source_part_id": "V08_P08",
+  "child_beat_ids": [
+    "V08_B08"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:40:22.000",
+  "source_end": "00:40:28.000",
+  "timeline_in_seconds": 48.0,
+  "timeline_out_seconds": 54.0,
+  "timeline_in": "00:00:48.000",
+  "timeline_out": "00:00:54.000",
+  "duration_seconds": 6.0,
+  "text": "Entonces es como ese primer paso que es icónico y que es insignia para nosotros. Entonces.",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0444.",
+  "semantic_score": 9.9066,
+  "transcript_reference": "SRT_0444",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La idea central se entiende mejor como relación o proceso visual.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

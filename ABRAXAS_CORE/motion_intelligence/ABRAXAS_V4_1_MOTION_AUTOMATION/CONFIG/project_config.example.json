@@ -1,0 +1,56 @@
+{
+  "schema_version": "abraxas.executable.project.v4.1",
+  "project_id": "CLIENT_EPISODE",
+  "output_version": "V4_1",
+  "preserve_legacy": true,
+  "inputs": {
+    "content_html": "/absolute/path/CONTENT_ENGINE_V3_1.html",
+    "intro_html": "/absolute/path/INTRO_LAB_V3_1.html",
+    "vertical_master": "/Users/USER/Desktop/Joc podcast next ep 55/00_MASTERS_OFICIALES/JOC55_MASTER_VERTICAL_OFICIAL.mp4",
+    "horizontal_master": "/Users/USER/Desktop/Joc podcast next ep 55/00_MASTERS_OFICIALES/JOC55_MASTER_HORIZONTAL_OFICIAL.mp4",
+    "transcript": "",
+    "legacy_root": ""
+  },
+  "output_root": "/Users/USER/Desktop/Joc podcast next ep 55/JOC55_ABRAXAS_V4_1_OUTPUT",
+  "source_policy": {
+    "vertical_burned_subtitles": false,
+    "horizontal_burned_subtitles": true,
+    "microtrim_source": "vertical"
+  },
+  "render": {
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe",
+    "encoder": "h264_videotoolbox",
+    "bitrate": "40M",
+    "maxrate": "48M",
+    "bufsize": "80M",
+    "audio_bitrate": "192k",
+    "hardware_decode": true,
+    "hardware_encode_slots": 1
+  },
+  "mlx": {
+    "enabled": true,
+    "python": "python3",
+    "turbo_model": "",
+    "large_model": "",
+    "language": "es",
+    "min_score": 0.72,
+    "max_delta": 0.45,
+    "initial_prompt": "JOC, Amanda Vicari, INBDE, 123INBDE"
+  },
+  "motion": {
+    "enabled": true,
+    "strict_assets": false,
+    "selection_overrides": {},
+    "preview_encoder": "h264_videotoolbox"
+  },
+  "davinci": {
+    "revision": "V4_1",
+    "fps": 30,
+    "protect_existing_timelines": true
+  },
+  "overrides": {
+    "content_overrides": {},
+    "manual_microtrims": {}
+  }
+}

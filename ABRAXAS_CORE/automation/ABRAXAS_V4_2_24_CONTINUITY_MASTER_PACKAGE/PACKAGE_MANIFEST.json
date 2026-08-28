@@ -1,0 +1,29 @@
+{
+  "schema_version": "abraxas.continuity-master-package.v4.2.24",
+  "release": "ABRAXAS_V4_2_24_CONTINUITY_MASTER_PACKAGE",
+  "created_at": "2026-08-21",
+  "executable_base": "V4.2.5 verified",
+  "motion_system": "V7",
+  "counts": {
+    "verticals": 37,
+    "vertical_motions": 222,
+    "horizontals": 12,
+    "horizontal_motions": 255,
+    "selected_motion_windows": 477,
+    "intro_routes": 6,
+    "transcript_source_cues": 953,
+    "transcript_reference_windows": 842
+  },
+  "validation": {
+    "status": "PASS_WITH_EDITORIAL_WARNINGS",
+    "blockers": 0,
+    "vertical_duration_warnings": 10,
+    "historical_tests_passed": 37,
+    "v4_2_24_tests_passed": 12
+  },
+  "entrypoints": [
+    "TERMINAL/CREAR_HOTFIX.command",
+    "TERMINAL/GENERAR_PRODUCCION_COMPLETA.command",
+    "TESTS/VALIDAR_PAQUETE.command"
+  ]
+}

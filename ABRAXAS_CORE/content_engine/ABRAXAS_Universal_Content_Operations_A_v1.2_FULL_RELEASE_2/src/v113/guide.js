@@ -1,0 +1,6 @@
+(function(root,factory){const api=factory(root.V113_COMPONENTS);root.V113_GUIDE=api;if(typeof module!=='undefined'&&module.exports)module.exports=api;})(typeof globalThis!=='undefined'?globalThis:this,function(C){
+'use strict';
+const FLOWS=[['Crear desde cero','dashboard → He → prompt → IA → Resultados IA → Studio → Production → QA → Calendar → Published'],['Procesar un podcast','Shim → Master Prompt → review HTML → confirmar → SHIM_CONFIRMED_MANIFEST → Terminal/DaVinci + carruseles'],['Grabar','Production → Recording → Studio Guion/Talento → Teleprompter → vincular master/source → Editing'],['Resolver copies','Production → Copy → Studio Copies → manual o prompt → aprobar'],['Diseñar','Production → Design → Studio Diseño → prompts CON/SIN texto → Asset slot → QA'],['Editar','Production → Editing → Studio Edición → source/B-roll/VFX/SFX/Music → render → QA'],['Publicar','Publishing → revisar dependencias → Calendar → PUBLISHED']];
+function render(){return `<section class="v113-guide">${C.sectionTitle('Cómo usar ABRAXAS','Rutas completas desde intención hasta publicación.')}<div class="v113-guide-grid">${FLOWS.map(([t,d],i)=>`<article class="v113-panel"><span>${String(i+1).padStart(2,'0')}</span><h2>${t}</h2><p>${d}</p></article>`).join('')}</div></section>`;}
+return{render,FLOWS};
+});

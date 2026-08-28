@@ -1,0 +1,11 @@
+CONTENT: JV01
+ROL: CLOSE
+FUENTE: 00:09:09.088 → 00:09:17.085
+TIMELINE: 00:01:07.046 → 00:01:15.043
+DURACIÓN: 7.997s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, yo sí pienso que la universidad tiene un valor mucho más allá de solamente las hard skills. totalmente.
+
+MOTIVO
+Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0108.

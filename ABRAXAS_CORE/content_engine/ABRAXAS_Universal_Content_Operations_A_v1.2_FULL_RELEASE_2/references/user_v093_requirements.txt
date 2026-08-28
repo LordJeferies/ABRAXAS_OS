@@ -1,0 +1,306 @@
+Para los diferentes clientes, estaria bueno que el color principal sea en funcion de los colores de la marca de cada cliente
+
+tambien entrea en este y en todos sus subenlaces porque esta buena toda la informacion que tambien hay en los seleccionables de la izquierda https://developer.apple.com/design/human-interface-guidelines/
+
+Procesó durante 1m 40s
+
+Sí. Esto mejora bastante la definición de v0.9.3.
+
+Voy a convertir el HIG completo en una matriz de diseño de ABRAXAS, no limitarme a copiar algunas referencias de Liquid Glass. Ya mapeé la navegación actual del Human Interface Guidelines —Foundations, Patterns, Components y las áreas de interacción— y profundicé en las páginas aplicables a ABRAXAS como Branding, Color, Dark Mode, Materials, Typography, Layout, Sidebars, Toolbars, Windows, Split Views, Lists/Tables, Menus, Popovers, Disclosure Controls, Search, Drag & Drop, File Management, Feedback, Onboarding, Offering Help, Undo/Redo y Accessibility. Algunas páginas índice de Apple cargan dinámicamente, pero sus páginas individuales están disponibles en la documentación oficial.
+
+Color por cliente
+
+Sí: el cliente seleccionado cambiará el accent system de toda la plataforma, sin convertir cada cliente en una aplicación visualmente distinta.
+
+Eso encaja directamente con HIG. Apple recomienda que una marca pueda expresarse mediante un accent color, pero que la marca permanezca subordinada al contenido y conserve patrones familiares. También señala que el color personalizado puede ser especialmente efectivo como accent en interfaces predominantemente monocromáticas.
+
+Por tanto, ABRAXAS tendrá una base permanente:
+
+Mac Spatial Dark
+negro / graphite / gray / white
+
+y encima:
+
+CLIENT ACCENT
+
+Ejemplo conceptual:
+
+ABRAXAS
+→ Gold
+
+Moka Bio
+→ Sage / Deep Forest / Fresh Green
+
+JOC
+→ Accent extraído de su sistema oficial
+
+INENERGY
+→ Accent extraído de su identidad oficial
+
+Nuevo cliente
+→ Accent definido en Brand Identity / Source of Truth
+
+No voy a inventar colores cuando el cliente no tenga un color validado: el token se alimentará de su Brand Core/Brand Identity.
+
+Internamente:
+
+--client-accent
+--client-accent-strong
+--client-accent-soft
+--client-accent-glow
+--client-accent-surface
+--client-accent-border
+--client-accent-text
+
+y esos tokens cambiarán dinámicamente al seleccionar cliente.
+
+Por ejemplo, en Moka:
+
+Sidebar selection
+Progress indicators
+Selected format
+Active tab
+Primary CTA
+Focus ring
+Calendar client marker
+Production progress
+Small chart accents
+
+tomarán la identidad Moka.
+
+Pero:
+
+Warnings
+Success
+Errors
+Lifecycle states
+QA
+Published
+
+mantendrán colores semánticos propios.
+
+Esto es importante porque Apple explícitamente recomienda no reutilizar el mismo color para significados diferentes.
+
+Así evitamos que “verde Moka” signifique simultáneamente:
+
+Moka + Aprobado + Publicado + Correcto.
+
+El color de cliente identifica marca. El icono/estado identifica workflow.
+
+Una pieza podrá seguir mostrando varias dimensiones sin volverse un arcoíris
+
+Por ejemplo:
+
+MOKA                 ← accent verde
+CARRUSEL             ← icono + label
+L1                    ← texto
+● REVIEW              ← estado semántico
+████████░░ 78%        ← progreso
+
+No necesitamos colorear toda la tarjeta.
+
+Esto también cumple la recomendación de Accessibility de no transmitir información únicamente mediante color. Apple recomienda combinarlo con forma, iconos o texto.
+
+Lo más importante que extraigo del HIG completo
+
+Hay varias reglas que ahora incorporaría formalmente a ABRAXAS Interface System 1.0.
+
+Purpose / Familiarity / Feedback / Responsibility. Apple vuelve a poner estas ideas entre sus principios fundamentales: la intención debe ser evidente, los patrones deben resultar familiares, cada acción necesita feedback claro y el sistema debe ser transparente sobre qué hace. En ABRAXAS esto significa que cualquier pantalla debe responder Dónde estoy / Qué puedo hacer / Qué ocurrió / Qué sigue.
+Progressive disclosure como regla sistémica. Los Disclosure Controls de Apple recomiendan mantener visible lo más importante y esconder los detalles avanzados hasta que sean relevantes. Esto pasa a gobernar prompts profundos, VFX avanzados, Branding prompts, Production Tasks, configuraciones de He y propiedades visuales.
+Sidebar para destinos; inspector para propiedades. Sidebars están concebidas para moverse entre áreas o colecciones principales, mientras que paneles/inspectors sirven para información complementaria del elemento seleccionado. ABRAXAS dejará de utilizar la sidebar para intentar mostrar estado interno de una pieza.
+Split views donde realmente tienen sentido. Apple permite presentar panes adyacentes de navegación/contenido/inspector y ocultar columnas secundarias al reducir el ancho. Esto encaja perfectamente con el editor visual avanzado:
+Units → Preview → Inspector.
+Lists antes que grids cuando importa leer. Lists/Tables son particularmente útiles cuando hay información jerárquica o textual extensa. Production Queue, Resultados IA y Assets usarán más list/detail y menos card-grid masivo.
+Popovers para decisiones breves. Un popover debe contener poca información o unas pocas acciones relacionadas y desaparecer al terminar. Eso lo aplicaremos a Leyenda, Mover fecha, Cambiar estado, información breve de formato y pequeñas configuraciones.
+Sheets para tareas acotadas. No se van a abrir páginas completas para operaciones pequeñas como vincular un asset o mapear un resultado.
+Menus para comandos secundarios. Apple considera los menus una manera eficiente de revelar comandos sin ocupar espacio permanente. De ahí saldrán Duplicar / Mover / Archivar / JSON / Historial técnico, mientras la acción principal permanece visible.
+Toolbar limitada a acciones frecuentes. En macOS la toolbar pertenece al frame superior de la ventana, y HIG recomienda mantener comportamiento y apariencia coherentes. Esto reducirá drásticamente los topbars de ABRAXAS.
+Search mucho más importante. Apple muestra el search field no solo para buscar texto, sino para filtrar estructuras profundas y utilizar scopes/tokens. La Biblioteca debería evolucionar hacia algo como:
+Moka · Carrusel · Review · Agosto
+mediante tokens/chips buscables.
+Drag & Drop debe comunicar source y destination. Esto es particularmente relevante para Calendar y Assets. Apple define explícitamente source/destination y diferencia move de copy. ABRAXAS deberá dar feedback visual claro cuando una pieza se está calendarizando, moviendo o vinculando.
+File Management debe sentirse familiar. En Mac las personas ya poseen modelos mentales basados en Finder y comandos New/Open. El Workspace de Assets aprovechará esa familiaridad: ruta visible, carpeta destino, reveal/import/sync y archivos huérfanos claramente identificados.
+Undo/Redo. Apple destaca que poder revertir acciones da libertad para explorar sin miedo. Esto es muy importante para ABRAXAS: mover un contenido, cambiar status, modificar estructura o reemplazar un asset debe poder revertirse. Lo incorporaría primero como undo stack local.
+Feedback proporcional. HIG distingue status pasivo de warnings y errores de mayor importancia. Guardado automático, por ejemplo, no necesita una alerta; puede mostrar un pequeño Guardado. Un resultado que sobreescribiría contenido aprobado sí necesita confirmación explícita.
+Help contextual. Apple recomienda que las instrucciones relacionadas con una parte de la interfaz aparezcan cerca de esa parte y advierte que si hacen falta párrafos enormes para explicar un control, probablemente hay que simplificar el control. Esto es exactamente lo que necesitaba Cómo usar ABRAXAS.
+Dark Mode no es invertir blanco por negro. Apple utiliza fondos más apagados, foregrounds más luminosos y jerarquías elevadas para popovers/sheets. También recomienda contrastes mínimos y colores adaptativos. Esto cambia varios negros absolutos actuales de ABRAXAS por superficies semánticas.
+Typography necesita menos variantes, no más. Apple advierte que demasiadas fuentes dificultan jerarquía y legibilidad. En el HTML usaremos principalmente system-ui con peso, tamaño y tracking para crear jerarquía, no cinco familias tipográficas.
+Mac es un entorno de productividad profunda. HIG destaca el espacio, flexibilidad y capacidad de personalización de macOS, incluido configurar toolbars, ventanas y contenido visible. Esto refuerza que ABRAXAS debe sentirse más cercano a una workstation editorial que a una landing/dashboard SaaS.
+Esto cambia también el Client Switcher
+
+El cliente activo pasará a ser algo más importante que un simple <select>.
+
+Imagino una pieza compacta en toolbar/sidebar:
+
+● MOKA BIO
+  Workspace editorial
+          ⌄
+
+Al abrirla:
+
+ABRAXAS
+JOC
+Moka Bio     ✓
+INENERGY
+────────────
++ Nuevo cliente
+
+Al cambiar de cliente:
+
+cambia accent;
+Dashboard se filtra;
+Biblioteca se filtra;
+formatos de He cambian;
+Brand Core cambia;
+Calendar mantiene contexto;
+Production Queue cambia;
+búsqueda actualiza scopes.
+
+La geometría de ABRAXAS no cambia.
+
+Esto cumple mucho mejor la idea de Branding de Apple: personalidad propia sin romper patrones familiares de interacción.
+
+También agregaría personalización
+
+La guía específica de macOS recomienda permitir cierto grado de personalización.
+
+Sin convertir ABRAXAS en un panel de preferencias interminable, permitiría:
+
+Sidebar
+Expanded / Compact
+
+Density
+Comfortable / Compact
+
+Preview
+On / Off
+
+Client Accent
+Brand / Neutral
+
+Inspector
+Right / Hidden
+
+y ABRAXAS recuerda esas preferencias localmente.
+
+Visual Regression Gate ampliado
+
+Además de overflow, solapamientos y responsive, v0.9.3 tendrá un HIG audit propio:
+
+HIERARCHY
+¿El contenido gana visualmente a los controles?
+
+HARMONY
+¿Los radios, spacing y materiales son coherentes?
+
+CONSISTENCY
+¿El mismo control se comporta igual en todos los módulos?
+
+PURPOSE
+¿Se entiende inmediatamente para qué sirve la pantalla?
+
+FEEDBACK
+¿Toda acción importante confirma qué ocurrió?
+
+DISCLOSURE
+¿Se está enseñando información avanzada antes de necesitarla?
+
+COLOR
+¿El accent identifica cliente sin confundirse con estado?
+
+ACCESSIBILITY
+¿Existe icono/texto además de color?
+¿Contraste suficiente?
+¿Focus visible?
+
+NAVIGATION
+¿Sé dónde estoy y cómo volver?
+
+RECOVERY
+¿Puedo deshacer acciones relevantes?
+
+HELP
+¿La explicación está cerca del punto de uso?
+
+Ese gate me parece bastante más importante que simplemente intentar “copiar macOS”.
+
+Con esta última revisión, la identidad visual de v0.9.3 queda definida como:
+
+ABRAXAS Interface System 1.0 · Mac Spatial Dark + Dynamic Client Accent
+
+La interfaz estructural es siempre ABRAXAS; la marca activa colorea el sistema sin apoderarse de él.
+
+Y, sobre todo, voy a usar el HIG como un sistema completo de reglas para ABRAXAS, no únicamente como inspiración visual de Liquid Glass. Eso incluye navegación, layout, componentes, feedback, ayuda, búsqueda, archivos, accesibilidad, estados, inputs y recuperación de errores.
+
+El diseño de v0.9.3 queda con esto suficientemente cerrado para pasar a implementación cuando me indiques que lo ejecute.
+https://m3.material.io/styles/motion/overview
+https://m3.material.io/styles/motion/easing-and-duration
+https://m3.material.io/styles/motion/transitions
+https://m3.material.io/styles/motion/overview/how-it-works
+https://developer.apple.com/design/human-interface-guidelines/
+https://developer.apple.com/design/human-interface-guidelines
+https://developer.apple.com/videos/play/wwdc2025/219/
+https://developer.apple.com/videos/play/wwdc2025/356/
+https://developer.apple.com/videos/play/wwdc2025/220/
+https://developer.apple.com/videos/play/wwdc2025/208/
+https://developer.apple.com/videos/play/wwdc2025/359/
+https://developer.apple.com/videos/play/wwdc2025/361/
+https://developer.apple.com/design/resources/
+https://www.figma.com/es-la/comunidad/file/1651309003795292092/ios-and-ipados-27
+https://www.figma.com/es-la/comunidad/file/1651309434229735362/macos-27
+https://www.figma.com/es-la/comunidad/file/1253443272911187215/apple-design-resources-visionos
+https://www.figma.com/es-la/comunidad/file/1367915437752334285/live-activities
+Y esto es la revisión del B-09.2. Eldah está bien, debería tener mejor proporción en la pantalla en lo que aparece. Asegúrate de poder revisarlo. lo de los clientes también está bien, pero el botón, que lo que hice es conten Operation System, Cast casi se monta encima de la palabra Braxa, es igual que lo demás, pero está bueno lo de los formatos y demás, pero estaría mejor que si le oye el sistema editorial y aplicada y tal o despliegue una ventana que me diga que de qué trata eso o haya como al darle aquí que pueda dar un poco más de información del cliente. 
+Si lo doy en formato es que me muestre cuáles son los formatos, los dos copy Profes, los 25 tools y así s sucesivamente . Siento ver la biblioteca, la biblioteca ahora funciona mejor. Sitro a leer el contenido de 1 × 1. 
+Estaría bueno que entre las primeras cosas que aparece un texto me digas si es un carrusel o un reel o un video horizontal . Sé que si cuando le den contenido, viste ri Slash video, el guiónproducción, pero es solo ci entro después. Entonces la idea es que se pueda ver a la primera ya en el Overview o en la información general que tiene el contenido en cuestión. 
+Me gusta que dice el porcentaje de producción que lleva, pero .. Perfecto. Sí, por acá esto está bien. 
+Me agrada cuando se va viendo. Igual la edición de los prs, como lo de anteriormente, el poser tiene que estar tiene que traer más cosas, o sea, no solo la tesis, la intención y el tema, sino que te dar algo estructura que se pueda editar para que sea funcional por si alguna de estas cosas no van a acorde con lo que se quiere crear. calendario está funcionaría mejor, el botón de dar también está mejor. Falta un botón donde pueda darla y me pueda desplegar una leyenda y esa leyenda tiene que estar como más elaborada, ser más específica por las partes de los procesos en los que puede ir cada pieza, los tipos de pieza, puedas tener ponte que una pieza pueda tener hasta tres colores diferentes o algo por ese estilo. 
+Igual puede adjuntar una foto que leo un poco de órdenes. Con lo del Gon Ftu , intermedio. Me gusta que aparezca el tipo de contenido primero una vez después que seleccione el cliente, tipo arriba vertical, el carrusel, videos horizontal, etc. 
+Que eso marca la pauta de qué es el tipo de contenido que se va a crear. Pero luego, por ejemplo, estoy ahora en boca bío , y no me dejas seleccionando un nuevo artículo y no me deja seleccionar ninguna de las de los formatos del cliente de Moca. La idea sería que aquí yo pueda seleccionar cualquiera, es decir, ID puede ser un reel vertical de investigación y desarrollo yesión, pero eso lo que seleccionaría es el tipo de estructura que tiene para replicarlo en una nota. 
+Y luego los patrones reutilizzado el propio, puedoponer que bueno, sea una nota de artículo o un pose LinkedIn o un newsletter, pero lo mismo lo que hace es combinar esos formatos para crear una nota o artículo. Ahora, si lo hay en riel vertical y después se televisiónan otra vez y vestigaciones y desarrollo de decisión ahí en efecto, estaría combinando las dos cosas y luego de vuelta a lo que condiciona lo que se va a usar el contenido que se va a producir es la primera pregunta. Lo del catálogo, el formato del cliente debería tener ahí los pilares de ese cliente, los formatos de contenido de los formatos de contenido del cliente, los patrones reutilizables, lo mismo el cliente tener pilares y formato. 
+Así se puede elegir. En los formatos específicos como el Dixetliner, porque me gustaría , por ejemplo, poder hacer un carrusel de DeepFer para mocabillo. Sin embargo, no puedo porque no me habilita la opción, pero de vuelta, lo que importa para crear el contenido, hacer la selección de arriba que de que quiero producir y luego el formato del cliente y el formato universal tienen que ser cosas que den estructuras y contextos con los pilares y patrones que ya están o sea, patrones, que ya estén que ya sean parte de esa misma de ese mismo cliente o los patrones generales o neuales, ¿no? 
+También está muy bueno que se puede seleccionar de uno a 6 cuánto se va a crear de cada el contenido a este Sin embargo, se perdió el botón para crear el lote. El ponle a eso Pues no sé si meterlo dentro el contrat Factory igual , pero de verdad que no hay un botón en donde pueda darle para crearlo el lote con los conceptos estos que ya hemos hablado que la idea es que si se va a crear el lote, se selecciona las cadencias por semana , siempre tiene que haber un reel y un carrusel principal por semana. cuando sea de cadencia alta, habría dos niveles y dos carrusel por semana con respecto al dote uno. Luego los otros igual si van generando esta otra información, ¿no? 
+Tal que se reajusta ese tipo de contenido. A ver, también ten en cuenta las otras correcciones que yo había hablado de cómo generar los notas, los comentarios anteriores. El producción Queen Está mucho mejor organizadora, pero de vuelta a la interfaz podría darse mejor ahorita. 
+Igual. siguiente que vaya referencias visuales. El Shin está bueno. Y cómo usar la herramientas sigue sin explicar demasiado bien cómo se usa. 
+Si bien está el flujo , debería estar mejor explicado el flujo y que sean botones explables información como para leer y tener referencia también de cómo hacer las cosas, no solo que sea un texto de quiero planificar esta semana y le hice justamente planner una semana decidí usar continuo existente, no usar contenido existente, revisarle uno, guardar, producir faltante . Sí, pero no me dice dónde, cómo, ni cómo anda. Y la idea es poder tener una referencia real de aquel es lo que se va a hacer y cómo se hace eso. 
+En el bokmap solo pusiste en una cosa más grande que la otra y el nombre de semilla de raíces, tronco de ramas, copa y ecosistema. Puede ser mejor también. Me gusta que hay un botón que me lleva hoy directamente a la biblioteca editorial esta semana . 
+También lo dependiente de por crear en IA, el resultado y pendiente, lo he revisado, pendiente de producción, esas cosas de la biblioteca me parecen bien. Pero esos botones deberían gus estar mejor organizados . Ca en dos como para que se puedan leer mejor. 
+El que no se monte uno encima de otro, pues como que haya dos filas de botones o algo así . No sé aún, pero va por ese estilo la solución. Porque las letras en general no están tan, o sea, no se montan unas encimas las otras el título de Contro editorial sin ruido. 
+Justamente tiene la idea que no genera ruido . Eso por ahora
+
+
+
+Con respecto a lo visual, que todo sea como un dark mode de apple ten en cuenta todas las reglas que hay dentro de estas paginas https://developer.apple.com/design/ https://developer.apple.com/design/human-interface-guidelines/designing-for-macos
+
+https://developer.apple.com/design/get-started/
+
+
+
+https://developer.apple.com/pass-designer/
+
+
+
+https://developer.apple.com/reality-composer-pro/
+
+
+
+https://developer.apple.com/sf-symbols/
+
+
+
+https://developer.apple.com/icon-composer/
+
+
+
+https://developer.apple.com/design/human-interface-guidelines/
+
+
+
+https://developer.apple.com/design/human-interface-guidelines/designing-for-macos
+https://developer.apple.com/design/get-started/
+https://developer.apple.com/pass-designer/
+https://developer.apple.com/reality-composer-pro/
+https://developer.apple.com/sf-symbols/
+https://developer.apple.com/icon-composer/
+https://developer.apple.com/design/human-interface-guidelines/designing-for-macos
+https://developer.apple.com/design/

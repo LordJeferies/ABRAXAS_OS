@@ -1,0 +1,10 @@
+{
+  "name": "@vav/caption-compiler",
+  "version": "0.0.1-dev",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@vav/visual-motion-domain": "workspace:*"
+  }
+}

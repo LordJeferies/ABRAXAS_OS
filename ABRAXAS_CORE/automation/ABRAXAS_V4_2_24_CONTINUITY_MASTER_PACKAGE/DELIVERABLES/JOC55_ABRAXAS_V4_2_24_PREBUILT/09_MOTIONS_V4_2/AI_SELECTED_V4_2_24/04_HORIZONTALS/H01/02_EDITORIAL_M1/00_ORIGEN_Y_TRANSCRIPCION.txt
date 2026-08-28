@@ -1,0 +1,11 @@
+CONTENT: H01
+ROL: EDITORIAL
+FUENTE: 00:15:58.000 → 00:16:07.000
+TIMELINE: 00:01:06.000 → 00:01:15.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Mi papá para mí era mi ídolo profesional, ejemplo de liderazgo, ejemplo de todo, de cómo tratar a los demás, como...
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0180.

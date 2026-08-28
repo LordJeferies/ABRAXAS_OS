@@ -1,0 +1,11 @@
+CONTENT: JV11
+ROL: CORE
+FUENTE: 01:30:06.202 → 01:30:13.413
+TIMELINE: 00:00:23.943 → 00:00:31.154
+DURACIÓN: 7.211s
+
+TRANSCRIPCIÓN EXACTA
+idea de este espacio es tal como la misión de tu empresa es expandir los horizontes y darle más más...
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0944.

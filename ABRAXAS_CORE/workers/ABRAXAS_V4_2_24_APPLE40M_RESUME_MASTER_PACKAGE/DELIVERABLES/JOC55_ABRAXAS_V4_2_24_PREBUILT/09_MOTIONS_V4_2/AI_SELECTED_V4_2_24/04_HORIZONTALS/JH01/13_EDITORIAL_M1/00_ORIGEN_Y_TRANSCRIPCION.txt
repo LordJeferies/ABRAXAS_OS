@@ -1,0 +1,11 @@
+CONTENT: JH01
+ROL: EDITORIAL
+FUENTE: 00:12:49.000 → 00:12:54.000
+TIMELINE: 00:06:15.423 → 00:06:20.423
+DURACIÓN: 5.000s
+
+TRANSCRIPCIÓN EXACTA
+en una fase de que es que este profesor me odia o esto es injusto, lo que sea.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0146.

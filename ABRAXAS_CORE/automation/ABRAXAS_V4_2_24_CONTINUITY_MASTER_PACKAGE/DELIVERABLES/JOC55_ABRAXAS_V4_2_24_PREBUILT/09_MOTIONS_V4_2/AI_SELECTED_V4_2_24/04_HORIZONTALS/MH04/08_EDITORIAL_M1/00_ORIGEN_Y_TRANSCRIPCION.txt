@@ -1,0 +1,11 @@
+CONTENT: MH04
+ROL: EDITORIAL
+FUENTE: 01:23:44.924 → 01:23:50.889
+TIMELINE: 00:04:13.919 → 00:04:19.884
+DURACIÓN: 5.965s
+
+TRANSCRIPCIÓN EXACTA
+porque decías que tu papá básicamente fue la inspiración y tu ancla para todo esto.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0885.

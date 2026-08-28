@@ -1,0 +1,11 @@
+CONTENT: MH02
+ROL: EDITORIAL
+FUENTE: 00:27:20.000 → 00:27:28.000
+TIMELINE: 00:08:01.437 → 00:08:09.437
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+me diga que no no significa que es un no. Es que tengo que seguir preguntando hasta que alguien me diga que sí o la persona correcta me diga que sí o yo crea mi propia oportunidad.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0302.

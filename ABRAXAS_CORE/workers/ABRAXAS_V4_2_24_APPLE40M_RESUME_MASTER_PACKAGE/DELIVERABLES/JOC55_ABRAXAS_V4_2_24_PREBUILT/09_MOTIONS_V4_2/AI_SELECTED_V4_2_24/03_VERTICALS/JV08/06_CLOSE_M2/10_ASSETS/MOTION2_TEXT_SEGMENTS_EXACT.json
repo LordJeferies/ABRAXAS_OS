@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "por esa aspiración de querer ser mejor y de saber que eventualmente tú vas a conseguir el camino que te va a llevar al éxito cualquiera que sea. ¿No te parece?",
+  "segments": [
+    "por esa aspiración de querer ser mejor y de saber que",
+    "eventualmente tú vas a conseguir el camino que te va",
+    "a llevar al éxito cualquiera que sea. ¿No te parece?"
+  ],
+  "reconstructed_text": "por esa aspiración de querer ser mejor y de saber que eventualmente tú vas a conseguir el camino que te va a llevar al éxito cualquiera que sea. ¿No te parece?"
+}

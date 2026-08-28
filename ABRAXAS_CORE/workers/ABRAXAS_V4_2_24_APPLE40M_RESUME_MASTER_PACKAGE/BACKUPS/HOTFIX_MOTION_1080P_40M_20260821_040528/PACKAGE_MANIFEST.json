@@ -1,0 +1,46 @@
+{
+  "schema_version": "abraxas.continuity-master-package.v4.2.24",
+  "release": "ABRAXAS_V4_2_24_APPLE40M_RESUME_MASTER_PACKAGE",
+  "technical_hotfix": "APPLE40M_RESUME_R1",
+  "render_profile": {
+    "profile_id": "APPLE_VT_H264_40M_V1",
+    "encoder": "h264_videotoolbox",
+    "profile": "high",
+    "target_bitrate": "40M",
+    "maxrate": "48M",
+    "bufsize": "80M",
+    "pix_fmt": "yuv420p",
+    "audio": "AAC 192k 48000Hz stereo",
+    "hardware_encode_slots": 1,
+    "atomic_publish": true,
+    "resume_by_fingerprint": true,
+    "libx264_fallback": false
+  },
+  "created_at": "2026-08-21",
+  "executable_base": "V4.2.5 verified",
+  "motion_system": "V7",
+  "counts": {
+    "verticals": 37,
+    "vertical_motions": 222,
+    "horizontals": 12,
+    "horizontal_motions": 255,
+    "selected_motion_windows": 477,
+    "intro_routes": 6,
+    "transcript_source_cues": 953,
+    "transcript_reference_windows": 842
+  },
+  "validation": {
+    "status": "PASS_WITH_EDITORIAL_WARNINGS",
+    "blockers": 0,
+    "vertical_duration_warnings": 10,
+    "historical_tests_passed": 37,
+    "v4_2_24_tests_passed": 15
+  },
+  "entrypoints": [
+    "TERMINAL/CREAR_HOTFIX.command",
+    "TERMINAL/GENERAR_PRODUCCION_COMPLETA.command",
+    "TERMINAL/REANUDAR_PRODUCCION_APPLE40M.command",
+    "TERMINAL/ABRAXAS_MONITOR_APPLE40M.command",
+    "TESTS/VALIDAR_PAQUETE.command"
+  ]
+}

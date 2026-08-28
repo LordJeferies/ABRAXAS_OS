@@ -1,0 +1,11 @@
+CONTENT: MV03
+ROL: CORE
+FUENTE: 01:10:59.000 → 01:11:05.000
+TIMELINE: 00:00:38.313 → 00:00:44.313
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+que me están enseñando de manera gratuita, sea, no se están resalvando el conocimiento, pero también demuestras que tanto sabes.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0744.

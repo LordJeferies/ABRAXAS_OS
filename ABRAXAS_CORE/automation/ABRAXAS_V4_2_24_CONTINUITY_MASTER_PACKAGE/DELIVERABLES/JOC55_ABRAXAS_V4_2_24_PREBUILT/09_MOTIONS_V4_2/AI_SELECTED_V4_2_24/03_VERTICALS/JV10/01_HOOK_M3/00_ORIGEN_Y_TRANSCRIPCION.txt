@@ -1,0 +1,11 @@
+CONTENT: JV10
+ROL: HOOK
+FUENTE: 01:26:58.505 → 01:27:06.874
+TIMELINE: 00:00:00.000 → 00:00:08.369
+DURACIÓN: 8.369s
+
+TRANSCRIPCIÓN EXACTA
+Sabes que decías que hay dos posibles caminos, Quien enfrenta las cosas y los supera y quien no, que ambas son válidas.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0912.

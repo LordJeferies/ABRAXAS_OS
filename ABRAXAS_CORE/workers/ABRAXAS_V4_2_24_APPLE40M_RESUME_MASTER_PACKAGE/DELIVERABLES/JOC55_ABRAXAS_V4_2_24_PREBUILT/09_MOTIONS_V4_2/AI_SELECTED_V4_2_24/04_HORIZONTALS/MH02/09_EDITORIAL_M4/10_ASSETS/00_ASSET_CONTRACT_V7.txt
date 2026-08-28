@@ -1,0 +1,6 @@
+M4 · One 4K master infographic traversed in Z
+
+Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes.
+
+ARCHIVOS OBLIGATORIOS
+- MASTER_INFOGRAPHIC_4K.png

@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "de adaptación y el progreso continuo que lo dijiste de la mejor manera posible. sea que de verdad es 100 % así.",
+  "segments": [
+    "de adaptación y el progreso continuo que",
+    "lo dijiste de la mejor manera posible. sea",
+    "que de verdad es 100 % así."
+  ],
+  "reconstructed_text": "de adaptación y el progreso continuo que lo dijiste de la mejor manera posible. sea que de verdad es 100 % así."
+}

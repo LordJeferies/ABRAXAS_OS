@@ -1,0 +1,24 @@
+ABRAXAS V4.2.24 · MOTION 1080P/40M HOTFIX · VALIDATION
+
+STATUS: PASS
+
+- Payload unit tests: 5/5 PASS.
+- Target package regression tests after application: 15/15 PASS.
+- Vertical scale filter: 1080x1920 PASS.
+- Horizontal scale filter: 1920x1080 PASS.
+- ffprobe validation: codec, yuv420p, audio, duration and exact dimensions PASS.
+- Semantic rebuild: 37 verticals, 12 horizontals and 477 Motion windows PASS.
+- Content Engine metadata and Motion prompts contain the new resolution PASS.
+- Application on isolated master package PASS.
+- Second application is idempotent PASS.
+- Backup plus restoration reproduces the original engine and manifest hashes PASS.
+- Output media deletion during apply/restore: NONE.
+
+PROFILE
+
+APPLE_VT_H264_1080P_40M_V1
+Vertical: 1080x1920
+Horizontal: 1920x1080
+Video: h264_videotoolbox High, 40M, maxrate 48M, bufsize 80M, yuv420p
+Audio: AAC 192k, 48kHz, stereo
+Full programs and intros: preserve source resolution and valid cache

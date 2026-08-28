@@ -1,0 +1,38 @@
+{
+  "sequence": 18,
+  "content_id": "JH03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "JH03_B109",
+  "child_beat_ids": [
+    "JH03_B109"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:30:23.000",
+  "source_end": "01:30:32.000",
+  "timeline_in_seconds": 521.786,
+  "timeline_out_seconds": 530.786,
+  "timeline_in": "00:08:41.786",
+  "timeline_out": "00:08:50.786",
+  "duration_seconds": 9.0,
+  "text": "que tú decías, en una posición inferior, en una superior, que estén buscando conectar o lo que sea, cualquiera que sea el caso, pero la intención acá también es darle la oportunidad",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0946.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0946",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La selección funciona como tesis, contradicción o payoff editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

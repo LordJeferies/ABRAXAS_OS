@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:16:41.000 → 01:16:50.000
+TIMELINE: 00:03:11.000 → 00:03:20.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Y en ese proceso tuvieron el abastamento de capital o tienen pautado eso? Nada. Nunca hemos tenido levantamiento de capital y hasta el momento no lo hemos necesitado.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0810.

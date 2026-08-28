@@ -1,0 +1,44 @@
+{
+  "sequence": 6,
+  "content_id": "JV08",
+  "narrative_role": "CLOSE",
+  "source_part_id": "JV08_P08",
+  "child_beat_ids": [
+    "JV08_B11",
+    "JV08_B12",
+    "JV08_B13"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:26:20.664",
+  "source_end": "00:26:28.478",
+  "timeline_in_seconds": 47.433,
+  "timeline_out_seconds": 55.247,
+  "timeline_in": "00:00:47.433",
+  "timeline_out": "00:00:55.247",
+  "duration_seconds": 7.814,
+  "text": "por esa aspiración de querer ser mejor y de saber que eventualmente tú vas a conseguir el camino que te va a llevar al éxito cualquiera que sea. ¿No te parece?",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0293.",
+  "semantic_score": 6.9341,
+  "transcript_reference": "SRT_0293",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

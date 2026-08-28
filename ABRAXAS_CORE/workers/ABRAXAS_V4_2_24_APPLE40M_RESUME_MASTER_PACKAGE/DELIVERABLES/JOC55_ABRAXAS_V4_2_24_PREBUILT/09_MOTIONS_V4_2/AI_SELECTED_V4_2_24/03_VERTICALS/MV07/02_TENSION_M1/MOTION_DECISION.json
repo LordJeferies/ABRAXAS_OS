@@ -1,0 +1,39 @@
+{
+  "sequence": 2,
+  "content_id": "MV07",
+  "narrative_role": "TENSION",
+  "source_part_id": "MV07_P05",
+  "child_beat_ids": [
+    "MV07_B04",
+    "MV07_B05"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:20:52.662",
+  "source_end": "01:20:58.900",
+  "timeline_in_seconds": 21.905,
+  "timeline_out_seconds": 28.143,
+  "timeline_in": "00:00:21.905",
+  "timeline_out": "00:00:28.143",
+  "duration_seconds": 6.238,
+  "text": "cosa increíble que por lo menos a mí me cargó de una energía bárbara. No sé cuál fue tu apreciación.",
+  "reason": "Expone el problema, contradicción o costo narrativo. Referencia SRT_0861.",
+  "semantic_score": 6.4948,
+  "transcript_reference": "SRT_0861",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

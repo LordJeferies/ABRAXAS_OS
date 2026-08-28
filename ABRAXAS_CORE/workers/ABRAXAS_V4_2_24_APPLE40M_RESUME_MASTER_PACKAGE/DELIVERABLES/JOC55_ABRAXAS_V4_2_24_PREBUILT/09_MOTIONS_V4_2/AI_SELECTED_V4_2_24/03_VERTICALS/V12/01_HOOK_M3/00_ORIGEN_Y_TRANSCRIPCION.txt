@@ -1,0 +1,11 @@
+CONTENT: V12
+ROL: HOOK
+FUENTE: 01:24:30.000 → 01:24:38.000
+TIMELINE: 00:00:00.000 → 00:00:08.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+en la vida tienes dos opciones como todo. O le encuentras la oportunidad y le encuentras el aprendizaje o...
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0891.

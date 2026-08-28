@@ -1,0 +1,11 @@
+CONTENT: V04
+ROL: HOOK
+FUENTE: 00:14:52.000 → 00:15:01.000
+TIMELINE: 00:00:00.000 → 00:00:09.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+totalmente y ahorita que estás justamente hablando de eso, me acordé una anécdota a mí en la universidad que para mí fue, me cambió la vida.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0169.

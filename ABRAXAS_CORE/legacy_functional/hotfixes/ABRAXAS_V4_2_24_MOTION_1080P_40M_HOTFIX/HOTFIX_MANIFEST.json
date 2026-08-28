@@ -1,0 +1,13 @@
+{
+  "schema_version": "abraxas.hotfix-package.v4.2.24.motion1080p40m-r1",
+  "hotfix_id": "ABRAXAS_V4_2_24_MOTION_1080P_40M_R1",
+  "target_package": "ABRAXAS_V4_2_24_APPLE40M_RESUME_MASTER_PACKAGE",
+  "motion_reference_profile": "APPLE_VT_H264_1080P_40M_V1",
+  "vertical_resolution": "1080x1920",
+  "horizontal_resolution": "1920x1080",
+  "video_bitrate": "40M",
+  "full_program_resolution_policy": "PRESERVE_SOURCE_RESOLUTION",
+  "destructive_operations": false,
+  "entrypoint": "TERMINAL/APLICAR_Y_REANUDAR_MOTION_1080P_40M.command",
+  "restore_entrypoint": "TERMINAL/RESTAURAR_ULTIMO_BACKUP.command"
+}

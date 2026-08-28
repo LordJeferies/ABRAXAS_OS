@@ -1,0 +1,38 @@
+{
+  "sequence": 12,
+  "content_id": "JH03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "JH03_B62",
+  "child_beat_ids": [
+    "JH03_B62"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:12:54.000",
+  "source_end": "01:13:00.000",
+  "timeline_in_seconds": 315.369,
+  "timeline_out_seconds": 321.369,
+  "timeline_in": "00:05:15.369",
+  "timeline_out": "00:05:21.369",
+  "duration_seconds": 6.0,
+  "text": "En el mismo vertical sacaste varias cosas que puedes monetizar, al final es el mismo ecosistema retroalimentándose.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0774.",
+  "semantic_score": 3.425,
+  "transcript_reference": "SRT_0774",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

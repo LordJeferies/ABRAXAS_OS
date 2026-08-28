@@ -1,0 +1,11 @@
+CONTENT: MH02
+ROL: EDITORIAL
+FUENTE: 00:29:44.000 → 00:29:51.000
+TIMELINE: 00:10:25.437 → 00:10:32.437
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+Yo siempre pienso que la grandeza está en las pequeñas cosas y como tú eres en las pequeñas cosas eres en todo lo demás.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0329.

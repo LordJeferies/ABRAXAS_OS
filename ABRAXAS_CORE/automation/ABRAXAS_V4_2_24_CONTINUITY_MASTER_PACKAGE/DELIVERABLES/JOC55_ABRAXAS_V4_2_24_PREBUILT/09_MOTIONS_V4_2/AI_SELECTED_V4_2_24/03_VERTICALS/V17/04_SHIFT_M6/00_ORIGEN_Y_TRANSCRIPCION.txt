@@ -1,0 +1,11 @@
+CONTENT: V17
+ROL: SHIFT
+FUENTE: 01:08:52.000 → 01:08:58.000
+TIMELINE: 00:00:38.000 → 00:00:44.000
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+Y el tema del app si es más por suscripción porque es un producto que la gente utiliza por más tiempo.
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0724.

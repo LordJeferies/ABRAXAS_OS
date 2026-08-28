@@ -1,0 +1,42 @@
+{
+  "sequence": 2,
+  "content_id": "JV04",
+  "narrative_role": "TENSION",
+  "source_part_id": "JV04_P04",
+  "child_beat_ids": [
+    "JV04_B05"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:28:31.577",
+  "source_end": "00:28:37.483",
+  "timeline_in_seconds": 19.114,
+  "timeline_out_seconds": 25.02,
+  "timeline_in": "00:00:19.114",
+  "timeline_out": "00:00:25.020",
+  "duration_seconds": 5.906,
+  "text": "básicamente, de hacer algo o no necesariamente de innovar porque tu legado puede ser tener",
+  "reason": "Expone el problema, contradicción o costo narrativo. Referencia SRT_0319.",
+  "semantic_score": 7.7415,
+  "transcript_reference": "SRT_0319",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

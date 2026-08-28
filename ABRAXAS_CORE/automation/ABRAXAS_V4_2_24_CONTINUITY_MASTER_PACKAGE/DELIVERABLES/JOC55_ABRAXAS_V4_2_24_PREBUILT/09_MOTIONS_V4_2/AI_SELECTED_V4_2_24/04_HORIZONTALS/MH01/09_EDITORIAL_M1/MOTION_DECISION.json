@@ -1,0 +1,38 @@
+{
+  "sequence": 9,
+  "content_id": "MH01",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH01_B48",
+  "child_beat_ids": [
+    "MH01_B48"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:08:48.000",
+  "source_end": "00:08:57.000",
+  "timeline_in_seconds": 270.203,
+  "timeline_out_seconds": 279.203,
+  "timeline_in": "00:04:30.203",
+  "timeline_out": "00:04:39.203",
+  "duration_seconds": 9.0,
+  "text": "Y yo considero que es verdad, o la universidad de verdad es un microcosmo de la vida también y te va a preparar para muchas situaciones que vas a ver luego en la vida, incluso.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0104.",
+  "semantic_score": 3.7,
+  "transcript_reference": "SRT_0104",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

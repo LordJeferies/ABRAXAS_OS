@@ -1,0 +1,11 @@
+CONTENT: H01
+ROL: EDITORIAL
+FUENTE: 00:18:09.000 → 00:18:18.000
+TIMELINE: 00:03:17.000 → 00:03:26.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+no practicaban todos los días, yo terminaba clases y me quedaba en la noche hasta tardísimo en cerando dientes, que de repente otra persona que se le diera natural o una
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0210.

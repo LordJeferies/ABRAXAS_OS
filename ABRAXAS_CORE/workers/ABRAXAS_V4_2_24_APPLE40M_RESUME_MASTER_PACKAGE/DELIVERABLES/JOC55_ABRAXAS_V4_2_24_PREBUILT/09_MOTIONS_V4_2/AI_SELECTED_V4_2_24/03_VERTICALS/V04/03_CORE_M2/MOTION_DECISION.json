@@ -1,0 +1,42 @@
+{
+  "sequence": 3,
+  "content_id": "V04",
+  "narrative_role": "CORE",
+  "source_part_id": "V04_P04",
+  "child_beat_ids": [
+    "V04_B04"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:15:12.286",
+  "source_end": "00:15:18.000",
+  "timeline_in_seconds": 20.286,
+  "timeline_out_seconds": 26.0,
+  "timeline_in": "00:00:20.286",
+  "timeline_out": "00:00:26.000",
+  "duration_seconds": 5.714,
+  "text": "alguien extraordinario y algo que he descubierto con los años es que, y es una frase que",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0171.",
+  "semantic_score": 8.8355,
+  "transcript_reference": "SRT_0171",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

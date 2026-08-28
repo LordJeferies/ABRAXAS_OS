@@ -1,0 +1,39 @@
+{
+  "sequence": 1,
+  "content_id": "V16",
+  "narrative_role": "HOOK",
+  "source_part_id": "V16_P01_S02",
+  "child_beat_ids": [
+    "V16_B01",
+    "V16_B02"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:05:35.467",
+  "source_end": "01:05:40.859",
+  "timeline_in_seconds": 5.467,
+  "timeline_out_seconds": 10.859,
+  "timeline_in": "00:00:05.467",
+  "timeline_out": "00:00:10.859",
+  "duration_seconds": 5.392,
+  "text": "es online virtual básicamente y sí, ha sido increíble este camino,",
+  "reason": "Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0691.",
+  "semantic_score": 7.969,
+  "transcript_reference": "SRT_0691",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La frase tiene fuerza autónoma y debe resolverse como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

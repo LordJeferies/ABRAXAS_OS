@@ -1,0 +1,11 @@
+CONTENT: MH02
+ROL: EDITORIAL
+FUENTE: 00:23:59.400 → 00:24:06.000
+TIMELINE: 00:04:40.837 → 00:04:47.437
+DURACIÓN: 6.600s
+
+TRANSCRIPCIÓN EXACTA
+tengo mi modelo de negocio, por qué no podría hacerlo si ya hecho otras cosas en las que de repente no tenía la experiencia.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0270.

@@ -1,0 +1,37 @@
+{
+  "sequence": 4,
+  "content_id": "MV06",
+  "narrative_role": "SHIFT",
+  "source_part_id": "MV06_P06",
+  "child_beat_ids": [
+    "MV06_B08",
+    "MV06_B09"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:13:49.277",
+  "source_end": "01:13:53.749",
+  "timeline_in_seconds": 34.189,
+  "timeline_out_seconds": 38.661,
+  "timeline_in": "00:00:34.189",
+  "timeline_out": "00:00:38.661",
+  "duration_seconds": 4.472,
+  "text": "más fácil posicionarte en el mercado en el sentido de que no hay tanta competencia.",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0784.",
+  "semantic_score": 7.2159,
+  "transcript_reference": "SRT_0784",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La selección explica una relación o mapa conceptual que merece lectura progresiva.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ABRAXAS Shim Confirmed Manifest v1.1.2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "manifestType",
+    "project",
+    "sourceVideo",
+    "sourceReadOnly",
+    "selectionPolicy",
+    "confirmedVideos",
+    "confirmedCarousels"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.2"
+    },
+    "manifestType": {
+      "const": "SHIM_CONFIRMED_MANIFEST"
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceVideo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceReadOnly": {
+      "const": true
+    },
+    "selectionPolicy": {
+      "const": "CONFIRMADO_ONLY"
+    },
+    "sourceMetadata": {
+      "type": "object",
+      "properties": {
+        "fps": {},
+        "resolution": {},
+        "audio": {}
+      }
+    },
+    "confirmedVideos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "selectionStatus",
+          "segments"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "selectionStatus": {
+            "const": "CONFIRMADO"
+          },
+          "title": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "array"
+          },
+          "segments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "order",
+                "role",
+                "sourceStart",
+                "sourceEnd"
+              ],
+              "properties": {
+                "order": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "role": {
+                  "enum": [
+                    "hook",
+                    "development",
+                    "payoff",
+                    "HOOK",
+                    "DEVELOPMENT",
+                    "PAYOFF"
+                  ]
+                },
+                "sourceStart": {
+                  "type": "string"
+                },
+                "sourceEnd": {
+                  "type": "string"
+                },
+                "exact": {
+                  "type": "boolean"
+                },
+                "sourceLiteral": {
+                  "type": "string"
+                },
+                "speaker": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "visualProduction": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "confirmedCarousels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "carouselId",
+          "selectionStatus",
+          "slides"
+        ],
+        "properties": {
+          "carouselId": {
+            "type": "string"
+          },
+          "selectionStatus": {
+            "const": "CONFIRMADO"
+          },
+          "slides": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "reviewedAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewNotes": {
+      "type": "array"
+    },
+    "warnings": {
+      "type": "array"
+    }
+  }
+}

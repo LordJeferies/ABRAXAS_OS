@@ -1,0 +1,11 @@
+CONTENT: MV07
+ROL: CORE
+FUENTE: 01:21:04.670 → 01:21:10.716
+TIMELINE: 00:00:33.687 → 00:00:39.733
+DURACIÓN: 6.046s
+
+TRANSCRIPCIÓN EXACTA
+el hecho de que hemos sido self-sufficient y básicamente on our own,
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0863.

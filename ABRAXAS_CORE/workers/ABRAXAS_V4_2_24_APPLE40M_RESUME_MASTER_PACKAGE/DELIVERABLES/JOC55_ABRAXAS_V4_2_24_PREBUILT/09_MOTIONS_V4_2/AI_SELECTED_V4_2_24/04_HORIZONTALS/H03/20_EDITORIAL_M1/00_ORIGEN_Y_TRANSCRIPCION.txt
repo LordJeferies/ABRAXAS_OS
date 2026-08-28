@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 01:02:56.000 → 01:03:04.000
+TIMELINE: 00:09:42.000 → 00:09:50.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Tú si quieres ser buen futbolista no solamente tienes que saber chutar el balón y meter un gol independientemente de la posición que estés jugando.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0666.

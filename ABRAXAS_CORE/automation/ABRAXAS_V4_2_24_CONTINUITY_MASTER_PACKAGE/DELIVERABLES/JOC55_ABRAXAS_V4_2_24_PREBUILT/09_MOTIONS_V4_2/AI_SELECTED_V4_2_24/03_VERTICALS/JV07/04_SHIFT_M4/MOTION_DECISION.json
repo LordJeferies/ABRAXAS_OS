@@ -1,0 +1,36 @@
+{
+  "sequence": 4,
+  "content_id": "JV07",
+  "narrative_role": "SHIFT",
+  "source_part_id": "JV07_P06",
+  "child_beat_ids": [
+    "JV07_B06"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:18:32.000",
+  "source_end": "01:18:39.000",
+  "timeline_in_seconds": 29.441,
+  "timeline_out_seconds": 36.441,
+  "timeline_in": "00:00:29.441",
+  "timeline_out": "00:00:36.441",
+  "duration_seconds": 7.0,
+  "text": "esta crecer orgánico porque les está yendo muy bien y el múltiplo de crecimiento es grande, it up, you know what mean?",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0832.",
+  "semantic_score": 7.3738,
+  "transcript_reference": "SRT_0832",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La idea central se entiende mejor como relación o proceso visual.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

@@ -1,0 +1,11 @@
+CONTENT: V01
+ROL: CLOSE
+FUENTE: 00:04:02.909 → 00:04:07.852
+TIMELINE: 00:01:11.909 → 00:01:16.852
+DURACIÓN: 4.943s
+
+TRANSCRIPCIÓN EXACTA
+pero no solamente sobrevivir, sino disfrutar y ser feliz haciendo lo que haces.
+
+MOTIVO
+Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0045.

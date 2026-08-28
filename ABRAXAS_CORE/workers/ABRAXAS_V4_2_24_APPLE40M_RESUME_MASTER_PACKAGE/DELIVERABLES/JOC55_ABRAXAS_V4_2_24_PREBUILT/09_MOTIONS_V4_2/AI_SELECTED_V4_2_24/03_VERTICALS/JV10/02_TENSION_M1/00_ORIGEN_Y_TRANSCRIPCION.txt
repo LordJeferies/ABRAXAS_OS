@@ -1,0 +1,11 @@
+CONTENT: JV10
+ROL: TENSION
+FUENTE: 01:27:08.236 → 01:27:14.883
+TIMELINE: 00:00:09.731 → 00:00:16.378
+DURACIÓN: 6.647s
+
+TRANSCRIPCIÓN EXACTA
+Una opinión un poco unpopular aquí. Es verdad, las dos son válidas, pero solo una te lleva a la victoria.
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0913.

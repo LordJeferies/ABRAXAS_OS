@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 01:01:47.000 → 01:01:56.000
+TIMELINE: 00:08:33.000 → 00:08:42.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Luego tenemos iMVD ProMethod, que es para estudiar para el iMVD específicamente, pero es un curso que es bien estructurado, en vivo y también en diferido.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0656.

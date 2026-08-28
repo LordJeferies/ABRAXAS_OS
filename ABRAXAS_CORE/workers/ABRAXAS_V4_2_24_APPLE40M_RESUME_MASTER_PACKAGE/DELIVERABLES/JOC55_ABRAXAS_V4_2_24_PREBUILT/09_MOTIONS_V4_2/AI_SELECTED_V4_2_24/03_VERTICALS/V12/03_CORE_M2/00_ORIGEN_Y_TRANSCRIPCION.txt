@@ -1,0 +1,11 @@
+CONTENT: V12
+ROL: CORE
+FUENTE: 01:25:08.960 → 01:25:15.616
+TIMELINE: 00:00:38.960 → 00:00:45.616
+DURACIÓN: 6.656s
+
+TRANSCRIPCIÓN EXACTA
+Pero pienso que eso me dio como un extra fire, básicamente, de convertir ese legado
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0898.

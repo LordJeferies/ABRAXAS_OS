@@ -1,0 +1,11 @@
+CONTENT: V13
+ROL: CLOSE
+FUENTE: 00:23:03.000 → 00:23:11.000
+TIMELINE: 00:01:19.000 → 00:01:27.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, eso es algo que, por ejemplo, yo específicamente aprendí mucho en mi carrera. y lo traslade al ámbito empresarial.
+
+MOTIVO
+Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0262.

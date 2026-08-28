@@ -1,0 +1,11 @@
+CONTENT: JV08
+ROL: SHIFT
+FUENTE: 00:26:00.355 → 00:26:08.488
+TIMELINE: 00:00:27.124 → 00:00:35.257
+DURACIÓN: 8.133s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, eso está bien interesante y creo que es bueno dejarlo acá incluso como manera de reflexión, ¿no? Para mucha gente que de repente esté pensando eso o que...
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0289.

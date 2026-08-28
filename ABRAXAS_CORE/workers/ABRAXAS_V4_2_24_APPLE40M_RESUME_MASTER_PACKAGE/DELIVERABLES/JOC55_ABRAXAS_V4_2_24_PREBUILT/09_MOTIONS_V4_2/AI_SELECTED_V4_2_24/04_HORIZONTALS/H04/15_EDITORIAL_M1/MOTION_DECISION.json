@@ -1,0 +1,38 @@
+{
+  "sequence": 15,
+  "content_id": "H04",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H04_B73",
+  "child_beat_ids": [
+    "H04_B73"
+  ],
+  "speaker": "MIXED",
+  "source_start": "01:20:30.707",
+  "source_end": "01:20:35.694",
+  "timeline_in_seconds": 420.707,
+  "timeline_out_seconds": 425.694,
+  "timeline_in": "00:07:00.707",
+  "timeline_out": "00:07:05.694",
+  "duration_seconds": 4.987,
+  "text": "Que eso fue algo, no sé cuál fue tu impresión del Summit, yo creo que",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0858.",
+  "semantic_score": 3.175,
+  "transcript_reference": "SRT_0858",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

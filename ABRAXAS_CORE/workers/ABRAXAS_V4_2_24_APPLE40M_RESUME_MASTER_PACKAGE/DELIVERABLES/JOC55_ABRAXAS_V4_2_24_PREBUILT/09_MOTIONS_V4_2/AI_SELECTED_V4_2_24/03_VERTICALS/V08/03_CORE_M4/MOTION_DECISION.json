@@ -1,0 +1,36 @@
+{
+  "sequence": 3,
+  "content_id": "V08",
+  "narrative_role": "CORE",
+  "source_part_id": "V08_P06",
+  "child_beat_ids": [
+    "V08_B06"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:40:08.000",
+  "source_end": "00:40:16.000",
+  "timeline_in_seconds": 34.0,
+  "timeline_out_seconds": 42.0,
+  "timeline_in": "00:00:34.000",
+  "timeline_out": "00:00:42.000",
+  "duration_seconds": 8.0,
+  "text": "el board onontológico que debes presentar para presentarte los programas de reválida y empezar nuevamente tu proceso para poder licenciarte acá.",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0442.",
+  "semantic_score": 8.4034,
+  "transcript_reference": "SRT_0442",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La idea central se entiende mejor como relación o proceso visual.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

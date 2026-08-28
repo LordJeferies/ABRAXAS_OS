@@ -1,0 +1,11 @@
+CONTENT: MH03
+ROL: EDITORIAL
+FUENTE: 00:40:16.000 → 00:40:22.000
+TIMELINE: 00:05:09.736 → 00:05:15.736
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces para nosotros eso representa como el primer sí o esa primera puerta que se abre de vas por el camino correcto.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0443.

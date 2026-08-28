@@ -1,0 +1,63 @@
+/* C01.6 — Guided Workflow */
+.center-workspace{
+  grid-template-rows:64px minmax(300px,1fr) minmax(245px,36vh)!important;
+}
+.workflow-guide{
+  min-width:0;
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr) 190px;
+  align-items:center;
+  gap:10px;
+  padding:7px 8px;
+  border:1px solid var(--vav-border-subtle);
+  border-radius:var(--vav-radius-panel);
+  background:linear-gradient(180deg,rgba(255,255,255,.024),rgba(255,255,255,.012)),var(--vav-surface-1);
+  box-shadow:0 8px 28px rgba(0,0,0,.14);
+}
+.workflow-title{display:grid;gap:3px;padding-left:4px}
+.workflow-title strong{font-size:11px;font-weight:700}
+.workflow-steps{min-width:0;display:grid;grid-template-columns:repeat(5,minmax(92px,1fr));gap:5px}
+.workflow-step{
+  position:relative;min-width:0;height:48px;
+  display:grid;grid-template-columns:22px 16px minmax(0,1fr);align-items:center;gap:6px;
+  padding:0 7px;border:1px solid var(--vav-border-subtle);border-radius:9px;
+  color:var(--vav-text-secondary);background:rgba(255,255,255,.018);cursor:pointer;text-align:left
+}
+.workflow-step:hover{color:var(--vav-text-primary);background:var(--vav-surface-3);border-color:var(--vav-border-strong)}
+.workflow-step.recommended{color:#f4f1ff;border-color:rgba(123,97,255,.38);background:linear-gradient(90deg,rgba(123,97,255,.16),rgba(123,97,255,.06));box-shadow:0 0 0 1px rgba(123,97,255,.06) inset}
+.workflow-step.complete{color:#dffbef;border-color:rgba(79,213,154,.20);background:rgba(79,213,154,.055)}
+.workflow-step-number{width:20px;height:20px;display:grid;place-items:center;border-radius:6px;color:var(--vav-text-tertiary);background:rgba(255,255,255,.055);font-size:8px;font-weight:800}
+.workflow-step.recommended .workflow-step-number{color:white;background:var(--vav-accent)}
+.workflow-step.complete .workflow-step-number{color:#08140e;background:var(--vav-success)}
+.workflow-step-copy{min-width:0;display:grid;gap:2px}
+.workflow-step-copy strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:9px}
+.workflow-step-copy small{color:var(--vav-text-tertiary);font-size:7px}
+.workflow-step.complete .workflow-step-copy small{color:var(--vav-success)}
+.workflow-next{
+  min-width:0;height:48px;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:0 12px;border:1px solid rgba(255,255,255,.12);border-radius:9px;color:white;
+  background:linear-gradient(180deg,var(--vav-accent-hover),var(--vav-accent));
+  box-shadow:0 7px 20px rgba(64,44,165,.20);cursor:pointer
+}
+.workflow-next:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.workflow-next>span{min-width:0;display:grid;gap:2px;text-align:left}
+.workflow-next small{font-size:7px;font-weight:800;letter-spacing:.11em;opacity:.72}
+.workflow-next strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px}
+
+.rail-brand{gap:8px}
+.rail-brand strong{font-size:11px;letter-spacing:.06em}
+.nav-rail:not(.collapsed) .rail-item span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:9px;font-weight:600}
+.nav-rail:not(.collapsed) .rail-item{min-height:35px}
+
+@media(max-width:1370px){
+  .workflow-guide{grid-template-columns:120px minmax(0,1fr) 168px}
+  .workflow-title strong{font-size:10px}
+  .workflow-step{grid-template-columns:20px minmax(0,1fr)}
+  .workflow-step>svg{display:none}
+}
+@media(max-width:1180px){
+  .workflow-guide{grid-template-columns:minmax(0,1fr) 175px}
+  .workflow-title{display:none}
+  .workflow-steps{grid-template-columns:repeat(5,minmax(70px,1fr))}
+  .workflow-step-copy small{display:none}
+}

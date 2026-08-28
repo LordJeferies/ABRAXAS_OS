@@ -1,0 +1,11 @@
+CONTENT: JV02
+ROL: CORE
+FUENTE: 00:14:14.278 → 00:14:19.001
+TIMELINE: 00:00:26.752 → 00:00:31.475
+DURACIÓN: 4.723s
+
+TRANSCRIPCIÓN EXACTA
+si eres normal, eres igual que todos los demás
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0162.

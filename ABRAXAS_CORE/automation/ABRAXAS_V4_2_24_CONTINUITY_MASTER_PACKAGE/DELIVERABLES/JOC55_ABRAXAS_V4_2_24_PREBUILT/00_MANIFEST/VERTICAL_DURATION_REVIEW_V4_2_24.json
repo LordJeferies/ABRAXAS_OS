@@ -1,0 +1,61 @@
+{
+  "schema_version": "abraxas.vertical-duration-review.v4.2.24",
+  "status": "HUMAN_EDITORIAL_REVIEW_REQUIRED",
+  "contract_seconds": [
+    45,
+    80
+  ],
+  "policy": "DO_NOT_AUTO_TRUNCATE_OR_FAKE_METADATA",
+  "items": [
+    {
+      "content_id": "V03",
+      "duration_seconds": 81.0,
+      "status": "NEEDS_EXISTING_EDITORIAL_TRIM_REVIEW"
+    },
+    {
+      "content_id": "V08",
+      "duration_seconds": 81.0,
+      "status": "NEEDS_EXISTING_EDITORIAL_TRIM_REVIEW"
+    },
+    {
+      "content_id": "V10",
+      "duration_seconds": 81.0,
+      "status": "NEEDS_EXISTING_EDITORIAL_TRIM_REVIEW"
+    },
+    {
+      "content_id": "V13",
+      "duration_seconds": 87.0,
+      "status": "NEEDS_EXISTING_EDITORIAL_TRIM_REVIEW"
+    },
+    {
+      "content_id": "JV03",
+      "duration_seconds": 80.758,
+      "status": "NEEDS_EXISTING_EDITORIAL_TRIM_REVIEW"
+    },
+    {
+      "content_id": "MV01",
+      "duration_seconds": 86.727,
+      "status": "NEEDS_EXISTING_EDITORIAL_TRIM_REVIEW"
+    },
+    {
+      "content_id": "MV02",
+      "duration_seconds": 80.272,
+      "status": "NEEDS_EXISTING_EDITORIAL_TRIM_REVIEW"
+    },
+    {
+      "content_id": "MV03",
+      "duration_seconds": 87.954,
+      "status": "NEEDS_EXISTING_EDITORIAL_TRIM_REVIEW"
+    },
+    {
+      "content_id": "MV05",
+      "duration_seconds": 83.467,
+      "status": "NEEDS_EXISTING_EDITORIAL_TRIM_REVIEW"
+    },
+    {
+      "content_id": "MV07",
+      "duration_seconds": 83.092,
+      "status": "NEEDS_EXISTING_EDITORIAL_TRIM_REVIEW"
+    }
+  ]
+}

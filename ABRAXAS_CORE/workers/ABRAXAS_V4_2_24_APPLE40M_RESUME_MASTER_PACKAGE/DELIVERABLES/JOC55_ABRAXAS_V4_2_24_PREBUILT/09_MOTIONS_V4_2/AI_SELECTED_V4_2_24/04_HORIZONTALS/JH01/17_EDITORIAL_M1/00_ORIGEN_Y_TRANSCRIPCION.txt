@@ -1,0 +1,11 @@
+CONTENT: JH01
+ROL: EDITORIAL
+FUENTE: 00:15:01.806 → 00:15:07.275
+TIMELINE: 00:08:28.229 → 00:08:33.698
+DURACIÓN: 5.469s
+
+TRANSCRIPCIÓN EXACTA
+Lo que tú estás diciendo de ser, para ser extraordinario, las personas piensan que tienes
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0170.

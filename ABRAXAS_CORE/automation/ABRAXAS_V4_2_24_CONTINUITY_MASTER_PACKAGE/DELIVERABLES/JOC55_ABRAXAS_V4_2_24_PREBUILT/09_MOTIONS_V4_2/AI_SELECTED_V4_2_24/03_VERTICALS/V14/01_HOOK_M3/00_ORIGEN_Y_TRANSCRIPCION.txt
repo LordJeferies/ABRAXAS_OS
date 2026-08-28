@@ -1,0 +1,11 @@
+CONTENT: V14
+ROL: HOOK
+FUENTE: 00:23:29.563 → 00:23:36.631
+TIMELINE: 00:00:05.563 → 00:00:12.631
+DURACIÓN: 7.068s
+
+TRANSCRIPCIÓN EXACTA
+y eso lo aprendí desde el comienzo de mi carrera y luego lo apliqué cuando empecé mi propia compañía.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0267.

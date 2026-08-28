@@ -1,0 +1,11 @@
+CONTENT: V13
+ROL: HOOK
+FUENTE: 00:21:49.459 → 00:21:55.841
+TIMELINE: 00:00:05.459 → 00:00:11.841
+DURACIÓN: 6.382s
+
+TRANSCRIPCIÓN EXACTA
+las personas que nos están viendo y siento que esto es algo que siempre digo,
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0248.

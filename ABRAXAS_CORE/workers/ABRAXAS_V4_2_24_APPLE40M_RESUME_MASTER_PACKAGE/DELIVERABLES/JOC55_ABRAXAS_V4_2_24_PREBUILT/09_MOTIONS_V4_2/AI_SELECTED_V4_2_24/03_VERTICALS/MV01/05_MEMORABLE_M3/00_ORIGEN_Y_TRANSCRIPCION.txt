@@ -1,0 +1,11 @@
+CONTENT: MV01
+ROL: MEMORABLE
+FUENTE: 00:07:43.000 → 00:07:49.000
+TIMELINE: 00:01:09.311 → 00:01:15.311
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+son tan habilidosos como personas que no están en la universidad y tienen años de experiencia de manera externa.
+
+MOTIVO
+Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0092.

@@ -1,0 +1,11 @@
+CONTENT: JH02
+ROL: EDITORIAL
+FUENTE: 00:25:16.000 → 00:25:24.000
+TIMELINE: 00:05:50.243 → 00:05:58.243
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+pasando y adaptándote y cambiando de repente de 180 para continuar y seguir haciendo lo que quieres, básicamente.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0282.

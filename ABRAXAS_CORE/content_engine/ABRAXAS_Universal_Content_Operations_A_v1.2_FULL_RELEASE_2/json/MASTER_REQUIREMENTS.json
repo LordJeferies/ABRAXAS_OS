@@ -1,0 +1,30 @@
+{
+  "version": "0.9.3",
+  "requirements": [
+    "Offline-first standalone HTML and reusable source package",
+    "Apple HIG/WWDC25 primary design and motion criteria; Google Material Motion fallback only",
+    "Mac Spatial Dark with Dynamic Client Accent",
+    "No glass-on-glass and no blur on core content surfaces",
+    "Client accent must not replace semantic status colors",
+    "Client Intelligence with Brand Core, pillars, patterns, copy profiles, Branding Method and sources",
+    "Content Studio 1x1 with physical type visible in Overview",
+    "Prompt Composer variables update master prompts without manual editing of prompt body",
+    "Deep prompts per video unit: Omni, START/MIDDLE/END, B-roll, still, SFX",
+    "Deep prompts per carousel slide: WITH TEXT and WITHOUT TEXT",
+    "He supports Crear pieza and Crear lote",
+    "He physical output is sovereign; patterns may be NATIVO or ADAPTADO but must not be blocked because of source medium",
+    "He piece micro-batch supports 1-6 distinct angles with Coverage Map",
+    "He batch window supports 1 week, 2 weeks or 1 month",
+    "He batch has independent Low/Medium/High cadence controls for L1, L2 and L3",
+    "L1 Low/Medium = at least 1 principal Reel + 1 principal Carousel per week; High = 2 + 2",
+    "L2 Low/Medium/High = 1/2/3 derivative pieces per week",
+    "L3 Low/Medium/High = 1/2/4 support pieces per week",
+    "Production Queue default is calm-first by category/content/task",
+    "Calendar full month + backlog + drag/drop + detailed legend",
+    "AI Results and Assets require explicit destination mapping",
+    "Guide routes explain exactly where/how/what comes back/how completion is verified",
+    "Branding Method contains 25 tools and high-context prompts",
+    "Prompt Quality and strict scan block release",
+    "Future P10 graph/backend/automation must preserve stable content/task/asset identity"
+  ]
+}

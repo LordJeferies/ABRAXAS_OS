@@ -1,0 +1,38 @@
+{
+  "sequence": 9,
+  "content_id": "MH03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH03_B46",
+  "child_beat_ids": [
+    "MH03_B46"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:39:22.000",
+  "source_end": "00:39:30.000",
+  "timeline_in_seconds": 255.736,
+  "timeline_out_seconds": 263.736,
+  "timeline_in": "00:04:15.736",
+  "timeline_out": "00:04:23.736",
+  "duration_seconds": 8.0,
+  "text": "Entonces empecé a compartir de manera orgánica todo mi paso a paso, luego empezando a estudiar para este examen que se llama IMPD, que es parte del nombre de la compañía.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0434.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0434",
+  "motion_primary": "M5",
+  "motion_name": "CINEMATIC_MICROSEQUENCE",
+  "motion_alternative": "M1",
+  "why_motion": "La idea puede mostrarse como acción física: plano general, detalle y resultado.",
+  "track": "V2",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Cinematic physical action: wide / detail / result",
+    "asset_files": [
+      "FRAME_01_WIDE_ACTION.png",
+      "FRAME_02_DETAIL_ACTION.png",
+      "FRAME_03_RESULT.png"
+    ],
+    "instruction": "Mostrar una acción física comprobable en tres cámaras: plano general, detalle y resultado. No usar como intro genérica ni inventar acciones que el texto no sostenga."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

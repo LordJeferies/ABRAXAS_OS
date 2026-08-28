@@ -1,0 +1,11 @@
+CONTENT: MH04
+ROL: EDITORIAL
+FUENTE: 01:30:32.000 → 01:30:39.000
+TIMELINE: 00:11:00.995 → 00:11:07.995
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+a esas personas que realmente tienen una historia buena. que, completamente a tu orden y de nuevo, thank you so much por contar.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0947.

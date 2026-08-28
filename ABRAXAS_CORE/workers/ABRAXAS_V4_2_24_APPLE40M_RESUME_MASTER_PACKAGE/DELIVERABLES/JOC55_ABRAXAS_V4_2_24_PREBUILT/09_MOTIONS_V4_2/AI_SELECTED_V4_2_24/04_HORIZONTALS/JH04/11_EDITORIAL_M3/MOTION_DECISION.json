@@ -1,0 +1,38 @@
+{
+  "sequence": 11,
+  "content_id": "JH04",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "JH04_B62",
+  "child_beat_ids": [
+    "JH04_B62"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:09:36.424",
+  "source_end": "01:09:41.293",
+  "timeline_in_seconds": 311.956,
+  "timeline_out_seconds": 316.825,
+  "timeline_in": "00:05:11.956",
+  "timeline_out": "00:05:16.825",
+  "duration_seconds": 4.869,
+  "text": "pero también depende de qué tipo de suscripción elija el cliente,",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0733.",
+  "semantic_score": 3.475,
+  "transcript_reference": "SRT_0733",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La selección funciona como tesis, contradicción o payoff editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

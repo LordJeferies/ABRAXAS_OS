@@ -1,0 +1,11 @@
+CONTENT: V15
+ROL: HOOK
+FUENTE: 01:04:23.000 → 01:04:31.000
+TIMELINE: 00:00:00.000 → 00:00:08.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Y es algo muy interesante porque, por ejemplo, todo es virtual, entonces realmente la inversión es mínima. Nosotros no tenemos inversión de
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0681.

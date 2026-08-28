@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 01:00:31.000 → 01:00:39.000
+TIMELINE: 00:07:17.000 → 00:07:25.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Pero a partir de nuestro curso, empezamos a darnos cuenta que también había, digamos, necesidades de otros productos, de un entry level product.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0644.

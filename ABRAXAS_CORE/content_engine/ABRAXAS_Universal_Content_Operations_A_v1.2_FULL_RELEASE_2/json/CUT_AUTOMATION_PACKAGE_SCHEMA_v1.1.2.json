@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ABRAXAS Cut Automation Package v1.1.2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "manifestType",
+    "sourceManifest",
+    "sourceReadOnly",
+    "selectionPolicy",
+    "processSelection",
+    "outputModes",
+    "precisionModes",
+    "confirmedVideos"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.2"
+    },
+    "manifestType": {
+      "const": "CUT_AUTOMATION_PACKAGE"
+    },
+    "sourceManifest": {
+      "const": "SHIM_CONFIRMED_MANIFEST.json"
+    },
+    "sourceReadOnly": {
+      "const": true
+    },
+    "selectionPolicy": {
+      "const": "CONFIRMADO_ONLY"
+    },
+    "processSelection": {
+      "type": "array"
+    },
+    "outputModes": {
+      "type": "array"
+    },
+    "precisionModes": {
+      "type": "array"
+    },
+    "confirmedVideos": {
+      "type": "array"
+    }
+  }
+}

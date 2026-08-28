@@ -1,0 +1,11 @@
+CONTENT: JH01
+ROL: EDITORIAL
+FUENTE: 00:12:02.000 → 00:12:11.000
+TIMELINE: 00:05:28.423 → 00:05:37.423
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, creo que esa pasividad muchas veces de go with the flow y ya estoy en la universidad y no hago más nada sino hacer lo mínimo, creo que para mí eso es una cualidad
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0139.

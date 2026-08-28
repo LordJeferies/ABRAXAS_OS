@@ -1,0 +1,11 @@
+CONTENT: MV04
+ROL: CORE
+FUENTE: 01:18:10.000 → 01:18:18.000
+TIMELINE: 00:00:40.831 → 00:00:48.831
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Cuando hablamos de escala y de incluir ya fondos e inversiones para acelerar las operaciones y el crecimiento. Básicamente es para eso.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0825.

@@ -1,0 +1,11 @@
+CONTENT: JV07
+ROL: CORE
+FUENTE: 01:18:27.000 → 01:18:32.000
+TIMELINE: 00:00:24.441 → 00:00:29.441
+DURACIÓN: 5.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, esa es la lógica ahora. Si es el roadmap de ustedes.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0830.

@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Pero fue algo increíble que me pasó hoy que fue... materializar ese impacto que puedes tener a través de tu propósito que también es rentable.",
+  "segments": [
+    "Pero fue algo increíble que me pasó hoy",
+    "que fue... materializar ese impacto que puedes tener a",
+    "través de tu propósito que también es rentable."
+  ],
+  "reconstructed_text": "Pero fue algo increíble que me pasó hoy que fue... materializar ese impacto que puedes tener a través de tu propósito que también es rentable."
+}

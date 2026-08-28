@@ -1,0 +1,37 @@
+{
+  "sequence": 3,
+  "content_id": "JV04",
+  "narrative_role": "CORE",
+  "source_part_id": "JV04_P06",
+  "child_beat_ids": [
+    "JV04_B07",
+    "JV04_B08"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:28:43.289",
+  "source_end": "00:28:48.645",
+  "timeline_in_seconds": 30.826,
+  "timeline_out_seconds": 36.182,
+  "timeline_in": "00:00:30.826",
+  "timeline_out": "00:00:36.182",
+  "duration_seconds": 5.356,
+  "text": "que la gente te busca y toda la comunidad sabe quién eres porque simplemente fue el",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0320.",
+  "semantic_score": 10.1659,
+  "transcript_reference": "SRT_0320",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La idea central se entiende mejor como relación o proceso visual.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

@@ -1,0 +1,11 @@
+CONTENT: MH01
+ROL: EDITORIAL
+FUENTE: 00:13:47.476 → 00:13:54.319
+TIMELINE: 00:09:29.679 → 00:09:36.522
+DURACIÓN: 6.843s
+
+TRANSCRIPCIÓN EXACTA
+Hablando de un unpopular opinions, hay una frase que escuché hace poco que la verdad
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0160.

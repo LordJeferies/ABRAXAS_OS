@@ -1,0 +1,27 @@
+{
+  "version": "1.2",
+  "total": 932,
+  "byKind": {
+    "master_editorial": 18,
+    "master_visual": 18,
+    "production_task": 87,
+    "unit_recording": 96,
+    "unit_music": 96,
+    "unit_cover": 96,
+    "unit_copies": 96,
+    "unit_omni": 37,
+    "unit_reference_frames": 37,
+    "unit_broll": 37,
+    "unit_still": 96,
+    "unit_sfx": 37,
+    "carousel_with_text": 40,
+    "carousel_without_text": 40,
+    "branding_tool": 100,
+    "shim": 1
+  },
+  "shortPrompts": 0,
+  "placeholderHits": 0,
+  "status": "PASS",
+  "short": [],
+  "placeholders": []
+}

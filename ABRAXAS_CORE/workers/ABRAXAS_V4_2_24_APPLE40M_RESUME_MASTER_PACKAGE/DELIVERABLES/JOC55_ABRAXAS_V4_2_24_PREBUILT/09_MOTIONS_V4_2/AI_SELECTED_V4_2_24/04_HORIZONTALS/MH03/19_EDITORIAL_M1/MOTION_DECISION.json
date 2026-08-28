@@ -1,0 +1,38 @@
+{
+  "sequence": 19,
+  "content_id": "MH03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH03_B97",
+  "child_beat_ids": [
+    "MH03_B97"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:44:23.000",
+  "source_end": "00:44:32.000",
+  "timeline_in_seconds": 556.736,
+  "timeline_out_seconds": 565.736,
+  "timeline_in": "00:09:16.736",
+  "timeline_out": "00:09:25.736",
+  "duration_seconds": 9.0,
+  "text": "Porque al final tú trataste de resolver algo que inclusive, si creaste un producto... ese producto lo querías para ti o era una necesidad que tú también podías tener.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0481.",
+  "semantic_score": 3.7,
+  "transcript_reference": "SRT_0481",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

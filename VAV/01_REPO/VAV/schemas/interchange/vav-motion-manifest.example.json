@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "contentId": "DEMO-CONTENT-001",
+  "motionInstances": [
+    {
+      "motionInstanceId": "VMOT-001",
+      "motionFamily": "ABRAXAS_MOTION_03",
+      "sourceSpan": {
+        "startUs": 12000000,
+        "endUs": 18000000
+      },
+      "timelineSpan": {
+        "startUs": 4000000,
+        "endUs": 10000000
+      },
+      "narrativePurpose": "hook",
+      "visualMode": "typography-fullframe",
+      "textOwnership": "visual-motion",
+      "captionPolicy": {
+        "standardCaptionVisibility": "suppress",
+        "sceneSmartMode": "restricted",
+        "allowedRegions": [
+          "center"
+        ],
+        "duplicationPolicy": "no-duplicate-spoken-text"
+      },
+      "provenance": [
+        "USER"
+      ],
+      "version": 1
+    },
+    {
+      "motionInstanceId": "VMOT-002",
+      "motionFamily": "GENERIC_BROLL",
+      "sourceSpan": {
+        "startUs": 26000000,
+        "endUs": 34000000
+      },
+      "timelineSpan": {
+        "startUs": 18000000,
+        "endUs": 26000000
+      },
+      "narrativePurpose": "development",
+      "visualMode": "broll",
+      "textOwnership": "caption-engine",
+      "captionPolicy": {
+        "standardCaptionVisibility": "visible",
+        "sceneSmartMode": "required",
+        "allowedRegions": [
+          "auto"
+        ],
+        "duplicationPolicy": "allow-standard-caption"
+      },
+      "provenance": [
+        "EDITORIAL"
+      ],
+      "version": 1
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+CONTENT: H02
+ROL: EDITORIAL
+FUENTE: 00:42:37.249 → 00:42:43.680
+TIMELINE: 00:07:15.249 → 00:07:21.680
+DURACIÓN: 6.431s
+
+TRANSCRIPCIÓN EXACTA
+además avanzarlo porque de nuevo es lo que hablábamos al principio como que no era
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0465.

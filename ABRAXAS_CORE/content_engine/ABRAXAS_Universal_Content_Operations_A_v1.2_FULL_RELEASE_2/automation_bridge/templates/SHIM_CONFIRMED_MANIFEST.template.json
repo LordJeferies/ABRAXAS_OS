@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.2",
+  "manifestType": "SHIM_CONFIRMED_MANIFEST",
+  "project": "Example",
+  "sourceVideo": "source.mp4",
+  "sourceReadOnly": true,
+  "selectionPolicy": "CONFIRMADO_ONLY",
+  "sourceMetadata": {
+    "fps": 30,
+    "resolution": "1920x1080",
+    "audio": "stereo"
+  },
+  "confirmedVideos": [],
+  "confirmedCarousels": [],
+  "reviewedAt": null,
+  "reviewNotes": [],
+  "warnings": [
+    "SOURCE VIDEO IS READ ONLY"
+  ]
+}

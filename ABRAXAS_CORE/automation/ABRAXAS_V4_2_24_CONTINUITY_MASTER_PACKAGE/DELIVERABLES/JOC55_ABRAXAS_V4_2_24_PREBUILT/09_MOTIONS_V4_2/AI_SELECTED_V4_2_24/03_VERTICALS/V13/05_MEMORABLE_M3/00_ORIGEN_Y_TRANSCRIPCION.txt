@@ -1,0 +1,11 @@
+CONTENT: V13
+ROL: MEMORABLE
+FUENTE: 00:22:48.000 → 00:22:57.000
+TIMELINE: 00:01:04.000 → 00:01:13.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Pero en líneas generales, los odontólogos somos muy multifacéticos. ¿Por qué?
+
+MOTIVO
+Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0257.

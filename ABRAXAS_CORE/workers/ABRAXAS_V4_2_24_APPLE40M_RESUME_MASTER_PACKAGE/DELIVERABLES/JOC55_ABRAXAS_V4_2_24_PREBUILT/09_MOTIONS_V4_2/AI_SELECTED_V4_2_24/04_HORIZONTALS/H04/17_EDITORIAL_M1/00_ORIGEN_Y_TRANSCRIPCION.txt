@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:21:37.292 → 01:21:46.000
+TIMELINE: 00:08:07.292 → 00:08:16.000
+DURACIÓN: 8.708s
+
+TRANSCRIPCIÓN EXACTA
+Pero si el conversar lo que por ejemplo lo que haces en el podcast, conversar con otras personas que están en la misma posición que tú o mucho más adelante que tú o empezando
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0867.

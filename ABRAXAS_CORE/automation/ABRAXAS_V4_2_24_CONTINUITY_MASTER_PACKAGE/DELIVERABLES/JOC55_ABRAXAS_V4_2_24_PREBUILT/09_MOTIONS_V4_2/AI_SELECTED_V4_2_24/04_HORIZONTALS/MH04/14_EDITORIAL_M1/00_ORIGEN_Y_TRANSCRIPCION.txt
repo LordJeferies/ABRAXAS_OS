@@ -1,0 +1,11 @@
+CONTENT: MH04
+ROL: EDITORIAL
+FUENTE: 01:26:36.000 → 01:26:44.000
+TIMELINE: 00:07:04.995 → 00:07:12.995
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Así es como lo vas a hacer. Y creo que eso era lo mismo que hacía mi papá a su manera, su consultorio, con sus pacientes, con las personas que conocía.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0908.

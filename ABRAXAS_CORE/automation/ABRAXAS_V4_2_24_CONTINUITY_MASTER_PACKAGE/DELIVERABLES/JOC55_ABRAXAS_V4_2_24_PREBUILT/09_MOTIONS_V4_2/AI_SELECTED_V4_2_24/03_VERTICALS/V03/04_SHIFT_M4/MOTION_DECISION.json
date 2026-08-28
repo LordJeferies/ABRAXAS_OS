@@ -1,0 +1,37 @@
+{
+  "sequence": 4,
+  "content_id": "V03",
+  "narrative_role": "SHIFT",
+  "source_part_id": "V03_P09",
+  "child_beat_ids": [
+    "V03_B10",
+    "V03_B11"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:13:04.509",
+  "source_end": "00:13:08.909",
+  "timeline_in_seconds": 48.509,
+  "timeline_out_seconds": 52.909,
+  "timeline_in": "00:00:48.509",
+  "timeline_out": "00:00:52.909",
+  "duration_seconds": 4.4,
+  "text": "de No puedo sacar de esto nada. Déjame convertirlo en un aprendizaje.",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0148.",
+  "semantic_score": 8.9998,
+  "transcript_reference": "SRT_0148",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La selección explica una relación o mapa conceptual que merece lectura progresiva.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

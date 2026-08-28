@@ -1,0 +1,11 @@
+CONTENT: V06
+ROL: HOOK
+FUENTE: 00:26:34.887 → 00:26:40.855
+TIMELINE: 00:00:05.887 → 00:00:11.855
+DURACIÓN: 5.968s
+
+TRANSCRIPCIÓN EXACTA
+Ser proactivo es para mí una de las cualidades más importantes porque independientemente de lo que hagas,
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0296.

@@ -1,0 +1,11 @@
+CONTENT: JH04
+ROL: EDITORIAL
+FUENTE: 01:10:14.414 → 01:10:20.000
+TIMELINE: 00:05:49.946 → 00:05:55.532
+DURACIÓN: 5.586s
+
+TRANSCRIPCIÓN EXACTA
+Y algo que he aprendido mucho con los años es que las personas a veces piensan en emprendimientos o en compañías.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0738.

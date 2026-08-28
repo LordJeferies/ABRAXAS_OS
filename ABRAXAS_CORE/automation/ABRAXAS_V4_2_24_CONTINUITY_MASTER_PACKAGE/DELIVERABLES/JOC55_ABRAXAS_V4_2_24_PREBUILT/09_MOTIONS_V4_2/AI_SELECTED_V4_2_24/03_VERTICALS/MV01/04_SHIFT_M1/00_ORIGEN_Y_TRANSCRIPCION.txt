@@ -1,0 +1,11 @@
+CONTENT: MV01
+ROL: SHIFT
+FUENTE: 00:07:28.000 → 00:07:36.000
+TIMELINE: 00:00:54.311 → 00:01:02.311
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+también con la universidad y es que la gente piensa que por haber ido a la universidad eres un buen profesional o eres un o eres súper inteligente o eres muy bueno en lo que
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0090.

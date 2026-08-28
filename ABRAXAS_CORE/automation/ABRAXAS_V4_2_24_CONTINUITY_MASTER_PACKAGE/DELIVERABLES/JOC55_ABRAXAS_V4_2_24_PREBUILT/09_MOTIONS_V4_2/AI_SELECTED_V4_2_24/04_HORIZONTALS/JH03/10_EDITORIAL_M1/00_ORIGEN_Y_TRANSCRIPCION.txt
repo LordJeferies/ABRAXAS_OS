@@ -1,0 +1,11 @@
+CONTENT: JH03
+ROL: EDITORIAL
+FUENTE: 01:12:10.398 → 01:12:18.000
+TIMELINE: 00:04:31.776 → 00:04:39.378
+DURACIÓN: 7.602s
+
+TRANSCRIPCIÓN EXACTA
+sea, te puede costar el doble, el triple, tiempo averiguarlo porque no quiere decir que no lo vas a hacer. Pero te van a ayudar y te van a poner en la dirección Entonces eso vale.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0760.

@@ -1,0 +1,38 @@
+{
+  "sequence": 1,
+  "content_id": "MV06",
+  "narrative_role": "HOOK",
+  "source_part_id": "MV06_P01",
+  "child_beat_ids": [
+    "MV06_B01"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:13:13.437",
+  "source_end": "01:13:20.823",
+  "timeline_in_seconds": 0.0,
+  "timeline_out_seconds": 7.386,
+  "timeline_in": "00:00:00.000",
+  "timeline_out": "00:00:07.386",
+  "duration_seconds": 7.386,
+  "text": "Y esa es mi siguiente pregunta, como que ahora tienes 1500 odontólogos que han pasado por el sistema.",
+  "reason": "Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0777.",
+  "semantic_score": 8.07,
+  "transcript_reference": "SRT_0777",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La tesis verbal es la imagen principal y funciona como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

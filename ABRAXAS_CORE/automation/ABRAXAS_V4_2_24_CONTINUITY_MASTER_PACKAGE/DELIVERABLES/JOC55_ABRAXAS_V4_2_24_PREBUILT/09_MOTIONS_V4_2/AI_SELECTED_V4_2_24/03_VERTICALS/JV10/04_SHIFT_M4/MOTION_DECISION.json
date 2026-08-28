@@ -1,0 +1,37 @@
+{
+  "sequence": 4,
+  "content_id": "JV10",
+  "narrative_role": "SHIFT",
+  "source_part_id": "JV10_P08",
+  "child_beat_ids": [
+    "JV10_B12",
+    "JV10_B13"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:27:47.878",
+  "source_end": "01:27:54.559",
+  "timeline_in_seconds": 46.331,
+  "timeline_out_seconds": 53.012,
+  "timeline_in": "00:00:46.331",
+  "timeline_out": "00:00:53.012",
+  "duration_seconds": 6.681,
+  "text": "diré que conozco a la doctora Amanda Vicari, que acaba de hacer un proyecto interesantísimo y está ayudando a muchísima gente.",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0923.",
+  "semantic_score": 7.6422,
+  "transcript_reference": "SRT_0923",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La selección explica una relación o mapa conceptual que merece lectura progresiva.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

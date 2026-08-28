@@ -1,0 +1,11 @@
+CONTENT: H01
+ROL: EDITORIAL
+FUENTE: 00:23:38.146 → 00:23:42.870
+TIMELINE: 00:08:46.146 → 00:08:50.870
+DURACIÓN: 4.724s
+
+TRANSCRIPCIÓN EXACTA
+o por qué no podría hacer esto si al final yo siempre sé que si
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0268.

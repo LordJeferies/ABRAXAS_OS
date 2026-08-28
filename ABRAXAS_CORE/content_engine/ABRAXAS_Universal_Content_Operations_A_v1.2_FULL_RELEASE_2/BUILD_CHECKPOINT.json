@@ -1,0 +1,30 @@
+{
+  "version": "1.2",
+  "strategy": "incremental anti-timeout / regression-safe",
+  "base": "v1.1.3 domain + prompts + automation; presentation replaced",
+  "completed": [
+    "root-cause-audit",
+    "web-research",
+    "design-spec",
+    "implementation-plan",
+    "task-1-action-domain",
+    "task-2-shell",
+    "task-3-roles-dashboard",
+    "task-4-studio",
+    "task-5-calendar",
+    "task-6-architect",
+    "task-7-brain-story",
+    "task-8-workspaces",
+    "task-9-techniques",
+    "task-10-builds",
+    "prompt-quality",
+    "automation-bridge-versioning",
+    "visual-browser-audit",
+    "release-docs",
+    "final-verification",
+    "packaging",
+    "independent-inspection"
+  ],
+  "current": "complete",
+  "pending": []
+}

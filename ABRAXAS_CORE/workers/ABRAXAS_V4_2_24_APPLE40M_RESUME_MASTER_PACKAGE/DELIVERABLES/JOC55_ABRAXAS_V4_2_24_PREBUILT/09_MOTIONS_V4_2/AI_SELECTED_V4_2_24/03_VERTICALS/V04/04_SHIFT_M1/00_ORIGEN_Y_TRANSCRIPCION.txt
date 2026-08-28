@@ -1,0 +1,11 @@
+CONTENT: V04
+ROL: SHIFT
+FUENTE: 00:15:28.000 → 00:15:33.000
+TIMELINE: 00:00:36.000 → 00:00:41.000
+DURACIÓN: 5.000s
+
+TRANSCRIPCIÓN EXACTA
+No tiene que ser unos cambios increíbles de un día para otro.
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0174.

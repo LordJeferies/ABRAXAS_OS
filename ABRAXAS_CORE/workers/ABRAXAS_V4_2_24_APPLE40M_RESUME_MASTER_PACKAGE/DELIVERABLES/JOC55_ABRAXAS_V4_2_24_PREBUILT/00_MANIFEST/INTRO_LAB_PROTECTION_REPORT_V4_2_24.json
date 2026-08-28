@@ -1,0 +1,23 @@
+{
+  "schema_version": "abraxas.intro-lab-protection-report.v4.2.24",
+  "status": "PASS",
+  "source": "JOC55_AMANDA_INTRO_LAB_V4_2_5_BASE.html",
+  "destination": "JOC55_AMANDA_INTRO_LAB_V4_2_24.html",
+  "route_count": 6,
+  "route_ids": [
+    "INTRO_G01",
+    "INTRO_G02",
+    "INTRO_G03",
+    "INTRO_M01",
+    "INTRO_M02",
+    "INTRO_M03"
+  ],
+  "editorial_core_sha256_before": "da53c98333c3dedca5fa7eb84150c2b1520b7e674ea93ddd2a0ac99a60445768",
+  "editorial_core_sha256_after": "da53c98333c3dedca5fa7eb84150c2b1520b7e674ea93ddd2a0ac99a60445768",
+  "editorial_core_unchanged": true,
+  "changes": [
+    "additive metadata",
+    "Motion System V7 reference",
+    "non-destructive dashboard panel"
+  ]
+}

@@ -1,0 +1,11 @@
+CONTENT: V17
+ROL: TENSION
+FUENTE: 01:08:21.070 → 01:08:28.421
+TIMELINE: 00:00:07.070 → 00:00:14.421
+DURACIÓN: 7.351s
+
+TRANSCRIPCIÓN EXACTA
+se da el servicio, como por ejemplo es el tema de las mentorías específicamente, pero eso es un producto más one on one.
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0719.

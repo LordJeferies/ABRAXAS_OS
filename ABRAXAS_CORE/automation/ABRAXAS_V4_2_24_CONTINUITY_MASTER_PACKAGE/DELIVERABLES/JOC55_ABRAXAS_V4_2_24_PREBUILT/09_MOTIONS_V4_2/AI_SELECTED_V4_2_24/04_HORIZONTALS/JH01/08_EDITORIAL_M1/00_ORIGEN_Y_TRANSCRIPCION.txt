@@ -1,0 +1,11 @@
+CONTENT: JH01
+ROL: EDITORIAL
+FUENTE: 00:10:34.000 → 00:10:42.000
+TIMELINE: 00:04:00.423 → 00:04:08.423
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+A menos que sean robots que lo estén haciendo. Yo la verdad no lo veo. Pero bueno, ya veremos a dónde avanza todo.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0119.

@@ -1,0 +1,38 @@
+{
+  "sequence": 11,
+  "content_id": "H03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H03_B63",
+  "child_beat_ids": [
+    "H03_B63"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:58:19.000",
+  "source_end": "00:58:27.000",
+  "timeline_in_seconds": 305.0,
+  "timeline_out_seconds": 313.0,
+  "timeline_in": "00:05:05.000",
+  "timeline_out": "00:05:13.000",
+  "duration_seconds": 8.0,
+  "text": "el resto de tu vida, entonces más vale que te lo disfrutes porque es lo que vas a hacer siempre. Entonces ese es nuestro approach también, que es bastante diferente.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0616.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0616",
+  "motion_primary": "M6",
+  "motion_name": "SOFTWARE_INPUT_PROCESS_OUTPUT",
+  "motion_alternative": "M4",
+  "why_motion": "La frase describe un flujo digital verificable: input, proceso y resultado.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "SaaS or data: input / process / output",
+    "asset_files": [
+      "UI_01_INPUT.png",
+      "UI_02_PROCESS.png",
+      "UI_03_OUTPUT.png"
+    ],
+    "instruction": "Representar un flujo funcional de software o datos: input, proceso y output. UI sobria y legible; prohibidos HUD, cyberpunk, métricas, marcas o funciones inventadas."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

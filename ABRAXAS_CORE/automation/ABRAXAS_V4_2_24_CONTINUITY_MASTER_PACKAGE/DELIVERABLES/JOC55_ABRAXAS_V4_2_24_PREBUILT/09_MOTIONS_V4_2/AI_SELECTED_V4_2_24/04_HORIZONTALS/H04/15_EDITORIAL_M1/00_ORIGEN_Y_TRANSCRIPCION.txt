@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:20:30.707 → 01:20:35.694
+TIMELINE: 00:07:00.707 → 00:07:05.694
+DURACIÓN: 4.987s
+
+TRANSCRIPCIÓN EXACTA
+Que eso fue algo, no sé cuál fue tu impresión del Summit, yo creo que
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0858.

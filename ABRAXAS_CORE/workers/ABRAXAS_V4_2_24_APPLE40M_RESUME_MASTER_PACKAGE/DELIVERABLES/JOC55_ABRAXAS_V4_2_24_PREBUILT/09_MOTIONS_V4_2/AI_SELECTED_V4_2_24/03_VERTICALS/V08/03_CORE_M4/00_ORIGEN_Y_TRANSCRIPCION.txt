@@ -1,0 +1,11 @@
+CONTENT: V08
+ROL: CORE
+FUENTE: 00:40:08.000 → 00:40:16.000
+TIMELINE: 00:00:34.000 → 00:00:42.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+el board onontológico que debes presentar para presentarte los programas de reválida y empezar nuevamente tu proceso para poder licenciarte acá.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0442.

@@ -1,0 +1,7 @@
+# ABRAXAS v1.2 — examples only. The Python executor creates commands from SHIM_CONFIRMED_MANIFEST.json.
+# Precise cut:
+ffmpeg -ss 00:00:10.000 -i SOURCE.mp4 -t 12.500 -c:v libx264 -crf 18 -preset medium -c:a aac -b:a 192k fragment.mp4
+# Fast cut (keyframe dependent):
+ffmpeg -ss 00:00:10.000 -i SOURCE.mp4 -t 12.500 -c copy fragment.mp4
+# Join rendered fragments:
+ffmpeg -f concat -safe 0 -i concat.txt -c copy joined.mp4

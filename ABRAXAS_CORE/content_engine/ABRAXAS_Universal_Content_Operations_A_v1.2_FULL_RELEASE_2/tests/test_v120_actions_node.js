@@ -1,0 +1,13 @@
+'use strict';
+const assert=require('assert');
+global.ABRAXAS_DATA=require('../src/data.js'); global.ABRAXAS_CORE=require('../src/core.js');
+global.V120_DOMAIN=require('../src/v120/domain.js'); global.V120_STORE=require('../src/v120/store.js');
+const A=require('../src/v120/actions.js');
+const required=['nav.go','presentation.set','role.set','sidebar.toggle','command.toggle','architect.toggle','content.open','studio.view','production.role','task.complete','calendar.view','calendar.month','calendar.move','calendar.filter','architect.ask','architect.route','factory.mode','shim.step','shim.preset','library.filter','ai.preview'];
+for(const id of required) assert(A.has(id),'missing action '+id);
+assert.equal(A.dispatch('role.set',{role:'copy'}),true);
+assert.equal(global.V120_STORE.get().roleMode,'copy');
+assert.equal(A.dispatch('nav.go',{section:'calendar'}),true);
+assert.equal(global.V120_STORE.get().section,'calendar');
+assert.equal(A.dispatch('missing.action',{}),false,'unknown actions must fail safely');
+console.log('v1.2 action registry PASS');

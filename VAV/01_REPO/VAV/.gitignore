@@ -1,0 +1,36 @@
+node_modules/
+dist/
+target/
+.DS_Store
+*.log
+BOOTSTRAP_REPORT.txt
+config/providers.local.json
+
+# ==========================================================================
+# VAV LOCAL / GENERATED — DO NOT VERSION
+# ==========================================================================
+
+.vav-backups/
+
+node_modules/
+dist/
+target/
+build/
+coverage/
+.vite/
+
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+
+config/providers.local.json
+
+.DS_Store
+*.log
+BOOTSTRAP_REPORT.txt
+
+
+# Local patch backups
+.vav-patches/

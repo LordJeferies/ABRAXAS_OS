@@ -1,0 +1,11 @@
+CONTENT: JH04
+ROL: EDITORIAL
+FUENTE: 01:09:36.424 → 01:09:41.293
+TIMELINE: 00:05:11.956 → 00:05:16.825
+DURACIÓN: 4.869s
+
+TRANSCRIPCIÓN EXACTA
+pero también depende de qué tipo de suscripción elija el cliente,
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0733.

@@ -1,0 +1,15 @@
+{
+  "V01": {
+    "parsed": true,
+    "clean_rendered": false,
+    "imported_davinci": false,
+    "timeline_created": false,
+    "movement_applied": false,
+    "voice_ready": false,
+    "subtitles_generated": false,
+    "glossary_applied": false,
+    "final_layer_created": false,
+    "rendered": false,
+    "verified": false
+  }
+}

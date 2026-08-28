@@ -1,0 +1,11 @@
+CONTENT: V06
+ROL: SHIFT
+FUENTE: 00:27:20.236 → 00:27:28.000
+TIMELINE: 00:00:51.236 → 00:00:59.000
+DURACIÓN: 7.764s
+
+TRANSCRIPCIÓN EXACTA
+me diga que no no significa que es un no. Es que tengo que seguir preguntando hasta que alguien me diga que sí o la persona correcta me diga que sí o yo crea mi propia oportunidad.
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0302.

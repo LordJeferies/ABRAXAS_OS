@@ -1,0 +1,40 @@
+{
+  "name": "@vav/captions-desktop",
+  "version": "0.0.1-dev",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420",
+    "build": "vite build",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@remotion/player": "4.0.518",
+    "@tauri-apps/api": "2.11.1",
+    "@tanstack/react-virtual": "3.14.10",
+    "@vav/engine-registry": "workspace:*",
+    "@vav/remotion-composition": "workspace:*",
+    "@vav/transcription": "workspace:*",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-moveable": "0.56.0",
+    "remotion": "4.0.518",
+    "wavesurfer.js": "7.12.11",
+    "zustand": "5.0.15",
+    "lucide-react": "1.34.0",
+    "motion": "13.1.1",
+    "@tauri-apps/plugin-dialog": "2.7.2",
+    "@vav/abraxas-import": "workspace:*",
+    "@vav/caption-styles": "workspace:*",
+    "@vav/caption-motion": "workspace:*",
+    "@vav/vision-contracts": "workspace:*",
+    "@vav/caption-hierarchy": "workspace:*"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@tauri-apps/cli": "2.11.4",
+    "@vitejs/plugin-react": "6.1.0",
+    "tailwindcss": "4.3.3",
+    "vite": "8.2.2"
+  }
+}

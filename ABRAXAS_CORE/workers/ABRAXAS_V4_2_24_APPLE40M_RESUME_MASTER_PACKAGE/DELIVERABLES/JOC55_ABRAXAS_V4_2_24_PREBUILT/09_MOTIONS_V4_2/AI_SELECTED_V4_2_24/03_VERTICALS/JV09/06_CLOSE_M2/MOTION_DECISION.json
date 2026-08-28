@@ -1,0 +1,42 @@
+{
+  "sequence": 6,
+  "content_id": "JV09",
+  "narrative_role": "CLOSE",
+  "source_part_id": "JV09_P10",
+  "child_beat_ids": [
+    "JV09_B12"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:07:52.417",
+  "source_end": "01:07:59.379",
+  "timeline_in_seconds": 60.962,
+  "timeline_out_seconds": 67.924,
+  "timeline_in": "00:01:00.962",
+  "timeline_out": "00:01:07.924",
+  "duration_seconds": 6.962,
+  "text": "Y when you embrace it, cuando de verdad lo personifica, ocurre la magia, que es lo que hemos visto que ha pasado acá.",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0713.",
+  "semantic_score": 7.1351,
+  "transcript_reference": "SRT_0713",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

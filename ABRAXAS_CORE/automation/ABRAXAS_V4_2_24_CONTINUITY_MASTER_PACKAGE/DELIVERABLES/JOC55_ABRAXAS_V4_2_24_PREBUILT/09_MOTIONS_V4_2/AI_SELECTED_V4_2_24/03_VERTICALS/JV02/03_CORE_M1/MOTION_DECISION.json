@@ -1,0 +1,39 @@
+{
+  "sequence": 3,
+  "content_id": "JV02",
+  "narrative_role": "CORE",
+  "source_part_id": "JV02_P04_S01",
+  "child_beat_ids": [
+    "JV02_B05",
+    "JV02_B06"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:14:14.278",
+  "source_end": "00:14:19.001",
+  "timeline_in_seconds": 26.752,
+  "timeline_out_seconds": 31.475,
+  "timeline_in": "00:00:26.752",
+  "timeline_out": "00:00:31.475",
+  "duration_seconds": 4.723,
+  "text": "si eres normal, eres igual que todos los demás",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0162.",
+  "semantic_score": 7.0532,
+  "transcript_reference": "SRT_0162",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

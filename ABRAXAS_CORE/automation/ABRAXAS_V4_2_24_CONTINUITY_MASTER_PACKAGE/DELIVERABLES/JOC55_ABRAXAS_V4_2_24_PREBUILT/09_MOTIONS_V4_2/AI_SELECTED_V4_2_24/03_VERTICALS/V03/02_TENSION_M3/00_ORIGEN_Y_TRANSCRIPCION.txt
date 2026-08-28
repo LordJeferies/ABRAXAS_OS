@@ -1,0 +1,11 @@
+CONTENT: V03
+ROL: TENSION
+FUENTE: 00:12:30.905 → 00:12:36.837
+TIMELINE: 00:00:14.905 → 00:00:20.837
+DURACIÓN: 5.932s
+
+TRANSCRIPCIÓN EXACTA
+sea, es tener esa capacidad de entender de que las correcciones o las críticas que
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0143.

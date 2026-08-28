@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-08-28T17:16:13.049Z",
+  "platform": "darwin",
+  "arch": "arm64",
+  "whisperCpp": {
+    "available": true,
+    "executable": "/opt/homebrew/bin/whisper-cli",
+    "model": {
+      "id": "large-v3-turbo",
+      "label": "Large V3 Turbo FULL",
+      "path": "/Users/lordjef/Library/Application Support/VAV/models/whisper/ggml-large-v3-turbo.bin",
+      "installed": true
+    }
+  },
+  "mlx": {
+    "supported": true,
+    "available": true,
+    "reason": null,
+    "executable": "/Users/lordjef/Desktop/ABRAXAS_V3_1_EXECUTABLE_AUTOMATION/.venv-mlx/bin/mlx_whisper",
+    "models": [
+      {
+        "id": "large-v3-turbo",
+        "label": "Large V3 Turbo",
+        "path": "/Users/lordjef/Desktop/Moka_Terminal_Cortes_48_FrameMatched_FINAL/Modelos_MLX/whisper-large-v3-turbo",
+        "installed": true
+      },
+      {
+        "id": "large-v3",
+        "label": "Large V3",
+        "path": "/Users/lordjef/Desktop/Moka_Terminal_Cortes_48_FrameMatched_FINAL/Modelos_MLX/whisper-large-v3",
+        "installed": true
+      }
+    ]
+  },
+  "vision": {
+    "supported": true,
+    "sidecar": {
+      "executable": "/Users/lordjef/Library/Application Support/VAV/providers/vav-vision-macos/bin/vav-vision-macos",
+      "installed": true
+    },
+    "sam2": {
+      "repo": "/Users/lordjef/Library/Application Support/VAV/providers/sam2/repo",
+      "repoInstalled": true,
+      "python": "/Users/lordjef/Library/Application Support/VAV/providers/sam2/.venv/bin/python",
+      "venvReady": true,
+      "checkpointCount": 4
+    },
+    "cutie": {
+      "repo": "/Users/lordjef/Library/Application Support/VAV/providers/cutie/rf-repo",
+      "repoInstalled": true,
+      "python": "/Users/lordjef/Library/Application Support/VAV/providers/cutie/.venv/bin/python",
+      "venvReady": true,
+      "packaging": "rf-cutie"
+    },
+    "opencv": {
+      "python": "/Users/lordjef/Library/Application Support/VAV/providers/opencv/.venv/bin/python",
+      "venvReady": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+CONTENT: MH03
+ROL: EDITORIAL
+FUENTE: 00:41:17.000 → 00:41:22.000
+TIMELINE: 00:06:10.736 → 00:06:15.736
+DURACIÓN: 5.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces de ahí salió como este primer producto, nace la compañía y bueno, a partir de ahí
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0453.

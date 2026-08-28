@@ -1,0 +1,30 @@
+{
+  "version": "1.2",
+  "local": {
+    "artifact": "ABRAXAS_Universal_Content_Operations_A_v1.2.html",
+    "protocol": "file://",
+    "offline": true,
+    "serviceWorker": false,
+    "secrets": false
+  },
+  "web": {
+    "artifact": "ABRAXAS_Universal_Content_Operations_WEB_v1.2.zip",
+    "protocol": "http(s)",
+    "offlineCache": true,
+    "serviceWorker": true,
+    "secretsInFrontend": false
+  },
+  "clientIntelligence": "ABRAXAS_Client_Intelligence_v1.2.html",
+  "sharedDomain": [
+    "content_id",
+    "clients",
+    "campaigns",
+    "formats",
+    "tasks",
+    "assets",
+    "sources",
+    "history",
+    "prompts",
+    "qa"
+  ]
+}

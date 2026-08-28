@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-08-28T13:23:52.717509",
+  "v12_1_green": true,
+  "v14_continuity_green": true,
+  "motions_reference_installed": true,
+  "shim_cuts_installed": true,
+  "safe_candidate_count": 2519,
+  "safe_candidate_bytes": 2177708640,
+  "manual_review_count": 300,
+  "report_dir": "/Users/lordjef/Desktop/abraxasos/VAV_CLEANUP_AUDIT_20260828_132328"
+}

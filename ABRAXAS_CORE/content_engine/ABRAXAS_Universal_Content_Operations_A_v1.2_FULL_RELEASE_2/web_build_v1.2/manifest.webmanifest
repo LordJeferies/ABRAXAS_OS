@@ -1,0 +1,15 @@
+{
+  "name": "ABRAXAS Creative Operations System",
+  "short_name": "ABRAXAS",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#08080a",
+  "theme_color": "#08080a",
+  "icons": [
+    {
+      "src": "assets/abraxas_app_icon_v100.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

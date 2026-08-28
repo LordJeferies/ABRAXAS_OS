@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 01:04:23.000 → 01:04:31.000
+TIMELINE: 00:11:09.000 → 00:11:17.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Y es algo muy interesante porque, por ejemplo, todo es virtual, entonces realmente la inversión es mínima. Nosotros no tenemos inversión de
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0681.

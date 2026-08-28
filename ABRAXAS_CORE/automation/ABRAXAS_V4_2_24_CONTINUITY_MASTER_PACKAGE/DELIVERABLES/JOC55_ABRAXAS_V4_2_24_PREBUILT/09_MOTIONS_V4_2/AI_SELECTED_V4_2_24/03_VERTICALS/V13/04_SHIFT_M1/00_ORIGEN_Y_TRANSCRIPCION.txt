@@ -1,0 +1,11 @@
+CONTENT: V13
+ROL: SHIFT
+FUENTE: 00:22:26.264 → 00:22:33.004
+TIMELINE: 00:00:42.264 → 00:00:49.004
+DURACIÓN: 6.740s
+
+TRANSCRIPCIÓN EXACTA
+no solamente la parte de la habilidad y la teoría, pero también eso lo que me gusta la ontología,
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0254.

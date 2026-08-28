@@ -1,0 +1,59 @@
+ABRAXAS v1.1.3 · HANDOFF MAESTRO
+
+USA ESTE FULL RELEASE COMO BASE CANÓNICA DE LA SIGUIENTE ITERACIÓN.
+
+ARQUITECTURA
+v1.1.3 separa dominio/conocimiento de presentación. El dominio se hereda de v1/v1.1.2; Interface System 3.0 vive en `src/v113/` y `src/app.js` solo orquesta/bootstrapea.
+
+NO RECONSTRUIR NI DUPLICAR
+- content_id
+- Content
+- Campaign / Format / Pillar
+- Tasks / Production Graph
+- Assets / Source Truth
+- History / QA
+- Prompts / Client Quality Packs
+- Shim confirmed manifest / Terminal / DaVinci contracts
+
+UI ACTUAL
+- Dashboard con sidebar.
+- Product Story como representación secundaria sobre los mismos datos.
+- selector persistente arriba a la derecha.
+- role projections: all, strategy, script, copy, recording, design, editing, qa, publishing.
+- Content Studio 2.0: Outline | Workspace | Inspector.
+- Brain Navigator 3.0: anatomía reconocible + open-chevron particles + zoom + morphs.
+- El Arquitecto 3.0 contextual.
+
+SHIM
+La regla es: Shim no automatiza candidatos. Automatiza decisiones CONFIRMADAS.
+`Transcript → HTML review → SHIM_CONFIRMED_MANIFEST → Terminal/FFmpeg + DaVinci`.
+Carruseles confirmados salen por `CAROUSEL_PRODUCTION_PACKAGE`.
+
+CALIDAD
+Lee antes de cambiar prompts:
+- references/v112_source_truth/ABRAXAS_CRITERIO_MAESTRO_DE_CALIDAD_CLIENTES.txt
+- json/CLIENT_QUALITY_PACKS_v1.1.3.json
+- json/TECHNIQUE_REGISTRY_v1.1.3.json
+- docs/VISUAL_FIDELITY_GATE_v1.1.3.md
+
+REGLA DE VISUAL
+No usar las 41 técnicas como efectos decorativos. Usar el Technique Registry por módulo. Apple/macOS gobierna jerarquía y controles; referencias de Awwwards/los 9 videos amplían composición y motion cuando aportan función.
+
+ANTES DE MODIFICAR
+1. Ejecuta los tests v1.1.3.
+2. Verifica standalone final, no solo src/.
+3. Mantén un solo bootstrap.
+4. No vuelvas a cargar `src/styles.css` legado ni renderers v1.1.2.
+5. Actualiza CHECKPOINT/manifest/verification.
+
+CANDIDATOS v1.2
+- Editorial Coverage Engine.
+- Collision/similarity detection.
+- Format/template performance.
+- Prompt Lab A/B.
+- Source Truth Graph.
+- roles/usuarios/permisos reales.
+- comments/approval lanes/notifications.
+- Automation Center + job tracking FFmpeg/DaVinci.
+- Visual Composer conectado a content_id/slide_id/asset_id.
+- El Arquitecto con LLM únicamente mediante backend seguro.

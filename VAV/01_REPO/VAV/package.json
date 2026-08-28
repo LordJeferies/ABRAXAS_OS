@@ -1,0 +1,27 @@
+{
+  "name": "vav",
+  "version": "0.0.1-dev",
+  "private": true,
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.check.json --noEmit",
+    "build": "pnpm --filter @vav/captions-desktop build",
+    "engine:health": "pnpm --filter @vav/local-engine health",
+    "providers:discover": "node scripts/discover-providers.mjs",
+    "tauri:dev": "pnpm --filter @vav/captions-desktop tauri dev",
+    "tauri:build": "pnpm --filter @vav/captions-desktop tauri build",
+    "foundation:health": "node scripts/check-pro-foundation.mjs",
+    "bridge:health": "node scripts/check-content-motion-bridge.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}

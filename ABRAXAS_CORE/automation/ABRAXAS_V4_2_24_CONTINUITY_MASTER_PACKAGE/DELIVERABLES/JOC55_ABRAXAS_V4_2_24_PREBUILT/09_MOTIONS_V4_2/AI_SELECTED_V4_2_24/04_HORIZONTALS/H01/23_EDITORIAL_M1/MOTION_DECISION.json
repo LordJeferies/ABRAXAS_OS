@@ -1,0 +1,38 @@
+{
+  "sequence": 23,
+  "content_id": "H01",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H01_B133",
+  "child_beat_ids": [
+    "H01_B133"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:26:18.000",
+  "source_end": "00:26:27.000",
+  "timeline_in_seconds": 686.0,
+  "timeline_out_seconds": 695.0,
+  "timeline_in": "00:11:26.000",
+  "timeline_out": "00:11:35.000",
+  "duration_seconds": 9.0,
+  "text": "Al final uno lo tiene que hacer también por uno, por esa aspiración de querer ser mejor y de saber que eventualmente tú vas a conseguir el camino que te va a llevar al éxito cualquiera que sea.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0292.",
+  "semantic_score": 3.7,
+  "transcript_reference": "SRT_0292",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

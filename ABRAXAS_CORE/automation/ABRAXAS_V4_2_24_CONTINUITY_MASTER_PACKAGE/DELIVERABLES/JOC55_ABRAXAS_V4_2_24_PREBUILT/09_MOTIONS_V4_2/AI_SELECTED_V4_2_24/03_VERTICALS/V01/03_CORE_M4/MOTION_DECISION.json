@@ -1,0 +1,36 @@
+{
+  "sequence": 3,
+  "content_id": "V01",
+  "narrative_role": "CORE",
+  "source_part_id": "V01_P07",
+  "child_beat_ids": [
+    "V01_B07"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:03:27.000",
+  "source_end": "00:03:36.000",
+  "timeline_in_seconds": 36.0,
+  "timeline_out_seconds": 45.0,
+  "timeline_in": "00:00:36.000",
+  "timeline_out": "00:00:45.000",
+  "duration_seconds": 9.0,
+  "text": "Entonces cada vez que alguien me pregunta, porque siempre me preguntan exactamente lo mismo que me acabas de decir, como que cómo haces, que cómo te disfrutas estudiar.",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0041.",
+  "semantic_score": 9.8944,
+  "transcript_reference": "SRT_0041",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La idea central se entiende mejor como relación o proceso visual.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

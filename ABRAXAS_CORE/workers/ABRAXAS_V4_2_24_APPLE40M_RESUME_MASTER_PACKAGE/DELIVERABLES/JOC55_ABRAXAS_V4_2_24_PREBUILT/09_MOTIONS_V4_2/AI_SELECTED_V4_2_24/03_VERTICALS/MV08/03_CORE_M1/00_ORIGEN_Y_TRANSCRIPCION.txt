@@ -1,0 +1,11 @@
+CONTENT: MV08
+ROL: CORE
+FUENTE: 01:24:09.122 → 01:24:13.644
+TIMELINE: 00:00:28.900 → 00:00:33.422
+DURACIÓN: 4.522s
+
+TRANSCRIPCIÓN EXACTA
+Bueno, yo creo que estaría súper orgulloso y súper contento.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0889.

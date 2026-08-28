@@ -1,0 +1,20 @@
+{
+  "version": "1.1.2",
+  "label": "ABRAXAS Visual Quality System",
+  "intent": "cinematic-high-fidelity",
+  "must_have": [
+    "texture and material specificity",
+    "high-end editorial/cinematic feel",
+    "no cheap AI artifacts",
+    "continuity across START/MIDDLE/END",
+    "safe areas for text when relevant",
+    "prompt with text and prompt without text for carousel or cover use cases"
+  ],
+  "avoid": [
+    "plastic skin",
+    "warped typography",
+    "generic stock visuals",
+    "gratuitous holograms",
+    "fake evidence presented as real"
+  ]
+}

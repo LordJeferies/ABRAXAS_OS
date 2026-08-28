@@ -1,0 +1,11 @@
+CONTENT: MV06
+ROL: TENSION
+FUENTE: 01:13:21.143 → 01:13:29.029
+TIMELINE: 00:00:07.706 → 00:00:15.592
+DURACIÓN: 7.886s
+
+TRANSCRIPCIÓN EXACTA
+¿Cómo fue ese crecimiento? sea, ¿cómo arrancamos? ¿Con cuánto arrancaste? Y ahora, ¿cómo llegaste ahora a los 1500?
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0778.

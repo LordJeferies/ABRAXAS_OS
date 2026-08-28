@@ -1,0 +1,38 @@
+{
+  "sequence": 16,
+  "content_id": "MH04",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH04_B100",
+  "child_beat_ids": [
+    "MH04_B100"
+  ],
+  "speaker": "MIXED",
+  "source_start": "01:28:05.000",
+  "source_end": "01:28:14.000",
+  "timeline_in_seconds": 513.995,
+  "timeline_out_seconds": 522.995,
+  "timeline_in": "00:08:33.995",
+  "timeline_out": "00:08:42.995",
+  "duration_seconds": 9.0,
+  "text": "Y de verdad, gracias por tu tiempo hoy y contar todas esas excelentes experiencias que estuviste. La verdad que fue muy valiosa y yo siento que fue una experiencia increíble para mí inclusive.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0925.",
+  "semantic_score": 3.7,
+  "transcript_reference": "SRT_0925",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

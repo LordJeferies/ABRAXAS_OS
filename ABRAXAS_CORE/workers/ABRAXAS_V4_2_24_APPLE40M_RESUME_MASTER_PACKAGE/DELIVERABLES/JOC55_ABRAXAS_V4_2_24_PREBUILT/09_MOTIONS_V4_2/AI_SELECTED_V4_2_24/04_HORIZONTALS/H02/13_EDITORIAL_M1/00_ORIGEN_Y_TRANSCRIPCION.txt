@@ -1,0 +1,11 @@
+CONTENT: H02
+ROL: EDITORIAL
+FUENTE: 00:41:32.702 → 00:41:41.000
+TIMELINE: 00:06:10.702 → 00:06:19.000
+DURACIÓN: 8.298s
+
+TRANSCRIPCIÓN EXACTA
+qué es diferente por cada estado, porque es muy similar, digamos, al tema de derecho, que es que no puede ejercer en todos los estados, dependiendo del programa que hagas.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0455.

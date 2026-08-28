@@ -1,0 +1,38 @@
+{
+  "sequence": 6,
+  "content_id": "MH03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH03_B31",
+  "child_beat_ids": [
+    "MH03_B31"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:37:56.000",
+  "source_end": "00:38:04.000",
+  "timeline_in_seconds": 169.736,
+  "timeline_out_seconds": 177.736,
+  "timeline_in": "00:02:49.736",
+  "timeline_out": "00:02:57.736",
+  "duration_seconds": 8.0,
+  "text": "Pero cuando empiezo a averiguar toda la información del tema de la revalida, era tanta información en Internet y la gente te decía una cosa y otras personas te decían otras.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0422.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0422",
+  "motion_primary": "M6",
+  "motion_name": "SOFTWARE_INPUT_PROCESS_OUTPUT",
+  "motion_alternative": "M4",
+  "why_motion": "La frase describe un flujo digital verificable: input, proceso y resultado.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "SaaS or data: input / process / output",
+    "asset_files": [
+      "UI_01_INPUT.png",
+      "UI_02_PROCESS.png",
+      "UI_03_OUTPUT.png"
+    ],
+    "instruction": "Representar un flujo funcional de software o datos: input, proceso y output. UI sobria y legible; prohibidos HUD, cyberpunk, métricas, marcas o funciones inventadas."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

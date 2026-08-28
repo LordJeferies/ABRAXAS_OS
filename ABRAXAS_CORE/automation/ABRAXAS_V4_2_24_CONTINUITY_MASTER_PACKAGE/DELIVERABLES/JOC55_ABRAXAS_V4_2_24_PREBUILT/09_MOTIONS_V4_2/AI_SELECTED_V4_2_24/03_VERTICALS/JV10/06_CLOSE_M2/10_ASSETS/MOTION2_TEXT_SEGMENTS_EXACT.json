@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "La verdad que fue muy valiosa y yo siento que fue una experiencia increíble para mí inclusive. Así que gracias por tu tiempo.",
+  "segments": [
+    "La verdad que fue muy valiosa y yo",
+    "siento que fue una experiencia increíble para",
+    "mí inclusive. Así que gracias por tu tiempo."
+  ],
+  "reconstructed_text": "La verdad que fue muy valiosa y yo siento que fue una experiencia increíble para mí inclusive. Así que gracias por tu tiempo."
+}

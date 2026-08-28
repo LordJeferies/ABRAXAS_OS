@@ -1,0 +1,38 @@
+{
+  "sequence": 4,
+  "content_id": "V16",
+  "narrative_role": "SHIFT",
+  "source_part_id": "V16_P06",
+  "child_beat_ids": [
+    "V16_B09"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:06:11.757",
+  "source_end": "01:06:17.326",
+  "timeline_in_seconds": 41.757,
+  "timeline_out_seconds": 47.326,
+  "timeline_in": "00:00:41.757",
+  "timeline_out": "00:00:47.326",
+  "duration_seconds": 5.569,
+  "text": "Pero eso también te da una ventaja que es que, a pesar de que ya",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0696.",
+  "semantic_score": 9.8313,
+  "transcript_reference": "SRT_0696",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

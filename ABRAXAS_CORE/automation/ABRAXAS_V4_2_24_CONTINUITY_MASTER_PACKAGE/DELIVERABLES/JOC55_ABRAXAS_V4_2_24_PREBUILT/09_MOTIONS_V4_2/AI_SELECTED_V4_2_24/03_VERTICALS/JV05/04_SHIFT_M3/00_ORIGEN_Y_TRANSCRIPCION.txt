@@ -1,0 +1,11 @@
+CONTENT: JV05
+ROL: SHIFT
+FUENTE: 00:43:18.000 → 00:43:25.000
+TIMELINE: 00:00:47.231 → 00:00:54.231
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+Me parece que son geniales porque siento que viene de la verdadera necesidad porque tú la tuviste y tú estás asumiendo la.
+
+MOTIVO
+Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0472.

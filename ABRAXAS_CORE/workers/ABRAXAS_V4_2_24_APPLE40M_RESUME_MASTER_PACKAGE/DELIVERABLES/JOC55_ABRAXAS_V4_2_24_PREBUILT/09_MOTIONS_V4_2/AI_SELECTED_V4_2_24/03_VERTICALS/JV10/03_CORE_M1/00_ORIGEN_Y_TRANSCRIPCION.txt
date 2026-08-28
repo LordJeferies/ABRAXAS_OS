@@ -1,0 +1,11 @@
+CONTENT: JV10
+ROL: CORE
+FUENTE: 01:27:31.454 → 01:27:37.078
+TIMELINE: 00:00:29.907 → 00:00:35.531
+DURACIÓN: 5.624s
+
+TRANSCRIPCIÓN EXACTA
+Y yo creo que eso se ha visto recompensado. Me alegra muchísimo que estés ayudando a tanta gente.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0918.

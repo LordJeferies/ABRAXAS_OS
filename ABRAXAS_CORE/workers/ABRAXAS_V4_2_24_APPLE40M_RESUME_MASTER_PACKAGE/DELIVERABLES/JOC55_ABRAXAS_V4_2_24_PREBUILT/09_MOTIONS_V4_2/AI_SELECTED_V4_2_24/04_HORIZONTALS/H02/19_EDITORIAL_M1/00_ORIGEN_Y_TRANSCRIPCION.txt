@@ -1,0 +1,11 @@
+CONTENT: H02
+ROL: EDITORIAL
+FUENTE: 00:44:50.000 → 00:44:59.000
+TIMELINE: 00:09:28.000 → 00:09:37.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces no es nada forzado porque simplemente estás atendiendo la necesidad que tú tuviste. Ahora, ven acá. Este producto es sumamente nicho, ¿no?
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0487.

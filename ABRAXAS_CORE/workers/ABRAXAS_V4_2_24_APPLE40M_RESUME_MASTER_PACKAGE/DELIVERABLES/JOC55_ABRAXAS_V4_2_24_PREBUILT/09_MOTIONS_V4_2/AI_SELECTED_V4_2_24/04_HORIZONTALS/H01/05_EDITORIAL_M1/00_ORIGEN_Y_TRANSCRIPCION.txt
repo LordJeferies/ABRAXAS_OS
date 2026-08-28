@@ -1,0 +1,11 @@
+CONTENT: H01
+ROL: EDITORIAL
+FUENTE: 00:17:17.000 → 00:17:26.000
+TIMELINE: 00:02:25.000 → 00:02:34.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+sea, toda mi vida soñando ser esto, odontólogo, y no se me da naturalmente. O sea, no se me da naturalmente la parte manual. O sea, yo me quería morir.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0193.

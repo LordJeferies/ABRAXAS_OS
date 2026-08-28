@@ -1,0 +1,38 @@
+{
+  "sequence": 8,
+  "content_id": "MH03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH03_B43",
+  "child_beat_ids": [
+    "MH03_B43"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:38:58.000",
+  "source_end": "00:39:04.000",
+  "timeline_in_seconds": 231.736,
+  "timeline_out_seconds": 237.736,
+  "timeline_in": "00:03:51.736",
+  "timeline_out": "00:03:57.736",
+  "duration_seconds": 6.0,
+  "text": "Porque esta misma información que yo estoy haciendo y que estoy haciendo todas estas guías para lograr estos pasos.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0431.",
+  "semantic_score": 4.475,
+  "transcript_reference": "SRT_0431",
+  "motion_primary": "M6",
+  "motion_name": "SOFTWARE_INPUT_PROCESS_OUTPUT",
+  "motion_alternative": "M4",
+  "why_motion": "La frase describe un flujo digital verificable: input, proceso y resultado.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "SaaS or data: input / process / output",
+    "asset_files": [
+      "UI_01_INPUT.png",
+      "UI_02_PROCESS.png",
+      "UI_03_OUTPUT.png"
+    ],
+    "instruction": "Representar un flujo funcional de software o datos: input, proceso y output. UI sobria y legible; prohibidos HUD, cyberpunk, métricas, marcas o funciones inventadas."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

@@ -1,0 +1,38 @@
+{
+  "sequence": 5,
+  "content_id": "V16",
+  "narrative_role": "MEMORABLE",
+  "source_part_id": "V16_P08",
+  "child_beat_ids": [
+    "V16_B12"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:06:26.077",
+  "source_end": "01:06:33.000",
+  "timeline_in_seconds": 56.077,
+  "timeline_out_seconds": 63.0,
+  "timeline_in": "00:00:56.077",
+  "timeline_out": "00:01:03.000",
+  "duration_seconds": 6.923,
+  "text": "hacer en ciertas cosas te da también un upper hand. que hablas desde el conocimiento y no desde... ¿Será que esto se puede hacer?",
+  "reason": "Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0697.",
+  "semantic_score": 8.9967,
+  "transcript_reference": "SRT_0697",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La frase tiene fuerza autónoma y debe resolverse como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

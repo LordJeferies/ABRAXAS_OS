@@ -1,0 +1,42 @@
+{
+  "sequence": 1,
+  "content_id": "MH01",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH01_B02",
+  "child_beat_ids": [
+    "MH01_B02"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:04:20.000",
+  "source_end": "00:04:29.000",
+  "timeline_in_seconds": 2.203,
+  "timeline_out_seconds": 11.203,
+  "timeline_in": "00:00:02.203",
+  "timeline_out": "00:00:11.203",
+  "duration_seconds": 9.0,
+  "text": "Que no es solamente... O sea, yo creo que tiene que haber un nivel de pasión. Necesariamente, pero es una pasión ligada al propósito, que bien claro lo dijiste era de ser odontólogo, ¿no?",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0048.",
+  "semantic_score": 5.0,
+  "transcript_reference": "SRT_0048",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

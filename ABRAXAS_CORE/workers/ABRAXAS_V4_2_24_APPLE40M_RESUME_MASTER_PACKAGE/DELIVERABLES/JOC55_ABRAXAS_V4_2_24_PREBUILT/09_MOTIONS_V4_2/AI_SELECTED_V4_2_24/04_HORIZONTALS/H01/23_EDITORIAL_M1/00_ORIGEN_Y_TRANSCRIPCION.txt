@@ -1,0 +1,11 @@
+CONTENT: H01
+ROL: EDITORIAL
+FUENTE: 00:26:18.000 → 00:26:27.000
+TIMELINE: 00:11:26.000 → 00:11:35.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Al final uno lo tiene que hacer también por uno, por esa aspiración de querer ser mejor y de saber que eventualmente tú vas a conseguir el camino que te va a llevar al éxito cualquiera que sea.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0292.

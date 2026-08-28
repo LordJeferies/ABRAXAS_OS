@@ -1,0 +1,41 @@
+{
+  "sequence": 2,
+  "content_id": "MV06",
+  "narrative_role": "TENSION",
+  "source_part_id": "MV06_P02",
+  "child_beat_ids": [
+    "MV06_B02",
+    "MV06_B03",
+    "MV06_B04",
+    "MV06_B05"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:13:21.143",
+  "source_end": "01:13:29.029",
+  "timeline_in_seconds": 7.706,
+  "timeline_out_seconds": 15.592,
+  "timeline_in": "00:00:07.706",
+  "timeline_out": "00:00:15.592",
+  "duration_seconds": 7.886,
+  "text": "¿Cómo fue ese crecimiento? sea, ¿cómo arrancamos? ¿Con cuánto arrancaste? Y ahora, ¿cómo llegaste ahora a los 1500?",
+  "reason": "Expone el problema, contradicción o costo narrativo. Referencia SRT_0778.",
+  "semantic_score": 6.6207,
+  "transcript_reference": "SRT_0778",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "La idea se aclara con observación documental y close-ups, sin sustituir el testimonio.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

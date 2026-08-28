@@ -1,0 +1,11 @@
+CONTENT: V17
+ROL: HOOK
+FUENTE: 01:08:13.961 → 01:08:21.031
+TIMELINE: 00:00:00.000 → 00:00:07.070
+DURACIÓN: 7.070s
+
+TRANSCRIPCIÓN EXACTA
+OK, depende del producto. La mayoría de nuestros productos es básicamente pagar la totalidad del producto al momento que
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0717.

@@ -1,0 +1,11 @@
+CONTENT: JV03
+ROL: HOOK
+FUENTE: 00:19:38.320 → 00:19:42.561
+TIMELINE: 00:00:00.000 → 00:00:04.241
+DURACIÓN: 4.241s
+
+TRANSCRIPCIÓN EXACTA
+Esa es la filosofía de éxito. Porque, ¿qué pasa?
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0227.

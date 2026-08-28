@@ -1,0 +1,407 @@
+{
+  "package": "ABRAXAS_V3_1_EXECUTABLE_AUTOMATION",
+  "version": "3.1-executable.1",
+  "project_default": "JOC55_AMANDA",
+  "preserve_legacy": true,
+  "render_profile": "APPLE_VT_H264_40M_V1",
+  "counts": {
+    "intros": 6,
+    "verticals": 29,
+    "horizontals": 12,
+    "principal_carousels": 6,
+    "highlight_carousels": 6,
+    "phrases": 15,
+    "claims": 8,
+    "potentials": 6
+  },
+  "test_evidence": {
+    "unit_tests": 28,
+    "relevant_microtrims": 86,
+    "intro_microtrims": 23,
+    "content_visual_microtrims": 63,
+    "visual_placements": 455,
+    "motion_queue_items": 361,
+    "principal_carousel_slides": 36,
+    "highlight_carousel_slides": 30
+  },
+  "files": [
+    {
+      "path": "00_INSTALL_DEPENDENCIES.command",
+      "bytes": 1947,
+      "sha256": "2de3b159a684c97344ce67e8b6e8c2704f0c7ce181a310a53d08e05e9f5642ad",
+      "executable": true
+    },
+    {
+      "path": "01B_SETUP_GENERIC.command",
+      "bytes": 100,
+      "sha256": "466ac2249f031a6cb0289517f3b7381b13ab89a9a27469328aa2118aee7ac9c2",
+      "executable": true
+    },
+    {
+      "path": "01_SETUP_JOC55.command",
+      "bytes": 108,
+      "sha256": "dc83dc34cf06953edbbbaa25c1909149ce24a598b55a9e476d2f116571d393b8",
+      "executable": true
+    },
+    {
+      "path": "02_VALIDATE_INPUTS.command",
+      "bytes": 118,
+      "sha256": "3349bdcb6102ea2035b1cc620856c95c09a8be6894539582f42f031a8e2bdee3",
+      "executable": true
+    },
+    {
+      "path": "03_COMPILE_HTML.command",
+      "bytes": 102,
+      "sha256": "60dce84ae587b3c6b064ebb4bf8da90e988c2fe465dd989812a9ddb60165e6d1",
+      "executable": true
+    },
+    {
+      "path": "04_FINGERPRINT_SOURCES.command",
+      "bytes": 106,
+      "sha256": "7cdedf54e01b709fa1ab92ececc2e38be52e82c108b265735b8f3c0ee71e796d",
+      "executable": true
+    },
+    {
+      "path": "05_BUILD_ASSETS_AND_VISUAL_QUEUE.command",
+      "bytes": 101,
+      "sha256": "abbf796610e51148d7c9550b03fec5a787ed2acf1536f447b69032828b89d5d3",
+      "executable": true
+    },
+    {
+      "path": "06A_RESOLVE_NEXT_INTRO_MICROTRIM.command",
+      "bytes": 251,
+      "sha256": "dddea4f60f6122b9f08f54b17fc90939554497f3e1d37afc898f80e72da5b3db",
+      "executable": true
+    },
+    {
+      "path": "06B_RESOLVE_ALL_INTRO_MICROTRIMS.command",
+      "bytes": 680,
+      "sha256": "7e643d7a7209ac9654593d29a5bf76dffa965d6672c5c9969401a731789f66cb",
+      "executable": true
+    },
+    {
+      "path": "06C_APPROVE_MICROTRIM_MANUALLY.command",
+      "bytes": 278,
+      "sha256": "96c7fdfa2b9666a0edcb43375f732b0646614ffb22c5d52fb39256a7ec6a5faa",
+      "executable": true
+    },
+    {
+      "path": "06D_RESOLVE_NEXT_CONTENT_MICROTRIM.command",
+      "bytes": 140,
+      "sha256": "587d32e9f3780d2ac65cf13b4904b61eb211b829ac022b1c30f1dfa4cdd385ea",
+      "executable": true
+    },
+    {
+      "path": "06E_RESOLVE_ALL_RELEVANT_CONTENT_MICROTRIMS.command",
+      "bytes": 748,
+      "sha256": "46ce252882223a30ddc7c1636c10d802f57c48d706d5aec5fa58b93618609d7a",
+      "executable": true
+    },
+    {
+      "path": "06_LIST_INTRO_MICROTRIMS.command",
+      "bytes": 124,
+      "sha256": "5394241984eb8f7cb7a873d165c62341c4886d62f39f0349a68415e5a5f06232",
+      "executable": true
+    },
+    {
+      "path": "07A_SET_H03_OVERRIDE.command",
+      "bytes": 514,
+      "sha256": "06c0735e8dd3ca994a65eb10ce98a52509299de9957a8ad6f39355bbe907858c",
+      "executable": true
+    },
+    {
+      "path": "07_PREVIEW_H03_LAST_SECONDS.command",
+      "bytes": 917,
+      "sha256": "0fe059946da4b5ac278c91e87bd19224d897fe2cd06387e66bd2d8ea5ae6ef35",
+      "executable": true
+    },
+    {
+      "path": "08A_DRY_RUN_WORKERS.command",
+      "bytes": 331,
+      "sha256": "65cfa237fcbfc2056d37f7f7f8626f5b0b9936aab3aa7f25dacb7b0626b795b1",
+      "executable": true
+    },
+    {
+      "path": "08_BUILD_PART_PLAN.command",
+      "bytes": 99,
+      "sha256": "55ad66a5b5609d0f9d0883fb94d0e74a9ea32aa7d12142d060424584ab3100f9",
+      "executable": true
+    },
+    {
+      "path": "09_WORKER_A_RENDER.command",
+      "bytes": 269,
+      "sha256": "692e18de18ac66004d60f81718c395e8c5cbbb9443992f63b5611714172f9f67",
+      "executable": true
+    },
+    {
+      "path": "10_WORKER_B_RENDER.command",
+      "bytes": 267,
+      "sha256": "fae10084970d1154997c6a44ee6c86011c3a69f4a98005064d8f1cc15b3c4238",
+      "executable": true
+    },
+    {
+      "path": "11_BUILD_DAVINCI_HANDOFF.command",
+      "bytes": 275,
+      "sha256": "45c43ef80c43c0f1d50235eeb84cdcb6b6ba6b7abb5dfaaa3040e500d66a0f25",
+      "executable": true
+    },
+    {
+      "path": "12_VERIFY.command",
+      "bytes": 116,
+      "sha256": "e8d2ded1cf87087191664134ea0bedd9aca8ee80071ed7d9a72195ae995b4e4c",
+      "executable": true
+    },
+    {
+      "path": "13_STATUS.command",
+      "bytes": 101,
+      "sha256": "7f448d0d38d0770ba2be89c769312369810f2efb372278a42ff0e0656237e53a",
+      "executable": true
+    },
+    {
+      "path": "14_OPEN_OUTPUT.command",
+      "bytes": 307,
+      "sha256": "bb9f2074bafef7e83c8b7c2e1ac448a6bc7c0f637057e9e6bd9b0f13a2bb3e97",
+      "executable": true
+    },
+    {
+      "path": "15_SELFTEST.command",
+      "bytes": 475,
+      "sha256": "b811ea9c85e1265d0606cf4ef9eaf5e01c3164c574ff8d9d0a57eebcc8c9fed5",
+      "executable": true
+    },
+    {
+      "path": "CONFIG/project_config.example.json",
+      "bytes": 1263,
+      "sha256": "e8cd399a2f227861c6bb75845f65479940e148db0fd5614ce01a684b72756b42",
+      "executable": false
+    },
+    {
+      "path": "DOCS/ABRAXAS_V3_1_AUDIT_REPORT.md",
+      "bytes": 4586,
+      "sha256": "032471f2c3c73d7e05db4c1ee0bd59d61062e7199b3b9516d5a59e9a8a35bcbc",
+      "executable": false
+    },
+    {
+      "path": "DOCS/ABRAXAS_V3_1_CONTEXT_ZERO_TEST_REPORT.md",
+      "bytes": 2029,
+      "sha256": "6646318a3a92a1ee6c1d62b42f6b2cc93177daf45356098a8f7a475896afa4b1",
+      "executable": false
+    },
+    {
+      "path": "DOCS/README_PASO_A_PASO.md",
+      "bytes": 5294,
+      "sha256": "b8ba18e1c1af7c25cfb38dbf3ee049d21c24edca70fedc6f00e133cc46dccd94",
+      "executable": false
+    },
+    {
+      "path": "DOCS/VERIFICATION_REPORT_EXECUTABLE.md",
+      "bytes": 3904,
+      "sha256": "3fb537fa4962956f1c2791250ef01f7e5430995bbd10e90305dc359afadba5c9",
+      "executable": false
+    },
+    {
+      "path": "DOCS/VISUAL_QUEUE_INSTRUCTIONS.md",
+      "bytes": 1309,
+      "sha256": "e1fb4fdebca7c3554de7119cb67e0ab0592cd4831353971c3d1c761bfcf9a533",
+      "executable": false
+    },
+    {
+      "path": "INPUT/JOC55_AMANDA_CONTENT_ENGINE_V3_1.html",
+      "bytes": 5026154,
+      "sha256": "669b9d52116e7134be118249f085452cf0cb97ccb338acb38eb9c354b6379e90",
+      "executable": false
+    },
+    {
+      "path": "INPUT/JOC55_AMANDA_INTRO_LAB_V3_1.html",
+      "bytes": 2205712,
+      "sha256": "aacd576280fef44427f62e03b55b24338b6065f84fdb7cdeb921cce0532ca433",
+      "executable": false
+    },
+    {
+      "path": "README_PRIMERO.txt",
+      "bytes": 1029,
+      "sha256": "461c0814254693f9ff69cedb87157e843c4035fad54a343e785bd2d6b68ae631",
+      "executable": false
+    },
+    {
+      "path": "SYSTEM/ABRAXAS_CONTENT_LAB_V3_1_VERIFIED.zip",
+      "bytes": 842216,
+      "sha256": "1ab17ac50ebc60172bd05e7df3f91502cf5d70562c4cab0f8aa1c43c51bd9699",
+      "executable": false
+    },
+    {
+      "path": "TESTS/test_core.py",
+      "bytes": 1381,
+      "sha256": "b6f7751aed175ca28a530168c19b41eb3cda6e898f12431eba7fd8739b438925",
+      "executable": false
+    },
+    {
+      "path": "TESTS/test_html_assets.py",
+      "bytes": 2221,
+      "sha256": "ad22258117d881db7c8f6085b402a7d8875aef3d6ff619478119a3f76534d7d0",
+      "executable": false
+    },
+    {
+      "path": "TESTS/test_microtrim.py",
+      "bytes": 1292,
+      "sha256": "4e9c306dfcceee91a5abd92191acdf166f5ba905c2105835e674f32f82fc7b98",
+      "executable": false
+    },
+    {
+      "path": "TESTS/test_microtrim_resolver.py",
+      "bytes": 1074,
+      "sha256": "d1cac98b4a762416871fec45e9d8ce8a3c6bd41a2fc25f1780f2e9bf80be41a6",
+      "executable": false
+    },
+    {
+      "path": "TESTS/test_plan_render.py",
+      "bytes": 4145,
+      "sha256": "5db6179139b62628a074456ccb4ca2a93abb6ca0a9a3572488a5e06008ad95de",
+      "executable": false
+    },
+    {
+      "path": "TESTS/test_project_davinci.py",
+      "bytes": 1832,
+      "sha256": "25d4e5e8bebc1e747379dc8632e920ff6dfce57eb58839b1c71e23b491beb8d3",
+      "executable": false
+    },
+    {
+      "path": "TESTS/test_queue.py",
+      "bytes": 991,
+      "sha256": "192cec0453d650ccc483f54ec70ba85bc2e0eb017dd118a9577d997b4799a5fe",
+      "executable": false
+    },
+    {
+      "path": "TESTS/test_state_verify.py",
+      "bytes": 1816,
+      "sha256": "de44535f97dcc26c9b06e966b73817a41d359f91793b2e796303a62f33b8cd16",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/_common.sh",
+      "bytes": 376,
+      "sha256": "42c0ab3bc8d1a2520cbca43386aba64c8bfefb726e48efb96aa90bc0db40bae3",
+      "executable": true
+    },
+    {
+      "path": "TOOLS/abraxas/__init__.py",
+      "bytes": 20,
+      "sha256": "45b39bf623a03936cfb536a77bdf1c0164aeb53c4cd0e27a118259fce71ee74e",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/assets.py",
+      "bytes": 6754,
+      "sha256": "d63db6b39c1177b467d41b0cd872a3610d97dfcf2c3517b35622c095235fddc2",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/cli.py",
+      "bytes": 26404,
+      "sha256": "f46598f1d0ccc8173287f9c8d79f5064618d37fb6ac66baff2ebd54d46f5ea5b",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/core.py",
+      "bytes": 3850,
+      "sha256": "ae7837043b96b819877bd990e4e8bb6ceb269c49ed1951466ecfec19027f6599",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/davinci.py",
+      "bytes": 1447,
+      "sha256": "c1f473a387f63257dac148a28134274c76d862fff32f169cca3161ea5d51d1f5",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/htmlio.py",
+      "bytes": 1068,
+      "sha256": "1bc3a9e61cb578467b22024bab325f86f5c64ddfe51c202a3d95fa3a92673e25",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/microtrim.py",
+      "bytes": 2400,
+      "sha256": "5379ecc3e229fe0eb1d96c36a199c5e2075e4d5247711e6474b47938db6b2aab",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/microtrim_runner.py",
+      "bytes": 3241,
+      "sha256": "b3c51826bad0a510bf9d4e59c203cc0f3ac75d95cfbe1e41e89331618a142b74",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/plan.py",
+      "bytes": 9447,
+      "sha256": "54877d4e594f43035c0151d3fdd4f49b1a7c79d5cb7b46f511e1946523c8bbfc",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/preflight.py",
+      "bytes": 1754,
+      "sha256": "4e6dfe82e6d60326ea947bb960d788899504a3429a332e0b31817b7ea5dd06a2",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/project.py",
+      "bytes": 1550,
+      "sha256": "2ab8434ffd2662b9bb20f086f42d21d6a352fd1df41e91473398eba91ff2d359",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/queue.py",
+      "bytes": 3097,
+      "sha256": "425bba09ba8eb4b59e1714c02f53cf939b4372bae135b61b5cfbb4ccf8535fa2",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/render.py",
+      "bytes": 1004,
+      "sha256": "75e8583badf42626c5c808bcf3a24b604cf693f2b98e4cba0eb25f3cf8063f28",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/runtime.py",
+      "bytes": 5350,
+      "sha256": "71b80c2339e7b8c635056c8e430e75305d1c211a54bae1398322105a074bca66",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/state.py",
+      "bytes": 1023,
+      "sha256": "ee979a8e4132f521bfbe19dcc2b19737811ee277b0b224511062ae4156920dee",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/verify.py",
+      "bytes": 1160,
+      "sha256": "8c98afd29ba8f1c489c5290eccd3c97bc2626b1891f69a47a739f7341b930e40",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas/workers.py",
+      "bytes": 234,
+      "sha256": "773b08ea76e361ff4e8fc73fa3a016f8023f92d638141fe6c1b5e0bc51f0ba64",
+      "executable": false
+    },
+    {
+      "path": "TOOLS/abraxas_cli.py",
+      "bytes": 84,
+      "sha256": "237ddeb3f606ef4b9c871a0e2676e47dca8477817576152d876120b9e331da42",
+      "executable": true
+    },
+    {
+      "path": "TOOLS/davinci_workspace_import.py",
+      "bytes": 3574,
+      "sha256": "16eca05bf274bbe4a19f1058e81d23ef0c3f347a77f01d2844aba097cf550c50",
+      "executable": true
+    },
+    {
+      "path": "TOOLS/mlx_transcribe_helper.py",
+      "bytes": 817,
+      "sha256": "7375021557936dcdf4d69432fade78d2795efb6570069b6cf96f3292f9c4c33e",
+      "executable": true
+    }
+  ]
+}

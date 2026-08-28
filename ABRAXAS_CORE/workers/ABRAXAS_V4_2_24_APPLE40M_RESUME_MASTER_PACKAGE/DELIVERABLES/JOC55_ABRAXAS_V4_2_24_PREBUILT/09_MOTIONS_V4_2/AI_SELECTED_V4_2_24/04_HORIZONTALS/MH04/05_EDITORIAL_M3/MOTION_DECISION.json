@@ -1,0 +1,38 @@
+{
+  "sequence": 5,
+  "content_id": "MH04",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH04_B30",
+  "child_beat_ids": [
+    "MH04_B30"
+  ],
+  "speaker": "MIXED",
+  "source_start": "01:22:07.000",
+  "source_end": "01:22:16.000",
+  "timeline_in_seconds": 155.995,
+  "timeline_out_seconds": 164.995,
+  "timeline_in": "00:02:35.995",
+  "timeline_out": "00:02:44.995",
+  "duration_seconds": 9.0,
+  "text": "Siempre he ido a miles de conferencias odontológicas y es completamente distinto, pero fue mi primera vez como en una conferencia de emprendimiento específicamente y bueno,",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0871.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0871",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La selección funciona como tesis, contradicción o payoff editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

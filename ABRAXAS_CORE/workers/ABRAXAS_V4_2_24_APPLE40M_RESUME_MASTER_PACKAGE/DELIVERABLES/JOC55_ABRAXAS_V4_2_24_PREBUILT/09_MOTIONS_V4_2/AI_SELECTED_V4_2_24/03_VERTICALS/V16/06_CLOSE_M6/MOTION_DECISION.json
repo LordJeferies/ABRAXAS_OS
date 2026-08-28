@@ -1,0 +1,38 @@
+{
+  "sequence": 6,
+  "content_id": "V16",
+  "narrative_role": "CLOSE",
+  "source_part_id": "V16_P09",
+  "child_beat_ids": [
+    "V16_B13"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:06:33.000",
+  "source_end": "01:06:41.000",
+  "timeline_in_seconds": 63.0,
+  "timeline_out_seconds": 71.0,
+  "timeline_in": "00:01:03.000",
+  "timeline_out": "00:01:11.000",
+  "duration_seconds": 8.0,
+  "text": "No sé si es posible. sea, tú sabes cuáles pueden ser los límites y eso te hace también ser como más multifacético, vamos a decirlo así.",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0700.",
+  "semantic_score": 8.3518,
+  "transcript_reference": "SRT_0700",
+  "motion_primary": "M6",
+  "motion_name": "SOFTWARE_INPUT_PROCESS_OUTPUT",
+  "motion_alternative": "M4",
+  "why_motion": "La frase describe un flujo digital verificable: input, proceso y resultado.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "SaaS or data: input / process / output",
+    "asset_files": [
+      "UI_01_INPUT.png",
+      "UI_02_PROCESS.png",
+      "UI_03_OUTPUT.png"
+    ],
+    "instruction": "Representar un flujo funcional de software o datos: input, proceso y output. UI sobria y legible; prohibidos HUD, cyberpunk, métricas, marcas o funciones inventadas."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

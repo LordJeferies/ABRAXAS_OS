@@ -1,0 +1,11 @@
+CONTENT: H01
+ROL: EDITORIAL
+FUENTE: 00:23:03.000 → 00:23:11.000
+TIMELINE: 00:08:11.000 → 00:08:19.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, eso es algo que, por ejemplo, yo específicamente aprendí mucho en mi carrera. y lo traslade al ámbito empresarial.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0262.

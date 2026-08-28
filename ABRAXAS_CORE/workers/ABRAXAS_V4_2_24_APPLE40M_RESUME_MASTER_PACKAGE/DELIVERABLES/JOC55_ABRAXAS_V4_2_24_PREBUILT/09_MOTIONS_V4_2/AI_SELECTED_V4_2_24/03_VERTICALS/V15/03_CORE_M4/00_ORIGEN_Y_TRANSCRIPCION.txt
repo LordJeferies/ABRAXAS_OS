@@ -1,0 +1,11 @@
+CONTENT: V15
+ROL: CORE
+FUENTE: 01:04:52.000 → 01:05:00.000
+TIMELINE: 00:00:29.000 → 00:00:37.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Todo el advertisement que hacemos y todo el crecimiento que hemos tenido completamente orgánico ha sido de vos en vos, recomendado por nuestros clientes.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0685.

@@ -1,0 +1,36 @@
+{
+  "sequence": 3,
+  "content_id": "V14",
+  "narrative_role": "CORE",
+  "source_part_id": "V14_P07",
+  "child_beat_ids": [
+    "V14_B12"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:23:59.400",
+  "source_end": "00:24:06.000",
+  "timeline_in_seconds": 35.4,
+  "timeline_out_seconds": 42.0,
+  "timeline_in": "00:00:35.400",
+  "timeline_out": "00:00:42.000",
+  "duration_seconds": 6.6,
+  "text": "tengo mi modelo de negocio, por qué no podría hacerlo si ya hecho otras cosas en las que de repente no tenía la experiencia.",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0270.",
+  "semantic_score": 8.8361,
+  "transcript_reference": "SRT_0270",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La selección explica una relación o mapa conceptual que merece lectura progresiva.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

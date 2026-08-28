@@ -1,0 +1,11 @@
+CONTENT: MH04
+ROL: EDITORIAL
+FUENTE: 01:20:35.694 → 01:20:40.582
+TIMELINE: 00:01:04.689 → 00:01:09.577
+DURACIÓN: 4.888s
+
+TRANSCRIPCIÓN EXACTA
+más allá de la gran cantidad de talento y de las ideas interesantes que había,
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0858.

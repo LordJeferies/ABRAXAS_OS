@@ -1,0 +1,11 @@
+CONTENT: V11
+ROL: TENSION
+FUENTE: 01:10:31.137 → 01:10:36.781
+TIMELINE: 00:00:11.137 → 00:00:16.781
+DURACIÓN: 5.644s
+
+TRANSCRIPCIÓN EXACTA
+dando la información gratuita y la persona ya no va a necesitar de tu ayuda, pero es todo lo contrario.
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0740.

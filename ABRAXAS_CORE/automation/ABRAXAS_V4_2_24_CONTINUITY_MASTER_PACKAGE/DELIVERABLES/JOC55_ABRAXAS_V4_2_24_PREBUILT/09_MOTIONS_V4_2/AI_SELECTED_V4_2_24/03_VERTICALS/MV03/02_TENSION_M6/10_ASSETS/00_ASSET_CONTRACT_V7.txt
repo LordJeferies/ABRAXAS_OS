@@ -1,0 +1,8 @@
+M6 · SaaS or data: input / process / output
+
+Representar un flujo funcional de software o datos: input, proceso y output. UI sobria y legible; prohibidos HUD, cyberpunk, métricas, marcas o funciones inventadas.
+
+ARCHIVOS OBLIGATORIOS
+- UI_01_INPUT.png
+- UI_02_PROCESS.png
+- UI_03_OUTPUT.png

@@ -1,0 +1,36 @@
+{
+  "sequence": 17,
+  "content_id": "H02",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H02_B93",
+  "child_beat_ids": [
+    "H02_B93"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:44:14.000",
+  "source_end": "00:44:23.000",
+  "timeline_in_seconds": 532.0,
+  "timeline_out_seconds": 541.0,
+  "timeline_in": "00:08:52.000",
+  "timeline_out": "00:09:01.000",
+  "duration_seconds": 9.0,
+  "text": "Si tú eres el cliente perfecto, vas a saber exactamente lo que tu cliente necesita y qué es lo que está buscando y cómo hacerlo también desde el propósito.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0480.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0480",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La selección explica una relación o mapa conceptual que merece lectura progresiva.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

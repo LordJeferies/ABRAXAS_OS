@@ -1,0 +1,11 @@
+CONTENT: H01
+ROL: EDITORIAL
+FUENTE: 00:17:11.000 → 00:17:17.000
+TIMELINE: 00:02:19.000 → 00:02:25.000
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+importante para nosotros. Y yo me empecé a frustrar de una manera que yo decía, yo no soy buena en esto.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0191.

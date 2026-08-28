@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 00:56:17.000 → 00:56:25.000
+TIMELINE: 00:03:03.000 → 00:03:11.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+mucho depende también de ti y Al final no tienes a alguien atrás que te esté diciendo mira, en tu casa estudiaste hoy, no estudiaste hoy, depende 100 % de ti.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0595.

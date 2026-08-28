@@ -1,0 +1,11 @@
+CONTENT: JH04
+ROL: EDITORIAL
+FUENTE: 01:08:52.000 → 01:08:58.000
+TIMELINE: 00:04:27.532 → 00:04:33.532
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+Y el tema del app si es más por suscripción porque es un producto que la gente utiliza por más tiempo.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0724.

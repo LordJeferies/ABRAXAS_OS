@@ -1,0 +1,11 @@
+CONTENT: MH04
+ROL: EDITORIAL
+FUENTE: 01:24:49.996 → 01:24:54.443
+TIMELINE: 00:05:18.991 → 00:05:23.438
+DURACIÓN: 4.447s
+
+TRANSCRIPCIÓN EXACTA
+dificultades que he encontrado siempre le busco la oportunidad, siempre le busco él de qué
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0894.

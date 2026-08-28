@@ -1,0 +1,731 @@
+{
+  "version": "1.1.3",
+  "source": "HTML_REFERENCES_41_TECNICAS_COMPLETO.md",
+  "principle": "Aplicar técnicas por función; no como checklist decorativo. Apple/macOS gobierna la UI; referencias web amplían motion/composición cuando aportan una tarea concreta.",
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Animaciones avanzadas con GSAP"
+    },
+    {
+      "id": 2,
+      "name": "Arquitectura Data-Driven"
+    },
+    {
+      "id": 3,
+      "name": "Optimización CRO, ganchos de retención y alineación de marca"
+    },
+    {
+      "id": 4,
+      "name": "Rendimiento, carga diferida y prevención de CLS"
+    },
+    {
+      "id": 5,
+      "name": "Gestión de estado reactiva"
+    },
+    {
+      "id": 6,
+      "name": "Smooth Scroll con Lenis"
+    },
+    {
+      "id": 7,
+      "name": "Gestión inteligente de clips con Intersection Observer"
+    },
+    {
+      "id": 8,
+      "name": "Elementos 3D Zero-Code con Spline Viewer"
+    },
+    {
+      "id": 9,
+      "name": "Preloader cinematográfico de entrada"
+    },
+    {
+      "id": 10,
+      "name": "Parallax multicapa"
+    },
+    {
+      "id": 11,
+      "name": "Cursores magnéticos y estados de foco"
+    },
+    {
+      "id": 12,
+      "name": "Scroll horizontal mixto"
+    },
+    {
+      "id": 13,
+      "name": "Typography Reveal con máscaras"
+    },
+    {
+      "id": 14,
+      "name": "Distorsión WebGL y liquid hover"
+    },
+    {
+      "id": 15,
+      "name": "Transiciones SPA y View Transitions"
+    },
+    {
+      "id": 16,
+      "name": "Tipografía variable reactiva"
+    },
+    {
+      "id": 17,
+      "name": "Ruido dinámico y grano fílmico"
+    },
+    {
+      "id": 18,
+      "name": "Marquee inteligente reversible"
+    },
+    {
+      "id": 19,
+      "name": "Desdoblamiento 3D de tarjetas"
+    },
+    {
+      "id": 20,
+      "name": "Scrubbing de video controlado por scroll"
+    },
+    {
+      "id": 21,
+      "name": "Máscara de texto gigante o Typography Window"
+    },
+    {
+      "id": 22,
+      "name": "Carruseles de físicas táctiles"
+    },
+    {
+      "id": 23,
+      "name": "Efecto linterna o Mouse Spotlight"
+    },
+    {
+      "id": 24,
+      "name": "Dibujo vectorial narrativo con SVG Path Scroll"
+    },
+    {
+      "id": 25,
+      "name": "Brain Navigator procedural de partículas ABRAXAS"
+    },
+    {
+      "id": 26,
+      "name": "Navegación global, Tools Menu y Command Palette"
+    },
+    {
+      "id": 27,
+      "name": "Home onboarding, elección y regreso al último workspace"
+    },
+    {
+      "id": 28,
+      "name": "Storytelling Apple Product-Story"
+    },
+    {
+      "id": 29,
+      "name": "Herramientas Wizard estilo app macOS"
+    },
+    {
+      "id": 30,
+      "name": "El Arquitecto utility window contextual"
+    },
+    {
+      "id": 31,
+      "name": "UI e iconografía estilo macOS / Apple HIG"
+    },
+    {
+      "id": 32,
+      "name": "Sticky Feature Showcase con scroll-spy y media swapping"
+    },
+    {
+      "id": 33,
+      "name": "Transiciones cromáticas y cambio de tema por sección"
+    },
+    {
+      "id": 34,
+      "name": "Tipografía cinética y composición editorial mixta"
+    },
+    {
+      "id": 35,
+      "name": "Rail de progreso y navegación contextual por secciones"
+    },
+    {
+      "id": 36,
+      "name": "Explorador visual adaptativo con filtros, búsqueda y bookmarks"
+    },
+    {
+      "id": 37,
+      "name": "Gradient Mesh, blobs y metaballs generativos"
+    },
+    {
+      "id": 38,
+      "name": "Storytelling espacial inmersivo con WebGL y portales 3D"
+    },
+    {
+      "id": 39,
+      "name": "Objeto hero funcional y coreografía de estados"
+    },
+    {
+      "id": 40,
+      "name": "Visualización radial, orbital y bubble-map de datos"
+    },
+    {
+      "id": 41,
+      "name": "Theming ambiental semántico por módulo"
+    }
+  ],
+  "modules": {
+    "dashboard": {
+      "primaryVideo": "0809(2)-9",
+      "secondaryVideo": "0809(2)-5",
+      "techniques": [
+        {
+          "id": 2,
+          "name": "Arquitectura Data-Driven",
+          "purpose": "Proyectar métricas y next action desde el Production Graph real.",
+          "location": "Dashboard data projections",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 5,
+          "name": "Gestión de estado reactiva",
+          "purpose": "Actualizar counts/roles/estado sin duplicar Content.",
+          "location": "Métricas, role mode y next action",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 26,
+          "name": "Navegación global, Tools Menu y Command Palette",
+          "purpose": "Mantener navegación global, sidebar y Command Palette predecibles.",
+          "location": "Shell/topbar/sidebar",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 27,
+          "name": "Home onboarding, elección y regreso al último workspace",
+          "purpose": "Orientar por intención y permitir retomar trabajo.",
+          "location": "Hero + My Work",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 31,
+          "name": "UI e iconografía estilo macOS / Apple HIG",
+          "purpose": "Aplicar anatomía de app macOS, iconografía monoline y densidad calmada.",
+          "location": "Shell operativo",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 41,
+          "name": "Theming ambiental semántico por módulo",
+          "purpose": "Cambiar accent semántico por cliente/módulo sin usar color decorativo.",
+          "location": "CSS custom properties",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        }
+      ]
+    },
+    "product_story": {
+      "primaryVideo": "0809(2)-1",
+      "secondaryVideo": "0809(2)-6",
+      "techniques": [
+        {
+          "id": 7,
+          "name": "Gestión inteligente de clips con Intersection Observer",
+          "purpose": "Detectar capítulos visibles y coordinar morphs del objeto central.",
+          "location": "Story section observer",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 12,
+          "name": "Scroll horizontal mixto",
+          "purpose": "Highlights horizontales con scroll-snap y controles accesibles.",
+          "location": "Get the highlights",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 13,
+          "name": "Typography Reveal con máscaras",
+          "purpose": "Revelar titulares sin sacrificar legibilidad.",
+          "location": "Story headings",
+          "fallback": "Texto visible sin máscara",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 17,
+          "name": "Ruido dinámico y grano fílmico",
+          "purpose": "Añadir textura/grano sutil y premium al canvas/ambiente.",
+          "location": "Background/story visual",
+          "fallback": "Sin grain",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 25,
+          "name": "Brain Navigator procedural de partículas ABRAXAS",
+          "purpose": "Usar un cerebro anatómicamente reconocible como objeto funcional.",
+          "location": "Hero brain",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 28,
+          "name": "Storytelling Apple Product-Story",
+          "purpose": "Estructurar hero, highlights, closer-look y capítulos.",
+          "location": "Todo Product Story",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 32,
+          "name": "Sticky Feature Showcase con scroll-spy y media swapping",
+          "purpose": "Mantener visual/objeto sticky mientras cambian explicaciones.",
+          "location": "How it works",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 35,
+          "name": "Rail de progreso y navegación contextual por secciones",
+          "purpose": "Mostrar posición en capítulos y permitir navegación contextual.",
+          "location": "Story rail/progress",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 39,
+          "name": "Objeto hero funcional y coreografía de estados",
+          "purpose": "Hacer que el hero cambie de estado con la narrativa.",
+          "location": "Brain → routes → graph → flow → calendar → network",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        }
+      ]
+    },
+    "library": {
+      "primaryVideo": "0809(2)-5",
+      "secondaryVideo": "0809(2)-9",
+      "techniques": [
+        {
+          "id": 2,
+          "name": "Arquitectura Data-Driven",
+          "purpose": "Renderizar filtros sobre el mismo repositorio de Content.",
+          "location": "Explorer grid",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 5,
+          "name": "Gestión de estado reactiva",
+          "purpose": "Sincronizar search/filter/selection.",
+          "location": "Explorer controls",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 15,
+          "name": "Transiciones SPA y View Transitions",
+          "purpose": "Abrir Studio conservando estado y retorno.",
+          "location": "Explorer → Content Studio",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 31,
+          "name": "UI e iconografía estilo macOS / Apple HIG",
+          "purpose": "Controles, fields y grid con comportamiento macOS.",
+          "location": "Library shell",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 36,
+          "name": "Explorador visual adaptativo con filtros, búsqueda y bookmarks",
+          "purpose": "Búsqueda, filtros, bookmarks/vistas y preview como Explorer.",
+          "location": "Library",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 41,
+          "name": "Theming ambiental semántico por módulo",
+          "purpose": "Accent del cliente como señal, no estado.",
+          "location": "Tiles/tags",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        }
+      ]
+    },
+    "assets": {
+      "primaryVideo": "0809(2)-5",
+      "secondaryVideo": "0809(2)-9",
+      "techniques": [
+        {
+          "id": 2,
+          "name": "Arquitectura Data-Driven",
+          "purpose": "Relacionar assets con content_id y assetSlot.",
+          "location": "Asset browser",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 5,
+          "name": "Gestión de estado reactiva",
+          "purpose": "Actualizar status/mapping sin duplicación.",
+          "location": "Asset state",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 15,
+          "name": "Transiciones SPA y View Transitions",
+          "purpose": "Abrir Studio Design desde el asset seleccionado.",
+          "location": "Asset→Studio",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 31,
+          "name": "UI e iconografía estilo macOS / Apple HIG",
+          "purpose": "Media browser con inspector y jerarquía de app.",
+          "location": "Assets workspace",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 36,
+          "name": "Explorador visual adaptativo con filtros, búsqueda y bookmarks",
+          "purpose": "Filtrar por type/status/client/content y conservar contexto.",
+          "location": "Asset Explorer",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        }
+      ]
+    },
+    "studio": {
+      "primaryVideo": "0809(2)-9",
+      "secondaryVideo": "0809(2)-5",
+      "techniques": [
+        {
+          "id": 2,
+          "name": "Arquitectura Data-Driven",
+          "purpose": "Todas las vistas leen el mismo Content.",
+          "location": "Outline/Workspace/Inspector",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 5,
+          "name": "Gestión de estado reactiva",
+          "purpose": "Vista/role/selection reactivos sin duplicar datos.",
+          "location": "Studio state",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 15,
+          "name": "Transiciones SPA y View Transitions",
+          "purpose": "Cambiar vistas conservando edición/selección.",
+          "location": "Studio view navigation",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 29,
+          "name": "Herramientas Wizard estilo app macOS",
+          "purpose": "Desplegar tareas complejas en pasos/inspector contextual.",
+          "location": "Studio workspace",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 31,
+          "name": "UI e iconografía estilo macOS / Apple HIG",
+          "purpose": "Anatomía Outline | Workspace | Inspector y controles compactos.",
+          "location": "Content Studio 2.0",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 35,
+          "name": "Rail de progreso y navegación contextual por secciones",
+          "purpose": "Mostrar progreso/estado por sección y unidad.",
+          "location": "Outline/progress",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        }
+      ]
+    },
+    "shim": {
+      "primaryVideo": "0809(2)-9",
+      "secondaryVideo": "0809(2)-3",
+      "techniques": [
+        {
+          "id": 2,
+          "name": "Arquitectura Data-Driven",
+          "purpose": "Compilar request/result contracts desde configuración real.",
+          "location": "Shim request package",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 5,
+          "name": "Gestión de estado reactiva",
+          "purpose": "Persistir wizard, outputs, structures y export state.",
+          "location": "Shim state",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 7,
+          "name": "Gestión inteligente de clips con Intersection Observer",
+          "purpose": "En HTML resultado, coordinar candidatos y fragmentos de source de forma eficiente.",
+          "location": "Result HTML contract",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 15,
+          "name": "Transiciones SPA y View Transitions",
+          "purpose": "Conservar estado entre pasos y export/review.",
+          "location": "Wizard transitions",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 29,
+          "name": "Herramientas Wizard estilo app macOS",
+          "purpose": "Wizard de 5 pasos con una decisión dominante por etapa.",
+          "location": "Shim workspace",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 31,
+          "name": "UI e iconografía estilo macOS / Apple HIG",
+          "purpose": "Controles macOS-like y foco claro.",
+          "location": "Shim shell",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 35,
+          "name": "Rail de progreso y navegación contextual por secciones",
+          "purpose": "Stepper/progress visible.",
+          "location": "Wizard progress",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        }
+      ]
+    },
+    "production": {
+      "primaryVideo": "0809(2)-9",
+      "secondaryVideo": "0809(2)-5",
+      "techniques": [
+        {
+          "id": 2,
+          "name": "Arquitectura Data-Driven",
+          "purpose": "Proyectar tasks por rol sobre el mismo Production Graph.",
+          "location": "Production desks",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 5,
+          "name": "Gestión de estado reactiva",
+          "purpose": "Actualizar task/status/progress reactivamente.",
+          "location": "Queue/task state",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 15,
+          "name": "Transiciones SPA y View Transitions",
+          "purpose": "Navegar Queue→Studio→Queue sin perder contexto.",
+          "location": "Production routing",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 29,
+          "name": "Herramientas Wizard estilo app macOS",
+          "purpose": "Mostrar una decisión/tarea dominante por pantalla.",
+          "location": "Task workflow",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 31,
+          "name": "UI e iconografía estilo macOS / Apple HIG",
+          "purpose": "UI de herramienta protagonista, no card-grid genérico.",
+          "location": "Production workspace",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 35,
+          "name": "Rail de progreso y navegación contextual por secciones",
+          "purpose": "Progreso y dependencia visibles.",
+          "location": "Progress/dependencies",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        }
+      ]
+    },
+    "calendar": {
+      "primaryVideo": "0809(2)-9",
+      "secondaryVideo": "0809(2)-5",
+      "techniques": [
+        {
+          "id": 2,
+          "name": "Arquitectura Data-Driven",
+          "purpose": "Derivar mes/backlog desde scheduledAt del mismo Content.",
+          "location": "Calendar projection",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 5,
+          "name": "Gestión de estado reactiva",
+          "purpose": "Drag/drop actualiza scheduledAt y estado.",
+          "location": "Calendar state",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 11,
+          "name": "Cursores magnéticos y estados de foco",
+          "purpose": "Dar foco/hover visible y accesible a cards y dropzones.",
+          "location": "Calendar interactions",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 15,
+          "name": "Transiciones SPA y View Transitions",
+          "purpose": "Cambiar mes/abrir Studio conservando contexto.",
+          "location": "Calendar navigation",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 31,
+          "name": "UI e iconografía estilo macOS / Apple HIG",
+          "purpose": "Calendario desktop compacto, claro y familiar.",
+          "location": "Calendar workspace",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 41,
+          "name": "Theming ambiental semántico por módulo",
+          "purpose": "Separar color de cliente, lifecycle y riesgo.",
+          "location": "Calendar cards",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        }
+      ]
+    },
+    "architect": {
+      "primaryVideo": "0809(2)-9",
+      "secondaryVideo": "0809(2)-5",
+      "techniques": [
+        {
+          "id": 2,
+          "name": "Arquitectura Data-Driven",
+          "purpose": "Construir contexto desde section, role, lifecycle, pending y selection.",
+          "location": "Architect context",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 5,
+          "name": "Gestión de estado reactiva",
+          "purpose": "Actualizar respuesta sin recargar toda la app.",
+          "location": "Architect query/intent state",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 15,
+          "name": "Transiciones SPA y View Transitions",
+          "purpose": "Abrir ruta recomendada manteniendo contexto.",
+          "location": "Architect route actions",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 30,
+          "name": "El Arquitecto utility window contextual",
+          "purpose": "Utility window fija a la derecha, contextual y accionable.",
+          "location": "El Arquitecto 3.0",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        },
+        {
+          "id": 31,
+          "name": "UI e iconografía estilo macOS / Apple HIG",
+          "purpose": "Ventana utility macOS-like con jerarquía y foco.",
+          "location": "Architect UI",
+          "fallback": "CSS/DOM estático sin perder función",
+          "reducedMotion": "Sin motion continuo; estado final visible",
+          "performanceBudget": "≤16 ms/frame; sin bloqueo del hilo principal"
+        }
+      ]
+    }
+  }
+}

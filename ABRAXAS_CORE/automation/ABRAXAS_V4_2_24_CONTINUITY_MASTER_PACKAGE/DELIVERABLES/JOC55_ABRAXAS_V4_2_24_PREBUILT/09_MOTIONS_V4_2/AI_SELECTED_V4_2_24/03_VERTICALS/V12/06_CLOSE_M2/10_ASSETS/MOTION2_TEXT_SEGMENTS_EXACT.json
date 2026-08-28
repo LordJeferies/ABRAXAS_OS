@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Pero siento la responsabilidad aún más grande de continuar su legado a mi manera de",
+  "segments": [
+    "Pero siento la responsabilidad aún",
+    "más grande de continuar su",
+    "legado a mi manera de"
+  ],
+  "reconstructed_text": "Pero siento la responsabilidad aún más grande de continuar su legado a mi manera de"
+}

@@ -1,0 +1,11 @@
+CONTENT: V03
+ROL: HOOK
+FUENTE: 00:12:22.000 → 00:12:30.000
+TIMELINE: 00:00:06.000 → 00:00:14.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Creo que es algo que pasa mucho en Estados Unidos, ejemplo, que creo que en Latinoamérica se lleva también al otro extremo a veces que es tener thick skin.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0142.

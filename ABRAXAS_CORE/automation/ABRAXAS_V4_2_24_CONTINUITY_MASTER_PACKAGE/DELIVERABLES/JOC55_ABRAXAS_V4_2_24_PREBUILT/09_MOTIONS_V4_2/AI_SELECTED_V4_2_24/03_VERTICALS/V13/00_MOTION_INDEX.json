@@ -1,0 +1,56 @@
+{
+  "content_id": "V13",
+  "type": "VERTICAL",
+  "program_preserved": true,
+  "selected_motion_count": 6,
+  "motions": [
+    {
+      "sequence": 1,
+      "folder": "01_HOOK_M3",
+      "role": "HOOK",
+      "motion": "M3",
+      "timeline_in": "00:00:05.459",
+      "timeline_out": "00:00:11.841"
+    },
+    {
+      "sequence": 2,
+      "folder": "02_TENSION_M3",
+      "role": "TENSION",
+      "motion": "M3",
+      "timeline_in": "00:00:27.723",
+      "timeline_out": "00:00:35.834"
+    },
+    {
+      "sequence": 3,
+      "folder": "03_CORE_M4",
+      "role": "CORE",
+      "motion": "M4",
+      "timeline_in": "00:00:35.874",
+      "timeline_out": "00:00:42.264"
+    },
+    {
+      "sequence": 4,
+      "folder": "04_SHIFT_M1",
+      "role": "SHIFT",
+      "motion": "M1",
+      "timeline_in": "00:00:42.264",
+      "timeline_out": "00:00:49.004"
+    },
+    {
+      "sequence": 5,
+      "folder": "05_MEMORABLE_M3",
+      "role": "MEMORABLE",
+      "motion": "M3",
+      "timeline_in": "00:01:04.000",
+      "timeline_out": "00:01:13.000"
+    },
+    {
+      "sequence": 6,
+      "folder": "06_CLOSE_M3",
+      "role": "CLOSE",
+      "motion": "M3",
+      "timeline_in": "00:01:19.000",
+      "timeline_out": "00:01:27.000"
+    }
+  ]
+}

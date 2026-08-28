@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Si tú eres el cliente perfecto, vas a saber exactamente lo que tu cliente necesita y qué es lo que está buscando y cómo hacerlo también desde el propósito.",
+  "segments": [
+    "Si tú eres el cliente perfecto, vas a saber exactamente",
+    "lo que tu cliente necesita y qué es lo",
+    "que está buscando y cómo hacerlo también desde el propósito."
+  ],
+  "reconstructed_text": "Si tú eres el cliente perfecto, vas a saber exactamente lo que tu cliente necesita y qué es lo que está buscando y cómo hacerlo también desde el propósito."
+}

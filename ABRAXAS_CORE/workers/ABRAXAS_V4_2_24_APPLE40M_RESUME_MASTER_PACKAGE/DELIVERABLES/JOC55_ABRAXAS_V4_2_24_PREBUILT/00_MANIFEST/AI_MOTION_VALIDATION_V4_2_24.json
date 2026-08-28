@@ -1,0 +1,67 @@
+{
+  "schema_version": "abraxas.ai-motion-validation.v4.2.24",
+  "hotfix_version": "V4.2.24",
+  "generated_at": "2026-08-21T07:05:49Z",
+  "status": "PASS",
+  "blockers": [],
+  "warnings": [
+    {
+      "content_id": "V03",
+      "code": "VERTICAL_DURATION_OUTSIDE_45_80",
+      "duration_seconds": 81.0
+    },
+    {
+      "content_id": "V08",
+      "code": "VERTICAL_DURATION_OUTSIDE_45_80",
+      "duration_seconds": 81.0
+    },
+    {
+      "content_id": "V10",
+      "code": "VERTICAL_DURATION_OUTSIDE_45_80",
+      "duration_seconds": 81.0
+    },
+    {
+      "content_id": "V13",
+      "code": "VERTICAL_DURATION_OUTSIDE_45_80",
+      "duration_seconds": 87.0
+    },
+    {
+      "content_id": "JV03",
+      "code": "VERTICAL_DURATION_OUTSIDE_45_80",
+      "duration_seconds": 80.758
+    },
+    {
+      "content_id": "MV01",
+      "code": "VERTICAL_DURATION_OUTSIDE_45_80",
+      "duration_seconds": 86.727
+    },
+    {
+      "content_id": "MV02",
+      "code": "VERTICAL_DURATION_OUTSIDE_45_80",
+      "duration_seconds": 80.272
+    },
+    {
+      "content_id": "MV03",
+      "code": "VERTICAL_DURATION_OUTSIDE_45_80",
+      "duration_seconds": 87.954
+    },
+    {
+      "content_id": "MV05",
+      "code": "VERTICAL_DURATION_OUTSIDE_45_80",
+      "duration_seconds": 83.467
+    },
+    {
+      "content_id": "MV07",
+      "code": "VERTICAL_DURATION_OUTSIDE_45_80",
+      "duration_seconds": 83.092
+    }
+  ],
+  "checks": {
+    "verticals": 37,
+    "vertical_motions": 222,
+    "horizontals": 12,
+    "horizontal_motions": 255,
+    "intro_lab_protected": true,
+    "fixed_time_slicing_absent": true
+  }
+}

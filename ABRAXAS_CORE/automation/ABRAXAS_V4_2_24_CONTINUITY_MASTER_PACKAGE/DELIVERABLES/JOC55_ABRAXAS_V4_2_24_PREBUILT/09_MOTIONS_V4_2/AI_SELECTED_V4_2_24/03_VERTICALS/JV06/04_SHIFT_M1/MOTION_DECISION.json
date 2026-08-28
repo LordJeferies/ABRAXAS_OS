@@ -1,0 +1,38 @@
+{
+  "sequence": 4,
+  "content_id": "JV06",
+  "narrative_role": "SHIFT",
+  "source_part_id": "JV06_P05",
+  "child_beat_ids": [
+    "JV06_B08"
+  ],
+  "speaker": "JOC",
+  "source_start": "01:12:05.744",
+  "source_end": "01:12:10.398",
+  "timeline_in_seconds": 35.848,
+  "timeline_out_seconds": 40.502,
+  "timeline_in": "00:00:35.848",
+  "timeline_out": "00:00:40.502",
+  "duration_seconds": 4.654,
+  "text": "importantísima que tú no manejas y lo que te va costar a ti hacerlo.",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0759.",
+  "semantic_score": 5.6834,
+  "transcript_reference": "SRT_0759",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

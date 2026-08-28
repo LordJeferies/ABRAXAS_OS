@@ -1,0 +1,10 @@
+{
+  "name": "@vav/transcription",
+  "version": "0.0.1-dev",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "zod": "4.4.3"
+  }
+}

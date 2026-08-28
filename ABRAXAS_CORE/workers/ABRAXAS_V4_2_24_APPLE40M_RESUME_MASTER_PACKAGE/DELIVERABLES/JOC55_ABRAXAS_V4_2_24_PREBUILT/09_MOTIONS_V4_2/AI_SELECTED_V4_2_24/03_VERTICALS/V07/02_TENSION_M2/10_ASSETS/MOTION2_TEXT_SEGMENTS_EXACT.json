@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "ese extra mile de ser, de preocuparte por la otra persona, de tener un propósito y un por qué en todo lo que",
+  "segments": [
+    "ese extra mile de ser, de preocuparte por",
+    "la otra persona, de tener un propósito",
+    "y un por qué en todo lo que"
+  ],
+  "reconstructed_text": "ese extra mile de ser, de preocuparte por la otra persona, de tener un propósito y un por qué en todo lo que"
+}

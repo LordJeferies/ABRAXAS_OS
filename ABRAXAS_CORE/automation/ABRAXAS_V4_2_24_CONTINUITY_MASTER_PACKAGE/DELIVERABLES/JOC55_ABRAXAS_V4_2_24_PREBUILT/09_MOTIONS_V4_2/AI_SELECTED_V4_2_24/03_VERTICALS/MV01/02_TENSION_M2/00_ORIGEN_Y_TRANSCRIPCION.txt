@@ -1,0 +1,11 @@
+CONTENT: MV01
+ROL: TENSION
+FUENTE: 00:06:47.550 → 00:06:53.252
+TIMELINE: 00:00:13.973 → 00:00:19.675
+DURACIÓN: 5.702s
+
+TRANSCRIPCIÓN EXACTA
+Y incluso me gusta debatir con personas que tengan ideas contrarias. Pero es que a veces que yo lo llevo a la versión más simple.
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0079.

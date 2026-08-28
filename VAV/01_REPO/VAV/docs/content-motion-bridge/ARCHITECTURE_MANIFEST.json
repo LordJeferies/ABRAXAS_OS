@@ -1,0 +1,19 @@
+{
+  "name": "VAV-Captions Internal Repository Architecture",
+  "version": "1.0",
+  "date": "2026-08-27",
+  "basis": [
+    "VAV Captions V9 architecture",
+    "Universal Content OS Call-to-Publish V1",
+    "Motions ABRAXAS V5.5.5 Deep Expanded R4"
+  ],
+  "coreDecisions": [
+    "Ficha/content bridge",
+    "TXT/HTML are projections/import sources",
+    "Visual Motion != Caption Motion",
+    "Source Time != Timeline Time",
+    "captions-first and motions-first both supported",
+    "long-master transcript reuse",
+    "motion-aware caption compiler"
+  ]
+}

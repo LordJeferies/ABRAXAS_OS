@@ -1,0 +1,11 @@
+CONTENT: MH03
+ROL: EDITORIAL
+FUENTE: 00:35:27.000 → 00:35:34.000
+TIMELINE: 00:00:20.736 → 00:00:27.736
+DURACIÓN: 7.000s
+
+TRANSCRIPCIÓN EXACTA
+Yo cuando estaba estudiando odontología, yo soy una persona, como dije desde el principio, soy muy positiva, pero soy muy realista.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0395.

@@ -1,0 +1,38 @@
+{
+  "sequence": 18,
+  "content_id": "MH04",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH04_B108",
+  "child_beat_ids": [
+    "MH04_B108"
+  ],
+  "speaker": "MIXED",
+  "source_start": "01:28:41.000",
+  "source_end": "01:28:50.000",
+  "timeline_in_seconds": 549.995,
+  "timeline_out_seconds": 558.995,
+  "timeline_in": "00:09:09.995",
+  "timeline_out": "00:09:18.995",
+  "duration_seconds": 9.0,
+  "text": "espacios para hablar, sino nada más del ámbito solamente financiero, del modelo de negocio como tal, pero no de los otros ámbitos que también te hacen exitoso o te llevan a ser",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0931.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0931",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La selección funciona como tesis, contradicción o payoff editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

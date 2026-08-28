@@ -1,0 +1,38 @@
+{
+  "sequence": 10,
+  "content_id": "MH03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH03_B53",
+  "child_beat_ids": [
+    "MH03_B53"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:40:16.000",
+  "source_end": "00:40:22.000",
+  "timeline_in_seconds": 309.736,
+  "timeline_out_seconds": 315.736,
+  "timeline_in": "00:05:09.736",
+  "timeline_out": "00:05:15.736",
+  "duration_seconds": 6.0,
+  "text": "Entonces para nosotros eso representa como el primer sí o esa primera puerta que se abre de vas por el camino correcto.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0443.",
+  "semantic_score": 3.7,
+  "transcript_reference": "SRT_0443",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

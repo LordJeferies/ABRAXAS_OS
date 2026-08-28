@@ -1,0 +1,43 @@
+{
+  "sequence": 6,
+  "content_id": "JV03",
+  "narrative_role": "CLOSE",
+  "source_part_id": "JV03_P11",
+  "child_beat_ids": [
+    "JV03_B12",
+    "JV03_B13"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:20:53.404",
+  "source_end": "00:21:00.083",
+  "timeline_in_seconds": 75.034,
+  "timeline_out_seconds": 81.713,
+  "timeline_in": "00:01:15.034",
+  "timeline_out": "00:01:21.713",
+  "duration_seconds": 6.679,
+  "text": "de adaptación y el progreso continuo que lo dijiste de la mejor manera posible. sea que de verdad es 100 % así.",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0239.",
+  "semantic_score": 7.5087,
+  "transcript_reference": "SRT_0239",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

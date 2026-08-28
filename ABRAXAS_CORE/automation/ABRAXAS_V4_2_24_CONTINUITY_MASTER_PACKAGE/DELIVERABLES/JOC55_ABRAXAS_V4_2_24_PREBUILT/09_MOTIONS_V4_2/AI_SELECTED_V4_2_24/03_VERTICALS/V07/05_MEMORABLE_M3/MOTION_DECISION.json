@@ -1,0 +1,38 @@
+{
+  "sequence": 5,
+  "content_id": "V07",
+  "narrative_role": "MEMORABLE",
+  "source_part_id": "V07_P12",
+  "child_beat_ids": [
+    "V07_B17"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:30:43.265",
+  "source_end": "00:30:49.000",
+  "timeline_in_seconds": 64.265,
+  "timeline_out_seconds": 70.0,
+  "timeline_in": "00:01:04.265",
+  "timeline_out": "00:01:10.000",
+  "duration_seconds": 5.735,
+  "text": "algo que se contagia y se contagia en tu equipo, se contagia a las personas, en tus clientes, se contagia.",
+  "reason": "Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0336.",
+  "semantic_score": 7.7364,
+  "transcript_reference": "SRT_0336",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La selección funciona como tesis, contradicción o payoff editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

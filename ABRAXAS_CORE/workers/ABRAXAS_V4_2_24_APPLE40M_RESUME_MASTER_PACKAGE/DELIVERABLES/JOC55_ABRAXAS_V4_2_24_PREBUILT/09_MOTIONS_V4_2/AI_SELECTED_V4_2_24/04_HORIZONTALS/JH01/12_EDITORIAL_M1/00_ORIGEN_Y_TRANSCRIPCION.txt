@@ -1,0 +1,11 @@
+CONTENT: JH01
+ROL: EDITORIAL
+FUENTE: 00:12:43.000 → 00:12:49.000
+TIMELINE: 00:06:09.423 → 00:06:15.423
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+que tú mejores y seas mejor profesional. No te tomes las cosas tan personal porque es muy fácil entrar.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0144.

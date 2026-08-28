@@ -1,0 +1,11 @@
+CONTENT: JV03
+ROL: TENSION
+FUENTE: 00:19:50.000 → 00:19:59.000
+TIMELINE: 00:00:11.630 → 00:00:20.630
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+toda mi carrera de estudiante hasta como que la universidad cuando se empezó a poner un poco más difícil porque también trabajaba y estudiaba al mismo tiempo, yo soy ingeniero.
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0230.

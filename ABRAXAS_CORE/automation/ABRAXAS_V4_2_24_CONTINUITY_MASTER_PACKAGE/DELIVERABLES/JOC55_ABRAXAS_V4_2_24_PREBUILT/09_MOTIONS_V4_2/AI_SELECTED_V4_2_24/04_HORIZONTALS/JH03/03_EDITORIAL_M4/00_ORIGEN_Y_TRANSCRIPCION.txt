@@ -1,0 +1,11 @@
+CONTENT: JH03
+ROL: EDITORIAL
+FUENTE: 00:44:14.000 → 00:44:23.000
+TIMELINE: 00:01:43.231 → 00:01:52.231
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Si tú eres el cliente perfecto, vas a saber exactamente lo que tu cliente necesita y qué es lo que está buscando y cómo hacerlo también desde el propósito.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0480.

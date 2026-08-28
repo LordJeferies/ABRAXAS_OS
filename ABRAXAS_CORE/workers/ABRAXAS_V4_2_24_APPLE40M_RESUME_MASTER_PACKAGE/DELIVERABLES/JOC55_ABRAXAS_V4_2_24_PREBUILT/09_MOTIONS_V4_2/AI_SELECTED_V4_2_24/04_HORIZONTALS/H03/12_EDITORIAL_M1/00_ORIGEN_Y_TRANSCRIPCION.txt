@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 00:58:27.000 → 00:58:32.000
+TIMELINE: 00:05:13.000 → 00:05:18.000
+DURACIÓN: 5.000s
+
+TRANSCRIPCIÓN EXACTA
+En vez de decir tienes que estudiar ocho horas y no tu vida de lado y más nunca veas a tu familia.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0618.

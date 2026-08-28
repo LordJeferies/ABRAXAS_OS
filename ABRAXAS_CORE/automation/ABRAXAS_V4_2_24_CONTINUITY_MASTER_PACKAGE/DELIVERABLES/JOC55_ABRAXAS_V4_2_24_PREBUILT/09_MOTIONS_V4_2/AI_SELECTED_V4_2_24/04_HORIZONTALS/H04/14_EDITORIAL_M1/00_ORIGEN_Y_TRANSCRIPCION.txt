@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:19:40.000 → 01:19:49.000
+TIMELINE: 00:06:10.000 → 00:06:19.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+cierto, te preguntas completamente off topic. Eso que tienes atrás es un cuadro de Cruz 10. Guay. Increíble. Representing.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0845.

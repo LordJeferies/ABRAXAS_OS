@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:14:10.755 → 01:14:18.985
+TIMELINE: 00:00:40.755 → 00:00:48.985
+DURACIÓN: 8.230s
+
+TRANSCRIPCIÓN EXACTA
+Pero puedo decir que algo muy interesante es que cuando hicimos el curso lo fundamos
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0787.

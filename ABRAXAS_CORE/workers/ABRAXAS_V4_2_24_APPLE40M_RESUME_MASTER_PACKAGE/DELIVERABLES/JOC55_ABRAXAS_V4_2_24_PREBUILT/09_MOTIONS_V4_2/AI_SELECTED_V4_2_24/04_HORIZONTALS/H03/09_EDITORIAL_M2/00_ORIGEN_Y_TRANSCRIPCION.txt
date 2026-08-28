@@ -1,0 +1,11 @@
+CONTENT: H03
+ROL: EDITORIAL
+FUENTE: 00:57:29.000 → 00:57:37.000
+TIMELINE: 00:04:15.000 → 00:04:23.000
+DURACIÓN: 8.000s
+
+TRANSCRIPCIÓN EXACTA
+Y lo más increíble es que se conectan con profesores super interactivos, una comunidad que todo el está como remando hacia el mismo lado.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0608.

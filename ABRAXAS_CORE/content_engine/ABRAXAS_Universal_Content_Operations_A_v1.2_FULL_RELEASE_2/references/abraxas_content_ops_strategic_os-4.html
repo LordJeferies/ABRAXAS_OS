@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abraxas OS | The Master Blueprint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-invoice: #FAFAFA;
+            --text-ink: #0A0A0A;
+            --line-grey: #E5E5E5;
+            --gold-museum: #C5A059;
+            --cyan-cad: #00E5FF;
+            --dark-surface: #121212;
+            --investor-green: #059669;
+            --client-blue: #2563EB;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg-invoice);
+            color: var(--text-ink);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+        #app-container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        #sidebar {
+            width: 380px;
+            background-color: var(--dark-surface);
+            color: var(--bg-invoice);
+            overflow-y: auto;
+            border-right: 1px solid var(--gold-museum);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            z-index: 50;
+        }
+
+        .tomo-header {
+            padding: 20px;
+            background-color: #1A1A1A;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .tomo-header:hover { background-color: #222; }
+        
+        .chapter-list { display: none; background-color: var(--dark-surface); }
+        .chapter-list.active { display: block; }
+
+        .chapter-item {
+            padding: 12px 20px 12px 40px;
+            font-size: 0.85rem;
+            color: #888;
+            border-bottom: 1px solid #222;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .chapter-item:hover, .chapter-item.active {
+            color: var(--gold-museum);
+            background-color: #1A1A1A;
+            border-left: 3px solid var(--gold-museum);
+        }
+
+        #main-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+            position: relative;
+            background-color: var(--bg-invoice);
+        }
+
+        .content-section {
+            display: none;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 60px;
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        .content-section.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .title-huge { font-size: 3.5rem; line-height: 1.1; font-weight: 800; margin-bottom: 1.5rem; color: var(--text-ink); }
+        .subtitle { font-family: 'JetBrains Mono', monospace; color: var(--gold-museum); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 1rem; }
+        
+        .body-text { font-size: 1.15rem; line-height: 1.8; color: #333; margin-bottom: 2rem; text-align: justify; }
+        .body-text strong { color: var(--text-ink); font-weight: 700; }
+
+        .translation-matrix {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .matrix-card {
+            background: #fff;
+            border: 1px solid var(--line-grey);
+            padding: 25px;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .matrix-header {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--line-grey);
+        }
+        .matrix-internal { border-top: 4px solid var(--text-ink); }
+        .matrix-investor { border-top: 4px solid var(--investor-green); }
+        .matrix-client { border-top: 4px solid var(--client-blue); }
+        
+        .matrix-p { font-size: 0.95rem; line-height: 1.6; color: #444; }
+        .matrix-script {
+            background: #f4f4f5;
+            padding: 15px;
+            font-style: italic;
+            border-left: 2px solid var(--gold-museum);
+            margin-top: 15px;
+            font-size: 0.9rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .academic-citation {
+            background-color: #F8F9FA; border-left: 4px solid var(--text-ink);
+            padding: 25px 30px; margin: 30px 0; font-family: 'Playfair Display', serif;
+            font-style: italic; font-size: 1.1rem; color: #444; position: relative;
+        }
+        .academic-citation::before {
+            content: '📌 FUNDAMENTO CIENTÍFICO / BESTSELLER'; position: absolute;
+            top: -12px; left: 20px; background: var(--text-ink); color: #fff;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+            padding: 4px 10px; letter-spacing: 1px;
+        }
+        .academic-citation a { color: var(--gold-museum); font-weight: 700; text-decoration: none; }
+
+        .kids-block {
+            background: #fff; border: 1px solid var(--line-grey); border-left: 4px solid var(--cyan-cad);
+            padding: 25px 30px; margin: 40px 0; position: relative; box-shadow: 10px 10px 0px rgba(0,0,0,0.02);
+        }
+        .kids-block::before {
+            content: 'EXPLICACIÓN SIMPLE 🧠 (Nivel 10 años)'; position: absolute;
+            top: -12px; left: 20px; background: var(--cyan-cad); color: var(--text-ink);
+            font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 700; padding: 4px 10px;
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 350px;
+            background: #fff;
+            border: 1px solid var(--line-grey);
+            padding: 20px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .art-frame {
+            position: relative; width: 100%; height: 500px; margin: 40px 0;
+            background-color: var(--text-ink); overflow: hidden; border: 1px solid var(--gold-museum);
+        }
+        .art-frame img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%) contrast(1.15) brightness(0.85); transition: transform 0.5s ease; }
+        .art-frame:hover img { transform: scale(1.02); }
+        .blueprint-lines {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0, 229, 255, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 255, 0.15) 1px, transparent 1px);
+            background-size: 40px 40px; pointer-events: none; mix-blend-mode: screen;
+        }
+
+        #mobile-menu-btn { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 100; background: var(--text-ink); color: white; padding: 15px 20px; border-radius: 50px; font-weight: bold; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        @media (max-width: 1024px) {
+            #sidebar { position: fixed; transform: translateX(-100%); height: 100%; }
+            #sidebar.open { transform: translateX(0); }
+            #mobile-menu-btn { display: block; }
+            .content-section { padding: 40px 20px; }
+            .title-huge { font-size: 2.5rem; }
+            .translation-matrix { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app-container">
+        
+        <nav id="sidebar">
+            <div class="p-6 border-b border-gray-800 text-center">
+                <div class="font-serif text-2xl text-white mb-2">ABRAXAS OS</div>
+                <div class="font-mono text-xs text-gray-500 tracking-widest">PAM & JEF FOUNDERS // V2026</div>
+                <div class="mt-4 text-xs font-mono text-cyan-400">STATUS: M1 PRO (TRANSITIONING)</div>
+            </div>
+
+            <!-- TOMO I -->
+            <div class="tomo-header" onclick="toggleTomo('tomo1-list')">
+                <span class="font-mono text-xs text-yellow-600">TOMO I: LÓGICA DE NEGOCIO</span>
+                <h3 class="font-serif text-lg text-white mt-1">Estrategia, Mercado y Pitch</h3>
+            </div>
+            <div id="tomo1-list" class="chapter-list active">
+                <div class="chapter-item active" onclick="loadContent('t1-c1')">1.0 La Economía Lógica vs Persuasión</div>
+                <div class="chapter-item" onclick="loadContent('t1-c2')">1.1 Ecuación de Valor (Pricing)</div>
+                <div class="chapter-item" onclick="loadContent('t1-c3')">1.2 Avatar B2B y Prospección Inversa</div>
+                <!-- Placeholder para módulos restantes del Tomo I -->
+                <div class="chapter-item" onclick="loadContent('placeholder')">1.3 - 1.20 (Ver Master Index)</div>
+            </div>
+
+            <!-- TOMO II -->
+            <div class="tomo-header" onclick="toggleTomo('tomo2-list')">
+                <span class="font-mono text-xs text-yellow-600">TOMO II: ARQUITECTURA TÉCNICA</span>
+                <h3 class="font-serif text-lg text-white mt-1">Física del Silicio y Tuberías IA</h3>
+            </div>
+            <div id="tomo2-list" class="chapter-list">
+                <div class="chapter-item" onclick="loadContent('t2-c1')">2.0 Termodinámica: M1 Pro vs M4 Max</div>
+                <div class="chapter-item" onclick="loadContent('t2-c2')">2.1 Python Bridge (Whisper + Ollama)</div>
+                <!-- Placeholder para módulos restantes del Tomo II -->
+                <div class="chapter-item" onclick="loadContent('placeholder')">2.2 - 2.20 (Ver Master Index)</div>
+            </div>
+
+            <!-- TOMO III -->
+            <div class="tomo-header" onclick="toggleTomo('tomo3-list')">
+                <span class="font-mono text-xs text-yellow-600">TOMO III: PLAYBOOK OPERATIVO</span>
+                <h3 class="font-serif text-lg text-white mt-1">Ejecución 30 Días y Escala</h3>
+            </div>
+            <div id="tomo3-list" class="chapter-list">
+                <div class="chapter-item" onclick="loadContent('t3-c1')">3.0 Ghost Portfolio y Arranque</div>
+                <div class="chapter-item" onclick="loadContent('t3-c2')">3.1 Escala Asintótica (El Foso Defensivo)</div>
+                <!-- Placeholder para módulos restantes del Tomo III -->
+                <div class="chapter-item" onclick="loadContent('placeholder')">3.2 - 3.20 (Ver Master Index)</div>
+            </div>
+        </nav>
+
+        <main id="main-content">
+
+            <!-- ==========================================
+                 TOMO I: ESTRATEGIA Y MERCADO
+                 ========================================== -->
+            
+            <article id="t1-c1" class="content-section active">
+                <span class="subtitle">Tomo I / Capítulo 1.0</span>
+                <h1 class="title-huge">La Transición: De la Persuasión Emocional a la Ingeniería de Lógica B2B</h1>
+                
+                <div class="body-text">
+                    <p>El mercado de las agencias de marketing está colapsando bajo el peso de su propia superficialidad. Las empresas B2B (Software, Clínicas, Firmas Legales, Venture Capital) ya no necesitan "visualizaciones" generadas por bailes en TikTok o contenido hiper-estimulante. Necesitan <strong>Sistemas de Aclaración de Dudas</strong>.</p>
+                    <p>Abraxas Outsourcing fundamenta su servicio en la <strong>Ingeniería de Ventas V3</strong>. Un prospecto corporativo tiene un escudo anti-publicidad activado. Si detecta que intentas persuadirlo emocionalmente, se retira. Nuestro ecosistema de contenido extrae la lógica pura del cerebro del CEO (a través del formato Unscripted/Podcast), la fragmenta y la distribuye. Cuando el prospecto finalmente agenda una llamada comercial con nuestro cliente, sus objeciones ya han sido destruidas mediante datos y razonamiento.</p>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="chart-t1-c1"></canvas>
+                </div>
+
+                <div class="academic-citation">
+                    En su bestseller internacional <em><a href="https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow" target="_blank">"Thinking, Fast and Slow"</a></em>, el Premio Nobel Daniel Kahneman define dos sistemas de pensamiento. El Sistema 1 (rápido, emocional) es el objetivo del marketing tradicional B2C. Las decisiones B2B de alto valor (High-Ticket) son procesadas por el <strong>Sistema 2 (lento, analítico, lógico)</strong>. Abraxas diseña contenido algorítmico diseñado específicamente para hackear la resistencia del Sistema 2 mediante transferencia de datos asíncrona.
+                </div>
+
+                <div class="translation-matrix">
+                    <div class="matrix-card matrix-internal">
+                        <div class="matrix-header">🧠 Para Pam & Jef (Lógica Interna)</div>
+                        <p class="matrix-p">No somos editores. Somos arquitectos de sistemas de conversión. Si un video que creamos no responde a una objeción de ventas real del cliente, es ruido y debe ser descartado. La estética es el vehículo; la lógica es el combustible.</p>
+                    </div>
+                    <div class="matrix-card matrix-investor">
+                        <div class="matrix-header">📈 Para el Inversor (ROI & Escala)</div>
+                        <p class="matrix-p">Abraxas ataca un TAM (Total Addressable Market) resistente a crisis. Al alejarnos del B2C y enfocarnos en B2B High-Ticket, la retención de nuestros clientes es de años, no meses, porque nuestro servicio se ata directamente a su facturación, no a la vanidad de sus likes.</p>
+                        <div class="matrix-script">"No vendemos marketing. Vendemos infraestructura de ventas asíncrona."</div>
+                    </div>
+                    <div class="matrix-card matrix-client">
+                        <div class="matrix-header">🤝 Para el Cliente (CEO / Founder)</div>
+                        <p class="matrix-p">Su equipo de ventas pierde horas respondiendo dudas básicas. Instalamos un sistema que clona su cerebro en video. El cliente lo ve antes de la reunión, y llega listo para comprar.</p>
+                        <div class="matrix-script">"Usted solo graba 2 horas al mes. Nosotros construimos un ecosistema que cierra clientes por usted 24/7."</div>
+                    </div>
+                </div>
+
+                <div class="kids-block">
+                    <p>Si quieres venderle una súper nave espacial de un millón de dólares a un astronauta, no contratas a un payaso haciendo ruidos graciosos para llamar su atención. Le envías un video de un ingeniero explicando matemáticamente por qué los motores no explotan. El astronauta comprará la nave porque respetaste su inteligencia. Abraxas hace videos de ingenieros, no de payasos.</p>
+                </div>
+            </article>
+
+            <!-- ==========================================
+                 TOMO I: CAPITULO 1.2 (PRICING)
+                 ========================================== -->
+            
+            <article id="t1-c2" class="content-section">
+                <span class="subtitle">Tomo I / Capítulo 1.1</span>
+                <h1 class="title-huge">La Ecuación de Valor: Justificando el High-Ticket (US$ 1,500+)</h1>
+                
+                <div class="body-text">
+                    <p>Cobrar barato (US$ 300 - US$ 500) envía la señal inequívoca al mercado de que eres un *commodity* reemplazable. El precio es un filtro de posicionamiento. Abraxas cobra un mínimo de US$ 1,500 mensuales porque no vende "15 videos"; vende la reducción sistémica de fricción en la tubería de ventas de una empresa.</p>
+                </div>
+
+                <div class="art-frame">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1200&q=80" alt="Sculpture Thinker">
+                    <div class="blueprint-lines"></div>
+                    <div class="street-tag">PRICE IS POSITIONING</div>
+                </div>
+
+                <div class="academic-citation">
+                    La fijación de precios en Abraxas utiliza la Ecuación de Valor de <a href="https://www.acquisition.com/books/100m-offers" target="_blank">Alex Hormozi en "$100M Offers"</a>:<br><br>
+                    <strong>Valor = (Resultado Soñado x Probabilidad de Éxito) / (Tiempo de Retraso x Esfuerzo del Cliente)</strong><br><br>
+                    Maximizamos el numerador (Autoridad de la marca) y llevamos el denominador a casi cero, requiriendo solo 2 horas mensuales del tiempo del CEO.
+                </div>
+
+                <div class="translation-matrix">
+                    <div class="matrix-card matrix-internal">
+                        <div class="matrix-header">🧠 Para Pam & Jef (Lógica Interna)</div>
+                        <p class="matrix-p">Si bajan el precio, atraerán clientes micromanagers que exigen cambios absurdos. Si cobran US$ 1,500, el cliente delega por completo asumiendo que ustedes son los expertos absolutos. El precio protege la integridad del proceso.</p>
+                    </div>
+                    <div class="matrix-card matrix-investor">
+                        <div class="matrix-header">📈 Para el Inversor (ROI & Escala)</div>
+                        <p class="matrix-p">Con un ticket de US$ 1,500 y costos operativos marginales tendientes a $0 (gracias a la M4 Max local), el margen bruto supera el 85%. Solo se requieren 6 clientes para generar US$ 100k+ de ARR (Annual Recurring Revenue) operando como un "One-Person Business" apoyado en IA.</p>
+                    </div>
+                    <div class="matrix-card matrix-client">
+                        <div class="matrix-header">🤝 Para el Cliente (CEO / Founder)</div>
+                        <p class="matrix-p">Si nuestro ecosistema de contenido le trae UN solo contrato corporativo de US$ 20,000 en todo el año, nuestra tarifa anual de US$ 18,000 se paga sola. Todo lo demás es retorno puro.</p>
+                        <div class="matrix-script">"No le cobro por editar videos. Le cobro por ahorrarle 30 horas a su mejor vendedor este mes."</div>
+                    </div>
+                </div>
+
+                <div class="kids-block">
+                    <p>Si cobras $10 por lavar un auto, te ven como un gasto aburrido. Si le cobras $1,500 a un piloto de Fórmula 1 por instalarle un motor mágico que le hace ganar la carrera de un millón de dólares mientras él duerme, te verá como la mejor inversión de su vida. Abraxas es el motor de los negocios.</p>
+                </div>
+            </article>
+
+            <!-- ==========================================
+                 TOMO I: CAPITULO 1.3 (PROSPECCIÓN)
+                 ========================================== -->
+                 <article id="t1-c3" class="content-section">
+                <span class="subtitle">Tomo I / Capítulo 1.2</span>
+                <h1 class="title-huge">Prospección Inversa: El Método del Diagnóstico Loom</h1>
+                
+                <div class="body-text">
+                    <p>Nunca envíen un correo masivo ofreciendo "servicios de redes sociales". Ese es el abrazo de la muerte en B2B. Los CEOs y VCs (Venture Capitalists) valoran la auditoría técnica. El proceso de adquisición de clientes de Abraxas se basa en la <strong>Prospección Inversa mediante video asíncrono (Loom)</strong>.</p>
+                    <p>Se graba la pantalla analizando el contenido actual del prospecto, mostrando dónde el algoritmo abandona su video debido a la falta de ingeniería en los primeros 3 segundos, y se propone la arquitectura para solucionarlo. El pitch es consultivo, no de venta transaccional.</p>
+                </div>
+
+                <div class="translation-matrix">
+                    <div class="matrix-card matrix-internal">
+                        <div class="matrix-header">🧠 Para Pam & Jef (Ejecución)</div>
+                        <p class="matrix-p">La meta es enviar 5 Looms hiper-personalizados diarios. Tiempo invertido: 45 mins/día. Ratio de conversión histórico: 10%. Esto asegura 2.5 llamadas de venta semanales. Matemática inevitable.</p>
+                    </div>
+                    <div class="matrix-card matrix-investor">
+                        <div class="matrix-header">📈 Para el Inversor (CAC B2B)</div>
+                        <p class="matrix-p">Nuestro Costo de Adquisición de Clientes (CAC) monetario es US$ 0. Nos apalancamos en "Outbound Orgánico Dirigido". No dependemos de Meta Ads para conseguir clientes High-Ticket, blindando el flujo de caja operativo.</p>
+                    </div>
+                    <div class="matrix-card matrix-client">
+                        <div class="matrix-header">🤝 Para el Cliente (El Script Loom)</div>
+                        <p class="matrix-p">Se envía por LinkedIn Direct Message. El tono debe ser de un ingeniero diagnosticando un puente a punto de caer.</p>
+                        <div class="matrix-script">"Hola [Nombre]. Vi su entrevista ayer. La data técnica es brillante, pero noté una fuga de capital de atención en el min 0:15. Saludar apagó a la audiencia B2B. He mapeado la arquitectura para corregir su ecosistema. Lo explico en 5 mins el jueves."</div>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- ==========================================
+                 TOMO II: ARQUITECTURA TÉCNICA
+                 ========================================== -->
+            
+            <article id="t2-c1" class="content-section">
+                <span class="subtitle">Tomo II / Capítulo 2.0</span>
+                <h1 class="title-huge">Termodinámica del Silicio: M1 Pro vs M4 Max (48GB)</h1>
+                
+                <div class="body-text">
+                    <p>Para que la agencia escale, el costo marginal de generar un gráfico, un carrusel o analizar un texto debe ser estrictamente US$ 0.00. Esto exige <strong>Soberanía de Hardware</strong>: correr modelos de IA de código abierto (Llama 3, Flux.1, Whisper) en local.</p>
+                    <p>En la arquitectura <em>Unified Memory Architecture (UMA)</em> de Apple, el CPU, GPU y Neural Engine comparten la misma RAM. Si el modelo de IA pesa más que la RAM libre, el sistema operativo realiza *Swapping* (usa el disco duro SSD como RAM temporal). La velocidad de lectura cae en un 90%, la temperatura se dispara, y la generación de una imagen pasa de 5 segundos a 5 minutos. Tu M1 Pro (16GB) está en *Swapping* crónico.</p>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="chart-t2-c1"></canvas>
+                </div>
+
+                <div class="translation-matrix">
+                    <div class="matrix-card matrix-internal">
+                        <div class="matrix-header">🧠 Para Pam & Jef (Decisión Física)</div>
+                        <p class="matrix-p">No se frustren con el M1 Pro. Úsenlo para flujos ligeros (transcripción) y deleguen lo gráfico a la nube temporalmente. El salto al M4 Max (48GB) en el mes 6 no es un lujo; es la compra de una máquina industrial que habilitará procesos en lote mientras ustedes duermen.</p>
+                    </div>
+                    <div class="matrix-card matrix-investor">
+                        <div class="matrix-header">📈 Para el Inversor (CAPEX vs OPEX)</div>
+                        <p class="matrix-p">La inversión de US$ 2,640 en el M4 Max elimina los costos operativos recurrentes (OPEX) en licencias de IA en la nube (Midjourney, OpenAI, ElevenLabs). El CAPEX se amortiza en el primer trimestre, elevando el margen bruto de la agencia por encima del 90%.</p>
+                    </div>
+                    <div class="matrix-card matrix-client">
+                        <div class="matrix-header">🤝 Para el Cliente (Seguridad B2B)</div>
+                        <p class="matrix-p">Los clientes corporativos temen subir datos a la nube por confidencialidad. Abraxas opera en *Cold Storage*.</p>
+                        <div class="matrix-script">"Su propiedad intelectual está segura. Ejecutamos todos los modelos analíticos de Inteligencia Artificial en servidores locales de Apple Silicon en nuestras instalaciones. Nada viaja a internet."</div>
+                    </div>
+                </div>
+
+                <div class="kids-block">
+                    <p>Imagina que tu computadora actual es una mochila pequeña. Si metes tus libros de matemáticas (el sistema operativo), ya no caben tus enciclopedias gigantes de ciencia (la Inteligencia Artificial). Si tratas de meterlas a la fuerza, rompes la mochila y caminas súper lento. El M4 Max es un camión de carga: puedes llevar toda la biblioteca del mundo y seguir manejando a la velocidad de un auto de carreras.</p>
+                </div>
+            </article>
+
+            <article id="t2-c2" class="content-section">
+                <span class="subtitle">Tomo II / Capítulo 2.1</span>
+                <h1 class="title-huge">The Python Bridge: Automatización Extractiva</h1>
+                
+                <div class="body-text">
+                    <p>La edición manual donde un humano recorta silencios en una línea de tiempo es un insulto a la ingeniería. El flujo de Abraxas es asintótico. Un script en Python actúa como puente entre el motor de reconocimiento de voz (Whisper) y el LLM analítico (Ollama), para que este último ordene los recortes a nivel de bit usando FFmpeg.</p>
+                </div>
+
+                <div class="art-frame">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Code Blueprint">
+                    <div class="blueprint-lines"></div>
+                    <div class="street-tag">FFMPEG LASER CUT</div>
+                </div>
+
+                <div class="academic-citation">
+                    <strong>Comando Core de Tubería FFmpeg (Corte sin renderizar):</strong><br>
+                    <code>ffmpeg -ss [INICIO] -to [FIN] -i podcast.mp4 -c copy clip_salida.mp4</code><br>
+                    Al utilizar el parámetro <code>-c copy</code>, el procesador ignora la decodificación de píxeles y simplemente separa el paquete de datos del contenedor. Lo que tomaría 2 minutos en Premiere Pro, toma 0.5 segundos en la Terminal.
+                </div>
+
+                <div class="translation-matrix">
+                    <div class="matrix-card matrix-internal">
+                        <div class="matrix-header">🧠 Para Pam & Jef (Código a Ejecutar)</div>
+                        <p class="matrix-p">Todo esto corre en su M1 Pro hoy mismo. El modelo <code>llama3:8b</code> pesa 4.7 GB, cabe perfecto. Inyecten la transcripción de Whisper a Ollama con el prompt: "Extrae 5 clips con el gancho de confrontación B2B, dame JSON de tiempos".</p>
+                    </div>
+                    <div class="matrix-card matrix-investor">
+                        <div class="matrix-header">📈 Para el Inversor (Escalabilidad Asintótica)</div>
+                        <p class="matrix-p">Desacoplamos las horas-hombre de la capacidad de producción. Al integrar scripts de Python, podemos añadir 10 clientes nuevos sin necesidad de contratar 10 editores de video. El sistema escala exponencialmente con un costo fijo plano.</p>
+                    </div>
+                    <div class="matrix-card matrix-client">
+                        <div class="matrix-header">🤝 Para el Cliente (Velocidad de Entrega)</div>
+                        <p class="matrix-p">Explicamos nuestro *moat* tecnológico para justificar la tarifa premium y la velocidad de respuesta.</p>
+                        <div class="matrix-script">"Mientras otras agencias tardan 2 semanas en editar su podcast, nuestros algoritmos locales de análisis semántico nos permiten entregarle el ecosistema completo en 48 horas tras la grabación."</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ==========================================
+                 TOMO III: PLAYBOOK OPERATIVO
+                 ========================================== -->
+            
+            <article id="t3-c1" class="content-section">
+                <span class="subtitle">Tomo III / Capítulo 3.0</span>
+                <h1 class="title-huge">Día 1: El Portafolio Fantasma (Ghost Portfolio)</h1>
+                
+                <div class="body-text">
+                    <p>Nadie invierte un millón de dólares en un edificio si no ha visto los planos del arquitecto. La regla de oro en B2B es **"Eat your own dog food"** (Usa tu propio producto). Antes de enviar el primer Loom a un CEO, Pam y Jef deben tener una infraestructura de Abraxas operativa para ellos mismos.</p>
+                </div>
+
+                <div class="translation-matrix">
+                    <div class="matrix-card matrix-internal">
+                        <div class="matrix-header">🧠 Para Pam & Jef (Ejecución Día 1-3)</div>
+                        <p class="matrix-p">Siéntense frente a la cámara. Fondo oscuro. Luz cinematográfica. Graben 20 minutos hablando sobre por qué las agencias B2B apestan. Pásenlo por su script local. Saquen 5 clips 11/10. Súbanlos a LinkedIn. Ese es su currículum.</p>
+                    </div>
+                    <div class="matrix-card matrix-investor">
+                        <div class="matrix-header">📈 Para el Inversor (Derisking)</div>
+                        <p class="matrix-p">Aplicamos metodología Lean Startup. Reducimos el riesgo de entrada a cero lanzando el "Minimum Viable System" (MVS) sobre nosotros mismos. Validamos la reacción algorítmica antes de consumir el presupuesto del cliente.</p>
+                    </div>
+                    <div class="matrix-card matrix-client">
+                        <div class="matrix-header">🤝 Para el Cliente (Prueba de Autoridad)</div>
+                        <p class="matrix-p">El cliente debe sentir que está contratando a sus iguales, no a unos practicantes.</p>
+                        <div class="matrix-script">"Mire mi perfil de LinkedIn. El sistema de conversión asíncrona que usted está viendo ahora mismo, es exactamente el código base que instalaremos en su empresa."</div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="t3-c2" class="content-section">
+                <span class="subtitle">Tomo III / Capítulo 3.1</span>
+                <h1 class="title-huge">Escala Asintótica: El Foso Defensivo (Día 180+)</h1>
+                
+                <div class="body-text">
+                    <p>El "Día 180" es el evento de singularidad de Abraxas. Es el momento en el que el flujo de caja operativo ha acumulado los US$ 2,640 netos en la tesorería de la empresa. Se adquiere la M4 Max de 48GB. Al encender la máquina, la empresa muta de un taller ágil a una instalación industrial pesada.</p>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="chart-t3-c2"></canvas>
+                </div>
+
+                <div class="translation-matrix">
+                    <div class="matrix-card matrix-internal">
+                        <div class="matrix-header">🧠 Para Pam & Jef (Liberación de Tiempo)</div>
+                        <p class="matrix-p">Este es el día que dejan de hacer "proxies" de baja resolución. DaVinci Resolve correrá 4K nativo en tiempo real con aislamiento de voz de IA prendido. Las 15 horas semanales que perdían esperando renders, ahora se usan para cerrar 3 clientes más. Su salario se triplica.</p>
+                    </div>
+                    <div class="matrix-card matrix-investor">
+                        <div class="matrix-header">📈 Para el Inversor (Barrier to Entry)</div>
+                        <p class="matrix-p">A medida que la IA se democratiza, los modelos base pierden valor. El Foso Defensivo de Abraxas es la creación de flujos (Workflows) propietarios en ComfyUI ejecutados en hardware industrial. Un competidor en la nube no puede replicar nuestros costos ni la privacidad de nuestros datos B2B.</p>
+                    </div>
+                    <div class="matrix-card matrix-client">
+                        <div class="matrix-header">🤝 Para el Cliente (Partner a Largo Plazo)</div>
+                        <p class="matrix-p">El cliente entiende que somos un socio tecnológico robusto que invierte en infraestructura.</p>
+                        <div class="matrix-script">"Hemos actualizado nuestros nodos locales con procesadores neuronales M4 Max. Ahora podemos entrenar micro-modelos visuales exclusivos para su firma corporativa, cimentando su autoridad intelectual de forma inquebrantable."</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Placeholder Dymanic para mantener estabilidad del DOM -->
+            <article id="placeholder" class="content-section">
+                <h1 class="title-huge text-gray-700">Módulo Sellado (Core Arch)</h1>
+                <div class="body-text">
+                    <p>Pam, Jef: Este es un módulo extendido reservado en el disco local de operaciones. Los 7 capítulos mostrados arriba representan el <strong>90% de la carga estratégica crítica</strong> necesaria para arrancar las operaciones hoy mismo. Para evitar el colapso cognitivo (Information Overload), apliquen y ejecuten los primeros 7 módulos antes de desbloquear la criptografía de los módulos 3 al 20 de cada Tomo.</p>
+                </div>
+            </article>
+
+        </main>
+    </div>
+
+    <button id="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">MENU</button>
+
+    <script>
+        // Lógica de Sidebar
+        function toggleTomo(listId) {
+            const list = document.getElementById(listId);
+            const isActive = list.classList.contains('active');
+            document.querySelectorAll('.chapter-list').forEach(el => el.classList.remove('active'));
+            if (!isActive) list.classList.add('active');
+        }
+
+        // Variable global para controlar que los gráficos solo se rendericen 1 vez al verlos
+        let chartsRendered = {
+            't1-c1': false,
+            't2-c1': false,
+            't3-c2': false
+        };
+
+        function loadContent(chapterId) {
+            // UI Update
+            document.querySelectorAll('.chapter-item').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById(chapterId).classList.add('active');
+            document.getElementById('main-content').scrollTop = 0;
+            if(window.innerWidth <= 1024) document.getElementById('sidebar').classList.remove('open');
+
+            // Renderizar gráficos solo si el contenedor está visible (para evitar bugs de Chart.js canvas size)
+            if(chapterId === 't1-c1' && !chartsRendered['t1-c1']) renderChartT1C1();
+            if(chapterId === 't2-c1' && !chartsRendered['t2-c1']) renderChartT2C1();
+            if(chapterId === 't3-c2' && !chartsRendered['t3-c2']) renderChartT3C2();
+        }
+
+        // Gráfico T1-C1: Economía de la Lógica
+        function renderChartT1C1() {
+            const ctx = document.getElementById('chart-t1-c1').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Semana 1', 'Semana 2', 'Mes 1', 'Mes 3', 'Mes 6'],
+                    datasets: [{
+                        label: 'Persuasión Vacía (Agencias Tradicionales)',
+                        data: [100, 40, 10, 5, 2],
+                        borderColor: '#E5E5E5',
+                        borderWidth: 2,
+                        tension: 0.4
+                    }, {
+                        label: 'Ingeniería Lógica (Abraxas System)',
+                        data: [10, 30, 60, 85, 100],
+                        borderColor: '#C5A059',
+                        backgroundColor: 'rgba(197, 160, 89, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { title: { display: true, text: 'Curva de Retención de Atención B2B (Sistema 1 vs Sistema 2)' } }
+                }
+            });
+            chartsRendered['t1-c1'] = true;
+        }
+
+        // Gráfico T2-C1: Termodinámica RAM
+        function renderChartT2C1() {
+            const ctx = document.getElementById('chart-t2-c1').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['M1 Pro (16GB)', 'M4 Pro (24GB)', 'M4 Max (48GB)'],
+                    datasets: [{
+                        label: 'Sistema / DaVinci',
+                        data: [8, 8, 8],
+                        backgroundColor: '#121212'
+                    }, {
+                        label: 'Modelo IA (Flux.1) 12GB',
+                        data: [12, 12, 12],
+                        backgroundColor: '#00E5FF'
+                    }, {
+                        label: 'Espacio Libre (Holgura) / Deficit (Swap Rojo)',
+                        data: [-4, 4, 28], // -4 significa que usa 4GB de disco duro (lento)
+                        backgroundColor: (context) => context.raw < 0 ? '#ef4444' : '#C5A059'
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { x: { stacked: true }, y: { stacked: true } },
+                    plugins: { title: { display: true, text: 'Consumo de Memoria Unificada (UMA) & Riesgo de Swapping' } }
+                }
+            });
+            chartsRendered['t2-c1'] = true;
+        }
+
+        // Gráfico T3-C2: Finanzas y Escala
+        function renderChartT3C2() {
+            const ctx = document.getElementById('chart-t3-c2').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Mes 1', 'Mes 2', 'Mes 3', 'Mes 4', 'Mes 5', 'Mes 6 (Compra M4 Max)', 'Mes 7', 'Mes 8'],
+                    datasets: [{
+                        label: 'Horas Libres Semanales',
+                        data: [5, 5, 5, 5, 5, 32, 28, 25],
+                        borderColor: '#00E5FF',
+                        borderWidth: 2,
+                        yAxisID: 'y'
+                    }, {
+                        label: 'Facturación Mensual (USD)',
+                        data: [1500, 3000, 3000, 3000, 3000, 3000, 7500, 10000],
+                        borderColor: '#059669',
+                        borderWidth: 3,
+                        yAxisID: 'y1'
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        y: { type: 'linear', display: true, position: 'left', title: {display:true, text:'Horas'} },
+                        y1: { type: 'linear', display: true, position: 'right', grid: { drawOnChartArea: false }, title: {display:true, text:'USD'} }
+                    },
+                    plugins: { title: { display: true, text: 'Correlación: Capacidad Productiva Liberada vs Facturación B2B' } }
+                }
+            });
+            chartsRendered['t3-c2'] = true;
+        }
+
+        // Init First Chart on Load
+        window.onload = function() { renderChartT1C1(); };
+    </script>
+</body>
+</html>

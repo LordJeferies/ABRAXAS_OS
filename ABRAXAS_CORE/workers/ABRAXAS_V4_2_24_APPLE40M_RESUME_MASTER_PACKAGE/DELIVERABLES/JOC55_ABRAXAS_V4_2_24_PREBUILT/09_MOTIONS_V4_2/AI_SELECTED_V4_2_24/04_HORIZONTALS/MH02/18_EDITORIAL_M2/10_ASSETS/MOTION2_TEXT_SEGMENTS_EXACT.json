@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "huellas. Me parece súper importante porque si hablamos de legado, el legado realmente es lo que, la capacidad que tú tuviste de innovar.",
+  "segments": [
+    "huellas. Me parece súper importante porque si hablamos",
+    "de legado, el legado realmente es lo",
+    "que, la capacidad que tú tuviste de innovar."
+  ],
+  "reconstructed_text": "huellas. Me parece súper importante porque si hablamos de legado, el legado realmente es lo que, la capacidad que tú tuviste de innovar."
+}

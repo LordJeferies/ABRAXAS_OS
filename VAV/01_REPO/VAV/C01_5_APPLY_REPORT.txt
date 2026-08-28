@@ -1,0 +1,124 @@
+============================================================
+VAV CAPTIONS — C01.5 INTERACTIVE UI
+Project: /Users/lordjef/Developer/VAV
+============================================================
+
+=== PRECHECK ===
+✓ Current VAV desktop package found
+
+=== BACKUP ===
+✓ Backup: /Users/lordjef/Developer/VAV/.vav-backups/c01-5-20260827_193338
+
+=== APPLY PAYLOAD ===
+✓ Interactive UI payload copied
+
+=== TESTS ===
+$ vitest run
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/Users/lordjef/Developer/VAV[39m
+
+ [32m✓[39m packages/motion-caption-policy/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/timebase/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/engine-registry/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/caption-compiler/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m apps/captions-desktop/src/editorData.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/project-session/src/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/editor-foundation/src/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/transcription/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/vav-schema/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/time-mapping/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/export-system/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m11 passed[39m[22m[90m (11)[39m
+[2m      Tests [22m [1m[32m20 passed[39m[22m[90m (20)[39m
+[2m   Start at [22m 19:33:39
+[2m   Duration [22m 320ms[2m (transform 371ms, setup 0ms, import 630ms, tests 22ms, environment 1ms)[22m
+
+
+=== TYPECHECK ===
+$ tsc -p tsconfig.check.json --noEmit
+
+=== BUILD ===
+$ pnpm --filter @vav/captions-desktop build
+$ vite build
+vite v8.2.2 building client environment for production...
+transforming...
+✓ 2309 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.39 kB │ gzip:   0.26 kB
+dist/assets/index-BSUcd29T.css   23.31 kB │ gzip:   5.90 kB
+dist/assets/index-Cwxb1XjQ.js   700.71 kB │ gzip: 217.33 kB
+
+✓ built in 519ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+=== CONTENT / MOTION BRIDGE ===
+$ node scripts/check-content-motion-bridge.mjs
+{
+  "status": "PASS",
+  "systems": [
+    "ficha-domain",
+    "content-import",
+    "content-intent",
+    "time-mapping",
+    "visual-motion-domain",
+    "motion-caption-policy",
+    "module-graph",
+    "interchange",
+    "caption-compiler"
+  ]
+}
+
+=== PRO FOUNDATION ===
+$ node scripts/check-pro-foundation.mjs
+{
+  "status": "PASS",
+  "filesChecked": 14,
+  "systems": [
+    "history",
+    "commands",
+    "selection",
+    "snapping",
+    "project-session",
+    "recovery",
+    "migrations",
+    "relink",
+    "fonts",
+    "caption-tracks",
+    "qc",
+    "export-queue",
+    "preset-versioning",
+    "workspace-layout"
+  ]
+}
+
+=== ENGINE HEALTH ===
+$ pnpm --filter @vav/local-engine health
+$ node src/cli.ts health
+{
+  "node": "v24.18.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+  "ffprobe": "/opt/homebrew/bin/ffprobe",
+  "whisperCli": "/opt/homebrew/bin/whisper-cli",
+  "whisperModel": "/Users/lordjef/Library/Application Support/VAV/models/whisper/ggml-large-v3-turbo.bin"
+}
+
+=== TAURI / RUST ===
+    Checking vav-captions v0.0.1 (/Users/lordjef/Developer/VAV/apps/captions-desktop/src-tauri)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.69s
+
+============================================================
+C01.5 STATIC VERIFICATION PASS
+Report: /Users/lordjef/Developer/VAV/C01_5_APPLY_REPORT.txt
+
+NEXT:
+  cd "/Users/lordjef/Developer/VAV"
+  ./RUN_VAV_DEV.command
+============================================================

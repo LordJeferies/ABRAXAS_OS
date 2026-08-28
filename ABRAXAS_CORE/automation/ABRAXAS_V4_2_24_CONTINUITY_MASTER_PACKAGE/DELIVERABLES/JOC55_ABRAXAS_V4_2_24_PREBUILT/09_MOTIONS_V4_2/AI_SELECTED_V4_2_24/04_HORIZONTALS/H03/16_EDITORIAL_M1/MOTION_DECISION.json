@@ -1,0 +1,38 @@
+{
+  "sequence": 16,
+  "content_id": "H03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H03_B86",
+  "child_beat_ids": [
+    "H03_B86"
+  ],
+  "speaker": "MIXED",
+  "source_start": "01:00:54.471",
+  "source_end": "01:01:00.318",
+  "timeline_in_seconds": 460.471,
+  "timeline_out_seconds": 466.318,
+  "timeline_in": "00:07:40.471",
+  "timeline_out": "00:07:46.318",
+  "duration_seconds": 5.847,
+  "text": "Entonces, por ejemplo, tenemos entre los productos que tenemos, tenemos asesoría como inicial del proceso",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0648.",
+  "semantic_score": 3.175,
+  "transcript_reference": "SRT_0648",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

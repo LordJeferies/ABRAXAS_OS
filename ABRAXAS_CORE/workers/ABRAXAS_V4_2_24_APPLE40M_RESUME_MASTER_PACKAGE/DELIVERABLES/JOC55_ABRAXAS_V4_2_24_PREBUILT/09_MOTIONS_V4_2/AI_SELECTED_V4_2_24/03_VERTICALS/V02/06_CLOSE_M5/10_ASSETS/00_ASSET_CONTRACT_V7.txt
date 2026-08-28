@@ -1,0 +1,8 @@
+M5 · Cinematic physical action: wide / detail / result
+
+Mostrar una acción física comprobable en tres cámaras: plano general, detalle y resultado. No usar como intro genérica ni inventar acciones que el texto no sostenga.
+
+ARCHIVOS OBLIGATORIOS
+- FRAME_01_WIDE_ACTION.png
+- FRAME_02_DETAIL_ACTION.png
+- FRAME_03_RESULT.png

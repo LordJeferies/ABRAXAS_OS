@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "sourceMediaId": "MEDIA-001",
+  "contentId": "DEMO-CONTENT-001",
+  "candidates": [
+    {
+      "candidateId": "CAND-001",
+      "sourceSpan": {
+        "startUs": 12000000,
+        "endUs": 18000000
+      },
+      "role": "hook",
+      "label": "Hook fuerte",
+      "motionHint": "ABRAXAS_MOTION_03",
+      "captionHint": {
+        "emphasisIntensity": "high",
+        "structurePreference": "hero"
+      },
+      "provenance": [
+        "USER"
+      ]
+    },
+    {
+      "candidateId": "CAND-002",
+      "sourceSpan": {
+        "startUs": 26000000,
+        "endUs": 34000000
+      },
+      "role": "development",
+      "label": "Desarrollo",
+      "motionHint": "GENERIC_BROLL",
+      "captionHint": {
+        "emphasisIntensity": "balanced",
+        "structurePreference": "balanced"
+      },
+      "provenance": [
+        "USER"
+      ]
+    }
+  ]
+}

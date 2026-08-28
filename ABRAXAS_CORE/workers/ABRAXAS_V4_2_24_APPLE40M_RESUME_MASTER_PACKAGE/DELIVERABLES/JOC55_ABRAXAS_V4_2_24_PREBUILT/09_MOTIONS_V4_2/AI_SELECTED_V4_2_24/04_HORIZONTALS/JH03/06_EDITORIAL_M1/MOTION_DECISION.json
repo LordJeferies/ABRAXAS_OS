@@ -1,0 +1,38 @@
+{
+  "sequence": 6,
+  "content_id": "JH03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "JH03_B36",
+  "child_beat_ids": [
+    "JH03_B36"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:51:11.000",
+  "source_end": "00:51:20.000",
+  "timeline_in_seconds": 171.444,
+  "timeline_out_seconds": 180.444,
+  "timeline_in": "00:02:51.444",
+  "timeline_out": "00:03:00.444",
+  "duration_seconds": 9.0,
+  "text": "Y yo dije, wow, veces uno no calcula como el impacto que está teniendo en las personas, pero no solo eso, sino que me dijeron también como, no sabes lo que me sirvió y le",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0546.",
+  "semantic_score": 3.7,
+  "transcript_reference": "SRT_0546",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

@@ -1,0 +1,130 @@
+============================================================
+VAV C01 FIX 2 — TYPECHECK + TAURI
+Target: /Users/lordjef/Developer/VAV
+============================================================
+✓ NavRail optional title
+✓ NavRail reduced-motion whileTap
+✓ ProviderSelector MLX model type
+✓ ProviderSelector typed state
+✓ ProviderSelector reduced-motion whileTap
+✓ ProviderSelector MLX click handler
+✓ ProviderSelector model select narrowing
+✓ workspace deps: content-intent
+✓ workspace deps: visual-motion-domain
+✓ workspace deps: interchange
+✓ Tauri icon.png installed
+
+=== PNPM WORKSPACE RELINK ===
+Scope: all 31 workspace projects
+✓ Lockfile passes supply-chain policies (verified 13m ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Already up to date
+Progress: resolved 248, reused 145, downloaded 0, added 0, done
+
+Done in 872ms using pnpm v11.24.0
+
+=== TESTS ===
+$ vitest run
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/Users/lordjef/Developer/VAV[39m
+
+ [32m✓[39m packages/motion-caption-policy/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/time-mapping/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/timebase/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/caption-compiler/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/engine-registry/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/project-session/src/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/editor-foundation/src/index.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/transcription/src/index.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m packages/vav-schema/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m packages/export-system/src/index.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m10 passed[39m[22m[90m (10)[39m
+[2m      Tests [22m [1m[32m18 passed[39m[22m[90m (18)[39m
+[2m   Start at [22m 18:54:39
+[2m   Duration [22m 289ms[2m (transform 310ms, setup 0ms, import 511ms, tests 21ms, environment 1ms)[22m
+
+
+=== TYPECHECK ===
+$ tsc -p tsconfig.check.json --noEmit
+
+=== BUILD ===
+$ pnpm --filter @vav/captions-desktop build
+$ vite build
+vite v8.2.2 building client environment for production...
+transforming...
+✓ 2301 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.39 kB │ gzip:   0.26 kB
+dist/assets/index-DR8r2Mpl.css   18.85 kB │ gzip:   5.00 kB
+dist/assets/index-CU3WLcdK.js   685.99 kB │ gzip: 212.88 kB
+
+✓ built in 387ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+=== CONTENT / MOTION BRIDGE HEALTH ===
+$ node scripts/check-content-motion-bridge.mjs
+{
+  "status": "PASS",
+  "systems": [
+    "ficha-domain",
+    "content-import",
+    "content-intent",
+    "time-mapping",
+    "visual-motion-domain",
+    "motion-caption-policy",
+    "module-graph",
+    "interchange",
+    "caption-compiler"
+  ]
+}
+
+=== PRO EDITOR FOUNDATION HEALTH ===
+$ node scripts/check-pro-foundation.mjs
+{
+  "status": "PASS",
+  "filesChecked": 14,
+  "systems": [
+    "history",
+    "commands",
+    "selection",
+    "snapping",
+    "project-session",
+    "recovery",
+    "migrations",
+    "relink",
+    "fonts",
+    "caption-tracks",
+    "qc",
+    "export-queue",
+    "preset-versioning",
+    "workspace-layout"
+  ]
+}
+
+=== LOCAL ENGINE HEALTH ===
+$ pnpm --filter @vav/local-engine health
+$ node src/cli.ts health
+{
+  "node": "v24.18.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+  "ffprobe": "/opt/homebrew/bin/ffprobe",
+  "whisperCli": "/opt/homebrew/bin/whisper-cli",
+  "whisperModel": "/Users/lordjef/Library/Application Support/VAV/models/whisper/ggml-large-v3-turbo.bin"
+}
+
+=== TAURI / RUST CHECK ===
+    Checking vav-captions v0.0.1 (/Users/lordjef/Developer/VAV/apps/captions-desktop/src-tauri)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.18s
+
+============================================================
+C01 FIX 2 VERIFICATION COMPLETE
+Report: /Users/lordjef/Developer/VAV/C01_FIX2_REPORT.txt
+============================================================

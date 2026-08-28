@@ -1,0 +1,237 @@
+{
+  "schema_version": "abraxas.visual-research.v3.1",
+  "date": "2026-08-14",
+  "principle": "Translate reference principles into client-native systems; do not clone assets or trade dress.",
+  "web_research": {
+    "doac_practitioner": [
+      {
+        "source": "Cameron Macklin — trailer animation process for The Diary of a CEO",
+        "url": "https://www.linkedin.com/posts/cameron-macklin_is-storyboarding-always-necessary-even-for-activity-7295766718843346945-jXFh",
+        "supported_points": [
+          "An 8-second animation was storyboarded before production.",
+          "Custom B-roll can be built from scratch when the story needs it.",
+          "Storyboarding provides direction and narrative clarity.",
+          "Story and narrative take priority over tech/design spectacle."
+        ],
+        "use_in_system": "Every <=9s cinematic beat receives a storyboard/state plan before generation."
+      }
+    ],
+    "vox_official": [
+      {
+        "source": "Vox Creative — Explainer Studio",
+        "url": "https://www.voxmedia.com/about-vox-media/2017/10/13/16459628/vox-creative-expands-its-video-offering-for-advertisers-with-the-explainer-studio/",
+        "supported_points": [
+          "Explainer format combines depth with strong design.",
+          "Animation, texture, personality and curiosity are part of the explanatory language.",
+          "Customization matters; the visual system is not a universal skin."
+        ],
+        "use_in_system": "VOX_EDITORIAL uses diagrams/type/photo/data only when each element advances the explanation."
+      },
+      {
+        "source": "Vox Creative — shorter social-first explainers",
+        "url": "https://www.voxmedia.com/2022/10/19/23411609/vox-creatives-explainer-studio-celebrates-fifth-anniversary-expands-to-shorter-social-first-formats",
+        "supported_points": [
+          "Explainer logic can be adapted to social-first shorter formats."
+        ],
+        "use_in_system": "Short-form treatment keeps explanatory logic without compressing into generic kinetic text."
+      }
+    ],
+    "figma_official_2026": [
+      {
+        "source": "Figma — Principles in motion",
+        "url": "https://www.figma.com/blog/principles-in-motion/",
+        "supported_points": [
+          "Motion is design with time, rhythm, pacing and transformation.",
+          "Real-world physics is a reference for believable motion.",
+          "Easing, anticipation, overshoot, follow-through, hold and settle form a useful motion grammar.",
+          "Transitions connect beats of a story.",
+          "Flashy motion for motion's sake is weaker than intentional communication."
+        ],
+        "use_in_system": "Every animation prompt encodes acceleration/deceleration/settle and semantic trigger."
+      },
+      {
+        "source": "Figma — Introducing Figma Motion",
+        "url": "https://www.figma.com/blog/introducing-figma-motion/",
+        "supported_points": [
+          "Motion can be systematized as components/variables rather than one-off effects.",
+          "Timing, easing and keyframes need inspectable handoff."
+        ],
+        "use_in_system": "Treatment families are reusable motion system values, not random effect names."
+      }
+    ],
+    "google_flow_official_2026": [
+      {
+        "source": "Google — Veo 3.1 Ingredients to Video",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/",
+        "supported_points": [
+          "Reference images can guide generated video.",
+          "Native vertical generation is supported.",
+          "1080p/4K upscaling is available in the workflow."
+        ],
+        "use_in_system": "START/MIDDLE/END frames and client reference ingredients are first-class production assets."
+      },
+      {
+        "source": "Google — Flow + Veo 3.1",
+        "url": "https://blog.google/innovation-and-ai/products/veo-updates-flow/",
+        "supported_points": [
+          "Multiple reference images can control characters, objects and style.",
+          "Flow offers more precise editing and higher-quality outputs."
+        ],
+        "use_in_system": "Prompt packs distinguish reference roles: character, object, environment, style."
+      },
+      {
+        "source": "Google — Gemini Omni / Flow",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/flow-updates/",
+        "supported_points": [
+          "Omni Flash in Flow supports multimodal creative iteration.",
+          "Real-world references can be mixed with generated content."
+        ],
+        "use_in_system": "The handoff prompt explicitly instructs reference-grounded edits rather than fresh scene invention."
+      }
+    ]
+  },
+  "uploaded_visual_reference_analysis": {
+    "files": [
+      "Ejemplos de imagenes y tipos de animaciones para brolls y vox:doac:saas.pdf",
+      "ejemplos moka bio.pdf",
+      "Ejemplos de diseños de contenido moka bio de referencia.pdf",
+      "manualvisual_mokabio.pdf",
+      "MokaBio_EN_Investor_SyEx.pdf"
+    ],
+    "observed_visual_archetypes": [
+      {
+        "id": "MACRO_BIOMATERIAL",
+        "observations": [
+          "Extreme close-ups treat fruit, botanical tissue, droplets, cells and biomaterials as hero landscapes.",
+          "Useful qualities are microtexture, translucency, wetness, natural asymmetry, controlled specular highlights and shallow depth."
+        ],
+        "do_not_infer": "The system should not default to brains, cells, ginger or microbiome; these are examples of quality/material scale."
+      },
+      {
+        "id": "SCIENTIFIC_EDITORIAL",
+        "observations": [
+          "Microscopy, petri dishes, molecules, plants and lab devices are paired with large negative space and restrained typography.",
+          "Scientific imagery often acts as the main photographic field rather than a small decorative icon."
+        ]
+      },
+      {
+        "id": "PRODUCT_UI_IN_ENVIRONMENT",
+        "observations": [
+          "Phone/app screens sit inside botanical/scientific environments with depth and material contrast.",
+          "Data/UI cards use hierarchy, soft layering and limited accent colors."
+        ]
+      },
+      {
+        "id": "EDITORIAL_TYPE_AND_OBJECT",
+        "observations": [
+          "Single hero objects or macro surfaces carry the visual; typography is large but leaves the object legible.",
+          "Black/white/off-white backgrounds and controlled accent color create premium clarity."
+        ]
+      },
+      {
+        "id": "DIAGRAM_OVER_REALITY",
+        "observations": [
+          "Fine lines, nodes, pill labels, simple charts and circular relationships can overlay photographs without turning them into HUD sci-fi."
+        ]
+      },
+      {
+        "id": "DARK_GLASS_TECH",
+        "observations": [
+          "Dark scenes use luminous glass/data cards and selective neon rather than filling the frame with random glow.",
+          "Depth comes from material, occlusion and lighting, not only blur."
+        ]
+      },
+      {
+        "id": "OBJECT_METAPHOR",
+        "observations": [
+          "Everyday objects become mechanisms: paper, doors, chains, keyboards, clocks, chess, threads, cards, blocks.",
+          "The object must map to a spoken concept or process."
+        ]
+      },
+      {
+        "id": "PERSON_ACTION",
+        "observations": [
+          "When people appear, action is readable: typing, writing, inspecting, testing, holding, walking, reviewing.",
+          "Pose, hand-object contact, gaze and perspective must agree."
+        ]
+      }
+    ],
+    "quality_dimensions": {
+      "camera": [
+        "Intentional focal feel rather than generic wide shot.",
+        "Macro, portrait, top-down, product hero and documentary framing are chosen by narrative function."
+      ],
+      "lighting": [
+        "Motivated key light, controlled fill, natural rolloff, local contrast and depth separation.",
+        "Avoid flat synthetic global illumination."
+      ],
+      "materials": [
+        "Glass needs thickness/refraction/contact shadows.",
+        "Liquids need surface tension and coherent droplets.",
+        "Botanicals need veins/translucency/asymmetry.",
+        "Metal needs correct roughness.",
+        "Paper needs fibers/edges/print behavior."
+      ],
+      "composition": [
+        "One dominant visual idea.",
+        "Clean negative space.",
+        "Foreground/midground/background relationship.",
+        "Text safe zones planned before generation."
+      ],
+      "realism": [
+        "Anatomically coherent hands/limbs.",
+        "Plausible lab instruments and scale.",
+        "No fake UI or pseudo-scientific data presented as evidence."
+      ]
+    }
+  },
+  "moka_brand_reference": {
+    "palette": {
+      "Pure": "#FFFFFF",
+      "Sage": "#4E7060",
+      "Deep Forest": "#0D2D26",
+      "Fresh Green": "#57C378",
+      "Charcoal": "#111111",
+      "Birch": "#DEDEDE"
+    },
+    "typography": [
+      "Codec Pro — primary communication",
+      "Century Expanded — secondary editorial emphasis",
+      "ITC Bauhaus — logotype"
+    ],
+    "graphic_language": [
+      "fine discreet lines",
+      "nodes / organic connections",
+      "curves / process arrows",
+      "modular systems",
+      "monochrome icons",
+      "simple charts",
+      "large whitespace"
+    ],
+    "photography": [
+      "contemporary clean lab",
+      "botanical/extract macro",
+      "microphotography/molecules",
+      "scientist + technology",
+      "applied product with authentic materials"
+    ],
+    "rule": "Moka identity stays scientific, human, precise and professional; avoid generic wellness and generic sci-fi."
+  },
+  "safe_replication_policy": [
+    "Extract principles, not proprietary layouts.",
+    "Do not request exact recreation of a Vox, DOAC or third-party visual.",
+    "Do not reuse third-party logos/UI.",
+    "Use client palette, type and brand assets as identity layer.",
+    "Reference assets can guide material/camera/style but must produce a new scene.",
+    "Label conceptual scientific renders as illustrative when not source evidence."
+  ],
+  "audit_notes": {
+    "doac_status": "Practitioner/process reference, not an official DOAC normative source. Use only for storyboard/story-over-tech production principles.",
+    "official_sources_priority": [
+      "Vox Media official",
+      "Figma official",
+      "Google official"
+    ],
+    "reference_pdf_policy": "Extract materials/camera/texture/quality grammar, not recurring object subjects."
+  }
+}

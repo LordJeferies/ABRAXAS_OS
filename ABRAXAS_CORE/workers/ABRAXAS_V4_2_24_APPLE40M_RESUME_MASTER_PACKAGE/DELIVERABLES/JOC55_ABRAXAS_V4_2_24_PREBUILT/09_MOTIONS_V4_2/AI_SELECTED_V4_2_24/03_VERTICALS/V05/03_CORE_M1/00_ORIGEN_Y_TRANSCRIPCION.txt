@@ -1,0 +1,11 @@
+CONTENT: V05
+ROL: CORE
+FUENTE: 00:18:07.025 → 00:18:15.122
+TIMELINE: 00:00:26.025 → 00:00:34.122
+DURACIÓN: 8.097s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, por ejemplo, yo veía que mis amigos... no practicaban todos los días, yo terminaba clases y me quedaba en la noche hasta tardísimo en cerando dientes,
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0209.

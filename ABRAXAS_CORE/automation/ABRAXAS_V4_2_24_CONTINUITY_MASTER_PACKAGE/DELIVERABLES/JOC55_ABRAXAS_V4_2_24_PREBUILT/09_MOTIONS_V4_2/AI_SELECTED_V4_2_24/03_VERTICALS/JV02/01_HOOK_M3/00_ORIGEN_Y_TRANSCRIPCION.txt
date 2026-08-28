@@ -1,0 +1,11 @@
+CONTENT: JV02
+ROL: HOOK
+FUENTE: 00:13:53.021 → 00:13:58.365
+TIMELINE: 00:00:05.495 → 00:00:10.839
+DURACIÓN: 5.344s
+
+TRANSCRIPCIÓN EXACTA
+que la verdad me quedó porque dije, wow, qué interesante esta frase.
+
+MOTIVO
+Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0160.

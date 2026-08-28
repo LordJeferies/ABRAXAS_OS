@@ -1,0 +1,12 @@
+'use strict';const assert=require('assert');
+global.ABRAXAS_DATA=require('../src/data.js');global.ABRAXAS_CORE=require('../src/core.js');global.V120_STORE=require('../src/v120/store.js');global.V120_DOMAIN=require('../src/v120/domain.js');global.V120_COMPONENTS=require('../src/v120/components.js');
+const B=require('../src/v120/brain.js');const S=require('../src/v120/product-story.js');
+for(const name of ['left_hemisphere','right_hemisphere','interhemispheric_fissure','frontal_lobe','parietal_lobe','temporal_lobe','occipital_lobe','cerebellar_hint','brainstem_hint','gyri_sulci'])assert(B.BRAIN_ANATOMY.includes(name),name);
+assert.equal(B.PARTICLE_GLYPH,'open-abraxas-chevron');
+assert.deepEqual(B.MORPH_TARGETS,['brain','routes','content_graph','production_flow','calendar','published_network']);
+assert.equal(B.clampZoom(.2),1);assert.equal(B.clampZoom(3),2);
+const pts=B.generateBrainPoints(800,1400,850,1);assert.equal(pts.length,800);assert(pts.some(p=>p.region==='cerebellum'));assert(pts.some(p=>p.region==='left'));assert(pts.some(p=>p.region==='right'));
+const html=S.render('dashboard');for(const token of ['v120BrainCanvas','Get the highlights','Take a closer look','How it works','Built for how you work','From transcript to timeline','One Content. Every Team.'])assert(html.includes(token),token);
+for(const target of ['factory','shim','production','assets','calendar','branding'])assert(html.includes(`data-section="${target}"`),target);
+assert(html.includes('data-action="brain.zoom"'));assert(html.includes('100%'));assert(html.includes('200%'));
+console.log('v1.2 Brain Navigator 4.0 + Product Story 2.0 PASS');

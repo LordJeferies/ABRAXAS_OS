@@ -1,0 +1,11 @@
+CONTENT: JH03
+ROL: EDITORIAL
+FUENTE: 01:12:54.000 → 01:13:00.000
+TIMELINE: 00:05:15.369 → 00:05:21.369
+DURACIÓN: 6.000s
+
+TRANSCRIPCIÓN EXACTA
+En el mismo vertical sacaste varias cosas que puedes monetizar, al final es el mismo ecosistema retroalimentándose.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0774.

@@ -1,0 +1,13 @@
+{
+  "schema_version": "abraxas.transcript-motion-reference-qa.v4.2.24",
+  "generated_at": "2026-08-21T07:05:51Z",
+  "source": "TRANSCRIPCION_SRT_ORIGINAL.txt",
+  "source_cues": 953,
+  "reference_windows": 842,
+  "maximum_window_seconds": 8.983,
+  "all_windows_at_most_9_seconds": true,
+  "source_token_count": 15562,
+  "output_token_count": 15562,
+  "lossless_normalized_token_sequence": true,
+  "status": "PASS"
+}

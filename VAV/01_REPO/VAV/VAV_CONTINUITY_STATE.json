@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 12,
+  "project": "VAV Captions",
+  "phase": "production-hardening",
+  "incomingVerifiedBaseline": "FULL_ALPHA+HOTFIX_V7.2_GREEN",
+  "currentExecution": "V12_ABRAXAS_VISION_REMOTION_PARITY",
+  "sourceTruth": "~/Developer/VAV",
+  "status": "SOURCE_UPDATE_READY_FOR_TARGET_MAC_VERIFY",
+  "render": {
+    "preview": "shared-remotion-caption-plan",
+    "qualityExport": "remotion-renderer",
+    "fastCompatibilityExport": "ffmpeg-ass",
+    "parityPass": false,
+    "reason": "target-mac real render verification still required"
+  },
+  "abraxas": {
+    "safeImport": true,
+    "defaultTrust": "candidate",
+    "trustedDirectImport": true,
+    "referenceOnlyEvidence": ["qvr", "shot", "depth", "spatial", "user-profile", "corpus-dataset"],
+    "executeArbitraryImportedCode": false
+  },
+  "vision": {
+    "sharedContracts": true,
+    "nativeMacSource": true,
+    "implementedStillImageFoundation": ["person-segmentation", "face-landmarks", "ocr", "attention-saliency", "objectness-saliency"],
+    "optionalProviders": ["sam2", "cutie", "opencv"],
+    "depth": "planned-provider",
+    "videoTemporalIntegration": "next"
+  },
+  "nextActions": [
+    "apply-and-verify-v12-on-target-mac",
+    "real-quality-render-parity-evidence",
+    "temporal-vision-and-depth-aware-layering",
+    "scene-smart-pro"
+  ]
+}

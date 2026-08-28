@@ -1,0 +1,42 @@
+{
+  "sequence": 21,
+  "content_id": "MH02",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "MH02_B128",
+  "child_beat_ids": [
+    "MH02_B128"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:29:52.000",
+  "source_end": "00:29:58.000",
+  "timeline_in_seconds": 633.437,
+  "timeline_out_seconds": 639.437,
+  "timeline_in": "00:10:33.437",
+  "timeline_out": "00:10:39.437",
+  "duration_seconds": 6.0,
+  "text": "Y el legado para mí es no es lo que dejas para los demás, sino lo que dejas en los demás.",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0330.",
+  "semantic_score": 4.5,
+  "transcript_reference": "SRT_0330",
+  "motion_primary": "M2",
+  "motion_name": "PROGRESSIVE_SCENE_EXACT_TEXT",
+  "motion_alternative": "M1",
+  "why_motion": "El símbolo admite una evolución progresiva en tres estados sin reescribir la frase.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Progressive scene + exact integrated text",
+    "asset_files": [
+      "PLATE_01_CLEAN.png",
+      "PLATE_02_CLEAN.png",
+      "PLATE_03_CLEAN.png",
+      "PLATE_04_CLEAN.png",
+      "TEXT_01_EXACT.png",
+      "TEXT_02_EXACT.png",
+      "TEXT_03_EXACT.png"
+    ],
+    "instruction": "Crear cuatro placas limpias y tres variantes con texto físicamente integrado. Usar únicamente palabras contiguas y exactas de la transcripción; no forzar una división 3/3/3."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

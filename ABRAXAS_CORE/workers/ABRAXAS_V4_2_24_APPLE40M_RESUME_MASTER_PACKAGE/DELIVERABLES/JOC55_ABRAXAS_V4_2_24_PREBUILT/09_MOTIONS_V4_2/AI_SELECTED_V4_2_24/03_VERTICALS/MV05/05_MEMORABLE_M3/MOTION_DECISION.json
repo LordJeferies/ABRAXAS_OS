@@ -1,0 +1,38 @@
+{
+  "sequence": 5,
+  "content_id": "MV05",
+  "narrative_role": "MEMORABLE",
+  "source_part_id": "MV05_P12",
+  "child_beat_ids": [
+    "MV05_B13"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:44:06.371",
+  "source_end": "00:44:14.817",
+  "timeline_in_seconds": 66.314,
+  "timeline_out_seconds": 74.76,
+  "timeline_in": "00:01:06.314",
+  "timeline_out": "00:01:14.760",
+  "duration_seconds": 8.446,
+  "text": "tener esa experiencia personal, no solamente desde el ámbito de mi empresa en particular, pero en cualquier área o cualquier gremio, básicamente.",
+  "reason": "Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0479.",
+  "semantic_score": 7.8191,
+  "transcript_reference": "SRT_0479",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La frase tiene fuerza autónoma y debe resolverse como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

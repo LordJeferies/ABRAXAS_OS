@@ -1,0 +1,11 @@
+CONTENT: JV01
+ROL: TENSION
+FUENTE: 00:08:22.000 → 00:08:27.000
+TIMELINE: 00:00:19.958 → 00:00:24.958
+DURACIÓN: 5.000s
+
+TRANSCRIPCIÓN EXACTA
+Un Steve Jobs, un Mark Zuckerberg dejaron la universidad y también son unos cracks y tienen todo el éxito del mundo.
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0099.

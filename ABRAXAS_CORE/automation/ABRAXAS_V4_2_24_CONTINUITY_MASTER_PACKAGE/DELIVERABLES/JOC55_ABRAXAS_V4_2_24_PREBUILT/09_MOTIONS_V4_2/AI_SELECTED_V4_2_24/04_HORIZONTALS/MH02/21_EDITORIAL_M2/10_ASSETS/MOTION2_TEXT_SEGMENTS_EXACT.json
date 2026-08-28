@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Y el legado para mí es no es lo que dejas para los demás, sino lo que dejas en los demás.",
+  "segments": [
+    "Y el legado para mí es no",
+    "es lo que dejas para los demás,",
+    "sino lo que dejas en los demás."
+  ],
+  "reconstructed_text": "Y el legado para mí es no es lo que dejas para los demás, sino lo que dejas en los demás."
+}

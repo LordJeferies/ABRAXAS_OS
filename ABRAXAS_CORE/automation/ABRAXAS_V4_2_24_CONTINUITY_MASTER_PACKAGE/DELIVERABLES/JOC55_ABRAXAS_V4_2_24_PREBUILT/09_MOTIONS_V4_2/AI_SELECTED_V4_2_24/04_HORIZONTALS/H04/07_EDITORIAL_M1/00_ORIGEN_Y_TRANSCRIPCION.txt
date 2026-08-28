@@ -1,0 +1,11 @@
+CONTENT: H04
+ROL: EDITORIAL
+FUENTE: 01:16:31.000 → 01:16:40.000
+TIMELINE: 00:03:01.000 → 00:03:10.000
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+ha sido un proceso gradual, pero siempre la esencia se ha mantenido la misma y eso creo que ha sido clave para el crecimiento que hemos tenido.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0809.

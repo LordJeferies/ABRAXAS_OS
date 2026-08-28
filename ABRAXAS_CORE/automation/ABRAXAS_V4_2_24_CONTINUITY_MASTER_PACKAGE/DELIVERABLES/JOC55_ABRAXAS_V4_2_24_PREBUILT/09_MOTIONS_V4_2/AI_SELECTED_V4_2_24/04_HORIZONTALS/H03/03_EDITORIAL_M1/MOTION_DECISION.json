@@ -1,0 +1,38 @@
+{
+  "sequence": 3,
+  "content_id": "H03",
+  "narrative_role": "EDITORIAL",
+  "source_part_id": "H03_B16",
+  "child_beat_ids": [
+    "H03_B16"
+  ],
+  "speaker": "MIXED",
+  "source_start": "00:54:30.000",
+  "source_end": "00:54:37.000",
+  "timeline_in_seconds": 76.0,
+  "timeline_out_seconds": 83.0,
+  "timeline_in": "00:01:16.000",
+  "timeline_out": "00:01:23.000",
+  "duration_seconds": 7.0,
+  "text": "y esa es la razón número uno por la cual nuestros estudiantes que han perdido el examen, que no hacían ningún curso ni nada con...",
+  "reason": "La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0580.",
+  "semantic_score": 3.7,
+  "transcript_reference": "SRT_0580",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

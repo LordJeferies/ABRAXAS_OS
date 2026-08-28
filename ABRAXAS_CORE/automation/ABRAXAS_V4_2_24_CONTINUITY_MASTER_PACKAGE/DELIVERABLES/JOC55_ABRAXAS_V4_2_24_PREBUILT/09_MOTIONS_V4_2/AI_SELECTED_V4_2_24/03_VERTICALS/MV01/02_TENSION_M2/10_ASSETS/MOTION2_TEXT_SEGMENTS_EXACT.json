@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Y incluso me gusta debatir con personas que tengan ideas contrarias. Pero es que a veces que yo lo llevo a la versión más simple.",
+  "segments": [
+    "Y incluso me gusta debatir con personas que",
+    "tengan ideas contrarias. Pero es que a veces que",
+    "yo lo llevo a la versión más simple."
+  ],
+  "reconstructed_text": "Y incluso me gusta debatir con personas que tengan ideas contrarias. Pero es que a veces que yo lo llevo a la versión más simple."
+}

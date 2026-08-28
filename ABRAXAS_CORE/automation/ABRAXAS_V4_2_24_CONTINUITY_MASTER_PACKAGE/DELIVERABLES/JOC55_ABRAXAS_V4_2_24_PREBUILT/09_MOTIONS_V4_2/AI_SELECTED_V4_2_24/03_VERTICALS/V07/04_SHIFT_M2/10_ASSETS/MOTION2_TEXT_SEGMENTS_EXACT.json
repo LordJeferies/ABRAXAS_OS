@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "en eso, tu esencia, pero en tu propio propósito y en lo que inspiras en los demás porque tú mismo lo vives todos los días de esa manera.",
+  "segments": [
+    "en eso, tu esencia, pero en tu propio propósito y",
+    "en lo que inspiras en los demás porque tú",
+    "mismo lo vives todos los días de esa manera."
+  ],
+  "reconstructed_text": "en eso, tu esencia, pero en tu propio propósito y en lo que inspiras en los demás porque tú mismo lo vives todos los días de esa manera."
+}

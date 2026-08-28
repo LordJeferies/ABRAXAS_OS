@@ -1,0 +1,11 @@
+CONTENT: MV04
+ROL: TENSION
+FUENTE: 01:17:01.023 → 01:17:09.735
+TIMELINE: 00:00:14.414 → 00:00:23.126
+DURACIÓN: 8.712s
+
+TRANSCRIPCIÓN EXACTA
+sea, nosotros estábamos en el summit y yo veía todas estas charlas y conferencias y yo decía, qué increíble y en verdad qué difícil.
+
+MOTIVO
+Expone el problema, contradicción o costo narrativo. Referencia SRT_0816.

@@ -1,0 +1,36 @@
+{
+  "sequence": 3,
+  "content_id": "V09",
+  "narrative_role": "CORE",
+  "source_part_id": "V09_P05",
+  "child_beat_ids": [
+    "V09_B05"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:46:00.460",
+  "source_end": "00:46:05.052",
+  "timeline_in_seconds": 30.46,
+  "timeline_out_seconds": 35.052,
+  "timeline_in": "00:00:30.460",
+  "timeline_out": "00:00:35.052",
+  "duration_seconds": 4.592,
+  "text": "No porque subestimemos el proceso, para nada, we acknowledge que es bien complicado,",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0497.",
+  "semantic_score": 7.705,
+  "transcript_reference": "SRT_0497",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La idea central se entiende mejor como relación o proceso visual.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

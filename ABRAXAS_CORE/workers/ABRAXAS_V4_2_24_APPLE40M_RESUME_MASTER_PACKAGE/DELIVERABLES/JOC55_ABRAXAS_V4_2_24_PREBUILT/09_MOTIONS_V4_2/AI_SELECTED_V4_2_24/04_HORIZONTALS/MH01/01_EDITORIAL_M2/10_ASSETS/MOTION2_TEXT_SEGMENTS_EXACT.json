@@ -1,0 +1,10 @@
+{
+  "rule": "ONLY_EXACT_CONTIGUOUS_WORDS__NO_FORCED_EQUAL_SPLIT",
+  "source_text": "Que no es solamente... O sea, yo creo que tiene que haber un nivel de pasión. Necesariamente, pero es una pasión ligada al propósito, que bien claro lo dijiste era de ser odontólogo, ¿no?",
+  "segments": [
+    "Que no es solamente... O sea, yo creo que tiene que haber",
+    "un nivel de pasión. Necesariamente, pero es una pasión ligada al",
+    "propósito, que bien claro lo dijiste era de ser odontólogo, ¿no?"
+  ],
+  "reconstructed_text": "Que no es solamente... O sea, yo creo que tiene que haber un nivel de pasión. Necesariamente, pero es una pasión ligada al propósito, que bien claro lo dijiste era de ser odontólogo, ¿no?"
+}

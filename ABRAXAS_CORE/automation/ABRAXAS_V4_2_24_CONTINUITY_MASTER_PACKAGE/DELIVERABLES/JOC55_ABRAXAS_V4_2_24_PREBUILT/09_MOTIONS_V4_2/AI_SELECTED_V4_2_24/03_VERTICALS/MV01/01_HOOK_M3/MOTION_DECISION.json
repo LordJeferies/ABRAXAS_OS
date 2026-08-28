@@ -1,0 +1,39 @@
+{
+  "sequence": 1,
+  "content_id": "MV01",
+  "narrative_role": "HOOK",
+  "source_part_id": "MV01_P01",
+  "child_beat_ids": [
+    "MV01_B01",
+    "MV01_B02"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:06:33.527",
+  "source_end": "00:06:42.029",
+  "timeline_in_seconds": 0.0,
+  "timeline_out_seconds": 8.502,
+  "timeline_in": "00:00:00.000",
+  "timeline_out": "00:00:08.502",
+  "duration_seconds": 8.502,
+  "text": "Comparte tu opinión. Además que yo nunca dejaría que un mecánico me sacara una muela, pues.",
+  "reason": "Abre la tesis con una frase o pregunta de alta atención. Referencia SRT_0074.",
+  "semantic_score": 9.27,
+  "transcript_reference": "SRT_0074",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La frase tiene fuerza autónoma y debe resolverse como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

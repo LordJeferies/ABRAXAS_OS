@@ -1,0 +1,11 @@
+CONTENT: JH02
+ROL: EDITORIAL
+FUENTE: 00:20:13.000 → 00:20:22.000
+TIMELINE: 00:00:47.243 → 00:00:56.243
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Pero la realidad es que la vida es más que eso. O sea, la vida te lleva... con retos, la vida te va dar trancasos, la vida te va llevar por zonas que no son cómodas.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0233.

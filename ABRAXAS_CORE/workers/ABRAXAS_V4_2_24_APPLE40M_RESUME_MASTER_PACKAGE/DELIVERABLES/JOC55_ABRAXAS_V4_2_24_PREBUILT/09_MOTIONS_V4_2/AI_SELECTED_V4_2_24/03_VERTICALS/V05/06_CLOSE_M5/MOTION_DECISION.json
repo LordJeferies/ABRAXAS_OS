@@ -1,0 +1,39 @@
+{
+  "sequence": 6,
+  "content_id": "V05",
+  "narrative_role": "CLOSE",
+  "source_part_id": "V05_P10",
+  "child_beat_ids": [
+    "V05_B10",
+    "V05_B11"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:18:42.605",
+  "source_end": "00:18:49.676",
+  "timeline_in_seconds": 61.605,
+  "timeline_out_seconds": 68.676,
+  "timeline_in": "00:01:01.605",
+  "timeline_out": "00:01:08.676",
+  "duration_seconds": 7.071,
+  "text": "no tengo límites de aprender a hacer porque al final el límite es lo que yo quiera sacrificar o lo que yo me quiera esforzar.",
+  "reason": "Resuelve la idea y sostiene el cierre emocional o reflexivo. Referencia SRT_0217.",
+  "semantic_score": 10.7767,
+  "transcript_reference": "SRT_0217",
+  "motion_primary": "M5",
+  "motion_name": "CINEMATIC_MICROSEQUENCE",
+  "motion_alternative": "M1",
+  "why_motion": "La idea puede mostrarse como acción física: plano general, detalle y resultado.",
+  "track": "V2",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Cinematic physical action: wide / detail / result",
+    "asset_files": [
+      "FRAME_01_WIDE_ACTION.png",
+      "FRAME_02_DETAIL_ACTION.png",
+      "FRAME_03_RESULT.png"
+    ],
+    "instruction": "Mostrar una acción física comprobable en tres cámaras: plano general, detalle y resultado. No usar como intro genérica ni inventar acciones que el texto no sostenga."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

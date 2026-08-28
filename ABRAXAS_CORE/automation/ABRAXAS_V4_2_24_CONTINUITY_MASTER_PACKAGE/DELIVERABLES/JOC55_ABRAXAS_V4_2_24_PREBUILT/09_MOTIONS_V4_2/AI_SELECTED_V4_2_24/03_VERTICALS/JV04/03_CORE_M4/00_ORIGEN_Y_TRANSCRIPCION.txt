@@ -1,0 +1,11 @@
+CONTENT: JV04
+ROL: CORE
+FUENTE: 00:28:43.289 → 00:28:48.645
+TIMELINE: 00:00:30.826 → 00:00:36.182
+DURACIÓN: 5.356s
+
+TRANSCRIPCIÓN EXACTA
+que la gente te busca y toda la comunidad sabe quién eres porque simplemente fue el
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0320.

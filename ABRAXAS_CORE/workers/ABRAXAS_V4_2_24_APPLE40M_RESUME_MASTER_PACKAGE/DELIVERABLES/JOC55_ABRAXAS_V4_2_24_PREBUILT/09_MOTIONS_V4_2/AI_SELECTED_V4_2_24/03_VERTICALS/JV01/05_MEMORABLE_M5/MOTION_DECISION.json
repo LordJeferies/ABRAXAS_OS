@@ -1,0 +1,40 @@
+{
+  "sequence": 5,
+  "content_id": "JV01",
+  "narrative_role": "MEMORABLE",
+  "source_part_id": "JV01_P12",
+  "child_beat_ids": [
+    "JV01_B14",
+    "JV01_B15",
+    "JV01_B16"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:09:04.630",
+  "source_end": "00:09:09.088",
+  "timeline_in_seconds": 62.588,
+  "timeline_out_seconds": 67.046,
+  "timeline_in": "00:01:02.588",
+  "timeline_out": "00:01:07.046",
+  "duration_seconds": 4.458,
+  "text": "terminado de trabajar, ingresan a la universidad, igual van a aprender cosas que no ven afuera.",
+  "reason": "Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0107.",
+  "semantic_score": 6.7075,
+  "transcript_reference": "SRT_0107",
+  "motion_primary": "M5",
+  "motion_name": "CINEMATIC_MICROSEQUENCE",
+  "motion_alternative": "M1",
+  "why_motion": "La idea puede mostrarse como acción física: plano general, detalle y resultado.",
+  "track": "V2",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Cinematic physical action: wide / detail / result",
+    "asset_files": [
+      "FRAME_01_WIDE_ACTION.png",
+      "FRAME_02_DETAIL_ACTION.png",
+      "FRAME_03_RESULT.png"
+    ],
+    "instruction": "Mostrar una acción física comprobable en tres cámaras: plano general, detalle y resultado. No usar como intro genérica ni inventar acciones que el texto no sostenga."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

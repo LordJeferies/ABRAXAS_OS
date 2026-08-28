@@ -1,0 +1,38 @@
+{
+  "sequence": 3,
+  "content_id": "MV07",
+  "narrative_role": "CORE",
+  "source_part_id": "MV07_P07",
+  "child_beat_ids": [
+    "MV07_B08"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "01:21:04.670",
+  "source_end": "01:21:10.716",
+  "timeline_in_seconds": 33.687,
+  "timeline_out_seconds": 39.733,
+  "timeline_in": "00:00:33.687",
+  "timeline_out": "00:00:39.733",
+  "duration_seconds": 6.046,
+  "text": "el hecho de que hemos sido self-sufficient y básicamente on our own,",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0863.",
+  "semantic_score": 8.3125,
+  "transcript_reference": "SRT_0863",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

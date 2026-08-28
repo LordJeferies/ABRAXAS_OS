@@ -1,0 +1,39 @@
+{
+  "sequence": 5,
+  "content_id": "V06",
+  "narrative_role": "MEMORABLE",
+  "source_part_id": "V06_P10",
+  "child_beat_ids": [
+    "V06_B12",
+    "V06_B13"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:27:28.320",
+  "source_end": "00:27:35.628",
+  "timeline_in_seconds": 59.32,
+  "timeline_out_seconds": 66.628,
+  "timeline_in": "00:00:59.320",
+  "timeline_out": "00:01:06.628",
+  "duration_seconds": 7.308,
+  "text": "Y yo mismo me digo que sí, entonces creo que esa proactividad y tener el tic skin de entender de que un",
+  "reason": "Contiene una frase, metáfora o síntesis compartible. Referencia SRT_0304.",
+  "semantic_score": 10.0459,
+  "transcript_reference": "SRT_0304",
+  "motion_primary": "M3",
+  "motion_name": "EDITORIAL_TYPE",
+  "motion_alternative": "M4",
+  "why_motion": "La frase tiene fuerza autónoma y debe resolverse como golpe editorial.",
+  "track": "V4",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Pure editorial typography",
+    "asset_files": [
+      "TYPE_01_SETUP.png",
+      "TYPE_02_CONTRADICTION.png",
+      "TYPE_03_PAYOFF.png"
+    ],
+    "instruction": "Resolver como tipografía editorial pura con setup, contradicción y payoff. No convertirlo en subtítulos, quote card ni placa decorativa."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

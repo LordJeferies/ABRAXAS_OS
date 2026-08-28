@@ -1,0 +1,11 @@
+CONTENT: JH04
+ROL: EDITORIAL
+FUENTE: 01:08:58.000 → 01:09:07.000
+TIMELINE: 00:04:33.532 → 00:04:42.532
+DURACIÓN: 9.000s
+
+TRANSCRIPCIÓN EXACTA
+Entonces, tenemos diferentes modelos de suscripción, como por ejemplo mensual, tenemos de 3 meses, que normalmente es bastante común. Y también tenemos de 6 meses, 1 año, por ejemplo.
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0725.

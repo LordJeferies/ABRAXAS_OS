@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "master_video": "/ruta/master.mp4",
+    "fps": 30
+  },
+  "timelines": [
+    {
+      "id": "V01",
+      "name": "ejemplo_clip",
+      "title": "Ejemplo de clip",
+      "orientation": "vertical",
+      "segments": [
+        {
+          "order": 1,
+          "source_start": "00:04:48:17",
+          "source_end": "00:04:58:10",
+          "exact": true,
+          "reference_text": "Texto hablado..."
+        },
+        {
+          "order": 2,
+          "source_start": "00:07:14:57",
+          "source_end": "00:07:28:00",
+          "exact": true,
+          "reference_text": "Segundo fragmento..."
+        }
+      ]
+    }
+  ]
+}

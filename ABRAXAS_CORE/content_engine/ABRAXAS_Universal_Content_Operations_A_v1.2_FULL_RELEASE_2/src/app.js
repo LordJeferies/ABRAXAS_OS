@@ -1,0 +1,22 @@
+'use strict';
+const VERSION='1.2';
+const APP_KEY='ABRAXAS_A_v1.2_UI';
+const CORE=globalThis.ABRAXAS_CORE;
+const DATA=globalThis.ABRAXAS_DATA;
+const STORE=globalThis.V120_STORE;
+const DOMAIN=globalThis.V120_DOMAIN;
+const ACTIONS=globalThis.V120_ACTIONS;
+const C=globalThis.V120_COMPONENTS;
+const SHELL=globalThis.V120_SHELL;
+const MODULES={dashboard:globalThis.V120_DASHBOARD,clients:globalThis.V120_CLIENTS,library:globalThis.V120_LIBRARY,calendar:globalThis.V120_CALENDAR,factory:globalThis.V120_FACTORY,production:globalThis.V120_PRODUCTION,shim:globalThis.V120_SHIM,airesults:globalThis.V120_AIRESULTS,assets:globalThis.V120_ASSETS,branding:globalThis.V120_BRANDING,guide:globalThis.V120_GUIDE,roadmap:globalThis.V120_ROADMAP,studio:globalThis.V120_STUDIO};
+const STORY_SECTIONS=new Set(['dashboard','clients','branding','roadmap']);
+function copyText(text){const value=String(text??'');if(typeof navigator!=='undefined'&&navigator.clipboard?.writeText)return navigator.clipboard.writeText(value);if(typeof document==='undefined')return Promise.resolve(value);const ta=document.createElement('textarea');ta.value=value;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand?.('copy');ta.remove();return Promise.resolve(value);}
+function download(filename,text,mime='text/plain'){if(typeof document==='undefined')return false;const blob=new Blob([String(text??'')],{type:mime});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500);return true;}
+function toast(payload){if(!payload)return;STORE.set({toast:{...payload,at:Date.now()}});if(typeof document==='undefined')return;const m=document.getElementById('v120ToastMount');if(!m)return;m.innerHTML=`<div class="v120-toast ${C.esc(payload.tone||'')}" role="status"><b>${C.esc(payload.title||'ABRAXAS')}</b><span>${C.esc(payload.body||'')}</span></div>`;setTimeout(()=>{if(m)m.innerHTML='';},2600);}
+function renderCurrent(){const s=STORE.get();if(s.presentationMode==='story'&&STORY_SECTIONS.has(s.section))return globalThis.V120_STORY.render(s.section);const mod=MODULES[s.section]||MODULES.dashboard;if(!mod?.render)throw new Error(`Renderer no disponible: ${s.section}`);return mod.render();}
+function applyTheme(){const c=STORE.get().selectedContentId?DOMAIN.contentById(STORE.get().selectedContentId):null,client=c?DOMAIN.clientById(c.clientId):null;document.documentElement.style.setProperty('--client-accent',client?.accent||'#d8b46c');document.documentElement.setAttribute('data-abraxas-version',VERSION);document.documentElement.setAttribute('data-presentation',STORE.get().presentationMode);document.documentElement.setAttribute('data-role',STORE.get().roleMode);}
+function render(){if(typeof document==='undefined')return'';try{globalThis.V120_TECHNIQUES?.destroy?.();const content=renderCurrent(),mount=document.getElementById('app');if(!mount)throw new Error('Missing #app mount');mount.innerHTML=SHELL.renderShell(content);const architectMount=document.getElementById('v120ArchitectMount');if(architectMount)architectMount.innerHTML=globalThis.V120_ARCHITECT.render();ACTIONS.bind(mount);applyTheme();globalThis.V120_TECHNIQUES?.init?.();document.documentElement.setAttribute('data-abraxas-ready','true');return content;}catch(error){console.error('ABRAXAS_V120_RENDER_ERROR',error);const mount=document.getElementById('app');if(mount)mount.innerHTML=`<main class="v120-recovery"><section class="v120-state state-error"><div class="state-symbol">${C?.icon?.('warning')||'!'}</div><div><b>ABRAXAS Recovery Mode</b><p>${C?.esc?.(error.message)||'La interfaz no pudo iniciar.'}</p><small>No se modificó el dominio. Recarga o restablece solamente la interfaz.</small></div><button class="v120-btn primary" id="v120RecoveryReset">Restablecer UI</button></section></main>`;document.getElementById('v120RecoveryReset')?.addEventListener('click',()=>{STORE.reset();render();});return'';}}
+function boot(){if(typeof document==='undefined')return true;try{STORE.load();ACTIONS.configure({render,toast,copyText});render();return true;}catch(error){console.error('ABRAXAS_V120_BOOT_ERROR',error);return false;}}
+Object.assign(globalThis,{VERSION,APP_KEY,V120_APP:{VERSION,APP_KEY,render,renderCurrent,boot,copyText,download,toast}});
+if(typeof module!=='undefined'&&module.exports)module.exports={VERSION,APP_KEY,render,renderCurrent,boot,copyText,download,toast};
+if(typeof document!=='undefined')boot();

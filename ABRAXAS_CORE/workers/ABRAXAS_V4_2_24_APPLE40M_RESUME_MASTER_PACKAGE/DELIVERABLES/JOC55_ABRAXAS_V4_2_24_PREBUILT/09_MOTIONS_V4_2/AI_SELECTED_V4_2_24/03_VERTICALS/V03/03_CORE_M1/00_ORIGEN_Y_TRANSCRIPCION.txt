@@ -1,0 +1,11 @@
+CONTENT: V03
+ROL: CORE
+FUENTE: 00:12:49.409 → 00:12:54.000
+TIMELINE: 00:00:33.409 → 00:00:38.000
+DURACIÓN: 4.591s
+
+TRANSCRIPCIÓN EXACTA
+en una fase de que es que este profesor me odia o esto es injusto, lo que sea.
+
+MOTIVO
+Concentra la explicación principal o el aprendizaje. Referencia SRT_0146.

@@ -1,0 +1,36 @@
+{
+  "sequence": 4,
+  "content_id": "V10",
+  "narrative_role": "SHIFT",
+  "source_part_id": "V10_P08",
+  "child_beat_ids": [
+    "V10_B09"
+  ],
+  "speaker": "Amanda Vicari",
+  "source_start": "00:54:13.000",
+  "source_end": "00:54:20.000",
+  "timeline_in_seconds": 45.0,
+  "timeline_out_seconds": 52.0,
+  "timeline_in": "00:00:45.000",
+  "timeline_out": "00:00:52.000",
+  "duration_seconds": 7.0,
+  "text": "Entonces, nuestro método es como si fueras básicamente Messi, Cristiano Ronaldo, pero del IMBD.",
+  "reason": "Marca el cambio de perspectiva o la nueva interpretación. Referencia SRT_0578.",
+  "semantic_score": 10.57,
+  "transcript_reference": "SRT_0578",
+  "motion_primary": "M4",
+  "motion_name": "MASTER_INFOGRAPHIC_Z",
+  "motion_alternative": "M3",
+  "why_motion": "La idea central se entiende mejor como relación o proceso visual.",
+  "track": "V3",
+  "placement_mode": "REPLACE_VISUAL_KEEP_SOURCE_AUDIO",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "One 4K master infographic traversed in Z",
+    "asset_files": [
+      "MASTER_INFOGRAPHIC_4K.png"
+    ],
+    "instruction": "Crear una sola infografía maestra 4K con relaciones verificables y profundidad espacial; recorrerla en Z. No crear cuatro slides independientes."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}

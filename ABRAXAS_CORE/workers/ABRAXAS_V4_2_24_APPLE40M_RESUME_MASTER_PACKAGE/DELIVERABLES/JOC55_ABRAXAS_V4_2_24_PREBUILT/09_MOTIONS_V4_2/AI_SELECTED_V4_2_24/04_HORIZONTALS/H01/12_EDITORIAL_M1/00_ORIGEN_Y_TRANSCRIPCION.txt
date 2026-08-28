@@ -1,0 +1,11 @@
+CONTENT: H01
+ROL: EDITORIAL
+FUENTE: 00:21:08.414 → 00:21:13.571
+TIMELINE: 00:06:16.414 → 00:06:21.571
+DURACIÓN: 5.157s
+
+TRANSCRIPCIÓN EXACTA
+punto de vista académico pero me encantaría escuchar porque tú tienes una posición bien singular
+
+MOTIVO
+La ventana tiene densidad semántica y aporta una explicación visual útil. Referencia SRT_0241.

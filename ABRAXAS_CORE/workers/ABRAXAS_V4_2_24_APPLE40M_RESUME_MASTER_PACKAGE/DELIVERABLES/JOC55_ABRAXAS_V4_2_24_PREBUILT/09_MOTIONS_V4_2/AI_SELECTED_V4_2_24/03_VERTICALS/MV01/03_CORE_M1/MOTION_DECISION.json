@@ -1,0 +1,39 @@
+{
+  "sequence": 3,
+  "content_id": "MV01",
+  "narrative_role": "CORE",
+  "source_part_id": "MV01_P09",
+  "child_beat_ids": [
+    "MV01_B09",
+    "MV01_B10"
+  ],
+  "speaker": "JOC",
+  "source_start": "00:07:13.484",
+  "source_end": "00:07:19.276",
+  "timeline_in_seconds": 39.907,
+  "timeline_out_seconds": 45.699,
+  "timeline_in": "00:00:39.907",
+  "timeline_out": "00:00:45.699",
+  "duration_seconds": 5.792,
+  "text": "ideas digamos contrarias hay algo que también pasa mucho y es que hay un gran malentendido",
+  "reason": "Concentra la explicación principal o el aprendizaje. Referencia SRT_0088.",
+  "semantic_score": 8.3281,
+  "transcript_reference": "SRT_0088",
+  "motion_primary": "M1",
+  "motion_name": "FLEXIBLE_PLATE_OR_CLOSEUPS",
+  "motion_alternative": "M5",
+  "why_motion": "Fallback conservador: acompañamiento visual concreto antes que efecto genérico.",
+  "track": "V2",
+  "placement_mode": "COMPOSITE_BEHIND_SPEAKER",
+  "motion_system_version": "V7",
+  "asset_contract": {
+    "contract": "Flexible plate / three motivated close-ups",
+    "asset_files": [
+      "FRAME_01_WIDE.png",
+      "FRAME_02_CLOSEUP_A.png",
+      "FRAME_03_CLOSEUP_B.png"
+    ],
+    "instruction": "Construir una placa flexible y tres observaciones de detalle. No generar ni sustituir al speaker; conservar baja densidad en el lado destinado al retrato."
+  },
+  "status": "READY_FOR_ASSET_GENERATION"
+}
