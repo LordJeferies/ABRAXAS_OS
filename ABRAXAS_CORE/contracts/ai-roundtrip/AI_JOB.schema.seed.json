@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ABRAXAS AI Job Seed",
+  "type": "object",
+  "required": [
+    "job_id",
+    "content_id",
+    "task",
+    "prompt_version",
+    "expected_output"
+  ],
+  "properties": {
+    "job_id": {
+      "type": "string"
+    },
+    "content_id": {
+      "type": "string"
+    },
+    "task": {
+      "type": "string"
+    },
+    "provider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prompt_version": {
+      "type": "string"
+    },
+    "client_core_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lienzo_version": {
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+    "expected_output": {
+      "type": "object"
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "READY",
+        "EXPORTED",
+        "IMPORTED",
+        "VALIDATED",
+        "REVIEW",
+        "ACCEPTED",
+        "REJECTED",
+        "ERROR"
+      ]
+    }
+  }
+}

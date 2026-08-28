@@ -1,0 +1,174 @@
+{
+  "version": "1.0-seed",
+  "status": "SEED__MUST_BE_EXPANDED_BY_FORENSIC_CORPUS",
+  "classification_layers": [
+    "UNIVERSAL",
+    "INDUSTRY",
+    "CLIENT"
+  ],
+  "families": [
+    {
+      "id": "DIAGNOSIS",
+      "progression": [
+        "pain",
+        "cause",
+        "mechanism",
+        "decision",
+        "payoff"
+      ]
+    },
+    {
+      "id": "PROBLEM_MECHANISM_DECISION",
+      "progression": [
+        "problem",
+        "mechanism",
+        "decision"
+      ]
+    },
+    {
+      "id": "CONTRAST",
+      "progression": [
+        "belief",
+        "contradiction",
+        "explanation",
+        "implication"
+      ]
+    },
+    {
+      "id": "EVIDENCE",
+      "progression": [
+        "claim",
+        "evidence",
+        "limitation",
+        "interpretation",
+        "decision"
+      ]
+    },
+    {
+      "id": "CASE",
+      "progression": [
+        "situation",
+        "problem",
+        "intervention",
+        "result",
+        "lesson"
+      ]
+    },
+    {
+      "id": "PROCESS",
+      "progression": [
+        "goal",
+        "steps",
+        "friction",
+        "correction",
+        "result"
+      ]
+    },
+    {
+      "id": "MYTH",
+      "progression": [
+        "belief",
+        "why_it_feels_true",
+        "failure",
+        "mechanism",
+        "rule"
+      ]
+    },
+    {
+      "id": "STORY",
+      "progression": [
+        "scene",
+        "tension",
+        "realization",
+        "implication"
+      ]
+    },
+    {
+      "id": "FRAMEWORK",
+      "progression": [
+        "problem",
+        "model",
+        "parts",
+        "use",
+        "rule"
+      ]
+    },
+    {
+      "id": "DECISION",
+      "progression": [
+        "situation",
+        "options",
+        "tradeoff",
+        "criterion",
+        "decision"
+      ]
+    },
+    {
+      "id": "DEMO",
+      "progression": [
+        "problem",
+        "criterion",
+        "proof",
+        "demonstration"
+      ]
+    },
+    {
+      "id": "AUTHORITY",
+      "progression": [
+        "observation",
+        "mechanism",
+        "evidence",
+        "implication"
+      ]
+    },
+    {
+      "id": "CONVERSATION",
+      "progression": [
+        "question",
+        "disagreement",
+        "exploration",
+        "proof",
+        "resolution"
+      ]
+    },
+    {
+      "id": "MYTH_REALITY",
+      "progression": [
+        "myth",
+        "reality",
+        "mechanism",
+        "decision"
+      ]
+    },
+    {
+      "id": "OBJECTION",
+      "progression": [
+        "objection",
+        "why_reasonable",
+        "reframe",
+        "evidence",
+        "decision"
+      ]
+    },
+    {
+      "id": "DEFINITION",
+      "progression": [
+        "term",
+        "misunderstanding",
+        "definition",
+        "mechanism",
+        "application"
+      ]
+    },
+    {
+      "id": "SYSTEM",
+      "progression": [
+        "problem",
+        "components",
+        "relationships",
+        "operation",
+        "result"
+      ]
+    }
+  ]
+}

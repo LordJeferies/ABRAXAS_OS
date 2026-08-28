@@ -1,0 +1,243 @@
+{
+  "generated_at": "2026-08-28",
+  "note": "Los porcentajes son avance de roadmap basado en tareas definidas, no cobertura de tests ni una medición automática del código.",
+  "git": {
+    "reported_baseline": "0c4fa1a60487097b0604818bc668bf4d8b9ea527",
+    "state": "GREEN_REPORTED__VERIFY_LIVE_BEFORE_UPDATE"
+  },
+  "modules": [
+    {
+      "id": "monorepo",
+      "name": "ABRAXAS OS / Git",
+      "status": "GREEN",
+      "progress": 100,
+      "done": [
+        "Monorepo raíz definido",
+        "GitHub privado sincronizado según último reporte",
+        "Política Git establecida"
+      ],
+      "next": [
+        "Verificar SHA antes de cada nueva fase"
+      ]
+    },
+    {
+      "id": "foundation",
+      "name": "Arquitectura / Canon V2",
+      "status": "ACTIVE",
+      "progress": 85,
+      "done": [
+        "Roles YOD/He/Shim/VAV/Arquitecto definidos",
+        "Lienzo definido",
+        "Publishing/Metrics definidos",
+        "Roadmap definido"
+      ],
+      "next": [
+        "Reconciliar canon con código actual",
+        "Cerrar schemas finales"
+      ]
+    },
+    {
+      "id": "yod",
+      "name": "YOD",
+      "status": "DESIGN_READY",
+      "progress": 28,
+      "done": [
+        "Rol definido",
+        "Client Core spec",
+        "Opportunity Engine spec",
+        "Prompt/Copy/Visual/Motion canon",
+        "Structure seed"
+      ],
+      "next": [
+        "Forensic inventory real",
+        "Schemas finales",
+        "Implementación engine/store"
+      ]
+    },
+    {
+      "id": "he",
+      "name": "He",
+      "status": "MIGRATION_DESIGN",
+      "progress": 35,
+      "done": [
+        "Rol actualizado",
+        "Lienzo UI definido",
+        "Workflow/Calendar/Backlog definidos",
+        "Legacy/base previa existente"
+      ],
+      "next": [
+        "Reconciliar He actual",
+        "Implementar vista unificada YOD/Lienzo",
+        "Tasks/team",
+        "Metrics/Publishing UI"
+      ]
+    },
+    {
+      "id": "shim",
+      "name": "Shim",
+      "status": "DESIGN_ACTIVE",
+      "progress": 25,
+      "done": [
+        "Rol definido",
+        "Structure matching concept",
+        "Gap loop",
+        "Copy sync"
+      ],
+      "next": [
+        "Auditar implementación actual",
+        "Contratos",
+        "Candidate/Resolve engine"
+      ]
+    },
+    {
+      "id": "vav",
+      "name": "VAV",
+      "status": "CURRENT_BASELINE_GREEN",
+      "progress": 62,
+      "done": [
+        "Base funcional actual preservada",
+        "Captions verify histórico",
+        "Motions/Shared packages versionables"
+      ],
+      "next": [
+        "Lienzo bridge",
+        "Artifact/Event updates",
+        "He state sync",
+        "Production component statuses"
+      ]
+    },
+    {
+      "id": "architect",
+      "name": "Arquitecto",
+      "status": "DESIGN_READY",
+      "progress": 24,
+      "done": [
+        "Rol definido",
+        "Context model",
+        "Suggestion model",
+        "Total Production Coach"
+      ],
+      "next": [
+        "System Knowledge registry",
+        "UI presence",
+        "Action contracts",
+        "Runtime/AI integration"
+      ]
+    },
+    {
+      "id": "publishing",
+      "name": "Publishing",
+      "status": "PLANNED",
+      "progress": 12,
+      "done": [
+        "Publication Target model",
+        "Adapter contract",
+        "Calendar behavior"
+      ],
+      "next": [
+        "Manual export flow",
+        "Provider registry",
+        "Meta/TikTok/YouTube/LinkedIn adapters"
+      ]
+    },
+    {
+      "id": "metrics",
+      "name": "Metrics",
+      "status": "PLANNED",
+      "progress": 12,
+      "done": [
+        "Raw/normalized model",
+        "Snapshots",
+        "YOD learning loop"
+      ],
+      "next": [
+        "Manual/CSV import",
+        "He dashboard",
+        "API sync"
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI Roundtrip / Providers",
+      "status": "PLANNED",
+      "progress": 15,
+      "done": [
+        "External roundtrip defined",
+        "Structured result concept",
+        "Provider-independent architecture"
+      ],
+      "next": [
+        "Schemas",
+        "Parser/validator",
+        "Internal provider interface"
+      ]
+    }
+  ],
+  "roadmap": [
+    [
+      "F0",
+      "Baseline / Safety",
+      "GREEN"
+    ],
+    [
+      "F1",
+      "Forensic Content Intelligence",
+      "NEXT"
+    ],
+    [
+      "F2",
+      "Contracts First",
+      "NEXT"
+    ],
+    [
+      "F3",
+      "YOD V1",
+      "PLANNED"
+    ],
+    [
+      "F4",
+      "He V1",
+      "PLANNED"
+    ],
+    [
+      "F5",
+      "Shim V1",
+      "PLANNED"
+    ],
+    [
+      "F6",
+      "VAV Integration",
+      "PLANNED"
+    ],
+    [
+      "F7",
+      "Visual Production",
+      "PLANNED"
+    ],
+    [
+      "F8",
+      "Arquitecto V1",
+      "PLANNED"
+    ],
+    [
+      "F9",
+      "Publishing",
+      "PLANNED"
+    ],
+    [
+      "F10",
+      "Metrics",
+      "PLANNED"
+    ],
+    [
+      "F11",
+      "Platform APIs",
+      "PLANNED"
+    ],
+    [
+      "F12",
+      "Internal AI Providers",
+      "PLANNED"
+    ]
+  ]
+}

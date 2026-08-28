@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ABRAXAS OS — System Status</title>
+<style>
+:root{--bg:#0b0d10;--card:#13171c;--line:#262d35;--text:#eef2f7;--muted:#9aa6b2;--ok:#56d364;--warn:#d29922;--plan:#58a6ff;--danger:#f85149;--accent:#c084fc}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#090b0e,#11151a 45%,#0b0d10);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{padding:40px 24px 22px;max-width:1200px;margin:auto}.kicker{color:var(--accent);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(34px,6vw,68px);line-height:.95;margin:10px 0 18px;letter-spacing:-.05em}.lead{max-width:850px;color:var(--muted);font-size:17px;line-height:1.65}
+main{max-width:1200px;margin:auto;padding:0 24px 80px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.panel{background:rgba(19,23,28,.92);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.18)}
+.span12{grid-column:span 12}.span8{grid-column:span 8}.span6{grid-column:span 6}.span4{grid-column:span 4}
+@media(max-width:900px){.span8,.span6,.span4{grid-column:span 12}}
+h2{margin:0 0 14px;font-size:22px} h3{margin:0 0 8px;font-size:17px}.muted{color:var(--muted)} .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+.badge{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.05em;border:1px solid var(--line)}
+.GREEN{color:var(--ok);background:rgba(86,211,100,.08)} .ACTIVE,.DESIGN_READY,.MIGRATION_DESIGN,.DESIGN_ACTIVE,.CURRENT_BASELINE_GREEN{color:var(--warn);background:rgba(210,153,34,.08)} .PLANNED{color:var(--plan);background:rgba(88,166,255,.08)}
+.module{display:flex;flex-direction:column;gap:12px}.bar{height:8px;background:#20262d;border-radius:999px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--plan));border-radius:inherit}
+.row{display:flex;justify-content:space-between;gap:12px;align-items:center}.small{font-size:12px}.tasks{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tasks ul{margin:8px 0 0;padding-left:18px;color:var(--muted);line-height:1.55}.tasks b{font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.arch{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:center}.box{padding:16px 10px;text-align:center;border:1px solid var(--line);border-radius:14px;background:#0f1318}.box strong{display:block;font-size:15px}.box span{display:block;color:var(--muted);font-size:11px;margin-top:4px}.center{grid-column:2/5;background:linear-gradient(135deg,rgba(192,132,252,.11),rgba(88,166,255,.09))}
+.arrow{text-align:center;color:#66717e;font-size:20px}.road{display:grid;gap:8px}.phase{display:grid;grid-template-columns:55px 1fr auto;gap:12px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#0f1318}.phase .state{font-size:11px;font-weight:800;color:var(--muted)}
+code{background:#090c10;padding:2px 6px;border-radius:6px;border:1px solid #20262d}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tab{background:#0f1318;color:var(--muted);border:1px solid var(--line);padding:8px 11px;border-radius:10px;cursor:pointer}.tab.active{color:var(--text);border-color:#6e40c9;background:rgba(110,64,201,.18)}.tabpane{display:none}.tabpane.active{display:block}
+footer{max-width:1200px;margin:auto;padding:0 24px 50px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">ABRAXAS OS · System Creation Dashboard</div>
+  <h1>Estado, lógica y roadmap.</h1>
+  <p class="lead">Panel versionable para GitHub. Muestra qué existe, qué está diseñado, qué falta y cómo se conectan YOD, Lienzo, He, Shim, VAV, Arquitecto, Publishing y Metrics. Los porcentajes son avance de roadmap por tareas, no cobertura automática de código.</p>
+</header>
+<main>
+<div class="grid">
+  <section class="panel span12">
+    <div class="row"><div><h2>Arquitectura</h2><div class="muted">YOD piensa · Lienzo conecta · He opera · Shim resuelve · VAV produce · Arquitecto acompaña.</div></div><span class="badge GREEN">FOUNDATION V2</span></div>
+    <div class="arch" style="margin-top:18px">
+      <div class="box"><strong>YOD</strong><span>Intelligence / memory</span></div>
+      <div class="arrow">→</div>
+      <div class="box center"><strong>LIENZO</strong><span>Living versioned content object</span></div>
+      <div class="arrow">←</div>
+      <div class="box"><strong>He</strong><span>Operational window</span></div>
+      <div class="box"><strong>Shim</strong><span>Source evidence / resolve</span></div>
+      <div class="arrow">↘</div>
+      <div class="box center"><strong>VAV</strong><span>Production / artifacts / state</span></div>
+      <div class="arrow">↙</div>
+      <div class="box"><strong>Arquitecto</strong><span>Total production coach</span></div>
+    </div>
+  </section>
+
+  <section class="panel span12">
+    <div class="tabs">
+      <button class="tab active" data-tab="modules">Módulos</button>
+      <button class="tab" data-tab="flow">Flujo</button>
+      <button class="tab" data-tab="roadmap">Roadmap</button>
+      <button class="tab" data-tab="git">Git</button>
+    </div>
+    <div id="modules" class="tabpane active"><div id="moduleGrid" class="grid"></div></div>
+    <div id="flow" class="tabpane">
+      <h2>Flujo de un contenido</h2>
+      <div class="road">
+        <div class="phase"><b>01</b><span>YOD detecta oportunidad o recibe idea → crea Plan/Lienzo.</span><span class="state">CREATE</span></div>
+        <div class="phase"><b>02</b><span>He lo muestra y permite editar estrategia, copy, visuales y plan.</span><span class="state">OPERATE</span></div>
+        <div class="phase"><b>03</b><span>Arquitecto guía grabación, producción, navegación y decisiones.</span><span class="state">COACH</span></div>
+        <div class="phase"><b>04</b><span>Shim analiza source real → candidatos → gaps → RESOLVED.</span><span class="state">RESOLVE</span></div>
+        <div class="phase"><b>05</b><span>VAV produce edit/captions/motions/visuals y devuelve artefactos/estados.</span><span class="state">PRODUCE</span></div>
+        <div class="phase"><b>06</b><span>He refleja READY/REVIEW/OUT_OF_SYNC por componente.</span><span class="state">TRACK</span></div>
+        <div class="phase"><b>07</b><span>Publishing crea targets independientes por red y snapshot.</span><span class="state">PUBLISH</span></div>
+        <div class="phase"><b>08</b><span>Metrics sincroniza resultados → He visualiza → YOD aprende.</span><span class="state">LEARN</span></div>
+      </div>
+    </div>
+    <div id="roadmap" class="tabpane"><div id="roadmapList" class="road"></div></div>
+    <div id="git" class="tabpane">
+      <h2>Git / GitHub</h2>
+      <p>Repo canónico: <code>~/Desktop/abraxasos</code></p>
+      <p>Baseline reportado: <code id="sha">—</code></p>
+      <p class="muted">Antes de publicar un checkpoint: revisar status, archivos grandes, secretos, staged paths, push y SHA local == remoto.</p>
+    </div>
+  </section>
+</div>
+</main>
+<footer>ABRAXAS OS · Status dashboard versionable. Actualizar <code>system-status.json</code> al cerrar cada fase.</footer>
+<script>
+const fallback = {"generated_at": "2026-08-28", "note": "Los porcentajes son avance de roadmap basado en tareas definidas, no cobertura de tests ni una medición automática del código.", "git": {"reported_baseline": "0c4fa1a60487097b0604818bc668bf4d8b9ea527", "state": "GREEN_REPORTED__VERIFY_LIVE_BEFORE_UPDATE"}, "modules": [{"id": "monorepo", "name": "ABRAXAS OS / Git", "status": "GREEN", "progress": 100, "done": ["Monorepo raíz definido", "GitHub privado sincronizado según último reporte", "Política Git establecida"], "next": ["Verificar SHA antes de cada nueva fase"]}, {"id": "foundation", "name": "Arquitectura / Canon V2", "status": "ACTIVE", "progress": 85, "done": ["Roles YOD/He/Shim/VAV/Arquitecto definidos", "Lienzo definido", "Publishing/Metrics definidos", "Roadmap definido"], "next": ["Reconciliar canon con código actual", "Cerrar schemas finales"]}, {"id": "yod", "name": "YOD", "status": "DESIGN_READY", "progress": 28, "done": ["Rol definido", "Client Core spec", "Opportunity Engine spec", "Prompt/Copy/Visual/Motion canon", "Structure seed"], "next": ["Forensic inventory real", "Schemas finales", "Implementación engine/store"]}, {"id": "he", "name": "He", "status": "MIGRATION_DESIGN", "progress": 35, "done": ["Rol actualizado", "Lienzo UI definido", "Workflow/Calendar/Backlog definidos", "Legacy/base previa existente"], "next": ["Reconciliar He actual", "Implementar vista unificada YOD/Lienzo", "Tasks/team", "Metrics/Publishing UI"]}, {"id": "shim", "name": "Shim", "status": "DESIGN_ACTIVE", "progress": 25, "done": ["Rol definido", "Structure matching concept", "Gap loop", "Copy sync"], "next": ["Auditar implementación actual", "Contratos", "Candidate/Resolve engine"]}, {"id": "vav", "name": "VAV", "status": "CURRENT_BASELINE_GREEN", "progress": 62, "done": ["Base funcional actual preservada", "Captions verify histórico", "Motions/Shared packages versionables"], "next": ["Lienzo bridge", "Artifact/Event updates", "He state sync", "Production component statuses"]}, {"id": "architect", "name": "Arquitecto", "status": "DESIGN_READY", "progress": 24, "done": ["Rol definido", "Context model", "Suggestion model", "Total Production Coach"], "next": ["System Knowledge registry", "UI presence", "Action contracts", "Runtime/AI integration"]}, {"id": "publishing", "name": "Publishing", "status": "PLANNED", "progress": 12, "done": ["Publication Target model", "Adapter contract", "Calendar behavior"], "next": ["Manual export flow", "Provider registry", "Meta/TikTok/YouTube/LinkedIn adapters"]}, {"id": "metrics", "name": "Metrics", "status": "PLANNED", "progress": 12, "done": ["Raw/normalized model", "Snapshots", "YOD learning loop"], "next": ["Manual/CSV import", "He dashboard", "API sync"]}, {"id": "ai", "name": "AI Roundtrip / Providers", "status": "PLANNED", "progress": 15, "done": ["External roundtrip defined", "Structured result concept", "Provider-independent architecture"], "next": ["Schemas", "Parser/validator", "Internal provider interface"]}], "roadmap": [["F0", "Baseline / Safety", "GREEN"], ["F1", "Forensic Content Intelligence", "NEXT"], ["F2", "Contracts First", "NEXT"], ["F3", "YOD V1", "PLANNED"], ["F4", "He V1", "PLANNED"], ["F5", "Shim V1", "PLANNED"], ["F6", "VAV Integration", "PLANNED"], ["F7", "Visual Production", "PLANNED"], ["F8", "Arquitecto V1", "PLANNED"], ["F9", "Publishing", "PLANNED"], ["F10", "Metrics", "PLANNED"], ["F11", "Platform APIs", "PLANNED"], ["F12", "Internal AI Providers", "PLANNED"]]};
+async function loadData(){
+  try{
+    const r=await fetch('./system-status.json',{cache:'no-store'});
+    if(r.ok) return await r.json();
+  }catch(e){}
+  return fallback;
+}
+function badgeClass(s){return ['GREEN','PLANNED'].includes(s)?s:'ACTIVE'}
+function render(d){
+  document.getElementById('sha').textContent=d.git?.reported_baseline||'—';
+  const grid=document.getElementById('moduleGrid');
+  grid.innerHTML=(d.modules||[]).map(m=>`
+    <article class="panel span4 module">
+      <div class="row"><h3>${m.name}</h3><span class="badge ${badgeClass(m.status)}">${m.status}</span></div>
+      <div class="row small"><span class="muted">Roadmap progress</span><b>${m.progress}%</b></div>
+      <div class="bar"><div class="fill" style="width:${m.progress}%"></div></div>
+      <div class="tasks">
+        <div><b>Hecho</b><ul>${(m.done||[]).map(x=>`<li>${x}</li>`).join('')}</ul></div>
+        <div><b>Siguiente</b><ul>${(m.next||[]).map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      </div>
+    </article>`).join('');
+  document.getElementById('roadmapList').innerHTML=(d.roadmap||[]).map(x=>`
+    <div class="phase"><b>${x[0]}</b><span>${x[1]}</span><span class="state">${x[2]}</span></div>`).join('');
+}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tabpane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); document.getElementById(b.dataset.tab).classList.add('active');
+});
+loadData().then(render);
+</script>
+</body>
+</html>
