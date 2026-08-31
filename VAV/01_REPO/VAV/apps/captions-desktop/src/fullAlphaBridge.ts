@@ -85,3 +85,25 @@ export const renderProgress = (jobId: string) =>
 
 export const cancelQualityRender = (jobId: string) =>
   run<{jobId: string; requested: boolean}>("cancel-render", {jobId});
+
+// ABRAXAS OS V11 Real Backend Commands
+export const createAbraxasProject = (payload: { mode?: string; idea?: string; product?: string; targetAudience?: string; objective?: string; option?: string; scriptText?: string; title?: string }) =>
+  run<any>("create_project", payload);
+
+export const loadAbraxasProject = (projectId: string) =>
+  run<any>("load_project", { projectId });
+
+export const analyzeAbraxasMedia = (fileName: string, scriptText?: string) =>
+  run<any>("analyze_media", { fileName, scriptText });
+
+export const generateAbraxasCaptions = (analysis: any) =>
+  run<any>("generate_captions", { analysis });
+
+export const generateAbraxasMotion = (fps = 60, durationSec = 15.0) =>
+  run<any>("generate_motion", { fps, durationSec });
+
+export const exportAbraxasProjectPackage = (projectDir: string, projectId: string, title?: string) =>
+  run<any>("export_project", { projectDir, projectId, title });
+
+export const getAbraxasSystemStatus = () =>
+  run<any>("get_system_status", {});

@@ -99,6 +99,56 @@ try {
       Number(p.width ?? 1080),
       Number(p.height ?? 1920)
     );
+    } else if (command === "create_project") {
+    const p = payload();
+    const { CreativeStudioEngine } = await import("../../../../ABRAXAS_CORE/studio/src/creative-studio-engine.js");
+    const studio = new CreativeStudioEngine();
+    if (p.mode === "FROM_ZERO" || !p.mode) {
+      result = await studio.createFromZero({
+        idea: String(p.idea || "Default Creative Project"),
+        product: p.product ? String(p.product) : "Core Product",
+        targetAudience: String(p.targetAudience || "General Audience"),
+        objective: String(p.objective || "High Retention Video")
+      });
+    } else {
+      result = await studio.transformExisting({
+        option: p.option || "FULL_OPTIMIZATION",
+        scriptText: p.scriptText ? String(p.scriptText) : undefined
+      }, String(p.title || "Transformed Project"));
+    }
+  } else if (command === "load_project") {
+    const p = payload();
+    const { ProjectManagementSystem } = await import("../../../../ABRAXAS_CORE/projects/src/project-management-system.js");
+    const sys = new ProjectManagementSystem();
+    result = sys.loadProject(String(p.projectId));
+  } else if (command === "analyze_media") {
+    const p = payload();
+    const { MediaIngestionEngine } = await import("../../../../ABRAXAS_CORE/media-engine/src/media-ingestion-engine.js");
+    const { MediaUnderstandingEngine } = await import("../../../../ABRAXAS_CORE/media-engine/src/media-understanding-engine.js");
+    const ingestion = new MediaIngestionEngine();
+    const understanding = new MediaUnderstandingEngine();
+    const manifest = ingestion.ingestMedia(String(p.fileName || "sample.mp4"), Buffer.from("VIDEO_STREAM"));
+    result = understanding.analyzeMedia(manifest, p.scriptText ? String(p.scriptText) : undefined);
+  } else if (command === "generate_captions") {
+    const p = payload();
+    const { CaptionForge } = await import("../../../../ABRAXAS_CORE/media-engine/src/caption-forge.js");
+    const forge = new CaptionForge();
+    result = forge.generateCaptions(p.analysis);
+  } else if (command === "generate_motion") {
+    const p = payload();
+    const { MotionForge } = await import("../../../../ABRAXAS_CORE/media-engine/src/motion-forge.js");
+    const forge = new MotionForge();
+    result = forge.generateMotionManifest(Number(p.fps || 60), Number(p.durationSec || 15.0));
+  } else if (command === "export_project") {
+    const p = payload();
+    const { ExportPackageSystem } = await import("../../../../ABRAXAS_CORE/media-engine/src/export-package-system.js");
+    const pkgSys = new ExportPackageSystem();
+    result = pkgSys.compileProjectPackage(String(p.projectDir || "/tmp/abraxas_export"), String(p.projectId || "proj_1"), String(p.title || "Master Export"));
+  } else if (command === "get_system_status") {
+    const { BootManager } = await import("../../../../ABRAXAS_CORE/kernel/boot-manager.js");
+    const bootMgr = new BootManager();
+    const { report } = await bootMgr.launch(":memory:");
+    result = report;
   } else {
     throw new Error(`Comando desconocido: ${command}`);
   }
