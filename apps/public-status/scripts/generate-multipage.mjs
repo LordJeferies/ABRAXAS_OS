@@ -278,35 +278,48 @@ function generateRootRedirector() {
   console.log('[Bilingual Generator] Generated /index.html (Root Locale Redirector)');
 }
 
+
 function generateLandingPage(locale) {
   const dir = path.join(docsDir, locale);
   fs.mkdirSync(dir, { recursive: true });
   const { localeRoot, assetsRoot, enRoot, esRoot } = getPrefixes(0);
 
+  const manifest = bilingualData.approvedAssetManifest?.plates || [];
+
   const acts = {
     en: [
-      { tag: '0. PREMISE // GENESIS', title: 'Criterion becomes infrastructure.', lead: 'ABRAXAS is an operating architecture for transforming intent into structured, observable, producible and measurable reality.', layout: 'layout-cover-left' },
-      { tag: '1. ARCHITECTURE // FOUR WORLDS', title: 'One system. Many degrees of manifestation.', lead: 'The Giza monument structures reality across Atziluth, Beri\'ah, Yetzirah, and Assiah, anchoring intent to empirical manifestation.', layout: 'layout-bottom-left' },
-      { tag: '2. INTELLIGENCE // SUPERNAL TRIAD', title: 'Before something exists, it must become possible.', lead: 'In the Golden Emanation Chamber, YOD evaluates brand voice criteria, hook taxonomies, and opportunity gaps without blank-slate guesswork.', layout: 'layout-right-anchored' },
-      { tag: '3. IDENTITY // CONTINUITY AXIS', title: 'The form changes. The identity survives.', lead: 'Contenido preserves single-piece identity across all revisions through a content-addressed DAG and the vertical sapphire Continuity Axis.', layout: 'layout-bottom-left' },
-      { tag: '4. REALITY // DA\'AT METROLOGY', title: 'Planned is not observed. Observed is not resolved.', lead: 'SHIM scans the discrepancy between scripted intent and recorded media, preventing silent drift before downstream production begins.', layout: 'layout-cover-left' },
-      { tag: '5. FORMATION // YETZIRAH CATHEDRAL', title: 'Information becomes media.', lead: 'Deep in the bedrock forge, VAV operates three industrial tracks: non-destructive cuts, kinetic typography hierarchies, and spring-physics motions.', layout: 'layout-right-anchored' },
-      { tag: '6. OPERATION // ASSIAH VISIBILITY', title: 'Complexity becomes operable.', lead: 'HE governs tasks, deadlines, recording sessions, and reviews through human-accessible operational portals.', layout: 'layout-bottom-left' },
-      { tag: '7. EXTERNAL LOOP // THE CELESTIAL MOON', title: 'Manifestation leaves the Pyramid. Evidence returns.', lead: 'Publisher dispatches frozen versions to external channels, while telemetry feedback loops return audience signals into YOD.', layout: 'layout-right-anchored' },
-      { tag: '8. ADAPTATION // DIMENSION A', title: 'The system returns, but never to the same state.', lead: 'Adaptive dimension A preserves cognitive stratigraphy—memory, learning, and criteria refinement—closing the perpetual intelligence loop.', layout: 'layout-cover-left' }
+      { tag: '0. PREMISE // GENESIS', title: 'Criterion becomes infrastructure.', lead: 'ABRAXAS is an operating architecture for transforming intent into structured, observable, producible and measurable reality.', layout: 'layout-cover-left', plateIdx: 0 },
+      { tag: '1. ARCHITECTURE // FOUR WORLDS', title: 'One system. Many degrees of manifestation.', lead: 'The Giza monument structures reality across Atziluth, Beri\'ah, Yetzirah, and Assiah, anchoring intent to empirical manifestation.', layout: 'layout-bottom-left', plateIdx: 9 },
+      { tag: '2. INTELLIGENCE // SUPERNAL TRIAD', title: 'Before something exists, it must become possible.', lead: 'In the Golden Emanation Chamber, YOD evaluates brand voice criteria, hook taxonomies, and opportunity gaps without blank-slate guesswork.', layout: 'layout-right-anchored', plateIdx: 5 },
+      { tag: '3. IDENTITY // CONTINUITY AXIS', title: 'The form changes. The identity survives.', lead: 'Contenido preserves single-piece identity across all revisions through a content-addressed DAG and the vertical sapphire Continuity Axis.', layout: 'layout-bottom-left', plateIdx: 2 },
+      { tag: '4. REALITY // DA\'AT METROLOGY', title: 'Planned is not observed. Observed is not resolved.', lead: 'SHIM scans the discrepancy between scripted intent and recorded media, preventing silent drift before downstream production begins.', layout: 'layout-cover-left', plateIdx: 3 },
+      { tag: '5. FORMATION // YETZIRAH CATHEDRAL', title: 'Information becomes media.', lead: 'Deep in the bedrock forge, VAV operates three industrial tracks: non-destructive cuts, kinetic typography hierarchies, and spring-physics motions.', layout: 'layout-right-anchored', plateIdx: 4 },
+      { tag: '6. OPERATION // ASSIAH VISIBILITY', title: 'Complexity becomes operable.', lead: 'HE governs tasks, deadlines, recording sessions, and reviews through human-accessible operational portals.', layout: 'layout-bottom-left', plateIdx: 1 },
+      { tag: '7. EXTERNAL LOOP // THE CELESTIAL MOON', title: 'Manifestation leaves the Pyramid. Evidence returns.', lead: 'Publisher dispatches frozen versions to external channels, while telemetry feedback loops return audience signals into YOD.', layout: 'layout-right-anchored', plateIdx: 6 },
+      { tag: '8. ADAPTATION // DIMENSION A', title: 'The system returns, but never to the same state.', lead: 'Adaptive dimension A preserves cognitive stratigraphy—memory, learning, and criteria refinement—closing the perpetual intelligence loop.', layout: 'layout-cover-left', plateIdx: 7 }
     ],
     es: [
-      { tag: '0. PREMISA // GÉNESIS', title: 'El criterio se convierte en infraestructura.', lead: 'ABRAXAS es una arquitectura operativa para transformar la intención en realidad estructurada, observable, producible y medible.', layout: 'layout-cover-left' },
-      { tag: '1. ARQUITECTURA // CUATRO MUNDOS', title: 'Un solo sistema. Múltiples grados de manifestación.', lead: 'El monumento de Giza estructura la realidad a través de Atziluth, Beri\'ah, Yetzirah y Assiah, anclando la intención a la manifestación empírica.', layout: 'layout-bottom-left' },
-      { tag: '2. INTELIGENCIA // TRÍADA SUPERNAL', title: 'Antes de que algo exista, debe volverse posible.', lead: 'En la Cámara de Emanación Dorada, YOD evalúa criterios de voz de marca, taxonomías de hooks y brechas de oportunidad sin conjeturas.', layout: 'layout-right-anchored' },
-      { tag: '3. IDENTIDAD // EJE DE CONTINUIDAD', title: 'La forma cambia. La identidad sobrevive.', lead: 'Contenido preserva la identidad única a través de todas las revisiones mediante un DAG direccionado por contenido y el Eje de Continuidad vertical.', layout: 'layout-bottom-left' },
-      { tag: '4. REALIDAD // METROLOGÍA DE DA\'AT', title: 'Planificado no es observado. Observado no es resuelto.', lead: 'SHIM escanea la discrepancia entre la intención guionada y la media grabada, previniendo desviaciones silenciosas antes de la producción.', layout: 'layout-cover-left' },
-      { tag: '5. FORMACIÓN // CATEDRAL DE YETZIRAH', title: 'La información se convierte en media.', lead: 'En la fragua de roca madre, VAV opera tres pistas industriales: cortes no destructivos, jerarquías de tipografía cinética y físicas de movimiento.', layout: 'layout-right-anchored' },
-      { tag: '6. OPERACIÓN // VISIBILIDAD DE ASSIAH', title: 'La complejidad se vuelve operable.', lead: 'HE gobierna tareas, plazos, sesiones de grabación y revisiones a través de portales operativos accesibles para personas.', layout: 'layout-bottom-left' },
-      { tag: '7. CICLO EXTERNO // LA LUNA CELESTE', title: 'La manifestación sale de la Pirámide. La evidencia retorna.', lead: 'Publishing distribuye versiones congeladas al exterior, mientras los lazos de feedback de telemetría retornan señales de audiencia a YOD.', layout: 'layout-right-anchored' },
-      { tag: '8. ADAPTACIÓN // DIMENSIÓN A', title: 'El sistema retorna, pero nunca al mismo estado.', lead: 'La dimensión adaptativa A preserva la estratigrafía cognitiva (memoria, aprendizaje y refinamiento de criterios), cerrando el ciclo perpetuo.', layout: 'layout-cover-left' }
+      { tag: '0. PREMISA // GÉNESIS', title: 'El criterio se convierte en infraestructura.', lead: 'ABRAXAS es una arquitectura operativa para transformar la intención en realidad estructurada, observable, producible y medible.', layout: 'layout-cover-left', plateIdx: 0 },
+      { tag: '1. ARQUITECTURA // CUATRO MUNDOS', title: 'Un solo sistema. Múltiples grados de manifestación.', lead: 'El monumento de Giza estructura la realidad a través de Atziluth, Beri\'ah, Yetzirah y Assiah, anclando la intención a la manifestación empírica.', layout: 'layout-bottom-left', plateIdx: 9 },
+      { tag: '2. INTELIGENCIA // TRÍADA SUPERNAL', title: 'Antes de que algo exista, debe volverse posible.', lead: 'En la Cámara de Emanación Dorada, YOD evalúa criterios de voz de marca, taxonomías de hooks y brechas de oportunidad sin conjeturas.', layout: 'layout-right-anchored', plateIdx: 5 },
+      { tag: '3. IDENTIDAD // EJE DE CONTINUIDAD', title: 'La forma cambia. La identidad sobrevive.', lead: 'Contenido preserva la identidad única a través de todas las revisiones mediante un DAG direccionado por contenido y el Eje de Continuidad vertical.', layout: 'layout-bottom-left', plateIdx: 2 },
+      { tag: '4. REALIDAD // METROLOGÍA DE DA\'AT', title: 'Planificado no es observado. Observado no es resuelto.', lead: 'SHIM escanea la discrepancia entre la intención guionada y la media grabada, previniendo desviaciones silenciosas antes de la producción.', layout: 'layout-cover-left', plateIdx: 3 },
+      { tag: '5. FORMACIÓN // CATEDRAL DE YETZIRAH', title: 'La información se convierte en media.', lead: 'En la fragua de roca madre, VAV opera tres pistas industriales: cortes no destructivos, jerarquías de tipografía cinética y físicas de movimiento.', layout: 'layout-right-anchored', plateIdx: 4 },
+      { tag: '6. OPERACIÓN // VISIBILIDAD DE ASSIAH', title: 'La complejidad se vuelve operable.', lead: 'HE gobierna tareas, plazos, sesiones de grabación y revisiones a través de portales operativos accesibles para personas.', layout: 'layout-bottom-left', plateIdx: 1 },
+      { tag: '7. CICLO EXTERNO // LA LUNA CELESTE', title: 'La manifestación sale de la Pirámide. La evidencia retorna.', lead: 'Publishing distribuye versiones congeladas al exterior, mientras los lazos de feedback de telemetría retornan señales de audiencia a YOD.', layout: 'layout-right-anchored', plateIdx: 6 },
+      { tag: '8. ADAPTACIÓN // DIMENSIÓN A', title: 'El sistema retorna, pero nunca al mismo estado.', lead: 'La dimensión adaptativa A preserva la estratigrafía cognitiva (memoria, aprendizaje y refinamiento de criterios), cerrando el ciclo perpetuo.', layout: 'layout-cover-left', plateIdx: 7 }
     ]
   }[locale];
+
+  const storyContent = bilingualData.philosophicalCanon?.story[locale] || '';
+  const formattedStory = storyContent
+    .replace(/### (.*?)\n/g, '<h3>$1</h3>')
+    .split('\n\n')
+    .map(p => p.startsWith('<h3>') ? p : `<p>${p}</p>`)
+    .join('\n');
+
+  const xyza = bilingualData.philosophicalCanon?.xyzaExplanation;
+  const operatorLaw = bilingualData.philosophicalCanon?.moduleLaw;
 
   const html = `<!DOCTYPE html>
 <html lang="${locale}">
@@ -323,6 +336,19 @@ function generateLandingPage(locale) {
 <body class="landing-story-body">
   ${getHeader(locale, 'story', 'index.html', 0)}
 
+  <!-- Master Source Plate Backdrop (Layer 0) -->
+  <div id="plate-backdrop-container" class="plate-backdrop-container" aria-hidden="true">
+    ${manifest.map((p, idx) => `
+    <div class="plate-slide ${idx === 0 ? 'active' : ''}" data-plate="${idx}">
+      <picture>
+        <source srcset="${assetsRoot}${p.webpPath}" type="image/webp">
+        <img src="${assetsRoot}${p.pngPath}" alt="${locale === 'en' ? p.titleEn : p.titleEs}" loading="${idx === 0 ? 'eager' : 'lazy'}">
+      </picture>
+    </div>
+    `).join('\n')}
+    <div class="plate-vignette-overlay"></div>
+  </div>
+
   <div id="spatial-pyramid-container" class="spatial-canvas-fullscreen" aria-label="ABRAXAS 3D Spatial Canvas"></div>
 
   <main id="story-scroll-container" class="story-scroll-container">
@@ -335,12 +361,47 @@ function generateLandingPage(locale) {
         ${idx === 0 ? `
         <div class="hero-actions">
           <a href="./system/index.html" class="btn-primary">${locale === 'en' ? 'Explore System Dashboard →' : 'Explorar Dashboard del Sistema →'}</a>
-          <a href="./architecture/index.html" class="btn-secondary">${locale === 'en' ? 'Architecture Suite' : 'Suite de Arquitectura'}</a>
+          <a href="#creation-narrative" class="btn-secondary">${locale === 'en' ? 'Read Creation Story' : 'Leer la Historia de Creación'}</a>
         </div>
         ` : ''}
       </div>
     </section>
     `).join('\n')}
+
+    <!-- Grand Philosophical Narrative & Kabbalah Creation Story -->
+    <section id="creation-narrative" class="philosophical-story-wrap">
+      <header class="story-prose-header">
+        <div class="story-prose-tag">${locale === 'en' ? 'METAPHYSICAL GENESIS & OPERATIONAL LAW' : 'GÉNESIS METAFÍSICO Y LEY OPERACIONAL'}</div>
+        <h2 class="story-prose-title">${bilingualData.philosophicalCanon?.title[locale]}</h2>
+        <p class="story-prose-subtitle">${bilingualData.philosophicalCanon?.subtitle[locale]}</p>
+      </header>
+
+      <article class="story-prose-body">
+        ${formattedStory}
+      </article>
+
+      <!-- XYZA State Space Grid -->
+      <section class="xyza-section">
+        <h3 style="font-family: var(--font-headline); font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem;">${xyza?.title[locale]}</h3>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">${locale === 'en' ? 'Every Contenido exists as a dynamic trajectory across four orthogonal axes:' : 'Cada Contenido existe como una trayectoria dinámica a través de cuatro ejes ortogonales:'}</p>
+        
+        <div class="xyza-grid">
+          ${xyza ? xyza.dimensions.map(d => `
+          <div class="xyza-card">
+            <div class="xyza-dim-glyph">${d.dim}</div>
+            <div class="xyza-dim-name">${d.name[locale]}</div>
+            <div class="xyza-dim-desc">${d.description[locale]}</div>
+          </div>
+          `).join('\n') : ''}
+        </div>
+      </section>
+
+      <!-- Operator Law -->
+      <div class="operator-law-card">
+        <div class="operator-law-title">▲ ${operatorLaw?.title[locale]}</div>
+        <div class="operator-law-text">${operatorLaw?.law[locale]}</div>
+      </div>
+    </section>
 
     <!-- Grand Final CTA -->
     <section class="story-act-section grand-cta-section" data-act="${acts.length}">
@@ -365,8 +426,100 @@ function generateLandingPage(locale) {
 </body>
 </html>`;
   fs.writeFileSync(path.join(dir, 'index.html'), html);
-  console.log(`[Bilingual Generator] Generated /${locale}/index.html`);
+  console.log(`[Bilingual Generator] Generated /${locale}/index.html with full Layer 0 Source Plates & Philosophical Narrative`);
 }
+
+
+
+function generateCuentoPage(locale) {
+  const dir = path.join(docsDir, locale, 'cuento');
+  fs.mkdirSync(dir, { recursive: true });
+  const { localeRoot, assetsRoot, enRoot, esRoot } = getPrefixes(1);
+
+  const t = {
+    en: {
+      title: 'The Creation Narrative & Kabbalistic Canon — ABRAXAS OS',
+      tag: 'METAPHYSICAL ONTOLOGY',
+      back: '← Back to Manifesto'
+    },
+    es: {
+      title: 'La Historia de Creación y Canon Cabalístico — ABRAXAS OS',
+      tag: 'ONTOLOGÍA METAFÍSICA',
+      back: '← Volver al Manifiesto'
+    }
+  }[locale];
+
+  const storyContent = bilingualData.philosophicalCanon?.story[locale] || '';
+  const formattedStory = storyContent
+    .replace(/### (.*?)\n/g, '<h3>$1</h3>')
+    .split('\n\n')
+    .map(p => p.startsWith('<h3>') ? p : `<p>${p}</p>`)
+    .join('\n');
+
+  const xyza = bilingualData.philosophicalCanon?.xyzaExplanation;
+  const operatorLaw = bilingualData.philosophicalCanon?.moduleLaw;
+
+  const html = `<!DOCTYPE html>
+<html lang="${locale}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${t.title}</title>
+  <meta name="description" content="${bilingualData.system.description[locale]}">
+  <link rel="alternate" hreflang="en" href="${enRoot}cuento/index.html">
+  <link rel="alternate" hreflang="es" href="${esRoot}cuento/index.html">
+  <link rel="alternate" hreflang="x-default" href="${enRoot}cuento/index.html">
+  <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
+</head>
+<body class="cuento-reading-body" style="background-color: #070a0f; color: #f8fafc;">
+  ${getHeader(locale, 'story', 'cuento/index.html', 1)}
+
+  <main class="philosophical-story-wrap" style="margin-top: 7rem;">
+    <div style="margin-bottom: 2rem;">
+      <a href="${localeRoot}index.html" class="nav-back-link" style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.85rem;">${t.back}</a>
+    </div>
+
+    <header class="story-prose-header">
+      <div class="story-prose-tag">${t.tag}</div>
+      <h1 class="story-prose-title">${bilingualData.philosophicalCanon?.title[locale]}</h1>
+      <p class="story-prose-subtitle">${bilingualData.philosophicalCanon?.subtitle[locale]}</p>
+    </header>
+
+    <article class="story-prose-body">
+      ${formattedStory}
+    </article>
+
+    <section class="xyza-section">
+      <h3 style="font-family: var(--font-headline); font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem;">${xyza?.title[locale]}</h3>
+      <p style="color: var(--text-secondary); font-size: 0.95rem;">${locale === 'en' ? 'Every Contenido exists as a dynamic trajectory across four orthogonal axes:' : 'Cada Contenido existe como una trayectoria dinámica a través de cuatro ejes ortogonales:'}</p>
+      
+      <div class="xyza-grid">
+        ${xyza ? xyza.dimensions.map(d => `
+        <div class="xyza-card">
+          <div class="xyza-dim-glyph">${d.dim}</div>
+          <div class="xyza-dim-name">${d.name[locale]}</div>
+          <div class="xyza-dim-desc">${d.description[locale]}</div>
+        </div>
+        `).join('\n') : ''}
+      </div>
+    </section>
+
+    <div class="operator-law-card">
+      <div class="operator-law-title">▲ ${operatorLaw?.title[locale]}</div>
+      <div class="operator-law-text">${operatorLaw?.law[locale]}</div>
+    </div>
+  </main>
+
+  ${getArchitectDrawer(locale)}
+  ${getFooter(locale, 1)}
+
+  <script type="module" src="${assetsRoot}assets/status-v3.js"></script>
+</body>
+</html>`;
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  console.log(`[Bilingual Generator] Generated /${locale}/cuento/index.html`);
+}
+
 
 function generateSystemDashboardPage(locale) {
   const dir = path.join(docsDir, locale, 'system');
@@ -1410,6 +1563,7 @@ function executeBilingualGeneration() {
 
   ['en', 'es'].forEach(locale => {
     generateLandingPage(locale);
+    generateCuentoPage(locale);
     generateSystemDashboardPage(locale);
     generateArchitectureSuite(locale);
     generateToolsSuite(locale);

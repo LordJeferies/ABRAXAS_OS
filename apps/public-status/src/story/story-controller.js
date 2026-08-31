@@ -93,6 +93,11 @@ export class StoryController {
       s.setAttribute('aria-current', idx === safeIdx ? 'step' : 'false');
     });
 
+    // Crossfade Layer 0 active plate slide
+    document.querySelectorAll('.plate-slide').forEach((slide, idx) => {
+      slide.classList.toggle('active', idx === safeIdx);
+    });
+
     // Update Spatial Navigator
     if (this.navigator && this.pyramid?.cameraDirector) {
       const shot = this.pyramid.cameraDirector.shots[safeIdx];
@@ -109,12 +114,13 @@ export class StoryController {
     const rect = section.getBoundingClientRect();
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const targetY = scrollTop + rect.top - (window.innerHeight * 0.2);
-    window.scrollTo(0, Math.max(0, targetY));
+    window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
     window.dispatchEvent(new Event('scroll'));
     ScrollTrigger.update();
   }
 
   jumpToState(index) {
     this.scrollToAct(index);
+    this.applyState(index);
   }
 }
