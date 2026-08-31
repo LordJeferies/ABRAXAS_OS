@@ -149,6 +149,19 @@ try {
     const bootMgr = new BootManager();
     const { report } = await bootMgr.launch(":memory:");
     result = report;
+    } else if (command === "render_pipeline") {
+    const p = payload();
+    const { RealRenderPipeline } = await import("../../../../ABRAXAS_CORE/media-engine/src/real-render-pipeline.js");
+    const pipeline = new RealRenderPipeline();
+    result = await pipeline.executePipeline({
+      baseProjectsDir: p.baseProjectsDir,
+      projectId: p.projectId,
+      projectName: p.projectName,
+      inputFileName: p.inputFileName,
+      scriptText: p.scriptText,
+      fps: p.fps,
+      durationSec: p.durationSec
+    });
   } else {
     throw new Error(`Comando desconocido: ${command}`);
   }

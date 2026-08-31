@@ -107,3 +107,13 @@ export const exportAbraxasProjectPackage = (projectDir: string, projectId: strin
 
 export const getAbraxasSystemStatus = () =>
   run<any>("get_system_status", {});
+
+export const executeRealRenderPipeline = (options: {
+  baseProjectsDir?: string;
+  projectId?: string;
+  projectName?: string;
+  inputFileName?: string;
+  scriptText?: string;
+  fps?: number;
+  durationSec?: number;
+}) => run<any>("render_pipeline", options);

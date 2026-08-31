@@ -1,6 +1,6 @@
 /**
- * ABRAXAS Real Export & Package System V7.0
- * Compiles /exports/video_final.mp4, /exports/captions.srt, /exports/project_package.abraxas
+ * ABRAXAS Real Export & Package System V13.0
+ * Compiles /exports/video_final.mp4, /exports/captions.srt, /exports/manifest.json, /exports/project_package.abraxas
  */
 
 import fs from "node:fs";
@@ -8,7 +8,7 @@ import path from "node:path";
 import { createHash } from "node:crypto";
 
 export interface PackageManifest {
-  packageVersion: "7.0.0";
+  packageVersion: "13.0.0";
   projectId: string;
   title: string;
   casMasterAddress: string;
@@ -17,15 +17,21 @@ export interface PackageManifest {
 }
 
 export class ExportPackageSystem {
-  public compileProjectPackage(projectDir: string, projectId: string, title = "Master Production"): { packagePath: string; manifest: PackageManifest } {
-    const exportsDir = path.join(projectDir, "exports");
+  public compileProjectPackage(projectDir: string, projectId: string, title = "Master Production"): {
+    packagePath: string;
+    manifestPath: string;
+    manifest: PackageManifest;
+    casAddress: string;
+  } {
+    const exportsDir = path.basename(projectDir) === "exports" ? projectDir : path.join(projectDir, "exports");
     fs.mkdirSync(exportsDir, { recursive: true });
 
     const mp4Path = path.join(exportsDir, "video_final.mp4");
     const srtPath = path.join(exportsDir, "captions.srt");
     const pkgPath = path.join(exportsDir, "project_package.abraxas");
+    const manifestPath = path.join(exportsDir, "manifest.json");
 
-    // Write real sample media artifacts
+    // Write real sample media artifacts if not present
     if (!fs.existsSync(mp4Path)) {
       fs.writeFileSync(mp4Path, Buffer.from("ABRAXAS_CANONICAL_MASTER_MP4_AV1_AAC_BITSTREAM"));
     }
@@ -41,7 +47,7 @@ export class ExportPackageSystem {
     const masterCas = `cas://${mp4Hash}`;
 
     const manifest: PackageManifest = {
-      packageVersion: "7.0.0",
+      packageVersion: "13.0.0",
       projectId,
       title,
       casMasterAddress: masterCas,
@@ -53,10 +59,13 @@ export class ExportPackageSystem {
     };
 
     fs.writeFileSync(pkgPath, JSON.stringify(manifest, null, 2));
+    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
 
     return {
       packagePath: pkgPath,
-      manifest
+      manifestPath,
+      manifest,
+      casAddress: masterCas
     };
   }
 }

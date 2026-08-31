@@ -5,7 +5,8 @@ import {
   generateAbraxasCaptions,
   generateAbraxasMotion,
   exportAbraxasProjectPackage,
-  getAbraxasSystemStatus
+  getAbraxasSystemStatus,
+  executeRealRenderPipeline
 } from './fullAlphaBridge';
 
 export type MainNavSection = 'DASHBOARD' | 'STUDIO' | 'PROJECTS' | 'FOUR_WORLDS' | 'SETTINGS';
@@ -13,7 +14,7 @@ export type MainNavSection = 'DASHBOARD' | 'STUDIO' | 'PROJECTS' | 'FOUR_WORLDS'
 export interface SystemStatusData {
   system: string;
   version: string;
-  kernelStatus: string;
+  kernelStatus: 'ONLINE' | 'OFFLINE' | 'CONNECTING';
   memoryConnected: boolean;
   guardianStatus: string;
   currentWorld: string;
@@ -25,17 +26,17 @@ export interface SystemStatusData {
 export const AbraxasControlCenterApp: React.FC = () => {
   const [navSection, setNavSection] = useState<MainNavSection>('DASHBOARD');
   
-  // Real System Telemetry State
+  // Real System Telemetry State (Starts with CONNECTING, only shows ONLINE if verified)
   const [status, setStatus] = useState<SystemStatusData>({
     system: "ABRAXAS OS",
-    version: "12.0.0",
-    kernelStatus: "ONLINE",
-    memoryConnected: true,
-    guardianStatus: "OPTIMAL",
-    currentWorld: "YETZIRAH",
-    currentOperator: "VAV (ו)",
-    activeProcess: "Standby & Ready for Human Intention",
-    progressPercentage: 100
+    version: "13.0.0",
+    kernelStatus: "CONNECTING",
+    memoryConnected: false,
+    guardianStatus: "INITIALIZING",
+    currentWorld: "STANDBY",
+    currentOperator: "STANDBY",
+    activeProcess: "Connecting to Local Kernel...",
+    progressPercentage: 0
   });
 
   // Creative Studio State
@@ -44,79 +45,74 @@ export const AbraxasControlCenterApp: React.FC = () => {
   const [productInput, setProductInput] = useState('');
   const [audienceInput, setAudienceInput] = useState('');
   const [objectiveInput, setObjectiveInput] = useState('');
+  const [selectedFile, setSelectedFile] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [lastOutput, setLastOutput] = useState<any>(null);
 
-  // Projects State
-  const [projects, setProjects] = useState<any[]>([
-    {
-      id: "proj_oud_royal_01",
-      name: "Oud Royal Extrait TikTok Ad",
-      brand: "Oud Royal",
-      world: "MALKHUT",
-      state: "MANIFESTED",
-      casAddress: "cas://7197210...abraxas",
-      updatedAt: "2026-08-31 22:45"
-    },
-    {
-      id: "proj_crypto_matrix_02",
-      name: "Single-Piece Crystal Identity",
-      brand: "ABRAXAS",
-      world: "YETZIRAH",
-      state: "CERTIFIED",
-      casAddress: "cas://34b695a...master",
-      updatedAt: "2026-08-31 22:30"
-    }
-  ]);
+  // Projects State (Empty initially, loaded from backend)
+  const [projects, setProjects] = useState<any[]>([]);
 
   useEffect(() => {
     // Poll real backend telemetry
-    try {
-      getAbraxasSystemStatus().then((res) => {
-        if (res) {
+    getAbraxasSystemStatus()
+      .then((res) => {
+        if (res && res.kernelStatus === "ONLINE") {
           setStatus({
             system: "ABRAXAS OS",
-            version: "12.0.0",
-            kernelStatus: res.kernelStatus || "ONLINE",
+            version: "13.0.0",
+            kernelStatus: "ONLINE",
             memoryConnected: res.memoryConnected ?? true,
             guardianStatus: res.guardianStatus || "OPTIMAL",
             currentWorld: "YETZIRAH",
             currentOperator: "VAV (ו)",
-            activeProcess: "Active Organism Telemetry",
+            activeProcess: "Organism Ready for Creative Will",
             progressPercentage: 100
           });
+        } else {
+          setStatus((prev) => ({
+            ...prev,
+            kernelStatus: "OFFLINE",
+            activeProcess: "Backend Disconnected - SYSTEM OFFLINE"
+          }));
         }
-      }).catch(() => {});
-    } catch (e) {}
+      })
+      .catch(() => {
+        setStatus((prev) => ({
+          ...prev,
+          kernelStatus: "OFFLINE",
+          activeProcess: "Backend Connection Refused - SYSTEM OFFLINE"
+        }));
+      });
   }, []);
 
-  // Action 1: Create From Zero
+  // Action 1: Create From Zero (Executes physical render pipeline)
   const handleCreateFromZero = async () => {
     if (!ideaInput) return;
     setIsProcessing(true);
     try {
-      const result = await createAbraxasProject({
-        mode: "FROM_ZERO",
-        idea: ideaInput,
-        product: productInput || "Core Product",
-        targetAudience: audienceInput || "General Audience",
-        objective: objectiveInput || "High Retention Video"
+      const renderResult = await executeRealRenderPipeline({
+        projectName: ideaInput,
+        scriptText: `${ideaInput} - Featuring ${productInput || 'Oud Royal'}. Maximum viral retention.`,
+        fps: 60,
+        durationSec: 15.0
       });
-      setLastOutput(result);
-      setProjects([
+      setLastOutput(renderResult);
+      setProjects((prev) => [
         {
-          id: result.projectId,
+          id: renderResult.projectId,
           name: ideaInput,
-          brand: productInput || "Custom",
-          world: "MALKHUT",
+          brand: productInput || "Custom Brand",
+          world: "ASSIAH",
           state: "MANIFESTED",
-          casAddress: result.casArtifactUri,
+          casAddress: renderResult.casMasterAddress,
+          videoPath: renderResult.videoFinalFile,
+          packagePath: renderResult.packageFile,
           updatedAt: new Date().toLocaleTimeString()
         },
-        ...projects
+        ...prev
       ]);
     } catch (err) {
-      console.error(err);
+      console.error("Render pipeline error:", err);
     } finally {
       setIsProcessing(false);
     }
@@ -126,13 +122,27 @@ export const AbraxasControlCenterApp: React.FC = () => {
   const handleOptimizeExisting = async () => {
     setIsProcessing(true);
     try {
-      const analysis = await analyzeAbraxasMedia("source_video.mp4");
-      const result = await createAbraxasProject({
-        mode: "EXISTING_MATERIAL",
-        option: "FULL_OPTIMIZATION",
-        title: "Optimized Media Project"
+      const renderResult = await executeRealRenderPipeline({
+        projectName: selectedFile || "Optimized Media Project",
+        inputFileName: selectedFile || "source_video.mp4",
+        fps: 60,
+        durationSec: 15.0
       });
-      setLastOutput({ ...result, analysis });
+      setLastOutput(renderResult);
+      setProjects((prev) => [
+        {
+          id: renderResult.projectId,
+          name: selectedFile || "Optimized Media Project",
+          brand: "Media Ingest",
+          world: "ASSIAH",
+          state: "MANIFESTED",
+          casAddress: renderResult.casMasterAddress,
+          videoPath: renderResult.videoFinalFile,
+          packagePath: renderResult.packageFile,
+          updatedAt: new Date().toLocaleTimeString()
+        },
+        ...prev
+      ]);
     } catch (err) {
       console.error(err);
     } finally {
@@ -144,9 +154,9 @@ export const AbraxasControlCenterApp: React.FC = () => {
   const handleCaptionsOnly = async () => {
     setIsProcessing(true);
     try {
-      const analysis = await analyzeAbraxasMedia("speech_take.mp4");
+      const analysis = await analyzeAbraxasMedia(selectedFile || "speech_take.mp4");
       const captions = await generateAbraxasCaptions(analysis);
-      setLastOutput({ captions, mode: "ONLY_CAPTIONS" });
+      setLastOutput({ captions, mode: "ONLY_CAPTIONS", file: selectedFile });
     } catch (err) {
       console.error(err);
     } finally {
@@ -180,7 +190,7 @@ export const AbraxasControlCenterApp: React.FC = () => {
             </div>
             <div>
               <h1 style={{ margin: 0, fontSize: '16px', fontWeight: 700, letterSpacing: '-0.02em', color: '#fff' }}>ABRAXAS OS</h1>
-              <span style={{ fontSize: '11px', color: '#d4af37', fontWeight: 600 }}>V12.0 COMMERCIAL</span>
+              <span style={{ fontSize: '11px', color: '#d4af37', fontWeight: 600 }}>V13.0 PRODUCT</span>
             </div>
           </div>
 
@@ -227,7 +237,18 @@ export const AbraxasControlCenterApp: React.FC = () => {
         <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '8px', padding: '12px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
             <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>KERNEL STATUS</span>
-            <span style={{ fontSize: '10px', padding: '2px 6px', borderRadius: '4px', background: 'rgba(52,199,89,0.2)', color: '#34c759', fontWeight: 600 }}>ONLINE</span>
+            <span
+              style={{
+                fontSize: '10px',
+                padding: '2px 6px',
+                borderRadius: '4px',
+                background: status.kernelStatus === 'ONLINE' ? 'rgba(52,199,89,0.2)' : 'rgba(255,59,48,0.2)',
+                color: status.kernelStatus === 'ONLINE' ? '#34c759' : '#ff3b30',
+                fontWeight: 600
+              }}
+            >
+              {status.kernelStatus}
+            </span>
           </div>
           <span style={{ fontSize: '12px', color: '#d4af37', fontWeight: 600 }}>{status.currentWorld} &bull; {status.currentOperator}</span>
         </div>
@@ -266,32 +287,38 @@ export const AbraxasControlCenterApp: React.FC = () => {
 
               <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(52,199,89,0.3)', borderRadius: '12px', padding: '20px' }}>
                 <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>PERSISTENT MEMORY</span>
-                <div style={{ fontSize: '18px', fontWeight: 700, color: '#34c759', marginTop: '6px' }}>CONNECTED</div>
+                <div style={{ fontSize: '18px', fontWeight: 700, color: '#34c759', marginTop: '6px' }}>{status.memoryConnected ? 'CONNECTED' : 'DISCONNECTED'}</div>
                 <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)' }}>SQLite ACID Core</span>
               </div>
             </div>
 
-            {/* Quick Actions */}
+            {/* Recent Projects & Launchpad */}
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '24px' }}>
               <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '24px' }}>
-                <h3 style={{ fontSize: '16px', color: '#fff', marginBottom: '16px' }}>RECENT SOVEREIGN PROJECTS</h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  {projects.map((p) => (
-                    <div key={p.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', background: 'rgba(255,255,255,0.02)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.04)' }}>
-                      <div>
-                        <span style={{ fontWeight: 600, fontSize: '13px', color: '#fff', display: 'block' }}>{p.name}</span>
-                        <span style={{ fontSize: '11px', fontFamily: 'monospace', color: '#d4af37' }}>{p.casAddress}</span>
+                <h3 style={{ fontSize: '16px', color: '#fff', marginBottom: '16px' }}>RECENT REAL PROJECTS</h3>
+                {projects.length === 0 ? (
+                  <div style={{ padding: '20px', textAlign: 'center', color: 'rgba(255,255,255,0.4)', fontSize: '13px' }}>
+                    No projects created yet. Launch the Creative Studio to manifest your first project.
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    {projects.map((p) => (
+                      <div key={p.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', background: 'rgba(255,255,255,0.02)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.04)' }}>
+                        <div>
+                          <span style={{ fontWeight: 600, fontSize: '13px', color: '#fff', display: 'block' }}>{p.name}</span>
+                          <span style={{ fontSize: '11px', fontFamily: 'monospace', color: '#d4af37' }}>{p.casAddress}</span>
+                        </div>
+                        <span style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '4px', background: 'rgba(52,199,89,0.2)', color: '#34c759' }}>{p.state}</span>
                       </div>
-                      <span style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '4px', background: 'rgba(52,199,89,0.2)', color: '#34c759' }}>{p.state}</span>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(212,175,55,0.3)', borderRadius: '12px', padding: '24px' }}>
                 <h3 style={{ fontSize: '16px', color: '#d4af37', marginBottom: '16px' }}>CREATIVE LAUNCHPAD</h3>
                 <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.4 }}>
-                  Launch the four creative workflows or explore the live 4-Worlds descent ladder.
+                  Manifest physical video outputs, word-level kinetic captions, and cryptographic CAS delivery packages.
                 </p>
                 <button
                   onClick={() => setNavSection('STUDIO')}
@@ -308,7 +335,7 @@ export const AbraxasControlCenterApp: React.FC = () => {
         {navSection === 'STUDIO' && (
           <div>
             <header style={{ marginBottom: '24px' }}>
-              <span style={{ fontSize: '12px', color: '#d4af37', fontWeight: 700, letterSpacing: '0.05em' }}>CREATION PIPELINE</span>
+              <span style={{ fontSize: '12px', color: '#d4af37', fontWeight: 700, letterSpacing: '0.05em' }}>REAL EXECUTION PIPELINE</span>
               <h2 style={{ margin: '4px 0 0 0', fontSize: '24px', fontWeight: 700 }}>ABRAXAS CREATIVE STUDIO</h2>
             </header>
 
@@ -371,20 +398,9 @@ export const AbraxasControlCenterApp: React.FC = () => {
                     <label style={{ display: 'block', fontSize: '12px', color: 'rgba(255,255,255,0.6)', marginBottom: '4px' }}>AUDIENCIA OBJETIVO</label>
                     <input
                       type="text"
-                      placeholder="e.g. Compradores de lujo y coleccionistas de fragancias"
+                      placeholder="e.g. Compradores de fragancias de lujo"
                       value={audienceInput}
                       onChange={(e) => setAudienceInput(e.target.value)}
-                      style={{ width: '100%', padding: '10px 14px', borderRadius: '6px', background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '13px' }}
-                    />
-                  </div>
-
-                  <div>
-                    <label style={{ display: 'block', fontSize: '12px', color: 'rgba(255,255,255,0.6)', marginBottom: '4px' }}>OBJETIVO COMERCIAL</label>
-                    <input
-                      type="text"
-                      placeholder="e.g. Maximizar retención en los primeros 3 segundos y conversiones"
-                      value={objectiveInput}
-                      onChange={(e) => setObjectiveInput(e.target.value)}
                       style={{ width: '100%', padding: '10px 14px', borderRadius: '6px', background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '13px' }}
                     />
                   </div>
@@ -394,7 +410,7 @@ export const AbraxasControlCenterApp: React.FC = () => {
                     disabled={isProcessing || !ideaInput}
                     style={{ marginTop: '12px', padding: '12px', borderRadius: '8px', background: isProcessing ? 'rgba(255,255,255,0.2)' : 'linear-gradient(135deg, #d4af37 0%, #f3e5ab 100%)', color: '#000', fontWeight: 700, border: 'none', cursor: isProcessing ? 'not-allowed' : 'pointer' }}
                   >
-                    {isProcessing ? 'MANIFESTANDO EN LOS 4 MUNDOS...' : 'CREAR PROYECTO (8-STEP DAG)'}
+                    {isProcessing ? 'EJECUTANDO RENDER PIPELINE...' : 'CREAR & RENDERIZAR VIDEO MP4'}
                   </button>
                 </div>
               </div>
@@ -404,13 +420,21 @@ export const AbraxasControlCenterApp: React.FC = () => {
             {studioMode === 'OPTIMIZE' && (
               <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '24px', maxWidth: '640px' }}>
                 <h3 style={{ fontSize: '16px', color: '#38bdf8', marginBottom: '16px' }}>OPTIMIZACIÓN DE VIDEO EXISTENTE</h3>
-                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>Sube un video para analizar el gancho de los primeros 3 segundos y aplicar optimización completa.</p>
+                <div style={{ border: '2px dashed rgba(56,189,248,0.4)', borderRadius: '8px', padding: '24px', textAlign: 'center', marginBottom: '16px' }}>
+                  <span style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', display: 'block' }}>Arrastra tu archivo MP4 / MOV / WEBM aquí</span>
+                  <input
+                    type="file"
+                    accept="video/*,audio/*"
+                    onChange={(e) => setSelectedFile(e.target.files?.[0]?.name || null)}
+                    style={{ marginTop: '10px', color: '#fff', fontSize: '12px' }}
+                  />
+                </div>
                 <button
                   onClick={handleOptimizeExisting}
                   disabled={isProcessing}
-                  style={{ marginTop: '12px', padding: '12px 20px', borderRadius: '8px', background: '#38bdf8', color: '#000', fontWeight: 700, border: 'none', cursor: 'pointer' }}
+                  style={{ width: '100%', padding: '12px 20px', borderRadius: '8px', background: '#38bdf8', color: '#000', fontWeight: 700, border: 'none', cursor: 'pointer' }}
                 >
-                  {isProcessing ? 'ANALIZANDO RETENCIÓN...' : 'EJECUTAR OPTIMIZACIÓN COMPLETA'}
+                  {isProcessing ? 'ANALIZANDO & RENDERIZANDO...' : 'EJECUTAR OPTIMIZACIÓN REAL'}
                 </button>
               </div>
             )}
@@ -419,13 +443,18 @@ export const AbraxasControlCenterApp: React.FC = () => {
             {studioMode === 'CAPTIONS_ONLY' && (
               <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '24px', maxWidth: '640px' }}>
                 <h3 style={{ fontSize: '16px', color: '#ec4899', marginBottom: '16px' }}>FORJA DE SUBTÍTULOS CINÉTICOS (HOD)</h3>
-                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>Genera subtítulos palabra por palabra en SRT, ASS y VTT sincronizados con precisión de microsegundos.</p>
+                <input
+                  type="file"
+                  accept="video/*,audio/*"
+                  onChange={(e) => setSelectedFile(e.target.files?.[0]?.name || null)}
+                  style={{ marginBottom: '14px', color: '#fff', fontSize: '12px' }}
+                />
                 <button
                   onClick={handleCaptionsOnly}
                   disabled={isProcessing}
-                  style={{ marginTop: '12px', padding: '12px 20px', borderRadius: '8px', background: '#ec4899', color: '#fff', fontWeight: 700, border: 'none', cursor: 'pointer' }}
+                  style={{ width: '100%', padding: '12px 20px', borderRadius: '8px', background: '#ec4899', color: '#fff', fontWeight: 700, border: 'none', cursor: 'pointer' }}
                 >
-                  {isProcessing ? 'COMPILANDO SUBTÍTULOS...' : 'GENERAR SUBTÍTULOS CINÉTICOS'}
+                  {isProcessing ? 'COMPILANDO SUBTÍTULOS...' : 'GENERAR SUBTÍTULOS (SRT / ASS / VTT)'}
                 </button>
               </div>
             )}
@@ -434,24 +463,27 @@ export const AbraxasControlCenterApp: React.FC = () => {
             {studioMode === 'MOTION_ONLY' && (
               <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '24px', maxWidth: '640px' }}>
                 <h3 style={{ fontSize: '16px', color: '#f59e0b', marginBottom: '16px' }}>FORJA DE MOVIMIENTO (TIFERET)</h3>
-                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>Aplica curvas elásticas de aceleración física, zooms dinámicos y transiciones Remotion.</p>
+                <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>Genera curvas físicas de aceleración elástica y paneos de cámara Remotion.</p>
                 <button
                   onClick={handleMotionOnly}
                   disabled={isProcessing}
-                  style={{ marginTop: '12px', padding: '12px 20px', borderRadius: '8px', background: '#f59e0b', color: '#000', fontWeight: 700, border: 'none', cursor: 'pointer' }}
+                  style={{ width: '100%', padding: '12px 20px', borderRadius: '8px', background: '#f59e0b', color: '#000', fontWeight: 700, border: 'none', cursor: 'pointer' }}
                 >
-                  {isProcessing ? 'SINTETIZANDO MOTION...' : 'GENERAR CAPAS DE MOVIMIENTO'}
+                  {isProcessing ? 'SINTETIZANDO MOTION...' : 'GENERAR MANIFIESTO DE MOVIMIENTO'}
                 </button>
               </div>
             )}
 
-            {/* Output Display */}
+            {/* Physical Output Details */}
             {lastOutput && (
-              <div style={{ marginTop: '24px', background: 'rgba(52,199,89,0.08)', border: '1px solid #34c759', borderRadius: '10px', padding: '16px', maxWidth: '640px' }}>
-                <span style={{ fontSize: '12px', color: '#34c759', fontWeight: 700 }}>RESULTADO GENERADO CON ÉXITO</span>
-                <pre style={{ fontSize: '11px', fontFamily: 'monospace', color: '#fff', margin: '8px 0 0 0', overflowX: 'auto' }}>
-                  {JSON.stringify(lastOutput, null, 2)}
-                </pre>
+              <div style={{ marginTop: '24px', background: 'rgba(52,199,89,0.08)', border: '1px solid #34c759', borderRadius: '10px', padding: '20px', maxWidth: '640px' }}>
+                <span style={{ fontSize: '13px', color: '#34c759', fontWeight: 700, display: 'block' }}>ARCHIVOS FÍSICOS GENERADOS EXITOSAMENTE</span>
+                <div style={{ fontSize: '12px', color: '#fff', marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  {lastOutput.videoFinalFile && <div>&bull; <strong>Video Final:</strong> <code>{lastOutput.videoFinalFile}</code></div>}
+                  {lastOutput.captionsSrtFile && <div>&bull; <strong>Subtítulos SRT:</strong> <code>{lastOutput.captionsSrtFile}</code></div>}
+                  {lastOutput.packageFile && <div>&bull; <strong>Paquete CAS:</strong> <code>{lastOutput.packageFile}</code></div>}
+                  {lastOutput.casMasterAddress && <div>&bull; <strong>Dirección CAS:</strong> <code>{lastOutput.casMasterAddress}</code></div>}
+                </div>
               </div>
             )}
           </div>
@@ -492,20 +524,23 @@ export const AbraxasControlCenterApp: React.FC = () => {
               <h2 style={{ margin: '4px 0 0 0', fontSize: '24px', fontWeight: 700 }}>EXPLORADOR DE PROYECTOS</h2>
             </header>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              {projects.map((p) => (
-                <div key={p.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 20px', background: 'rgba(255,255,255,0.02)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.06)' }}>
-                  <div>
-                    <span style={{ fontWeight: 600, fontSize: '14px', color: '#fff' }}>{p.name}</span>
-                    <span style={{ fontSize: '12px', color: '#d4af37', display: 'block', marginTop: '2px', fontFamily: 'monospace' }}>{p.casAddress}</span>
+            {projects.length === 0 ? (
+              <div style={{ padding: '40px', textAlign: 'center', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.4)', fontSize: '13px' }}>
+                No hay proyectos en el almacenamiento local. Crea uno en el Creative Studio.
+              </div>
+            ) : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {projects.map((p) => (
+                  <div key={p.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 20px', background: 'rgba(255,255,255,0.02)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.06)' }}>
+                    <div>
+                      <span style={{ fontWeight: 600, fontSize: '14px', color: '#fff' }}>{p.name}</span>
+                      <span style={{ fontSize: '12px', color: '#d4af37', display: 'block', marginTop: '2px', fontFamily: 'monospace' }}>{p.casAddress}</span>
+                    </div>
+                    <span style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '4px', background: 'rgba(52,199,89,0.2)', color: '#34c759' }}>{p.state}</span>
                   </div>
-                  <div style={{ display: 'flex', gap: '8px' }}>
-                    <button style={{ padding: '6px 12px', borderRadius: '4px', background: 'rgba(255,255,255,0.1)', color: '#fff', border: 'none', cursor: 'pointer', fontSize: '12px' }}>Abrir</button>
-                    <button style={{ padding: '6px 12px', borderRadius: '4px', background: 'rgba(255,255,255,0.1)', color: '#fff', border: 'none', cursor: 'pointer', fontSize: '12px' }}>Duplicar</button>
-                  </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
