@@ -1,6 +1,6 @@
 [package]
 name = "abraxas-os"
-version = "6.1.0"
+version = "10.0.0"
 description = "ABRAXAS OS — Autonomous Creative Operating System"
 authors = ["ABRAXAS"]
 edition = "2021"
