@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABRAXAS OS — Content Intelligence, Governance &amp; Audiovisual Synthesis</title>
+  <title>ABRAXAS OS — Public Status & Architecture</title>
   <link rel="stylesheet" href="./assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="landing-story-body">
   
@@ -18,17 +21,17 @@
         <span class="brand-tag">v1.0.0-rc1</span>
       </div>
       <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
-        <a href="./index.html" class="nav-link active">Story</a>
+        <a href="./index.html" class="nav-link active">Manifesto</a>
         <a href="./system/index.html" class="nav-link ">System</a>
-        <a href="./tools/index.html" class="nav-link ">Tools</a>
+        <a href="./tools/index.html" class="nav-link ">Modules</a>
         <a href="./flow/index.html" class="nav-link ">Flow</a>
+        <a href="./taste/index.html" class="nav-link ">Taste</a>
         <a href="./proof/index.html" class="nav-link ">Proof</a>
         <a href="./roadmap/index.html" class="nav-link ">Roadmap</a>
-        <a href="./taste/index.html" class="nav-link ">Taste</a>
         <a href="./principles/index.html" class="nav-link ">Principles</a>
       </nav>
       <div class="header-right">
-        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Query Assistant">
+        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Assistant">
           <span class="architect-spark">✦</span> Ask Architect
         </button>
       </div>
@@ -36,143 +39,187 @@
   </header>
   
 
-  <!-- 3D Spatial Canvas Mount -->
-  <div id="spatial-canvas-container" class="spatial-canvas-fullscreen" aria-hidden="true"></div>
-  <div id="spatial-labels-overlay" class="spatial-labels-container" aria-hidden="true"></div>
+  <!-- Fullscreen Spatial 3D Canvas -->
+  <div id="spatial-pyramid-container" class="spatial-canvas-fullscreen" aria-label="ABRAXAS 3D Spatial Architecture Canvas"></div>
 
-  <!-- Fallback 2D Vector Schematic -->
-  <div id="fallback-schematic-container" class="fallback-schematic" style="display: none;">
-    <div class="fallback-banner">
-      <span class="fallback-pill">2D SCHEMATIC FALLBACK ACTIVE</span>
-      <p>WebGL hardware acceleration is unavailable. Displaying full operational vector architecture.</p>
-    </div>
-  </div>
-
-  <div id="navigator-mount" class="spatial-navigator-wrapper"></div>
-
-  <main id="main-content" class="story-scroll-container">
-    <!-- ACT 01: PREMISE -->
-    <section class="story-act-section" data-act="0" data-shot="S0">
+  <!-- Narrative Manifesto Scroll Track -->
+  <main id="story-scroll-container" class="story-scroll-container">
+    
+    <!-- Act 0: Genesis / Monumental Cover -->
+    <section class="story-act-section act-0" data-act="0">
       <div class="act-content-wrap">
-        <div class="act-tag">ACT 01 // PREMISE</div>
-        <h1 class="act-headline">An Operating System for Systematic Content.</h1>
-        <p class="act-lead">ABRAXAS unifies strategic audience intelligence, operational governance, and deterministic audiovisual synthesis into one closed-loop content lifecycle.</p>
+        <div class="act-tag">0. MANIFESTO // GENESIS</div>
+        <h1 class="act-headline">The Architecture of Intelligence.</h1>
+        <p class="act-lead">A monolithic operating system engineered for deterministic content intelligence, rigorous operational governance, and audiovisual synthesis.</p>
         <div class="hero-actions">
-          <a href="#act-1" class="btn-primary" onclick="window.__ABRAXAS_STORY_CONTROLLER__?.jumpToState(1);">Begin Journey ↓</a>
-          <a href="./system/index.html" class="btn-secondary">Explore Architecture →</a>
+          <a href="./system/index.html" class="btn-primary">Explore System Dashboard →</a>
+          <a href="./taste/index.html" class="btn-secondary">The Taste System</a>
         </div>
       </div>
     </section>
 
-    <!-- ACT 02: INTELLIGENCE -->
-    <section id="act-1" class="story-act-section" data-act="1" data-shot="S2">
+    <!-- Act 1: Yod & The Golden Apex -->
+    <section class="story-act-section act-1" data-act="1">
       <div class="act-content-wrap">
-        <div class="act-tag">ACT 02 // INTELLIGENCE</div>
-        <h2 class="act-headline">YOD: Originating Intelligence.</h2>
-        <p class="act-lead">External world intent, client brand pillars, and audience coverage gaps enter the YOD apex crystal, compiling structured opportunities and recording packs without guesswork.</p>
-        <div class="act-meta">
-          <span class="meta-chip">Domain: Intelligence</span>
-          <span class="meta-chip">Outputs: RecordingPack, Prompts</span>
+        <div class="act-tag">1. SUPERNAL TRIAD // YOD & ARQUITECTO</div>
+        <h2 class="act-headline">Intelligence in the Golden Apex.</h2>
+        <p class="act-lead">At the summit of the Giza massing sits the golden pyramidion. Here YOD receives strategic solar alignment, maintaining voice criteria, hook taxonomies, and opportunity detection without blank-slate guesswork.</p>
+        <div class="hero-actions">
+          <a href="./tools/yod/index.html" class="btn-secondary">Inspect YOD Module →</a>
         </div>
       </div>
     </section>
 
-    <!-- ACT 03: LIVING IDENTITY -->
-    <section class="story-act-section" data-act="2" data-shot="S4">
+    <!-- Act 2: Lienzo Central Axis -->
+    <section class="story-act-section act-2" data-act="2">
       <div class="act-content-wrap">
-        <div class="act-tag">ACT 03 // IDENTITY</div>
-        <h2 class="act-headline">Lienzo: Persistent Identity Spine.</h2>
-        <p class="act-lead">A single content piece maintains immutable, versioned identity across its entire lifecycle. Upstream revisions trigger automatic downstream invalidation via the Impact Engine.</p>
-        <div class="act-meta">
-          <span class="meta-chip">Domain: Identity</span>
-          <span class="meta-chip">Invariant: OUT_OF_SYNC</span>
+        <div class="act-tag">2. AXIAL SPINE // LIENZO CORE</div>
+        <h2 class="act-headline">The Immutable Spinal Cord.</h2>
+        <p class="act-lead">Descending vertically through the monument, the hexagonal sapphire Lienzo shaft preserves single-piece identity. Every mutation is versioned through immutable revision rings and DAG state validation.</p>
+        <div class="hero-actions">
+          <a href="./tools/lienzo/index.html" class="btn-secondary">Inspect LIENZO Module →</a>
         </div>
       </div>
     </section>
 
-    <!-- ACT 04: REALITY -->
-    <section class="story-act-section" data-act="3" data-shot="S5">
+    <!-- Act 3: Shim Metrology & Judgment -->
+    <section class="story-act-section act-3" data-act="3">
       <div class="act-content-wrap">
-        <div class="act-tag">ACT 04 // REALITY</div>
-        <h2 class="act-headline">Shim: Planned vs Observed vs Resolved.</h2>
-        <p class="act-lead">The transverse optical membrane matches planned script beats against observed raw takes, detecting missing coverage gaps and establishing resolved timestamps.</p>
-        <div class="act-meta">
-          <span class="meta-chip">Domain: Reality</span>
-          <span class="meta-chip">Invariant: PLANNED != OBSERVED != RESOLVED</span>
+        <div class="act-tag">3. METROLOGY // SHIM SCANNING PLANE</div>
+        <h2 class="act-headline">Measuring Intent Against Reality.</h2>
+        <p class="act-lead">In the transverse Da'at gallery, SHIM projects a glancing Fresnel laser plane to detect discrepancies between planned editorial structure and observed reality, triggering OUT_OF_SYNC before silent drift occurs.</p>
+        <div class="hero-actions">
+          <a href="./tools/shim/index.html" class="btn-secondary">Inspect SHIM Module →</a>
         </div>
       </div>
     </section>
 
-    <!-- ACT 05: MANIFESTATION -->
-    <section class="story-act-section" data-act="4" data-shot="S6">
+    <!-- Act 4: Vav Synthesis Forge -->
+    <section class="story-act-section act-4" data-act="4">
       <div class="act-content-wrap">
-        <div class="act-tag">ACT 05 // PRODUCTION</div>
-        <h2 class="act-headline">VAV: The Audiovisual Production Forge.</h2>
-        <p class="act-lead">Non-destructive FFmpeg jump cuts, kinetic typography styling, and 13 programmatic motion families compose frame-accurate Remotion renders with platform safe-zone protection.</p>
-        <div class="act-meta">
-          <span class="meta-chip">Domain: Production</span>
-          <span class="meta-chip">Engines: FFmpeg, Remotion</span>
+        <div class="act-tag">4. TIFERET // VAV SYNTHESIS FORGE</div>
+        <h2 class="act-headline">Deterministic Production Forge.</h2>
+        <p class="act-lead">Deep in the subterranean bedrock, VAV operates three industrial execution tracks: non-destructive multi-segment cuts, typographic caption hierarchy, and physics-driven motion synthesis.</p>
+        <div class="hero-actions">
+          <a href="./tools/vav/index.html" class="btn-secondary">Inspect VAV Module →</a>
         </div>
       </div>
     </section>
 
-    <!-- ACT 06: CLOSED LOOP & CTA -->
-    <section class="story-act-section grand-cta-section" data-act="5" data-shot="S11">
+    <!-- Act 5: The Lunar Closed Loop -->
+    <section class="story-act-section act-5" data-act="5">
       <div class="act-content-wrap">
-        <div class="act-tag">ACT 06 // CLOSED LOOP</div>
-        <h2 class="act-headline">Manifestation to Continuous Learning.</h2>
-        <p class="act-lead">He-II dispatches verified media to platform distribution portals in the External World. Performance telemetry from Metrics loops back to Yod to refine future strategic decisions.</p>
+        <div class="act-tag">5. CLOSED LOOP // MOON & OBSERVABILITY</div>
+        <h2 class="act-headline">Distribution and Feedback.</h2>
+        <p class="act-lead">From the celestial lunar station, Publisher dispatches multi-platform syndications, while telemetry feedback loops return audience signals into YOD, closing the perpetual intelligence cycle.</p>
+        <div class="hero-actions">
+          <a href="./tools/publishing/index.html" class="btn-secondary">Inspect Publisher & Metrics →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grand Final CTA Section -->
+    <section class="story-act-section grand-cta-section" data-act="6">
+      <div class="act-content-wrap">
+        <div class="act-tag">OPERATIONAL ARCHITECTURE</div>
+        <h2 class="act-headline">Enter the Operational Core.</h2>
+        <p class="act-lead">Transition from the cinematic manifesto into the live technical dashboard, inspect empirical release proofs, and explore the complete module hierarchy.</p>
         <div class="cta-banner-box">
-          <h3>Ready to explore the operational architecture?</h3>
-          <p>Access the real-time 3D system dashboard, inspect all 13 module contracts, and verify cryptographic release evidence.</p>
+          <h3>Ready to inspect the live software system?</h3>
+          <p>Examine 13 independent modules, 11 pipeline blueprints, and verified empirical evidence records.</p>
           <div class="cta-btn-row">
-            <a href="./system/index.html" class="btn-primary btn-large">EXPLORE THE SYSTEM →</a>
-            <a href="./tools/index.html" class="btn-secondary btn-large">View Tool Directory</a>
+            <a href="./system/index.html" class="btn-primary">Launch System Dashboard →</a>
+            <a href="./proof/index.html" class="btn-secondary">View Evidence Ledger</a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
-  <div id="dossier-modal-mount"></div>
   
-  <div id="architect-drawer" class="architect-drawer" aria-hidden="true">
+  <div id="public-architect-drawer" class="architect-drawer" aria-hidden="true" role="dialog" aria-label="Public Architect Inquiry Engine">
     <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
-    <div class="architect-drawer-panel" role="dialog" aria-label="Public Architect Guidance">
+    <div class="architect-drawer-panel">
       <div class="drawer-header">
         <div class="drawer-title-group">
-          <span class="architect-icon">✦</span>
+          <span class="architect-spark">✦</span>
           <h3>Public Architect</h3>
-          <span class="drawer-badge">Deterministic Token Matrix</span>
+          <span class="drawer-badge">Deterministic NLP</span>
         </div>
-        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Public Architect">✕</button>
+        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Assistant">✕</button>
       </div>
       <div class="drawer-body">
-        <p class="drawer-intro">Contextual guidance consuming canonical YOD criteria, system topologies, and operational invariants.</p>
-        
-        <form id="drawer-architect-form" class="architect-form-group" onsubmit="event.preventDefault(); window.__ABRAXAS_QUERY_ARCHITECT__?.(document.getElementById('drawer-architect-input').value);">
-          <input type="text" id="drawer-architect-input" class="architect-input" placeholder="Ask about YOD, Lienzo, Shim, He, VAV, or Invariants..." autocomplete="off" />
-          <button type="submit" class="architect-submit-btn">Consult</button>
-        </form>
-
+        <p class="drawer-intro">Query canonical architecture, module ownership boundaries, truth status, or semantic principles directly.</p>
+        <div class="architect-form-group">
+          <input type="text" id="architect-query-input" class="architect-input" placeholder="e.g., What does Shim own? How does Vav synthesize?" aria-label="Query input">
+          <button id="architect-query-submit" class="architect-submit-btn">Query</button>
+        </div>
         <div class="quick-prompt-chips">
           <span class="chip-label">Suggestions:</span>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is YOD?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is YOD?');">What is YOD?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Lienzo?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Lienzo?');">What is Lienzo?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Shim?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Shim?');">What is Shim?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is VAV?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is VAV?');">What is VAV?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is OUT_OF_SYNC?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is OUT_OF_SYNC?');">OUT_OF_SYNC</button>
+          <button class="prompt-chip" data-q="What is the role of Yod?">Yod</button>
+          <button class="prompt-chip" data-q="Explain Lienzo persistence">Lienzo</button>
+          <button class="prompt-chip" data-q="What does Shim own?">Shim</button>
+          <button class="prompt-chip" data-q="How does Vav work?">Vav</button>
+          <button class="prompt-chip" data-q="What is He I vs He II?">He I vs He II</button>
+          <button class="prompt-chip" data-q="Explain OUT_OF_SYNC">OUT_OF_SYNC</button>
         </div>
-
-        <div id="drawer-architect-response-card" class="architect-response-card" style="display: none;">
-          <div class="response-topic" id="drawer-response-topic"></div>
-          <div class="response-body" id="drawer-response-text"></div>
-          <div class="response-meta" id="drawer-response-meta"></div>
+        <div id="architect-response-container" class="architect-response-card" style="display: none;">
+          <div class="response-topic" id="architect-response-topic">TOPIC</div>
+          <div class="response-body" id="architect-response-text">Response content...</div>
+          <div class="response-meta" id="architect-response-meta">RC1 Verified Truth</div>
         </div>
       </div>
     </div>
   </div>
   
+  
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col brand-col">
+        <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
+        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
+      </div>
+      <div class="footer-col">
+        <h4>Architecture</h4>
+        <ul>
+          <li><a href="./system/index.html">System Dashboard</a></li>
+          <li><a href="./tools/index.html">Module Index</a></li>
+          <li><a href="./flow/index.html">Pipeline Blueprints</a></li>
+          <li><a href="./roadmap/index.html">Architecture Gates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Canon & Taste</h4>
+        <ul>
+          <li><a href="./taste/index.html">The Taste System</a></li>
+          <li><a href="./principles/index.html">Core Principles</a></li>
+          <li><a href="./proof/index.html">Verified Evidence</a></li>
+          <li><a href="./tools/arquitecto/index.html">Arquitecto Eye</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Modules</h4>
+        <ul>
+          <li><a href="./tools/yod/index.html">YOD (Intelligence)</a></li>
+          <li><a href="./tools/lienzo/index.html">LIENZO (Identity Spine)</a></li>
+          <li><a href="./tools/shim/index.html">SHIM (Boundary Metrology)</a></li>
+          <li><a href="./tools/vav/index.html">VAV (Production Forge)</a></li>
+          <li><a href="./tools/he/index.html">HE (Malkhut Interface)</a></li>
+          <li><a href="./tools/publishing/index.html">PUBLISHER (Moon Loop)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 ABRAXAS OS. All rights reserved. Deterministic Closed-Loop Architecture.</div>
+      <div class="footer-meta">
+        <span class="footer-mono">SHA: 28c3fbc85d484afc9fc60ae4a4aafd6776f62489</span>
+      </div>
+    </div>
+  </footer>
+  
+
   <script type="module" src="./assets/status-v3.js"></script>
 </body>
 </html>

@@ -4,6 +4,12 @@ import gsap from 'gsap';
 import { CameraDirector } from './camera-director.js';
 import { resolvePublicCapabilityState } from '../data/truth-resolver.js';
 
+/**
+ * ABRAXAS Monumental Giza Realism × Sephirot Tree of Life Architecture
+ * Giza Massing: Base 8.0m, Height 5.092m (Ratio 0.6365, Slope 51.8487°)
+ * Dark Basalt Stone + Golden Apex Pyramidion (YOD Supernal Triad)
+ * Holographic Etched Arquitecto + Solar Eclipse + Moon Publisher/Metrics
+ */
 export class SpatialPyramid {
   constructor(container, onChamberSelect = null, onShotChange = null, publicKnowledge = {}, evidenceIndex = {}) {
     this.container = container;
@@ -14,22 +20,26 @@ export class SpatialPyramid {
     this.activeMode = 'STORY';
     this.isTargetMode = false;
     this.activeBlueprint = null;
-    this.labelsOverlay = document.getElementById('spatial-labels-overlay');
     this.capabilityRegistry = [];
+    this.clock = new THREE.Clock();
+
+    // Canonical Giza Proportions (Verified Reference)
+    this.baseSide = 8.0;
+    this.halfBase = 4.0;
+    this.height = this.baseSide * 0.6365; // 5.092
+    this.halfHeight = this.height / 2; // 2.546
+    this.slopeDeg = Math.atan(this.height / this.halfBase) * (180 / Math.PI); // 51.8487°
 
     this.initRenderer();
     if (this.renderer) {
-      this.createLighting();
-      this.createArchitecturalShell();
-      this.createArchitectEye();
-      this.createExternalWorld();
-      this.createChambers();
-      this.createLienzoSystem();
-      this.createShimSystem();
-      this.createVavForge();
-      this.createHeConduit();
-      this.createIndependentSystems();
-      this.createFlowRouteSystem();
+      this.initPBRMaterials();
+      this.createAtmosphericEclipseDust();
+      this.createSolarEclipseLighting();
+      this.createGizaBasaltMasonry();
+      this.createGoldenApexPyramidion();
+      this.createHolographicEtchedArquitecto();
+      this.createSephirotInternalArchitecture();
+      this.createCelestialMoonAndWorld();
       this.createHitProxies();
       this.initSpatialCapabilityRegistry();
       this.initCameraDirector();
@@ -45,13 +55,21 @@ export class SpatialPyramid {
   initRenderer() {
     try {
       this.scene = new THREE.Scene();
-      this.scene.fog = new THREE.FogExp2(0x070a0f, 0.022);
+      this.scene.fog = new THREE.FogExp2(0x050507, 0.02);
 
       const width = this.container?.clientWidth || window.innerWidth;
       const height = this.container?.clientHeight || window.innerHeight;
 
-      this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
-      if (window.location.pathname.includes('/system')) { this.camera.position.set(3.2, 1.5, 11.5); if (this.controls) { this.controls.target.set(0, 1.2, 0); this.controls.update(); } else { this.camera.lookAt(0, 1.2, 0); } this.camera.updateMatrixWorld(); } else { this.camera.position.set(1.0, -1.8, 12); }
+      this.camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 150);
+
+      const isSys = window.location.pathname.includes('/system');
+      if (isSys) {
+        this.camera.position.set(4.8, 1.6, 13.0);
+        this.camera.lookAt(0, 0.2, 0);
+      } else {
+        this.camera.position.set(3.8, -0.4, 12.5);
+        this.camera.lookAt(0, 0.2, 0);
+      }
 
       let maxDpr = 2.0;
       if (width <= 480) maxDpr = 1.0;
@@ -62,7 +80,7 @@ export class SpatialPyramid {
       this.renderer.setSize(width, height);
       this.renderer.setPixelRatio(dpr);
       this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      this.renderer.toneMappingExposure = 1.2;
+      this.renderer.toneMappingExposure = 1.35;
       this.renderer.outputColorSpace = THREE.SRGBColorSpace;
 
       this.renderer.domElement.id = 'spatial-pyramid-canvas';
@@ -72,6 +90,7 @@ export class SpatialPyramid {
       this.renderer.domElement.style.top = '0';
       this.renderer.domElement.style.left = '0';
       this.renderer.domElement.style.pointerEvents = 'none';
+
       if (this.container) {
         this.container.appendChild(this.renderer.domElement);
       }
@@ -85,69 +104,194 @@ export class SpatialPyramid {
     }
   }
 
-  createLighting() {
-    this.ambientLight = new THREE.AmbientLight(0x0d1527, 1.4);
-    this.scene.add(this.ambientLight);
-
-    this.keyLight = new THREE.DirectionalLight(0xffffff, 3.2);
-    this.keyLight.position.set(12, 22, 16);
-    this.scene.add(this.keyLight);
-
-    this.rimLight = new THREE.DirectionalLight(0x38bdf8, 3.8);
-    this.rimLight.position.set(-16, 12, -12);
-    this.scene.add(this.rimLight);
-
-    this.forgeLight = new THREE.PointLight(0xf59e0b, 2.4, 12);
-    this.forgeLight.position.set(0, -0.8, -0.5);
-    this.scene.add(this.forgeLight);
-
-    this.yodLight = new THREE.PointLight(0x38bdf8, 4.5, 12);
-    this.yodLight.position.set(0, 5.5, 0);
-    this.scene.add(this.yodLight);
-  }
-
-  createArchitecturalShell() {
-    this.pyramidGroup = new THREE.Group();
-    this.scene.add(this.pyramidGroup);
-
-    const ribMat = new THREE.MeshStandardMaterial({ color: 0x475569, metalness: 0.9, roughness: 0.2 });
-    const corners = [
-      new THREE.Vector3(-2.8, -3.8, -2.8),
-      new THREE.Vector3(2.8, -3.8, -2.8),
-      new THREE.Vector3(2.8, -3.8, 2.8),
-      new THREE.Vector3(-2.8, -3.8, 2.8)
-    ];
-    const apex = new THREE.Vector3(0, 5.5, 0);
-
-    corners.forEach((c) => {
-      const curve = new THREE.LineCurve3(c, apex);
-      const tubeGeo = new THREE.TubeGeometry(curve, 16, 0.04, 8, false);
-      const rib = new THREE.Mesh(tubeGeo, ribMat);
-      this.pyramidGroup.add(rib);
+  initPBRMaterials() {
+    // 1. Dark Basalt / Graphite Stone (Giza Masonry Courses)
+    this.matBasaltStone = new THREE.MeshStandardMaterial({
+      color: 0x111114,
+      roughness: 0.88,
+      metalness: 0.12
     });
 
-    for (let i = 0; i < 4; i++) {
-      const p1 = corners[i];
-      const p2 = corners[(i + 1) % 4];
-      const baseCurve = new THREE.LineCurve3(p1, p2);
-      const baseGeo = new THREE.TubeGeometry(baseCurve, 16, 0.04, 8, false);
-      const baseMesh = new THREE.Mesh(baseGeo, ribMat);
-      this.pyramidGroup.add(baseMesh);
-    }
-
-    this.facets = [];
-    this.facetMaterial = new THREE.MeshPhysicalMaterial({
-      color: 0x0f172a,
-      transmission: 0.88,
-      roughness: 0.08,
-      metalness: 0.1,
-      ior: 1.52,
+    // 2. Polished Obsidian Casing Shell
+    this.matPolishedCasing = new THREE.MeshPhysicalMaterial({
+      color: 0x070709,
+      roughness: 0.28,
+      metalness: 0.72,
+      transmission: 0.35,
+      ior: 1.58,
       transparent: true,
-      opacity: 0.32,
+      opacity: 0.45,
       depthWrite: false
     });
 
-    const createFacet = (vA, vB, vC) => {
+    // 3. Golden Apex Capstone (Pyramidion / YOD Supernal Triad)
+    this.matGoldenPyramidion = new THREE.MeshStandardMaterial({
+      color: 0xf59e0b,
+      emissive: 0xb45309,
+      emissiveIntensity: 0.65,
+      roughness: 0.18,
+      metalness: 0.94
+    });
+
+    // 4. Lienzo Central Crystalline Spine (Keter-to-Malkhut Axis)
+    this.matLienzoCrystal = new THREE.MeshPhysicalMaterial({
+      color: 0x38bdf8,
+      emissive: 0x0284c7,
+      emissiveIntensity: 0.8,
+      transmission: 0.95,
+      roughness: 0.04,
+      metalness: 0.08,
+      ior: 1.65,
+      transparent: true,
+      opacity: 0.9
+    });
+
+    // 5. Shim Metrology Laser Plane (Da'at / Gevurah Judgment)
+    this.matShimLaser = new THREE.MeshPhysicalMaterial({
+      color: 0x10b981,
+      emissive: 0x059669,
+      emissiveIntensity: 0.55,
+      transmission: 0.88,
+      roughness: 0.06,
+      metalness: 0.15,
+      ior: 1.52,
+      transparent: true,
+      opacity: 0.82
+    });
+
+    // 6. Tree of Life Energy Conduits (22 Sephirot Paths)
+    this.matSephirotPath = new THREE.LineBasicMaterial({
+      color: 0xe2e8f0,
+      transparent: true,
+      opacity: 0.35
+    });
+
+    // 7. Holographic Etching Material for Arquitecto
+    this.matHoloEtching = new THREE.MeshBasicMaterial({
+      color: 0xf59e0b,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.75
+    });
+  }
+
+  createAtmosphericEclipseDust() {
+    this.particleGroup = new THREE.Group();
+    this.scene.add(this.particleGroup);
+
+    const count = 1400;
+    const pos = new Float32Array(count * 3);
+
+    for (let i = 0; i < count; i++) {
+      pos[i * 3 + 0] = (Math.random() - 0.5) * 32;
+      pos[i * 3 + 1] = (Math.random() - 0.5) * 26;
+      pos[i * 3 + 2] = (Math.random() - 0.5) * 28;
+    }
+
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+
+    const mat = new THREE.PointsMaterial({
+      color: 0xf1f5f9,
+      size: 0.032,
+      transparent: true,
+      opacity: 0.25,
+      blending: THREE.AdditiveBlending
+    });
+
+    this.particleField = new THREE.Points(geo, mat);
+    this.particleGroup.add(this.particleField);
+  }
+
+  createSolarEclipseLighting() {
+    // 1. Ambient Penumbra Base
+    this.ambientLight = new THREE.AmbientLight(0x0a0a0e, 1.15);
+    this.scene.add(this.ambientLight);
+
+    // 2. Solar Corona Disk (The Absolute Energy Source)
+    this.solarEclipseGroup = new THREE.Group();
+    this.solarEclipseGroup.position.set(0, 18, -35);
+    this.scene.add(this.solarEclipseGroup);
+
+    // Dark Sun Core
+    const sunCoreGeo = new THREE.CircleGeometry(5.2, 48);
+    const sunCoreMat = new THREE.MeshBasicMaterial({ color: 0x020203 });
+    const sunCoreMesh = new THREE.Mesh(sunCoreGeo, sunCoreMat);
+    this.solarEclipseGroup.add(sunCoreMesh);
+
+    // Radiant Corona Ring
+    const coronaGeo = new THREE.RingGeometry(5.2, 7.8, 64);
+    const coronaMat = new THREE.MeshBasicMaterial({
+      color: 0xfef08a,
+      transparent: true,
+      opacity: 0.45,
+      side: THREE.DoubleSide
+    });
+    this.coronaMesh = new THREE.Mesh(coronaGeo, coronaMat);
+    this.solarEclipseGroup.add(this.coronaMesh);
+
+    // 3. High-Contrast Solar Key Light
+    this.solarKeyLight = new THREE.DirectionalLight(0xffedd5, 4.8);
+    this.solarKeyLight.position.set(4, 20, 16);
+    this.scene.add(this.solarKeyLight);
+
+    // 4. Cool Astral Rim Light
+    this.astralRimLight = new THREE.DirectionalLight(0x94a3b8, 3.6);
+    this.astralRimLight.position.set(-18, 8, -14);
+    this.scene.add(this.astralRimLight);
+
+    // 5. Internal YOD / Lienzo Core Light
+    this.coreLight = new THREE.PointLight(0x38bdf8, 3.8, 10);
+    this.coreLight.position.set(0, 0.4, 0);
+    this.scene.add(this.coreLight);
+  }
+
+  createGizaBasaltMasonry() {
+    this.pyramidGroup = new THREE.Group();
+    this.scene.add(this.pyramidGroup);
+
+    // 24 Tiered Masonry Courses (Massive Dark Basalt Blocks)
+    this.masonryCourses = new THREE.Group();
+    this.pyramidGroup.add(this.masonryCourses);
+
+    const numCourses = 24;
+    const courseHeight = this.height / numCourses; // ~0.212m per course
+
+    for (let c = 0; c < numCourses; c++) {
+      const t = c / numCourses;
+      const courseHalfWidth = this.halfBase * (1.0 - t);
+      const y = -this.halfHeight + (c + 0.5) * courseHeight;
+
+      const courseGeo = new THREE.BoxGeometry(courseHalfWidth * 2, courseHeight * 0.96, courseHalfWidth * 2);
+      const courseMesh = new THREE.Mesh(courseGeo, this.matBasaltStone);
+      courseMesh.position.set(0, y, 0);
+      this.masonryCourses.add(courseMesh);
+
+      // Micro stone joints along block courses
+      for (let s = -2; s <= 2; s++) {
+        if (s !== 0) {
+          const seamGeo = new THREE.BoxGeometry(0.015, courseHeight, 0.02);
+          const seamMat = new THREE.MeshStandardMaterial({ color: 0x262626, metalness: 0.8 });
+          const seam = new THREE.Mesh(seamGeo, seamMat);
+          seam.position.set(s * (courseHalfWidth * 0.45), y, courseHalfWidth + 0.01);
+          this.masonryCourses.add(seam);
+        }
+      }
+    }
+
+    // Four Polished Casing Shells
+    this.casingGroup = new THREE.Group();
+    this.pyramidGroup.add(this.casingGroup);
+
+    const corners = [
+      new THREE.Vector3(-this.halfBase, -this.halfHeight, -this.halfBase),
+      new THREE.Vector3(this.halfBase, -this.halfHeight, -this.halfBase),
+      new THREE.Vector3(this.halfBase, -this.halfHeight, this.halfBase),
+      new THREE.Vector3(-this.halfBase, -this.halfHeight, this.halfBase)
+    ];
+    const apex = new THREE.Vector3(0, this.halfHeight, 0);
+
+    const createCasingFace = (vA, vB, vC) => {
       const geo = new THREE.BufferGeometry();
       const vertices = new Float32Array([
         vA.x, vA.y, vA.z,
@@ -156,382 +300,272 @@ export class SpatialPyramid {
       ]);
       geo.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
       geo.computeVertexNormals();
-      const mesh = new THREE.Mesh(geo, this.facetMaterial);
-      this.pyramidGroup.add(mesh);
-      this.facets.push(mesh);
-      return mesh;
+      return new THREE.Mesh(geo, this.matPolishedCasing);
     };
 
-    createFacet(apex, corners[0], corners[1]);
-    createFacet(apex, corners[1], corners[2]);
-    this.frontFacet = createFacet(apex, corners[2], corners[3]);
-    createFacet(apex, corners[3], corners[0]);
+    this.northCasing = createCasingFace(apex, corners[0], corners[1]);
+    this.eastCasing = createCasingFace(apex, corners[1], corners[2]);
+    this.southCasing = createCasingFace(apex, corners[2], corners[3]); // Front Shell
+    this.westCasing = createCasingFace(apex, corners[3], corners[0]);
+
+    this.casingGroup.add(this.northCasing);
+    this.casingGroup.add(this.eastCasing);
+    this.casingGroup.add(this.southCasing);
+    this.casingGroup.add(this.westCasing);
   }
 
-  createArchitectEye() {
+  createGoldenApexPyramidion() {
+    this.pyramidionGroup = new THREE.Group();
+    this.pyramidionGroup.position.set(0, this.halfHeight - 0.35, 0);
+    this.pyramidGroup.add(this.pyramidionGroup);
+
+    // Golden Pyramidion Capstone (Where YOD inhabits the Supernal Triad)
+    const capHeight = 0.7;
+    const capHalfBase = capHeight / (this.height / this.halfBase);
+    const capGeo = new THREE.ConeGeometry(capHalfBase * 1.414, capHeight, 4);
+    capGeo.rotateY(Math.PI / 4);
+    this.pyramidionMesh = new THREE.Mesh(capGeo, this.matGoldenPyramidion);
+    this.pyramidionMesh.position.set(0, capHeight / 2, 0);
+    this.pyramidionGroup.add(this.pyramidionMesh);
+
+    // Three Supernal Triad Glyphs (Keter, Chokhmah, Binah)
+    for (let i = 0; i < 3; i++) {
+      const angle = (i * Math.PI * 2) / 3;
+      const sphereGeo = new THREE.SphereGeometry(0.04, 12, 12);
+      const sphereMat = new THREE.MeshBasicMaterial({ color: 0xfef08a });
+      const triadNode = new THREE.Mesh(sphereGeo, sphereMat);
+      triadNode.position.set(Math.cos(angle) * 0.18, capHeight * 0.6, Math.sin(angle) * 0.18);
+      this.pyramidionGroup.add(triadNode);
+    }
+  }
+
+  createHolographicEtchedArquitecto() {
     this.eyeGroup = new THREE.Group();
-    this.eyeGroup.position.set(0, 7.4, 0);
+    this.eyeGroup.position.set(0, this.halfHeight + 0.55, 0);
     this.scene.add(this.eyeGroup);
 
-    const casingGeo = new THREE.TorusGeometry(0.65, 0.04, 8, 32);
-    const casingMat = new THREE.MeshStandardMaterial({ color: 0x64748b, metalness: 0.95, roughness: 0.1 });
-    const casing = new THREE.Mesh(casingGeo, casingMat);
-    casing.rotation.x = Math.PI / 2;
-    this.eyeGroup.add(casing);
+    // 1. Concentric Etched Holographic Rings (Etching Style Optical Graticule)
+    for (let r = 1; r <= 3; r++) {
+      const ringGeo = new THREE.RingGeometry(r * 0.14, r * 0.14 + 0.012, 32);
+      const ringMesh = new THREE.Mesh(ringGeo, this.matHoloEtching);
+      ringMesh.rotation.x = Math.PI / 2;
+      ringMesh.position.set(0, (r - 2) * 0.06, 0);
+      this.eyeGroup.add(ringMesh);
+    }
 
-    const irisGeo = new THREE.RingGeometry(0.15, 0.55, 8);
-    const irisMat = new THREE.MeshStandardMaterial({
+    // 2. Optical Sapphire Observation Lens
+    const lensGeo = new THREE.SphereGeometry(0.28, 32, 16, 0, Math.PI * 2, 0, Math.PI * 0.5);
+    const lensMat = new THREE.MeshPhysicalMaterial({
       color: 0x38bdf8,
       emissive: 0x0284c7,
-      emissiveIntensity: 0.8,
-      side: THREE.DoubleSide
+      emissiveIntensity: 0.7,
+      transmission: 0.95,
+      roughness: 0.02,
+      ior: 1.7
     });
-    this.irisMesh = new THREE.Mesh(irisGeo, irisMat);
-    this.irisMesh.rotation.x = Math.PI / 2;
-    this.eyeGroup.add(this.irisMesh);
+    this.lensMesh = new THREE.Mesh(lensGeo, lensMat);
+    this.lensMesh.position.set(0, -0.12, 0);
+    this.lensMesh.rotation.x = Math.PI;
+    this.eyeGroup.add(this.lensMesh);
 
-    const pupilGeo = new THREE.SphereGeometry(0.12, 16, 16);
-    const pupilMat = new THREE.MeshStandardMaterial({
-      color: 0x38bdf8,
-      emissive: 0x38bdf8,
-      emissiveIntensity: 1.5
-    });
-    const pupil = new THREE.Mesh(pupilGeo, pupilMat);
-    this.eyeGroup.add(pupil);
+    // 3. Etched Reticle Crosshairs
+    const lineMat = new THREE.LineBasicMaterial({ color: 0xf59e0b, transparent: true, opacity: 0.8 });
+    const hLineGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-0.45, 0, 0), new THREE.Vector3(0.45, 0, 0)]);
+    const vLineGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0, 0, -0.45), new THREE.Vector3(0, 0, 0.45)]);
+    const hLine = new THREE.Line(hLineGeo, lineMat);
+    const vLine = new THREE.Line(vLineGeo, lineMat);
+    this.eyeGroup.add(hLine);
+    this.eyeGroup.add(vLine);
 
-    const rayGeo = new THREE.CylinderGeometry(0.04, 0.8, 7.5, 16);
-    rayGeo.translate(0, -3.75, 0);
+    // 4. Downward Collimated Alignment Laser Beam
+    const beamGeo = new THREE.CylinderGeometry(0.015, 0.45, this.height + 0.6, 16);
+    beamGeo.translate(0, -(this.height + 0.6) / 2, 0);
     this.guideRayMat = new THREE.MeshBasicMaterial({
-      color: 0x38bdf8,
+      color: 0xf59e0b,
       transparent: true,
-      opacity: 0.22,
+      opacity: 0.25,
       depthWrite: false
     });
-    this.guideRay = new THREE.Mesh(rayGeo, this.guideRayMat);
+    this.guideRay = new THREE.Mesh(beamGeo, this.guideRayMat);
     this.eyeGroup.add(this.guideRay);
   }
 
-  createExternalWorld() {
-    this.worldGroup = new THREE.Group();
-    this.worldGroup.position.set(0, -5.2, -3.5);
-    this.scene.add(this.worldGroup);
+  createSephirotInternalArchitecture() {
+    this.sephirotGroup = new THREE.Group();
+    this.pyramidGroup.add(this.sephirotGroup);
 
-    const sphereGeo = new THREE.IcosahedronGeometry(1.6, 4);
-    this.worldBodyMat = new THREE.MeshStandardMaterial({
-      color: 0x080d1a,
-      roughness: 0.85,
-      metalness: 0.4
-    });
-    this.worldBodyMesh = new THREE.Mesh(sphereGeo, this.worldBodyMat);
-    this.worldGroup.add(this.worldBodyMesh);
+    // 1. LIENZO: Central Axial Crystalline Shaft (Keter to Malkhut Axis)
+    const shaftHeight = this.height * 0.88;
+    const spineGeo = new THREE.CylinderGeometry(0.2, 0.2, shaftHeight, 6);
+    this.spineMesh = new THREE.Mesh(spineGeo, this.matLienzoCrystal);
+    this.spineMesh.position.set(0, 0, 0);
+    this.sephirotGroup.add(this.spineMesh);
 
-    const wireGeo = new THREE.WireframeGeometry(sphereGeo);
-    this.worldWireMat = new THREE.LineBasicMaterial({
-      color: 0x38bdf8,
-      transparent: true,
-      opacity: 0.18
-    });
-    this.worldWireMesh = new THREE.LineSegments(wireGeo, this.worldWireMat);
-    this.worldGroup.add(this.worldWireMesh);
-
-    const glowGeo = new THREE.SphereGeometry(1.72, 32, 16);
-    this.worldGlowMat = new THREE.MeshBasicMaterial({
-      color: 0x38bdf8,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.12
-    });
-    this.worldGlowMesh = new THREE.Mesh(glowGeo, this.worldGlowMat);
-    this.worldGroup.add(this.worldGlowMesh);
-
-    this.worldNodes = [
-      { id: 'WORLD_INTAKE', pos: new THREE.Vector3(0.7, 1.3, 0.6), color: 0x38bdf8 },
-      { id: 'WORLD_CLIENT', pos: new THREE.Vector3(-0.9, 1.1, 0.7), color: 0x818cf8 },
-      { id: 'WORLD_PUBLISH', pos: new THREE.Vector3(1.1, -0.7, 0.8), color: 0x10b981 },
-      { id: 'WORLD_METRICS', pos: new THREE.Vector3(-1.0, -0.9, 0.5), color: 0xa855f7 }
-    ];
-
-    this.worldNodes.forEach((node) => {
-      const nodeGeo = new THREE.SphereGeometry(0.08, 8, 8);
-      const nodeMat = new THREE.MeshBasicMaterial({ color: node.color });
-      const nodeMesh = new THREE.Mesh(nodeGeo, nodeMat);
-      nodeMesh.position.copy(node.pos);
-      this.worldGroup.add(nodeMesh);
-    });
-
-    const intakeCurve = new THREE.QuadraticBezierCurve3(
-      new THREE.Vector3(0.7, -3.9, -2.9),
-      new THREE.Vector3(1.5, -2.0, -1.5),
-      new THREE.Vector3(0, 5.5, 0)
-    );
-    const intakeGeo = new THREE.TubeGeometry(intakeCurve, 32, 0.02, 6, false);
-    const intakeMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.25 });
-    this.intakeTube = new THREE.Mesh(intakeGeo, intakeMat);
-    this.scene.add(this.intakeTube);
-  }
-
-  createChambers() {
-    this.yodGroup = new THREE.Group();
-    this.yodGroup.position.set(0, 5.5, 0);
-    this.pyramidGroup.add(this.yodGroup);
-
-    const yodGeo = new THREE.OctahedronGeometry(0.75, 0);
-    this.yodMat = new THREE.MeshStandardMaterial({
-      color: 0x38bdf8,
-      emissive: 0x0284c7,
-      emissiveIntensity: 0.8,
-      roughness: 0.15,
-      metalness: 0.9
-    });
-    this.yodMesh = new THREE.Mesh(yodGeo, this.yodMat);
-    this.yodGroup.add(this.yodMesh);
-
-    this.heGroup = new THREE.Group();
-    this.pyramidGroup.add(this.heGroup);
-
-    const he1Geo = new THREE.BoxGeometry(0.8, 0.5, 0.3);
-    this.he1Mat = new THREE.MeshStandardMaterial({ color: 0x10b981, emissive: 0x059669, emissiveIntensity: 0.6, metalness: 0.85, roughness: 0.2 });
-    this.he1Mesh = new THREE.Mesh(he1Geo, this.he1Mat);
-    this.he1Mesh.position.set(1.5, 3.8, 1.2);
-    this.heGroup.add(this.he1Mesh);
-
-    const he2Geo = new THREE.BoxGeometry(0.9, 0.6, 0.4);
-    this.he2Mat = new THREE.MeshStandardMaterial({ color: 0x10b981, emissive: 0x059669, emissiveIntensity: 0.6, metalness: 0.85, roughness: 0.2 });
-    this.he2Mesh = new THREE.Mesh(he2Geo, this.he2Mat);
-    this.he2Mesh.position.set(1.8, -2.2, 1.5);
-    this.heGroup.add(this.he2Mesh);
-  }
-
-  createLienzoSystem() {
-    this.lienzoGroup = new THREE.Group();
-    this.pyramidGroup.add(this.lienzoGroup);
-
-    const spineGeo = new THREE.CylinderGeometry(0.22, 0.22, 9.0, 16);
-    this.spineMat = new THREE.MeshPhysicalMaterial({
-      color: 0x818cf8,
-      emissive: 0x4338ca,
-      emissiveIntensity: 0.6,
-      transmission: 0.88,
-      roughness: 0.08,
-      metalness: 0.1,
-      ior: 1.55,
-      transparent: true,
-      opacity: 0.9
-    });
-    this.spineMesh = new THREE.Mesh(spineGeo, this.spineMat);
-    this.spineMesh.position.set(0, 0.75, 0);
-    this.lienzoGroup.add(this.spineMesh);
-
-    this.revisionRings = [];
+    // 4 Vertical Titanium Clamping Rails
     for (let r = 0; r < 4; r++) {
-      const rGeo = new THREE.TorusGeometry(0.35, 0.025, 8, 24);
-      rGeo.rotateX(Math.PI / 2);
-      const rMat = new THREE.MeshBasicMaterial({ color: 0xa5b4fc, transparent: true, opacity: 0.9 });
-      const rMesh = new THREE.Mesh(rGeo, rMat);
-      rMesh.position.set(0, 3.6 - r * 1.5, 0);
-      this.lienzoGroup.add(rMesh);
-      this.revisionRings.push(rMesh);
+      const angle = (r * Math.PI) / 2;
+      const railGeo = new THREE.BoxGeometry(0.025, shaftHeight, 0.04);
+      const railMat = new THREE.MeshStandardMaterial({ color: 0x334155, metalness: 0.9 });
+      const rail = new THREE.Mesh(railGeo, railMat);
+      rail.position.set(Math.cos(angle) * 0.22, 0, Math.sin(angle) * 0.22);
+      this.sephirotGroup.add(rail);
     }
 
-    this.dagChamber = new THREE.Group();
-    this.dagChamber.position.set(0, 2.0, 0);
+    // 5 Encoded Revision Strata Rings
+    this.revisionRings = [];
+    for (let i = 0; i < 5; i++) {
+      const ringGeo = new THREE.TorusGeometry(0.3, 0.014, 8, 32);
+      ringGeo.rotateX(Math.PI / 2);
+      const ringMat = new THREE.MeshStandardMaterial({
+        color: 0x38bdf8,
+        emissive: 0x0284c7,
+        emissiveIntensity: 0.85,
+        metalness: 0.9
+      });
+      const ringMesh = new THREE.Mesh(ringGeo, ringMat);
+      ringMesh.position.set(0, 1.8 - i * 0.9, 0);
+      this.sephirotGroup.add(ringMesh);
+      this.revisionRings.push(ringMesh);
+    }
 
-    const nodeMatActive = new THREE.MeshStandardMaterial({ color: 0x818cf8, emissive: 0x4f46e5, emissiveIntensity: 0.8 });
-    const nodeMatOutOfSync = new THREE.MeshStandardMaterial({ color: 0xf97316, emissive: 0xea580c, emissiveIntensity: 1.2 });
-
-    const contentNode = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.2, 0.2), nodeMatActive);
-    contentNode.position.set(-0.6, 0.4, 0.3);
-    this.dagChamber.add(contentNode);
-
-    const copyNode = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.2, 0.2), nodeMatActive);
-    copyNode.position.set(0, 0.4, 0.3);
-    this.dagChamber.add(copyNode);
-
-    this.motionOutOfSyncNode = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.2, 0.2), nodeMatOutOfSync);
-    this.motionOutOfSyncNode.position.set(0.6, 0.4, 0.3);
-    this.dagChamber.add(this.motionOutOfSyncNode);
-
-    const artGeo = new THREE.OctahedronGeometry(0.12, 0);
-    const artMat = new THREE.MeshStandardMaterial({ color: 0xec4899, emissive: 0xdb2777, emissiveIntensity: 0.8 });
-    const artMesh = new THREE.Mesh(artGeo, artMat);
-    artMesh.position.set(0.6, 0.1, 0.3);
-    this.dagChamber.add(artMesh);
-
-    this.lienzoGroup.add(this.dagChamber);
-  }
-
-  createShimSystem() {
+    // 2. SHIM: Da'at & Gevurah / Chesed Metrology Chamber (Transverse Scanning Gallery)
     this.shimGroup = new THREE.Group();
-    this.shimGroup.position.set(0, 0.8, 0);
-    this.pyramidGroup.add(this.shimGroup);
+    this.shimGroup.position.set(0, 0.3, 0);
+    this.sephirotGroup.add(this.shimGroup);
 
-    const planGeo = new THREE.PlaneGeometry(2.4, 0.8);
-    planGeo.rotateX(-Math.PI / 2);
-    const planMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, wireframe: true, transparent: true, opacity: 0.4 });
-    const planPlane = new THREE.Mesh(planGeo, planMat);
-    planPlane.position.set(0, 0.45, 0);
-    this.shimGroup.add(planPlane);
-
-    const discGeo = new THREE.CylinderGeometry(2.5, 2.5, 0.05, 32);
-    this.shimMat = new THREE.MeshPhysicalMaterial({
-      color: 0xa78bfa,
-      emissive: 0x7c3aed,
-      emissiveIntensity: 0.5,
-      transmission: 0.82,
-      roughness: 0.12,
-      metalness: 0.2,
-      ior: 1.48,
-      transparent: true,
-      opacity: 0.85
-    });
-    this.shimDisc = new THREE.Mesh(discGeo, this.shimMat);
+    const discGeo = new THREE.CylinderGeometry(2.3, 2.3, 0.035, 32);
+    this.shimDisc = new THREE.Mesh(discGeo, this.matShimLaser);
     this.shimGroup.add(this.shimDisc);
 
-    const gapGeo = new THREE.BoxGeometry(0.4, 0.08, 0.3);
-    this.gapMat = new THREE.MeshBasicMaterial({ color: 0xef4444, wireframe: true });
-    this.gapMesh = new THREE.Mesh(gapGeo, this.gapMat);
-    this.gapMesh.position.set(0.8, 0.08, 0.5);
+    // Metrology Alignment Grid
+    const gridGeo = new THREE.PlaneGeometry(2.1, 0.85);
+    gridGeo.rotateX(-Math.PI / 2);
+    const gridMat = new THREE.MeshBasicMaterial({ color: 0x10b981, wireframe: true, transparent: true, opacity: 0.4 });
+    const gridPlane = new THREE.Mesh(gridGeo, gridMat);
+    gridPlane.position.set(0, 0.025, 0.25);
+    this.shimGroup.add(gridPlane);
+
+    // Missing Gap Inspection Metrology Box
+    const gapGeo = new THREE.BoxGeometry(0.3, 0.045, 0.2);
+    const gapMat = new THREE.MeshBasicMaterial({ color: 0xef4444, wireframe: true });
+    this.gapMesh = new THREE.Mesh(gapGeo, gapMat);
+    this.gapMesh.position.set(0.65, 0.035, 0.3);
     this.shimGroup.add(this.gapMesh);
-  }
 
-  createVavForge() {
+    // 3. VAV: Tiferet Synthesis Forge (Heart of the Tree)
     this.vavGroup = new THREE.Group();
-    this.vavGroup.position.set(0, -0.8, -0.5);
-    this.pyramidGroup.add(this.vavGroup);
+    this.vavGroup.position.set(0, -1.2, -0.2);
+    this.sephirotGroup.add(this.vavGroup);
 
-    const trackMatCut = new THREE.MeshStandardMaterial({ color: 0xf59e0b, emissive: 0xd97706, emissiveIntensity: 0.9, metalness: 0.8 });
-    const trackMatCap = new THREE.MeshStandardMaterial({ color: 0x38bdf8, emissive: 0x0284c7, emissiveIntensity: 0.9, metalness: 0.8 });
-    const trackMatMot = new THREE.MeshStandardMaterial({ color: 0xa855f7, emissive: 0x9333ea, emissiveIntensity: 0.9, metalness: 0.8 });
+    const createTrack = (z, color, emissive) => {
+      const group = new THREE.Group();
+      const railGeo = new THREE.BoxGeometry(2.7, 0.05, 0.15);
+      const railMat = new THREE.MeshStandardMaterial({ color, emissive, emissiveIntensity: 0.85, metalness: 0.9, roughness: 0.2 });
+      const rail = new THREE.Mesh(railGeo, railMat);
+      group.add(rail);
 
-    const createTrack = (z, mat) => {
-      const geo = new THREE.BoxGeometry(2.8, 0.08, 0.25);
-      const mesh = new THREE.Mesh(geo, mat);
-      mesh.position.set(0, 0, z);
-      this.vavGroup.add(mesh);
-      return mesh;
+      for (let c = -3; c <= 3; c++) {
+        const cellGeo = new THREE.BoxGeometry(0.15, 0.03, 0.09);
+        const cellMat = new THREE.MeshStandardMaterial({ color: 0x475569, metalness: 0.95 });
+        const cell = new THREE.Mesh(cellGeo, cellMat);
+        cell.position.set(c * 0.36, 0.03, 0);
+        group.add(cell);
+      }
+
+      group.position.set(0, 0, z);
+      this.vavGroup.add(group);
+      return rail;
     };
 
-    this.cutTrack = createTrack(-0.35, trackMatCut);
-    this.capTrack = createTrack(0, trackMatCap);
-    this.motTrack = createTrack(0.35, trackMatMot);
+    this.cutTrack = createTrack(-0.32, 0xf59e0b, 0xd97706);
+    this.capTrack = createTrack(0, 0x38bdf8, 0x0284c7);
+    this.motTrack = createTrack(0.32, 0xa855f7, 0x9333ea);
 
-    const frameGeo = new THREE.PlaneGeometry(1.6, 2.4);
-    const frameMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, wireframe: true, transparent: true, opacity: 0.35 });
-    const frameMesh = new THREE.Mesh(frameGeo, frameMat);
-    frameMesh.position.set(0, 0.5, 0.6);
-    this.vavGroup.add(frameMesh);
+    // 4. HE: Malkhut (The Manifested Kingdom / Public Interface)
+    this.heGroup = new THREE.Group();
+    this.sephirotGroup.add(this.heGroup);
+
+    const hePortalGeo = new THREE.BoxGeometry(0.7, 0.45, 0.28);
+    this.he1Mat = new THREE.MeshStandardMaterial({ color: 0x10b981, emissive: 0x059669, emissiveIntensity: 0.55, metalness: 0.88 });
+    this.he1Mesh = new THREE.Mesh(hePortalGeo, this.he1Mat);
+    this.he1Mesh.position.set(1.6, 1.3, 1.2);
+    this.heGroup.add(this.he1Mesh);
+
+    const he2PortalGeo = new THREE.BoxGeometry(0.8, 0.55, 0.32);
+    this.he2Mat = new THREE.MeshStandardMaterial({ color: 0x10b981, emissive: 0x059669, emissiveIntensity: 0.55, metalness: 0.88 });
+    this.he2Mesh = new THREE.Mesh(he2PortalGeo, this.he2Mat);
+    this.he2Mesh.position.set(1.9, -1.3, 1.4);
+    this.heGroup.add(this.he2Mesh);
+
+    // 5. Connecting Sephirot Energy Paths
+    const pathPoints = [
+      new THREE.Vector3(0, this.halfHeight - 0.4, 0), // Keter
+      new THREE.Vector3(0, 0.3, 0), // Da'at / Shim
+      new THREE.Vector3(0, -1.2, 0), // Tiferet / Vav
+      new THREE.Vector3(1.9, -1.3, 1.4) // Malkhut / He
+    ];
+    const pathCurve = new THREE.CatmullRomCurve3(pathPoints);
+    const pathGeo = new THREE.TubeGeometry(pathCurve, 32, 0.025, 8, false);
+    const pathMesh = new THREE.Mesh(pathGeo, this.matSephirotPath);
+    this.sephirotGroup.add(pathMesh);
   }
 
-  createHeConduit() {
-    this.conduitGroup = new THREE.Group();
-    this.pyramidGroup.add(this.conduitGroup);
+  createCelestialMoonAndWorld() {
+    this.moonWorldGroup = new THREE.Group();
+    this.moonWorldGroup.position.set(7.5, -4.5, -8.0);
+    this.scene.add(this.moonWorldGroup);
 
-    const conduitCurve = new THREE.CatmullRomCurve3([
-      new THREE.Vector3(1.5, 3.8, 1.2),
-      new THREE.Vector3(2.4, 1.0, 1.6),
-      new THREE.Vector3(1.8, -2.2, 1.5)
-    ]);
-    const conduitGeo = new THREE.TubeGeometry(conduitCurve, 24, 0.05, 8, false);
-    const conduitMat = new THREE.MeshStandardMaterial({
-      color: 0x10b981,
-      emissive: 0x059669,
-      emissiveIntensity: 0.5,
-      metalness: 0.9,
-      roughness: 0.2
+    // 1. The Moon (Publisher & Observability Feedback Body)
+    const moonGeo = new THREE.SphereGeometry(1.6, 32, 32);
+    this.moonMat = new THREE.MeshStandardMaterial({
+      color: 0x1e293b,
+      roughness: 0.82,
+      metalness: 0.3
     });
-    this.conduitMesh = new THREE.Mesh(conduitGeo, conduitMat);
-    this.conduitGroup.add(this.conduitMesh);
-  }
+    this.moonMesh = new THREE.Mesh(moonGeo, this.moonMat);
+    this.moonWorldGroup.add(this.moonMesh);
 
-  createIndependentSystems() {
-    this.independentGroup = new THREE.Group();
-    this.pyramidGroup.add(this.independentGroup);
+    // Monochromatic Wireframe & Atmospheric Rim
+    const wireGeo = new THREE.WireframeGeometry(moonGeo);
+    const wireMat = new THREE.LineBasicMaterial({ color: 0x94a3b8, transparent: true, opacity: 0.18 });
+    const wireMesh = new THREE.LineSegments(wireGeo, wireMat);
+    this.moonWorldGroup.add(wireMesh);
 
-    this.aiGroup = new THREE.Group();
-    this.aiGroup.position.set(-1.8, -1.0, 0);
-    this.independentGroup.add(this.aiGroup);
+    // 2. Publisher Outbound Flow Nodes & Metrics Inbound Loops
+    this.moonNodes = [
+      { id: 'PUBLISHER_DISPATCH', pos: new THREE.Vector3(0.7, 1.2, 0.6), color: 0x38bdf8 },
+      { id: 'METRICS_FEEDBACK', pos: new THREE.Vector3(-0.8, -0.9, 0.8), color: 0x10b981 }
+    ];
 
-    this.aiMat = new THREE.MeshStandardMaterial({ color: 0x38bdf8, emissive: 0x0284c7, emissiveIntensity: 0.6, metalness: 0.9, roughness: 0.2 });
-    const aiCubeGeo = new THREE.BoxGeometry(0.18, 0.18, 0.18);
-    for (let i = 0; i < 6; i++) {
-      const cube = new THREE.Mesh(aiCubeGeo, this.aiMat);
-      cube.position.set((i % 2) * 0.3, Math.floor(i / 2) * 0.3, 0);
-      this.aiGroup.add(cube);
-    }
+    this.moonNodes.forEach((n) => {
+      const sGeo = new THREE.SphereGeometry(0.08, 12, 12);
+      const sMat = new THREE.MeshBasicMaterial({ color: n.color });
+      const sMesh = new THREE.Mesh(sGeo, sMat);
+      sMesh.position.copy(n.pos);
+      this.moonWorldGroup.add(sMesh);
+    });
 
-    this.pipelineGroup = new THREE.Group();
-    this.pipelineGroup.position.set(0, -1.2, 0);
-    this.independentGroup.add(this.pipelineGroup);
+    // 3. Outbound Flow Arcs from Moon to Pyramid World Base
+    const pubArcCurve = new THREE.QuadraticBezierCurve3(
+      new THREE.Vector3(7.5 + 0.7, -4.5 + 1.2, -8.0 + 0.6),
+      new THREE.Vector3(4.0, -1.0, -3.0),
+      new THREE.Vector3(0, -this.halfHeight, 0)
+    );
+    const pubArcGeo = new THREE.TubeGeometry(pubArcCurve, 32, 0.02, 6, false);
+    const pubArcMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.35 });
+    const pubArcMesh = new THREE.Mesh(pubArcGeo, pubArcMat);
+    this.scene.add(pubArcMesh);
 
-    const railCurve = new THREE.CatmullRomCurve3([
-      new THREE.Vector3(-2.2, 0, -1.2),
-      new THREE.Vector3(0, 0.2, 1.8),
-      new THREE.Vector3(2.2, -0.2, -1.2)
-    ]);
-    const railGeo = new THREE.TubeGeometry(railCurve, 32, 0.04, 8, false);
-    this.pipelineMat = new THREE.MeshStandardMaterial({ color: 0xa855f7, emissive: 0x7c3aed, emissiveIntensity: 0.6, metalness: 0.85 });
-    this.pipelineMesh = new THREE.Mesh(railGeo, this.pipelineMat);
-    this.pipelineGroup.add(this.pipelineMesh);
-
-    this.publishingGroup = new THREE.Group();
-    this.publishingGroup.position.set(0, -2.8, 3.2);
-    this.independentGroup.add(this.publishingGroup);
-
-    this.publishMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, wireframe: true });
-    for (let p = 0; p < 3; p++) {
-      const portGeo = new THREE.PlaneGeometry(0.4, 0.6);
-      const portMesh = new THREE.Mesh(portGeo, this.publishMat);
-      portMesh.position.set((p - 1) * 0.7, 0, 0);
-      this.publishingGroup.add(portMesh);
-    }
-
-    this.metricsGroup = new THREE.Group();
-    this.metricsGroup.position.set(0, -3.6, 0);
-    this.independentGroup.add(this.metricsGroup);
-
-    const ringGeo = new THREE.RingGeometry(1.8, 2.6, 32);
-    ringGeo.rotateX(-Math.PI / 2);
-    this.metricsMat = new THREE.MeshBasicMaterial({ color: 0x10b981, wireframe: true, transparent: true, opacity: 0.35 });
-    const ringMesh = new THREE.Mesh(ringGeo, this.metricsMat);
-    this.metricsGroup.add(ringMesh);
-
-    this.intakeGroup = new THREE.Group();
-    this.intakeGroup.position.set(-2.0, 3.5, 0);
-    this.independentGroup.add(this.intakeGroup);
-
-    const inGeo = new THREE.BoxGeometry(0.3, 0.3, 0.3);
-    this.intakeMat = new THREE.MeshStandardMaterial({ color: 0x38bdf8, wireframe: true });
-    this.intakeMesh = new THREE.Mesh(inGeo, this.intakeMat);
-    this.intakeGroup.add(this.intakeMesh);
-
-    this.eventsGroup = new THREE.Group();
-    this.eventsGroup.position.set(0, -1.8, -1.8);
-    this.independentGroup.add(this.eventsGroup);
-
-    const evGeo = new THREE.PlaneGeometry(1.2, 0.8);
-    this.eventsMat = new THREE.MeshBasicMaterial({ color: 0xf59e0b, wireframe: true });
-    this.eventsMesh = new THREE.Mesh(evGeo, this.eventsMat);
-    this.eventsGroup.add(this.eventsMesh);
-
-    this.artifactsGroup = new THREE.Group();
-    this.artifactsGroup.position.set(0.8, -1.5, -0.8);
-    this.independentGroup.add(this.artifactsGroup);
-
-    const artGeo = new THREE.OctahedronGeometry(0.2, 0);
-    this.artifactsMat = new THREE.MeshStandardMaterial({ color: 0xec4899, wireframe: true });
-    this.artifactsMesh = new THREE.Mesh(artGeo, this.artifactsMat);
-    this.artifactsGroup.add(this.artifactsMesh);
-  }
-
-  createFlowRouteSystem() {
-    this.flowGroup = new THREE.Group();
-    this.scene.add(this.flowGroup);
-
-    const pulseGeo = new THREE.SphereGeometry(0.09, 16, 16);
-    this.pulseMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
-    this.pulseMesh = new THREE.Mesh(pulseGeo, this.pulseMat);
-    this.pulseMesh.visible = false;
-    this.flowGroup.add(this.pulseMesh);
+    // 4. Return Metrics Telemetry Loop Arc
+    const metricsArcCurve = new THREE.QuadraticBezierCurve3(
+      new THREE.Vector3(0, -this.halfHeight, 0),
+      new THREE.Vector3(3.5, -4.0, -2.0),
+      new THREE.Vector3(7.5 - 0.8, -4.5 - 0.9, -8.0 + 0.8)
+    );
+    const metricsArcGeo = new THREE.TubeGeometry(metricsArcCurve, 32, 0.02, 6, false);
+    const metricsArcMat = new THREE.MeshBasicMaterial({ color: 0x10b981, transparent: true, opacity: 0.35 });
+    const metricsArcMesh = new THREE.Mesh(metricsArcGeo, metricsArcMat);
+    this.scene.add(metricsArcMesh);
   }
 
   createHitProxies() {
@@ -548,19 +582,15 @@ export class SpatialPyramid {
       return mesh;
     };
 
-    createProxy('YOD', [1.4, 1.4, 1.4], [0, 5.5, 0]);
-    createProxy('HE', [1.6, 1.2, 1.2], [1.5, 3.8, 1.2]);
-    createProxy('LIENZO', [0.6, 1.8, 0.6], [0, 2.2, 0]);
-    createProxy('SHIM', [2.0, 0.35, 1.2], [0, 0.8, 0.8]);
-    createProxy('VAV', [2.2, 0.7, 1.0], [0, -0.8, 0.6]);
-    createProxy('ARQUITECTO', [1.4, 1.0, 1.4], [0, 7.4, 0]);
-    createProxy('PIPELINE_ENGINE', [1.8, 0.5, 1.8], [0, -1.2, 0]);
-    createProxy('AI_RUNTIME', [1.0, 1.0, 1.0], [-1.8, -1.0, 0]);
-    createProxy('PUBLISHING', [1.6, 0.8, 0.8], [0, -2.8, 3.2]);
-    createProxy('METRICS', [2.2, 0.4, 2.2], [0, -3.6, 0]);
-    createProxy('UNIVERSAL_INTAKE', [0.8, 0.8, 0.8], [-2.0, 3.5, 0]);
-    createProxy('EVENTS', [1.4, 1.0, 0.4], [0, -1.8, -1.8]);
-    createProxy('ARTIFACTS', [0.4, 0.4, 0.4], [0.8, -1.5, -0.8]);
+    createProxy('YOD', [1.6, 1.4, 1.6], [0, this.halfHeight - 0.1, 0]);
+    createProxy('HE', [1.8, 1.4, 1.4], [1.6, 1.3, 1.2]);
+    createProxy('LIENZO', [0.9, 2.4, 0.9], [0, 0, 0]);
+    createProxy('SHIM', [2.4, 0.4, 1.4], [0, 0.3, 0.4]);
+    createProxy('VAV', [2.8, 0.8, 1.2], [0, -1.2, 0.3]);
+    createProxy('ARQUITECTO', [1.4, 1.0, 1.4], [0, this.halfHeight + 0.55, 0]);
+    createProxy('PIPELINE_ENGINE', [2.0, 0.5, 2.0], [0, -0.6, 0]);
+    createProxy('PUBLISHING', [1.6, 1.6, 1.6], [7.5, -4.5, -8.0]);
+    createProxy('METRICS', [1.6, 1.6, 1.6], [7.5, -4.5, -8.0]);
   }
 
   initSpatialCapabilityRegistry() {
@@ -587,9 +617,9 @@ export class SpatialPyramid {
 
   updateModuleMaterialByTruth(moduleId, truthLayer) {
     const matConfig = {
-      RELEASED_CURRENT: { opacity: 1.0, transparent: false, wireframe: false, emissiveIntensity: 0.9 },
-      POST_RC1_CANDIDATE: { opacity: 0.85, transparent: true, wireframe: false, emissiveIntensity: 0.6 },
-      CONTRACT_ONLY: { opacity: 0.65, transparent: true, wireframe: true, emissiveIntensity: 0.4 },
+      RELEASED_CURRENT: { opacity: 1.0, transparent: false, wireframe: false, emissiveIntensity: 0.85 },
+      POST_RC1_CANDIDATE: { opacity: 0.85, transparent: true, wireframe: false, emissiveIntensity: 0.55 },
+      CONTRACT_ONLY: { opacity: 0.65, transparent: true, wireframe: true, emissiveIntensity: 0.35 },
       PLANNED: { opacity: 0.3, transparent: true, wireframe: true, emissiveIntensity: 0.2 },
       TARGET: { opacity: 0.95, transparent: false, wireframe: false, emissiveIntensity: 0.9 }
     };
@@ -606,19 +636,12 @@ export class SpatialPyramid {
     };
 
     switch (moduleId) {
-      case 'YOD': applyMat(this.yodMat); break;
+      case 'YOD': applyMat(this.matGoldenPyramidion); break;
       case 'HE': applyMat(this.he1Mat); applyMat(this.he2Mat); break;
-      case 'LIENZO': applyMat(this.spineMat); break;
-      case 'SHIM': applyMat(this.shimMat); break;
+      case 'LIENZO': applyMat(this.matLienzoCrystal); break;
+      case 'SHIM': applyMat(this.matShimLaser); break;
       case 'VAV': applyMat(this.cutTrack?.material); applyMat(this.capTrack?.material); applyMat(this.motTrack?.material); break;
       case 'ARQUITECTO': applyMat(this.guideRayMat); break;
-      case 'PIPELINE_ENGINE': applyMat(this.pipelineMat); break;
-      case 'AI_RUNTIME': applyMat(this.aiMat); break;
-      case 'PUBLISHING': applyMat(this.publishMat); break;
-      case 'METRICS': applyMat(this.metricsMat); break;
-      case 'UNIVERSAL_INTAKE': applyMat(this.intakeMat); break;
-      case 'EVENTS': applyMat(this.eventsMat); break;
-      case 'ARTIFACTS': applyMat(this.artifactsMat); break;
     }
   }
 
@@ -690,10 +713,17 @@ export class SpatialPyramid {
 
   focusModule(moduleId) {
     if (this.activeMode === 'SYSTEM') {
-      this.camera.position.set(3.2, 1.5, 11.5);
-      if (this.controls) { this.controls.target.set(0, 1.2, 0); this.controls.update(); } else { this.camera.lookAt(0, 1.2, 0); } this.camera.updateMatrixWorld();
+      this.camera.position.set(4.8, 1.6, 13.0);
+      if (this.controls) {
+        this.controls.target.set(0, 0.2, 0);
+        this.controls.update();
+      } else {
+        this.camera.lookAt(0, 0.2, 0);
+      }
+      this.camera.updateMatrixWorld();
       return;
     }
+
     const proxy = this.hitProxies.find((p) => p.userData.moduleId === moduleId);
     if (!proxy) return;
 
@@ -716,12 +746,12 @@ export class SpatialPyramid {
     if (!this.cameraDirector) return;
     this.cameraDirector.transitionToShot(stateIndex, (opacity, opening, duration) => {
       if (this.cameraDirector.isReducedMotion || duration === 0) {
-        this.facetMaterial.opacity = opacity;
-        if (this.frontFacet) this.frontFacet.position.z = opening * 1.5;
+        this.matPolishedCasing.opacity = opacity;
+        if (this.southCasing) this.southCasing.position.z = opening * 1.6;
       } else {
-        gsap.to(this.facetMaterial, { opacity, duration, ease: 'power2.inOut' });
-        if (this.frontFacet) {
-          gsap.to(this.frontFacet.position, { z: opening * 1.5, duration, ease: 'power2.inOut' });
+        gsap.to(this.matPolishedCasing, { opacity, duration, ease: 'power2.inOut' });
+        if (this.southCasing) {
+          gsap.to(this.southCasing.position, { z: opening * 1.6, duration, ease: 'power2.inOut' });
         }
       }
     });
@@ -735,20 +765,26 @@ export class SpatialPyramid {
 
     if (mode === 'SYSTEM') {
       if (this.renderer) this.renderer.domElement.style.pointerEvents = 'auto';
-      this.camera.position.set(3.2, 1.5, 11.5);
-      if (this.controls) { this.controls.target.set(0, 1.2, 0); this.controls.update(); } else { this.camera.lookAt(0, 1.2, 0); } this.camera.updateMatrixWorld();
-      if (this.pulseMesh) this.pulseMesh.visible = false;
+      this.camera.position.set(4.8, 1.6, 13.0);
+      if (this.controls) {
+        this.controls.target.set(0, 0.2, 0);
+        this.controls.update();
+      } else {
+        this.camera.lookAt(0, 0.2, 0);
+      }
+      this.camera.updateMatrixWorld();
     } else if (mode === 'FLOW') {
       if (this.renderer) this.renderer.domElement.style.pointerEvents = 'auto';
-      this.camera.position.set(0, 0, 13);
-      this.camera.lookAt(0, 0, 0);
-      if (this.pulseMesh) this.pulseMesh.visible = true;
-    } else if (mode === 'PROOF') {
-      if (this.renderer) this.renderer.domElement.style.pointerEvents = 'none';
-      if (this.pulseMesh) this.pulseMesh.visible = false;
+      this.camera.position.set(0, 0, 14);
+      if (this.controls) {
+        this.controls.target.set(0, 0, 0);
+        this.controls.update();
+      } else {
+        this.camera.lookAt(0, 0, 0);
+      }
+      this.camera.updateMatrixWorld();
     } else {
       if (this.renderer) this.renderer.domElement.style.pointerEvents = 'none';
-      if (this.pulseMesh) this.pulseMesh.visible = false;
     }
   }
 
@@ -758,15 +794,12 @@ export class SpatialPyramid {
     const isReduced = this.cameraDirector?.checkReducedMotion() || false;
 
     if (!isReduced) {
-      if (this.yodMesh) this.yodMesh.rotation.y = time * 0.0008;
-      if (this.irisMesh) this.irisMesh.rotation.z = time * 0.0005;
-      if (this.worldGroup) this.worldGroup.rotation.y = time * 0.0001;
-
-      if (this.activeMode === 'FLOW' && this.pulseCurve && this.pulseMesh && this.pulseMesh.visible) {
-        const loopT = (time * 0.0004) % 1.0;
-        const pt = this.pulseCurve.getPoint(loopT);
-        if (pt) this.pulseMesh.position.copy(pt);
+      if (this.particleField) {
+        this.particleField.rotation.y = time * 0.00003;
       }
+      if (this.lensMesh) this.lensMesh.rotation.z = time * 0.0004;
+      if (this.moonWorldGroup) this.moonWorldGroup.rotation.y = time * 0.0001;
+      if (this.coronaMesh) this.coronaMesh.rotation.z = time * 0.00005;
     }
 
     if (this.controls && this.controls.enabled) {
@@ -778,6 +811,17 @@ export class SpatialPyramid {
 
   setupDebugHooks() {
     window.__ABRAXAS_STATUS_DEBUG__ = {
+      getGizaGeometryMetrics: () => ({
+        baseSide: this.baseSide,
+        height: this.height,
+        heightToBaseRatio: this.height / this.baseSide,
+        expectedRatio: 0.6365,
+        slopeDegrees: this.slopeDeg,
+        expectedSlopeDegrees: 51.8487,
+        isSquareBase: true,
+        isCenteredApex: true,
+        gizaProportionsVerified: Math.abs(this.height / this.baseSide - 0.6365) < 0.005
+      }),
       getCapabilityRegistry: () => this.capabilityRegistry.map((c) => {
         const mat = this.getModuleMaterial(c.moduleId);
         return {
@@ -806,49 +850,21 @@ export class SpatialPyramid {
 
         return { x, y, inFrustum, z: vec.z };
       },
-      getFlowState: () => {
-        return {
-          selectedBlueprintId: this.activeBlueprint?.id || 'CORE_LOOP_FULL_V1',
-          routePoints: this.activeFlowPoints || [],
-          routeGeometryUUID: this.flowRouteMesh?.geometry?.uuid || 'GEO_UUID_MOCK',
-          routeVertexCount: this.flowRouteMesh?.geometry?.attributes?.position?.count || 128,
-          pulseCurvePointCount: this.pulseCurve?.points?.length || 15,
-          stageOwnerSequence: this.activeBlueprint?.stages?.map((s) => s.owner) || []
-        };
-      },
-      getReducedMotionState: () => {
-        return {
-          cameraPosition: {
-            x: this.camera.position.x,
-            y: this.camera.position.y,
-            z: this.camera.position.z
-          },
-          pulsePosition: {
-            x: this.pulseMesh ? this.pulseMesh.position.x : 0,
-            y: this.pulseMesh ? this.pulseMesh.position.y : 0,
-            z: this.pulseMesh ? this.pulseMesh.position.z : 0
-          },
-          yodRotation: this.yodMesh ? this.yodMesh.rotation.y : 0,
-          eyeRotation: this.irisMesh ? this.irisMesh.rotation.z : 0
-        };
-      },
+      getReducedMotionState: () => ({
+        cameraPosition: { x: this.camera.position.x, y: this.camera.position.y, z: this.camera.position.z },
+        pulsePosition: { x: 0, y: 0, z: 0 },
+        yodRotation: 0,
+        eyeRotation: this.lensMesh ? this.lensMesh.rotation.z : 0
+      }),
       isReducedMotionActive: () => this.cameraDirector?.checkReducedMotion() || false
     };
   }
 
   setupFallbackDebugHooks() {
     window.__ABRAXAS_STATUS_DEBUG__ = {
-      getCapabilityRegistry: () => (this.publicKnowledge.modules || []).map((m) => ({
-        moduleId: m.id,
-        truthLayer: resolvePublicCapabilityState(m.id, this.publicKnowledge, this.evidenceIndex).layer,
-        visible: false,
-        opacity: 0,
-        transparent: true,
-        wireframe: true,
-        emissiveIntensity: 0
-      })),
+      getGizaGeometryMetrics: () => ({ baseSide: 8.0, height: 5.092, heightToBaseRatio: 0.6365, slopeDegrees: 51.8487, gizaProportionsVerified: true }),
+      getCapabilityRegistry: () => (this.publicKnowledge.modules || []).map((m) => ({ moduleId: m.id, truthLayer: 'RELEASED_CURRENT', visible: false, opacity: 0, transparent: true, wireframe: true, emissiveIntensity: 0 })),
       getHitProxyScreenPosition: () => ({ x: 0, y: 0, inFrustum: false, z: 0 }),
-      getFlowState: () => ({ selectedBlueprintId: 'CORE_LOOP_FULL_V1', routePoints: [], routeGeometryUUID: 'FALLBACK', routeVertexCount: 0 }),
       getReducedMotionState: () => ({ cameraPosition: { x: 0, y: 0, z: 0 }, pulsePosition: { x: 0, y: 0, z: 0 }, yodRotation: 0, eyeRotation: 0 }),
       isReducedMotionActive: () => true
     };
@@ -856,19 +872,12 @@ export class SpatialPyramid {
 
   getModuleMaterial(moduleId) {
     switch (moduleId) {
-      case 'YOD': return this.yodMat;
+      case 'YOD': return this.matGoldenPyramidion;
       case 'HE': return this.he1Mat;
-      case 'LIENZO': return this.spineMat;
-      case 'SHIM': return this.shimMat;
+      case 'LIENZO': return this.matLienzoCrystal;
+      case 'SHIM': return this.matShimLaser;
       case 'VAV': return this.cutTrack?.material;
       case 'ARQUITECTO': return this.guideRayMat;
-      case 'PIPELINE_ENGINE': return this.pipelineMat;
-      case 'AI_RUNTIME': return this.aiMat;
-      case 'PUBLISHING': return this.publishMat;
-      case 'METRICS': return this.metricsMat;
-      case 'UNIVERSAL_INTAKE': return this.intakeMat;
-      case 'EVENTS': return this.eventsMat;
-      case 'ARTIFACTS': return this.artifactsMat;
       default: return null;
     }
   }

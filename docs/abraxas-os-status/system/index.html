@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>System Architecture Explorer — ABRAXAS OS</title>
+  <title>System Dashboard — ABRAXAS OS</title>
   <link rel="stylesheet" href="../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="system-dashboard-body">
   
@@ -18,17 +21,17 @@
         <span class="brand-tag">v1.0.0-rc1</span>
       </div>
       <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
-        <a href="../index.html" class="nav-link ">Story</a>
+        <a href="../index.html" class="nav-link ">Manifesto</a>
         <a href="../system/index.html" class="nav-link active">System</a>
-        <a href="../tools/index.html" class="nav-link ">Tools</a>
+        <a href="../tools/index.html" class="nav-link ">Modules</a>
         <a href="../flow/index.html" class="nav-link ">Flow</a>
+        <a href="../taste/index.html" class="nav-link ">Taste</a>
         <a href="../proof/index.html" class="nav-link ">Proof</a>
         <a href="../roadmap/index.html" class="nav-link ">Roadmap</a>
-        <a href="../taste/index.html" class="nav-link ">Taste</a>
         <a href="../principles/index.html" class="nav-link ">Principles</a>
       </nav>
       <div class="header-right">
-        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Query Assistant">
+        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Assistant">
           <span class="architect-spark">✦</span> Ask Architect
         </button>
       </div>
@@ -36,102 +39,110 @@
   </header>
   
 
-  <!-- 3D Spatial Canvas Mount -->
-  <div id="spatial-canvas-container" class="spatial-canvas-fullscreen" aria-hidden="true"></div>
-  <div id="spatial-labels-overlay" class="spatial-labels-container" aria-hidden="true"></div>
+  <!-- Fullscreen 3D Spatial Canvas for System Mode -->
+  <div id="spatial-pyramid-container" class="spatial-canvas-fullscreen" aria-label="ABRAXAS 3D Spatial Canvas"></div>
 
-  <!-- Fallback 2D Vector Schematic -->
-  <div id="fallback-schematic-container" class="fallback-schematic" style="display: none;">
-    <div class="fallback-banner">
-      <span class="fallback-pill">2D SCHEMATIC FALLBACK ACTIVE</span>
-      <p>WebGL hardware acceleration is unavailable. Displaying full operational vector architecture.</p>
-    </div>
-    <svg viewBox="0 0 1000 700" class="fallback-svg-diagram">
-      <defs>
-        <linearGradient id="pyrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
-          <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
-        </linearGradient>
-      </defs>
-      <polygon points="500,80 820,540 180,540" fill="url(#pyrGrad)" stroke="#38bdf8" stroke-width="2" />
-      <circle cx="500" cy="80" r="14" fill="#38bdf8" />
-      <text x="500" y="55" fill="#38bdf8" text-anchor="middle" font-family="Space Grotesk" font-size="14" font-weight="bold">YOD (INTELLIGENCE)</text>
-      <line x1="500" y1="95" x2="500" y2="480" stroke="#a855f7" stroke-width="3" />
-      <text x="520" y="240" fill="#a855f7" font-family="Space Grotesk" font-size="12">LIENZO SPINE</text>
-      <line x1="300" y1="360" x2="700" y2="360" stroke="#f59e0b" stroke-width="2" />
-      <text x="500" y="350" fill="#f59e0b" text-anchor="middle" font-family="Space Grotesk" font-size="12">SHIM MEMBRANE</text>
-      <rect x="360" y="440" width="280" height="45" rx="4" fill="rgba(15,23,42,0.9)" stroke="#10b981" stroke-width="1.5" />
-      <text x="500" y="468" fill="#10b981" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="bold">VAV PRODUCTION FORGE</text>
-    </svg>
-  </div>
-
-  <!-- Operational Dashboard Workspace Layout -->
-  <main id="main-content" class="system-workspace-layout">
-    <!-- Left: Typographic Directory Rail -->
-    <aside class="system-directory-rail" aria-label="System Architecture Modules">
+  <!-- Operational Workspace: 3-Column Layout -->
+  <div class="system-workspace-layout">
+    
+    <!-- Left Column: Directory Rail -->
+    <aside class="system-directory-rail" aria-label="Module Directory">
       <div class="directory-header">
         <div class="rail-title-group">
           <span class="rail-glyph">◈</span>
-          <h2>Architecture Modules</h2>
+          <h2>System Hierarchy</h2>
         </div>
         <div class="truth-toggle-wrapper">
           <label class="truth-toggle-label" for="target-mode-toggle">
             <input type="checkbox" id="target-mode-toggle" class="truth-toggle-input">
             <span class="truth-toggle-slider"></span>
-            <span id="nav-target-tag" class="truth-toggle-text">RELEASED CURRENT</span>
+            <span class="truth-toggle-text">Show Target State</span>
           </label>
         </div>
       </div>
-      <nav id="system-directory-list" class="directory-list" role="list">
-        <!-- Rendered dynamically by ModeManager -->
-      </nav>
+      <div class="directory-list" id="system-directory-list" role="listbox">
+        <!-- Injected dynamically by modes.js -->
+      </div>
     </aside>
 
-    <!-- Center Floating Controls & Spatial Navigator -->
-    <div class="system-center-overlay">
-      <div id="navigator-mount" class="spatial-navigator-wrapper"></div>
-    </div>
+    <!-- Center Column: Visual Overlay & Spatial Callouts -->
+    <main class="system-center-overlay" aria-label="Interactive 3D Spatial Center">
+      <div class="system-spatial-hint">
+        <span class="hint-glyph">✦</span> Click any chamber or select from the directory to inspect
+      </div>
+    </main>
 
-    <!-- Right: Contextual Inspector Rail -->
-    <aside id="system-active-summary" class="system-inspector-rail" aria-label="Selected Module Details">
-      <!-- Rendered dynamically by ModeManager -->
+    <!-- Right Column: Contextual Inspector Rail -->
+    <aside class="system-inspector-rail" id="system-inspector-rail" aria-label="Module Details Inspector">
+      <div class="inspector-header">
+        <div class="truth-pill released_current" id="inspector-truth-badge">RELEASED_RC1</div>
+        <h3 class="inspector-title" id="inspector-title">Yod</h3>
+        <div class="inspector-role" id="inspector-domain">Intelligence // Strategic Direction</div>
+      </div>
+      <div class="inspector-body" id="inspector-body">
+        <div class="inspector-section">
+          <h4>Responsibility</h4>
+          <p id="inspector-responsibility">Maintains content pattern registries, hook and CTA taxonomies, narrative structures, and forensic provenance truth.</p>
+        </div>
+        <div class="inspector-section">
+          <h4>Sephirot Alignment</h4>
+          <p id="inspector-sephirot">Supernal Triad (Keter, Chokhmah, Binah) // Golden Apex</p>
+        </div>
+        <div class="inspector-section">
+          <h4>Owns</h4>
+          <ul id="inspector-owns-list">
+            <li>Client Core & Brand voice criteria</li>
+            <li>Opportunity generation & scoring algorithms</li>
+          </ul>
+        </div>
+        <div class="inspector-section">
+          <h4>Does Not Own</h4>
+          <ul id="inspector-not-owns-list">
+            <li>Mutable single-piece content state (Lienzo owns this)</li>
+            <li>Audiovisual media rendering (Vav owns this)</li>
+          </ul>
+        </div>
+        <div class="inspector-section">
+          <h4>Dependencies & Evidence</h4>
+          <p id="inspector-evidence">86 Vitest test files passing, release:test-suite verified.</p>
+        </div>
+        <a href="../tools/yod/index.html" class="inspector-deep-btn" id="inspector-deep-link">Open Full Dossier →</a>
+      </div>
     </aside>
-  </main>
 
-  <div id="dossier-modal-mount"></div>
+  </div>
+
   
-  <div id="architect-drawer" class="architect-drawer" aria-hidden="true">
+  <div id="public-architect-drawer" class="architect-drawer" aria-hidden="true" role="dialog" aria-label="Public Architect Inquiry Engine">
     <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
-    <div class="architect-drawer-panel" role="dialog" aria-label="Public Architect Guidance">
+    <div class="architect-drawer-panel">
       <div class="drawer-header">
         <div class="drawer-title-group">
-          <span class="architect-icon">✦</span>
+          <span class="architect-spark">✦</span>
           <h3>Public Architect</h3>
-          <span class="drawer-badge">Deterministic Token Matrix</span>
+          <span class="drawer-badge">Deterministic NLP</span>
         </div>
-        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Public Architect">✕</button>
+        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Assistant">✕</button>
       </div>
       <div class="drawer-body">
-        <p class="drawer-intro">Contextual guidance consuming canonical YOD criteria, system topologies, and operational invariants.</p>
-        
-        <form id="drawer-architect-form" class="architect-form-group" onsubmit="event.preventDefault(); window.__ABRAXAS_QUERY_ARCHITECT__?.(document.getElementById('drawer-architect-input').value);">
-          <input type="text" id="drawer-architect-input" class="architect-input" placeholder="Ask about YOD, Lienzo, Shim, He, VAV, or Invariants..." autocomplete="off" />
-          <button type="submit" class="architect-submit-btn">Consult</button>
-        </form>
-
+        <p class="drawer-intro">Query canonical architecture, module ownership boundaries, truth status, or semantic principles directly.</p>
+        <div class="architect-form-group">
+          <input type="text" id="architect-query-input" class="architect-input" placeholder="e.g., What does Shim own? How does Vav synthesize?" aria-label="Query input">
+          <button id="architect-query-submit" class="architect-submit-btn">Query</button>
+        </div>
         <div class="quick-prompt-chips">
           <span class="chip-label">Suggestions:</span>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is YOD?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is YOD?');">What is YOD?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Lienzo?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Lienzo?');">What is Lienzo?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Shim?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Shim?');">What is Shim?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is VAV?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is VAV?');">What is VAV?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is OUT_OF_SYNC?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is OUT_OF_SYNC?');">OUT_OF_SYNC</button>
+          <button class="prompt-chip" data-q="What is the role of Yod?">Yod</button>
+          <button class="prompt-chip" data-q="Explain Lienzo persistence">Lienzo</button>
+          <button class="prompt-chip" data-q="What does Shim own?">Shim</button>
+          <button class="prompt-chip" data-q="How does Vav work?">Vav</button>
+          <button class="prompt-chip" data-q="What is He I vs He II?">He I vs He II</button>
+          <button class="prompt-chip" data-q="Explain OUT_OF_SYNC">OUT_OF_SYNC</button>
         </div>
-
-        <div id="drawer-architect-response-card" class="architect-response-card" style="display: none;">
-          <div class="response-topic" id="drawer-response-topic"></div>
-          <div class="response-body" id="drawer-response-text"></div>
-          <div class="response-meta" id="drawer-response-meta"></div>
+        <div id="architect-response-container" class="architect-response-card" style="display: none;">
+          <div class="response-topic" id="architect-response-topic">TOPIC</div>
+          <div class="response-body" id="architect-response-text">Response content...</div>
+          <div class="response-meta" id="architect-response-meta">RC1 Verified Truth</div>
         </div>
       </div>
     </div>

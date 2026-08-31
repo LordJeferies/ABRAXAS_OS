@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Architecture Roadmap &amp; Gate Progression — ABRAXAS OS</title>
+  <title>Architecture Roadmap — ABRAXAS OS</title>
   <link rel="stylesheet" href="../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="multipage-body roadmap-page">
+<body class="page-body">
   
   <header id="global-header" class="site-header" role="banner">
     <div class="header-inner">
@@ -18,17 +21,17 @@
         <span class="brand-tag">v1.0.0-rc1</span>
       </div>
       <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
-        <a href="../index.html" class="nav-link ">Story</a>
+        <a href="../index.html" class="nav-link ">Manifesto</a>
         <a href="../system/index.html" class="nav-link ">System</a>
-        <a href="../tools/index.html" class="nav-link ">Tools</a>
+        <a href="../tools/index.html" class="nav-link ">Modules</a>
         <a href="../flow/index.html" class="nav-link ">Flow</a>
+        <a href="../taste/index.html" class="nav-link ">Taste</a>
         <a href="../proof/index.html" class="nav-link ">Proof</a>
         <a href="../roadmap/index.html" class="nav-link active">Roadmap</a>
-        <a href="../taste/index.html" class="nav-link ">Taste</a>
         <a href="../principles/index.html" class="nav-link ">Principles</a>
       </nav>
       <div class="header-right">
-        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Query Assistant">
+        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Assistant">
           <span class="architect-spark">✦</span> Ask Architect
         </button>
       </div>
@@ -36,207 +39,160 @@
   </header>
   
 
-  <main id="main-content" class="page-container">
-    <div class="page-hero">
-      <div class="hero-tag">CAPABILITY EVOLUTION</div>
-      <h1 class="page-title">Architecture Roadmap</h1>
-      <p class="page-lead">The sequential engineering gates progressing ABRAXAS from foundational release RC1 into full multi-surface candidate maturity.</p>
-    </div>
-
-    <div class="roadmap-timeline">
-      
-    <article class="roadmap-card" data-status="RELEASED_RC1">
-      <div class="roadmap-card-header">
-        <span class="gate-id">P1</span>
-        <span class="truth-pill released_rc1">RELEASED RC1</span>
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../system/index.html">System</a> / <span>Roadmap</span></div>
+        <h1 class="page-title">Architecture Roadmap & Milestones</h1>
+        <p class="page-description">Progressive gate execution from foundational schema contracts (Gate P1) through autonomous production scaling (Gate P8).</p>
       </div>
-      <h3 class="gate-title">VAV Audiovisual Core & Safe Zones</h3>
-      <p class="gate-desc">Non-destructive FFmpeg cut engine, 13 motion families, Remotion composition.</p>
-    </article>
-    
 
-    <article class="roadmap-card" data-status="RELEASED_RC1">
-      <div class="roadmap-card-header">
-        <span class="gate-id">P2</span>
-        <span class="truth-pill released_rc1">RELEASED RC1</span>
-      </div>
-      <h3 class="gate-title">He Operations Core & Security</h3>
-      <p class="gate-desc">Task graph, typed approval engine, blocker precedence, persistent JSON store, RBAC.</p>
-    </article>
-    
+      <div class="roadmap-gates-stack">
+        
+          <article class="gate-card verified_local">
+            <div class="gate-header">
+              <span class="gate-id">P1</span>
+              <span class="gate-status-pill verified_local">VERIFIED_LOCAL</span>
+            </div>
+            <h2 class="gate-title">VAV Audiovisual Core & Platform Safe Zones</h2>
+            <p class="gate-desc">Non-destructive FFmpeg multi-segment cut engine, 13 simple motion families, frame-accurate Remotion composition, platform safe zones.</p>
+          </article>
+          
 
-    <article class="roadmap-card" data-status="RELEASED_RC1">
-      <div class="roadmap-card-header">
-        <span class="gate-id">P3A</span>
-        <span class="truth-pill released_rc1">RELEASED RC1</span>
-      </div>
-      <h3 class="gate-title">He Product UI Core</h3>
-      <p class="gate-desc">Modular desk UI, Solo Queue, Kanban, Calendar, Recording Sessions, Reviews.</p>
-    </article>
-    
+          <article class="gate-card verified_local">
+            <div class="gate-header">
+              <span class="gate-id">P2</span>
+              <span class="gate-status-pill verified_local">VERIFIED_LOCAL</span>
+            </div>
+            <h2 class="gate-title">He Operations Core & Security</h2>
+            <p class="gate-desc">Task graph, typed approval engine, blocker precedence, persistent local-first JSON store with referential integrity, RBAC.</p>
+          </article>
+          
 
-    <article class="roadmap-card" data-status="RELEASED_RC1">
-      <div class="roadmap-card-header">
-        <span class="gate-id">P3B</span>
-        <span class="truth-pill released_rc1">RELEASED RC1</span>
-      </div>
-      <h3 class="gate-title">He Time Tracking & Notifications</h3>
-      <p class="gate-desc">Timer sessions, time reports, in-app notification engine with read isolation.</p>
-    </article>
-    
+          <article class="gate-card verified_local">
+            <div class="gate-header">
+              <span class="gate-id">P3A</span>
+              <span class="gate-status-pill verified_local">VERIFIED_LOCAL</span>
+            </div>
+            <h2 class="gate-title">He Product UI Core</h2>
+            <p class="gate-desc">Modular operational UI, Solo Queue, Team Dashboard, Kanban board, Production Calendar (Month/Week/List), Deadlines, Recording Sessions, Reviews, People Workload, Activity Ledger.</p>
+          </article>
+          
 
-    <article class="roadmap-card" data-status="RELEASED_RC1">
-      <div class="roadmap-card-header">
-        <span class="gate-id">P4</span>
-        <span class="truth-pill released_rc1">RELEASED RC1</span>
-      </div>
-      <h3 class="gate-title">Public Status V3 & Spatial Experience</h3>
-      <p class="gate-desc">Multi-surface public architecture, 3D Spatial Pyramid, Taste Canon V2, Public Architect.</p>
-    </article>
-    
+          <article class="gate-card verified_local">
+            <div class="gate-header">
+              <span class="gate-id">P3B</span>
+              <span class="gate-status-pill verified_local">VERIFIED_LOCAL</span>
+            </div>
+            <h2 class="gate-title">He Time Tracking & Notifications</h2>
+            <p class="gate-desc">Timer sessions, pause/resume, manual time tracking, time reports, in-app notification engine with deduplication and read isolation, store schema v1->v2 migration.</p>
+          </article>
+          
 
-    <article class="roadmap-card" data-status="POST_RC1_CANDIDATE">
-      <div class="roadmap-card-header">
-        <span class="gate-id">R1</span>
-        <span class="truth-pill post_rc1_candidate">POST RC1 CANDIDATE</span>
-      </div>
-      <h3 class="gate-title">Lienzo Domain Core & Revision CAS</h3>
-      <p class="gate-desc">Persistent versioned identity, component DAG, exclusive CAS store, Impact Engine.</p>
-    </article>
-    
+          <article class="gate-card verified_local">
+            <div class="gate-header">
+              <span class="gate-id">P4</span>
+              <span class="gate-status-pill verified_local">VERIFIED_LOCAL</span>
+            </div>
+            <h2 class="gate-title">Public Status V2 & Public Architect V1</h2>
+            <p class="gate-desc">Story Mode public architecture, Apple-style highlights carousel, interactive module explorer, sticky storytelling, token-boundary Public Architect responder.</p>
+          </article>
+          
 
-    <article class="roadmap-card" data-status="POST_RC1_CANDIDATE">
-      <div class="roadmap-card-header">
-        <span class="gate-id">R2</span>
-        <span class="truth-pill post_rc1_candidate">POST RC1 CANDIDATE</span>
+          <article class="gate-card released_rc1">
+            <div class="gate-header">
+              <span class="gate-id">P5</span>
+              <span class="gate-status-pill released_rc1">RELEASED_RC1</span>
+            </div>
+            <h2 class="gate-title">Integrated Pre-Release Audit & Release</h2>
+            <p class="gate-desc">Final global verification across all modules, zero regression validation, artifact promotion to released state.</p>
+          </article>
+          
       </div>
-      <h3 class="gate-title">Shim Reality & Editorial Resolution</h3>
-      <p class="gate-desc">Transverse 3-plane observation (Planned/Observed/Resolved), missing beat gap detection.</p>
-    </article>
-    
-
-    <article class="roadmap-card" data-status="POST_RC1_CANDIDATE">
-      <div class="roadmap-card-header">
-        <span class="gate-id">R3</span>
-        <span class="truth-pill post_rc1_candidate">POST RC1 CANDIDATE</span>
-      </div>
-      <h3 class="gate-title">YOD Intelligence & Opportunity Scanner</h3>
-      <p class="gate-desc">Continuous niche opportunity scoring, prompt compiler, feedback learning loop.</p>
-    </article>
-    
-
-    <article class="roadmap-card" data-status="CONTRACT_ONLY">
-      <div class="roadmap-card-header">
-        <span class="gate-id">R4</span>
-        <span class="truth-pill contract_only">CONTRACT ONLY</span>
-      </div>
-      <h3 class="gate-title">VAV Modular Pipelines & Automated Cuts</h3>
-      <p class="gate-desc">Dynamic multi-track blueprint routing, automatic take relinking.</p>
-    </article>
-    
-
-    <article class="roadmap-card" data-status="PLANNED">
-      <div class="roadmap-card-header">
-        <span class="gate-id">R5</span>
-        <span class="truth-pill planned">PLANNED</span>
-      </div>
-      <h3 class="gate-title">Collaborative CAS & Cloud Sync</h3>
-      <p class="gate-desc">Multi-user CRDT cursor synchronization, distributed opaque cloud store.</p>
-    </article>
-    
-
-    <article class="roadmap-card" data-status="PLANNED">
-      <div class="roadmap-card-header">
-        <span class="gate-id">R6</span>
-        <span class="truth-pill planned">PLANNED</span>
-      </div>
-      <h3 class="gate-title">Distributed Autonomous Orchestration</h3>
-      <p class="gate-desc">Self-healing pipeline execution, multi-channel distribution network.</p>
-    </article>
-    
     </div>
   </main>
 
+  
+  <div id="public-architect-drawer" class="architect-drawer" aria-hidden="true" role="dialog" aria-label="Public Architect Inquiry Engine">
+    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
+    <div class="architect-drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <span class="architect-spark">✦</span>
+          <h3>Public Architect</h3>
+          <span class="drawer-badge">Deterministic NLP</span>
+        </div>
+        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Assistant">✕</button>
+      </div>
+      <div class="drawer-body">
+        <p class="drawer-intro">Query canonical architecture, module ownership boundaries, truth status, or semantic principles directly.</p>
+        <div class="architect-form-group">
+          <input type="text" id="architect-query-input" class="architect-input" placeholder="e.g., What does Shim own? How does Vav synthesize?" aria-label="Query input">
+          <button id="architect-query-submit" class="architect-submit-btn">Query</button>
+        </div>
+        <div class="quick-prompt-chips">
+          <span class="chip-label">Suggestions:</span>
+          <button class="prompt-chip" data-q="What is the role of Yod?">Yod</button>
+          <button class="prompt-chip" data-q="Explain Lienzo persistence">Lienzo</button>
+          <button class="prompt-chip" data-q="What does Shim own?">Shim</button>
+          <button class="prompt-chip" data-q="How does Vav work?">Vav</button>
+          <button class="prompt-chip" data-q="What is He I vs He II?">He I vs He II</button>
+          <button class="prompt-chip" data-q="Explain OUT_OF_SYNC">OUT_OF_SYNC</button>
+        </div>
+        <div id="architect-response-container" class="architect-response-card" style="display: none;">
+          <div class="response-topic" id="architect-response-topic">TOPIC</div>
+          <div class="response-body" id="architect-response-text">Response content...</div>
+          <div class="response-meta" id="architect-response-meta">RC1 Verified Truth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
-        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Audiovisual Synthesis.</p>
+        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
         <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
       </div>
       <div class="footer-col">
         <h4>Architecture</h4>
         <ul>
           <li><a href="../system/index.html">System Dashboard</a></li>
-          <li><a href="../tools/index.html">Tool Directory</a></li>
+          <li><a href="../tools/index.html">Module Index</a></li>
           <li><a href="../flow/index.html">Pipeline Blueprints</a></li>
-          <li><a href="../roadmap/index.html">Roadmap & Gates</a></li>
+          <li><a href="../roadmap/index.html">Architecture Gates</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Core Modules</h4>
+        <h4>Canon & Taste</h4>
         <ul>
-          <li><a href="../tools/yod/index.html">Yod Intelligence</a></li>
-          <li><a href="../tools/lienzo/index.html">Lienzo Identity</a></li>
-          <li><a href="../tools/he/index.html">He Operations</a></li>
-          <li><a href="../tools/shim/index.html">Shim Reality</a></li>
-          <li><a href="../tools/vav/index.html">VAV Forge</a></li>
+          <li><a href="../taste/index.html">The Taste System</a></li>
+          <li><a href="../principles/index.html">Core Principles</a></li>
+          <li><a href="../proof/index.html">Verified Evidence</a></li>
+          <li><a href="../tools/arquitecto/index.html">Arquitecto Eye</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Canon & Proof</h4>
+        <h4>Modules</h4>
         <ul>
-          <li><a href="../proof/index.html">Evidence Registry</a></li>
-          <li><a href="../taste/index.html">Taste & Design System</a></li>
-          <li><a href="../principles/index.html">Principles & Invariants</a></li>
-          <li><a href="../tools/arquitecto/index.html">Arquitecto Oversight</a></li>
+          <li><a href="../tools/yod/index.html">YOD (Intelligence)</a></li>
+          <li><a href="../tools/lienzo/index.html">LIENZO (Identity Spine)</a></li>
+          <li><a href="../tools/shim/index.html">SHIM (Boundary Metrology)</a></li>
+          <li><a href="../tools/vav/index.html">VAV (Production Forge)</a></li>
+          <li><a href="../tools/he/index.html">HE (Malkhut Interface)</a></li>
+          <li><a href="../tools/publishing/index.html">PUBLISHER (Moon Loop)</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 ABRAXAS OS. All rights reserved. Forensic truth backed by immutable Git verification.</p>
-      <p class="footer-mono">Commit: <span class="mono-hash">91234741f0b3a1ac5bd7e4c0556fafa868d00769</span></p>
+      <div class="footer-copy">© 2026 ABRAXAS OS. All rights reserved. Deterministic Closed-Loop Architecture.</div>
+      <div class="footer-meta">
+        <span class="footer-mono">SHA: 28c3fbc85d484afc9fc60ae4a4aafd6776f62489</span>
+      </div>
     </div>
   </footer>
-  
-  
-  <div id="architect-drawer" class="architect-drawer" aria-hidden="true">
-    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
-    <div class="architect-drawer-panel" role="dialog" aria-label="Public Architect Guidance">
-      <div class="drawer-header">
-        <div class="drawer-title-group">
-          <span class="architect-icon">✦</span>
-          <h3>Public Architect</h3>
-          <span class="drawer-badge">Deterministic Token Matrix</span>
-        </div>
-        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Public Architect">✕</button>
-      </div>
-      <div class="drawer-body">
-        <p class="drawer-intro">Contextual guidance consuming canonical YOD criteria, system topologies, and operational invariants.</p>
-        
-        <form id="drawer-architect-form" class="architect-form-group" onsubmit="event.preventDefault(); window.__ABRAXAS_QUERY_ARCHITECT__?.(document.getElementById('drawer-architect-input').value);">
-          <input type="text" id="drawer-architect-input" class="architect-input" placeholder="Ask about YOD, Lienzo, Shim, He, VAV, or Invariants..." autocomplete="off" />
-          <button type="submit" class="architect-submit-btn">Consult</button>
-        </form>
-
-        <div class="quick-prompt-chips">
-          <span class="chip-label">Suggestions:</span>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is YOD?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is YOD?');">What is YOD?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Lienzo?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Lienzo?');">What is Lienzo?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Shim?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Shim?');">What is Shim?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is VAV?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is VAV?');">What is VAV?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is OUT_OF_SYNC?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is OUT_OF_SYNC?');">OUT_OF_SYNC</button>
-        </div>
-
-        <div id="drawer-architect-response-card" class="architect-response-card" style="display: none;">
-          <div class="response-topic" id="drawer-response-topic"></div>
-          <div class="response-body" id="drawer-response-text"></div>
-          <div class="response-meta" id="drawer-response-meta"></div>
-        </div>
-      </div>
-    </div>
-  </div>
   
   <script type="module" src="../assets/status-v3.js"></script>
 </body>

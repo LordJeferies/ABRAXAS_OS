@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Event Ledger (Provenance) Specification — ABRAXAS OS</title>
+  <title>Event Ledger (Provenance) — ABRAXAS OS</title>
   <link rel="stylesheet" href="../../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="multipage-body tool-detail-page">
+<body class="page-body">
   
   <header id="global-header" class="site-header" role="banner">
     <div class="header-inner">
@@ -18,17 +21,17 @@
         <span class="brand-tag">v1.0.0-rc1</span>
       </div>
       <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
-        <a href="../../index.html" class="nav-link ">Story</a>
+        <a href="../../index.html" class="nav-link ">Manifesto</a>
         <a href="../../system/index.html" class="nav-link ">System</a>
-        <a href="../../tools/index.html" class="nav-link active">Tools</a>
+        <a href="../../tools/index.html" class="nav-link active">Modules</a>
         <a href="../../flow/index.html" class="nav-link ">Flow</a>
+        <a href="../../taste/index.html" class="nav-link ">Taste</a>
         <a href="../../proof/index.html" class="nav-link ">Proof</a>
         <a href="../../roadmap/index.html" class="nav-link ">Roadmap</a>
-        <a href="../../taste/index.html" class="nav-link ">Taste</a>
         <a href="../../principles/index.html" class="nav-link ">Principles</a>
       </nav>
       <div class="header-right">
-        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Query Assistant">
+        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Assistant">
           <span class="architect-spark">✦</span> Ask Architect
         </button>
       </div>
@@ -36,225 +39,249 @@
   </header>
   
 
-  <main id="main-content" class="page-container">
-    <div class="breadcrumb-bar">
-      <a href="../../index.html">ABRAXAS</a>
-      <span class="crumb-sep">/</span>
-      <a href="../index.html">Tools</a>
-      <span class="crumb-sep">/</span>
-      <span class="crumb-current">Event Ledger</span>
-    </div>
-
-    <div class="tool-hero-section">
-      <div class="tool-hero-content">
-        <div class="tool-status-badge-row">
-          <span class="truth-pill post_rc1_candidate">POST RC1 CANDIDATE</span>
-          <span class="domain-badge">Provenance</span>
-          <span class="status-badge">CONTRACT_ONLY</span>
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Modules</a> / <span>Event Ledger</span></div>
+        <div class="module-title-row">
+          <h1 class="page-title">Event Ledger</h1>
+          <div class="truth-pill post_rc1_candidate">POST_RC1_CANDIDATE</div>
         </div>
-        <h1 class="tool-title">Event Ledger</h1>
-        <p class="tool-role-tag">Immutable System Activity Stream</p>
-        <p class="tool-lead">Maintains an append-only, chronologically ordered ledger of all system transitions.</p>
+        <div class="module-domain-badge">Domain: Provenance // Archetype: Hod (Splendor / Asynchronous Event Ledger)</div>
+        <p class="page-description">Maintains an append-only, chronologically ordered ledger of all system transitions.</p>
       </div>
-      
-      <div class="domain-protagonist generic-protagonist">
-        <svg viewBox="0 0 400 240" class="protagonist-svg" aria-label="Event Ledger Schematic Graphic">
-          <circle cx="200" cy="110" r="60" stroke="#64748b" stroke-width="1.5" fill="none" opacity="0.4" />
-          <circle cx="200" cy="110" r="30" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.06)" />
-          <text x="200" y="205" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono" font-size="11">EVENT LEDGER // PROVENANCE</text>
-        </svg>
-      </div>
-    </div>
 
-    <div class="tool-deep-grid">
-      <!-- 1. What & Why -->
-      <section class="dossier-card">
-        <h2 class="section-title">01. What &amp; Why</h2>
-        <div class="card-body">
-          <p><strong>Definition:</strong> The chronological append-only record of every meaningful system transition.</p>
-          <p><strong>Why It Exists:</strong> Provides complete forensic auditability—who changed what, when, and why across all modules.</p>
-        </div>
-      </section>
+      <div class="dossier-grid">
+        
+        <!-- Main Content Column -->
+        <div class="dossier-main-col">
+          
+          <!-- 1. What It Is & Core Purpose -->
+          <section class="dossier-section">
+            <h2 class="section-title">1. What It Is & Purpose</h2>
+            <p class="section-lead">Provides complete forensic auditability—who changed what, when, and why across all modules.</p>
+            <p>In the ABRAXAS closed-loop architecture, <strong>Event Ledger</strong> operates as the definitive owner of provenance semantics. It ensures that content pieces are generated with strict provenance, preventing guesswork or silent state corruption.</p>
+          </section>
 
-      <!-- 2. Ownership Boundaries -->
-      <section class="dossier-card">
-        <h2 class="section-title">02. Ownership Boundaries</h2>
-        <div class="card-body">
-          <div class="boundary-split">
-            <div class="owns-col">
-              <h3 class="col-title text-emerald">✓ Owns</h3>
-              <ul>
-                <li>Append-only event serialization</li><li>Deterministic event querying by contentId, actorId, taskId, or eventType</li>
-              </ul>
+          <!-- 2. Sephirot Tree of Life Mapping -->
+          <section class="dossier-section">
+            <h2 class="section-title">2. Sephirot Tree of Life Mapping</h2>
+            <div class="sephirot-box">
+              <div class="sephirot-header">
+                <span class="sephirot-glyph">⚝</span>
+                <h3>Hod (Splendor / Asynchronous Event Ledger)</h3>
+              </div>
+              <p><strong>Physical Chamber:</strong> Subterranean Event Ledger</p>
+              <p><strong>Cosmic Element:</strong> Event Stream / Ledger</p>
+              <p class="sephirot-desc">Strict typed event bus capturing lifecycle transitions, state invalidations, and audit records.</p>
             </div>
-            <div class="does-not-own-col">
-              <h3 class="col-title text-rose">✗ Does Not Own</h3>
-              <ul>
-                <li>Does NOT replace Lienzo as the source of truth for content state</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <!-- 3. Contracts & Flow -->
-      <section class="dossier-card">
-        <h2 class="section-title">03. Contracts &amp; Data Flow</h2>
-        <div class="card-body">
-          <div class="io-grid">
-            <div class="io-block">
+          <!-- 3. Concrete Understandable Example -->
+          <section class="dossier-section">
+            <h2 class="section-title">3. Operational Example Scenario</h2>
+            <div class="example-box">
+              <div class="example-badge">Workflow Execution</div>
+              <p class="example-flow-text"><code>Domain transition occurs -> Event payload signed -> Appended to ledger -> Available for audit trail.</code></p>
+              <p>When a content piece enters Event Ledger, it is treated with deterministic boundary verification. The system validates upstream state before applying transformations, guaranteeing reproducible output.</p>
+            </div>
+          </section>
+
+          <!-- 4. Strict Ownership Boundaries (What It Owns vs Does Not Own) -->
+          <section class="dossier-section">
+            <h2 class="section-title">4. Strict Ownership Boundaries</h2>
+            <div class="ownership-split-grid">
+              <div class="owns-col">
+                <h3 class="owns-title">✓ What Event Ledger OWNS</h3>
+                <ul class="boundary-list">
+                  <li>Append-only event serialization</li>
+<li>Deterministic event querying by contentId, actorId, taskId, or eventType</li>
+                </ul>
+              </div>
+              <div class="not-owns-col">
+                <h3 class="not-owns-title">✗ What Event Ledger DOES NOT OWN</h3>
+                <ul class="boundary-list">
+                  <li>Does NOT replace Lienzo as the source of truth for content state</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. What It Is vs What It Is Not -->
+          <section class="dossier-section">
+            <h2 class="section-title">5. What It Is vs What It Is Not</h2>
+            <div class="what-is-table-wrap">
+              <table class="what-is-table">
+                <thead>
+                  <tr>
+                    <th>What Event Ledger IS</th>
+                    <th>What Event Ledger IS NOT</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>A deterministic, domain-specific execution engine</td>
+                    <td>A generic third-party AI wrapper or chat prompt</td>
+                  </tr>
+                  <tr>
+                    <td>Strictly bound to immutable event and artifact schemas</td>
+                    <td>A mutable project management board with untracked edits</td>
+                  </tr>
+                  <tr>
+                    <td>Governed by verified taste and quality criteria</td>
+                    <td>An automated spam publishing script</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 6. Gaps, Dependencies & Roadmap Next Steps -->
+          <section class="dossier-section">
+            <h2 class="section-title">6. Current Gaps & Target Roadmap</h2>
+            <div class="roadmap-gap-box">
+              <h4>Current Status: <span class="highlight-text">Event schema and backbone ledger contracts frozen in RC1; append-only ledger verified in post-RC1 working candidate.</span></h4>
+              <p><strong>Bounded Debt:</strong> Decentralized append-only ledger verification planned for Phase R14.</p>
+              <p><strong>Next Phase Milestones:</strong> Gate P1 (Contracts) → Gate R2 (Canonical Backbone)</p>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Sidebar Metadata Column -->
+        <aside class="dossier-sidebar">
+          <div class="sidebar-card">
+            <h3>I/O Specifications</h3>
+            <div class="io-group">
               <span class="io-label">Inputs:</span>
-              <ul><li><code>Typed events from all domain services</code></li></ul>
+              <ul class="io-list">
+                <li><code>Typed events from all domain services</code></li>
+              </ul>
             </div>
-            <div class="io-block">
+            <div class="io-group">
               <span class="io-label">Outputs:</span>
-              <ul><li><code>Immutable Event Log</code></li><li><code>Activity Streams</code></li></ul>
+              <ul class="io-list">
+                <li><code>Immutable Event Log</code></li>
+<li><code>Activity Streams</code></li>
+              </ul>
             </div>
           </div>
-          <div class="flow-example-box">
-            <span class="box-label">Example Lifecycle Flow:</span>
-            <p class="flow-text">Domain transition occurs -> Event payload signed -> Appended to ledger -> Available for audit trail.</p>
-          </div>
-        </div>
-      </section>
 
-      <!-- 4. Lineage: Events & Artifacts -->
-      <section class="dossier-card">
-        <h2 class="section-title">04. Events &amp; Produced Lineage</h2>
-        <div class="card-body">
-          <div class="lineage-split">
-            <div>
-              <span class="io-label">Emitted Events:</span>
-              <ul><li><span class="event-chip">EVENT_APPENDED</span></li></ul>
-            </div>
-            <div>
-              <span class="io-label">Produced Artifacts:</span>
-              <ul><li><span class="artifact-chip">EventLedgerArchive</span></li></ul>
+          <div class="sidebar-card">
+            <h3>Event Footprint</h3>
+            <div class="event-chips">
+              <span class="event-chip">EVENT_APPENDED</span>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- 5. Capability Status & Roadmap -->
-      <section class="dossier-card">
-        <h2 class="section-title">05. Capability Truth &amp; Roadmap</h2>
-        <div class="card-body">
-          <div class="cap-comparison-grid">
-            <div class="cap-col">
-              <h3 class="col-title text-cyan">Current Capabilities</h3>
-              <ul><li>Event Schema Specifications</li><li>Ledger Append Interfaces</li><li>EventLedger Core (Working Candidate)</li></ul>
-            </div>
-            <div class="cap-col">
-              <h3 class="col-title text-amber">Target Capabilities</h3>
-              <ul><li>Distributed Event Streaming</li><li>Real-Time WebSocket Subscription Relay</li></ul>
+          <div class="sidebar-card">
+            <h3>Artifact Footprint</h3>
+            <div class="artifact-chips">
+              <span class="artifact-chip">◈ EventLedgerArchive</span>
             </div>
           </div>
-          <div class="debt-box">
-            <span class="box-label">Bounded Technical Debt:</span>
-            <ul><li>Decentralized append-only ledger verification planned for Phase R14.</li></ul>
-          </div>
-        </div>
-      </section>
 
-      <!-- 6. Evidence & Verification -->
-      <section class="dossier-card">
-        <h2 class="section-title">06. Verification &amp; Evidence Citations</h2>
-        <div class="card-body">
-          <p class="status-detail-text"><strong>Live Verification Detail:</strong> Event schema and backbone ledger contracts frozen in RC1; append-only ledger verified in post-RC1 working candidate.</p>
-          <div class="evidence-citations">
-            <span class="citation-label">Referenced Proof:</span>
-            <ul><li><code>release:test-suite</code></li><li><code>evidence:event-ledger-backbone</code></li></ul>
+          <div class="sidebar-card">
+            <h3>Connected Modules</h3>
+            <ul class="conn-list">
+              <li>Cross-cuts all modules (YOD, LIENZO, HE, SHIM, VAV, PUBLISHING, METRICS)</li>
+            </ul>
           </div>
-        </div>
-      </section>
-    </div>
 
-    <div class="tool-navigation-footer">
-      <a href="../index.html" class="nav-back-btn">← Back to All Tools</a>
-      <a href="../../system/index.html" class="nav-system-btn">Inspect in 3D System Explorer →</a>
+          <div class="sidebar-card">
+            <h3>Verified Evidence</h3>
+            <ul class="evidence-list">
+              <li><a href="../../proof/index.html#release:test-suite">✓ release:test-suite</a></li>
+<li><a href="../../proof/index.html#evidence:event-ledger-backbone">✓ evidence:event-ledger-backbone</a></li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
     </div>
   </main>
 
+  
+  <div id="public-architect-drawer" class="architect-drawer" aria-hidden="true" role="dialog" aria-label="Public Architect Inquiry Engine">
+    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
+    <div class="architect-drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <span class="architect-spark">✦</span>
+          <h3>Public Architect</h3>
+          <span class="drawer-badge">Deterministic NLP</span>
+        </div>
+        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Assistant">✕</button>
+      </div>
+      <div class="drawer-body">
+        <p class="drawer-intro">Query canonical architecture, module ownership boundaries, truth status, or semantic principles directly.</p>
+        <div class="architect-form-group">
+          <input type="text" id="architect-query-input" class="architect-input" placeholder="e.g., What does Shim own? How does Vav synthesize?" aria-label="Query input">
+          <button id="architect-query-submit" class="architect-submit-btn">Query</button>
+        </div>
+        <div class="quick-prompt-chips">
+          <span class="chip-label">Suggestions:</span>
+          <button class="prompt-chip" data-q="What is the role of Yod?">Yod</button>
+          <button class="prompt-chip" data-q="Explain Lienzo persistence">Lienzo</button>
+          <button class="prompt-chip" data-q="What does Shim own?">Shim</button>
+          <button class="prompt-chip" data-q="How does Vav work?">Vav</button>
+          <button class="prompt-chip" data-q="What is He I vs He II?">He I vs He II</button>
+          <button class="prompt-chip" data-q="Explain OUT_OF_SYNC">OUT_OF_SYNC</button>
+        </div>
+        <div id="architect-response-container" class="architect-response-card" style="display: none;">
+          <div class="response-topic" id="architect-response-topic">TOPIC</div>
+          <div class="response-body" id="architect-response-text">Response content...</div>
+          <div class="response-meta" id="architect-response-meta">RC1 Verified Truth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
-        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Audiovisual Synthesis.</p>
+        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
         <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
       </div>
       <div class="footer-col">
         <h4>Architecture</h4>
         <ul>
           <li><a href="../../system/index.html">System Dashboard</a></li>
-          <li><a href="../../tools/index.html">Tool Directory</a></li>
+          <li><a href="../../tools/index.html">Module Index</a></li>
           <li><a href="../../flow/index.html">Pipeline Blueprints</a></li>
-          <li><a href="../../roadmap/index.html">Roadmap & Gates</a></li>
+          <li><a href="../../roadmap/index.html">Architecture Gates</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Core Modules</h4>
+        <h4>Canon & Taste</h4>
         <ul>
-          <li><a href="../../tools/yod/index.html">Yod Intelligence</a></li>
-          <li><a href="../../tools/lienzo/index.html">Lienzo Identity</a></li>
-          <li><a href="../../tools/he/index.html">He Operations</a></li>
-          <li><a href="../../tools/shim/index.html">Shim Reality</a></li>
-          <li><a href="../../tools/vav/index.html">VAV Forge</a></li>
+          <li><a href="../../taste/index.html">The Taste System</a></li>
+          <li><a href="../../principles/index.html">Core Principles</a></li>
+          <li><a href="../../proof/index.html">Verified Evidence</a></li>
+          <li><a href="../../tools/arquitecto/index.html">Arquitecto Eye</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Canon & Proof</h4>
+        <h4>Modules</h4>
         <ul>
-          <li><a href="../../proof/index.html">Evidence Registry</a></li>
-          <li><a href="../../taste/index.html">Taste & Design System</a></li>
-          <li><a href="../../principles/index.html">Principles & Invariants</a></li>
-          <li><a href="../../tools/arquitecto/index.html">Arquitecto Oversight</a></li>
+          <li><a href="../../tools/yod/index.html">YOD (Intelligence)</a></li>
+          <li><a href="../../tools/lienzo/index.html">LIENZO (Identity Spine)</a></li>
+          <li><a href="../../tools/shim/index.html">SHIM (Boundary Metrology)</a></li>
+          <li><a href="../../tools/vav/index.html">VAV (Production Forge)</a></li>
+          <li><a href="../../tools/he/index.html">HE (Malkhut Interface)</a></li>
+          <li><a href="../../tools/publishing/index.html">PUBLISHER (Moon Loop)</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 ABRAXAS OS. All rights reserved. Forensic truth backed by immutable Git verification.</p>
-      <p class="footer-mono">Commit: <span class="mono-hash">91234741f0b3a1ac5bd7e4c0556fafa868d00769</span></p>
+      <div class="footer-copy">© 2026 ABRAXAS OS. All rights reserved. Deterministic Closed-Loop Architecture.</div>
+      <div class="footer-meta">
+        <span class="footer-mono">SHA: 28c3fbc85d484afc9fc60ae4a4aafd6776f62489</span>
+      </div>
     </div>
   </footer>
-  
-  
-  <div id="architect-drawer" class="architect-drawer" aria-hidden="true">
-    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
-    <div class="architect-drawer-panel" role="dialog" aria-label="Public Architect Guidance">
-      <div class="drawer-header">
-        <div class="drawer-title-group">
-          <span class="architect-icon">✦</span>
-          <h3>Public Architect</h3>
-          <span class="drawer-badge">Deterministic Token Matrix</span>
-        </div>
-        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Public Architect">✕</button>
-      </div>
-      <div class="drawer-body">
-        <p class="drawer-intro">Contextual guidance consuming canonical YOD criteria, system topologies, and operational invariants.</p>
-        
-        <form id="drawer-architect-form" class="architect-form-group" onsubmit="event.preventDefault(); window.__ABRAXAS_QUERY_ARCHITECT__?.(document.getElementById('drawer-architect-input').value);">
-          <input type="text" id="drawer-architect-input" class="architect-input" placeholder="Ask about YOD, Lienzo, Shim, He, VAV, or Invariants..." autocomplete="off" />
-          <button type="submit" class="architect-submit-btn">Consult</button>
-        </form>
-
-        <div class="quick-prompt-chips">
-          <span class="chip-label">Suggestions:</span>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is YOD?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is YOD?');">What is YOD?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Lienzo?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Lienzo?');">What is Lienzo?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Shim?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Shim?');">What is Shim?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is VAV?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is VAV?');">What is VAV?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is OUT_OF_SYNC?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is OUT_OF_SYNC?');">OUT_OF_SYNC</button>
-        </div>
-
-        <div id="drawer-architect-response-card" class="architect-response-card" style="display: none;">
-          <div class="response-topic" id="drawer-response-topic"></div>
-          <div class="response-body" id="drawer-response-text"></div>
-          <div class="response-meta" id="drawer-response-meta"></div>
-        </div>
-      </div>
-    </div>
-  </div>
   
   <script type="module" src="../../assets/status-v3.js"></script>
 </body>

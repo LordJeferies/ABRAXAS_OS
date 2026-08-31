@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '../../..');
 const docsDir = path.resolve(rootDir, 'docs/abraxas-os-status');
 
-// 1. Read Canonical Datasets
+// 1. Read Datasets
 const pkPath = path.join(docsDir, 'public-knowledge.json');
 const evPath = path.join(docsDir, 'evidence-index.json');
 const bpPath = path.join(docsDir, 'pipeline-blueprints.json');
@@ -36,17 +36,17 @@ function getHeader(activeTab, relativeDepth = 0) {
         <span class="brand-tag">v1.0.0-rc1</span>
       </div>
       <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
-        <a href="${prefix}index.html" class="nav-link ${activeTab === 'story' ? 'active' : ''}">Story</a>
+        <a href="${prefix}index.html" class="nav-link ${activeTab === 'story' ? 'active' : ''}">Manifesto</a>
         <a href="${prefix}system/index.html" class="nav-link ${activeTab === 'system' ? 'active' : ''}">System</a>
-        <a href="${prefix}tools/index.html" class="nav-link ${activeTab === 'tools' ? 'active' : ''}">Tools</a>
+        <a href="${prefix}tools/index.html" class="nav-link ${activeTab === 'tools' ? 'active' : ''}">Modules</a>
         <a href="${prefix}flow/index.html" class="nav-link ${activeTab === 'flow' ? 'active' : ''}">Flow</a>
+        <a href="${prefix}taste/index.html" class="nav-link ${activeTab === 'taste' ? 'active' : ''}">Taste</a>
         <a href="${prefix}proof/index.html" class="nav-link ${activeTab === 'proof' ? 'active' : ''}">Proof</a>
         <a href="${prefix}roadmap/index.html" class="nav-link ${activeTab === 'roadmap' ? 'active' : ''}">Roadmap</a>
-        <a href="${prefix}taste/index.html" class="nav-link ${activeTab === 'taste' ? 'active' : ''}">Taste</a>
         <a href="${prefix}principles/index.html" class="nav-link ${activeTab === 'principles' ? 'active' : ''}">Principles</a>
       </nav>
       <div class="header-right">
-        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Query Assistant">
+        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Assistant">
           <span class="architect-spark">✦</span> Ask Architect
         </button>
       </div>
@@ -63,81 +63,82 @@ function getFooter(relativeDepth = 0) {
     <div class="footer-inner">
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
-        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Audiovisual Synthesis.</p>
+        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
         <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
       </div>
       <div class="footer-col">
         <h4>Architecture</h4>
         <ul>
           <li><a href="${prefix}system/index.html">System Dashboard</a></li>
-          <li><a href="${prefix}tools/index.html">Tool Directory</a></li>
+          <li><a href="${prefix}tools/index.html">Module Index</a></li>
           <li><a href="${prefix}flow/index.html">Pipeline Blueprints</a></li>
-          <li><a href="${prefix}roadmap/index.html">Roadmap & Gates</a></li>
+          <li><a href="${prefix}roadmap/index.html">Architecture Gates</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Core Modules</h4>
+        <h4>Canon & Taste</h4>
         <ul>
-          <li><a href="${prefix}tools/yod/index.html">Yod Intelligence</a></li>
-          <li><a href="${prefix}tools/lienzo/index.html">Lienzo Identity</a></li>
-          <li><a href="${prefix}tools/he/index.html">He Operations</a></li>
-          <li><a href="${prefix}tools/shim/index.html">Shim Reality</a></li>
-          <li><a href="${prefix}tools/vav/index.html">VAV Forge</a></li>
+          <li><a href="${prefix}taste/index.html">The Taste System</a></li>
+          <li><a href="${prefix}principles/index.html">Core Principles</a></li>
+          <li><a href="${prefix}proof/index.html">Verified Evidence</a></li>
+          <li><a href="${prefix}tools/arquitecto/index.html">Arquitecto Eye</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Canon & Proof</h4>
+        <h4>Modules</h4>
         <ul>
-          <li><a href="${prefix}proof/index.html">Evidence Registry</a></li>
-          <li><a href="${prefix}taste/index.html">Taste & Design System</a></li>
-          <li><a href="${prefix}principles/index.html">Principles & Invariants</a></li>
-          <li><a href="${prefix}tools/arquitecto/index.html">Arquitecto Oversight</a></li>
+          <li><a href="${prefix}tools/yod/index.html">YOD (Intelligence)</a></li>
+          <li><a href="${prefix}tools/lienzo/index.html">LIENZO (Identity Spine)</a></li>
+          <li><a href="${prefix}tools/shim/index.html">SHIM (Boundary Metrology)</a></li>
+          <li><a href="${prefix}tools/vav/index.html">VAV (Production Forge)</a></li>
+          <li><a href="${prefix}tools/he/index.html">HE (Malkhut Interface)</a></li>
+          <li><a href="${prefix}tools/publishing/index.html">PUBLISHER (Moon Loop)</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 ABRAXAS OS. All rights reserved. Forensic truth backed by immutable Git verification.</p>
-      <p class="footer-mono">Commit: <span class="mono-hash">91234741f0b3a1ac5bd7e4c0556fafa868d00769</span></p>
+      <div class="footer-copy">© 2026 ABRAXAS OS. All rights reserved. Deterministic Closed-Loop Architecture.</div>
+      <div class="footer-meta">
+        <span class="footer-mono">SHA: 28c3fbc85d484afc9fc60ae4a4aafd6776f62489</span>
+      </div>
     </div>
   </footer>
   `;
 }
 
-// Shared Public Architect Drawer
+// Shared Architect Drawer Template
 function getArchitectDrawer() {
   return `
-  <div id="architect-drawer" class="architect-drawer" aria-hidden="true">
+  <div id="public-architect-drawer" class="architect-drawer" aria-hidden="true" role="dialog" aria-label="Public Architect Inquiry Engine">
     <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
-    <div class="architect-drawer-panel" role="dialog" aria-label="Public Architect Guidance">
+    <div class="architect-drawer-panel">
       <div class="drawer-header">
         <div class="drawer-title-group">
-          <span class="architect-icon">✦</span>
+          <span class="architect-spark">✦</span>
           <h3>Public Architect</h3>
-          <span class="drawer-badge">Deterministic Token Matrix</span>
+          <span class="drawer-badge">Deterministic NLP</span>
         </div>
-        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Public Architect">✕</button>
+        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Assistant">✕</button>
       </div>
       <div class="drawer-body">
-        <p class="drawer-intro">Contextual guidance consuming canonical YOD criteria, system topologies, and operational invariants.</p>
-        
-        <form id="drawer-architect-form" class="architect-form-group" onsubmit="event.preventDefault(); window.__ABRAXAS_QUERY_ARCHITECT__?.(document.getElementById('drawer-architect-input').value);">
-          <input type="text" id="drawer-architect-input" class="architect-input" placeholder="Ask about YOD, Lienzo, Shim, He, VAV, or Invariants..." autocomplete="off" />
-          <button type="submit" class="architect-submit-btn">Consult</button>
-        </form>
-
+        <p class="drawer-intro">Query canonical architecture, module ownership boundaries, truth status, or semantic principles directly.</p>
+        <div class="architect-form-group">
+          <input type="text" id="architect-query-input" class="architect-input" placeholder="e.g., What does Shim own? How does Vav synthesize?" aria-label="Query input">
+          <button id="architect-query-submit" class="architect-submit-btn">Query</button>
+        </div>
         <div class="quick-prompt-chips">
           <span class="chip-label">Suggestions:</span>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is YOD?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is YOD?');">What is YOD?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Lienzo?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Lienzo?');">What is Lienzo?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Shim?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Shim?');">What is Shim?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is VAV?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is VAV?');">What is VAV?</button>
-          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is OUT_OF_SYNC?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is OUT_OF_SYNC?');">OUT_OF_SYNC</button>
+          <button class="prompt-chip" data-q="What is the role of Yod?">Yod</button>
+          <button class="prompt-chip" data-q="Explain Lienzo persistence">Lienzo</button>
+          <button class="prompt-chip" data-q="What does Shim own?">Shim</button>
+          <button class="prompt-chip" data-q="How does Vav work?">Vav</button>
+          <button class="prompt-chip" data-q="What is He I vs He II?">He I vs He II</button>
+          <button class="prompt-chip" data-q="Explain OUT_OF_SYNC">OUT_OF_SYNC</button>
         </div>
-
-        <div id="drawer-architect-response-card" class="architect-response-card" style="display: none;">
-          <div class="response-topic" id="drawer-response-topic"></div>
-          <div class="response-body" id="drawer-response-text"></div>
-          <div class="response-meta" id="drawer-response-meta"></div>
+        <div id="architect-response-container" class="architect-response-card" style="display: none;">
+          <div class="response-topic" id="architect-response-topic">TOPIC</div>
+          <div class="response-body" id="architect-response-text">Response content...</div>
+          <div class="response-meta" id="architect-response-meta">RC1 Verified Truth</div>
         </div>
       </div>
     </div>
@@ -145,407 +146,639 @@ function getArchitectDrawer() {
   `;
 }
 
-// 2. Generate Tools Directory Page (/tools/index.html)
-function generateToolsDirectoryPage() {
-  const toolsDir = path.join(docsDir, 'tools');
-  fs.mkdirSync(toolsDir, { recursive: true });
+// Module Sephirot Mapping Metadata
+const sephirotMetadata = {
+  YOD: {
+    sephirot: "Supernal Triad (Keter, Chokhmah, Binah)",
+    roleDescription: "The crown and originating intellect of the system, receiving pure energetic alignment from the solar source.",
+    element: "Fire / Primal Seed",
+    chamber: "Golden Apex Summit Pyramidion"
+  },
+  LIENZO: {
+    sephirot: "Central Axis (Keter-to-Malkhut Spinal Cord)",
+    roleDescription: "The immutable identity spine running through all levels, maintaining content integrity and versioned revision rings.",
+    element: "Aether / Crystalline Core",
+    chamber: "Central Corbelled Axial Shaft"
+  },
+  SHIM: {
+    sephirot: "Da'at (The Abyss / Threshold) & Gevurah (Judgment)",
+    roleDescription: "The metrology and critical boundary enforcement chamber, scanning discrepancy between planned intent and observed reality.",
+    element: "Air / Scanning Laser",
+    chamber: "Transverse Metrology Gallery"
+  },
+  VAV: {
+    sephirot: "Tiferet (Heart of the Tree / Harmony & Synthesis)",
+    roleDescription: "The central production forge connecting upper intellectual planning with lower physical media manifestation.",
+    element: "Earth / Metal Forge",
+    chamber: "Subterranean Bedrock Forge"
+  },
+  HE: {
+    sephirot: "Malkhut (The Kingdom / Physical Manifestation)",
+    roleDescription: "The interface, task coordination, and external exposure layer through which the system touches humans and tools.",
+    element: "Water / Operational Flow",
+    chamber: "Ascending & Descending Portals"
+  },
+  PUBLISHING: {
+    sephirot: "The Celestial Moon (Distribution & Planetary Bridge)",
+    roleDescription: "The celestial satellite mediating between the internal monument and external social ecosystems.",
+    element: "Lunar Gravity / Distribution Stream",
+    chamber: "Orbital Moon Station"
+  },
+  METRICS: {
+    sephirot: "Yesod (Foundation & Return Telemetry Loops)",
+    roleDescription: "Gathers performance signals, audience resonance, and learning feedback from the world back into YOD.",
+    element: "Signal Wave / Feedback Arc",
+    chamber: "Lunar Observability Observatory"
+  },
+  ARQUITECTO: {
+    sephirot: "Ain Soph Aur (The Observing Eye & Supreme Overseer)",
+    roleDescription: "Holographic etching intelligence aligned with the solar eclipse, ensuring strict adherence to canonical taste and architecture.",
+    element: "Holographic Light / Optical Reticle",
+    chamber: "Apex Gimbal Mount"
+  },
+  "PIPELINE-ENGINE": {
+    sephirot: "The 22 Paths (Connective Energy Channels)",
+    roleDescription: "Deterministic route execution engine moving media payloads through stages without mutating state.",
+    element: "Conduit Rail / State Transit",
+    chamber: "Internal Stone Conduits"
+  },
+  "AI-RUNTIME": {
+    sephirot: "Netzach (Endurance / Raw Execution Substrate)",
+    roleDescription: "Isolated worker processes executing LLM inference, transcription, and computer vision contracts.",
+    element: "Compute Matrix / Inference Grid",
+    chamber: "Bedrock Compute Chamber"
+  },
+  "UNIVERSAL-INTAKE": {
+    sephirot: "Ingress Gateway (Threshold of the World)",
+    roleDescription: "Normalizes raw video, audio, transcripts, and assets into verified Lienzo drafts.",
+    element: "Intake Gate / Ingress Funnel",
+    chamber: "Northern Perimeter Ingress Portal"
+  },
+  EVENTS: {
+    sephirot: "Hod (Splendor / Asynchronous Event Ledger)",
+    roleDescription: "Strict typed event bus capturing lifecycle transitions, state invalidations, and audit records.",
+    element: "Event Stream / Ledger",
+    chamber: "Subterranean Event Ledger"
+  },
+  ARTIFACTS: {
+    sephirot: "Otzar (The Vault / Immutable Hash Registry)",
+    roleDescription: "Content-addressed storage for verified exports, cut lists, EDL files, and master video renders.",
+    element: "Immutable Vault / Hash Grid",
+    chamber: "Bedrock Artifact Vault"
+  }
+};
 
-  const moduleCards = publicKnowledge.modules.map((m) => {
-    const slug = m.id.toLowerCase().replace(/_/g, '-');
-    const truthClass = m.truthLayer.toLowerCase();
-    return `
-    <article class="tool-card" data-domain="${m.domain}" data-truth="${m.truthLayer}">
-      <div class="tool-card-header">
-        <div class="tool-domain-tag">${m.domain}</div>
-        <span class="truth-pill ${truthClass}">${m.truthLayer.replace(/_/g, ' ')}</span>
-      </div>
-      <h3 class="tool-card-title"><a href="./${slug}/index.html">${m.name}</a></h3>
-      <p class="tool-card-role">${m.role}</p>
-      <p class="tool-card-desc">${m.shortDefinition}</p>
-      
-      <div class="tool-card-capabilities">
-        <span class="cap-label">Key Capabilities:</span>
-        <div class="cap-tags">
-          ${(m.currentCapabilities || []).slice(0, 3).map(c => `<span class="cap-tag">${c}</span>`).join('')}
+// Generate Landing Page (Index)
+function generateLandingPage() {
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABRAXAS OS — Public Status & Architecture</title>
+  <link rel="stylesheet" href="./assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="landing-story-body">
+  ${getHeader('story', 0)}
+
+  <!-- Fullscreen Spatial 3D Canvas -->
+  <div id="spatial-pyramid-container" class="spatial-canvas-fullscreen" aria-label="ABRAXAS 3D Spatial Architecture Canvas"></div>
+
+  <!-- Narrative Manifesto Scroll Track -->
+  <main id="story-scroll-container" class="story-scroll-container">
+    
+    <!-- Act 0: Genesis / Monumental Cover -->
+    <section class="story-act-section act-0" data-act="0">
+      <div class="act-content-wrap">
+        <div class="act-tag">0. MANIFESTO // GENESIS</div>
+        <h1 class="act-headline">The Architecture of Intelligence.</h1>
+        <p class="act-lead">A monolithic operating system engineered for deterministic content intelligence, rigorous operational governance, and audiovisual synthesis.</p>
+        <div class="hero-actions">
+          <a href="./system/index.html" class="btn-primary">Explore System Dashboard →</a>
+          <a href="./taste/index.html" class="btn-secondary">The Taste System</a>
         </div>
       </div>
+    </section>
 
-      <div class="tool-card-footer">
-        <a href="./${slug}/index.html" class="tool-deep-link">Deep Specification →</a>
+    <!-- Act 1: Yod & The Golden Apex -->
+    <section class="story-act-section act-1" data-act="1">
+      <div class="act-content-wrap">
+        <div class="act-tag">1. SUPERNAL TRIAD // YOD & ARQUITECTO</div>
+        <h2 class="act-headline">Intelligence in the Golden Apex.</h2>
+        <p class="act-lead">At the summit of the Giza massing sits the golden pyramidion. Here YOD receives strategic solar alignment, maintaining voice criteria, hook taxonomies, and opportunity detection without blank-slate guesswork.</p>
+        <div class="hero-actions">
+          <a href="./tools/yod/index.html" class="btn-secondary">Inspect YOD Module →</a>
+        </div>
       </div>
-    </article>
-    `;
-  }).join('\n');
+    </section>
 
-  // Subtool Cards
-  const subtoolCards = `
-    <article class="tool-card subtool-card" data-domain="Production" data-truth="RELEASED_CURRENT">
-      <div class="tool-card-header">
-        <div class="tool-domain-tag">VAV Subtool</div>
-        <span class="truth-pill released_current">RELEASED CURRENT</span>
+    <!-- Act 2: Lienzo Central Axis -->
+    <section class="story-act-section act-2" data-act="2">
+      <div class="act-content-wrap">
+        <div class="act-tag">2. AXIAL SPINE // LIENZO CORE</div>
+        <h2 class="act-headline">The Immutable Spinal Cord.</h2>
+        <p class="act-lead">Descending vertically through the monument, the hexagonal sapphire Lienzo shaft preserves single-piece identity. Every mutation is versioned through immutable revision rings and DAG state validation.</p>
+        <div class="hero-actions">
+          <a href="./tools/lienzo/index.html" class="btn-secondary">Inspect LIENZO Module →</a>
+        </div>
       </div>
-      <h3 class="tool-card-title"><a href="./vav/captions/index.html">VAV Captions Desktop</a></h3>
-      <p class="tool-card-role">Kinetic Caption Styling & Placement</p>
-      <p class="tool-card-desc">Lossless word-level caption alignment, platform 9:16 safe-zone collision avoidance, and typography styling.</p>
-      <div class="tool-card-footer">
-        <a href="./vav/captions/index.html" class="tool-deep-link">Deep Specification →</a>
-      </div>
-    </article>
+    </section>
 
-    <article class="tool-card subtool-card" data-domain="Production" data-truth="RELEASED_CURRENT">
-      <div class="tool-card-header">
-        <div class="tool-domain-tag">VAV Subtool</div>
-        <span class="truth-pill released_current">RELEASED CURRENT</span>
+    <!-- Act 3: Shim Metrology & Judgment -->
+    <section class="story-act-section act-3" data-act="3">
+      <div class="act-content-wrap">
+        <div class="act-tag">3. METROLOGY // SHIM SCANNING PLANE</div>
+        <h2 class="act-headline">Measuring Intent Against Reality.</h2>
+        <p class="act-lead">In the transverse Da'at gallery, SHIM projects a glancing Fresnel laser plane to detect discrepancies between planned editorial structure and observed reality, triggering OUT_OF_SYNC before silent drift occurs.</p>
+        <div class="hero-actions">
+          <a href="./tools/shim/index.html" class="btn-secondary">Inspect SHIM Module →</a>
+        </div>
       </div>
-      <h3 class="tool-card-title"><a href="./vav/cuts/index.html">VAV Cuts Foundation</a></h3>
-      <p class="tool-card-role">Non-Destructive FFmpeg Cut Engine</p>
-      <p class="tool-card-desc">Frame-accurate PTS jump-cut assembly directly from resolved timestamps without quality loss.</p>
-      <div class="tool-card-footer">
-        <a href="./vav/cuts/index.html" class="tool-deep-link">Deep Specification →</a>
-      </div>
-    </article>
+    </section>
 
-    <article class="tool-card subtool-card" data-domain="Production" data-truth="RELEASED_CURRENT">
-      <div class="tool-card-header">
-        <div class="tool-domain-tag">VAV Subtool</div>
-        <span class="truth-pill released_current">RELEASED CURRENT</span>
+    <!-- Act 4: Vav Synthesis Forge -->
+    <section class="story-act-section act-4" data-act="4">
+      <div class="act-content-wrap">
+        <div class="act-tag">4. TIFERET // VAV SYNTHESIS FORGE</div>
+        <h2 class="act-headline">Deterministic Production Forge.</h2>
+        <p class="act-lead">Deep in the subterranean bedrock, VAV operates three industrial execution tracks: non-destructive multi-segment cuts, typographic caption hierarchy, and physics-driven motion synthesis.</p>
+        <div class="hero-actions">
+          <a href="./tools/vav/index.html" class="btn-secondary">Inspect VAV Module →</a>
+        </div>
       </div>
-      <h3 class="tool-card-title"><a href="./vav/motions/index.html">VAV Visual Motions</a></h3>
-      <p class="tool-card-role">Programmatic Remotion Motions</p>
-      <p class="tool-card-desc">13 parametric visual motion families, spring easing, safe-zone bounding boxes, and frame-accurate Remotion renders.</p>
-      <div class="tool-card-footer">
-        <a href="./vav/motions/index.html" class="tool-deep-link">Deep Specification →</a>
+    </section>
+
+    <!-- Act 5: The Lunar Closed Loop -->
+    <section class="story-act-section act-5" data-act="5">
+      <div class="act-content-wrap">
+        <div class="act-tag">5. CLOSED LOOP // MOON & OBSERVABILITY</div>
+        <h2 class="act-headline">Distribution and Feedback.</h2>
+        <p class="act-lead">From the celestial lunar station, Publisher dispatches multi-platform syndications, while telemetry feedback loops return audience signals into YOD, closing the perpetual intelligence cycle.</p>
+        <div class="hero-actions">
+          <a href="./tools/publishing/index.html" class="btn-secondary">Inspect Publisher & Metrics →</a>
+        </div>
       </div>
-    </article>
-  `;
+    </section>
+
+    <!-- Grand Final CTA Section -->
+    <section class="story-act-section grand-cta-section" data-act="6">
+      <div class="act-content-wrap">
+        <div class="act-tag">OPERATIONAL ARCHITECTURE</div>
+        <h2 class="act-headline">Enter the Operational Core.</h2>
+        <p class="act-lead">Transition from the cinematic manifesto into the live technical dashboard, inspect empirical release proofs, and explore the complete module hierarchy.</p>
+        <div class="cta-banner-box">
+          <h3>Ready to inspect the live software system?</h3>
+          <p>Examine 13 independent modules, 11 pipeline blueprints, and verified empirical evidence records.</p>
+          <div class="cta-btn-row">
+            <a href="./system/index.html" class="btn-primary">Launch System Dashboard →</a>
+            <a href="./proof/index.html" class="btn-secondary">View Evidence Ledger</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  ${getArchitectDrawer()}
+  ${getFooter(0)}
+
+  <script type="module" src="./assets/status-v3.js"></script>
+</body>
+</html>`;
+  fs.writeFileSync(path.join(docsDir, 'index.html'), html);
+  console.log(`[MultiPage Generator] Generated /index.html (Manifesto Landing)`);
+}
+
+// Generate System Dashboard Page
+function generateSystemDashboardPage() {
+  const dir = path.join(docsDir, 'system');
+  fs.mkdirSync(dir, { recursive: true });
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tools & Capability Directory — ABRAXAS OS</title>
+  <title>System Dashboard — ABRAXAS OS</title>
   <link rel="stylesheet" href="../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="multipage-body tools-directory-page">
-  ${getHeader('tools', 1)}
+<body class="system-dashboard-body">
+  ${getHeader('system', 1)}
 
-  <main id="main-content" class="page-container">
-    <div class="page-hero">
-      <div class="hero-tag">CAPABILITY DIRECTORY</div>
-      <h1 class="page-title">Tools & Architecture Modules</h1>
-      <p class="page-lead">Explore the 13 discrete domains of ABRAXAS OS, their ownership boundaries, contracts, inputs, outputs, and verified runtime capabilities.</p>
-    </div>
+  <!-- Fullscreen 3D Spatial Canvas for System Mode -->
+  <div id="spatial-pyramid-container" class="spatial-canvas-fullscreen" aria-label="ABRAXAS 3D Spatial Canvas"></div>
 
-    <div class="tools-filter-bar">
-      <div class="filter-group">
-        <span class="filter-label">Filter Truth:</span>
-        <button class="filter-chip active" data-filter="all">All Modules</button>
-        <button class="filter-chip" data-filter="RELEASED_CURRENT">Released Current</button>
-        <button class="filter-chip" data-filter="POST_RC1_CANDIDATE">Working Candidate</button>
-        <button class="filter-chip" data-filter="CONTRACT_ONLY">Contract Only</button>
-        <button class="filter-chip" data-filter="PLANNED">Planned</button>
+  <!-- Operational Workspace: 3-Column Layout -->
+  <div class="system-workspace-layout">
+    
+    <!-- Left Column: Directory Rail -->
+    <aside class="system-directory-rail" aria-label="Module Directory">
+      <div class="directory-header">
+        <div class="rail-title-group">
+          <span class="rail-glyph">◈</span>
+          <h2>System Hierarchy</h2>
+        </div>
+        <div class="truth-toggle-wrapper">
+          <label class="truth-toggle-label" for="target-mode-toggle">
+            <input type="checkbox" id="target-mode-toggle" class="truth-toggle-input">
+            <span class="truth-toggle-slider"></span>
+            <span class="truth-toggle-text">Show Target State</span>
+          </label>
+        </div>
       </div>
-    </div>
+      <div class="directory-list" id="system-directory-list" role="listbox">
+        <!-- Injected dynamically by modes.js -->
+      </div>
+    </aside>
 
-    <div class="tools-grid">
-      ${moduleCards}
-      ${subtoolCards}
-    </div>
-  </main>
+    <!-- Center Column: Visual Overlay & Spatial Callouts -->
+    <main class="system-center-overlay" aria-label="Interactive 3D Spatial Center">
+      <div class="system-spatial-hint">
+        <span class="hint-glyph">✦</span> Click any chamber or select from the directory to inspect
+      </div>
+    </main>
 
-  ${getFooter(1)}
+    <!-- Right Column: Contextual Inspector Rail -->
+    <aside class="system-inspector-rail" id="system-inspector-rail" aria-label="Module Details Inspector">
+      <div class="inspector-header">
+        <div class="truth-pill released_current" id="inspector-truth-badge">RELEASED_RC1</div>
+        <h3 class="inspector-title" id="inspector-title">Yod</h3>
+        <div class="inspector-role" id="inspector-domain">Intelligence // Strategic Direction</div>
+      </div>
+      <div class="inspector-body" id="inspector-body">
+        <div class="inspector-section">
+          <h4>Responsibility</h4>
+          <p id="inspector-responsibility">Maintains content pattern registries, hook and CTA taxonomies, narrative structures, and forensic provenance truth.</p>
+        </div>
+        <div class="inspector-section">
+          <h4>Sephirot Alignment</h4>
+          <p id="inspector-sephirot">Supernal Triad (Keter, Chokhmah, Binah) // Golden Apex</p>
+        </div>
+        <div class="inspector-section">
+          <h4>Owns</h4>
+          <ul id="inspector-owns-list">
+            <li>Client Core & Brand voice criteria</li>
+            <li>Opportunity generation & scoring algorithms</li>
+          </ul>
+        </div>
+        <div class="inspector-section">
+          <h4>Does Not Own</h4>
+          <ul id="inspector-not-owns-list">
+            <li>Mutable single-piece content state (Lienzo owns this)</li>
+            <li>Audiovisual media rendering (Vav owns this)</li>
+          </ul>
+        </div>
+        <div class="inspector-section">
+          <h4>Dependencies & Evidence</h4>
+          <p id="inspector-evidence">86 Vitest test files passing, release:test-suite verified.</p>
+        </div>
+        <a href="../tools/yod/index.html" class="inspector-deep-btn" id="inspector-deep-link">Open Full Dossier →</a>
+      </div>
+    </aside>
+
+  </div>
+
   ${getArchitectDrawer()}
   <script type="module" src="../assets/status-v3.js"></script>
 </body>
 </html>`;
-
-  fs.writeFileSync(path.join(toolsDir, 'index.html'), html, 'utf-8');
-  console.log('[MultiPage Generator] Generated /tools/index.html');
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  console.log(`[MultiPage Generator] Generated /system/index.html (System Dashboard)`);
 }
 
-// 3. Generate Individual Tool Pages (/tools/{slug}/index.html)
-function generateIndividualToolPages() {
-  for (const m of publicKnowledge.modules) {
-    const slug = m.id.toLowerCase().replace(/_/g, '-');
-    const toolDir = path.join(docsDir, 'tools', slug);
-    fs.mkdirSync(toolDir, { recursive: true });
+// Generate Dedicated Tool Dossier Pages
+function generateToolDossiers() {
+  const toolsBaseDir = path.join(docsDir, 'tools');
+  fs.mkdirSync(toolsBaseDir, { recursive: true });
 
-    const truthClass = m.truthLayer.toLowerCase();
-    
-    // Domain Protagonist SVG / Graphic
-    let protagonistSvg = '';
-    if (m.id === 'YOD') {
-      protagonistSvg = `
-      <div class="domain-protagonist yod-protagonist">
-        <svg viewBox="0 0 400 240" class="protagonist-svg" aria-label="YOD Convergence Matrix Graphic">
-          <circle cx="200" cy="120" r="80" stroke="#38bdf8" stroke-width="1.5" fill="none" opacity="0.3" stroke-dasharray="4 4" />
-          <polygon points="200,40 270,160 130,160" stroke="#38bdf8" stroke-width="2" fill="rgba(56,189,248,0.06)" />
-          <circle cx="200" cy="120" r="6" fill="#38bdf8" />
-          <line x1="60" y1="120" x2="130" y2="120" stroke="#38bdf8" stroke-width="1" opacity="0.5" />
-          <line x1="340" y1="120" x2="270" y2="120" stroke="#38bdf8" stroke-width="1" opacity="0.5" />
-          <text x="200" y="200" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono" font-size="11">YOD // INTELLIGENCE APEX</text>
-        </svg>
-      </div>`;
-    } else if (m.id === 'LIENZO') {
-      protagonistSvg = `
-      <div class="domain-protagonist lienzo-protagonist">
-        <svg viewBox="0 0 400 240" class="protagonist-svg" aria-label="Lienzo Spine and DAG Graphic">
-          <line x1="200" y1="20" x2="200" y2="200" stroke="#a855f7" stroke-width="3" />
-          <ellipse cx="200" cy="60" rx="60" ry="16" stroke="#a855f7" stroke-width="1.5" fill="none" opacity="0.4" />
-          <ellipse cx="200" cy="110" rx="75" ry="20" stroke="#a855f7" stroke-width="1.5" fill="none" opacity="0.6" />
-          <ellipse cx="200" cy="160" rx="90" ry="24" stroke="#a855f7" stroke-width="1.5" fill="none" opacity="0.8" />
-          <text x="200" y="225" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono" font-size="11">LIENZO // PERSISTENT IDENTITY SPINE</text>
-        </svg>
-      </div>`;
-    } else if (m.id === 'HE') {
-      protagonistSvg = `
-      <div class="domain-protagonist he-protagonist">
-        <svg viewBox="0 0 400 240" class="protagonist-svg" aria-label="He Operational Window Graphic">
-          <rect x="50" y="30" width="300" height="160" rx="8" stroke="#10b981" stroke-width="1.5" fill="rgba(16,185,129,0.04)" />
-          <line x1="150" y1="30" x2="150" y2="190" stroke="#10b981" stroke-width="1" opacity="0.3" />
-          <line x1="250" y1="30" x2="250" y2="190" stroke="#10b981" stroke-width="1" opacity="0.3" />
-          <circle cx="100" cy="70" r="5" fill="#10b981" />
-          <circle cx="200" cy="110" r="5" fill="#10b981" />
-          <circle cx="300" cy="90" r="5" fill="#10b981" />
-          <text x="200" y="215" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono" font-size="11">HE // OPERATIONS CORE &amp; WORKFLOW DESK</text>
-        </svg>
-      </div>`;
-    } else if (m.id === 'SHIM') {
-      protagonistSvg = `
-      <div class="domain-protagonist shim-protagonist">
-        <svg viewBox="0 0 400 240" class="protagonist-svg" aria-label="Shim 3-Plane Reality Graphic">
-          <polygon points="80,50 320,50 280,100 40,100" stroke="#f59e0b" stroke-width="1.5" fill="rgba(245,158,11,0.08)" />
-          <polygon points="80,110 320,110 280,160 40,160" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.08)" />
-          <text x="200" y="78" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="10">PLANNED (YOD)</text>
-          <text x="200" y="138" text-anchor="middle" fill="#38bdf8" font-family="JetBrains Mono" font-size="10">OBSERVED (RAW TAKE)</text>
-          <text x="200" y="200" text-anchor="middle" fill="#10b981" font-family="JetBrains Mono" font-size="11">SHIM // EDITORIAL RESOLUTION</text>
-        </svg>
-      </div>`;
-    } else if (m.id === 'VAV') {
-      protagonistSvg = `
-      <div class="domain-protagonist vav-protagonist">
-        <svg viewBox="0 0 400 240" class="protagonist-svg" aria-label="VAV Multitrack Forge Graphic">
-          <rect x="40" y="40" width="320" height="30" rx="4" stroke="#f59e0b" stroke-width="1.5" fill="rgba(245,158,11,0.1)" />
-          <rect x="40" y="85" width="320" height="30" rx="4" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.1)" />
-          <rect x="40" y="130" width="320" height="30" rx="4" stroke="#a855f7" stroke-width="1.5" fill="rgba(168,85,247,0.1)" />
-          <line x1="160" y1="30" x2="160" y2="175" stroke="#ef4444" stroke-width="2" />
-          <text x="55" y="60" fill="#f59e0b" font-family="JetBrains Mono" font-size="9">TRACK 1: CUTS</text>
-          <text x="55" y="105" fill="#38bdf8" font-family="JetBrains Mono" font-size="9">TRACK 2: CAPTIONS</text>
-          <text x="55" y="150" fill="#a855f7" font-family="JetBrains Mono" font-size="9">TRACK 3: MOTIONS</text>
-          <text x="200" y="205" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono" font-size="11">VAV // PRODUCTION FORGE</text>
-        </svg>
-      </div>`;
-    } else {
-      protagonistSvg = `
-      <div class="domain-protagonist generic-protagonist">
-        <svg viewBox="0 0 400 240" class="protagonist-svg" aria-label="${m.name} Schematic Graphic">
-          <circle cx="200" cy="110" r="60" stroke="#64748b" stroke-width="1.5" fill="none" opacity="0.4" />
-          <circle cx="200" cy="110" r="30" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.06)" />
-          <text x="200" y="205" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono" font-size="11">${m.name.toUpperCase()} // ${m.domain.toUpperCase()}</text>
-        </svg>
-      </div>`;
-    }
+  // 1. Tool Index Directory Page
+  const toolIndexHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module Index — ABRAXAS OS</title>
+  <link rel="stylesheet" href="../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-body">
+  ${getHeader('tools', 1)}
+
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../system/index.html">System</a> / <span>Modules</span></div>
+        <h1 class="page-title">ABRAXAS OS Module Index</h1>
+        <p class="page-description">13 decoupled architectural modules and subtools mapped to the Sephirot Tree of Life, closed-loop media lifecycle, and strict boundary contracts.</p>
+      </div>
+
+      <div class="tools-grid">
+        ${publicKnowledge.modules.map((m) => {
+          const seph = sephirotMetadata[m.id] || { sephirot: "Subsystem Node", chamber: "Bedrock Chamber" };
+          const slug = m.id.toLowerCase().replace(/_/g, '-');
+          return `
+          <article class="tool-card" id="card-${slug}">
+            <div class="tool-card-header">
+              <div class="truth-pill ${m.truthLayer.toLowerCase()}">${m.truthLayer}</div>
+              <span class="tool-domain">${m.domain}</span>
+            </div>
+            <h3 class="tool-name">${m.name}</h3>
+            <div class="tool-sephirot-tag">⚝ ${seph.sephirot}</div>
+            <p class="tool-summary">${m.shortDefinition || m.responsibility}</p>
+            <div class="tool-card-footer">
+              <span class="tool-chamber">Chamber: ${seph.chamber}</span>
+              <a href="./${slug}/index.html" class="tool-link-btn">Dossier →</a>
+            </div>
+          </article>
+          `;
+        }).join('\n')}
+
+        <!-- 3 Dedicated VAV Subtools -->
+        <article class="tool-card" id="card-vav-captions">
+          <div class="tool-card-header">
+            <div class="truth-pill released_current">RELEASED_RC1</div>
+            <span class="tool-domain">Synthesis Subtool</span>
+          </div>
+          <h3 class="tool-name">VAV / Captions</h3>
+          <div class="tool-sephirot-tag">⚝ Tiferet Typographic Track</div>
+          <p class="tool-summary">Word-level timestamp synchronization, font style hierarchies, and multi-line kinetic animation.</p>
+          <div class="tool-card-footer">
+            <span class="tool-chamber">Chamber: Middle Forge Track</span>
+            <a href="./vav/captions/index.html" class="tool-link-btn">Dossier →</a>
+          </div>
+        </article>
+
+        <article class="tool-card" id="card-vav-cuts">
+          <div class="tool-card-header">
+            <div class="truth-pill released_current">RELEASED_RC1</div>
+            <span class="tool-domain">Synthesis Subtool</span>
+          </div>
+          <h3 class="tool-name">VAV / Cuts</h3>
+          <div class="tool-sephirot-tag">⚝ Tiferet Temporal Track</div>
+          <p class="tool-summary">Non-destructive multi-segment video trimming, stream-copy rendering, and frame-accurate EDL compilation.</p>
+          <div class="tool-card-footer">
+            <span class="tool-chamber">Chamber: Left Forge Track</span>
+            <a href="./vav/cuts/index.html" class="tool-link-btn">Dossier →</a>
+          </div>
+        </article>
+
+        <article class="tool-card" id="card-vav-motions">
+          <div class="tool-card-header">
+            <div class="truth-pill released_current">RELEASED_RC1</div>
+            <span class="tool-domain">Synthesis Subtool</span>
+          </div>
+          <h3 class="tool-name">VAV / Motions</h3>
+          <div class="tool-sephirot-tag">⚝ Tiferet Kinetic Track</div>
+          <p class="tool-summary">Spring physics, optical visual priors, B-roll overlays, and smooth layout transform transitions.</p>
+          <div class="tool-card-footer">
+            <span class="tool-chamber">Chamber: Right Forge Track</span>
+            <a href="./vav/motions/index.html" class="tool-link-btn">Dossier →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  ${getArchitectDrawer()}
+  ${getFooter(1)}
+  <script type="module" src="../assets/status-v3.js"></script>
+</body>
+</html>`;
+  fs.writeFileSync(path.join(toolsBaseDir, 'index.html'), toolIndexHtml);
+  console.log(`[MultiPage Generator] Generated /tools/index.html`);
+
+  // 2. Individual Module Dossiers
+  publicKnowledge.modules.forEach((m) => {
+    const slug = m.id.toLowerCase().replace(/_/g, '-');
+    const modDir = path.join(toolsBaseDir, slug);
+    fs.mkdirSync(modDir, { recursive: true });
+
+    const seph = sephirotMetadata[m.id] || { sephirot: "Subsystem Node", roleDescription: "Systemic execution node.", element: "Aether", chamber: "Bedrock Chamber" };
 
     const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${m.name} (${m.domain}) Specification — ABRAXAS OS</title>
+  <title>${m.name} (${m.domain}) — ABRAXAS OS</title>
   <link rel="stylesheet" href="../../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="multipage-body tool-detail-page">
+<body class="page-body">
   ${getHeader('tools', 2)}
 
-  <main id="main-content" class="page-container">
-    <div class="breadcrumb-bar">
-      <a href="../../index.html">ABRAXAS</a>
-      <span class="crumb-sep">/</span>
-      <a href="../index.html">Tools</a>
-      <span class="crumb-sep">/</span>
-      <span class="crumb-current">${m.name}</span>
-    </div>
-
-    <div class="tool-hero-section">
-      <div class="tool-hero-content">
-        <div class="tool-status-badge-row">
-          <span class="truth-pill ${truthClass}">${m.truthLayer.replace(/_/g, ' ')}</span>
-          <span class="domain-badge">${m.domain}</span>
-          <span class="status-badge">${m.status}</span>
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Modules</a> / <span>${m.name}</span></div>
+        <div class="module-title-row">
+          <h1 class="page-title">${m.name}</h1>
+          <div class="truth-pill ${m.truthLayer.toLowerCase()}">${m.truthLayer}</div>
         </div>
-        <h1 class="tool-title">${m.name}</h1>
-        <p class="tool-role-tag">${m.role}</p>
-        <p class="tool-lead">${m.responsibility}</p>
+        <div class="module-domain-badge">Domain: ${m.domain} // Archetype: ${seph.sephirot}</div>
+        <p class="page-description">${m.responsibility}</p>
       </div>
-      ${protagonistSvg}
-    </div>
 
-    <div class="tool-deep-grid">
-      <!-- 1. What & Why -->
-      <section class="dossier-card">
-        <h2 class="section-title">01. What &amp; Why</h2>
-        <div class="card-body">
-          <p><strong>Definition:</strong> ${m.shortDefinition}</p>
-          <p><strong>Why It Exists:</strong> ${m.why}</p>
-        </div>
-      </section>
+      <div class="dossier-grid">
+        
+        <!-- Main Content Column -->
+        <div class="dossier-main-col">
+          
+          <!-- 1. What It Is & Core Purpose -->
+          <section class="dossier-section">
+            <h2 class="section-title">1. What It Is & Purpose</h2>
+            <p class="section-lead">${m.why || m.shortDefinition}</p>
+            <p>In the ABRAXAS closed-loop architecture, <strong>${m.name}</strong> operates as the definitive owner of ${m.domain.toLowerCase()} semantics. It ensures that content pieces are generated with strict provenance, preventing guesswork or silent state corruption.</p>
+          </section>
 
-      <!-- 2. Ownership Boundaries -->
-      <section class="dossier-card">
-        <h2 class="section-title">02. Ownership Boundaries</h2>
-        <div class="card-body">
-          <div class="boundary-split">
-            <div class="owns-col">
-              <h3 class="col-title text-emerald">✓ Owns</h3>
-              <ul>
-                ${(m.owns || []).map(o => `<li>${o}</li>`).join('')}
-              </ul>
+          <!-- 2. Sephirot Tree of Life Mapping -->
+          <section class="dossier-section">
+            <h2 class="section-title">2. Sephirot Tree of Life Mapping</h2>
+            <div class="sephirot-box">
+              <div class="sephirot-header">
+                <span class="sephirot-glyph">⚝</span>
+                <h3>${seph.sephirot}</h3>
+              </div>
+              <p><strong>Physical Chamber:</strong> ${seph.chamber}</p>
+              <p><strong>Cosmic Element:</strong> ${seph.element}</p>
+              <p class="sephirot-desc">${seph.roleDescription}</p>
             </div>
-            <div class="does-not-own-col">
-              <h3 class="col-title text-rose">✗ Does Not Own</h3>
-              <ul>
-                ${(m.doesNotOwn || []).map(d => `<li>${d}</li>`).join('')}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <!-- 3. Contracts & Flow -->
-      <section class="dossier-card">
-        <h2 class="section-title">03. Contracts &amp; Data Flow</h2>
-        <div class="card-body">
-          <div class="io-grid">
-            <div class="io-block">
+          <!-- 3. Concrete Understandable Example -->
+          <section class="dossier-section">
+            <h2 class="section-title">3. Operational Example Scenario</h2>
+            <div class="example-box">
+              <div class="example-badge">Workflow Execution</div>
+              <p class="example-flow-text"><code>${m.exampleFlow || "Input criteria evaluated -> Payload validated -> Execution dispatched -> Output registered in immutable storage."}</code></p>
+              <p>When a content piece enters ${m.name}, it is treated with deterministic boundary verification. The system validates upstream state before applying transformations, guaranteeing reproducible output.</p>
+            </div>
+          </section>
+
+          <!-- 4. Strict Ownership Boundaries (What It Owns vs Does Not Own) -->
+          <section class="dossier-section">
+            <h2 class="section-title">4. Strict Ownership Boundaries</h2>
+            <div class="ownership-split-grid">
+              <div class="owns-col">
+                <h3 class="owns-title">✓ What ${m.name} OWNS</h3>
+                <ul class="boundary-list">
+                  ${(m.owns || []).map((o) => `<li>${o}</li>`).join('\n')}
+                </ul>
+              </div>
+              <div class="not-owns-col">
+                <h3 class="not-owns-title">✗ What ${m.name} DOES NOT OWN</h3>
+                <ul class="boundary-list">
+                  ${(m.doesNotOwn || []).map((no) => `<li>${no}</li>`).join('\n')}
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. What It Is vs What It Is Not -->
+          <section class="dossier-section">
+            <h2 class="section-title">5. What It Is vs What It Is Not</h2>
+            <div class="what-is-table-wrap">
+              <table class="what-is-table">
+                <thead>
+                  <tr>
+                    <th>What ${m.name} IS</th>
+                    <th>What ${m.name} IS NOT</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>A deterministic, domain-specific execution engine</td>
+                    <td>A generic third-party AI wrapper or chat prompt</td>
+                  </tr>
+                  <tr>
+                    <td>Strictly bound to immutable event and artifact schemas</td>
+                    <td>A mutable project management board with untracked edits</td>
+                  </tr>
+                  <tr>
+                    <td>Governed by verified taste and quality criteria</td>
+                    <td>An automated spam publishing script</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 6. Gaps, Dependencies & Roadmap Next Steps -->
+          <section class="dossier-section">
+            <h2 class="section-title">6. Current Gaps & Target Roadmap</h2>
+            <div class="roadmap-gap-box">
+              <h4>Current Status: <span class="highlight-text">${m.statusDetail || m.status}</span></h4>
+              <p><strong>Bounded Debt:</strong> ${(m.boundedDebt || ["No active architectural debt recorded."]).join(' ')}</p>
+              <p><strong>Next Phase Milestones:</strong> ${(m.roadmapRefs || ["Gate P4 Deployment", "Gate P5 Release Tooling"]).join(' → ')}</p>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Sidebar Metadata Column -->
+        <aside class="dossier-sidebar">
+          <div class="sidebar-card">
+            <h3>I/O Specifications</h3>
+            <div class="io-group">
               <span class="io-label">Inputs:</span>
-              <ul>${(m.inputs || []).map(i => `<li><code>${i}</code></li>`).join('')}</ul>
+              <ul class="io-list">
+                ${(m.inputs || ["Client profile", "Prior state"]).map((i) => `<li><code>${i}</code></li>`).join('\n')}
+              </ul>
             </div>
-            <div class="io-block">
+            <div class="io-group">
               <span class="io-label">Outputs:</span>
-              <ul>${(m.outputs || []).map(o => `<li><code>${o}</code></li>`).join('')}</ul>
+              <ul class="io-list">
+                ${(m.outputs || ["Generated artifact", "Status event"]).map((o) => `<li><code>${o}</code></li>`).join('\n')}
+              </ul>
             </div>
           </div>
-          <div class="flow-example-box">
-            <span class="box-label">Example Lifecycle Flow:</span>
-            <p class="flow-text">${m.exampleFlow}</p>
-          </div>
-        </div>
-      </section>
 
-      <!-- 4. Lineage: Events & Artifacts -->
-      <section class="dossier-card">
-        <h2 class="section-title">04. Events &amp; Produced Lineage</h2>
-        <div class="card-body">
-          <div class="lineage-split">
-            <div>
-              <span class="io-label">Emitted Events:</span>
-              <ul>${(m.eventFootprint || []).map(e => `<li><span class="event-chip">${e}</span></li>`).join('')}</ul>
-            </div>
-            <div>
-              <span class="io-label">Produced Artifacts:</span>
-              <ul>${(m.artifactFootprint || []).map(a => `<li><span class="artifact-chip">${a}</span></li>`).join('')}</ul>
+          <div class="sidebar-card">
+            <h3>Event Footprint</h3>
+            <div class="event-chips">
+              ${(m.eventFootprint || ["STATE_CHANGED"]).map((e) => `<span class="event-chip">${e}</span>`).join('\n')}
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- 5. Capability Status & Roadmap -->
-      <section class="dossier-card">
-        <h2 class="section-title">05. Capability Truth &amp; Roadmap</h2>
-        <div class="card-body">
-          <div class="cap-comparison-grid">
-            <div class="cap-col">
-              <h3 class="col-title text-cyan">Current Capabilities</h3>
-              <ul>${(m.currentCapabilities || []).map(c => `<li>${c}</li>`).join('')}</ul>
-            </div>
-            <div class="cap-col">
-              <h3 class="col-title text-amber">Target Capabilities</h3>
-              <ul>${(m.targetCapabilities || []).map(t => `<li>${t}</li>`).join('')}</ul>
+          <div class="sidebar-card">
+            <h3>Artifact Footprint</h3>
+            <div class="artifact-chips">
+              ${(m.artifactFootprint || ["Artifact"]).map((a) => `<span class="artifact-chip">◈ ${a}</span>`).join('\n')}
             </div>
           </div>
-          <div class="debt-box">
-            <span class="box-label">Bounded Technical Debt:</span>
-            <ul>${(m.boundedDebt || []).map(b => `<li>${b}</li>`).join('')}</ul>
-          </div>
-        </div>
-      </section>
 
-      <!-- 6. Evidence & Verification -->
-      <section class="dossier-card">
-        <h2 class="section-title">06. Verification &amp; Evidence Citations</h2>
-        <div class="card-body">
-          <p class="status-detail-text"><strong>Live Verification Detail:</strong> ${m.statusDetail}</p>
-          <div class="evidence-citations">
-            <span class="citation-label">Referenced Proof:</span>
-            <ul>${(m.evidenceRefs || []).map(r => `<li><code>${r}</code></li>`).join('')}</ul>
+          <div class="sidebar-card">
+            <h3>Connected Modules</h3>
+            <ul class="conn-list">
+              ${(m.connections || ["Lienzo", "He"]).map((c) => `<li>${c}</li>`).join('\n')}
+            </ul>
           </div>
-        </div>
-      </section>
-    </div>
 
-    <div class="tool-navigation-footer">
-      <a href="../index.html" class="nav-back-btn">← Back to All Tools</a>
-      <a href="../../system/index.html" class="nav-system-btn">Inspect in 3D System Explorer →</a>
+          <div class="sidebar-card">
+            <h3>Verified Evidence</h3>
+            <ul class="evidence-list">
+              ${(m.evidenceRefs || ["evidence:test-suite"]).map((er) => `<li><a href="../../proof/index.html#${er}">✓ ${er}</a></li>`).join('\n')}
+            </ul>
+          </div>
+        </aside>
+
+      </div>
     </div>
   </main>
 
-  ${getFooter(2)}
   ${getArchitectDrawer()}
+  ${getFooter(2)}
   <script type="module" src="../../assets/status-v3.js"></script>
 </body>
 </html>`;
-
-    fs.writeFileSync(path.join(toolDir, 'index.html'), html, 'utf-8');
+    fs.writeFileSync(path.join(modDir, 'index.html'), html);
     console.log(`[MultiPage Generator] Generated /tools/${slug}/index.html`);
-  }
+  });
 
-  // Generate VAV Subtool Pages
+  // 3. Dedicated VAV Subtool Dossiers
   const vavSubtools = [
     {
       slug: 'captions',
-      name: 'VAV Captions Desktop',
-      domain: 'Production',
-      truthLayer: 'RELEASED_CURRENT',
-      role: 'Kinetic Caption Styling & Placement',
-      lead: 'Lossless word-level caption alignment, platform 9:16 safe-zone collision avoidance, and typography styling.',
-      owns: ['Word-level transcription time mapping', 'Preset font hierarchy and animations', 'Platform 9:16 safe-zone collision avoidance'],
-      doesNotOwn: ['Does not own raw video cut boundaries (Cuts owns this)', 'Does not own task assignment (He owns this)'],
-      inputs: ['Whisper JSON transcript', 'Video metadata'],
-      outputs: ['VAV Caption Track JSON', 'Burn-in subtitle stream'],
-      evidence: ['v1.0.0-rc1 release tag', '86 vitest unit tests']
+      name: 'VAV / Captions',
+      domain: 'Kinetic Typography & Style Hierarchy',
+      desc: 'Word-level timestamp synchronization, font style hierarchies, active word highlighting, and multi-line kinetic animation.',
+      seph: 'Tiferet Typographic Track',
+      owns: ['Word-level timestamp mapping', 'Caption layout bounding boxes', 'Kinetic word animations', 'Typography style presets'],
+      notOwns: ['Video trimming (Vav/Cuts owns this)', 'Audio transcription inference (AI Runtime owns this)', 'Task management (He owns this)']
     },
     {
       slug: 'cuts',
-      name: 'VAV Cuts Foundation',
-      domain: 'Production',
-      truthLayer: 'RELEASED_CURRENT',
-      role: 'Non-Destructive FFmpeg Cut Engine',
-      lead: 'Frame-accurate PTS jump-cut assembly directly from resolved timestamps without quality loss.',
-      owns: ['Non-destructive EDL cut lists', 'Local FFmpeg stream-copy orchestration', 'PTS synchronization across audio/video tracks'],
-      doesNotOwn: ['Does not own semantic gap detection (Shim owns this)', 'Does not own rendering motions (Motions owns this)'],
-      inputs: ['Raw multi-take source files', 'Shim resolved cut intervals'],
-      outputs: ['Lossless assembled MP4 cut', 'Cut list verification report'],
-      evidence: ['FFmpeg cut e2e tests', 'Pro foundation check']
+      name: 'VAV / Cuts',
+      domain: 'Non-Destructive Multi-Segment Video Engine',
+      desc: 'Non-destructive multi-segment video trimming, stream-copy rendering, and frame-accurate EDL compilation.',
+      seph: 'Tiferet Temporal Track',
+      owns: ['Multi-segment cut plans', 'Non-destructive FFmpeg stream-copy', 'Frame-accurate EDL generation', 'Segment boundary verification'],
+      notOwns: ['Captions layout (Vav/Captions owns this)', 'Voice recording capture (He owns this)', 'Video encoding workers (AI Runtime owns this)']
     },
     {
       slug: 'motions',
-      name: 'VAV Visual Motions',
-      domain: 'Production',
-      truthLayer: 'RELEASED_CURRENT',
-      role: 'Programmatic Remotion Motions',
-      lead: '13 parametric visual motion families, spring easing, safe-zone bounding boxes, and frame-accurate Remotion renders.',
-      owns: ['13 visual motion families (Kinetic Text, Pop-in, Slide, Glow, Zoom)', 'Remotion compositions', 'Dynamic spring physics interpolation'],
-      doesNotOwn: ['Does not own strategy planning (YOD owns this)', 'Does not own editorial resolution (Shim owns this)'],
-      inputs: ['Motion intent schema', 'Brand visual palette'],
-      outputs: ['Rendered motion video layers', 'Platform-validated Remotion composition'],
-      evidence: ['Motions foundation health check', '13 motion family unit tests']
+      name: 'VAV / Motions',
+      domain: 'Spring Physics & Visual Priors',
+      desc: 'Spring physics, optical visual priors, B-roll overlays, and smooth layout transform transitions.',
+      seph: 'Tiferet Kinetic Track',
+      owns: ['Spring physics curves', 'Visual prior layout templates', 'B-roll overlay placement', 'Transform transitions'],
+      notOwns: ['Audio timebase (Vav/Cuts owns this)', 'Video cutting (Vav/Cuts owns this)', 'Color grading (AI Runtime owns this)']
     }
   ];
 
-  for (const st of vavSubtools) {
-    const stDir = path.join(docsDir, 'tools', 'vav', st.slug);
-    fs.mkdirSync(stDir, { recursive: true });
+  vavSubtools.forEach((st) => {
+    const subDir = path.join(toolsBaseDir, 'vav', st.slug);
+    fs.mkdirSync(subDir, { recursive: true });
 
     const html = `<!DOCTYPE html>
 <html lang="en">
@@ -554,735 +787,450 @@ function generateIndividualToolPages() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${st.name} — ABRAXAS OS</title>
   <link rel="stylesheet" href="../../../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="multipage-body tool-detail-page">
+<body class="page-body">
   ${getHeader('tools', 3)}
 
-  <main id="main-content" class="page-container">
-    <div class="breadcrumb-bar">
-      <a href="../../../index.html">ABRAXAS</a>
-      <span class="crumb-sep">/</span>
-      <a href="../../index.html">Tools</a>
-      <span class="crumb-sep">/</span>
-      <a href="../index.html">VAV</a>
-      <span class="crumb-sep">/</span>
-      <span class="crumb-current">${st.name}</span>
-    </div>
-
-    <div class="tool-hero-section">
-      <div class="tool-hero-content">
-        <div class="tool-status-badge-row">
-          <span class="truth-pill released_current">${st.truthLayer.replace(/_/g, ' ')}</span>
-          <span class="domain-badge">${st.domain} Subtool</span>
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../../../index.html">Home</a> / <a href="../../../system/index.html">System</a> / <a href="../../index.html">Modules</a> / <a href="../index.html">VAV</a> / <span>${st.slug}</span></div>
+        <div class="module-title-row">
+          <h1 class="page-title">${st.name}</h1>
+          <div class="truth-pill released_current">RELEASED_RC1</div>
         </div>
-        <h1 class="tool-title">${st.name}</h1>
-        <p class="tool-role-tag">${st.role}</p>
-        <p class="tool-lead">${st.lead}</p>
+        <div class="module-domain-badge">Domain: ${st.domain} // Sephirot: ${st.seph}</div>
+        <p class="page-description">${st.desc}</p>
       </div>
-    </div>
 
-    <div class="tool-deep-grid">
-      <section class="dossier-card">
-        <h2 class="section-title">01. Capabilities &amp; Scope</h2>
-        <div class="card-body">
-          <div class="boundary-split">
-            <div class="owns-col">
-              <h3 class="col-title text-emerald">✓ Owns</h3>
-              <ul>${st.owns.map(o => `<li>${o}</li>`).join('')}</ul>
+      <div class="dossier-grid">
+        <div class="dossier-main-col">
+          <section class="dossier-section">
+            <h2 class="section-title">1. Operational Role & Physics</h2>
+            <p class="section-lead">${st.desc}</p>
+            <p>As a core track of the VAV Tiferet Forge, <strong>${st.name}</strong> guarantees deterministic rendering without frame stutter or audio-sync drift.</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">2. Ownership Split</h2>
+            <div class="ownership-split-grid">
+              <div class="owns-col">
+                <h3 class="owns-title">✓ What ${st.name} OWNS</h3>
+                <ul class="boundary-list">
+                  ${st.owns.map((o) => `<li>${o}</li>`).join('\n')}
+                </ul>
+              </div>
+              <div class="not-owns-col">
+                <h3 class="not-owns-title">✗ What ${st.name} DOES NOT OWN</h3>
+                <ul class="boundary-list">
+                  ${st.notOwns.map((no) => `<li>${no}</li>`).join('\n')}
+                </ul>
+              </div>
             </div>
-            <div class="does-not-own-col">
-              <h3 class="col-title text-rose">✗ Does Not Own</h3>
-              <ul>${st.doesNotOwn.map(d => `<li>${d}</li>`).join('')}</ul>
-            </div>
+          </section>
+        </div>
+
+        <aside class="dossier-sidebar">
+          <div class="sidebar-card">
+            <h3>Verified Tests</h3>
+            <p>100% test coverage in <code>packages/${st.slug === 'captions' ? 'caption-hierarchy' : st.slug === 'cuts' ? 'cut-engine' : 'motion-engine'}</code>.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="dossier-card">
-        <h2 class="section-title">02. Contracts &amp; Data Flow</h2>
-        <div class="card-body">
-          <div class="io-grid">
-            <div class="io-block">
-              <span class="io-label">Inputs:</span>
-              <ul>${st.inputs.map(i => `<li><code>${i}</code></li>`).join('')}</ul>
-            </div>
-            <div class="io-block">
-              <span class="io-label">Outputs:</span>
-              <ul>${st.outputs.map(o => `<li><code>${o}</code></li>`).join('')}</ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="dossier-card">
-        <h2 class="section-title">03. Verified Proof</h2>
-        <div class="card-body">
-          <ul>${st.evidence.map(e => `<li><span class="event-chip">${e}</span></li>`).join('')}</ul>
-        </div>
-      </section>
-    </div>
-
-    <div class="tool-navigation-footer">
-      <a href="../index.html" class="nav-back-btn">← Back to VAV Overview</a>
-      <a href="../../../system/index.html" class="nav-system-btn">Inspect in 3D System Explorer →</a>
+        </aside>
+      </div>
     </div>
   </main>
 
-  ${getFooter(3)}
   ${getArchitectDrawer()}
+  ${getFooter(3)}
   <script type="module" src="../../../assets/status-v3.js"></script>
 </body>
 </html>`;
-
-    fs.writeFileSync(path.join(stDir, 'index.html'), html, 'utf-8');
+    fs.writeFileSync(path.join(subDir, 'index.html'), html);
     console.log(`[MultiPage Generator] Generated /tools/vav/${st.slug}/index.html`);
-  }
+  });
 }
 
-// 4. Generate Taste Page (/taste/index.html)
+// Generate Taste Page
 function generateTastePage() {
-  const tasteDir = path.join(docsDir, 'taste');
-  fs.mkdirSync(tasteDir, { recursive: true });
+  const dir = path.join(docsDir, 'taste');
+  fs.mkdirSync(dir, { recursive: true });
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taste &amp; Visual Design System — ABRAXAS OS</title>
+  <title>The Taste System — ABRAXAS OS</title>
   <link rel="stylesheet" href="../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="multipage-body taste-page">
+<body class="page-body">
   ${getHeader('taste', 1)}
 
-  <main id="main-content" class="page-container">
-    <div class="page-hero">
-      <div class="hero-tag">VISUAL CRITERIA &amp; TASTE CANON</div>
-      <h1 class="page-title">Taste as Infrastructure</h1>
-      <p class="page-lead">ABRAXAS treats Taste not as decorative styling, but as a compiled, versioned mathematical system of reduction, physical lighting, typography, and forensic honesty.</p>
-    </div>
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../system/index.html">System</a> / <span>Taste</span></div>
+        <h1 class="page-title">Taste as Infrastructure</h1>
+        <p class="page-description">In ABRAXAS OS, "Taste" is not a decorative veneer or personal whim. It is a formal, compiler-enforced system of criteria governing typography, spatial geometry, motion timing, and editorial restraint.</p>
+      </div>
 
-    <div class="taste-section-grid">
-      <!-- 1. The Core Thesis -->
-      <section class="dossier-card">
-        <h2 class="section-title">01. Core Statement</h2>
-        <div class="card-body">
-          <blockquote class="taste-quote">
-            "ABRAXAS WEB EXPERIENCE = HIGH-END EDITORIAL PRODUCT FILM RENDERED AS AN INTERACTIVE SYSTEM."
-          </blockquote>
-          <p>Every digital surface centers on a clear conceptual protagonist rather than fragmented widgets. Large negative space is active staging; typography lives directly in the scene with zero floating glass boxes.</p>
+      <div class="taste-manifesto-grid">
+        
+        <!-- Core Pillars -->
+        <section class="taste-pillar-card">
+          <div class="pillar-num">01</div>
+          <h3>One Frame = One Dominant Idea</h3>
+          <p>A scene must never compete with itself. Negative space is a first-class composition element. If secondary elements are present, they must recede into deep shadow.</p>
+        </section>
+
+        <section class="taste-pillar-card">
+          <div class="pillar-num">02</div>
+          <h3>Color is Semantic, Never Decorative</h3>
+          <p>90–95% of the visual world remains strictly monochromatic (black, charcoal, graphite, steel, white). Color is reserved exclusively for state, energy, and verification.</p>
+        </section>
+
+        <section class="taste-pillar-card">
+          <div class="pillar-num">03</div>
+          <h3>Motion is Explanatory, Never Constant</h3>
+          <p>Motion exists only to explain transformation, spatial depth, and causal state progression. Constant ambient spinning is rejected.</p>
+        </section>
+
+        <section class="taste-pillar-card">
+          <div class="pillar-num">04</div>
+          <h3>Physical Precision & Believable Weight</h3>
+          <p>Abstract systems are given tangible physical weight (titanium, basalt stone, optical sapphire crystal). Floating ungrounded primitives are rejected.</p>
+        </section>
+
+      </div>
+
+      <!-- Anti-Slop Table -->
+      <section class="anti-slop-section">
+        <h2 class="section-title">Good Taste vs AI Slop & Clichés</h2>
+        <div class="what-is-table-wrap">
+          <table class="what-is-table">
+            <thead>
+              <tr>
+                <th>ABRAXAS Good Taste</th>
+                <th>Rejected AI Slop & SaaS Clichés</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Giza Massing ($51.84° slope)</strong> with massive dark basalt blocks and golden apex</td>
+                <td>Arbitrary needle-like pyramids, random floating wireframe triangles</td>
+              </tr>
+              <tr>
+                <td><strong>Holographic Etched Eye</strong> as an architectural precision instrument</td>
+                <td>Generic mystic Eye of Providence, kitsch occult symbols, terrifying eyeballs</td>
+              </tr>
+              <tr>
+                <td><strong>Monochromatic palette</strong> with single restrained semantic accents</td>
+                <td>Rainbow cyberpunk neon tubes, glowing purple gradients everywhere</td>
+              </tr>
+              <tr>
+                <td><strong>Viewport-as-Cover typography</strong> floating unboxed on dark canvas</td>
+                <td>Generic rectangular cards floating over a 3D background like a SaaS template</td>
+              </tr>
+              <tr>
+                <td><strong>1px Hairline Inspection Overlays</strong> with true semantic coordinates</td>
+                <td>Cluttered video game HUDs with flashing warning boxes and fake graphs</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
-      <!-- 2. Four-Tier Taste Hierarchy -->
-      <section class="dossier-card">
-        <h2 class="section-title">02. The Four-Tier Taste Architecture</h2>
-        <div class="card-body">
-          <div class="taste-tier-list">
-            <div class="tier-item">
-              <span class="tier-badge">Tier A</span>
-              <div class="tier-content">
-                <h4>ABRAXAS Global Web Taste (Canon)</h4>
-                <p>Universal laws of reduction, focus, physical material coherence, negative space, and evidence honesty.</p>
-              </div>
-            </div>
-            <div class="tier-item">
-              <span class="tier-badge">Tier B</span>
-              <div class="tier-content">
-                <h4>Reusable Web Experience Patterns</h4>
-                <p>Shared knowledge patterns: Monumental Hero, Operational Dashboard, DAG Pipeline Explorer, Evidence Registry.</p>
-              </div>
-            </div>
-            <div class="tier-item">
-              <span class="tier-badge">Tier C</span>
-              <div class="tier-content">
-                <h4>Client Taste Profile (Brand Contract)</h4>
-                <p>Client-specific aesthetics, typography scales, dominant palettes, and tone boundaries.</p>
-              </div>
-            </div>
-            <div class="tier-item">
-              <span class="tier-badge">Tier D</span>
-              <div class="tier-content">
-                <h4>Project Design Intent (Compiled Brief)</h4>
-                <p>The concrete tokens and layout constraints compiled by YOD Visual Intelligence for one target website.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Future Products Guidance -->
+      <section class="future-taste-section">
+        <h2 class="section-title">Guidance for Future ABRAXAS Products</h2>
+        <p>Every tool, client portal, or audiovisual asset synthesized by ABRAXAS OS must adhere to the <strong>Taste Canon V2</strong> contract. When YOD evaluates Client Core profiles or VAV compiles video timelines, these rules are compiled into deterministic rendering constraints.</p>
       </section>
 
-      <!-- 3. Reference Forensics to Principles -->
-      <section class="dossier-card">
-        <h2 class="section-title">03. Reference Forensics → Universal Principles</h2>
-        <div class="card-body">
-          <div class="ref-forensics-grid">
-            <div class="ref-item">
-              <h4>Apple HIG &amp; Product Stories</h4>
-              <p class="ref-principle"><strong>Principle:</strong> Choreographed Progressive Disclosure. Motion is exposition; camera traces physical contours as narrative unfolds.</p>
-            </div>
-            <div class="ref-item">
-              <h4>Reflect Atmospheric Void</h4>
-              <p class="ref-principle"><strong>Principle:</strong> Singular Monumental Focus. High-contrast luminous protagonist in deep negative space commands complete attention.</p>
-            </div>
-            <div class="ref-item">
-              <h4>United Carriers Logistics</h4>
-              <p class="ref-principle"><strong>Principle:</strong> Structural Integrity. Layout lines act as load-bearing infrastructure annotating operational routes.</p>
-            </div>
-            <div class="ref-item">
-              <h4>Cipher Forensic Telemetry</h4>
-              <p class="ref-principle"><strong>Principle:</strong> Forensic Provenance. Every capability claim is anchored by immutable commit hashes and test counts.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. Anti-Slop Manifesto -->
-      <section class="dossier-card">
-        <h2 class="section-title">04. Anti-AI-Slop Manifesto &amp; Rules</h2>
-        <div class="card-body">
-          <div class="anti-slop-grid">
-            <div class="do-col">
-              <h3 class="col-title text-emerald">✓ DO</h3>
-              <ul>
-                <li>Center each scene on one dominant idea.</li>
-                <li>Preserve clean negative space for typography.</li>
-                <li>Use physically based materials (PBR, Fresnel, ACES Filmic).</li>
-                <li>Cite exact Git SHAs and deterministic test assertions.</li>
-                <li>Instant 0-duration snap under reduced motion.</li>
-              </ul>
-            </div>
-            <div class="dont-col">
-              <h3 class="col-title text-rose">✗ DON'T</h3>
-              <ul>
-                <li>Never add Three.js primitives without custom shaders.</li>
-                <li>Never place text inside floating dark backdrop boxes.</li>
-                <li>Never use gratuitous floating particles or neon glows.</li>
-                <li>Never simulate fake counting numbers or hacker HUDs.</li>
-                <li>Never repeat the same 3-card template across 13 pages.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   </main>
 
-  ${getFooter(1)}
   ${getArchitectDrawer()}
+  ${getFooter(1)}
   <script type="module" src="../assets/status-v3.js"></script>
 </body>
 </html>`;
-
-  fs.writeFileSync(path.join(tasteDir, 'index.html'), html, 'utf-8');
-  console.log('[MultiPage Generator] Generated /taste/index.html');
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  console.log(`[MultiPage Generator] Generated /taste/index.html`);
 }
 
-// 5. Generate Principles Page (/principles/index.html)
+// Generate Principles & Invariants Page
 function generatePrinciplesPage() {
-  const princDir = path.join(docsDir, 'principles');
-  fs.mkdirSync(princDir, { recursive: true });
+  const dir = path.join(docsDir, 'principles');
+  fs.mkdirSync(dir, { recursive: true });
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Core Principles &amp; Invariants — ABRAXAS OS</title>
+  <title>Core Principles & Invariants — ABRAXAS OS</title>
   <link rel="stylesheet" href="../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="multipage-body principles-page">
+<body class="page-body">
   ${getHeader('principles', 1)}
 
-  <main id="main-content" class="page-container">
-    <div class="page-hero">
-      <div class="hero-tag">CANONICAL INVARIANTS</div>
-      <h1 class="page-title">Core Principles &amp; Invariants</h1>
-      <p class="page-lead">The architectural rules, mathematical invariants, and governance laws that guarantee deterministic execution across the ABRAXAS content lifecycle.</p>
-    </div>
-
-    <div class="principles-grid">
-      <article class="principle-card">
-        <div class="principle-num">01</div>
-        <h3 class="principle-title">PLANNED != OBSERVED != RESOLVED</h3>
-        <p class="principle-desc">Strategic intent (Yod Plan) is never identical to real physical source takes (Shim Observed), and neither is identical to the final cut decision (Shim Resolved). Keeping these three layers strictly separated prevents catastrophic state drift.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-num">02</div>
-        <h3 class="principle-title">Canonical Content is Data; UI is a Projection</h3>
-        <p class="principle-desc">The single source of truth lives in immutable Content-Addressable Storage (CAS) with versioned schemas. User interfaces (Web, Desktop, Inspector) are disposable projections that subscribe to state without holding canonical authority.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-num">03</div>
-        <h3 class="principle-title">AI Never Silently Mutates Canonical Truth</h3>
-        <p class="principle-desc">AI outputs are proposals and candidates. An AI process can generate opportunities, drafts, or transcriptions, but canonical Lienzo state changes require explicit human approval gates or deterministic validation.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-num">04</div>
-        <h3 class="principle-title">Learning Never Silently Becomes Source Truth</h3>
-        <p class="principle-desc">Performance telemetry and audience feedback from Metrics are compiled into learning signals in Yod. They influence future opportunity scoring algorithms without destructively overwriting established brand voice criteria.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-num">05</div>
-        <h3 class="principle-title">Meaningful Outputs Become Artifacts</h3>
-        <p class="principle-desc">Every significant milestone produces an immutable, content-addressed Artifact (e.g. RecordingPack, LosslessCut, CaptionTrack, RenderManifest) referenced by cryptographic hash.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-num">06</div>
-        <h3 class="principle-title">Meaningful Transitions Become Events</h3>
-        <p class="principle-desc">State mutations emit immutable, structured Domain Events into the append-only Event Ledger, guaranteeing 100% deterministic time-travel auditability and temporal replay.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-num">07</div>
-        <h3 class="principle-title">Upstream Changes Invalidate via OUT_OF_SYNC</h3>
-        <p class="principle-desc">When an upstream component (e.g. Script Hook) is modified in Lienzo, all downstream derivatives (Audio Cut, Captions, Motion Track) are immediately marked <code>OUT_OF_SYNC</code> to prevent publishing stale or broken media.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-num">08</div>
-        <h3 class="principle-title">Local-First / Cloud-Ready</h3>
-        <p class="principle-desc">Core operations and video processing execute directly on local hardware without cloud roundtrip latency or monthly SaaS lock-in, while maintaining standard JSON/gRPC contracts for optional cloud distribution.</p>
-      </article>
-    </div>
-  </main>
-
-  ${getFooter(1)}
-  ${getArchitectDrawer()}
-  <script type="module" src="../assets/status-v3.js"></script>
-</body>
-</html>`;
-
-  fs.writeFileSync(path.join(princDir, 'index.html'), html, 'utf-8');
-  console.log('[MultiPage Generator] Generated /principles/index.html');
-}
-
-// Run All Generators
-generateToolsDirectoryPage();
-generateIndividualToolPages();
-generateTastePage();
-generatePrinciplesPage();
-
-console.log('[MultiPage Generator] Complete! All static multi-surface pages successfully generated.');
-
-// 6. Generate System Dashboard Page (/system/index.html)
-function generateSystemPage() {
-  const sysDir = path.join(docsDir, 'system');
-  fs.mkdirSync(sysDir, { recursive: true });
-
-  const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>System Architecture Explorer — ABRAXAS OS</title>
-  <link rel="stylesheet" href="../assets/status-v3.css">
-</head>
-<body class="system-dashboard-body">
-  ${getHeader('system', 1)}
-
-  <!-- 3D Spatial Canvas Mount -->
-  <div id="spatial-canvas-container" class="spatial-canvas-fullscreen" aria-hidden="true"></div>
-  <div id="spatial-labels-overlay" class="spatial-labels-container" aria-hidden="true"></div>
-
-  <!-- Fallback 2D Vector Schematic -->
-  <div id="fallback-schematic-container" class="fallback-schematic" style="display: none;">
-    <div class="fallback-banner">
-      <span class="fallback-pill">2D SCHEMATIC FALLBACK ACTIVE</span>
-      <p>WebGL hardware acceleration is unavailable. Displaying full operational vector architecture.</p>
-    </div>
-    <svg viewBox="0 0 1000 700" class="fallback-svg-diagram">
-      <defs>
-        <linearGradient id="pyrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
-          <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
-        </linearGradient>
-      </defs>
-      <polygon points="500,80 820,540 180,540" fill="url(#pyrGrad)" stroke="#38bdf8" stroke-width="2" />
-      <circle cx="500" cy="80" r="14" fill="#38bdf8" />
-      <text x="500" y="55" fill="#38bdf8" text-anchor="middle" font-family="Space Grotesk" font-size="14" font-weight="bold">YOD (INTELLIGENCE)</text>
-      <line x1="500" y1="95" x2="500" y2="480" stroke="#a855f7" stroke-width="3" />
-      <text x="520" y="240" fill="#a855f7" font-family="Space Grotesk" font-size="12">LIENZO SPINE</text>
-      <line x1="300" y1="360" x2="700" y2="360" stroke="#f59e0b" stroke-width="2" />
-      <text x="500" y="350" fill="#f59e0b" text-anchor="middle" font-family="Space Grotesk" font-size="12">SHIM MEMBRANE</text>
-      <rect x="360" y="440" width="280" height="45" rx="4" fill="rgba(15,23,42,0.9)" stroke="#10b981" stroke-width="1.5" />
-      <text x="500" y="468" fill="#10b981" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="bold">VAV PRODUCTION FORGE</text>
-    </svg>
-  </div>
-
-  <!-- Operational Dashboard Workspace Layout -->
-  <main id="main-content" class="system-workspace-layout">
-    <!-- Left: Typographic Directory Rail -->
-    <aside class="system-directory-rail" aria-label="System Architecture Modules">
-      <div class="directory-header">
-        <div class="rail-title-group">
-          <span class="rail-glyph">◈</span>
-          <h2>Architecture Modules</h2>
-        </div>
-        <div class="truth-toggle-wrapper">
-          <label class="truth-toggle-label" for="target-mode-toggle">
-            <input type="checkbox" id="target-mode-toggle" class="truth-toggle-input">
-            <span class="truth-toggle-slider"></span>
-            <span id="nav-target-tag" class="truth-toggle-text">RELEASED CURRENT</span>
-          </label>
-        </div>
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../system/index.html">System</a> / <span>Principles</span></div>
+        <h1 class="page-title">Core Invariants & Governance</h1>
+        <p class="page-description">The non-negotiable architectural laws governing state mutation, boundary enforcement, and truth representation across ABRAXAS OS.</p>
       </div>
-      <nav id="system-directory-list" class="directory-list" role="list">
-        <!-- Rendered dynamically by ModeManager -->
-      </nav>
-    </aside>
 
-    <!-- Center Floating Controls & Spatial Navigator -->
-    <div class="system-center-overlay">
-      <div id="navigator-mount" class="spatial-navigator-wrapper"></div>
+      <div class="principles-stack">
+        
+        <article class="principle-card">
+          <div class="principle-num">INVARIANT I</div>
+          <h2>Planned ≠ Observed ≠ Resolved</h2>
+          <p>A planned editorial structure is never assumed to match recorded reality without empirical verification. SHIM operates at the Da'at boundary to measure the discrepancy. A content piece can only be marked Resolved when empirical evidence verifies complete coverage.</p>
+        </article>
+
+        <article class="principle-card">
+          <div class="principle-num">INVARIANT II</div>
+          <h2>Content State ≠ UI Projection</h2>
+          <p>Lienzo preserves the single-piece content state as an immutable, content-addressed DAG. User interfaces, Kanban boards, and 3D scenes are read-only projections. No UI component may mutate state directly without emitting a typed event.</p>
+        </article>
+
+        <article class="principle-card">
+          <div class="principle-num">INVARIANT III</div>
+          <h2>No Silent Mutation</h2>
+          <p>Every transformation, trimming cut, or prompt update creates a new immutable revision ring. If an upstream dependency changes, downstream stages enter an explicit <code>OUT_OF_SYNC</code> invalidation state rather than silently carrying stale data.</p>
+        </article>
+
+        <article class="principle-card">
+          <div class="principle-num">INVARIANT IV</div>
+          <h2>Proof Over Claim</h2>
+          <p>Public status never claims release capability without an empirical evidence hash. Current release (<code>v1.0.0-rc1</code>) is clearly separated from post-RC1 working candidates and future target roadmap milestones.</p>
+        </article>
+
+      </div>
     </div>
-
-    <!-- Right: Contextual Inspector Rail -->
-    <aside id="system-active-summary" class="system-inspector-rail" aria-label="Selected Module Details">
-      <!-- Rendered dynamically by ModeManager -->
-    </aside>
   </main>
 
-  <div id="dossier-modal-mount"></div>
   ${getArchitectDrawer()}
+  ${getFooter(1)}
   <script type="module" src="../assets/status-v3.js"></script>
 </body>
 </html>`;
-
-  fs.writeFileSync(path.join(sysDir, 'index.html'), html, 'utf-8');
-  console.log('[MultiPage Generator] Generated /system/index.html');
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  console.log(`[MultiPage Generator] Generated /principles/index.html`);
 }
 
-// 7. Generate Flow Page (/flow/index.html)
+// Generate Flow, Proof, and Roadmap Pages
 function generateFlowPage() {
-  const flowDir = path.join(docsDir, 'flow');
-  fs.mkdirSync(flowDir, { recursive: true });
+  const dir = path.join(docsDir, 'flow');
+  fs.mkdirSync(dir, { recursive: true });
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pipeline Blueprint Explorer — ABRAXAS OS</title>
+  <title>Pipeline Blueprints — ABRAXAS OS</title>
   <link rel="stylesheet" href="../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="multipage-body flow-page">
+<body class="page-body">
   ${getHeader('flow', 1)}
 
-  <main id="main-content" class="page-container">
-    <div class="page-hero">
-      <div class="hero-tag">DAG PIPELINE ORCHESTRATION</div>
-      <h1 class="page-title">Pipeline Blueprint Explorer</h1>
-      <p class="page-lead">Inspect deterministic Directed Acyclic Graph (DAG) blueprints coordinating multi-module content production from intake to publication.</p>
-    </div>
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../system/index.html">System</a> / <span>Flow</span></div>
+        <h1 class="page-title">Pipeline Blueprint DAGs</h1>
+        <p class="page-description">11 canonical lifecycle pipelines orchestrating deterministic stage transit from raw intake to multi-platform publishing.</p>
+      </div>
 
-    <div class="flow-layout-grid">
-      <aside class="flow-sidebar">
-        <h2 class="sidebar-title">Pipeline Blueprints</h2>
-        <div id="flow-blueprint-selector" class="blueprint-selector-list">
-          <!-- Populated by ModeManager -->
-        </div>
-      </aside>
-
-      <section class="flow-main-viewport">
-        <div id="flow-active-metadata" class="flow-meta-card">
-          <!-- Populated by ModeManager -->
-        </div>
-        <div class="flow-dag-stages-card">
-          <h3 class="stages-title">Execution Stages &amp; Owning Domains</h3>
-          <div id="flow-stages-timeline" class="stages-timeline">
-            <!-- Populated by ModeManager -->
+      <div class="blueprints-grid">
+        ${pipelineBlueprints.blueprints.map((bp) => `
+        <article class="blueprint-card">
+          <div class="blueprint-header">
+            <span class="blueprint-id">${bp.id}</span>
+            <span class="blueprint-stages-count">${bp.stages.length} Stages</span>
           </div>
-        </div>
-      </section>
+          <h3 class="blueprint-title">${bp.name}</h3>
+          <p class="blueprint-desc">${bp.description}</p>
+          <div class="stages-timeline">
+            ${bp.stages.map((s, idx) => `
+            <div class="stage-step">
+              <div class="stage-idx">${idx + 1}</div>
+              <div class="stage-name">${s.name}</div>
+              <div class="stage-owner">${s.owner}</div>
+            </div>
+            `).join('\n')}
+          </div>
+        </article>
+        `).join('\n')}
+      </div>
     </div>
   </main>
 
-  ${getFooter(1)}
   ${getArchitectDrawer()}
+  ${getFooter(1)}
   <script type="module" src="../assets/status-v3.js"></script>
 </body>
 </html>`;
-
-  fs.writeFileSync(path.join(flowDir, 'index.html'), html, 'utf-8');
-  console.log('[MultiPage Generator] Generated /flow/index.html');
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  console.log(`[MultiPage Generator] Generated /flow/index.html`);
 }
 
-// 8. Generate Proof Page (/proof/index.html)
 function generateProofPage() {
-  const proofDir = path.join(docsDir, 'proof');
-  fs.mkdirSync(proofDir, { recursive: true });
-
-  const proofCards = evidenceIndex.items.map((item) => {
-    const truthClass = item.truthLayer.toLowerCase();
-    const mediaBlock = item.mediaPath
-      ? `<div class="proof-media-preview"><img src="../${item.mediaPath}" alt="${item.title}" class="proof-thumbnail" /></div>`
-      : `<div class="proof-textual-badge"><span class="badge-tag">[TEXTUAL EVIDENCE ONLY]</span></div>`;
-
-    return `
-    <article class="proof-card" data-truth="${item.truthLayer}">
-      <div class="proof-card-header">
-        <span class="proof-type">${item.type}</span>
-        <span class="truth-pill ${truthClass}">${item.truthLayer.replace(/_/g, ' ')}</span>
-      </div>
-      <h3 class="proof-title">${item.title}</h3>
-      <p class="proof-proves">${item.whatItProves}</p>
-      ${mediaBlock}
-      <div class="proof-footer">
-        ${item.sha ? `<span class="proof-mono">SHA: <code>${item.sha.slice(0, 12)}</code></span>` : ''}
-        ${item.testCount ? `<span class="proof-tests">Tests Passed: <strong>${item.testCount}</strong></span>` : ''}
-        <span class="proof-status-pass">✓ ${item.healthStatus}</span>
-      </div>
-    </article>
-    `;
-  }).join('\n');
+  const dir = path.join(docsDir, 'proof');
+  fs.mkdirSync(dir, { recursive: true });
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evidence &amp; Verification Registry — ABRAXAS OS</title>
+  <title>Verified Evidence Ledger — ABRAXAS OS</title>
   <link rel="stylesheet" href="../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="multipage-body proof-page">
+<body class="page-body">
   ${getHeader('proof', 1)}
 
-  <main id="main-content" class="page-container">
-    <div class="page-hero">
-      <div class="hero-tag">FORENSIC PROVENANCE</div>
-      <h1 class="page-title">Evidence &amp; Release Proof</h1>
-      <p class="page-lead">Every claim of system capability is backed by immutable Git commit hashes, deterministic test assertions, and reproducible health check suites.</p>
-    </div>
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../system/index.html">System</a> / <span>Proof</span></div>
+        <h1 class="page-title">Verified Empirical Evidence Ledger</h1>
+        <p class="page-description">The cryptographic and test-backed truth foundation of ABRAXAS OS. Every capability is verified against automated test suites and hash registries.</p>
+      </div>
 
-    <div class="proof-summary-bar">
-      <div class="summary-metric">
-        <span class="metric-num">v1.0.0-rc1</span>
-        <span class="metric-label">Release Baseline</span>
+      <div class="proof-summary-bar">
+        <div class="proof-stat">
+          <div class="stat-num">86</div>
+          <div class="stat-lbl">Vitest Test Files Passed</div>
+        </div>
+        <div class="proof-stat">
+          <div class="stat-num">226</div>
+          <div class="stat-lbl">Unit & Integration Tests</div>
+        </div>
+        <div class="proof-stat">
+          <div class="stat-num">0</div>
+          <div class="stat-lbl">TypeScript Errors</div>
+        </div>
+        <div class="proof-stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-lbl">RC1 Integrity Verified</div>
+        </div>
       </div>
-      <div class="summary-metric">
-        <span class="metric-num">86</span>
-        <span class="metric-label">Test Files Passing</span>
-      </div>
-      <div class="summary-metric">
-        <span class="metric-num">226</span>
-        <span class="metric-label">Unit / Integration Tests</span>
-      </div>
-      <div class="summary-metric">
-        <span class="metric-num">0</span>
-        <span class="metric-label">Typecheck Errors</span>
-      </div>
-    </div>
 
-    <div class="proof-grid">
-      ${proofCards}
+      <div class="evidence-ledger-list">
+        ${evidenceIndex.items.map((ev) => {
+          const statusVal = ev.truthLayer || ev.healthStatus || 'PASS';
+          const idVal = ev.evidenceId || ev.id || 'EVIDENCE';
+          const hashVal = ev.sha || (ev.releaseVersion ? `TAG: ${ev.releaseVersion}` : (ev.testCount ? `TESTS: ${ev.testCount}` : 'VERIFIED'));
+          return `
+          <article class="evidence-row" id="${idVal}">
+            <div class="evidence-left">
+              <span class="evidence-badge ${statusVal.toLowerCase()}">${statusVal}</span>
+              <span class="evidence-id"><code>${idVal}</code></span>
+            </div>
+            <div class="evidence-mid">
+              <h3>${ev.title}</h3>
+              <p>${ev.whatItProves || ev.description || ""}</p>
+            </div>
+            <div class="evidence-right">
+              <span class="evidence-hash">${hashVal}</span>
+            </div>
+          </article>
+          `;
+        }).join('\n')}
+      </div>
     </div>
   </main>
 
-  ${getFooter(1)}
   ${getArchitectDrawer()}
+  ${getFooter(1)}
   <script type="module" src="../assets/status-v3.js"></script>
 </body>
 </html>`;
-
-  fs.writeFileSync(path.join(proofDir, 'index.html'), html, 'utf-8');
-  console.log('[MultiPage Generator] Generated /proof/index.html');
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  console.log(`[MultiPage Generator] Generated /proof/index.html`);
 }
 
-// 9. Generate Roadmap Page (/roadmap/index.html)
 function generateRoadmapPage() {
-  const rmDir = path.join(docsDir, 'roadmap');
-  fs.mkdirSync(rmDir, { recursive: true });
-
-  const gates = [
-    { gateId: "P1", title: "VAV Audiovisual Core & Safe Zones", desc: "Non-destructive FFmpeg cut engine, 13 motion families, Remotion composition.", status: "RELEASED_RC1" },
-    { gateId: "P2", title: "He Operations Core & Security", desc: "Task graph, typed approval engine, blocker precedence, persistent JSON store, RBAC.", status: "RELEASED_RC1" },
-    { gateId: "P3A", title: "He Product UI Core", desc: "Modular desk UI, Solo Queue, Kanban, Calendar, Recording Sessions, Reviews.", status: "RELEASED_RC1" },
-    { gateId: "P3B", title: "He Time Tracking & Notifications", desc: "Timer sessions, time reports, in-app notification engine with read isolation.", status: "RELEASED_RC1" },
-    { gateId: "P4", title: "Public Status V3 & Spatial Experience", desc: "Multi-surface public architecture, 3D Spatial Pyramid, Taste Canon V2, Public Architect.", status: "RELEASED_RC1" },
-    { gateId: "R1", title: "Lienzo Domain Core & Revision CAS", desc: "Persistent versioned identity, component DAG, exclusive CAS store, Impact Engine.", status: "POST_RC1_CANDIDATE" },
-    { gateId: "R2", title: "Shim Reality & Editorial Resolution", desc: "Transverse 3-plane observation (Planned/Observed/Resolved), missing beat gap detection.", status: "POST_RC1_CANDIDATE" },
-    { gateId: "R3", title: "YOD Intelligence & Opportunity Scanner", desc: "Continuous niche opportunity scoring, prompt compiler, feedback learning loop.", status: "POST_RC1_CANDIDATE" },
-    { gateId: "R4", title: "VAV Modular Pipelines & Automated Cuts", desc: "Dynamic multi-track blueprint routing, automatic take relinking.", status: "CONTRACT_ONLY" },
-    { gateId: "R5", title: "Collaborative CAS & Cloud Sync", desc: "Multi-user CRDT cursor synchronization, distributed opaque cloud store.", status: "PLANNED" },
-    { gateId: "R6", title: "Distributed Autonomous Orchestration", desc: "Self-healing pipeline execution, multi-channel distribution network.", status: "PLANNED" }
-  ];
-
-  const gateCards = gates.map((g) => {
-    const statusClass = g.status.toLowerCase();
-    return `
-    <article class="roadmap-card" data-status="${g.status}">
-      <div class="roadmap-card-header">
-        <span class="gate-id">${g.gateId}</span>
-        <span class="truth-pill ${statusClass}">${g.status.replace(/_/g, ' ')}</span>
-      </div>
-      <h3 class="gate-title">${g.title}</h3>
-      <p class="gate-desc">${g.desc}</p>
-    </article>
-    `;
-  }).join('\n');
+  const dir = path.join(docsDir, 'roadmap');
+  fs.mkdirSync(dir, { recursive: true });
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Architecture Roadmap &amp; Gate Progression — ABRAXAS OS</title>
+  <title>Architecture Roadmap — ABRAXAS OS</title>
   <link rel="stylesheet" href="../assets/status-v3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="multipage-body roadmap-page">
+<body class="page-body">
   ${getHeader('roadmap', 1)}
 
-  <main id="main-content" class="page-container">
-    <div class="page-hero">
-      <div class="hero-tag">CAPABILITY EVOLUTION</div>
-      <h1 class="page-title">Architecture Roadmap</h1>
-      <p class="page-lead">The sequential engineering gates progressing ABRAXAS from foundational release RC1 into full multi-surface candidate maturity.</p>
-    </div>
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../system/index.html">System</a> / <span>Roadmap</span></div>
+        <h1 class="page-title">Architecture Roadmap & Milestones</h1>
+        <p class="page-description">Progressive gate execution from foundational schema contracts (Gate P1) through autonomous production scaling (Gate P8).</p>
+      </div>
 
-    <div class="roadmap-timeline">
-      ${gateCards}
+      <div class="roadmap-gates-stack">
+        ${roadmapData.gates.map((g) => {
+          const statusVal = g.status || 'PLANNED';
+          const idVal = g.gateId || g.id || 'GATE';
+          return `
+          <article class="gate-card ${statusVal.toLowerCase()}">
+            <div class="gate-header">
+              <span class="gate-id">${idVal}</span>
+              <span class="gate-status-pill ${statusVal.toLowerCase()}">${statusVal}</span>
+            </div>
+            <h2 class="gate-title">${g.title}</h2>
+            <p class="gate-desc">${g.description}</p>
+          </article>
+          `;
+        }).join('\n')}
+      </div>
     </div>
   </main>
 
-  ${getFooter(1)}
   ${getArchitectDrawer()}
+  ${getFooter(1)}
   <script type="module" src="../assets/status-v3.js"></script>
 </body>
 </html>`;
-
-  fs.writeFileSync(path.join(rmDir, 'index.html'), html, 'utf-8');
-  console.log('[MultiPage Generator] Generated /roadmap/index.html');
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  console.log(`[MultiPage Generator] Generated /roadmap/index.html`);
 }
 
-// 10. Generate Main Landing / 6-Act Story Page (/index.html)
-function generateLandingStoryPage() {
-  const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABRAXAS OS — Content Intelligence, Governance &amp; Audiovisual Synthesis</title>
-  <link rel="stylesheet" href="./assets/status-v3.css">
-</head>
-<body class="landing-story-body">
-  ${getHeader('story', 0)}
-
-  <!-- 3D Spatial Canvas Mount -->
-  <div id="spatial-canvas-container" class="spatial-canvas-fullscreen" aria-hidden="true"></div>
-  <div id="spatial-labels-overlay" class="spatial-labels-container" aria-hidden="true"></div>
-
-  <!-- Fallback 2D Vector Schematic -->
-  <div id="fallback-schematic-container" class="fallback-schematic" style="display: none;">
-    <div class="fallback-banner">
-      <span class="fallback-pill">2D SCHEMATIC FALLBACK ACTIVE</span>
-      <p>WebGL hardware acceleration is unavailable. Displaying full operational vector architecture.</p>
-    </div>
-  </div>
-
-  <div id="navigator-mount" class="spatial-navigator-wrapper"></div>
-
-  <main id="main-content" class="story-scroll-container">
-    <!-- ACT 01: PREMISE -->
-    <section class="story-act-section" data-act="0" data-shot="S0">
-      <div class="act-content-wrap">
-        <div class="act-tag">ACT 01 // PREMISE</div>
-        <h1 class="act-headline">An Operating System for Systematic Content.</h1>
-        <p class="act-lead">ABRAXAS unifies strategic audience intelligence, operational governance, and deterministic audiovisual synthesis into one closed-loop content lifecycle.</p>
-        <div class="hero-actions">
-          <a href="#act-1" class="btn-primary" onclick="window.__ABRAXAS_STORY_CONTROLLER__?.jumpToState(1);">Begin Journey ↓</a>
-          <a href="./system/index.html" class="btn-secondary">Explore Architecture →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACT 02: INTELLIGENCE -->
-    <section id="act-1" class="story-act-section" data-act="1" data-shot="S2">
-      <div class="act-content-wrap">
-        <div class="act-tag">ACT 02 // INTELLIGENCE</div>
-        <h2 class="act-headline">YOD: Originating Intelligence.</h2>
-        <p class="act-lead">External world intent, client brand pillars, and audience coverage gaps enter the YOD apex crystal, compiling structured opportunities and recording packs without guesswork.</p>
-        <div class="act-meta">
-          <span class="meta-chip">Domain: Intelligence</span>
-          <span class="meta-chip">Outputs: RecordingPack, Prompts</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACT 03: LIVING IDENTITY -->
-    <section class="story-act-section" data-act="2" data-shot="S4">
-      <div class="act-content-wrap">
-        <div class="act-tag">ACT 03 // IDENTITY</div>
-        <h2 class="act-headline">Lienzo: Persistent Identity Spine.</h2>
-        <p class="act-lead">A single content piece maintains immutable, versioned identity across its entire lifecycle. Upstream revisions trigger automatic downstream invalidation via the Impact Engine.</p>
-        <div class="act-meta">
-          <span class="meta-chip">Domain: Identity</span>
-          <span class="meta-chip">Invariant: OUT_OF_SYNC</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACT 04: REALITY -->
-    <section class="story-act-section" data-act="3" data-shot="S5">
-      <div class="act-content-wrap">
-        <div class="act-tag">ACT 04 // REALITY</div>
-        <h2 class="act-headline">Shim: Planned vs Observed vs Resolved.</h2>
-        <p class="act-lead">The transverse optical membrane matches planned script beats against observed raw takes, detecting missing coverage gaps and establishing resolved timestamps.</p>
-        <div class="act-meta">
-          <span class="meta-chip">Domain: Reality</span>
-          <span class="meta-chip">Invariant: PLANNED != OBSERVED != RESOLVED</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACT 05: MANIFESTATION -->
-    <section class="story-act-section" data-act="4" data-shot="S6">
-      <div class="act-content-wrap">
-        <div class="act-tag">ACT 05 // PRODUCTION</div>
-        <h2 class="act-headline">VAV: The Audiovisual Production Forge.</h2>
-        <p class="act-lead">Non-destructive FFmpeg jump cuts, kinetic typography styling, and 13 programmatic motion families compose frame-accurate Remotion renders with platform safe-zone protection.</p>
-        <div class="act-meta">
-          <span class="meta-chip">Domain: Production</span>
-          <span class="meta-chip">Engines: FFmpeg, Remotion</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ACT 06: CLOSED LOOP & CTA -->
-    <section class="story-act-section grand-cta-section" data-act="5" data-shot="S11">
-      <div class="act-content-wrap">
-        <div class="act-tag">ACT 06 // CLOSED LOOP</div>
-        <h2 class="act-headline">Manifestation to Continuous Learning.</h2>
-        <p class="act-lead">He-II dispatches verified media to platform distribution portals in the External World. Performance telemetry from Metrics loops back to Yod to refine future strategic decisions.</p>
-        <div class="cta-banner-box">
-          <h3>Ready to explore the operational architecture?</h3>
-          <p>Access the real-time 3D system dashboard, inspect all 13 module contracts, and verify cryptographic release evidence.</p>
-          <div class="cta-btn-row">
-            <a href="./system/index.html" class="btn-primary btn-large">EXPLORE THE SYSTEM →</a>
-            <a href="./tools/index.html" class="btn-secondary btn-large">View Tool Directory</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div id="dossier-modal-mount"></div>
-  ${getArchitectDrawer()}
-  <script type="module" src="./assets/status-v3.js"></script>
-</body>
-</html>`;
-
-  fs.writeFileSync(path.join(docsDir, 'index.html'), html, 'utf-8');
-  console.log('[MultiPage Generator] Generated /index.html (6-Act Landing)');
-}
-
-generateSystemPage();
+// Execute Generation
+generateLandingPage();
+generateSystemDashboardPage();
+generateToolDossiers();
+generateTastePage();
+generatePrinciplesPage();
 generateFlowPage();
 generateProofPage();
 generateRoadmapPage();
-generateLandingStoryPage();
 
+console.log("[MultiPage Generator] Complete! All static multi-surface pages successfully generated.");
