@@ -1,14 +1,17 @@
 /**
- * ABRAXAS Module Registry
- * Central registry for all 13 canonical operational modules.
+ * ABRAXAS Module Registry with Lifecycle Management
  */
 
 export interface AbraxasModule {
   name: string;
   version: string;
+  purpose: string;
   status: "ACTIVE" | "INACTIVE";
-  dependencies: string[];
-  capabilities: string[];
+  dependencies?: string[];
+  capabilities?: string[];
+  initialize(): Promise<void>;
+  healthCheck(): Promise<any>;
+  shutdown(): Promise<void>;
 }
 
 export class ModuleRegistry {
@@ -19,24 +22,28 @@ export class ModuleRegistry {
   }
 
   private bootstrapCanonicalModules(): void {
-    const canonicalModules: AbraxasModule[] = [
-      { name: "YOD", version: "4.0.0", status: "ACTIVE", dependencies: [], capabilities: ["OPPORTUNITY_RADAR", "HOOK_TAXONOMY", "BRAND_VOICE"] },
-      { name: "CONTENIDO", version: "4.0.0", status: "ACTIVE", dependencies: ["backbone"], capabilities: ["IMMUTABLE_CAS_DAG", "REVISION_STRATIGRAPHY"] },
-      { name: "SHIM", version: "4.0.0", status: "ACTIVE", dependencies: ["CONTENIDO", "transcription"], capabilities: ["DAAT_REALITY_METROLOGY", "GAP_DETECTION"] },
-      { name: "VAV", version: "4.0.0", status: "ACTIVE", dependencies: ["SHIM", "CONTENIDO"], capabilities: ["LOSSLESS_CUTS", "KINETIC_TYPOGRAPHY", "REMOTION_MOTION"] },
-      { name: "HE", version: "4.0.0", status: "ACTIVE", dependencies: ["CONTENIDO"], capabilities: ["OPERATIONS_DESK", "KANBAN", "CALENDAR", "APPROVALS"] },
-      { name: "ARQUITECTO", version: "4.0.0", status: "ACTIVE", dependencies: ["kernel"], capabilities: ["COGNITIVE_PLANNER", "INTENTION_ENGINE", "TELEMETRY_MONITOR"] },
-      { name: "PIPELINE", version: "4.0.0", status: "ACTIVE", dependencies: ["kernel"], capabilities: ["DAG_RUNNER", "TREE_OF_LIFE_ENGINE"] },
-      { name: "AI_RUNTIME", version: "4.0.0", status: "ACTIVE", dependencies: [], capabilities: ["TOKEN_BROKER", "DETERMINISTIC_CACHE", "PROVIDER_ROUTING"] },
-      { name: "UNIVERSAL_INTAKE", version: "4.0.0", status: "ACTIVE", dependencies: ["SHIM"], capabilities: ["MEDIA_PROBING", "CAS_HASHING"] },
-      { name: "PUBLISHING", version: "4.0.0", status: "ACTIVE", dependencies: ["HE"], capabilities: ["PLATFORM_MANIFESTS", "PUBLISH_RECEIPTS"] },
-      { name: "METRICS", version: "4.0.0", status: "ACTIVE", dependencies: ["PUBLISHING"], capabilities: ["AUDIENCE_TELEMETRY", "PERFORMANCE_VECTORS"] },
-      { name: "EVENTS", version: "4.0.0", status: "ACTIVE", dependencies: [], capabilities: ["NEURAL_EVENT_STREAM", "AUDIT_PERSISTENCE"] },
-      { name: "ARTIFACTS", version: "4.0.0", status: "ACTIVE", dependencies: [], capabilities: ["CAS_REGISTRY", "BYTE_INTEGRITY"] }
+    const moduleDefs = [
+      { name: "YOD", purpose: "Creative Potential & Opportunity Formulation", capabilities: ["RADAR", "HOOK_TAXONOMY"] },
+      { name: "CONTENIDO", purpose: "Identity Spine & CAS DAG Revision Stratigraphy", capabilities: ["CAS_DAG", "REVISIONS"] },
+      { name: "SHIM", purpose: "Da'at Reality Metrology & Verification Gate", capabilities: ["METROLOGY", "CERTIFICATES"] },
+      { name: "VAV", purpose: "Audiovisual Formation Forge & Lossless Renders", capabilities: ["FFMPEG_CUT", "REMOTION", "CAPTIONS"] },
+      { name: "HE", purpose: "Operations Desk, Human Reviews & Publishing Governance", capabilities: ["KANBAN", "APPROVALS"] },
+      { name: "ARQUITECTO", purpose: "Cognitive Intention Interface & Telemetry Monitor", capabilities: ["INTENTION_ENGINE", "PLANNER"] },
+      { name: "GUARDIAN", purpose: "Autonomous System Health & Drift Daemon", capabilities: ["DRIFT_DETECTION", "AUTO_REPAIR"] },
+      { name: "MEMORY", purpose: "Stratigraphic SQLite & Semantic Vector Memory", capabilities: ["EPISODIC", "VECTOR_SEARCH"] }
     ];
 
-    for (const mod of canonicalModules) {
-      this.register(mod);
+    for (const def of moduleDefs) {
+      this.register({
+        name: def.name,
+        version: "5.1.0",
+        purpose: def.purpose,
+        status: "ACTIVE",
+        capabilities: def.capabilities,
+        initialize: async () => {},
+        healthCheck: async () => ({ status: "HEALTHY", checkedAt: new Date().toISOString() }),
+        shutdown: async () => {}
+      });
     }
   }
 
@@ -50,7 +57,7 @@ export class ModuleRegistry {
   }
 
   public list(): AbraxasModule[] {
-    return [...this.modules];
+    return this.modules;
   }
 
   public get(name: string): AbraxasModule | undefined {

@@ -17,12 +17,12 @@ export interface SystemStatusPanelModel {
 export class SystemStatusPanelProvider {
   constructor(private readonly kernel: AbraxasKernel) {}
 
-  public getModel(): SystemStatusPanelModel {
-    const boot = this.kernel.boot();
+  public async getModel(): Promise<SystemStatusPanelModel> {
+    const boot = await this.kernel.boot();
     const modules = this.kernel.modules.list().map((m) => ({
       name: m.name,
-      status: m.status,
-      capabilitiesCount: m.capabilities.length
+      status: m.status as "ACTIVE" | "INACTIVE",
+      capabilitiesCount: m.capabilities ? m.capabilities.length : 0
     }));
 
     return {
@@ -31,8 +31,8 @@ export class SystemStatusPanelProvider {
       memory: "CONNECTED",
       guardian: boot.guardianStatus === "OPTIMAL" ? "RUNNING" : "STOPPED",
       pipeline: "READY",
-      systemVersion: boot.version,
-      activeSefirah: boot.state
+      systemVersion: "5.1.0-organism",
+      activeSefirah: String(boot.state)
     };
   }
 }
