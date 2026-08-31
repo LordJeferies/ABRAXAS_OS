@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EVENTS (Temporal) — ABRAXAS OS</title>
-  <meta name="description" content="Captures all meaningful lifecycle transitions, state invalidations, and audit records as immutable typed events.">
+  <title>EVENTS (Backbone // Coordination Ledger) — ABRAXAS OS</title>
+  <meta name="description" content="Events defines the typed event schema specifications governing state transition messaging between modules.">
   <link rel="alternate" hreflang="en" href="../../../en/tools/events/index.html">
   <link rel="alternate" hreflang="es" href="../../../es/tools/events/index.html">
   <link rel="alternate" hreflang="x-default" href="../../../en/tools/events/index.html">
   <link rel="stylesheet" href="../../../assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   
@@ -55,28 +52,34 @@
         <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operators</a> / <span>EVENTS</span></div>
         <div class="module-title-row">
           <h1 class="page-title">EVENTS</h1>
-          <div class="truth-pill released_current">RELEASED (RC1)</div>
+          <div class="truth-pill contract_only">CONTRACT ONLY</div>
         </div>
-        <div class="module-domain-badge">Domain: Temporal // ⚝ Hod (Splendor / Event Ledger) // Subterranean Event Chamber</div>
-        <p class="page-description">What happened, when and why.</p>
+        <div class="module-domain-badge">Domain: Backbone // Coordination Ledger // ⚝ Temporal coordination ledger contracts</div>
+        <p class="page-description">Cross-cutting domain event schemas and temporal audit trail contracts.</p>
       </div>
 
       <div class="dossier-grid">
         <div class="dossier-main-col">
           <section class="dossier-section">
             <h2 class="section-title">1. What It Is & Purpose</h2>
-            <p class="section-lead">Captures all meaningful lifecycle transitions, state invalidations, and audit records as immutable typed events.</p>
+            <p class="section-lead">Events defines the typed event schema specifications governing state transition messaging between modules.</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">2. Spatial & Symbolic Association</h2>
+            <p>Temporal coordination ledger contracts</p>
+            <div class="disclaimer-box"><small>This is an ABRAXAS visual and operational spatial association, not module identity. Tree states describe transformations of Contenido; modules act upon them.</small></div>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">3. Problem Solved</h2>
-            <p>Provides total auditability and observability across the entire operating system lifecycle.</p>
+            <p>Prevents tight coupling between modules by establishing immutable event payload contracts.</p>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">4. Operational Example Flow</h2>
             <div class="example-box">
-              <p class="example-flow-text"><code>Task marked Approved -> HE emits HE_TASK_APPROVED -> Pipeline Engine advances workflow -> Audit record saved.</code></p>
+              <p class="example-flow-text"><code>Module state changes -> Typed event envelope emitted -> Subscribed boundaries receive notification.</code></p>
             </div>
           </section>
 
@@ -86,16 +89,15 @@
               <div class="owns-col">
                 <h3 class="owns-title">✓ What EVENTS OWNS</h3>
                 <ul class="boundary-list">
-                  <li>Typed event schema definitions</li>
-<li>Asynchronous event bus routing</li>
-<li>Immutable audit trail persistence</li>
+                  <li>Event type definitions</li>
+<li>Envelope metadata schemas</li>
+<li>Audit log format specifications</li>
                 </ul>
               </div>
               <div class="not-owns-col">
                 <h3 class="not-owns-title">✗ What EVENTS DOES NOT OWN</h3>
                 <ul class="boundary-list">
-                  <li>Does NOT own content state data</li>
-<li>Does NOT own task logic</li>
+                  <li>Domain-specific business logic of individual modules</li>
                 </ul>
               </div>
             </div>
@@ -113,12 +115,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>A deterministic, domain-specific execution engine</td>
-                    <td>A generic third-party AI wrapper or chat prompt</td>
-                  </tr>
-                  <tr>
-                    <td>Bound to immutable event and artifact schemas</td>
-                    <td>A mutable board with untracked edits</td>
+                    <td>A formal event schema contract specification.</td>
+                    <td>Not an external Kafka/RabbitMQ cluster in RC1, and not an arbitrary pub-sub broker.</td>
                   </tr>
                 </tbody>
               </table>
@@ -126,10 +124,10 @@
           </section>
 
           <section class="dossier-section">
-            <h2 class="section-title">7. Current Status & Target Roadmap</h2>
+            <h2 class="section-title">7. Current Status & Roadmap Gate</h2>
             <div class="roadmap-gap-box">
-              <h4>Current Truth Status: <span class="highlight-text">RELEASED (RC1)</span></h4>
-              <p>Typed asynchronous event bus, state transition history, and event auditing ledger verified in RC1.</p>
+              <h4>Current Truth Status: <span class="highlight-text">CONTRACT ONLY</span></h4>
+              <p>Contract schemas validated in core test suite; localized event dispatch active within HE and VAV.</p>
             </div>
           </section>
         </div>
@@ -140,26 +138,25 @@
             <div class="io-group">
               <span class="io-label">Inputs:</span>
               <ul class="io-list">
-                <li><code>Module Transition Triggers</code></li>
+                <li><code>Domain state transition signals</code></li>
               </ul>
             </div>
             <div class="io-group">
               <span class="io-label">Outputs:</span>
               <ul class="io-list">
-                <li><code>TypedSystemEvent</code></li>
-<li><code>AuditLogStream</code></li>
+                <li><code>Validated event envelopes</code></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-card">
             <h3>Connected Modules</h3>
-            <p class="conn-text">Observes all system transitions and broadcasts signals to listeners.</p>
+            <p class="conn-text">Provides coordination schemas across all system boundaries.</p>
           </div>
 
           <div class="sidebar-card">
             <h3>Verified Evidence</h3>
-            <p>Cryptographically verified in test-suite SHA registry.</p>
+            <p>Contract schemas validated in core test suite; localized event dispatch active within HE and VAV.</p>
             <a href="../../proof/index.html" class="tool-link-btn">View Proof Ledger →</a>
           </div>
         </aside>
@@ -197,7 +194,7 @@
         <div id="architect-response-container" class="architect-response-card" style="display: none;">
           <div class="response-topic" id="architect-response-topic">TOPIC</div>
           <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">RC1 Verified Truth</div>
+          <div class="response-meta" id="architect-response-meta">v1.0.0-rc1 Verified Baseline</div>
         </div>
       </div>
     </div>
@@ -209,7 +206,7 @@
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
         <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> v1.0.0-rc1 Historical Baseline</div>
       </div>
       <div class="footer-col">
         <h4>Architecture</h4>
@@ -247,7 +244,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 ABRAXAS OS. Deterministic Closed-Loop Architecture.</div>
       <div class="footer-meta">
-        <span class="footer-mono">SHA: 28eb35eff087be6ebd415dcf0becbce419167e25</span>
+        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
       </div>
     </div>
   </footer>

@@ -1,77 +1,66 @@
 # ABRAXAS NEXT CHAT BOOTSTRAP
-# BILINGUAL STATUS V6 PUBLICATION HANDOFF
+# STATUS V6 TRUTH, ONTOLOGY & VISUAL REPAIR HANDOFF
 
-**Task ID**: `ABX-STATUS-V6-BILINGUAL-SPATIAL-MULTIPAGE-PUBLISH-001`  
+**Task ID**: `ABX-STATUS-V6-TRUTH-ONTOLOGY-VISUAL-REPAIR-002`  
 **Date**: 2026-08-31  
-**Private HEAD Before**: `28eb35eff087be6ebd415dcf0becbce419167e25`  
+**Private HEAD Before Repair**: `12bda0fb10468ae82428e2df5efc08f2042e90b8`  
 **Private Remote Branch**: `origin/main`  
+**Visual Status**: `AWAITING_HUMAN_VISUAL_REVIEW`  
 
 ---
 
-## 1. System Truth State & Capability Registry
+## 1. System Truth State & Capability Classification
 
-| Truth Layer | Scope & Status | Verified Evidence Hash / Tests |
-| :--- | :--- | :--- |
-| **RELEASED_CURRENT** | v1.0.0-rc1 Baseline: He Operations Core, VAV Cuts FFmpeg, VAV Captions Desktop, VAV Motions Foundation, Contenido Core, Events Bus, Artifacts Hash Registry | `sha: 91234741f0b3a1ac5bd7e4c0556fafa868d00769`<br>86 test files, 226 tests passed (100%) |
-| **POST_RC1_CANDIDATE** | YOD ClientCore runtime, Opportunity generation & scoring, SHIM phonetic alignment & Da'at discrepancy verification | Working candidate verified in local core test suite |
-| **CONTRACT_ONLY** | Publishing Multi-Platform syndication, Metrics Telemetry & Learning feedback contracts | Schema & domain boundaries frozen in `PIPELINE_BLUEPRINT_REGISTRY_V1.json` |
-| **PLANNED** | Autonomous Multi-Client Niche Opportunity Radar (Gate P8), Continuous Production Scaling | Gate P6–P8 Roadmap milestones |
-
----
-
-## 2. Bilingual Route Architecture (100% Symmetrical Parity)
-
-### Root
-- `/index.html`: Browser language and stored preference redirector (`/en/` or `/es/`)
-
-### English Locale (`/en/`) & Spanish Locale (`/es/`)
-- `/{locale}/index.html` (8-Act Cinematic Manifesto & Giza Hero)
-- `/{locale}/system/index.html` (Operational System Dashboard)
-- `/{locale}/architecture/index.html` (Architecture Treatise Index)
-- `/{locale}/architecture/pyramid/index.html` (Giza Monumental Architecture)
-- `/{locale}/architecture/four-worlds/index.html` (Four Worlds Framework: Atziluth, Beri'ah, Yetzirah, Assiah)
-- `/{locale}/architecture/tree-of-life/index.html` (Tree of Life Spatial Topology)
-- `/{locale}/architecture/content-state-space/index.html` (Content State-Space XYZA & Adaptive Dimension A)
-- `/{locale}/architecture/closed-loop/index.html` (Perpetual Closed Loop)
-- `/{locale}/tools/index.html` (Operators of the System Directory)
-- `/{locale}/tools/yod/index.html` (YOD Intelligence)
-- `/{locale}/tools/contenido/index.html` (Contenido Persistent Identity Core)
-- `/{locale}/tools/lienzo/index.html` (Canonical Alias to Contenido)
-- `/{locale}/tools/he/index.html` (HE Operations & Governance)
-- `/{locale}/tools/shim/index.html` (SHIM Observation & Da'at Metrology)
-- `/{locale}/tools/vav/index.html` (VAV Synthesis Forge)
-- `/{locale}/tools/vav/captions/index.html` (VAV / Captions Track)
-- `/{locale}/tools/vav/cuts/index.html` (VAV / Cuts Track)
-- `/{locale}/tools/vav/motions/index.html` (VAV / Motions Track)
-- `/{locale}/tools/arquitecto/index.html` (Arquitecto Volumetric Etching Eye)
-- `/{locale}/tools/pipeline-engine/index.html` (Pipeline Engine Orchestration)
-- `/{locale}/tools/ai-runtime/index.html` (AI Runtime Worker Substrate)
-- `/{locale}/tools/universal-intake/index.html` (Universal Intake Ingress Gate)
-- `/{locale}/tools/publishing/index.html` (Publishing Multi-Platform Distribution)
-- `/{locale}/tools/metrics/index.html` (Metrics Telemetry Observatory)
-- `/{locale}/tools/events/index.html` (Events Temporal Ledger)
-- `/{locale}/tools/artifacts/index.html` (Artifacts Content-Addressed Vault)
-- `/{locale}/flow/index.html` (11 Canonical Pipeline Blueprint DAGs)
-- `/{locale}/proof/index.html` (Verified Evidence Ledger)
-- `/{locale}/roadmap/index.html` (Roadmap Gates P1 to P8)
-- `/{locale}/taste/index.html` (The Taste System as Infrastructure)
-- `/{locale}/principles/index.html` (Core Invariant Laws)
-- `/{locale}/ask/index.html` (Public Architect Inquiry Assistant)
+| Module / System | Final Public Truth Layer | Runtime Status | Provenance & Evidence Basis |
+| :--- | :--- | :--- | :--- |
+| **HE (Operations)** | `RELEASED_CURRENT` | `RELEASED_RC1` | Frozen v1.0.0-rc1 baseline (`evidence:he-operations-desk`) |
+| **VAV (Synthesis)** | `RELEASED_CURRENT` | `RELEASED_RC1` | Frozen v1.0.0-rc1 baseline (`evidence:cuts-ffmpeg-local`, `evidence:vav-motion-remotion-render`) |
+| **PUBLIC ARCHITECT** | `RELEASED_CURRENT` | `RELEASED_RC1` | Deterministic client-side NLP query assistant (`evidence:public-architect-v1`) |
+| **YOD (Intelligence)** | `POST_RC1_CANDIDATE` | `WORKING_CANDIDATE` | Local core runtime candidate (opportunity radar, hook taxonomy, brand voice criteria) |
+| **CONTENIDO (Identity)** | `POST_RC1_CANDIDATE` | `WORKING_CANDIDATE` | Lienzo Domain Core working candidate (`evidence:lienzo-domain-core`) |
+| **SHIM (Metrology)** | `POST_RC1_CANDIDATE` | `WORKING_CANDIDATE` | Da'at discrepancy verification working candidate (`evidence:shim-observation-core`) |
+| **PRIVATE ARQUITECTO** | `CONTRACT_ONLY` | `DESIGN_CONTRACT` | Target total system observation & XYZA state interpretation contracts |
+| **PIPELINE ENGINE** | `CONTRACT_ONLY` | `DESIGN_REGISTRY` | 11 Blueprint DAG schemas validated (`PIPELINE_BLUEPRINT_REGISTRY_V1.json`); not executable runtime |
+| **AI RUNTIME** | `CONTRACT_ONLY` | `PLANNED` | Target inference queue, token budget schemas, and model provider interface specifications |
+| **UNIVERSAL INTAKE** | `CONTRACT_ONLY` | `PLANNED` | Ingress validation and media normalization contracts |
+| **PUBLISHING** | `CONTRACT_ONLY` | `PLANNED` | Multi-platform export manifests and distribution contracts (Pyramid -> Moon) |
+| **METRICS** | `CONTRACT_ONLY` | `PLANNED` | Audience performance telemetry schemas and learning feedback contracts (Moon -> Pyramid) |
+| **EVENTS** | `CONTRACT_ONLY` | `DESIGN_CONTRACT` | Domain event schema definitions (localized dispatch active within HE and VAV) |
+| **ARTIFACTS** | `CONTRACT_ONLY` | `DESIGN_CONTRACT` | Content-addressed storage and SHA256 verification schemas |
 
 ---
 
-## 3. Spatial & Art Direction State
+## 2. Release & Regression Separation
 
-- **Giza Proportions**: Base $8.0\text{ m} \times 8.0\text{ m}$, Height $5.092\text{ m}$, Ratio $0.6365$, Slope $51.8487^\circ$.
-- **Masonry**: 24 tiered courses of Black Amethyst Masonry (`#0c0b10`, reads black first, subtle amethyst under grazing light).
-- **Apex**: Upper 7–12% Aged Gold / Electrum Pyramidion housing YOD in the Supernal Triad.
-- **Arquitecto Eye**: Volumetric copperplate etching / engraving reticle hovering above apex (70% Renaissance engraving filaments, 20% gravitational black pupil, 10% LIDAR depth).
-- **Continuity Axis**: Central vertical sapphire shaft linking Atziluth to Assiah.
-- **Cosmology**: Distant Solar Eclipse Corona + Celestial Moon Satellite.
+- **Frozen RC1 Historical Baseline**:
+  - Release Tag: `v1.0.0-rc1`
+  - Commit SHA: `91234741f0b3a1ac5bd7e4c0556fafa868d00769`
+  - Released At: `2026-08-31T03:10:55.465Z`
+  - Frozen Tests: 59 test files, 167 unit tests
+- **Current Worktree Evidence (Post-RC1)**:
+  - Vitest Test Suite: 86 test files, 226 unit/integration tests passed (100% GREEN)
+  - TypeScript Strict Typecheck: PASS (0 errors)
+  - Security & Path Leak Scan: PASS (91 files scanned, 0 leaks, 0 secret patterns, 0 broken links)
 
 ---
 
-## 4. Next Recommended Gates
+## 3. V5 Spatial Ontology & Visual Implementations
 
-1. **Next Engineering Gate**: `ABX-P5X-RELEASE-PROMOTION-001` (Promote post-RC1 YOD & SHIM candidates into frozen RC2 release candidate after packaging audits).
-2. **Next Visual Gate**: `ABX-P4X-SCROLL-SYNCED-VIDEO-001` (Connect WebGL camera track with Cinema4D/Blender pre-rendered 4K video frames via `SCROLL_SYNCED_VIDEO_PATTERN_V1`).
+- **Giza Realism Proportions**: Base $8.0\text{ m} \times 8.0\text{ m}$, Height $5.092\text{ m}$, Ratio $0.6365$, Slope $51.8487^\circ$.
+- **24-Course Black Amethyst Masonry**: Reads black first (`#0c0b10`), subtle amethyst highlights under grazing light.
+- **Aged Gold Apex & Atziluth Chamber**: Exterior weathered electrum (`#d4af37`), interior luminous field (Keter) and golden condensation seed (Chokhmah).
+- **Volumetric Etched Arquitecto Eye**: Procedural copperplate engraving (1000+ line segments across upper/lower eyelid families, 48 radial iris hatches, orbital construction lines, dark central pupil).
+- **Tree of Life Topology**: 11 Canonical Sefirot Nodes (Keter to Malkhut) linked by 22 physical architectural conduits, shafts, and channels.
+- **SHIM Da'at Threshold**: Opposed stone lintels with narrow precision scanning slit.
+- **VAV Formation Cathedral**: Bedrock synthesis forge with Tiferet arch, Hod typography strata, and Netzach motion channels.
+- **HE Apertures**: Carved inspection and operational apertures embedded in pyramid masonry.
+- **Continuity Axis / A**: Central sapphire crystalline spine with cognitive stratigraphy.
+- **Celestial Moon Loop**: Outbound distribution beam (Pyramid $\to$ Moon) and inbound return telemetry loop (Moon $\to$ Pyramid).
+
+---
+
+## 4. Next Recommended Gate
+
+- **Immediate Recommended Step**: `HUMAN VISUAL + PUBLIC TRUTH ACCEPTANCE REVIEW`
+- **DO NOT PROMOTE RC2** without explicit authorized gate.
+- **DO NOT START SCROLL-SYNCED VIDEO** until visual and truth repair is formally accepted.

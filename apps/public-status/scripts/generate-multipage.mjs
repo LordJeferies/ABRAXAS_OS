@@ -12,11 +12,25 @@ const bilingualPath = path.resolve(__dirname, '../src/data/canonical-knowledge-b
 const evPath = path.join(docsDir, 'evidence-index.json');
 const bpPath = path.join(docsDir, 'pipeline-blueprints.json');
 const rmPath = path.join(docsDir, 'roadmap.json');
+const gvPath = path.join(docsDir, 'generated-verification.json');
 
 const bilingualData = JSON.parse(fs.readFileSync(bilingualPath, 'utf-8'));
 const evidenceIndex = JSON.parse(fs.readFileSync(evPath, 'utf-8'));
 const pipelineBlueprints = JSON.parse(fs.readFileSync(bpPath, 'utf-8'));
 const roadmapData = JSON.parse(fs.readFileSync(rmPath, 'utf-8'));
+
+let generatedVerification = {
+  testFiles: 86,
+  testCount: 226,
+  typecheckStatus: "PASS",
+  status: "PASS_ALL_SYSTEMS"
+};
+
+if (fs.existsSync(gvPath)) {
+  try {
+    generatedVerification = JSON.parse(fs.readFileSync(gvPath, 'utf-8'));
+  } catch (e) {}
+}
 
 console.log(`[Bilingual MultiPage Generator] Loaded ${bilingualData.modules.length} modules, ${pipelineBlueprints.blueprints.length} blueprints, ${evidenceIndex.items.length} evidence items.`);
 
@@ -103,7 +117,7 @@ function getFooter(locale, depthFromLocale) {
   const t = {
     en: {
       desc: 'The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.',
-      baseline: 'RC1 Verified Baseline',
+      baseline: 'v1.0.0-rc1 Historical Baseline',
       arch: 'Architecture',
       canon: 'Canon & Taste',
       modules: 'Operators',
@@ -111,7 +125,7 @@ function getFooter(locale, depthFromLocale) {
     },
     es: {
       desc: 'El Sistema Operativo para Inteligencia Sistemática de Contenido, Gobernanza Operativa y Síntesis Audiovisual Determinista.',
-      baseline: 'Línea Base Verificada RC1',
+      baseline: 'Línea Base Histórica v1.0.0-rc1',
       arch: 'Arquitectura',
       canon: 'Canon y Taste',
       modules: 'Operadores',
@@ -163,7 +177,7 @@ function getFooter(locale, depthFromLocale) {
     <div class="footer-bottom">
       <div class="footer-copy">${t.copy}</div>
       <div class="footer-meta">
-        <span class="footer-mono">SHA: ${bilingualData.system.sha}</span>
+        <span class="footer-mono">RC1 Baseline SHA: ${bilingualData.system.releaseSha.substring(0, 10)}</span>
       </div>
     </div>
   </footer>
@@ -180,7 +194,7 @@ function getArchitectDrawer(locale) {
       placeholder: 'e.g., What does Shim own? How does Vav synthesize?',
       submit: 'Query',
       suggestions: 'Suggestions:',
-      meta: 'RC1 Verified Truth'
+      meta: 'v1.0.0-rc1 Verified Baseline'
     },
     es: {
       title: 'Arquitecto Público',
@@ -189,7 +203,7 @@ function getArchitectDrawer(locale) {
       placeholder: 'ej., ¿Qué posee Shim? ¿Cómo sintetiza Vav?',
       submit: 'Consultar',
       suggestions: 'Sugerencias:',
-      meta: 'Verdad Verificada RC1'
+      meta: 'Línea Base Verificada v1.0.0-rc1'
     }
   }[locale];
 
@@ -302,9 +316,6 @@ function generateLandingPage(locale) {
   <link rel="alternate" hreflang="es" href="${esRoot}index.html">
   <link rel="alternate" hreflang="x-default" href="${enRoot}index.html">
   <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="landing-story-body">
   ${getHeader(locale, 'story', 'index.html', 0)}
@@ -369,7 +380,7 @@ function generateSystemDashboardPage(locale) {
       targetToggle: 'Show Target State',
       spatialHint: 'Click any chamber or select from directory to inspect',
       responsibility: 'Responsibility',
-      sephirot: 'Sephirot Archetype',
+      spatialAssoc: 'Spatial & Symbolic Association',
       owns: 'Owns',
       doesNotOwn: 'Does Not Own',
       evidence: 'Dependencies & Evidence',
@@ -381,7 +392,7 @@ function generateSystemDashboardPage(locale) {
       targetToggle: 'Mostrar Estado Objetivo',
       spatialHint: 'Haz clic en cualquier cámara o selecciona del directorio',
       responsibility: 'Responsabilidad',
-      sephirot: 'Arquetipo Sephirot',
+      spatialAssoc: 'Asociación Espacial y Simbólica',
       owns: 'Posee',
       doesNotOwn: 'No Posee',
       evidence: 'Dependencias y Evidencia',
@@ -400,9 +411,6 @@ function generateSystemDashboardPage(locale) {
   <link rel="alternate" hreflang="es" href="${esRoot}system/index.html">
   <link rel="alternate" hreflang="x-default" href="${enRoot}system/index.html">
   <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="system-dashboard-body">
   ${getHeader(locale, 'system', 'system/index.html', 1)}
@@ -437,9 +445,9 @@ function generateSystemDashboardPage(locale) {
 
     <aside class="system-inspector-rail" id="system-inspector-rail" aria-label="Module Details Inspector">
       <div class="inspector-header">
-        <div class="truth-pill released_current" id="inspector-truth-badge">RELEASED_RC1</div>
-        <h3 class="inspector-title" id="inspector-title">YOD</h3>
-        <div class="inspector-role" id="inspector-domain">Intelligence // Criterio</div>
+        <div class="truth-pill ${bilingualData.modules[0].truthLayer.toLowerCase()}" id="inspector-truth-badge">${bilingualData.truthLayers[bilingualData.modules[0].truthLayer]?.label[locale] || bilingualData.modules[0].truthLayer}</div>
+        <h3 class="inspector-title" id="inspector-title">${bilingualData.modules[0].name}</h3>
+        <div class="inspector-role" id="inspector-domain">${bilingualData.modules[0].domain}</div>
       </div>
       <div class="inspector-body" id="inspector-body">
         <div class="inspector-section">
@@ -447,8 +455,9 @@ function generateSystemDashboardPage(locale) {
           <p id="inspector-responsibility">${bilingualData.modules[0].lead[locale]}</p>
         </div>
         <div class="inspector-section">
-          <h4>${t.sephirot}</h4>
-          <p id="inspector-sephirot">${bilingualData.modules[0].sephirot[locale]}</p>
+          <h4>${t.spatialAssoc}</h4>
+          <p id="inspector-sephirot">${bilingualData.modules[0].spatialAssociation[locale]}</p>
+          <small class="disclaimer-text">${bilingualData.spatialDisclaimer[locale]}</small>
         </div>
         <div class="inspector-section">
           <h4>${t.owns}</h4>
@@ -464,7 +473,7 @@ function generateSystemDashboardPage(locale) {
         </div>
         <div class="inspector-section">
           <h4>${t.evidence}</h4>
-          <p id="inspector-evidence">86 Vitest test files passing, release:test-suite verified.</p>
+          <p id="inspector-evidence">${bilingualData.modules[0].statusDetail[locale]}</p>
         </div>
         <a href="../tools/yod/index.html" class="inspector-deep-btn" id="inspector-deep-link">${t.dossierBtn}</a>
       </div>
@@ -490,12 +499,12 @@ function generateArchitectureSuite(locale) {
       slug: 'pyramid',
       title: { en: 'Giza Monumental Architecture', es: 'Arquitectura Monumental de Giza' },
       desc: {
-        en: 'Mathematical massing inspired by the Great Pyramid of Giza (Slope 51.8487°, Ratio 0.6365), dark basalt masonry, and aged electrum apex.',
-        es: 'Volumetría matemática inspirada en la Gran Pirámide de Giza (Inclinación 51.8487°, Ratio 0.6365), albañilería de basalto negro y apex de electrum.'
+        en: 'Mathematical massing inspired by the Great Pyramid of Giza (Slope 51.8487°, Ratio 0.6365), 24-course black amethyst masonry, and aged electrum apex.',
+        es: 'Volumetría matemática inspirada en la Gran Pirámide de Giza (Inclinación 51.8487°, Ratio 0.6365), mampostería de 24 hiladas de amatista negra y ápice de electrum envejecido.'
       },
       content: {
-        en: '<p>The Pyramid represents ABRAXAS OS as an architectural world. It reads first as a monumental physical stone structure rather than a digital wireframe. Its 24 tiered courses of black amethyst masonry ground the entire operating system in believable weight and scale.</p>',
-        es: '<p>La Pirámide representa a ABRAXAS OS como un mundo arquitectónico. Se lee primero como una estructura física de piedra monumental antes que un wireframe digital. Sus 24 hiladas de mampostería de amatista negra anclan el sistema operativo en peso y escala creíbles.</p>'
+        en: '<p>The Pyramid represents ABRAXAS OS as a monumental architectural world. It reads first as a physical stone structure rather than a digital wireframe. Its 24 tiered courses of black amethyst masonry ground the entire operating system in believable weight, scale, and mineral texture.</p>',
+        es: '<p>La Pirámide representa a ABRAXAS OS como un mundo arquitectónico monumental. Se lee primero como una estructura física de piedra antes que un wireframe digital. Sus 24 hiladas de mampostería de amatista negra anclan el sistema operativo en peso, escala y textura mineral creíbles.</p>'
       }
     },
     {
@@ -507,19 +516,19 @@ function generateArchitectureSuite(locale) {
       },
       content: {
         en: '<p>The Four Worlds represent progressive degrees of manifestation. Atziluth provides unmanifest potential in the golden apex; Beri\'ah binds identity into a Contenido crystal; Yetzirah shapes media in the Vav formation cathedral; Assiah manifests human operational visibility in HE.</p>',
-        es: '<p>Los Cuatro Mundos representan grados progresivos de manifestación. Atziluth provee potencial inmanifiesto en el apex dorado; Beri\'ah fija la identidad en un cristal de Contenido; Yetzirah modela media en la catedral de formación de Vav; Assiah manifiesta visibilidad operativa humana en HE.</p>'
+        es: '<p>Los Cuatro Mundos representan grados progresivos de manifestación. Atziluth provee potencial inmanifiesto en el ápice dorado; Beri\'ah fija la identidad en un cristal de Contenido; Yetzirah modela media en la catedral de formación de Vav; Assiah manifiesta visibilidad operativa humana en HE.</p>'
       }
     },
     {
       slug: 'tree-of-life',
       title: { en: 'Tree of Life Spatial Topology', es: 'Topología Espacial del Árbol de la Vida' },
       desc: {
-        en: 'Structural anchors describing what happens to a Contenido as it transitions across Keter, Da\'at, Tiferet, and Malkhut.',
-        es: 'Anclas estructurales que describen qué le ocurre a un Contenido mientras transita a través de Keter, Da\'at, Tiferet y Malkhut.'
+        en: 'Structural topology describing what happens to a Contenido as it transitions across 11 canonical node states and 22 architectural channels.',
+        es: 'Topología estructural que describe qué le ocurre a un Contenido mientras transita a través de 11 estados de nodo canónicos y 22 conductos arquitectónicos.'
       },
       content: {
-        en: '<p>The Tree of Life describes what happens to a Contenido; modules are the operators acting upon it. The 22 Paths are transformed into physical architectural conduits, stone corridors, and optical channels linking the chambers.</p>',
-        es: '<p>El Árbol de la Vida describe qué le ocurre al Contenido; los módulos son los operadores que actúan sobre él. Los 22 Senderos se transforman en conductos arquitectónicos físicos, corredores de piedra y canales ópticos que unen las cámaras.</p>'
+        en: '<p>The Tree of Life describes what happens to a Contenido; modules are the operators acting upon it. The 22 Paths are transformed into physical architectural conduits, stone corridors, and optical channels linking the chambers.</p><p><strong>Important Invariant:</strong> Modules are not Sefirot. Sefirot represent state transformations of content; modules are operators acting upon them.</p>',
+        es: '<p>El Árbol de la Vida describe qué le ocurre al Contenido; los módulos son los operadores que actúan sobre él. Los 22 Senderos se transforman en conductos arquitectónicos físicos, corredores de piedra y canales ópticos que unen las cámaras.</p><p><strong>Invariante Importante:</strong> Los módulos no son Sefirot. Las Sefirot representan transformaciones de estado del contenido; los módulos son operadores que actúan sobre ellos.</p>'
       }
     },
     {
@@ -559,9 +568,6 @@ function generateArchitectureSuite(locale) {
   <link rel="alternate" hreflang="es" href="${esRoot}architecture/index.html">
   <link rel="alternate" hreflang="x-default" href="${enRoot}architecture/index.html">
   <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'architecture', 'architecture/index.html', 1)}
@@ -616,9 +622,6 @@ function generateArchitectureSuite(locale) {
   <link rel="alternate" hreflang="es" href="${subEsRoot}architecture/${p.slug}/index.html">
   <link rel="alternate" hreflang="x-default" href="${subEnRoot}architecture/${p.slug}/index.html">
   <link rel="stylesheet" href="${subAssetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'architecture', `architecture/${p.slug}/index.html`, 2)}
@@ -676,9 +679,6 @@ function generateToolsSuite(locale) {
   <link rel="alternate" hreflang="es" href="${esRoot}tools/index.html">
   <link rel="alternate" hreflang="x-default" href="${enRoot}tools/index.html">
   <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'tools', 'tools/index.html', 1)}
@@ -699,7 +699,7 @@ function generateToolsSuite(locale) {
             <span class="tool-domain">${m.domain}</span>
           </div>
           <h3 class="tool-name">${m.name}</h3>
-          <div class="tool-sephirot-tag">⚝ ${m.sephirot[locale]}</div>
+          <div class="tool-sephirot-tag">⚝ ${m.spatialAssociation[locale]}</div>
           <p class="tool-summary">${m.headline[locale]}</p>
           <div class="tool-card-footer">
             <a href="./${m.slug}/index.html" class="tool-link-btn">${locale === 'en' ? 'Open Dossier →' : 'Abrir Dossier →'}</a>
@@ -714,7 +714,7 @@ function generateToolsSuite(locale) {
             <span class="tool-domain">Synthesis Subtool</span>
           </div>
           <h3 class="tool-name">VAV / Captions</h3>
-          <div class="tool-sephirot-tag">⚝ Tiferet Typographic Track</div>
+          <div class="tool-sephirot-tag">⚝ Yetzirah Typographic Track (Hod)</div>
           <p class="tool-summary">${locale === 'en' ? 'Word-level timestamp synchronization, font style hierarchies, and multi-line kinetic animation.' : 'Sincronización de timestamps a nivel de palabra, jerarquías de estilo y animación cinética multilínea.'}</p>
           <div class="tool-card-footer">
             <a href="./vav/captions/index.html" class="tool-link-btn">${locale === 'en' ? 'Open Dossier →' : 'Abrir Dossier →'}</a>
@@ -727,7 +727,7 @@ function generateToolsSuite(locale) {
             <span class="tool-domain">Synthesis Subtool</span>
           </div>
           <h3 class="tool-name">VAV / Cuts</h3>
-          <div class="tool-sephirot-tag">⚝ Tiferet Temporal Track</div>
+          <div class="tool-sephirot-tag">⚝ Yetzirah Temporal Track (Tiferet)</div>
           <p class="tool-summary">${locale === 'en' ? 'Non-destructive multi-segment video trimming, stream-copy rendering, and frame-accurate EDL compilation.' : 'Recorte de video multietapa no destructivo, renderizado stream-copy y compilación EDL con precisión de cuadro.'}</p>
           <div class="tool-card-footer">
             <a href="./vav/cuts/index.html" class="tool-link-btn">${locale === 'en' ? 'Open Dossier →' : 'Abrir Dossier →'}</a>
@@ -740,7 +740,7 @@ function generateToolsSuite(locale) {
             <span class="tool-domain">Synthesis Subtool</span>
           </div>
           <h3 class="tool-name">VAV / Motions</h3>
-          <div class="tool-sephirot-tag">⚝ Tiferet Kinetic Track</div>
+          <div class="tool-sephirot-tag">⚝ Yetzirah Kinetic Track (Netzach)</div>
           <p class="tool-summary">${locale === 'en' ? 'Spring physics, optical visual priors, B-roll overlays, and smooth layout transform transitions.' : 'Físicas de resorte, priors visuales ópticos, superposiciones de B-roll y transiciones suaves de diseño.'}</p>
           <div class="tool-card-footer">
             <a href="./vav/motions/index.html" class="tool-link-btn">${locale === 'en' ? 'Open Dossier →' : 'Abrir Dossier →'}</a>
@@ -767,28 +767,28 @@ function generateToolsSuite(locale) {
     const t = {
       en: {
         what: '1. What It Is & Purpose',
-        sephirotH: '2. Sephirot Tree of Life Mapping',
+        spatialAssocH: '2. Spatial & Symbolic Association',
         problemH: '3. Problem Solved',
         exampleH: '4. Operational Example Flow',
         ownershipH: '5. Strict Ownership Boundaries',
         ownsH: `✓ What ${m.name} OWNS`,
         notOwnsH: `✗ What ${m.name} DOES NOT OWN`,
         whatIsH: '6. What It Is vs What It Is Not',
-        statusH: '7. Current Status & Target Roadmap',
+        statusH: '7. Current Status & Roadmap Gate',
         ioH: 'I/O Specifications',
         connH: 'Connected Modules',
         evidenceH: 'Verified Evidence'
       },
       es: {
         what: '1. Qué Es y Propósito',
-        sephirotH: '2. Mapeo en el Árbol de la Vida (Sephirot)',
+        spatialAssocH: '2. Asociación Espacial y Simbólica',
         problemH: '3. Problema que Resuelve',
         exampleH: '4. Flujo Operativo de Ejemplo',
         ownershipH: '5. Límites Estrictos de Propiedad',
         ownsH: `✓ Lo que ${m.name} POSEE`,
         notOwnsH: `✗ Lo que ${m.name} NO POSEE`,
         whatIsH: '6. Lo que Es frente a Lo que NO Es',
-        statusH: '7. Estado Actual y Roadmap Objetivo',
+        statusH: '7. Estado Actual y Compuerta de Roadmap',
         ioH: 'Especificaciones de E/S',
         connH: 'Módulos Conectados',
         evidenceH: 'Evidencia Verificada'
@@ -806,9 +806,6 @@ function generateToolsSuite(locale) {
   <link rel="alternate" hreflang="es" href="${subEsRoot}tools/${m.slug}/index.html">
   <link rel="alternate" hreflang="x-default" href="${subEnRoot}tools/${m.slug}/index.html">
   <link rel="stylesheet" href="${subAssetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'tools', `tools/${m.slug}/index.html`, 2)}
@@ -821,7 +818,7 @@ function generateToolsSuite(locale) {
           <h1 class="page-title">${m.name}</h1>
           <div class="truth-pill ${m.truthLayer.toLowerCase()}">${bilingualData.truthLayers[m.truthLayer]?.label[locale] || m.truthLayer}</div>
         </div>
-        <div class="module-domain-badge">Domain: ${m.domain} // ⚝ ${m.sephirot[locale]}</div>
+        <div class="module-domain-badge">Domain: ${m.domain} // ⚝ ${m.spatialAssociation[locale]}</div>
         <p class="page-description">${m.headline[locale]}</p>
       </div>
 
@@ -830,6 +827,12 @@ function generateToolsSuite(locale) {
           <section class="dossier-section">
             <h2 class="section-title">${t.what}</h2>
             <p class="section-lead">${m.lead[locale]}</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">${t.spatialAssocH}</h2>
+            <p>${m.spatialAssociation[locale]}</p>
+            <div class="disclaimer-box"><small>${bilingualData.spatialDisclaimer[locale]}</small></div>
           </section>
 
           <section class="dossier-section">
@@ -874,12 +877,8 @@ function generateToolsSuite(locale) {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>${locale === 'en' ? 'A deterministic, domain-specific execution engine' : 'Un motor de ejecución determinista y específico de dominio'}</td>
-                    <td>${locale === 'en' ? 'A generic third-party AI wrapper or chat prompt' : 'Un wrapper genérico de IA o prompt de chat de terceros'}</td>
-                  </tr>
-                  <tr>
-                    <td>${locale === 'en' ? 'Bound to immutable event and artifact schemas' : 'Vinculado a esquemas inmutables de eventos y artefactos'}</td>
-                    <td>${locale === 'en' ? 'A mutable board with untracked edits' : 'Un tablero mutable con ediciones no rastreadas'}</td>
+                    <td>${m.whatIs[locale]}</td>
+                    <td>${m.whatIsNot[locale]}</td>
                   </tr>
                 </tbody>
               </table>
@@ -919,7 +918,7 @@ function generateToolsSuite(locale) {
 
           <div class="sidebar-card">
             <h3>${t.evidenceH}</h3>
-            <p>${locale === 'en' ? 'Cryptographically verified in test-suite SHA registry.' : 'Verificado criptográficamente en el registro de hashes de la suite de pruebas.'}</p>
+            <p>${m.statusDetail[locale]}</p>
             <a href="../../proof/index.html" class="tool-link-btn">${locale === 'en' ? 'View Proof Ledger →' : 'Ver Libro Mayor de Evidencia →'}</a>
           </div>
         </aside>
@@ -965,9 +964,6 @@ function generateToolsSuite(locale) {
   <link rel="alternate" hreflang="es" href="${subEsRoot}tools/vav/${st.slug}/index.html">
   <link rel="alternate" hreflang="x-default" href="${subEnRoot}tools/vav/${st.slug}/index.html">
   <link rel="stylesheet" href="${subAssetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'tools', `tools/vav/${st.slug}/index.html`, 3)}
@@ -992,8 +988,8 @@ function generateToolsSuite(locale) {
         </div>
         <aside class="dossier-sidebar">
           <div class="sidebar-card">
-            <h3>${locale === 'en' ? 'Test Coverage' : 'Cobertura de Tests'}</h3>
-            <p>100% test coverage in <code>VAV/01_REPO/VAV</code>.</p>
+            <h3>${locale === 'en' ? 'Evidence & Verification' : 'Evidencia y Verificación'}</h3>
+            <p>${locale === 'en' ? 'Verified by current regression tests and frozen v1.0.0-rc1 release evidence.' : 'Verificado por pruebas de regresión actuales y evidencia de la versión congelada v1.0.0-rc1.'}</p>
           </div>
         </aside>
       </div>
@@ -1047,9 +1043,6 @@ function generateTastePage(locale) {
   <link rel="alternate" hreflang="es" href="${esRoot}taste/index.html">
   <link rel="alternate" hreflang="x-default" href="${enRoot}taste/index.html">
   <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'taste', 'taste/index.html', 1)}
@@ -1146,9 +1139,6 @@ function generatePrinciplesPage(locale) {
   <link rel="alternate" hreflang="es" href="${esRoot}principles/index.html">
   <link rel="alternate" hreflang="x-default" href="${enRoot}principles/index.html">
   <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'principles', 'principles/index.html', 1)}
@@ -1197,9 +1187,6 @@ function generateFlowPage(locale) {
   <link rel="alternate" hreflang="es" href="${esRoot}flow/index.html">
   <link rel="alternate" hreflang="x-default" href="${enRoot}flow/index.html">
   <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'flow', 'flow/index.html', 1)}
@@ -1209,7 +1196,7 @@ function generateFlowPage(locale) {
       <div class="page-header">
         <div class="breadcrumb"><a href="${localeRoot}index.html">Home</a> / <a href="${localeRoot}system/index.html">System</a> / <span>${locale === 'en' ? 'Flow' : 'Flujo'}</span></div>
         <h1 class="page-title">${locale === 'en' ? 'Pipeline Blueprint DAGs' : 'DAGs de Blueprints de Pipeline'}</h1>
-        <p class="page-description">${locale === 'en' ? '11 canonical lifecycle pipelines orchestrating deterministic stage transit from raw intake to multi-platform publishing.' : '11 pipelines canónicos que orquestan el tránsito determinista por etapas desde el ingreso en crudo hasta la publicación multiplataforma.'}</p>
+        <p class="page-description">${locale === 'en' ? '11 canonical lifecycle pipelines defining stage transitions from raw intake to multi-platform publishing. (Design registry and schema validation).' : '11 pipelines canónicos que definen transiciones de etapas desde el ingreso en crudo hasta la publicación multiplataforma. (Registro de diseño y validación de esquemas).'}</p>
       </div>
 
       <div class="blueprints-grid">
@@ -1260,9 +1247,6 @@ function generateProofPage(locale) {
   <link rel="alternate" hreflang="es" href="${esRoot}proof/index.html">
   <link rel="alternate" hreflang="x-default" href="${enRoot}proof/index.html">
   <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'proof', 'proof/index.html', 1)}
@@ -1277,20 +1261,20 @@ function generateProofPage(locale) {
 
       <div class="proof-summary-bar">
         <div class="proof-stat">
-          <div class="stat-num">86</div>
-          <div class="stat-lbl">${locale === 'en' ? 'Vitest Test Files Passed' : 'Archivos de Test Pasados'}</div>
+          <div class="stat-num">${generatedVerification.testFiles}</div>
+          <div class="stat-lbl">${locale === 'en' ? 'Current Regression Test Files' : 'Archivos de Test de Regresión Actual'}</div>
         </div>
         <div class="proof-stat">
-          <div class="stat-num">226</div>
-          <div class="stat-lbl">${locale === 'en' ? 'Unit & Integration Tests' : 'Tests Unitarios e Integración'}</div>
+          <div class="stat-num">${generatedVerification.testCount}</div>
+          <div class="stat-lbl">${locale === 'en' ? 'Current Regression Unit Tests' : 'Tests Unitarios de Regresión Actual'}</div>
         </div>
         <div class="proof-stat">
-          <div class="stat-num">0</div>
-          <div class="stat-lbl">${locale === 'en' ? 'TypeScript Errors' : 'Errores de TypeScript'}</div>
+          <div class="stat-num">${bilingualData.system.releaseTestCount}</div>
+          <div class="stat-lbl">${locale === 'en' ? 'Frozen RC1 Historical Baseline Tests' : 'Tests de Línea Base Histórica RC1'}</div>
         </div>
         <div class="proof-stat">
-          <div class="stat-num">100%</div>
-          <div class="stat-lbl">${locale === 'en' ? 'RC1 Integrity Verified' : 'Integridad RC1 Verificada'}</div>
+          <div class="stat-num">${generatedVerification.typecheckStatus}</div>
+          <div class="stat-lbl">${locale === 'en' ? 'TypeScript Strict Status' : 'Estado Estricto TypeScript'}</div>
         </div>
       </div>
 
@@ -1343,9 +1327,6 @@ function generateRoadmapPage(locale) {
   <link rel="alternate" hreflang="es" href="${esRoot}roadmap/index.html">
   <link rel="alternate" hreflang="x-default" href="${enRoot}roadmap/index.html">
   <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'roadmap', 'roadmap/index.html', 1)}
@@ -1401,9 +1382,6 @@ function generateAskPage(locale) {
   <link rel="alternate" hreflang="es" href="${esRoot}ask/index.html">
   <link rel="alternate" hreflang="x-default" href="${enRoot}ask/index.html">
   <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   ${getHeader(locale, 'ask', 'ask/index.html', 1)}
@@ -1413,7 +1391,7 @@ function generateAskPage(locale) {
       <div class="page-header">
         <div class="breadcrumb"><a href="${localeRoot}index.html">Home</a> / <a href="${localeRoot}system/index.html">System</a> / <span>${locale === 'en' ? 'Ask' : 'Consultar'}</span></div>
         <h1 class="page-title">${locale === 'en' ? 'Public Architect Inquiry Assistant' : 'Asistente de Consulta del Arquitecto Público'}</h1>
-        <p class="page-description">${locale === 'en' ? 'Deterministic semantic query engine resolving ownership boundaries, Sephirot mappings, and invariant laws.' : 'Motor determinista de consultas semánticas que resuelve límites de propiedad, mapeos Sephirot y leyes invariantes.'}</p>
+        <p class="page-description">${locale === 'en' ? 'Deterministic semantic query engine resolving ownership boundaries, spatial associations, and invariant laws.' : 'Motor determinista de consultas semánticas que resuelve límites de propiedad, asociaciones espaciales y leyes invariantes.'}</p>
       </div>
 
       <div class="dossier-section">

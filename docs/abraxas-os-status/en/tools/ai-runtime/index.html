@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI RUNTIME (Compute) — ABRAXAS OS</title>
-  <meta name="description" content="Provider selection remains separate from domain ownership and canonical truth. AI Runtime acts as the isolated execution substrate.">
+  <title>AI RUNTIME (Execution // Substrate Contracts) — ABRAXAS OS</title>
+  <meta name="description" content="AI Runtime represents the target execution layer for managed model inference, token quota budgeting, and worker process isolation.">
   <link rel="alternate" hreflang="en" href="../../../en/tools/ai-runtime/index.html">
   <link rel="alternate" hreflang="es" href="../../../es/tools/ai-runtime/index.html">
   <link rel="alternate" hreflang="x-default" href="../../../en/tools/ai-runtime/index.html">
   <link rel="stylesheet" href="../../../assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   
@@ -55,28 +52,34 @@
         <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operators</a> / <span>AI RUNTIME</span></div>
         <div class="module-title-row">
           <h1 class="page-title">AI RUNTIME</h1>
-          <div class="truth-pill released_current">RELEASED (RC1)</div>
+          <div class="truth-pill contract_only">CONTRACT ONLY</div>
         </div>
-        <div class="module-domain-badge">Domain: Compute // ⚝ Netzach (Endurance / Substrate) // Bedrock Compute Chamber</div>
-        <p class="page-description">Execution without provider lock-in.</p>
+        <div class="module-domain-badge">Domain: Execution // Substrate Contracts // ⚝ Execution worker substrate contracts</div>
+        <p class="page-description">Target worker isolation, inference queue contracts, and token budget schemas.</p>
       </div>
 
       <div class="dossier-grid">
         <div class="dossier-main-col">
           <section class="dossier-section">
             <h2 class="section-title">1. What It Is & Purpose</h2>
-            <p class="section-lead">Provider selection remains separate from domain ownership and canonical truth. AI Runtime acts as the isolated execution substrate.</p>
+            <p class="section-lead">AI Runtime represents the target execution layer for managed model inference, token quota budgeting, and worker process isolation.</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">2. Spatial & Symbolic Association</h2>
+            <p>Execution worker substrate contracts</p>
+            <div class="disclaimer-box"><small>This is an ABRAXAS visual and operational spatial association, not module identity. Tree states describe transformations of Contenido; modules act upon them.</small></div>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">3. Problem Solved</h2>
-            <p>Prevents platform fragility by abstracting LLM, Whisper audio transcription, and computer vision models behind strict contracts.</p>
+            <p>Target architecture designed to prevent unconstrained API cost overruns and unpredictable latency in AI workflows.</p>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">4. Operational Example Flow</h2>
             <div class="example-box">
-              <p class="example-flow-text"><code>Audio file supplied -> AI Runtime executes local Whisper transcription -> Returns timestamped tokens to SHIM.</code></p>
+              <p class="example-flow-text"><code>Inference request created -> Quota checked against budget contract -> Model provider adapter selected -> Response verified.</code></p>
             </div>
           </section>
 
@@ -86,16 +89,18 @@
               <div class="owns-col">
                 <h3 class="owns-title">✓ What AI RUNTIME OWNS</h3>
                 <ul class="boundary-list">
-                  <li>Provider adapter bridges (OpenAI, Anthropic, Local Whisper, Ollama)</li>
-<li>Inference queue & worker process isolation</li>
-<li>Token boundary budget enforcement</li>
+                  <li>Inference request schemas</li>
+<li>Token budget contracts</li>
+<li>Model adapter interface definitions</li>
+<li>Worker isolation specifications</li>
                 </ul>
               </div>
               <div class="not-owns-col">
                 <h3 class="not-owns-title">✗ What AI RUNTIME DOES NOT OWN</h3>
                 <ul class="boundary-list">
-                  <li>Does NOT own content strategy (YOD owns this)</li>
-<li>Does NOT store canonical data (Contenido owns this)</li>
+                  <li>Brand voice criteria (owned by YOD)</li>
+<li>Video compilation (owned by VAV)</li>
+<li>Human task approval (owned by HE)</li>
                 </ul>
               </div>
             </div>
@@ -113,12 +118,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>A deterministic, domain-specific execution engine</td>
-                    <td>A generic third-party AI wrapper or chat prompt</td>
-                  </tr>
-                  <tr>
-                    <td>Bound to immutable event and artifact schemas</td>
-                    <td>A mutable board with untracked edits</td>
+                    <td>A formal contract and architectural specification for AI inference governance.</td>
+                    <td>Not a commercial AI SaaS aggregator, and not an active production gateway in RC1.</td>
                   </tr>
                 </tbody>
               </table>
@@ -126,10 +127,10 @@
           </section>
 
           <section class="dossier-section">
-            <h2 class="section-title">7. Current Status & Target Roadmap</h2>
+            <h2 class="section-title">7. Current Status & Roadmap Gate</h2>
             <div class="roadmap-gap-box">
-              <h4>Current Truth Status: <span class="highlight-text">RELEASED (RC1)</span></h4>
-              <p>Provider-agnostic worker isolation contracts, fallback retry mechanics, and model adapter bridges verified.</p>
+              <h4>Current Truth Status: <span class="highlight-text">CONTRACT ONLY</span></h4>
+              <p>Contract schemas defined. Full multi-provider runtime scheduled for future milestone gates.</p>
             </div>
           </section>
         </div>
@@ -140,27 +141,27 @@
             <div class="io-group">
               <span class="io-label">Inputs:</span>
               <ul class="io-list">
-                <li><code>InferenceContract</code></li>
-<li><code>ModelPromptPayload</code></li>
+                <li><code>Model prompt packets</code></li>
+<li><code>Token limit policies</code></li>
               </ul>
             </div>
             <div class="io-group">
               <span class="io-label">Outputs:</span>
               <ul class="io-list">
-                <li><code>InferenceOutputJSON</code></li>
-<li><code>RawTranscriptionTokens</code></li>
+                <li><code>Normalized inference contracts</code></li>
+<li><code>Cost allocation records</code></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-card">
             <h3>Connected Modules</h3>
-            <p class="conn-text">Executes raw AI computation on behalf of YOD, SHIM, and VAV.</p>
+            <p class="conn-text">Designed to provide execution services to YOD, SHIM, and VAV.</p>
           </div>
 
           <div class="sidebar-card">
             <h3>Verified Evidence</h3>
-            <p>Cryptographically verified in test-suite SHA registry.</p>
+            <p>Contract schemas defined. Full multi-provider runtime scheduled for future milestone gates.</p>
             <a href="../../proof/index.html" class="tool-link-btn">View Proof Ledger →</a>
           </div>
         </aside>
@@ -198,7 +199,7 @@
         <div id="architect-response-container" class="architect-response-card" style="display: none;">
           <div class="response-topic" id="architect-response-topic">TOPIC</div>
           <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">RC1 Verified Truth</div>
+          <div class="response-meta" id="architect-response-meta">v1.0.0-rc1 Verified Baseline</div>
         </div>
       </div>
     </div>
@@ -210,7 +211,7 @@
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
         <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> v1.0.0-rc1 Historical Baseline</div>
       </div>
       <div class="footer-col">
         <h4>Architecture</h4>
@@ -248,7 +249,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 ABRAXAS OS. Deterministic Closed-Loop Architecture.</div>
       <div class="footer-meta">
-        <span class="footer-mono">SHA: 28eb35eff087be6ebd415dcf0becbce419167e25</span>
+        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
       </div>
     </div>
   </footer>

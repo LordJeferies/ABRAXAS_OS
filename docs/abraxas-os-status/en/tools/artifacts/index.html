@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARTIFACTS (Storage) — ABRAXAS OS</title>
-  <meta name="description" content="Maintains content-addressed storage for all verified exports, cut lists, EDL files, prompt bundles, and master video renders.">
+  <title>ARTIFACTS (Backbone // Content-Addressed Vault) — ABRAXAS OS</title>
+  <meta name="description" content="Artifacts defines the cryptographic hashing and content-addressed storage specifications that bind generated media files to their exact revision provenance.">
   <link rel="alternate" hreflang="en" href="../../../en/tools/artifacts/index.html">
   <link rel="alternate" hreflang="es" href="../../../es/tools/artifacts/index.html">
   <link rel="alternate" hreflang="x-default" href="../../../en/tools/artifacts/index.html">
   <link rel="stylesheet" href="../../../assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   
@@ -55,28 +52,34 @@
         <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operators</a> / <span>ARTIFACTS</span></div>
         <div class="module-title-row">
           <h1 class="page-title">ARTIFACTS</h1>
-          <div class="truth-pill released_current">RELEASED (RC1)</div>
+          <div class="truth-pill contract_only">CONTRACT ONLY</div>
         </div>
-        <div class="module-domain-badge">Domain: Storage // ⚝ Otzar (The Vault / Hash Grid) // Bedrock Artifact Vault</div>
-        <p class="page-description">What the system produced.</p>
+        <div class="module-domain-badge">Domain: Backbone // Content-Addressed Vault // ⚝ Content-addressed storage vault contracts</div>
+        <p class="page-description">Content-addressed storage schemas and cryptographic SHA256 artifact verification.</p>
       </div>
 
       <div class="dossier-grid">
         <div class="dossier-main-col">
           <section class="dossier-section">
             <h2 class="section-title">1. What It Is & Purpose</h2>
-            <p class="section-lead">Maintains content-addressed storage for all verified exports, cut lists, EDL files, prompt bundles, and master video renders.</p>
+            <p class="section-lead">Artifacts defines the cryptographic hashing and content-addressed storage specifications that bind generated media files to their exact revision provenance.</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">2. Spatial & Symbolic Association</h2>
+            <p>Content-addressed storage vault contracts</p>
+            <div class="disclaimer-box"><small>This is an ABRAXAS visual and operational spatial association, not module identity. Tree states describe transformations of Contenido; modules act upon them.</small></div>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">3. Problem Solved</h2>
-            <p>Prevents lost media files and broken asset references by guaranteeing cryptographic content-addressed retrieval.</p>
+            <p>Guarantees cryptographic traceability of all exported video, audio, and transcript files back to their source code and parameters.</p>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">4. Operational Example Flow</h2>
             <div class="example-box">
-              <p class="example-flow-text"><code>VAV finishes master render -> Artifacts computes SHA256 -> Registers artifact record -> Links to Contenido revision.</code></p>
+              <p class="example-flow-text"><code>File generated -> SHA256 calculated -> Artifact registered with provenance metadata -> Immutable reference returned.</code></p>
             </div>
           </section>
 
@@ -86,16 +89,16 @@
               <div class="owns-col">
                 <h3 class="owns-title">✓ What ARTIFACTS OWNS</h3>
                 <ul class="boundary-list">
-                  <li>Content-addressed hash registry (SHA256)</li>
-<li>Immutable artifact storage and vault management</li>
-<li>Export manifest signing</li>
+                  <li>SHA256 digest validation</li>
+<li>Artifact descriptor schemas</li>
+<li>Provenance reference contracts</li>
                 </ul>
               </div>
               <div class="not-owns-col">
                 <h3 class="not-owns-title">✗ What ARTIFACTS DOES NOT OWN</h3>
                 <ul class="boundary-list">
-                  <li>Does NOT own rendering logic</li>
-<li>Does NOT own task metadata</li>
+                  <li>Direct rendering execution (owned by VAV)</li>
+<li>Content DAG management (owned by Contenido)</li>
                 </ul>
               </div>
             </div>
@@ -113,12 +116,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>A deterministic, domain-specific execution engine</td>
-                    <td>A generic third-party AI wrapper or chat prompt</td>
-                  </tr>
-                  <tr>
-                    <td>Bound to immutable event and artifact schemas</td>
-                    <td>A mutable board with untracked edits</td>
+                    <td>A formal artifact verification specification.</td>
+                    <td>Not an unconstrained file storage bucket, and not a temporary scratch directory.</td>
                   </tr>
                 </tbody>
               </table>
@@ -126,10 +125,10 @@
           </section>
 
           <section class="dossier-section">
-            <h2 class="section-title">7. Current Status & Target Roadmap</h2>
+            <h2 class="section-title">7. Current Status & Roadmap Gate</h2>
             <div class="roadmap-gap-box">
-              <h4>Current Truth Status: <span class="highlight-text">RELEASED (RC1)</span></h4>
-              <p>Content-addressed artifact registry, SHA256 checksum verification, and export vault verified in RC1.</p>
+              <h4>Current Truth Status: <span class="highlight-text">CONTRACT ONLY</span></h4>
+              <p>Contract schemas verified in core test suite; localized hashing implemented in VAV export pipeline.</p>
             </div>
           </section>
         </div>
@@ -140,28 +139,27 @@
             <div class="io-group">
               <span class="io-label">Inputs:</span>
               <ul class="io-list">
-                <li><code>RenderedMediaFiles</code></li>
-<li><code>PromptBundles</code></li>
-<li><code>EDLCutLists</code></li>
+                <li><code>Binary file descriptors</code></li>
+<li><code>Source revision hashes</code></li>
               </ul>
             </div>
             <div class="io-group">
               <span class="io-label">Outputs:</span>
               <ul class="io-list">
-                <li><code>ArtifactRecordWithSHA</code></li>
-<li><code>ImmutableVaultURI</code></li>
+                <li><code>Immutable artifact descriptors</code></li>
+<li><code>Cryptographic verification tokens</code></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-card">
             <h3>Connected Modules</h3>
-            <p class="conn-text">Immutable vault serving verified assets to HE, Reviewers, and Publishing.</p>
+            <p class="conn-text">Anchors outputs from VAV and Contenido to immutable SHA256 hashes.</p>
           </div>
 
           <div class="sidebar-card">
             <h3>Verified Evidence</h3>
-            <p>Cryptographically verified in test-suite SHA registry.</p>
+            <p>Contract schemas verified in core test suite; localized hashing implemented in VAV export pipeline.</p>
             <a href="../../proof/index.html" class="tool-link-btn">View Proof Ledger →</a>
           </div>
         </aside>
@@ -199,7 +197,7 @@
         <div id="architect-response-container" class="architect-response-card" style="display: none;">
           <div class="response-topic" id="architect-response-topic">TOPIC</div>
           <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">RC1 Verified Truth</div>
+          <div class="response-meta" id="architect-response-meta">v1.0.0-rc1 Verified Baseline</div>
         </div>
       </div>
     </div>
@@ -211,7 +209,7 @@
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
         <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> v1.0.0-rc1 Historical Baseline</div>
       </div>
       <div class="footer-col">
         <h4>Architecture</h4>
@@ -249,7 +247,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 ABRAXAS OS. Deterministic Closed-Loop Architecture.</div>
       <div class="footer-meta">
-        <span class="footer-mono">SHA: 28eb35eff087be6ebd415dcf0becbce419167e25</span>
+        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
       </div>
     </div>
   </footer>

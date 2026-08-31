@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHIM (Observation) — ABRAXAS OS</title>
-  <meta name="description" content="SHIM observa el material real, lo compara con lo planificado e identifica qué puede resolverse de forma responsable. Su distinción fundamental es: PLANIFICADO != OBSERVADO != RESUELTO.">
+  <title>SHIM (Metrology // Da'at Verification) — ABRAXAS OS</title>
+  <meta name="description" content="SHIM verifica el límite entre la intención del guion y la realidad grabada. Detecta tomas faltantes, discrepancias fonéticas y huecos de audio antes de la síntesis.">
   <link rel="alternate" hreflang="en" href="../../../en/tools/shim/index.html">
   <link rel="alternate" hreflang="es" href="../../../es/tools/shim/index.html">
   <link rel="alternate" hreflang="x-default" href="../../../en/tools/shim/index.html">
   <link rel="stylesheet" href="../../../assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   
@@ -55,28 +52,34 @@
         <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operadores</a> / <span>SHIM</span></div>
         <div class="module-title-row">
           <h1 class="page-title">SHIM</h1>
-          <div class="truth-pill post_rc1_candidate">CANDIDATO FUNCIONAL</div>
+          <div class="truth-pill post_rc1_candidate">CANDIDATO DE TRABAJO</div>
         </div>
-        <div class="module-domain-badge">Domain: Observation // ⚝ Da'at (Abismo del Umbral) y Gevurah (Juicio) // Galería Transversal de Metrología</div>
-        <p class="page-description">Donde la intención se encuentra con la evidencia.</p>
+        <div class="module-domain-badge">Domain: Metrology // Da'at Verification // ⚝ Umbral de Metrología de Da'at (Galería de escaneo transversal entre Beri'ah y Yetzirah)</div>
+        <p class="page-description">Capa de observación empírica: escáner de la ley invariante Planificado != Observado != Resuelto.</p>
       </div>
 
       <div class="dossier-grid">
         <div class="dossier-main-col">
           <section class="dossier-section">
             <h2 class="section-title">1. Qué Es y Propósito</h2>
-            <p class="section-lead">SHIM observa el material real, lo compara con lo planificado e identifica qué puede resolverse de forma responsable. Su distinción fundamental es: PLANIFICADO != OBSERVADO != RESUELTO.</p>
+            <p class="section-lead">SHIM verifica el límite entre la intención del guion y la realidad grabada. Detecta tomas faltantes, discrepancias fonéticas y huecos de audio antes de la síntesis.</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">2. Asociación Espacial y Simbólica</h2>
+            <p>Umbral de Metrología de Da'at (Galería de escaneo transversal entre Beri'ah y Yetzirah)</p>
+            <div class="disclaimer-box"><small>Esta es una asociación espacial visual y operativa de ABRAXAS, no una identidad del módulo. Los estados del Árbol describen transformaciones del Contenido; los módulos actúan sobre ellos.</small></div>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">3. Problema que Resuelve</h2>
-            <p>Previene desalineaciones silenciosas entre lo que fue guionado y lo que realmente se grabó frente a la cámara antes de iniciar el renderizado downstream.</p>
+            <p>Previene fallos de renderizado de video downstream y subtítulos desalineados causados por asumir que un guion coincide con el audio sin verificación empírica.</p>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">4. Flujo Operativo de Ejemplo</h2>
             <div class="example-box">
-              <p class="example-flow-text"><code>Toma cruda ingresada -> Audio transcrito -> SHIM compara contra la estructura de 3 hooks planificada -> Identifica que el Hook 2 fue hablado con 94% de fidelidad -> Emite mapa de timecodes a VAV.</code></p>
+              <p class="example-flow-text"><code>Guion planificado ingresado -> Audio de grabación bruta analizado -> SHIM detecta párrafo omitido -> Marca brecha para regrabación o revisión de guion.</code></p>
             </div>
           </section>
 
@@ -86,20 +89,18 @@
               <div class="owns-col">
                 <h3 class="owns-title">✓ Lo que SHIM POSEE</h3>
                 <ul class="boundary-list">
-                  <li>Verificación de alineación fonética y semántica</li>
-<li>Puntuación de discrepancia entre transcripción Planificada y Observada</li>
-<li>Matriz de detección de brechas (hooks faltantes, CTAs omitidos, segmentos improvisados)</li>
-<li>Motor de recomendaciones de resolución</li>
-<li>Compuerta de verificación OUT_OF_SYNC</li>
+                  <li>Medición de discrepancias</li>
+<li>Alineación fonética audio-texto</li>
+<li>Detección de tomas faltantes</li>
+<li>Reporte de deltas entre plan y observado</li>
                 </ul>
               </div>
               <div class="not-owns-col">
                 <h3 class="not-owns-title">✗ Lo que SHIM NO POSEE</h3>
                 <ul class="boundary-list">
-                  <li>NO posee modelos de transcripción de audio en crudo (AI Runtime es dueño de esto)</li>
-<li>NO posee la redacción original del guion (YOD es dueño de esto)</li>
-<li>NO posee la ejecución del corte de video (VAV es dueño de esto)</li>
-<li>NO posee la reasignación de tareas (HE es dueño de esto)</li>
+                  <li>Corte final de video (poseído por VAV)</li>
+<li>Distribución en redes sociales (poseído por Publishing)</li>
+<li>Redacción de revisiones de guion (poseído por Contenido)</li>
                 </ul>
               </div>
             </div>
@@ -117,12 +118,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Un motor de ejecución determinista y específico de dominio</td>
-                    <td>Un wrapper genérico de IA o prompt de chat de terceros</td>
-                  </tr>
-                  <tr>
-                    <td>Vinculado a esquemas inmutables de eventos y artefactos</td>
-                    <td>Un tablero mutable con ediciones no rastreadas</td>
+                    <td>Un motor de metrología y verificación que impone la realidad empírica sobre las suposiciones.</td>
+                    <td>No es un reescritor automático de texto, no es un reproductor de media ni un compositor de postproducción.</td>
                   </tr>
                 </tbody>
               </table>
@@ -130,10 +127,10 @@
           </section>
 
           <section class="dossier-section">
-            <h2 class="section-title">7. Estado Actual y Roadmap Objetivo</h2>
+            <h2 class="section-title">7. Estado Actual y Compuerta de Roadmap</h2>
             <div class="roadmap-gap-box">
-              <h4>Estado de Verdad Actual: <span class="highlight-text">CANDIDATO FUNCIONAL</span></h4>
-              <p>Alineación fonética guion-audio, matriz de verificación de discrepancias y calculadoras de ratio de cobertura verificadas en candidato post-RC1.</p>
+              <h4>Estado de Verdad Actual: <span class="highlight-text">CANDIDATO DE TRABAJO</span></h4>
+              <p>Candidato de trabajo activo en runtime de núcleo local. Alineación fonética y detección de brechas verificadas por tests; candidato para RC2.</p>
             </div>
           </section>
         </div>
@@ -144,29 +141,29 @@
             <div class="io-group">
               <span class="io-label">Inputs:</span>
               <ul class="io-list">
-                <li><code>Planned Script (from Contenido)</code></li>
-<li><code>Observed Transcript (from Universal Intake)</code></li>
+                <li><code>Script canonical text</code></li>
+<li><code>Raw audio / video recordings</code></li>
+<li><code>Timecode markers</code></li>
               </ul>
             </div>
             <div class="io-group">
               <span class="io-label">Outputs:</span>
               <ul class="io-list">
-                <li><code>AlignmentReport</code></li>
-<li><code>DiscrepancyMap</code></li>
-<li><code>CoverageRatio</code></li>
-<li><code>ResolutionPlan</code></li>
+                <li><code>Discrepancy report</code></li>
+<li><code>Phonetic word-alignment map</code></li>
+<li><code>Observation certificate</code></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-card">
             <h3>Módulos Conectados</h3>
-            <p class="conn-text">Intercepta media ingresada en el umbral de Da'at; compara contra el plan de Contenido; entrega segmentos temporales verificados a VAV Cuts Engine.</p>
+            <p class="conn-text">Escanea entradas de Contenido y HE; entrega mapas de alineación validados a VAV para cortes de precisión.</p>
           </div>
 
           <div class="sidebar-card">
             <h3>Evidencia Verificada</h3>
-            <p>Verificado criptográficamente en el registro de hashes de la suite de pruebas.</p>
+            <p>Candidato de trabajo activo en runtime de núcleo local. Alineación fonética y detección de brechas verificadas por tests; candidato para RC2.</p>
             <a href="../../proof/index.html" class="tool-link-btn">Ver Libro Mayor de Evidencia →</a>
           </div>
         </aside>
@@ -204,7 +201,7 @@
         <div id="architect-response-container" class="architect-response-card" style="display: none;">
           <div class="response-topic" id="architect-response-topic">TOPIC</div>
           <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">Verdad Verificada RC1</div>
+          <div class="response-meta" id="architect-response-meta">Línea Base Verificada v1.0.0-rc1</div>
         </div>
       </div>
     </div>
@@ -216,7 +213,7 @@
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
         <p class="footer-desc">El Sistema Operativo para Inteligencia Sistemática de Contenido, Gobernanza Operativa y Síntesis Audiovisual Determinista.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> Línea Base Verificada RC1</div>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> Línea Base Histórica v1.0.0-rc1</div>
       </div>
       <div class="footer-col">
         <h4>Arquitectura</h4>
@@ -254,7 +251,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 ABRAXAS OS. Arquitectura de Ciclo Cerrado Determinista.</div>
       <div class="footer-meta">
-        <span class="footer-mono">SHA: 28eb35eff087be6ebd415dcf0becbce419167e25</span>
+        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
       </div>
     </div>
   </footer>

@@ -15,11 +15,12 @@ export class StoryController {
   }
 
   initScrollTrigger() {
-    const chapters = document.querySelectorAll('.story-chapter-editorial, .story-chapter-card');
+    const sections = document.querySelectorAll('.story-act-section');
+    if (!sections || sections.length === 0) return;
 
-    chapters.forEach((card, index) => {
+    sections.forEach((section, index) => {
       ScrollTrigger.create({
-        trigger: card,
+        trigger: section,
         start: 'top 80%',
         end: 'bottom 20%',
         onEnter: () => this.applyState(index),
@@ -31,23 +32,37 @@ export class StoryController {
   initScrollListener() {
     this.checkScrollPosition = () => {
       if (this.appState && this.appState.mode !== 'STORY') return;
-      const chapters = document.querySelectorAll('.story-chapter-editorial, .story-chapter-card');
+      const sections = document.querySelectorAll('.story-act-section');
+      if (!sections || sections.length === 0) return;
+
       const viewportCenter = window.innerHeight * 0.45;
       let closestIdx = 0;
       let minDistance = Infinity;
 
-      chapters.forEach((card, index) => {
-        const rect = card.getBoundingClientRect();
-        const cardCenter = rect.top + rect.height * 0.5;
-        const dist = Math.abs(cardCenter - viewportCenter);
+      sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        const sectionCenter = rect.top + rect.height * 0.5;
+        const dist = Math.abs(sectionCenter - viewportCenter);
         if (dist < minDistance) {
           minDistance = dist;
           closestIdx = index;
         }
       });
 
+      // Calculate total page scroll progress for continuous spline interpolation
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentScroll = window.scrollY || window.pageYOffset;
+      const progress = docHeight > 0 ? currentScroll / docHeight : 0;
+
+      if (this.pyramid && this.pyramid.cameraDirector) {
+        this.pyramid.cameraDirector.interpolateContinuousProgress(progress, (opacity, opening) => {
+          if (this.pyramid.matPolishedCasing) this.pyramid.matPolishedCasing.opacity = opacity;
+          if (this.pyramid.southCasing) this.pyramid.southCasing.position.z = opening * 1.6;
+        });
+      }
+
       if (closestIdx !== this.currentStateIndex) {
-        this.applyState(closestIdx);
+        this.applyState(closestIdx, false);
       }
     };
 
@@ -55,49 +70,51 @@ export class StoryController {
     window.addEventListener('resize', this.checkScrollPosition, { passive: true });
   }
 
-  applyState(index) {
-    if (index < 0 || index >= NARRATIVE_STATES.length) return;
-    this.currentStateIndex = index;
-    const state = NARRATIVE_STATES[index];
+  applyState(index, triggerCameraTransition = true) {
+    const safeIdx = Math.max(0, Math.min(NARRATIVE_STATES.length - 1, index));
+    this.currentStateIndex = safeIdx;
+    const state = NARRATIVE_STATES[safeIdx];
 
     // Update central AppState
     if (this.appState) {
-      this.appState.storyIndex = index;
+      this.appState.storyIndex = safeIdx;
       this.appState.storyState = state.id;
       this.appState.cameraShotId = state.id;
-      this.appState.activeModule = state.nodeId || 'CORE';
+      this.appState.activeModule = state.focusedNode || 'CORE';
     }
 
-    // CameraDirector shot transition
-    this.pyramid.transitionToNarrativeState(index);
+    if (triggerCameraTransition && this.pyramid) {
+      this.pyramid.transitionToNarrativeState(safeIdx);
+    }
 
     // Update DOM active highlights
-    document.querySelectorAll('.story-chapter-editorial, .story-chapter-card').forEach((c, idx) => {
-      c.classList.toggle('active-chapter', idx === index);
-      c.setAttribute('aria-current', idx === index ? 'step' : 'false');
+    document.querySelectorAll('.story-act-section').forEach((s, idx) => {
+      s.classList.toggle('active-act', idx === safeIdx);
+      s.setAttribute('aria-current', idx === safeIdx ? 'step' : 'false');
     });
 
     // Update Spatial Navigator
-    if (this.navigator) {
-      const shot = this.pyramid.director ? this.pyramid.director.shots[index] : null;
-      this.navigator.updateState(shot, index / (NARRATIVE_STATES.length - 1));
+    if (this.navigator && this.pyramid?.cameraDirector) {
+      const shot = this.pyramid.cameraDirector.shots[safeIdx];
+      this.navigator.updateState(shot, safeIdx / (NARRATIVE_STATES.length - 1));
     }
   }
 
-  scrollToChapter(index) {
-    const chapters = document.querySelectorAll('.story-chapter-editorial, .story-chapter-card');
-    const card = chapters[index];
-    if (!card) return;
-    const rect = card.getBoundingClientRect();
+  scrollToAct(index) {
+    const sections = document.querySelectorAll('.story-act-section');
+    const safeIdx = Math.max(0, Math.min(sections.length - 1, index));
+    const section = sections[safeIdx];
+    if (!section) return;
+
+    const rect = section.getBoundingClientRect();
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const targetY = scrollTop + rect.top - (window.innerHeight * 0.35);
+    const targetY = scrollTop + rect.top - (window.innerHeight * 0.2);
     window.scrollTo(0, Math.max(0, targetY));
     window.dispatchEvent(new Event('scroll'));
     ScrollTrigger.update();
   }
 
   jumpToState(index) {
-    this.scrollToChapter(index);
-    this.applyState(index);
+    this.scrollToAct(index);
   }
 }

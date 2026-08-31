@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CONTENIDO (LIENZO) (Identity) — ABRAXAS OS</title>
-  <meta name="description" content="Contenido es la identidad persistente y versionada de una pieza de contenido. La implementación actual todavía puede utilizar el nombre Lienzo. Las revisiones preservan la historia; las dependencias permanecen explícitas; los derivados posteriores pueden quedar OUT_OF_SYNC sin destruir artefactos anteriores.">
+  <title>CONTENIDO (Identity // Lienzo Core) — ABRAXAS OS</title>
+  <meta name="description" content="Contenido (implementado en runtime como Lienzo Core) garantiza que una pieza de contenido conserve su identidad singular a través de todos los estratos de revisión y formatos derivados.">
   <link rel="alternate" hreflang="en" href="../../../en/tools/contenido/index.html">
   <link rel="alternate" hreflang="es" href="../../../es/tools/contenido/index.html">
   <link rel="alternate" hreflang="x-default" href="../../../en/tools/contenido/index.html">
   <link rel="stylesheet" href="../../../assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   
@@ -52,31 +49,37 @@
   <main class="page-main">
     <div class="page-container">
       <div class="page-header">
-        <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operadores</a> / <span>CONTENIDO (LIENZO)</span></div>
+        <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operadores</a> / <span>CONTENIDO</span></div>
         <div class="module-title-row">
-          <h1 class="page-title">CONTENIDO (LIENZO)</h1>
-          <div class="truth-pill released_current">PUBLICADO (RC1)</div>
+          <h1 class="page-title">CONTENIDO</h1>
+          <div class="truth-pill post_rc1_candidate">CANDIDATO DE TRABAJO</div>
         </div>
-        <div class="module-domain-badge">Domain: Identity // ⚝ Eje Central (Columna de Continuidad Keter a Malkhut) // Pozo Axial Cristalino</div>
-        <p class="page-description">Una identidad a través de muchas transformaciones.</p>
+        <div class="module-domain-badge">Domain: Identity // Lienzo Core // ⚝ Beri'ah / Eje de Continuidad (espina cristalina vertical)</div>
+        <p class="page-description">Identidad persistente de pieza única, DAG de revisiones direccionado por contenido e historial inmutable.</p>
       </div>
 
       <div class="dossier-grid">
         <div class="dossier-main-col">
           <section class="dossier-section">
             <h2 class="section-title">1. Qué Es y Propósito</h2>
-            <p class="section-lead">Contenido es la identidad persistente y versionada de una pieza de contenido. La implementación actual todavía puede utilizar el nombre Lienzo. Las revisiones preservan la historia; las dependencias permanecen explícitas; los derivados posteriores pueden quedar OUT_OF_SYNC sin destruir artefactos anteriores.</p>
+            <p class="section-lead">Contenido (implementado en runtime como Lienzo Core) garantiza que una pieza de contenido conserve su identidad singular a través de todos los estratos de revisión y formatos derivados.</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">2. Asociación Espacial y Simbólica</h2>
+            <p>Beri'ah / Eje de Continuidad (espina cristalina vertical)</p>
+            <div class="disclaimer-box"><small>Esta es una asociación espacial visual y operativa de ABRAXAS, no una identidad del módulo. Los estados del Árbol describen transformaciones del Contenido; los módulos actúan sobre ellos.</small></div>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">3. Problema que Resuelve</h2>
-            <p>Previene la corrupción de estado, sobreescrituras no rastreadas y roturas en cascada entre etapas editoriales, cortes, subtítulos y renderizado manteniendo un DAG inmutable versionado.</p>
+            <p>Previene la mutación silenciosa de estado, desviaciones editoriales no rastreadas y media derivada huérfana mediante un grafo de revisiones inmutable.</p>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">4. Flujo Operativo de Ejemplo</h2>
             <div class="example-box">
-              <p class="example-flow-text"><code>Plan aceptado -> Borrador de Contenido creado -> Media ingresada -> Guion con timestamps adjunto -> Revisión 2 bloqueada -> VAV consume Revisión 2 para ensamblaje de corte.</code></p>
+              <p class="example-flow-text"><code>Guion v1 creado -> Usuario edita cuerpo -> Estrato de Revisión v2 emitido -> Derivados downstream marcados como OUT_OF_SYNC.</code></p>
             </div>
           </section>
 
@@ -84,22 +87,20 @@
             <h2 class="section-title">5. Límites Estrictos de Propiedad</h2>
             <div class="ownership-split-grid">
               <div class="owns-col">
-                <h3 class="owns-title">✓ Lo que CONTENIDO (LIENZO) POSEE</h3>
+                <h3 class="owns-title">✓ Lo que CONTENIDO POSEE</h3>
                 <ul class="boundary-list">
-                  <li>Documento de datos de contenido canónico (esquema JSON)</li>
-<li>Historial de revisiones inmutables y hashing de estratos</li>
-<li>Grafo de dependencias DAG explícito entre activos</li>
-<li>Marcado de invalidación en cascada OUT_OF_SYNC</li>
-<li>Resolución determinista de mutaciones por parches</li>
+                  <li>ID canónico de pieza</li>
+<li>DAG de revisiones direccionado por contenido</li>
+<li>Árbol histórico de estratos</li>
+<li>Vinculación de identidad multiformato</li>
                 </ul>
               </div>
               <div class="not-owns-col">
-                <h3 class="not-owns-title">✗ Lo que CONTENIDO (LIENZO) NO POSEE</h3>
+                <h3 class="not-owns-title">✗ Lo que CONTENIDO NO POSEE</h3>
                 <ul class="boundary-list">
-                  <li>NO posee la lógica de generación creativa (YOD es dueño de esto)</li>
-<li>NO posee el estado del flujo de trabajo humano ni calendario (HE es dueño de esto)</li>
-<li>NO posee la codificación de video ni renderizado de timeline (VAV es dueño de esto)</li>
-<li>NO posee los componentes de interfaz ni vistas de proyección</li>
+                  <li>Corte de archivos de video o renderizado (poseído por VAV)</li>
+<li>Escaneo de discrepancias entre guion y audio (poseído por SHIM)</li>
+<li>Asignación de miembros de equipo (poseído por HE)</li>
                 </ul>
               </div>
             </div>
@@ -111,18 +112,14 @@
               <table class="what-is-table">
                 <thead>
                   <tr>
-                    <th>Lo que CONTENIDO (LIENZO) ES</th>
-                    <th>Lo que CONTENIDO (LIENZO) NO ES</th>
+                    <th>Lo que CONTENIDO ES</th>
+                    <th>Lo que CONTENIDO NO ES</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Un motor de ejecución determinista y específico de dominio</td>
-                    <td>Un wrapper genérico de IA o prompt de chat de terceros</td>
-                  </tr>
-                  <tr>
-                    <td>Vinculado a esquemas inmutables de eventos y artefactos</td>
-                    <td>Un tablero mutable con ediciones no rastreadas</td>
+                    <td>Una espina de datos inmutable y contenedor de estados direccionado por contenido.</td>
+                    <td>No es un área de texto mutable de UI, no es un lienzo de edición de video ni una hoja de cálculo genérica.</td>
                   </tr>
                 </tbody>
               </table>
@@ -130,10 +127,10 @@
           </section>
 
           <section class="dossier-section">
-            <h2 class="section-title">7. Estado Actual y Roadmap Objetivo</h2>
+            <h2 class="section-title">7. Estado Actual y Compuerta de Roadmap</h2>
             <div class="roadmap-gap-box">
-              <h4>Estado de Verdad Actual: <span class="highlight-text">PUBLICADO (RC1)</span></h4>
-              <p>Almacenamiento de revisiones inmutables, motor de dependencias DAG y mutaciones basadas en parches verificadas en RC1.</p>
+              <h4>Estado de Verdad Actual: <span class="highlight-text">CANDIDATO DE TRABAJO</span></h4>
+              <p>Candidato de trabajo de Lienzo Domain Core verificado en la suite local. 100% tests pasados; pendiente de empaquetado para promoción RC2.</p>
             </div>
           </section>
         </div>
@@ -144,29 +141,29 @@
             <div class="io-group">
               <span class="io-label">Inputs:</span>
               <ul class="io-list">
-                <li><code>YOD Strategy Plan</code></li>
-<li><code>Universal Intake Raw Media</code></li>
-<li><code>Human Editorial Edits</code></li>
+                <li><code>Seed drafts from YOD</code></li>
+<li><code>Author editorial revisions</code></li>
+<li><code>Derived media hashes</code></li>
               </ul>
             </div>
             <div class="io-group">
               <span class="io-label">Outputs:</span>
               <ul class="io-list">
-                <li><code>ContenidoDocument (Canonical)</code></li>
-<li><code>RevisionHistory</code></li>
-<li><code>InvalidationSignal (OUT_OF_SYNC)</code></li>
+                <li><code>Immutable revision nodes</code></li>
+<li><code>Content identity certificates</code></li>
+<li><code>Invalidation signals</code></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-card">
             <h3>Módulos Conectados</h3>
-            <p class="conn-text">Columna central consumida por SHIM para verificación; renderizada por VAV en video; gestionada por HE en colas operativas.</p>
+            <p class="conn-text">Recibe semillas de YOD; auditado por SHIM; renderizado por VAV; gobernado en HE.</p>
           </div>
 
           <div class="sidebar-card">
             <h3>Evidencia Verificada</h3>
-            <p>Verificado criptográficamente en el registro de hashes de la suite de pruebas.</p>
+            <p>Candidato de trabajo de Lienzo Domain Core verificado en la suite local. 100% tests pasados; pendiente de empaquetado para promoción RC2.</p>
             <a href="../../proof/index.html" class="tool-link-btn">Ver Libro Mayor de Evidencia →</a>
           </div>
         </aside>
@@ -204,7 +201,7 @@
         <div id="architect-response-container" class="architect-response-card" style="display: none;">
           <div class="response-topic" id="architect-response-topic">TOPIC</div>
           <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">Verdad Verificada RC1</div>
+          <div class="response-meta" id="architect-response-meta">Línea Base Verificada v1.0.0-rc1</div>
         </div>
       </div>
     </div>
@@ -216,7 +213,7 @@
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
         <p class="footer-desc">El Sistema Operativo para Inteligencia Sistemática de Contenido, Gobernanza Operativa y Síntesis Audiovisual Determinista.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> Línea Base Verificada RC1</div>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> Línea Base Histórica v1.0.0-rc1</div>
       </div>
       <div class="footer-col">
         <h4>Arquitectura</h4>
@@ -254,7 +251,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 ABRAXAS OS. Arquitectura de Ciclo Cerrado Determinista.</div>
       <div class="footer-meta">
-        <span class="footer-mono">SHA: 28eb35eff087be6ebd415dcf0becbce419167e25</span>
+        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
       </div>
     </div>
   </footer>

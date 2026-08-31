@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI RUNTIME (Compute) — ABRAXAS OS</title>
-  <meta name="description" content="La selección del proveedor permanece separada de la propiedad del dominio y de la verdad canónica. AI Runtime actúa como el sustrato de ejecución aislado.">
+  <title>AI RUNTIME (Execution // Substrate Contracts) — ABRAXAS OS</title>
+  <meta name="description" content="AI Runtime representa la capa de ejecución objetivo para inferencia de modelos gestionada, presupuestos de cuotas de tokens y aislamiento de procesos de workers.">
   <link rel="alternate" hreflang="en" href="../../../en/tools/ai-runtime/index.html">
   <link rel="alternate" hreflang="es" href="../../../es/tools/ai-runtime/index.html">
   <link rel="alternate" hreflang="x-default" href="../../../en/tools/ai-runtime/index.html">
   <link rel="stylesheet" href="../../../assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   
@@ -55,28 +52,34 @@
         <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operadores</a> / <span>AI RUNTIME</span></div>
         <div class="module-title-row">
           <h1 class="page-title">AI RUNTIME</h1>
-          <div class="truth-pill released_current">PUBLICADO (RC1)</div>
+          <div class="truth-pill contract_only">SOLO CONTRATO</div>
         </div>
-        <div class="module-domain-badge">Domain: Compute // ⚝ Netzach (Resistencia / Sustrato) // Cámara de Cómputo en Roca Madre</div>
-        <p class="page-description">Ejecución sin dependencia de un proveedor.</p>
+        <div class="module-domain-badge">Domain: Execution // Substrate Contracts // ⚝ Contratos del sustrato de workers de ejecución</div>
+        <p class="page-description">Contratos de aislamiento de workers, colas de inferencia y esquemas de presupuesto de tokens (objetivo).</p>
       </div>
 
       <div class="dossier-grid">
         <div class="dossier-main-col">
           <section class="dossier-section">
             <h2 class="section-title">1. Qué Es y Propósito</h2>
-            <p class="section-lead">La selección del proveedor permanece separada de la propiedad del dominio y de la verdad canónica. AI Runtime actúa como el sustrato de ejecución aislado.</p>
+            <p class="section-lead">AI Runtime representa la capa de ejecución objetivo para inferencia de modelos gestionada, presupuestos de cuotas de tokens y aislamiento de procesos de workers.</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">2. Asociación Espacial y Simbólica</h2>
+            <p>Contratos del sustrato de workers de ejecución</p>
+            <div class="disclaimer-box"><small>Esta es una asociación espacial visual y operativa de ABRAXAS, no una identidad del módulo. Los estados del Árbol describen transformaciones del Contenido; los módulos actúan sobre ellos.</small></div>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">3. Problema que Resuelve</h2>
-            <p>Previene la fragilidad de plataforma abstrayendo modelos de LLM, transcripción de audio Whisper y visión computacional tras contratos estrictos.</p>
+            <p>Arquitectura objetivo diseñada para prevenir sobrecostos de API no restringidos y latencias impredecibles en flujos de IA.</p>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">4. Flujo Operativo de Ejemplo</h2>
             <div class="example-box">
-              <p class="example-flow-text"><code>Archivo de audio suministrado -> AI Runtime ejecuta transcripción local Whisper -> Retorna tokens con timestamps a SHIM.</code></p>
+              <p class="example-flow-text"><code>Solicitud de inferencia creada -> Cuota verificada contra contrato de presupuesto -> Adaptador de proveedor seleccionado -> Respuesta verificada.</code></p>
             </div>
           </section>
 
@@ -86,16 +89,18 @@
               <div class="owns-col">
                 <h3 class="owns-title">✓ Lo que AI RUNTIME POSEE</h3>
                 <ul class="boundary-list">
-                  <li>Puentes de adaptadores de proveedor (OpenAI, Anthropic, Local Whisper, Ollama)</li>
-<li>Cola de inferencia y aislamiento de procesos worker</li>
-<li>Cumplimiento de presupuesto de límites de tokens</li>
+                  <li>Esquemas de solicitudes de inferencia</li>
+<li>Contratos de presupuesto de tokens</li>
+<li>Definiciones de interfaz de adaptadores</li>
+<li>Especificaciones de aislamiento de workers</li>
                 </ul>
               </div>
               <div class="not-owns-col">
                 <h3 class="not-owns-title">✗ Lo que AI RUNTIME NO POSEE</h3>
                 <ul class="boundary-list">
-                  <li>NO posee la estrategia de contenido (YOD es dueño de esto)</li>
-<li>NO almacena datos canónicos (Contenido es dueño de esto)</li>
+                  <li>Criterios de voz de marca (poseído por YOD)</li>
+<li>Compilación de video (poseído por VAV)</li>
+<li>Aprobación de tareas humanas (poseído por HE)</li>
                 </ul>
               </div>
             </div>
@@ -113,12 +118,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Un motor de ejecución determinista y específico de dominio</td>
-                    <td>Un wrapper genérico de IA o prompt de chat de terceros</td>
-                  </tr>
-                  <tr>
-                    <td>Vinculado a esquemas inmutables de eventos y artefactos</td>
-                    <td>Un tablero mutable con ediciones no rastreadas</td>
+                    <td>Un contrato formal y especificación arquitectónica para gobernanza de inferencia de IA.</td>
+                    <td>No es un agregador comercial de SaaS de IA ni una pasarela de producción activa en RC1.</td>
                   </tr>
                 </tbody>
               </table>
@@ -126,10 +127,10 @@
           </section>
 
           <section class="dossier-section">
-            <h2 class="section-title">7. Estado Actual y Roadmap Objetivo</h2>
+            <h2 class="section-title">7. Estado Actual y Compuerta de Roadmap</h2>
             <div class="roadmap-gap-box">
-              <h4>Estado de Verdad Actual: <span class="highlight-text">PUBLICADO (RC1)</span></h4>
-              <p>Contratos de aislamiento de workers independientes de proveedor, mecánicas de reintento y puentes de adaptadores de modelo verificados.</p>
+              <h4>Estado de Verdad Actual: <span class="highlight-text">SOLO CONTRATO</span></h4>
+              <p>Esquemas de contratos definidos. Runtime multiproveedor completo programado para compuertas futuras.</p>
             </div>
           </section>
         </div>
@@ -140,27 +141,27 @@
             <div class="io-group">
               <span class="io-label">Inputs:</span>
               <ul class="io-list">
-                <li><code>InferenceContract</code></li>
-<li><code>ModelPromptPayload</code></li>
+                <li><code>Model prompt packets</code></li>
+<li><code>Token limit policies</code></li>
               </ul>
             </div>
             <div class="io-group">
               <span class="io-label">Outputs:</span>
               <ul class="io-list">
-                <li><code>InferenceOutputJSON</code></li>
-<li><code>RawTranscriptionTokens</code></li>
+                <li><code>Normalized inference contracts</code></li>
+<li><code>Cost allocation records</code></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-card">
             <h3>Módulos Conectados</h3>
-            <p class="conn-text">Ejecuta cómputo de IA en crudo en nombre de YOD, SHIM y VAV.</p>
+            <p class="conn-text">Diseñado para proveer servicios de ejecución a YOD, SHIM y VAV.</p>
           </div>
 
           <div class="sidebar-card">
             <h3>Evidencia Verificada</h3>
-            <p>Verificado criptográficamente en el registro de hashes de la suite de pruebas.</p>
+            <p>Esquemas de contratos definidos. Runtime multiproveedor completo programado para compuertas futuras.</p>
             <a href="../../proof/index.html" class="tool-link-btn">Ver Libro Mayor de Evidencia →</a>
           </div>
         </aside>
@@ -198,7 +199,7 @@
         <div id="architect-response-container" class="architect-response-card" style="display: none;">
           <div class="response-topic" id="architect-response-topic">TOPIC</div>
           <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">Verdad Verificada RC1</div>
+          <div class="response-meta" id="architect-response-meta">Línea Base Verificada v1.0.0-rc1</div>
         </div>
       </div>
     </div>
@@ -210,7 +211,7 @@
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
         <p class="footer-desc">El Sistema Operativo para Inteligencia Sistemática de Contenido, Gobernanza Operativa y Síntesis Audiovisual Determinista.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> Línea Base Verificada RC1</div>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> Línea Base Histórica v1.0.0-rc1</div>
       </div>
       <div class="footer-col">
         <h4>Arquitectura</h4>
@@ -248,7 +249,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 ABRAXAS OS. Arquitectura de Ciclo Cerrado Determinista.</div>
       <div class="footer-meta">
-        <span class="footer-mono">SHA: 28eb35eff087be6ebd415dcf0becbce419167e25</span>
+        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
       </div>
     </div>
   </footer>

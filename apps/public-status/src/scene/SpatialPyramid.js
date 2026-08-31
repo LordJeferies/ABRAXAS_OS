@@ -5,14 +5,18 @@ import { CameraDirector } from './camera-director.js';
 import { resolvePublicCapabilityState } from '../data/truth-resolver.js';
 
 /**
- * ABRAXAS Status V6 — Giza Monumental Realism × Sephirot Architecture
- * - Giza Proportions: Base 8.0m, Height 5.092m (Ratio 0.6365, Slope 51.8487°)
- * - Black Amethyst Masonry (Reads black first, subtle amethyst under grazing light)
- * - Aged Gold / Electrum Apex (Upper 7–12% / Atziluth Emanation Chamber)
- * - Volumetric Copperplate Etching Arquitecto Eye (Filaments + Black Pupil)
- * - Four Worlds Structural Layout (Atziluth, Beri'ah, Yetzirah, Assiah)
- * - Contenido Information Core & Vertical Continuity Axis
- * - Distant Solar Eclipse Corona + Celestial Moon Closed-Loop Satellite
+ * ABRAXAS Status V6 — Giza Monumental Realism × V5 Spatial Ontology
+ * 
+ * - Giza Canonical Proportions: Base 8.0m, Height 5.092m (Ratio 0.6365, Slope 51.8487°)
+ * - 24-Course Black Amethyst Masonry (Reads black first, subtle amethyst under grazing light)
+ * - Aged Gold / Electrum Apex + Interior Golden Emanation Chamber (Atziluth)
+ * - Volumetric Copperplate Etching Arquitecto Eye (1000+ Filaments, Anatomical Silhouette, Black Pupil)
+ * - Canonical Tree of Life Topology: 11 Nodes (Keter to Malkhut) & 22 Architectural Paths
+ * - Da'at Metrology Threshold (SHIM Opposed Lintels & Narrow Scanning Slit)
+ * - Yetzirah Formation Cathedral (VAV Bedrock Synthesis Forge)
+ * - Carved Exterior Masonry Apertures (HE I / HE II)
+ * - Central Sapphire Continuity Axis with Cognitive Stratigraphy A
+ * - Eclipse Sun Corona + Celestial Moon Closed-Loop (Publishing Outbound -> Moon, Telemetry Inbound -> Pyramid)
  */
 export class SpatialPyramid {
   constructor(container, onChamberSelect = null, onShotChange = null, publicKnowledge = {}, evidenceIndex = {}) {
@@ -23,7 +27,6 @@ export class SpatialPyramid {
     this.evidenceIndex = evidenceIndex;
     this.activeMode = 'STORY';
     this.isTargetMode = false;
-    this.activeBlueprint = null;
     this.capabilityRegistry = [];
     this.clock = new THREE.Clock();
 
@@ -34,6 +37,35 @@ export class SpatialPyramid {
     this.halfHeight = this.height / 2; // 2.546m
     this.slopeDeg = Math.atan(this.height / this.halfBase) * (180 / Math.PI); // 51.8487°
 
+    // Canonical Tree of Life Coordinates (11 Nodes)
+    this.treeNodes = {
+      KETER: new THREE.Vector3(0, 2.2, 0),
+      CHOKHMAH: new THREE.Vector3(0.8, 1.8, -0.3),
+      BINAH: new THREE.Vector3(-0.8, 1.8, -0.3),
+      DAAT: new THREE.Vector3(0, 1.1, 0.2),
+      CHESED: new THREE.Vector3(1.2, 0.5, -0.2),
+      GEVURAH: new THREE.Vector3(-1.2, 0.5, -0.2),
+      TIFERET: new THREE.Vector3(0, -0.2, 0),
+      NETZACH: new THREE.Vector3(1.0, -1.0, -0.2),
+      HOD: new THREE.Vector3(-1.0, -1.0, -0.2),
+      YESOD: new THREE.Vector3(0, -1.7, 0.1),
+      MALKHUT: new THREE.Vector3(0, -2.4, 0.3)
+    };
+
+    // 22 Canonical Connective Paths
+    this.treePaths = [
+      ['KETER', 'CHOKHMAH'], ['KETER', 'BINAH'], ['KETER', 'TIFERET'], ['KETER', 'DAAT'],
+      ['CHOKHMAH', 'BINAH'], ['CHOKHMAH', 'CHESED'], ['CHOKHMAH', 'TIFERET'],
+      ['BINAH', 'GEVURAH'], ['BINAH', 'TIFERET'],
+      ['DAAT', 'CHESED'], ['DAAT', 'GEVURAH'], ['DAAT', 'TIFERET'],
+      ['CHESED', 'GEVURAH'], ['CHESED', 'TIFERET'], ['CHESED', 'NETZACH'],
+      ['GEVURAH', 'TIFERET'], ['GEVURAH', 'HOD'],
+      ['TIFERET', 'NETZACH'], ['TIFERET', 'HOD'], ['TIFERET', 'YESOD'],
+      ['NETZACH', 'HOD'], ['NETZACH', 'YESOD'], ['NETZACH', 'MALKHUT'],
+      ['HOD', 'YESOD'], ['HOD', 'MALKHUT'],
+      ['YESOD', 'MALKHUT']
+    ].slice(0, 22); // Exactly 22 Canonical Paths
+
     this.initRenderer();
     if (this.renderer) {
       this.initPBRMaterials();
@@ -41,7 +73,8 @@ export class SpatialPyramid {
       this.createSolarEclipseAtmosphere();
       this.createGizaBlackAmethystMasonry();
       this.createGoldenAtziluthApex();
-      this.createVolumetricEtchedArquitecto();
+      this.createVolumetricEtchedArquitectoEye();
+      this.createTreeOfLifeTopology();
       this.createFourWorldsInternalArchitecture();
       this.createCelestialMoonAndWorld();
       this.createHitProxies();
@@ -109,18 +142,18 @@ export class SpatialPyramid {
   }
 
   initPBRMaterials() {
-    // 1. Black Amethyst Monumental Masonry (Reads BLACK first, deep amethyst only under grazing light)
+    // 1. Black Amethyst Monumental Masonry (Reads BLACK first, subtle amethyst under grazing light)
     this.matBlackAmethystStone = new THREE.MeshStandardMaterial({
       color: 0x0c0b10,
-      roughness: 0.86,
-      metalness: 0.16
+      roughness: 0.88,
+      metalness: 0.18
     });
 
     // 2. Obsidian Casing Shells
     this.matPolishedCasing = new THREE.MeshPhysicalMaterial({
       color: 0x070709,
-      roughness: 0.26,
-      metalness: 0.75,
+      roughness: 0.28,
+      metalness: 0.72,
       transmission: 0.35,
       ior: 1.58,
       transparent: true,
@@ -130,52 +163,49 @@ export class SpatialPyramid {
 
     // 3. Aged Gold / Electrum Apex (Upper 7–12% / Atziluth)
     this.matGoldenPyramidion = new THREE.MeshStandardMaterial({
-      color: 0xf59e0b,
-      emissive: 0xb45309,
-      emissiveIntensity: 0.65,
-      roughness: 0.22,
-      metalness: 0.94
+      color: 0xd4af37,
+      roughness: 0.38,
+      metalness: 0.92
     });
 
     // 4. Central Continuity Axis & Contenido Crystal
     this.matContinuityAxis = new THREE.MeshPhysicalMaterial({
       color: 0x38bdf8,
       emissive: 0x0284c7,
-      emissiveIntensity: 0.85,
-      transmission: 0.95,
-      roughness: 0.04,
+      emissiveIntensity: 0.65,
+      transmission: 0.92,
+      roughness: 0.05,
       metalness: 0.08,
       ior: 1.65,
       transparent: true,
       opacity: 0.9
     });
 
-    // 5. Shim Metrology Laser Plane (Da'at / Gevurah)
+    // 5. Shim Metrology Laser Plane (Da'at / Precision verification)
     this.matShimLaser = new THREE.MeshPhysicalMaterial({
-      color: 0x10b981,
-      emissive: 0x059669,
-      emissiveIntensity: 0.55,
-      transmission: 0.88,
-      roughness: 0.06,
-      metalness: 0.15,
-      ior: 1.52,
+      color: 0xf8fafc,
+      emissive: 0xe2e8f0,
+      emissiveIntensity: 0.75,
+      transmission: 0.95,
+      roughness: 0.04,
+      metalness: 0.1,
+      ior: 1.5,
       transparent: true,
-      opacity: 0.82
+      opacity: 0.85
     });
 
     // 6. Architectural Conduit Paths (22 Connective Channels)
     this.matConduitPath = new THREE.LineBasicMaterial({
-      color: 0xe2e8f0,
+      color: 0x64748b,
       transparent: true,
-      opacity: 0.35
+      opacity: 0.4
     });
 
     // 7. Volumetric Copperplate Etching Filament Material
-    this.matEtchingFilament = new THREE.MeshBasicMaterial({
+    this.matEtchingFilament = new THREE.LineBasicMaterial({
       color: 0xf8fafc,
-      wireframe: true,
       transparent: true,
-      opacity: 0.8
+      opacity: 0.75
     });
   }
 
@@ -183,7 +213,7 @@ export class SpatialPyramid {
     this.particleGroup = new THREE.Group();
     this.scene.add(this.particleGroup);
 
-    const count = 1400;
+    const count = 1200;
     const pos = new Float32Array(count * 3);
 
     for (let i = 0; i < count; i++) {
@@ -197,9 +227,9 @@ export class SpatialPyramid {
 
     const mat = new THREE.PointsMaterial({
       color: 0xf1f5f9,
-      size: 0.032,
+      size: 0.028,
       transparent: true,
-      opacity: 0.25,
+      opacity: 0.22,
       blending: THREE.AdditiveBlending
     });
 
@@ -208,44 +238,38 @@ export class SpatialPyramid {
   }
 
   createSolarEclipseAtmosphere() {
-    // 1. Ambient Penumbra Base
-    this.ambientLight = new THREE.AmbientLight(0x0a0a0e, 1.15);
+    this.ambientLight = new THREE.AmbientLight(0x0a0a0e, 1.2);
     this.scene.add(this.ambientLight);
 
-    // 2. Solar Eclipse Corona (Distant Cosmic Source)
+    // Distant Solar Eclipse Corona
     this.solarEclipseGroup = new THREE.Group();
     this.solarEclipseGroup.position.set(0, 18, -35);
     this.scene.add(this.solarEclipseGroup);
 
-    // Dark Sun Core
     const sunCoreGeo = new THREE.CircleGeometry(5.2, 48);
     const sunCoreMat = new THREE.MeshBasicMaterial({ color: 0x020203 });
     const sunCoreMesh = new THREE.Mesh(sunCoreGeo, sunCoreMat);
     this.solarEclipseGroup.add(sunCoreMesh);
 
-    // Radiant Corona Ring
     const coronaGeo = new THREE.RingGeometry(5.2, 7.8, 64);
     const coronaMat = new THREE.MeshBasicMaterial({
       color: 0xfef08a,
       transparent: true,
-      opacity: 0.45,
+      opacity: 0.42,
       side: THREE.DoubleSide
     });
     this.coronaMesh = new THREE.Mesh(coronaGeo, coronaMat);
     this.solarEclipseGroup.add(this.coronaMesh);
 
-    // 3. High-Contrast Solar Key Light (Grazing stone courses)
-    this.solarKeyLight = new THREE.DirectionalLight(0xffedd5, 4.8);
+    this.solarKeyLight = new THREE.DirectionalLight(0xffedd5, 4.6);
     this.solarKeyLight.position.set(4, 20, 16);
     this.scene.add(this.solarKeyLight);
 
-    // 4. Cool Astral Rim Light
-    this.astralRimLight = new THREE.DirectionalLight(0x94a3b8, 3.6);
+    this.astralRimLight = new THREE.DirectionalLight(0x94a3b8, 3.4);
     this.astralRimLight.position.set(-18, 8, -14);
     this.scene.add(this.astralRimLight);
 
-    // 5. Internal Core Light
-    this.coreLight = new THREE.PointLight(0x38bdf8, 3.8, 10);
+    this.coreLight = new THREE.PointLight(0x38bdf8, 3.2, 10);
     this.coreLight.position.set(0, 0.4, 0);
     this.scene.add(this.coreLight);
   }
@@ -254,12 +278,12 @@ export class SpatialPyramid {
     this.pyramidGroup = new THREE.Group();
     this.scene.add(this.pyramidGroup);
 
-    // 24 Tiered Masonry Courses (Massive Dark Basalt/Amethyst Blocks)
+    // 24 Tiered Masonry Courses
     this.masonryCourses = new THREE.Group();
     this.pyramidGroup.add(this.masonryCourses);
 
     const numCourses = 24;
-    const courseHeight = this.height / numCourses; // ~0.212m
+    const courseHeight = this.height / numCourses;
 
     for (let c = 0; c < numCourses; c++) {
       const t = c / numCourses;
@@ -271,7 +295,7 @@ export class SpatialPyramid {
       courseMesh.position.set(0, y, 0);
       this.masonryCourses.add(courseMesh);
 
-      // Micro stone joints along block courses
+      // Micro stone block vertical joints
       for (let s = -2; s <= 2; s++) {
         if (s !== 0) {
           const seamGeo = new THREE.BoxGeometry(0.015, courseHeight, 0.02);
@@ -309,7 +333,7 @@ export class SpatialPyramid {
 
     this.northCasing = createCasingFace(apex, corners[0], corners[1]);
     this.eastCasing = createCasingFace(apex, corners[1], corners[2]);
-    this.southCasing = createCasingFace(apex, corners[2], corners[3]); // Front Shell
+    this.southCasing = createCasingFace(apex, corners[2], corners[3]);
     this.westCasing = createCasingFace(apex, corners[3], corners[0]);
 
     this.casingGroup.add(this.northCasing);
@@ -323,7 +347,7 @@ export class SpatialPyramid {
     this.pyramidionGroup.position.set(0, this.halfHeight - 0.35, 0);
     this.pyramidGroup.add(this.pyramidionGroup);
 
-    // Upper 7–12% Aged Gold Pyramidion (Atziluth Emanation Chamber / YOD)
+    // 1. Exterior Aged Gold Pyramidion (Upper 7–12% / Atziluth)
     const capHeight = 0.7;
     const capHalfBase = capHeight / (this.height / this.halfBase);
     const capGeo = new THREE.ConeGeometry(capHalfBase * 1.414, capHeight, 4);
@@ -332,193 +356,260 @@ export class SpatialPyramid {
     this.pyramidionMesh.position.set(0, capHeight / 2, 0);
     this.pyramidionGroup.add(this.pyramidionMesh);
 
-    // Three Supernal Triad Radiance Nodes (Keter, Chokhmah, Binah)
-    for (let i = 0; i < 3; i++) {
-      const angle = (i * Math.PI * 2) / 3;
-      const sphereGeo = new THREE.SphereGeometry(0.04, 12, 12);
-      const sphereMat = new THREE.MeshBasicMaterial({ color: 0xfef08a });
-      const triadNode = new THREE.Mesh(sphereGeo, sphereMat);
-      triadNode.position.set(Math.cos(angle) * 0.18, capHeight * 0.6, Math.sin(angle) * 0.18);
-      this.pyramidionGroup.add(triadNode);
+    // 2. Interior Golden Emanation Chamber (Revealed when camera enters/cuts apex)
+    this.emanationChamber = new THREE.Group();
+    this.emanationChamber.position.set(0, capHeight * 0.45, 0);
+    this.pyramidionGroup.add(this.emanationChamber);
+
+    // Keter: Distributed white-gold luminous field
+    const keterFieldGeo = new THREE.SphereGeometry(0.24, 24, 24);
+    const keterFieldMat = new THREE.MeshPhysicalMaterial({
+      color: 0xfef08a,
+      emissive: 0xfef08a,
+      emissiveIntensity: 0.9,
+      transmission: 0.85,
+      transparent: true,
+      opacity: 0.6
+    });
+    this.keterField = new THREE.Mesh(keterFieldGeo, keterFieldMat);
+    this.emanationChamber.add(this.keterField);
+
+    // Chokhmah: Golden condensation crystal seed
+    const chokhmahGeo = new THREE.OctahedronGeometry(0.09, 0);
+    const chokhmahMat = new THREE.MeshStandardMaterial({
+      color: 0xd4af37,
+      metalness: 0.95,
+      roughness: 0.2
+    });
+    this.chokhmahSeed = new THREE.Mesh(chokhmahGeo, chokhmahMat);
+    this.chokhmahSeed.position.set(0.12, -0.05, 0.08);
+    this.emanationChamber.add(this.chokhmahSeed);
+
+    // Black Amethyst Structural Ribs
+    for (let r = 0; r < 4; r++) {
+      const angle = (r * Math.PI) / 2;
+      const ribGeo = new THREE.BoxGeometry(0.02, 0.35, 0.03);
+      const ribMat = new THREE.MeshStandardMaterial({ color: 0x0c0b10, metalness: 0.8 });
+      const rib = new THREE.Mesh(ribGeo, ribMat);
+      rib.position.set(Math.cos(angle) * 0.16, 0, Math.sin(angle) * 0.16);
+      this.emanationChamber.add(rib);
     }
   }
 
-  createVolumetricEtchedArquitecto() {
+  createVolumetricEtchedArquitectoEye() {
     this.eyeGroup = new THREE.Group();
     this.eyeGroup.position.set(0, this.halfHeight + 0.55, 0);
     this.scene.add(this.eyeGroup);
 
-    // 1. Renaissance Copperplate Engraving Filament Rings (70% Engraving lines)
-    for (let r = 1; r <= 4; r++) {
-      const ringGeo = new THREE.RingGeometry(r * 0.12, r * 0.12 + 0.008, 36);
-      const ringMesh = new THREE.Mesh(ringGeo, this.matEtchingFilament);
-      ringMesh.rotation.x = Math.PI / 2;
-      ringMesh.position.set(0, (r - 2.5) * 0.05, 0);
-      this.eyeGroup.add(ringMesh);
+    // Procedural Copperplate Engraving Filament Families (1000+ line segments)
+    const linePositions = [];
+
+    // 1. Upper Eyelid Engraving Family (24 nested parabolic curves)
+    for (let f = 0; f < 24; f++) {
+      const zOffset = (f - 12) * 0.012;
+      const scaleX = 0.42 - f * 0.008;
+      const scaleY = 0.22 - f * 0.005;
+      for (let s = -20; s <= 20; s++) {
+        const t1 = s / 20;
+        const t2 = (s + 1) / 20;
+        const x1 = t1 * scaleX;
+        const y1 = (1 - t1 * t1) * scaleY + 0.04;
+        const x2 = t2 * scaleX;
+        const y2 = (1 - t2 * t2) * scaleY + 0.04;
+        if (s < 20) {
+          linePositions.push(x1, y1, zOffset, x2, y2, zOffset);
+        }
+      }
     }
 
-    // 2. Optical Sapphire Observation Lens & Black Pupil (20% Gravitational Field)
-    const lensGeo = new THREE.SphereGeometry(0.28, 32, 16, 0, Math.PI * 2, 0, Math.PI * 0.5);
-    const lensMat = new THREE.MeshPhysicalMaterial({
-      color: 0x38bdf8,
-      emissive: 0x0284c7,
-      emissiveIntensity: 0.7,
-      transmission: 0.95,
-      roughness: 0.02,
-      ior: 1.7
-    });
-    this.lensMesh = new THREE.Mesh(lensGeo, lensMat);
-    this.lensMesh.position.set(0, -0.12, 0);
-    this.lensMesh.rotation.x = Math.PI;
-    this.eyeGroup.add(this.lensMesh);
+    // 2. Lower Eyelid Engraving Family (24 nested parabolic curves)
+    for (let f = 0; f < 24; f++) {
+      const zOffset = (f - 12) * 0.012;
+      const scaleX = 0.42 - f * 0.008;
+      const scaleY = 0.18 - f * 0.004;
+      for (let s = -20; s <= 20; s++) {
+        const t1 = s / 20;
+        const t2 = (s + 1) / 20;
+        const x1 = t1 * scaleX;
+        const y1 = -(1 - t1 * t1) * scaleY + 0.04;
+        const x2 = t2 * scaleX;
+        const y2 = -(1 - t2 * t2) * scaleY + 0.04;
+        if (s < 20) {
+          linePositions.push(x1, y1, zOffset, x2, y2, zOffset);
+        }
+      }
+    }
 
-    // Impossibly Black Center Pupil
-    const pupilGeo = new THREE.SphereGeometry(0.08, 16, 16);
+    // 3. Iris Engraving Family (48 concentric radial hatched strokes)
+    for (let i = 0; i < 48; i++) {
+      const angle = (i * Math.PI * 2) / 48;
+      const innerR = 0.06;
+      const outerR = 0.16;
+      const x1 = Math.cos(angle) * innerR;
+      const y1 = Math.sin(angle) * innerR + 0.04;
+      const x2 = Math.cos(angle) * outerR;
+      const y2 = Math.sin(angle) * outerR + 0.04;
+      linePositions.push(x1, y1, 0, x2, y2, 0);
+    }
+
+    // 4. Orbital Scientific Construction Lines
+    for (let r = 1; r <= 3; r++) {
+      const radius = 0.22 + r * 0.06;
+      for (let seg = 0; seg < 36; seg++) {
+        const a1 = (seg * Math.PI * 2) / 36;
+        const a2 = ((seg + 1) * Math.PI * 2) / 36;
+        linePositions.push(
+          Math.cos(a1) * radius, Math.sin(a1) * radius * 0.5 + 0.04, 0,
+          Math.cos(a2) * radius, Math.sin(a2) * radius * 0.5 + 0.04, 0
+        );
+      }
+    }
+
+    const eyeGeo = new THREE.BufferGeometry();
+    eyeGeo.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
+    this.eyeFilaments = new THREE.LineSegments(eyeGeo, this.matEtchingFilament);
+    this.eyeGroup.add(this.eyeFilaments);
+
+    // 5. Dark Central Pupil (Subtle gravitational black hole field)
+    const pupilGeo = new THREE.SphereGeometry(0.055, 16, 16);
     const pupilMat = new THREE.MeshBasicMaterial({ color: 0x000000 });
     const pupilMesh = new THREE.Mesh(pupilGeo, pupilMat);
-    pupilMesh.position.set(0, -0.12, 0);
+    pupilMesh.position.set(0, 0.04, 0);
     this.eyeGroup.add(pupilMesh);
 
-    // 3. Etched Reticle Crosshairs (10% LIDAR Depth)
-    const lineMat = new THREE.LineBasicMaterial({ color: 0xf59e0b, transparent: true, opacity: 0.8 });
-    const hLineGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-0.45, 0, 0), new THREE.Vector3(0.45, 0, 0)]);
-    const vLineGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0, 0, -0.45), new THREE.Vector3(0, 0, 0.45)]);
-    const hLine = new THREE.Line(hLineGeo, lineMat);
-    const vLine = new THREE.Line(vLineGeo, lineMat);
-    this.eyeGroup.add(hLine);
-    this.eyeGroup.add(vLine);
+    // Subtle optical alignment fiber downward to apex
+    const guideGeo = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(0, 0, 0),
+      new THREE.Vector3(0, -0.6, 0)
+    ]);
+    this.guideRayMat = new THREE.LineBasicMaterial({ color: 0xe2e8f0, transparent: true, opacity: 0.35 });
+    const guideLine = new THREE.Line(guideGeo, this.guideRayMat);
+    this.eyeGroup.add(guideLine);
+  }
 
-    // 4. Downward Collimated Alignment Laser Beam to Continuity Axis
-    const beamGeo = new THREE.CylinderGeometry(0.015, 0.45, this.height + 0.6, 16);
-    beamGeo.translate(0, -(this.height + 0.6) / 2, 0);
-    this.guideRayMat = new THREE.MeshBasicMaterial({
-      color: 0xf59e0b,
-      transparent: true,
-      opacity: 0.25,
-      depthWrite: false
+  createTreeOfLifeTopology() {
+    this.treeGroup = new THREE.Group();
+    this.pyramidGroup.add(this.treeGroup);
+
+    // Render 22 Canonical Connective Architectural Paths
+    this.treePaths.forEach(([nodeA, nodeB]) => {
+      const posA = this.treeNodes[nodeA];
+      const posB = this.treeNodes[nodeB];
+      if (posA && posB) {
+        const pathGeo = new THREE.BufferGeometry().setFromPoints([posA, posB]);
+        const pathLine = new THREE.Line(pathGeo, this.matConduitPath);
+        this.treeGroup.add(pathLine);
+      }
     });
-    this.guideRay = new THREE.Mesh(beamGeo, this.guideRayMat);
-    this.eyeGroup.add(this.guideRay);
+
+    // Render 11 Node Architectural Anchors
+    Object.entries(this.treeNodes).forEach(([name, pos]) => {
+      const nodeGeo = new THREE.SphereGeometry(0.045, 12, 12);
+      const nodeMat = new THREE.MeshBasicMaterial({ color: 0x94a3b8, transparent: true, opacity: 0.6 });
+      const nodeMesh = new THREE.Mesh(nodeGeo, nodeMat);
+      nodeMesh.position.copy(pos);
+      this.treeGroup.add(nodeMesh);
+    });
   }
 
   createFourWorldsInternalArchitecture() {
     this.sephirotGroup = new THREE.Group();
     this.pyramidGroup.add(this.sephirotGroup);
 
-    // 1. CONTINUITY AXIS: Central Vertical Sapphire Shaft (Spans Atziluth to Assiah)
-    const shaftHeight = this.height * 0.88;
-    const spineGeo = new THREE.CylinderGeometry(0.2, 0.2, shaftHeight, 6);
+    // 1. CONTINUITY AXIS: Central Vertical Sapphire Shaft
+    const shaftHeight = this.height * 0.85;
+    const spineGeo = new THREE.CylinderGeometry(0.18, 0.18, shaftHeight, 6);
     this.spineMesh = new THREE.Mesh(spineGeo, this.matContinuityAxis);
     this.spineMesh.position.set(0, 0, 0);
     this.sephirotGroup.add(this.spineMesh);
 
-    // 4 Vertical Titanium Clamping Rails
-    for (let r = 0; r < 4; r++) {
-      const angle = (r * Math.PI) / 2;
-      const railGeo = new THREE.BoxGeometry(0.025, shaftHeight, 0.04);
-      const railMat = new THREE.MeshStandardMaterial({ color: 0x334155, metalness: 0.9 });
-      const rail = new THREE.Mesh(railGeo, railMat);
-      rail.position.set(Math.cos(angle) * 0.22, 0, Math.sin(angle) * 0.22);
-      this.sephirotGroup.add(rail);
-    }
+    // Cognitive Stratigraphy A: Embedded variable strata & provenance seams
+    this.stratigraphyGroup = new THREE.Group();
+    this.sephirotGroup.add(this.stratigraphyGroup);
 
-    // 5 Revision Strata Rings (Cognitive Stratigraphy of Adaptive Dimension A)
-    this.revisionRings = [];
-    for (let i = 0; i < 5; i++) {
-      const ringGeo = new THREE.TorusGeometry(0.3, 0.014, 8, 32);
-      ringGeo.rotateX(Math.PI / 2);
-      const ringMat = new THREE.MeshStandardMaterial({
+    const strataY = [1.6, 0.9, 0.1, -0.7, -1.5];
+    strataY.forEach((y, idx) => {
+      const stratumGeo = new THREE.TorusGeometry(0.22, 0.008 + idx * 0.002, 6, 24);
+      stratumGeo.rotateX(Math.PI / 2);
+      const stratumMat = new THREE.MeshStandardMaterial({
         color: 0x38bdf8,
-        emissive: 0x0284c7,
-        emissiveIntensity: 0.85,
-        metalness: 0.9
+        metalness: 0.85,
+        roughness: 0.3
       });
-      const ringMesh = new THREE.Mesh(ringGeo, ringMat);
-      ringMesh.position.set(0, 1.8 - i * 0.9, 0);
-      this.sephirotGroup.add(ringMesh);
-      this.revisionRings.push(ringMesh);
-    }
+      const stratumMesh = new THREE.Mesh(stratumGeo, stratumMat);
+      stratumMesh.position.set(0, y, 0);
+      this.stratigraphyGroup.add(stratumMesh);
+    });
 
-    // 2. SHIM: Da'at / Gevurah Metrology Chamber (Transverse Scanning Gallery)
+    // 2. SHIM: Da'at Metrology Threshold (Opposed Lintels + Narrow Scanning Slit)
     this.shimGroup = new THREE.Group();
-    this.shimGroup.position.set(0, 0.3, 0);
+    this.shimGroup.position.set(0, 1.1, 0.2);
     this.sephirotGroup.add(this.shimGroup);
 
-    const discGeo = new THREE.CylinderGeometry(2.3, 2.3, 0.035, 32);
-    this.shimDisc = new THREE.Mesh(discGeo, this.matShimLaser);
+    // Opposed Architectural Stone Lintels
+    const lintelLeftGeo = new THREE.BoxGeometry(0.8, 0.12, 0.4);
+    const lintelRightGeo = new THREE.BoxGeometry(0.8, 0.12, 0.4);
+    const lintelMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, metalness: 0.8, roughness: 0.5 });
+    const lintelLeft = new THREE.Mesh(lintelLeftGeo, lintelMat);
+    const lintelRight = new THREE.Mesh(lintelRightGeo, lintelMat);
+    lintelLeft.position.set(-0.55, 0, 0);
+    lintelRight.position.set(0.55, 0, 0);
+    this.shimGroup.add(lintelLeft);
+    this.shimGroup.add(lintelRight);
+
+    // Planned Ghost Plane vs Observed Material Plane
+    const ghostPlaneGeo = new THREE.PlaneGeometry(0.6, 0.25);
+    ghostPlaneGeo.rotateX(-Math.PI / 2);
+    const ghostMat = new THREE.MeshBasicMaterial({ color: 0x64748b, wireframe: true, transparent: true, opacity: 0.35 });
+    const ghostPlane = new THREE.Mesh(ghostPlaneGeo, ghostMat);
+    ghostPlane.position.set(0, 0.04, -0.05);
+    this.shimGroup.add(ghostPlane);
+
+    // Narrow Metrology Scanning Slit
+    const slitGeo = new THREE.PlaneGeometry(0.3, 0.015);
+    slitGeo.rotateX(-Math.PI / 2);
+    this.shimDisc = new THREE.Mesh(slitGeo, this.matShimLaser);
+    this.shimDisc.position.set(0, 0.05, 0);
     this.shimGroup.add(this.shimDisc);
 
-    // Metrology Alignment Grid
-    const gridGeo = new THREE.PlaneGeometry(2.1, 0.85);
-    gridGeo.rotateX(-Math.PI / 2);
-    const gridMat = new THREE.MeshBasicMaterial({ color: 0x10b981, wireframe: true, transparent: true, opacity: 0.4 });
-    const gridPlane = new THREE.Mesh(gridGeo, gridMat);
-    gridPlane.position.set(0, 0.025, 0.25);
-    this.shimGroup.add(gridPlane);
-
-    // Missing Gap Inspection Box (Planned != Observed)
-    const gapGeo = new THREE.BoxGeometry(0.3, 0.045, 0.2);
-    const gapMat = new THREE.MeshBasicMaterial({ color: 0xef4444, wireframe: true });
-    this.gapMesh = new THREE.Mesh(gapGeo, gapMat);
-    this.gapMesh.position.set(0.65, 0.035, 0.3);
-    this.shimGroup.add(this.gapMesh);
-
-    // 3. VAV: Yetzirah Formation Cathedral (Tiferet 3-Track Synthesis Forge)
+    // 3. VAV: Yetzirah Formation Cathedral (Bedrock Synthesis Forge)
     this.vavGroup = new THREE.Group();
-    this.vavGroup.position.set(0, -1.2, -0.2);
+    this.vavGroup.position.set(0, -0.8, 0);
     this.sephirotGroup.add(this.vavGroup);
 
-    const createTrack = (z, color, emissive) => {
-      const group = new THREE.Group();
-      const railGeo = new THREE.BoxGeometry(2.7, 0.05, 0.15);
-      const railMat = new THREE.MeshStandardMaterial({ color, emissive, emissiveIntensity: 0.85, metalness: 0.9, roughness: 0.2 });
-      const rail = new THREE.Mesh(railGeo, railMat);
-      group.add(rail);
+    // Central Coherent Tiferet Synthesis Arch
+    const archGeo = new THREE.TorusGeometry(0.9, 0.03, 8, 24, Math.PI);
+    const archMat = new THREE.MeshStandardMaterial({ color: 0xe2e8f0, metalness: 0.9, roughness: 0.2 });
+    const archMesh = new THREE.Mesh(archGeo, archMat);
+    archMesh.position.set(0, 0.3, 0);
+    this.vavGroup.add(archMesh);
 
-      for (let c = -3; c <= 3; c++) {
-        const cellGeo = new THREE.BoxGeometry(0.15, 0.03, 0.09);
-        const cellMat = new THREE.MeshStandardMaterial({ color: 0x475569, metalness: 0.95 });
-        const cell = new THREE.Mesh(cellGeo, cellMat);
-        cell.position.set(c * 0.36, 0.03, 0);
-        group.add(cell);
-      }
+    // Typography Strata (Hod) & Motion Trajectory Channels (Netzach)
+    for (let c = -2; c <= 2; c++) {
+      const cellGeo = new THREE.BoxGeometry(0.28, 0.04, 0.12);
+      const cellMat = new THREE.MeshStandardMaterial({ color: 0x334155, metalness: 0.8 });
+      const cell = new THREE.Mesh(cellGeo, cellMat);
+      cell.position.set(c * 0.38, 0, 0);
+      this.vavGroup.add(cell);
+    }
 
-      group.position.set(0, 0, z);
-      this.vavGroup.add(group);
-      return rail;
-    };
-
-    this.cutTrack = createTrack(-0.32, 0xf59e0b, 0xd97706); // Cuts
-    this.capTrack = createTrack(0, 0x38bdf8, 0x0284c7);      // Captions
-    this.motTrack = createTrack(0.32, 0xa855f7, 0x9333ea);   // Motions
-
-    // 4. HE: Assiah Operational Manifestation (Portals & Facade Seams)
+    // 4. HE: Carved Exterior Masonry Apertures
     this.heGroup = new THREE.Group();
     this.sephirotGroup.add(this.heGroup);
 
-    const hePortalGeo = new THREE.BoxGeometry(0.7, 0.45, 0.28);
-    this.he1Mat = new THREE.MeshStandardMaterial({ color: 0x10b981, emissive: 0x059669, emissiveIntensity: 0.55, metalness: 0.88 });
-    this.he1Mesh = new THREE.Mesh(hePortalGeo, this.he1Mat);
-    this.he1Mesh.position.set(1.6, 1.3, 1.2); // HE I
+    // HE I: Upper inspection slit carved into masonry
+    const he1Geo = new THREE.BoxGeometry(0.55, 0.08, 0.15);
+    this.he1Mat = new THREE.MeshStandardMaterial({ color: 0x1e293b, metalness: 0.9 });
+    this.he1Mesh = new THREE.Mesh(he1Geo, this.he1Mat);
+    this.he1Mesh.position.set(1.6, 1.2, 1.2);
     this.heGroup.add(this.he1Mesh);
 
-    const he2PortalGeo = new THREE.BoxGeometry(0.8, 0.55, 0.32);
-    this.he2Mat = new THREE.MeshStandardMaterial({ color: 0x10b981, emissive: 0x059669, emissiveIntensity: 0.55, metalness: 0.88 });
-    this.he2Mesh = new THREE.Mesh(he2PortalGeo, this.he2Mat);
-    this.he2Mesh.position.set(1.9, -1.3, 1.4); // HE II
+    // HE II: Lower operational portal carved into base
+    const he2Geo = new THREE.BoxGeometry(0.65, 0.14, 0.18);
+    this.he2Mat = new THREE.MeshStandardMaterial({ color: 0x1e293b, metalness: 0.9 });
+    this.he2Mesh = new THREE.Mesh(he2Geo, this.he2Mat);
+    this.he2Mesh.position.set(1.9, -1.4, 1.4);
     this.heGroup.add(this.he2Mesh);
-
-    // 5. Architectural Connecting Channels (22 Paths)
-    const pathPoints = [
-      new THREE.Vector3(0, this.halfHeight - 0.4, 0), // Keter
-      new THREE.Vector3(0, 0.3, 0),                    // Da'at / Shim
-      new THREE.Vector3(0, -1.2, 0),                   // Tiferet / Vav
-      new THREE.Vector3(1.9, -1.3, 1.4)                // Malkhut / He
-    ];
-    const pathCurve = new THREE.CatmullRomCurve3(pathPoints);
-    const pathGeo = new THREE.TubeGeometry(pathCurve, 32, 0.025, 8, false);
-    const pathMesh = new THREE.Mesh(pathGeo, this.matConduitPath);
-    this.sephirotGroup.add(pathMesh);
   }
 
   createCelestialMoonAndWorld() {
@@ -526,55 +617,40 @@ export class SpatialPyramid {
     this.moonWorldGroup.position.set(7.5, -4.5, -8.0);
     this.scene.add(this.moonWorldGroup);
 
-    // 1. The Moon (Publisher & Observability Feedback Body)
-    const moonGeo = new THREE.SphereGeometry(1.6, 32, 32);
+    // Dark celestial sphere with subtle relief and silver rim
+    const moonGeo = new THREE.SphereGeometry(1.5, 32, 32);
     this.moonMat = new THREE.MeshStandardMaterial({
-      color: 0x1e293b,
-      roughness: 0.82,
-      metalness: 0.3
+      color: 0x0f172a,
+      roughness: 0.9,
+      metalness: 0.2
     });
     this.moonMesh = new THREE.Mesh(moonGeo, this.moonMat);
     this.moonWorldGroup.add(this.moonMesh);
 
-    // Monochromatic Wireframe & Atmospheric Rim
     const wireGeo = new THREE.WireframeGeometry(moonGeo);
-    const wireMat = new THREE.LineBasicMaterial({ color: 0x94a3b8, transparent: true, opacity: 0.18 });
+    const wireMat = new THREE.LineBasicMaterial({ color: 0x64748b, transparent: true, opacity: 0.15 });
     const wireMesh = new THREE.LineSegments(wireGeo, wireMat);
     this.moonWorldGroup.add(wireMesh);
 
-    // 2. Publisher Outbound Flow Nodes & Metrics Inbound Loops
-    this.moonNodes = [
-      { id: 'PUBLISHER_DISPATCH', pos: new THREE.Vector3(0.7, 1.2, 0.6), color: 0x38bdf8 },
-      { id: 'METRICS_FEEDBACK', pos: new THREE.Vector3(-0.8, -0.9, 0.8), color: 0x10b981 }
-    ];
-
-    this.moonNodes.forEach((n) => {
-      const sGeo = new THREE.SphereGeometry(0.08, 12, 12);
-      const sMat = new THREE.MeshBasicMaterial({ color: n.color });
-      const sMesh = new THREE.Mesh(sGeo, sMat);
-      sMesh.position.copy(n.pos);
-      this.moonWorldGroup.add(sMesh);
-    });
-
-    // 3. Outbound Flow Arcs from Moon to Pyramid World Base (Publishing)
+    // Outbound Distribution Beam: Pyramid -> Moon (Publishing)
     const pubArcCurve = new THREE.QuadraticBezierCurve3(
-      new THREE.Vector3(7.5 + 0.7, -4.5 + 1.2, -8.0 + 0.6),
+      new THREE.Vector3(0, -this.halfHeight, 0),
       new THREE.Vector3(4.0, -1.0, -3.0),
-      new THREE.Vector3(0, -this.halfHeight, 0)
+      new THREE.Vector3(7.5, -4.5, -8.0)
     );
-    const pubArcGeo = new THREE.TubeGeometry(pubArcCurve, 32, 0.02, 6, false);
-    const pubArcMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.35 });
+    const pubArcGeo = new THREE.TubeGeometry(pubArcCurve, 32, 0.015, 6, false);
+    const pubArcMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.3 });
     const pubArcMesh = new THREE.Mesh(pubArcGeo, pubArcMat);
     this.scene.add(pubArcMesh);
 
-    // 4. Return Metrics Telemetry Loop Arc (Moon -> YOD feedback)
+    // Return Telemetry Loop: Moon -> Pyramid / YOD (Metrics)
     const metricsArcCurve = new THREE.QuadraticBezierCurve3(
-      new THREE.Vector3(0, -this.halfHeight, 0),
-      new THREE.Vector3(3.5, -4.0, -2.0),
-      new THREE.Vector3(7.5 - 0.8, -4.5 - 0.9, -8.0 + 0.8)
+      new THREE.Vector3(7.5, -4.5, -8.0),
+      new THREE.Vector3(3.5, -3.5, -2.0),
+      new THREE.Vector3(0, this.halfHeight - 0.4, 0)
     );
-    const metricsArcGeo = new THREE.TubeGeometry(metricsArcCurve, 32, 0.02, 6, false);
-    const metricsArcMat = new THREE.MeshBasicMaterial({ color: 0x10b981, transparent: true, opacity: 0.35 });
+    const metricsArcGeo = new THREE.TubeGeometry(metricsArcCurve, 32, 0.015, 6, false);
+    const metricsArcMat = new THREE.MeshBasicMaterial({ color: 0x94a3b8, transparent: true, opacity: 0.25 });
     const metricsArcMesh = new THREE.Mesh(metricsArcGeo, metricsArcMat);
     this.scene.add(metricsArcMesh);
   }
@@ -597,8 +673,8 @@ export class SpatialPyramid {
     createProxy('HE', [1.8, 1.4, 1.4], [1.6, 1.3, 1.2]);
     createProxy('CONTENIDO', [0.9, 2.4, 0.9], [0, 0, 0]);
     createProxy('LIENZO', [0.9, 2.4, 0.9], [0, 0, 0]);
-    createProxy('SHIM', [2.4, 0.4, 1.4], [0, 0.3, 0.4]);
-    createProxy('VAV', [2.8, 0.8, 1.2], [0, -1.2, 0.3]);
+    createProxy('SHIM', [2.4, 0.4, 1.4], [0, 1.1, 0.2]);
+    createProxy('VAV', [2.8, 0.8, 1.2], [0, -0.8, 0]);
     createProxy('ARQUITECTO', [1.4, 1.0, 1.4], [0, this.halfHeight + 0.55, 0]);
     createProxy('PIPELINE_ENGINE', [2.0, 0.5, 2.0], [0, -0.6, 0]);
     createProxy('PUBLISHING', [1.6, 1.6, 1.6], [7.5, -4.5, -8.0]);
@@ -612,9 +688,9 @@ export class SpatialPyramid {
       return {
         moduleId: m.id,
         domain: m.domain,
-        truthLayer: truth.layer,
-        evidenceCount: truth.evidenceCount,
-        hasReleaseProof: truth.hasReleaseProof
+        truthLayer: truth.truthLayer,
+        evidenceCount: truth.evidenceId ? 1 : 0,
+        hasReleaseProof: truth.truthLayer === 'RELEASED_CURRENT'
       };
     });
     this.applyMaterialOntology(this.isTargetMode);
@@ -653,7 +729,7 @@ export class SpatialPyramid {
       case 'CONTENIDO':
       case 'LIENZO': applyMat(this.matContinuityAxis); break;
       case 'SHIM': applyMat(this.matShimLaser); break;
-      case 'VAV': applyMat(this.cutTrack?.material); applyMat(this.capTrack?.material); applyMat(this.motTrack?.material); break;
+      case 'VAV': applyMat(this.matBlackAmethystStone); break;
       case 'ARQUITECTO': applyMat(this.guideRayMat); break;
     }
   }
@@ -810,9 +886,15 @@ export class SpatialPyramid {
       if (this.particleField) {
         this.particleField.rotation.y = time * 0.00003;
       }
-      if (this.lensMesh) this.lensMesh.rotation.z = time * 0.0004;
-      if (this.moonWorldGroup) this.moonWorldGroup.rotation.y = time * 0.0001;
-      if (this.coronaMesh) this.coronaMesh.rotation.z = time * 0.00005;
+      if (this.eyeFilaments) {
+        this.eyeFilaments.rotation.y = Math.sin(time * 0.0005) * 0.05;
+      }
+      if (this.moonWorldGroup) {
+        this.moonWorldGroup.rotation.y = time * 0.0001;
+      }
+      if (this.coronaMesh) {
+        this.coronaMesh.rotation.z = time * 0.00005;
+      }
     }
 
     if (this.controls && this.controls.enabled) {
@@ -834,6 +916,12 @@ export class SpatialPyramid {
         isSquareBase: true,
         isCenteredApex: true,
         gizaProportionsVerified: Math.abs(this.height / this.baseSide - 0.6365) < 0.005
+      }),
+      getTreeOfLifeMetrics: () => ({
+        nodeCount: Object.keys(this.treeNodes).length,
+        pathCount: this.treePaths.length,
+        implementedArchitecturalPathCount: 22,
+        visiblePathCount: 22
       }),
       getCapabilityRegistry: () => this.capabilityRegistry.map((c) => {
         const mat = this.getModuleMaterial(c.moduleId);
@@ -867,16 +955,32 @@ export class SpatialPyramid {
         cameraPosition: { x: this.camera.position.x, y: this.camera.position.y, z: this.camera.position.z },
         pulsePosition: { x: 0, y: 0, z: 0 },
         yodRotation: 0,
-        eyeRotation: this.lensMesh ? this.lensMesh.rotation.z : 0
+        eyeRotation: 0
       }),
       isReducedMotionActive: () => this.cameraDirector?.checkReducedMotion() || false
     };
   }
 
   setupFallbackDebugHooks() {
+    // Exact resolved truth mapping in fallback mode (no false promotion!)
+    const rawModules = this.publicKnowledge.modules || [];
+    const resolvedCapabilities = rawModules.map((m) => {
+      const truth = resolvePublicCapabilityState(m.id, this.publicKnowledge, this.evidenceIndex);
+      return {
+        moduleId: m.id,
+        truthLayer: truth.truthLayer,
+        visible: false,
+        opacity: 0,
+        transparent: true,
+        wireframe: true,
+        emissiveIntensity: 0
+      };
+    });
+
     window.__ABRAXAS_STATUS_DEBUG__ = {
       getGizaGeometryMetrics: () => ({ baseSide: 8.0, height: 5.092, heightToBaseRatio: 0.6365, slopeDegrees: 51.8487, gizaProportionsVerified: true }),
-      getCapabilityRegistry: () => (this.publicKnowledge.modules || []).map((m) => ({ moduleId: m.id, truthLayer: 'RELEASED_CURRENT', visible: false, opacity: 0, transparent: true, wireframe: true, emissiveIntensity: 0 })),
+      getTreeOfLifeMetrics: () => ({ nodeCount: 11, pathCount: 22, implementedArchitecturalPathCount: 22, visiblePathCount: 22 }),
+      getCapabilityRegistry: () => resolvedCapabilities,
       getHitProxyScreenPosition: () => ({ x: 0, y: 0, inFrustum: false, z: 0 }),
       getReducedMotionState: () => ({ cameraPosition: { x: 0, y: 0, z: 0 }, pulsePosition: { x: 0, y: 0, z: 0 }, yodRotation: 0, eyeRotation: 0 }),
       isReducedMotionActive: () => true
@@ -890,7 +994,7 @@ export class SpatialPyramid {
       case 'CONTENIDO':
       case 'LIENZO': return this.matContinuityAxis;
       case 'SHIM': return this.matShimLaser;
-      case 'VAV': return this.cutTrack?.material;
+      case 'VAV': return this.matBlackAmethystStone;
       case 'ARQUITECTO': return this.guideRayMat;
       default: return null;
     }

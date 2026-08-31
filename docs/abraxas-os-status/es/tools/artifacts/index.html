@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARTIFACTS (Storage) — ABRAXAS OS</title>
-  <meta name="description" content="Mantiene almacenamiento direccionado por contenido para todas las exportaciones verificadas, listas de corte, archivos EDL, paquetes de prompts y renders de video master.">
+  <title>ARTIFACTS (Backbone // Content-Addressed Vault) — ABRAXAS OS</title>
+  <meta name="description" content="Artifacts define las especificaciones de hashing criptográfico y almacenamiento direccionado por contenido que vinculan archivos de media generados con su procedencia exacta.">
   <link rel="alternate" hreflang="en" href="../../../en/tools/artifacts/index.html">
   <link rel="alternate" hreflang="es" href="../../../es/tools/artifacts/index.html">
   <link rel="alternate" hreflang="x-default" href="../../../en/tools/artifacts/index.html">
   <link rel="stylesheet" href="../../../assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   
@@ -55,28 +52,34 @@
         <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operadores</a> / <span>ARTIFACTS</span></div>
         <div class="module-title-row">
           <h1 class="page-title">ARTIFACTS</h1>
-          <div class="truth-pill released_current">PUBLICADO (RC1)</div>
+          <div class="truth-pill contract_only">SOLO CONTRATO</div>
         </div>
-        <div class="module-domain-badge">Domain: Storage // ⚝ Otzar (La Bóveda / Rejilla de Hashes) // Bóveda de Artefactos en Roca Madre</div>
-        <p class="page-description">Qué produjo el sistema.</p>
+        <div class="module-domain-badge">Domain: Backbone // Content-Addressed Vault // ⚝ Contratos de la cámara de almacenamiento direccionada por contenido</div>
+        <p class="page-description">Esquemas de almacenamiento direccionado por contenido y verificación criptográfica SHA256 de artefactos.</p>
       </div>
 
       <div class="dossier-grid">
         <div class="dossier-main-col">
           <section class="dossier-section">
             <h2 class="section-title">1. Qué Es y Propósito</h2>
-            <p class="section-lead">Mantiene almacenamiento direccionado por contenido para todas las exportaciones verificadas, listas de corte, archivos EDL, paquetes de prompts y renders de video master.</p>
+            <p class="section-lead">Artifacts define las especificaciones de hashing criptográfico y almacenamiento direccionado por contenido que vinculan archivos de media generados con su procedencia exacta.</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">2. Asociación Espacial y Simbólica</h2>
+            <p>Contratos de la cámara de almacenamiento direccionada por contenido</p>
+            <div class="disclaimer-box"><small>Esta es una asociación espacial visual y operativa de ABRAXAS, no una identidad del módulo. Los estados del Árbol describen transformaciones del Contenido; los módulos actúan sobre ellos.</small></div>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">3. Problema que Resuelve</h2>
-            <p>Previene archivos de media perdidos y referencias rotas garantizando recuperación criptográfica direccionada por contenido.</p>
+            <p>Garantiza la trazabilidad criptográfica de todos los archivos de video, audio y transcripción exportados hasta su código fuente y parámetros.</p>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">4. Flujo Operativo de Ejemplo</h2>
             <div class="example-box">
-              <p class="example-flow-text"><code>VAV finaliza render master -> Artifacts computa SHA256 -> Registra el artefacto -> Lo enlaza a la revisión de Contenido.</code></p>
+              <p class="example-flow-text"><code>Archivo generado -> SHA256 calculado -> Artefacto registrado con metadatos de procedencia -> Referencia inmutable retornada.</code></p>
             </div>
           </section>
 
@@ -86,16 +89,16 @@
               <div class="owns-col">
                 <h3 class="owns-title">✓ Lo que ARTIFACTS POSEE</h3>
                 <ul class="boundary-list">
-                  <li>Registro de hashes direccionado por contenido (SHA256)</li>
-<li>Almacenamiento inmutable de artefactos y gestión de bóveda</li>
-<li>Firma de manifiestos de exportación</li>
+                  <li>Validación de resumen SHA256</li>
+<li>Esquemas de descriptores de artefactos</li>
+<li>Contratos de referencia de procedencia</li>
                 </ul>
               </div>
               <div class="not-owns-col">
                 <h3 class="not-owns-title">✗ Lo que ARTIFACTS NO POSEE</h3>
                 <ul class="boundary-list">
-                  <li>NO posee la lógica de renderizado</li>
-<li>NO posee los metadatos de tareas</li>
+                  <li>Ejecución directa de renderizado (poseído por VAV)</li>
+<li>Gestión de DAG de contenido (poseído por Contenido)</li>
                 </ul>
               </div>
             </div>
@@ -113,12 +116,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Un motor de ejecución determinista y específico de dominio</td>
-                    <td>Un wrapper genérico de IA o prompt de chat de terceros</td>
-                  </tr>
-                  <tr>
-                    <td>Vinculado a esquemas inmutables de eventos y artefactos</td>
-                    <td>Un tablero mutable con ediciones no rastreadas</td>
+                    <td>Una especificación formal de verificación de artefactos.</td>
+                    <td>No es un bucket de almacenamiento de archivos sin restricciones ni un directorio temporal.</td>
                   </tr>
                 </tbody>
               </table>
@@ -126,10 +125,10 @@
           </section>
 
           <section class="dossier-section">
-            <h2 class="section-title">7. Estado Actual y Roadmap Objetivo</h2>
+            <h2 class="section-title">7. Estado Actual y Compuerta de Roadmap</h2>
             <div class="roadmap-gap-box">
-              <h4>Estado de Verdad Actual: <span class="highlight-text">PUBLICADO (RC1)</span></h4>
-              <p>Registro de artefactos direccionado por contenido, verificación de checksum SHA256 y bóveda de exportación verificada en RC1.</p>
+              <h4>Estado de Verdad Actual: <span class="highlight-text">SOLO CONTRATO</span></h4>
+              <p>Esquemas de contratos verificados en suite del núcleo; hashing localizado implementado en pipeline de exportación de VAV.</p>
             </div>
           </section>
         </div>
@@ -140,28 +139,27 @@
             <div class="io-group">
               <span class="io-label">Inputs:</span>
               <ul class="io-list">
-                <li><code>RenderedMediaFiles</code></li>
-<li><code>PromptBundles</code></li>
-<li><code>EDLCutLists</code></li>
+                <li><code>Binary file descriptors</code></li>
+<li><code>Source revision hashes</code></li>
               </ul>
             </div>
             <div class="io-group">
               <span class="io-label">Outputs:</span>
               <ul class="io-list">
-                <li><code>ArtifactRecordWithSHA</code></li>
-<li><code>ImmutableVaultURI</code></li>
+                <li><code>Immutable artifact descriptors</code></li>
+<li><code>Cryptographic verification tokens</code></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-card">
             <h3>Módulos Conectados</h3>
-            <p class="conn-text">Bóveda inmutable que sirve activos verificados a HE, Revisores y Publishing.</p>
+            <p class="conn-text">Ancla salidas de VAV y Contenido a hashes SHA256 inmutables.</p>
           </div>
 
           <div class="sidebar-card">
             <h3>Evidencia Verificada</h3>
-            <p>Verificado criptográficamente en el registro de hashes de la suite de pruebas.</p>
+            <p>Esquemas de contratos verificados en suite del núcleo; hashing localizado implementado en pipeline de exportación de VAV.</p>
             <a href="../../proof/index.html" class="tool-link-btn">Ver Libro Mayor de Evidencia →</a>
           </div>
         </aside>
@@ -199,7 +197,7 @@
         <div id="architect-response-container" class="architect-response-card" style="display: none;">
           <div class="response-topic" id="architect-response-topic">TOPIC</div>
           <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">Verdad Verificada RC1</div>
+          <div class="response-meta" id="architect-response-meta">Línea Base Verificada v1.0.0-rc1</div>
         </div>
       </div>
     </div>
@@ -211,7 +209,7 @@
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
         <p class="footer-desc">El Sistema Operativo para Inteligencia Sistemática de Contenido, Gobernanza Operativa y Síntesis Audiovisual Determinista.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> Línea Base Verificada RC1</div>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> Línea Base Histórica v1.0.0-rc1</div>
       </div>
       <div class="footer-col">
         <h4>Arquitectura</h4>
@@ -249,7 +247,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 ABRAXAS OS. Arquitectura de Ciclo Cerrado Determinista.</div>
       <div class="footer-meta">
-        <span class="footer-mono">SHA: 28eb35eff087be6ebd415dcf0becbce419167e25</span>
+        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
       </div>
     </div>
   </footer>

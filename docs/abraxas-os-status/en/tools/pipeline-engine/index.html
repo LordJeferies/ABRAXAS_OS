@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PIPELINE ENGINE (Orchestration) — ABRAXAS OS</title>
-  <meta name="description" content="Blueprint existence is not proof of runtime execution. Pipeline Engine orchestrates stage transitions deterministically while keeping module boundaries decoupled.">
+  <title>PIPELINE ENGINE (Orchestration // Design Registry) — ABRAXAS OS</title>
+  <meta name="description" content="The Pipeline Blueprint Registry defines formal DAG schemas and stage transitions for 11 lifecycle workflows. (Design registry and schema validation; runtime orchestration engine scheduled for Gate P6).">
   <link rel="alternate" hreflang="en" href="../../../en/tools/pipeline-engine/index.html">
   <link rel="alternate" hreflang="es" href="../../../es/tools/pipeline-engine/index.html">
   <link rel="alternate" hreflang="x-default" href="../../../en/tools/pipeline-engine/index.html">
   <link rel="stylesheet" href="../../../assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   
@@ -55,28 +52,34 @@
         <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operators</a> / <span>PIPELINE ENGINE</span></div>
         <div class="module-title-row">
           <h1 class="page-title">PIPELINE ENGINE</h1>
-          <div class="truth-pill released_current">RELEASED (RC1)</div>
+          <div class="truth-pill contract_only">CONTRACT ONLY</div>
         </div>
-        <div class="module-domain-badge">Domain: Orchestration // ⚝ The 22 Paths (Energy Conduits) // Internal Stone Corridors</div>
-        <p class="page-description">Orchestration without coupling.</p>
+        <div class="module-domain-badge">Domain: Orchestration // Design Registry // ⚝ 22 Architectural Connective Channels (Visual symbolic projection)</div>
+        <p class="page-description">Canonical pipeline blueprint registry and DAG schema specifications (11 lifecycle pipelines).</p>
       </div>
 
       <div class="dossier-grid">
         <div class="dossier-main-col">
           <section class="dossier-section">
             <h2 class="section-title">1. What It Is & Purpose</h2>
-            <p class="section-lead">Blueprint existence is not proof of runtime execution. Pipeline Engine orchestrates stage transitions deterministically while keeping module boundaries decoupled.</p>
+            <p class="section-lead">The Pipeline Blueprint Registry defines formal DAG schemas and stage transitions for 11 lifecycle workflows. (Design registry and schema validation; runtime orchestration engine scheduled for Gate P6).</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">2. Spatial & Symbolic Association</h2>
+            <p>22 Architectural Connective Channels (Visual symbolic projection)</p>
+            <div class="disclaimer-box"><small>This is an ABRAXAS visual and operational spatial association, not module identity. Tree states describe transformations of Contenido; modules act upon them.</small></div>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">3. Problem Solved</h2>
-            <p>Coordinates multi-stage content workflows from intake to publication without hard-coding direct dependencies between modules.</p>
+            <p>Provides standardized, schema-validated workflow definitions preventing arbitrary ad-hoc execution across stages.</p>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">4. Operational Example Flow</h2>
             <div class="example-box">
-              <p class="example-flow-text"><code>Intake blueprint triggered -> Routes payload through Intake -> SHIM -> VAV -> HE -> Publishing in order.</code></p>
+              <p class="example-flow-text"><code>Blueprint definition validated -> Stages mapped from Intake to Publishing -> Verified against PIPELINE_BLUEPRINT_REGISTRY_V1.</code></p>
             </div>
           </section>
 
@@ -86,17 +89,18 @@
               <div class="owns-col">
                 <h3 class="owns-title">✓ What PIPELINE ENGINE OWNS</h3>
                 <ul class="boundary-list">
-                  <li>Blueprint registry & schema validation</li>
-<li>Stage transit state machine</li>
-<li>Payload routing between modules</li>
+                  <li>Blueprint JSON schemas</li>
+<li>Stage transition contracts</li>
+<li>DAG integrity validation</li>
+<li>Flow topology mapping</li>
                 </ul>
               </div>
               <div class="not-owns-col">
                 <h3 class="not-owns-title">✗ What PIPELINE ENGINE DOES NOT OWN</h3>
                 <ul class="boundary-list">
-                  <li>Does NOT own module internal logic</li>
-<li>Does NOT persist content state directly</li>
-<li>Does NOT execute video renders</li>
+                  <li>Real-time distributed worker execution (Target Gate P6)</li>
+<li>Audio-to-video rendering (owned by VAV)</li>
+<li>Brand criteria definitions (owned by YOD)</li>
                 </ul>
               </div>
             </div>
@@ -114,12 +118,8 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>A deterministic, domain-specific execution engine</td>
-                    <td>A generic third-party AI wrapper or chat prompt</td>
-                  </tr>
-                  <tr>
-                    <td>Bound to immutable event and artifact schemas</td>
-                    <td>A mutable board with untracked edits</td>
+                    <td>A formal design registry and schema validator for lifecycle pipelines.</td>
+                    <td>Not an active distributed execution runtime in RC1, and not an ad-hoc cron runner.</td>
                   </tr>
                 </tbody>
               </table>
@@ -127,10 +127,10 @@
           </section>
 
           <section class="dossier-section">
-            <h2 class="section-title">7. Current Status & Target Roadmap</h2>
+            <h2 class="section-title">7. Current Status & Roadmap Gate</h2>
             <div class="roadmap-gap-box">
-              <h4>Current Truth Status: <span class="highlight-text">RELEASED (RC1)</span></h4>
-              <p>11 Canonical Pipeline Blueprints verified in registry; deterministic stage routing engine verified.</p>
+              <h4>Current Truth Status: <span class="highlight-text">CONTRACT ONLY</span></h4>
+              <p>Contract and design registry verified by blueprint unit tests. Active runtime orchestration planned for Gate P6.</p>
             </div>
           </section>
         </div>
@@ -141,27 +141,27 @@
             <div class="io-group">
               <span class="io-label">Inputs:</span>
               <ul class="io-list">
-                <li><code>PipelineBlueprintID</code></li>
-<li><code>ContenidoPayload</code></li>
+                <li><code>Pipeline definition JSONs</code></li>
+<li><code>Stage dependency specifications</code></li>
               </ul>
             </div>
             <div class="io-group">
               <span class="io-label">Outputs:</span>
               <ul class="io-list">
-                <li><code>PipelineRunResult</code></li>
-<li><code>StageTransitionEvent</code></li>
+                <li><code>Validated blueprint DAGs</code></li>
+<li><code>Stage transition schemas</code></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-card">
             <h3>Connected Modules</h3>
-            <p class="conn-text">Executes the 22 architectural connective channels between chambers.</p>
+            <p class="conn-text">Defines canonical stage transitions linking intake, processing, synthesis, and distribution.</p>
           </div>
 
           <div class="sidebar-card">
             <h3>Verified Evidence</h3>
-            <p>Cryptographically verified in test-suite SHA registry.</p>
+            <p>Contract and design registry verified by blueprint unit tests. Active runtime orchestration planned for Gate P6.</p>
             <a href="../../proof/index.html" class="tool-link-btn">View Proof Ledger →</a>
           </div>
         </aside>
@@ -199,7 +199,7 @@
         <div id="architect-response-container" class="architect-response-card" style="display: none;">
           <div class="response-topic" id="architect-response-topic">TOPIC</div>
           <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">RC1 Verified Truth</div>
+          <div class="response-meta" id="architect-response-meta">v1.0.0-rc1 Verified Baseline</div>
         </div>
       </div>
     </div>
@@ -211,7 +211,7 @@
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
         <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> v1.0.0-rc1 Historical Baseline</div>
       </div>
       <div class="footer-col">
         <h4>Architecture</h4>
@@ -249,7 +249,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 ABRAXAS OS. Deterministic Closed-Loop Architecture.</div>
       <div class="footer-meta">
-        <span class="footer-mono">SHA: 28eb35eff087be6ebd415dcf0becbce419167e25</span>
+        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
       </div>
     </div>
   </footer>

@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CONTENIDO (LIENZO) (Identity) — ABRAXAS OS</title>
-  <meta name="description" content="Contenido is the persistent, versioned identity of a content piece. The current implementation may still use the name Lienzo. Revisions preserve history; dependencies remain explicit; downstream derivatives can become OUT_OF_SYNC without destroying previous artifacts.">
+  <title>CONTENIDO (Identity // Lienzo Core) — ABRAXAS OS</title>
+  <meta name="description" content="Contenido (implemented in runtime as Lienzo Core) guarantees that a content piece retains its singular identity across all revision strata and derived formats.">
   <link rel="alternate" hreflang="en" href="../../../en/tools/contenido/index.html">
   <link rel="alternate" hreflang="es" href="../../../es/tools/contenido/index.html">
   <link rel="alternate" hreflang="x-default" href="../../../en/tools/contenido/index.html">
   <link rel="stylesheet" href="../../../assets/status-v3.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
   
@@ -52,31 +49,37 @@
   <main class="page-main">
     <div class="page-container">
       <div class="page-header">
-        <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operators</a> / <span>CONTENIDO (LIENZO)</span></div>
+        <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operators</a> / <span>CONTENIDO</span></div>
         <div class="module-title-row">
-          <h1 class="page-title">CONTENIDO (LIENZO)</h1>
-          <div class="truth-pill released_current">RELEASED (RC1)</div>
+          <h1 class="page-title">CONTENIDO</h1>
+          <div class="truth-pill post_rc1_candidate">WORKING CANDIDATE</div>
         </div>
-        <div class="module-domain-badge">Domain: Identity // ⚝ Central Axis (Keter-to-Malkhut Continuity Spine) // Axial Crystalline Shaft</div>
-        <p class="page-description">One identity across many transformations.</p>
+        <div class="module-domain-badge">Domain: Identity // Lienzo Core // ⚝ Beri'ah / Continuity Axis (Vertical crystalline shaft)</div>
+        <p class="page-description">Persistent single-piece content identity, content-addressed revision DAG, and immutable history.</p>
       </div>
 
       <div class="dossier-grid">
         <div class="dossier-main-col">
           <section class="dossier-section">
             <h2 class="section-title">1. What It Is & Purpose</h2>
-            <p class="section-lead">Contenido is the persistent, versioned identity of a content piece. The current implementation may still use the name Lienzo. Revisions preserve history; dependencies remain explicit; downstream derivatives can become OUT_OF_SYNC without destroying previous artifacts.</p>
+            <p class="section-lead">Contenido (implemented in runtime as Lienzo Core) guarantees that a content piece retains its singular identity across all revision strata and derived formats.</p>
+          </section>
+
+          <section class="dossier-section">
+            <h2 class="section-title">2. Spatial & Symbolic Association</h2>
+            <p>Beri'ah / Continuity Axis (Vertical crystalline shaft)</p>
+            <div class="disclaimer-box"><small>This is an ABRAXAS visual and operational spatial association, not module identity. Tree states describe transformations of Contenido; modules act upon them.</small></div>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">3. Problem Solved</h2>
-            <p>Prevents state corruption, untracked overwrites, and cascade breakage across editorial, cut, caption, and render stages by maintaining an immutable versioned DAG.</p>
+            <p>Prevents silent state mutation, untracked editorial drift, and orphaned derivative media by maintaining an immutable revision graph.</p>
           </section>
 
           <section class="dossier-section">
             <h2 class="section-title">4. Operational Example Flow</h2>
             <div class="example-box">
-              <p class="example-flow-text"><code>Plan accepted -> Contenido draft created -> Media ingested -> Timestamped script attached -> Revision 2 locked -> VAV consumes Revision 2 for cut assembly.</code></p>
+              <p class="example-flow-text"><code>Script v1 created -> User edits body -> Revision Stratum v2 emitted -> Downstream derivatives marked OUT_OF_SYNC.</code></p>
             </div>
           </section>
 
@@ -84,22 +87,20 @@
             <h2 class="section-title">5. Strict Ownership Boundaries</h2>
             <div class="ownership-split-grid">
               <div class="owns-col">
-                <h3 class="owns-title">✓ What CONTENIDO (LIENZO) OWNS</h3>
+                <h3 class="owns-title">✓ What CONTENIDO OWNS</h3>
                 <ul class="boundary-list">
-                  <li>Canonical content data document (JSON schema)</li>
-<li>Immutable revision history & strata hashing</li>
-<li>Explicit DAG dependency graph between assets</li>
-<li>OUT_OF_SYNC cascade invalidation marking</li>
-<li>Deterministic patch mutation resolution</li>
+                  <li>Piece canonical ID</li>
+<li>Content-addressed revision DAG</li>
+<li>Stratum history tree</li>
+<li>Cross-format identity binding</li>
                 </ul>
               </div>
               <div class="not-owns-col">
-                <h3 class="not-owns-title">✗ What CONTENIDO (LIENZO) DOES NOT OWN</h3>
+                <h3 class="not-owns-title">✗ What CONTENIDO DOES NOT OWN</h3>
                 <ul class="boundary-list">
-                  <li>Does NOT own creative generation logic (YOD owns this)</li>
-<li>Does NOT own human workflow status or calendar (HE owns this)</li>
-<li>Does NOT own video encoding or timeline rendering (VAV owns this)</li>
-<li>Does NOT own UI layout components or projection views</li>
+                  <li>Video file cutting or frame rendering (owned by VAV)</li>
+<li>Discrepancy scanning between script and audio (owned by SHIM)</li>
+<li>Team member assignments (owned by HE)</li>
                 </ul>
               </div>
             </div>
@@ -111,18 +112,14 @@
               <table class="what-is-table">
                 <thead>
                   <tr>
-                    <th>What CONTENIDO (LIENZO) IS</th>
-                    <th>What CONTENIDO (LIENZO) IS NOT</th>
+                    <th>What CONTENIDO IS</th>
+                    <th>What CONTENIDO IS NOT</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>A deterministic, domain-specific execution engine</td>
-                    <td>A generic third-party AI wrapper or chat prompt</td>
-                  </tr>
-                  <tr>
-                    <td>Bound to immutable event and artifact schemas</td>
-                    <td>A mutable board with untracked edits</td>
+                    <td>An immutable data spine and content-addressed state container.</td>
+                    <td>Not a mutable UI text area, not a video editing canvas, and not a generic spreadsheet.</td>
                   </tr>
                 </tbody>
               </table>
@@ -130,10 +127,10 @@
           </section>
 
           <section class="dossier-section">
-            <h2 class="section-title">7. Current Status & Target Roadmap</h2>
+            <h2 class="section-title">7. Current Status & Roadmap Gate</h2>
             <div class="roadmap-gap-box">
-              <h4>Current Truth Status: <span class="highlight-text">RELEASED (RC1)</span></h4>
-              <p>Immutable revision storage, DAG dependency engine, and patch-based mutation verified in RC1.</p>
+              <h4>Current Truth Status: <span class="highlight-text">WORKING CANDIDATE</span></h4>
+              <p>Lienzo Domain Core working candidate verified in local core test suite. 100% test pass; pending RC2 promotion packaging.</p>
             </div>
           </section>
         </div>
@@ -144,29 +141,29 @@
             <div class="io-group">
               <span class="io-label">Inputs:</span>
               <ul class="io-list">
-                <li><code>YOD Strategy Plan</code></li>
-<li><code>Universal Intake Raw Media</code></li>
-<li><code>Human Editorial Edits</code></li>
+                <li><code>Seed drafts from YOD</code></li>
+<li><code>Author editorial revisions</code></li>
+<li><code>Derived media hashes</code></li>
               </ul>
             </div>
             <div class="io-group">
               <span class="io-label">Outputs:</span>
               <ul class="io-list">
-                <li><code>ContenidoDocument (Canonical)</code></li>
-<li><code>RevisionHistory</code></li>
-<li><code>InvalidationSignal (OUT_OF_SYNC)</code></li>
+                <li><code>Immutable revision nodes</code></li>
+<li><code>Content identity certificates</code></li>
+<li><code>Invalidation signals</code></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-card">
             <h3>Connected Modules</h3>
-            <p class="conn-text">Central spine consumed by SHIM for verification; rendered by VAV into video; managed by HE in operational queues.</p>
+            <p class="conn-text">Receives seeds from YOD; audited by SHIM; rendered by VAV; governed in HE.</p>
           </div>
 
           <div class="sidebar-card">
             <h3>Verified Evidence</h3>
-            <p>Cryptographically verified in test-suite SHA registry.</p>
+            <p>Lienzo Domain Core working candidate verified in local core test suite. 100% test pass; pending RC2 promotion packaging.</p>
             <a href="../../proof/index.html" class="tool-link-btn">View Proof Ledger →</a>
           </div>
         </aside>
@@ -204,7 +201,7 @@
         <div id="architect-response-container" class="architect-response-card" style="display: none;">
           <div class="response-topic" id="architect-response-topic">TOPIC</div>
           <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">RC1 Verified Truth</div>
+          <div class="response-meta" id="architect-response-meta">v1.0.0-rc1 Verified Baseline</div>
         </div>
       </div>
     </div>
@@ -216,7 +213,7 @@
       <div class="footer-col brand-col">
         <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
         <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> v1.0.0-rc1 Historical Baseline</div>
       </div>
       <div class="footer-col">
         <h4>Architecture</h4>
@@ -254,7 +251,7 @@
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 ABRAXAS OS. Deterministic Closed-Loop Architecture.</div>
       <div class="footer-meta">
-        <span class="footer-mono">SHA: 28eb35eff087be6ebd415dcf0becbce419167e25</span>
+        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
       </div>
     </div>
   </footer>

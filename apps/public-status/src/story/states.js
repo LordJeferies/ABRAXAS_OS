@@ -2,109 +2,81 @@ export const NARRATIVE_STATES = [
   {
     id: 'S0',
     name: 'HERO',
-    chapter: '0. Genesis',
-    title: 'The Operating System for Systematic Content',
-    lead: 'ABRAXAS OS unifies strategic content intelligence, team operational governance, and deterministic video synthesis into a closed-loop content lifecycle.',
-    camera: { coords: { x: 0, y: -2, z: 12 }, target: { x: 0, y: 0, z: 0 }, fov: 45 },
-    focusedNode: 'CORE'
+    chapter: '0. PREMISE // GENESIS',
+    title: 'Criterion becomes infrastructure.',
+    lead: 'ABRAXAS is an operating architecture for transforming intent into structured, observable, producible and measurable reality.',
+    focusedNode: 'HERO'
   },
   {
     id: 'S1',
-    name: 'OVERVIEW',
-    chapter: '1. Architecture',
-    title: 'The Spatial Pyramid Architecture',
-    lead: 'A non-linear semantic spatial architecture where every chamber embodies a strict domain responsibility. Travel through the structure to witness how intent becomes frames.',
-    camera: { coords: { x: 0, y: 4, z: 10 }, target: { x: 0, y: 1, z: 0 }, fov: 50 },
+    name: 'FOUR_WORLDS',
+    chapter: '1. ARCHITECTURE // FOUR WORLDS',
+    title: 'One system. Many degrees of manifestation.',
+    lead: 'The Giza monument structures reality across Atziluth, Beri\'ah, Yetzirah, and Assiah, anchoring intent to empirical manifestation.',
     focusedNode: 'CORE'
   },
   {
     id: 'S2',
     name: 'YOD',
-    chapter: '2. Intelligence',
-    title: 'YOD — The Intelligence Apex',
-    lead: 'Before content is recorded, ABRAXAS decides why it should exist. YOD extracts forensic criteria, brand voice pillars, and audience opportunity hooks.',
-    camera: { coords: { x: 0, y: 6.5, z: 4 }, target: { x: 0, y: 5.5, z: 0 }, fov: 40 },
+    chapter: '2. INTELLIGENCE // SUPERNAL TRIAD',
+    title: 'Before something exists, it must become possible.',
+    lead: 'In the Golden Emanation Chamber, YOD evaluates brand voice criteria, hook taxonomies, and opportunity gaps without blank-slate guesswork.',
     focusedNode: 'YOD'
   },
   {
     id: 'S3',
-    name: 'HE_I',
-    chapter: '3. Intent',
-    title: 'HE I — The Window of Intent',
-    lead: 'Intent becomes structured and visible. The He Operations Core orchestrates pre-production tasks, recording session bookings, talent calendar, and pre-flight approvals.',
-    camera: { coords: { x: 2.5, y: 4.5, z: 4 }, target: { x: 0, y: 3.8, z: 0 }, fov: 45 },
-    focusedNode: 'HE'
+    name: 'CONTENIDO',
+    chapter: '3. IDENTITY // CONTINUITY AXIS',
+    title: 'The form changes. The identity survives.',
+    lead: 'Contenido preserves single-piece identity across all revisions through a content-addressed DAG and the vertical sapphire Continuity Axis.',
+    focusedNode: 'CONTENIDO'
   },
   {
     id: 'S4',
-    name: 'LIENZO_SPINE',
-    chapter: '4. Identity',
-    title: 'LIENZO — Persistent Identity Spine',
-    lead: 'One content piece. One persistent identity. The crystalline central axis preserves immutable lineage across every revision, draft, cut, and distribution target.',
-    camera: { coords: { x: 0, y: 2.5, z: 3 }, target: { x: 0, y: 2.0, z: 0 }, fov: 35 },
-    focusedNode: 'LIENZO'
-  },
-  {
-    id: 'S5',
     name: 'SHIM',
-    chapter: '5. Reality',
-    title: 'SHIM — The Reality Chamber',
-    lead: 'The plan is not the recording. Shim observes real audio/video takes, aligns speech transcripts, and truthfully marks missing beats as gaps rather than hallucinating content.',
-    camera: { coords: { x: 0, y: 1.2, z: 2.8 }, target: { x: 0, y: 0.8, z: 0 }, fov: 35 },
+    chapter: '4. REALITY // DA\'AT METROLOGY',
+    title: 'Planned is not observed. Observed is not resolved.',
+    lead: 'SHIM scans the discrepancy between scripted intent and recorded media, preventing silent drift before downstream production begins.',
     focusedNode: 'SHIM'
   },
   {
-    id: 'S6',
+    id: 'S5',
     name: 'VAV',
-    chapter: '6. Embodiment',
-    title: 'VAV — The Production Forge',
-    lead: 'Structured intent becomes audiovisual reality. VAV executes non-destructive FFmpeg jump-cuts, Remotion motion graphics, and kinetic typography inside platform safe zones.',
-    camera: { coords: { x: 0, y: -0.5, z: 3.2 }, target: { x: 0, y: -0.8, z: 0 }, fov: 40 },
+    chapter: '5. FORMATION // YETZIRAH CATHEDRAL',
+    title: 'Information becomes media.',
+    lead: 'Deep in the bedrock forge, VAV operates three industrial tracks: non-destructive cuts, kinetic typography hierarchies, and spring-physics motions.',
     focusedNode: 'VAV'
   },
   {
-    id: 'S7',
-    name: 'PIPELINE_AI',
-    chapter: '7. Rails & Compute',
-    title: 'Pipeline Engine & AI Compute Field',
-    lead: 'Deterministic DAG rails connect executable modules without vendor lock-in. AI Runtime dispatches logic providers and external LLM roundtrips with strict data boundaries.',
-    camera: { coords: { x: 2, y: -1.2, z: 3.5 }, target: { x: 0, y: -1.0, z: 0 }, fov: 45 },
-    focusedNode: 'PIPELINE_ENGINE'
-  },
-  {
-    id: 'S8',
-    name: 'HE_II',
-    chapter: '8. Manifestation',
-    title: 'HE II — The Window of Manifestation',
-    lead: 'Post-production governance. Review master video outputs, execute multi-role QA approvals, release edit locks, and monitor scheduled platform releases.',
-    camera: { coords: { x: 2.5, y: -2.0, z: 4 }, target: { x: 0, y: -2.2, z: 0 }, fov: 45 },
+    id: 'S6',
+    name: 'HE',
+    chapter: '6. OPERATION // ASSIAH VISIBILITY',
+    title: 'Complexity becomes operable.',
+    lead: 'HE governs tasks, deadlines, recording sessions, and reviews through human-accessible operational portals.',
     focusedNode: 'HE'
   },
   {
-    id: 'S9',
+    id: 'S7',
     name: 'PUBLISHING',
-    chapter: '9. Distribution',
-    title: 'Publishing — Multi-Channel Outward Gates',
-    lead: 'Master assets are frozen into immutable publication snapshots with platform-specific aspect ratios and scheduled release dates across Instagram, TikTok, and YouTube.',
-    camera: { coords: { x: 0, y: -2.8, z: 4.5 }, target: { x: 0, y: -2.6, z: 0 }, fov: 45 },
+    chapter: '7. EXTERNAL LOOP // THE CELESTIAL MOON',
+    title: 'Manifestation leaves the Pyramid. Evidence returns.',
+    lead: 'Publisher dispatches frozen versions to external channels, while telemetry feedback loops return audience signals into YOD.',
     focusedNode: 'PUBLISHING'
   },
   {
-    id: 'S10',
-    name: 'METRICS_LOOP',
-    chapter: '10. Learning Feedback',
-    title: 'Metrics Telemetry & Closing the Loop',
-    lead: 'Publishing is not the end of the loop. Base telemetry normalizes Attention, Retention, and Engagement scores, feeding learning signals back upward to YOD to boost future hooks.',
-    camera: { coords: { x: 0, y: -4.0, z: 6 }, target: { x: 0, y: 1.0, z: 0 }, fov: 50 },
-    focusedNode: 'METRICS'
+    id: 'S8',
+    name: 'ADAPTATION',
+    chapter: '8. ADAPTATION // DIMENSION A',
+    title: 'The system returns, but never to the same state.',
+    lead: 'Adaptive dimension A preserves cognitive stratigraphy—memory, learning, and criteria refinement—closing the perpetual intelligence loop.',
+    focusedNode: 'CORE'
   },
   {
-    id: 'S11',
-    name: 'RESOLVED_CLOSE',
-    chapter: '11. Provenance',
-    title: 'Verified Engineering Truth',
-    lead: 'Every capability shown is grounded in immutable SHA-256 artifacts, append-only event ledgers, and deterministic local test suites.',
-    camera: { coords: { x: 0, y: 3.0, z: 11 }, target: { x: 0, y: 0, z: 0 }, fov: 48 },
+    id: 'S9',
+    name: 'OPERATIONAL_CORE',
+    chapter: 'OPERATIONAL CORE // FINAL CTA',
+    title: 'Enter the operating system.',
+    lead: 'Transition from cinematic manifesto to live operational dashboard, examine empirical evidence ledgers, and explore all 13 module operators.',
     focusedNode: 'CORE'
   }
 ];
