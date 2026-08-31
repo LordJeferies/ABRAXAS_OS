@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline Blueprint Explorer — ABRAXAS OS</title>
+  <link rel="stylesheet" href="../assets/status-v3.css">
+</head>
+<body class="multipage-body flow-page">
+  
+  <header id="global-header" class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../index.html" class="brand-logo" aria-label="ABRAXAS OS Home">
+          <span class="brand-glyph">▲</span>
+          <span class="brand-text">ABRAXAS OS</span>
+        </a>
+        <span class="brand-tag">v1.0.0-rc1</span>
+      </div>
+      <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
+        <a href="../index.html" class="nav-link ">Story</a>
+        <a href="../system/index.html" class="nav-link ">System</a>
+        <a href="../tools/index.html" class="nav-link ">Tools</a>
+        <a href="../flow/index.html" class="nav-link active">Flow</a>
+        <a href="../proof/index.html" class="nav-link ">Proof</a>
+        <a href="../roadmap/index.html" class="nav-link ">Roadmap</a>
+        <a href="../taste/index.html" class="nav-link ">Taste</a>
+        <a href="../principles/index.html" class="nav-link ">Principles</a>
+      </nav>
+      <div class="header-right">
+        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Query Assistant">
+          <span class="architect-spark">✦</span> Ask Architect
+        </button>
+      </div>
+    </div>
+  </header>
+  
+
+  <main id="main-content" class="page-container">
+    <div class="page-hero">
+      <div class="hero-tag">DAG PIPELINE ORCHESTRATION</div>
+      <h1 class="page-title">Pipeline Blueprint Explorer</h1>
+      <p class="page-lead">Inspect deterministic Directed Acyclic Graph (DAG) blueprints coordinating multi-module content production from intake to publication.</p>
+    </div>
+
+    <div class="flow-layout-grid">
+      <aside class="flow-sidebar">
+        <h2 class="sidebar-title">Pipeline Blueprints</h2>
+        <div id="flow-blueprint-selector" class="blueprint-selector-list">
+          <!-- Populated by ModeManager -->
+        </div>
+      </aside>
+
+      <section class="flow-main-viewport">
+        <div id="flow-active-metadata" class="flow-meta-card">
+          <!-- Populated by ModeManager -->
+        </div>
+        <div class="flow-dag-stages-card">
+          <h3 class="stages-title">Execution Stages &amp; Owning Domains</h3>
+          <div id="flow-stages-timeline" class="stages-timeline">
+            <!-- Populated by ModeManager -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col brand-col">
+        <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
+        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Audiovisual Synthesis.</p>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
+      </div>
+      <div class="footer-col">
+        <h4>Architecture</h4>
+        <ul>
+          <li><a href="../system/index.html">System Dashboard</a></li>
+          <li><a href="../tools/index.html">Tool Directory</a></li>
+          <li><a href="../flow/index.html">Pipeline Blueprints</a></li>
+          <li><a href="../roadmap/index.html">Roadmap & Gates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Core Modules</h4>
+        <ul>
+          <li><a href="../tools/yod/index.html">Yod Intelligence</a></li>
+          <li><a href="../tools/lienzo/index.html">Lienzo Identity</a></li>
+          <li><a href="../tools/he/index.html">He Operations</a></li>
+          <li><a href="../tools/shim/index.html">Shim Reality</a></li>
+          <li><a href="../tools/vav/index.html">VAV Forge</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Canon & Proof</h4>
+        <ul>
+          <li><a href="../proof/index.html">Evidence Registry</a></li>
+          <li><a href="../taste/index.html">Taste & Design System</a></li>
+          <li><a href="../principles/index.html">Principles & Invariants</a></li>
+          <li><a href="../tools/arquitecto/index.html">Arquitecto Oversight</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ABRAXAS OS. All rights reserved. Forensic truth backed by immutable Git verification.</p>
+      <p class="footer-mono">Commit: <span class="mono-hash">91234741f0b3a1ac5bd7e4c0556fafa868d00769</span></p>
+    </div>
+  </footer>
+  
+  
+  <div id="architect-drawer" class="architect-drawer" aria-hidden="true">
+    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
+    <div class="architect-drawer-panel" role="dialog" aria-label="Public Architect Guidance">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <span class="architect-icon">✦</span>
+          <h3>Public Architect</h3>
+          <span class="drawer-badge">Deterministic Token Matrix</span>
+        </div>
+        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Public Architect">✕</button>
+      </div>
+      <div class="drawer-body">
+        <p class="drawer-intro">Contextual guidance consuming canonical YOD criteria, system topologies, and operational invariants.</p>
+        
+        <form id="drawer-architect-form" class="architect-form-group" onsubmit="event.preventDefault(); window.__ABRAXAS_QUERY_ARCHITECT__?.(document.getElementById('drawer-architect-input').value);">
+          <input type="text" id="drawer-architect-input" class="architect-input" placeholder="Ask about YOD, Lienzo, Shim, He, VAV, or Invariants..." autocomplete="off" />
+          <button type="submit" class="architect-submit-btn">Consult</button>
+        </form>
+
+        <div class="quick-prompt-chips">
+          <span class="chip-label">Suggestions:</span>
+          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is YOD?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is YOD?');">What is YOD?</button>
+          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Lienzo?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Lienzo?');">What is Lienzo?</button>
+          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Shim?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Shim?');">What is Shim?</button>
+          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is VAV?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is VAV?');">What is VAV?</button>
+          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is OUT_OF_SYNC?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is OUT_OF_SYNC?');">OUT_OF_SYNC</button>
+        </div>
+
+        <div id="drawer-architect-response-card" class="architect-response-card" style="display: none;">
+          <div class="response-topic" id="drawer-response-topic"></div>
+          <div class="response-body" id="drawer-response-text"></div>
+          <div class="response-meta" id="drawer-response-meta"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="../assets/status-v3.js"></script>
+</body>
+</html>

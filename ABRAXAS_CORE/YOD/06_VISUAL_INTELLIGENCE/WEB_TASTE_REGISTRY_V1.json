@@ -1,0 +1,124 @@
+{
+  "registryClassification": "CANONICAL_TASTE_PROFILE_REGISTRY",
+  "version": 1,
+  "lastAudited": "2026-08-31T10:30:00Z",
+  "profiles": [
+    {
+      "tasteProfileId": "ABRAXAS_MASTER_WEB_TASTE_V1",
+      "version": 1,
+      "scope": "GLOBAL_ABRAXAS",
+      "referenceSources": [
+        "Apple Human Interface Guidelines & Product Storytelling",
+        "Reflect Atmospheric Cosmic Void",
+        "United Carriers Logistical Infrastructure",
+        "Nothin Reduction & Negative Space",
+        "Otsuka Physical Lighting",
+        "Cipher Forensic Telemetry",
+        "Produx Editorial Utility",
+        "Alethia Monumental Scale",
+        "DesignCode Tactile 3D Craft"
+      ],
+      "principles": [
+        "One Scene = One Dominant Idea",
+        "Reduction is Luxury",
+        "Disciplined Dominant Palette (85-90% Void, 10-12% Structural Slate, 3-5% Semantic Cyan/Emerald/Amber/Purple)",
+        "Physically Based Material Shading with ACES Filmic Tone Mapping",
+        "Choreographed Progressive Disclosure (6-Act Narrative)",
+        "Forensic Provenance (verifiable commit hashes & test suites)",
+        "Deterministic 2D SVG Fallback on WebGL failure",
+        "Anti-AI-Slop Restraint (Zero generic neon, zero floating cards, zero gratuitous particles)",
+        "Total Accessibility & Instant Zero-Duration Snap under Reduced Motion",
+        "Strict Performance Budget (DPR <= 2.0, visibility loop pausing, Three.js cleanup)"
+      ],
+      "compositionPreferences": {
+        "heroStyle": "MONUMENTAL_NEGATIVE_SPACE_ZERO_BACKDROP_BOX",
+        "negativeSpaceRatio": 0.65,
+        "maxContentWidth": "1440px",
+        "gridType": "STRUCTURAL_12_COL_EDITORIAL"
+      },
+      "typographyPreferences": {
+        "headlineFont": "Space Grotesk, -apple-system, sans-serif",
+        "bodyFont": "Inter, -apple-system, sans-serif",
+        "monoFont": "JetBrains Mono, monospace",
+        "scaleRatio": 1.333
+      },
+      "colorBehavior": {
+        "backgroundMode": "DARK_VOID",
+        "dominantRatio": "88% Dark (#070a0f), 9% Structural (#1e293b, #334155), 3% Semantic (#38bdf8, #10b981, #f59e0b, #a855f7)",
+        "accentStrategy": "SEMANTIC_ONLY"
+      },
+      "materialBehavior": {
+        "pbrEnabled": true,
+        "fresnelHighlighting": true,
+        "surfaceFinishes": [
+          "Smoked Crystal Transmission",
+          "Black Titanium Chassis",
+          "Procedural Blueprint Contour Wireframe",
+          "View-Dependent Glancing Fresnel Shading",
+          "Atmospheric Blue-White Planetary Rim"
+        ]
+      },
+      "motionBehavior": {
+        "cameraChoreography": "DIRECTED_CATMULL_ROM_SMOOTH_INTERPOLATION",
+        "scrollTriggerEcosystem": "GSAP_SCROLLTRIGGER_PROGRESSIVE",
+        "reducedMotionSnap": true
+      },
+      "interactionBehavior": {
+        "pointerEventsRouting": "LAYERED_PASS_THROUGH_WITH_RAYCAST_ISLANDS",
+        "raycastSelection": true,
+        "keyboardAccessibility": true
+      },
+      "mediaRouting": {
+        "threeJsStrategy": "HERO_AND_SYSTEM_SPATIAL_OBJECTS",
+        "svgFallbackStrategy": "HIGH_FIDELITY_2D_ARCHITECTURAL_SCHEMATIC",
+        "scrollVideoSupport": "SPEC_ONLY_DESIGN_READY"
+      },
+      "spatialBehavior": {
+        "masterSymbols": [
+          "The Spatial Pyramid (System Architecture)",
+          "The Lienzo Spine (Persistent Identity)",
+          "The Eye of Arquitecto (Contextual Observation)",
+          "The External World (Origin, Ingress & Distribution)",
+          "The Horizon / Threshold (Boundary of Manifestation)",
+          "The Content Pulse / Route (Artifact Flow)"
+        ],
+        "worldPlanetIntegration": true,
+        "viewportsSupported": ["DESKTOP_1440", "TABLET_768", "MOBILE_390"]
+      },
+      "informationDensity": "EDITORIAL_BALANCED",
+      "luxuryVsUtilityBalance": "PRESTIGE_EDITORIAL_SHELL_WITH_DEEP_ENGINEERING_DOSSIERS",
+      "restraintRules": [
+        "Never place hero text inside floating dark backdrop boxes",
+        "Never add Three.js primitives without custom PBR materials or procedural shaders",
+        "Never display unverified future capabilities as released",
+        "Never animate when reduced-motion is requested"
+      ],
+      "antiPatterns": [
+        "MORE_THREE_JS != MORE_PREMIUM",
+        "MORE_PARTICLES != MORE_PREMIUM",
+        "MORE_NEON != MORE_PREMIUM",
+        "MORE_GLASS_CARDS != MORE_PREMIUM",
+        "MORE_HUD != MORE_PREMIUM",
+        "TEMPLATE_SLOP != COHERENCE"
+      ],
+      "performanceRequirements": {
+        "dprCaps": { "desktop": 2.0, "tablet": 1.5, "mobile": 1.0 },
+        "visibilityLoopPause": true,
+        "resourceDisposal": true
+      },
+      "accessibilityRequirements": {
+        "wcagTarget": "WCAG_2_1_AA",
+        "ariaLandmarks": true,
+        "instantReducedMotion": true
+      },
+      "allowedVariation": "Allows brand-specific color palette and font adjustments while preserving structural laws of negative space, reduction, and evidence honesty.",
+      "forbiddenLiteralCopying": [
+        "Do NOT copy Apple white backgrounds or consumer copy",
+        "Do NOT copy Reflect purple gradients as brand identity",
+        "Do NOT copy United Carriers brutalist unstyled lines without editorial pacing",
+        "Do NOT copy Cipher simulated hacker HUD green counters"
+      ],
+      "clientOverrides": {}
+    }
+  ]
+}

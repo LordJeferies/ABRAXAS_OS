@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline Engine (Infrastructure) Specification — ABRAXAS OS</title>
+  <link rel="stylesheet" href="../../assets/status-v3.css">
+</head>
+<body class="multipage-body tool-detail-page">
+  
+  <header id="global-header" class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../../index.html" class="brand-logo" aria-label="ABRAXAS OS Home">
+          <span class="brand-glyph">▲</span>
+          <span class="brand-text">ABRAXAS OS</span>
+        </a>
+        <span class="brand-tag">v1.0.0-rc1</span>
+      </div>
+      <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
+        <a href="../../index.html" class="nav-link ">Story</a>
+        <a href="../../system/index.html" class="nav-link ">System</a>
+        <a href="../../tools/index.html" class="nav-link active">Tools</a>
+        <a href="../../flow/index.html" class="nav-link ">Flow</a>
+        <a href="../../proof/index.html" class="nav-link ">Proof</a>
+        <a href="../../roadmap/index.html" class="nav-link ">Roadmap</a>
+        <a href="../../taste/index.html" class="nav-link ">Taste</a>
+        <a href="../../principles/index.html" class="nav-link ">Principles</a>
+      </nav>
+      <div class="header-right">
+        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Open Public Architect Query Assistant">
+          <span class="architect-spark">✦</span> Ask Architect
+        </button>
+      </div>
+    </div>
+  </header>
+  
+
+  <main id="main-content" class="page-container">
+    <div class="breadcrumb-bar">
+      <a href="../../index.html">ABRAXAS</a>
+      <span class="crumb-sep">/</span>
+      <a href="../index.html">Tools</a>
+      <span class="crumb-sep">/</span>
+      <span class="crumb-current">Pipeline Engine</span>
+    </div>
+
+    <div class="tool-hero-section">
+      <div class="tool-hero-content">
+        <div class="tool-status-badge-row">
+          <span class="truth-pill post_rc1_candidate">POST RC1 CANDIDATE</span>
+          <span class="domain-badge">Infrastructure</span>
+          <span class="status-badge">PLANNED</span>
+        </div>
+        <h1 class="tool-title">Pipeline Engine</h1>
+        <p class="tool-role-tag">Batch Orchestration & Stage Execution</p>
+        <p class="tool-lead">Coordinates multi-stage asset generation, offline compilation, and rendering pipelines.</p>
+      </div>
+      
+      <div class="domain-protagonist generic-protagonist">
+        <svg viewBox="0 0 400 240" class="protagonist-svg" aria-label="Pipeline Engine Schematic Graphic">
+          <circle cx="200" cy="110" r="60" stroke="#64748b" stroke-width="1.5" fill="none" opacity="0.4" />
+          <circle cx="200" cy="110" r="30" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.06)" />
+          <text x="200" y="205" text-anchor="middle" fill="#94a3b8" font-family="JetBrains Mono" font-size="11">PIPELINE ENGINE // INFRASTRUCTURE</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="tool-deep-grid">
+      <!-- 1. What & Why -->
+      <section class="dossier-card">
+        <h2 class="section-title">01. What &amp; Why</h2>
+        <div class="card-body">
+          <p><strong>Definition:</strong> The deterministic DAG orchestrator executing modular content pipelines.</p>
+          <p><strong>Why It Exists:</strong> Enables flexible reordering, node skipping, and cascading failure recovery across multi-stage production workflows.</p>
+        </div>
+      </section>
+
+      <!-- 2. Ownership Boundaries -->
+      <section class="dossier-card">
+        <h2 class="section-title">02. Ownership Boundaries</h2>
+        <div class="card-body">
+          <div class="boundary-split">
+            <div class="owns-col">
+              <h3 class="col-title text-emerald">✓ Owns</h3>
+              <ul>
+                <li>Pipeline DAG validation & cycle rejection</li><li>Topological node execution</li><li>Conditional node skipping & failure cascade</li><li>Execution result aggregation</li>
+              </ul>
+            </div>
+            <div class="does-not-own-col">
+              <h3 class="col-title text-rose">✗ Does Not Own</h3>
+              <ul>
+                <li>Does NOT own individual module domain logic (modules own their handlers)</li><li>Does NOT own content state (Lienzo owns this)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Contracts & Flow -->
+      <section class="dossier-card">
+        <h2 class="section-title">03. Contracts &amp; Data Flow</h2>
+        <div class="card-body">
+          <div class="io-grid">
+            <div class="io-block">
+              <span class="io-label">Inputs:</span>
+              <ul><li><code>PipelineDefinition</code></li><li><code>ModuleHandlers</code></li><li><code>ExecutionContext</code></li></ul>
+            </div>
+            <div class="io-block">
+              <span class="io-label">Outputs:</span>
+              <ul><li><code>PipelineExecutionResult</code></li><li><code>NodeExecutionLogs</code></li></ul>
+            </div>
+          </div>
+          <div class="flow-example-box">
+            <span class="box-label">Example Lifecycle Flow:</span>
+            <p class="flow-text">Blueprint selected -> DAG topologically sorted -> Stage 1 executes -> Stage 2 skipped if configured -> Stage 3 completes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Lineage: Events & Artifacts -->
+      <section class="dossier-card">
+        <h2 class="section-title">04. Events &amp; Produced Lineage</h2>
+        <div class="card-body">
+          <div class="lineage-split">
+            <div>
+              <span class="io-label">Emitted Events:</span>
+              <ul><li><span class="event-chip">PIPELINE_EXECUTION_STARTED</span></li><li><span class="event-chip">PIPELINE_EXECUTION_COMPLETED</span></li><li><span class="event-chip">PIPELINE_NODE_FAILED</span></li></ul>
+            </div>
+            <div>
+              <span class="io-label">Produced Artifacts:</span>
+              <ul><li><span class="artifact-chip">PipelineExecutionManifest</span></li></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Capability Status & Roadmap -->
+      <section class="dossier-card">
+        <h2 class="section-title">05. Capability Truth &amp; Roadmap</h2>
+        <div class="card-body">
+          <div class="cap-comparison-grid">
+            <div class="cap-col">
+              <h3 class="col-title text-cyan">Current Capabilities</h3>
+              <ul><li>DAG Validation Specifications</li><li>11 Seed Modular Pipeline Blueprints</li><li>DAG Orchestrator (Working Candidate)</li></ul>
+            </div>
+            <div class="cap-col">
+              <h3 class="col-title text-amber">Target Capabilities</h3>
+              <ul><li>Distributed Cluster Job Dispatch</li><li>Dynamic Re-execution on OUT_OF_SYNC</li></ul>
+            </div>
+          </div>
+          <div class="debt-box">
+            <span class="box-label">Bounded Technical Debt:</span>
+            <ul><li>Persistent job queues with automatic worker retry scheduled for Phase R12.</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Evidence & Verification -->
+      <section class="dossier-card">
+        <h2 class="section-title">06. Verification &amp; Evidence Citations</h2>
+        <div class="card-body">
+          <p class="status-detail-text"><strong>Live Verification Detail:</strong> Batch execution specification scheduled in RC1; deterministic DAG orchestrator verified in post-RC1 working candidate.</p>
+          <div class="evidence-citations">
+            <span class="citation-label">Referenced Proof:</span>
+            <ul><li><code>release:test-suite</code></li><li><code>evidence:pipeline-orchestrator</code></li></ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="tool-navigation-footer">
+      <a href="../index.html" class="nav-back-btn">← Back to All Tools</a>
+      <a href="../../system/index.html" class="nav-system-btn">Inspect in 3D System Explorer →</a>
+    </div>
+  </main>
+
+  
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col brand-col">
+        <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
+        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Audiovisual Synthesis.</p>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> RC1 Verified Baseline</div>
+      </div>
+      <div class="footer-col">
+        <h4>Architecture</h4>
+        <ul>
+          <li><a href="../../system/index.html">System Dashboard</a></li>
+          <li><a href="../../tools/index.html">Tool Directory</a></li>
+          <li><a href="../../flow/index.html">Pipeline Blueprints</a></li>
+          <li><a href="../../roadmap/index.html">Roadmap & Gates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Core Modules</h4>
+        <ul>
+          <li><a href="../../tools/yod/index.html">Yod Intelligence</a></li>
+          <li><a href="../../tools/lienzo/index.html">Lienzo Identity</a></li>
+          <li><a href="../../tools/he/index.html">He Operations</a></li>
+          <li><a href="../../tools/shim/index.html">Shim Reality</a></li>
+          <li><a href="../../tools/vav/index.html">VAV Forge</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Canon & Proof</h4>
+        <ul>
+          <li><a href="../../proof/index.html">Evidence Registry</a></li>
+          <li><a href="../../taste/index.html">Taste & Design System</a></li>
+          <li><a href="../../principles/index.html">Principles & Invariants</a></li>
+          <li><a href="../../tools/arquitecto/index.html">Arquitecto Oversight</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ABRAXAS OS. All rights reserved. Forensic truth backed by immutable Git verification.</p>
+      <p class="footer-mono">Commit: <span class="mono-hash">91234741f0b3a1ac5bd7e4c0556fafa868d00769</span></p>
+    </div>
+  </footer>
+  
+  
+  <div id="architect-drawer" class="architect-drawer" aria-hidden="true">
+    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
+    <div class="architect-drawer-panel" role="dialog" aria-label="Public Architect Guidance">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <span class="architect-icon">✦</span>
+          <h3>Public Architect</h3>
+          <span class="drawer-badge">Deterministic Token Matrix</span>
+        </div>
+        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close Public Architect">✕</button>
+      </div>
+      <div class="drawer-body">
+        <p class="drawer-intro">Contextual guidance consuming canonical YOD criteria, system topologies, and operational invariants.</p>
+        
+        <form id="drawer-architect-form" class="architect-form-group" onsubmit="event.preventDefault(); window.__ABRAXAS_QUERY_ARCHITECT__?.(document.getElementById('drawer-architect-input').value);">
+          <input type="text" id="drawer-architect-input" class="architect-input" placeholder="Ask about YOD, Lienzo, Shim, He, VAV, or Invariants..." autocomplete="off" />
+          <button type="submit" class="architect-submit-btn">Consult</button>
+        </form>
+
+        <div class="quick-prompt-chips">
+          <span class="chip-label">Suggestions:</span>
+          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is YOD?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is YOD?');">What is YOD?</button>
+          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Lienzo?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Lienzo?');">What is Lienzo?</button>
+          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is Shim?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is Shim?');">What is Shim?</button>
+          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is VAV?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is VAV?');">What is VAV?</button>
+          <button type="button" class="prompt-chip" onclick="document.getElementById('drawer-architect-input').value='What is OUT_OF_SYNC?'; window.__ABRAXAS_QUERY_ARCHITECT__('What is OUT_OF_SYNC?');">OUT_OF_SYNC</button>
+        </div>
+
+        <div id="drawer-architect-response-card" class="architect-response-card" style="display: none;">
+          <div class="response-topic" id="drawer-response-topic"></div>
+          <div class="response-body" id="drawer-response-text"></div>
+          <div class="response-meta" id="drawer-response-meta"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="../../assets/status-v3.js"></script>
+</body>
+</html>

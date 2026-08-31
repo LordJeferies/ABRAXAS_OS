@@ -1,7 +1,12 @@
 {
   "systemName": "ABRAXAS OS",
-  "tagline": "Audiovisual Intelligence & Operational Production Operating System",
-  "description": "ABRAXAS OS is an integrated operating system unifying content intelligence, operational workflow governance, and deterministic audiovisual synthesis.",
+  "tagline": "The Operating System for Systematic Content Intelligence, Operational Governance, and Audiovisual Synthesis",
+  "description": "ABRAXAS OS is an integrated operating system unifying content intelligence, operational workflow governance, and deterministic audiovisual synthesis into a closed-loop content lifecycle.",
+  "truthLayers": {
+    "RELEASED_CURRENT": "Included and verified in current public release v1.0.0-rc1 (RELEASED_RC1).",
+    "POST_RC1_CANDIDATE": "Local working implementation verified in private repository post-RC1 (WORKING CANDIDATE — NOT IN RC1).",
+    "TARGET": "Architectural contract and planned target roadmap."
+  },
   "whatItIs": [
     "An integrated content intelligence and operational AV operating system.",
     "A local-first, deterministic production pipeline bridging editorial concepts with render engines.",
@@ -22,16 +27,69 @@
       "role": "Content Intelligence & Forensic Criteria",
       "responsibility": "Maintains content pattern registries, hook and CTA taxonomies, narrative structures, and forensic provenance truth.",
       "status": "PARTIAL_FOUNDATION",
-      "statusDetail": "Pattern and format registries verified locally."
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": "Pattern and format registries verified locally; ClientCore and Opportunity runtime verified in post-RC1 working candidate.",
+      "shortDefinition": "The originating seed and strategic intelligence engine of ABRAXAS.",
+      "why": "Prevents blank-slate guesswork by deriving every content piece from verified criteria, brand voice pillars, and audience coverage gaps.",
+      "owns": [
+        "Client Core & Brand voice criteria",
+        "Opportunity generation & scoring algorithms",
+        "Strategic narrative structure definitions",
+        "Prompt compiler & Founder Studio recording packs",
+        "Feedback signal interpretation (Learning)"
+      ],
+      "doesNotOwn": [
+        "Does NOT own single-piece mutable content state (Lienzo owns this)",
+        "Does NOT own operational deadlines or task assignments (He owns this)",
+        "Does NOT own rendering or audiovisual media (VAV owns this)"
+      ],
+      "inputs": ["ClientCore profile", "Performance LearningSignals", "Pillar coverage history"],
+      "outputs": ["Opportunity", "Plan", "RecordingPack", "18-Block Assembled Prompts"],
+      "currentCapabilities": ["Pattern Registries", "Format Taxonomies", "Prompt Assembly", "Opportunity Scoring (Working Candidate)"],
+      "targetCapabilities": ["Continuous Autonomous Niche Opportunity Scanning", "Dynamic Real-Time Telemetry Learning Loops"],
+      "connections": ["Feeds Plan & Strategy to LIENZO", "Supplies Prompts to HE recording sessions", "Receives feedback from METRICS"],
+      "eventFootprint": ["YOD_OPPORTUNITY_GENERATED", "YOD_PLAN_CREATED", "YOD_LEARNING_APPLIED"],
+      "artifactFootprint": ["RecordingPack", "PromptBundle"],
+      "exampleFlow": "Client Core criteria evaluated -> Coverage gap detected -> Opportunity generated -> Plan formulated -> Recording pack compiled for Founder Studio.",
+      "evidenceRefs": ["release:test-suite", "evidence:yod-runtime-smoke"],
+      "boundedDebt": ["Dynamic multi-client automated clustering scheduled for Phase R3."],
+      "roadmapRefs": ["Gate P1 (Foundations)", "Gate R3 (YOD Runtime)"]
     },
     {
       "id": "LIENZO",
       "name": "Lienzo",
       "domain": "Identity",
       "role": "Persistent Content Identity & Authoring Canvas",
-      "responsibility": "Provides persistent, versioned content identity and structured semantic composition as Source of Truth per content piece.",
+      "responsibility": "Provides persistent, editable, versioned Source of Truth per content piece with full before/after revision history.",
       "status": "CONTRACT_ONLY",
-      "statusDetail": "Canonical schema and authoring contracts frozen."
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": "Canonical schema and authoring contracts frozen in RC1; CAS store and Impact Engine verified in post-RC1 working candidate.",
+      "shortDefinition": "The persistent, editable, versioned Source of Truth for one content piece across its entire lifecycle.",
+      "why": "Guarantees that a piece of content preserves its unique identity across plans, raw takes, edits, renders, and publications without state drift.",
+      "owns": [
+        "Unique content identity (contentId)",
+        "Component DAG & Layer separation (STRATEGY, PLANNED, OBSERVED, RESOLVED, PRODUCTION)",
+        "Revision CAS & exclusive locking",
+        "Component version increments (v+1) on update",
+        "Impact Engine & OUT_OF_SYNC dependency invalidation",
+        "Traceable before/after revision history"
+      ],
+      "doesNotOwn": [
+        "Does NOT own global audience intelligence (Yod owns this)",
+        "Does NOT own human team assignments or blocker status (He owns this)",
+        "Does NOT own video rendering execution (VAV owns this)"
+      ],
+      "inputs": ["Strategic beats from YOD", "Resolved segments from SHIM", "Production artifacts from VAV"],
+      "outputs": ["LienzoRevision", "ImpactReport", "Synchronized Content State"],
+      "currentCapabilities": ["Canonical Lifecycle Contracts", "Component Layer Specifications", "Dependency Graph Definitions", "Revision CAS (Working Candidate)"],
+      "targetCapabilities": ["Multi-User Live Collaborative Cursors", "Opaque Multi-Tenant Cloud Store"],
+      "connections": ["Receives Strategy from YOD", "Exposes state to HE", "Receives observation from SHIM", "Feeds production to VAV"],
+      "eventFootprint": ["LIENZO_CREATED", "LIENZO_COMPONENT_UPDATED", "LIENZO_IMPACT_DETECTED", "LIENZO_REVISION_COMMITTED"],
+      "artifactFootprint": ["LienzoStateSnapshot", "LienzoRevisionHistory"],
+      "exampleFlow": "YOD plan initializes Lienzo rev 1 -> SHIM resolves takes to rev 2 -> VAV cut attached to rev 3 -> Upstream edit triggers OUT_OF_SYNC impact on rev 4.",
+      "evidenceRefs": ["release:test-suite", "evidence:lienzo-domain-core"],
+      "boundedDebt": ["Collaborative real-time CRDT synchronization planned for Phase R5."],
+      "roadmapRefs": ["Gate P1 (Contracts)", "Gate R1 (Lienzo Core)"]
     },
     {
       "id": "HE",
@@ -40,7 +98,34 @@
       "role": "Operations Core, Tasks, Teams & Workflows",
       "responsibility": "Manages tasks, assignments, dependencies, operational blockers, Kanban projections, production calendars, recording sessions, approvals, time tracking, and notification center.",
       "status": "VERIFIED_LOCAL",
-      "statusDetail": "Operations Core, Persistent Store, Product UI, Time Tracking, and Notifications verified."
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": "Operations Core, Persistent Store, Product UI (Solo Queue, Kanban, Calendar, Deadlines, Recordings, Time Tracking, Notifications) verified in released RC1.",
+      "shortDefinition": "The operational window and governance core orchestrating human teams and production workflows.",
+      "why": "Provides strict RBAC, deadline enforcement, blocker resolution trees, and multi-role review governance for media execution.",
+      "owns": [
+        "Tasks, assignments & Kanban state projections",
+        "Typed blocker dependencies & resolution trees",
+        "Recording sessions & talent booking calendar",
+        "Multi-role approval gates & edit locks",
+        "Time tracking & stopwatch telemetry",
+        "Notification center & activity ledgers"
+      ],
+      "doesNotOwn": [
+        "Does NOT own YOD criteria or strategic intelligence",
+        "Does NOT own Lienzo content state (He projects and operates it)",
+        "Does NOT own Publishing distribution targets or Metrics evidence"
+      ],
+      "inputs": ["Lienzo state projections", "Team availability", "Talent booking requirements"],
+      "outputs": ["TaskState", "ApprovalDecision", "RecordingSession", "NotificationEvent"],
+      "currentCapabilities": ["Solo Queue", "Kanban View", "Multi-Month Calendar", "Recording Session Booking", "Time Tracking", "Notifications Center"],
+      "targetCapabilities": ["Predictive Workload Balancing", "Automated Deadline Risk Warning"],
+      "connections": ["Projects tasks for LIENZO pieces", "Dispatches edit locks to VAV", "Displays PUBLISHING & METRICS status"],
+      "eventFootprint": ["TASK_CREATED", "TASK_STATUS_CHANGED", "APPROVAL_GRANTED", "RECORDING_SESSION_SCHEDULED"],
+      "artifactFootprint": ["TaskLedgerSnapshot", "OperationsAuditExport"],
+      "exampleFlow": "Lienzo recording requirement creates Task -> Talent assigned -> Session scheduled on Calendar -> Recording complete -> Approval gate triggered.",
+      "evidenceRefs": ["release:test-suite", "release:health-foundation", "evidence:he-operations-desk"],
+      "boundedDebt": ["Full multi-team permission federation planned for Phase R7."],
+      "roadmapRefs": ["Gate P2 (He Core)", "Gate P3A (He UI)", "Gate P3B (Time & Notifications)"]
     },
     {
       "id": "SHIM",
@@ -49,7 +134,33 @@
       "role": "Real-Source Observation & Candidate Resolution",
       "responsibility": "Observes real media sources, performs checksum verification, resolves candidate assets, and ensures evidence integrity.",
       "status": "CONTRACT_ONLY",
-      "statusDetail": "Storage and asset candidate observation contract frozen."
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": "Storage and asset candidate observation contract frozen in RC1; observation and gap detection verified in post-RC1 working candidate.",
+      "shortDefinition": "The reality threshold separating planned intent from observed and resolved source footage.",
+      "why": "Ensures that the production pipeline never fabricates missing footage—detecting gaps truthfully and routing them to pickup sessions.",
+      "owns": [
+        "Raw media ingest & SHA-256 verification",
+        "Speech-to-text transcript timestamp alignment",
+        "Coverage matching against planned beats",
+        "Truthful gap detection (FOUND vs MISSING)",
+        "Explicit editor beat resolution locking"
+      ],
+      "doesNotOwn": [
+        "Does NOT invent missing content or hallucinate takes",
+        "Does NOT own strategic hook planning (YOD owns this)",
+        "Does NOT own master video cutting (VAV owns this)"
+      ],
+      "inputs": ["Raw audio/video takes", "Transcript segments", "Planned beats from Lienzo"],
+      "outputs": ["ObservationReport", "GapEvent", "ResolvedLayer"],
+      "currentCapabilities": ["Checksum Contracts", "Candidate Asset Verification", "Gap Detection (Working Candidate)"],
+      "targetCapabilities": ["Real-Time Multitrack Audio Ingest", "Automated Visual B-Roll Matching"],
+      "connections": ["Receives raw media from INTAKE", "Compares against PLANNED Lienzo layer", "Emits gaps to HE", "Feeds RESOLVED to VAV"],
+      "eventFootprint": ["SHIM_SOURCE_INGESTED", "SHIM_GAP_DETECTED", "SHIM_BEATS_RESOLVED"],
+      "artifactFootprint": ["ObservationManifest", "ResolvedBeatMap"],
+      "exampleFlow": "Raw take ingested -> Transcript aligned -> Beat 1 & 2 FOUND, Beat 3 MISSING -> Gap event emitted -> Pickup recorded -> Beat 3 resolved.",
+      "evidenceRefs": ["release:test-suite", "evidence:shim-observation-core"],
+      "boundedDebt": ["Acoustic waveform fingerprinting scheduled for Phase R6."],
+      "roadmapRefs": ["Gate P1 (Contracts)", "Gate R5 (Shim Core)"]
     },
     {
       "id": "VAV",
@@ -58,7 +169,33 @@
       "role": "Audiovisual Synthesis, Cuts & Motions Engine",
       "responsibility": "Executes non-destructive multi-segment cutting via local FFmpeg, frame-accurate Remotion motion compositions, caption compilation, and platform safe-zone validations.",
       "status": "VERIFIED_LOCAL",
-      "statusDetail": "Cut Engine, Motion Engine, Remotion Composition, and Platform Safe Zones verified."
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": "Cut Engine, Motion Engine, Remotion Composition, and Platform Safe Zones verified in released RC1.",
+      "shortDefinition": "The deterministic audiovisual embodiment forge where structured intent becomes master video.",
+      "why": "Replaces slow manual timeline editing with programmatic, non-destructive, frame-accurate FFmpeg cuts and Remotion motion graphics.",
+      "owns": [
+        "Non-destructive multi-segment video timeline assembly",
+        "Lossless master stream isolation & FFmpeg execution",
+        "Kinetic motion graphics & typography composition",
+        "Platform 9:16 safe-zone collision avoidance",
+        "Frame-accurate Remotion rendering"
+      ],
+      "doesNotOwn": [
+        "Does NOT own content strategy (YOD owns this)",
+        "Does NOT own content identity (Lienzo owns this)",
+        "Does NOT own editorial approval decisions (He owns this)"
+      ],
+      "inputs": ["Resolved beat timestamps from SHIM", "Typography style rules", "Motion preset definitions"],
+      "outputs": ["CutArtifact", "CaptionArtifact", "MotionArtifact", "MasterVideoMP4"],
+      "currentCapabilities": ["Local FFmpeg Cut Engine", "Remotion Render Engine", "13 Motion Graphic Families", "Platform Safe-Zone Matrix"],
+      "targetCapabilities": ["Distributed GPU Acceleration", "Dynamic Sound Design Synthesizer"],
+      "connections": ["Receives RESOLVED layer from LIENZO", "Operates under edit locks from HE", "Delivers master media to PUBLISHING"],
+      "eventFootprint": ["VAV_CUT_JOB_COMPLETED", "VAV_CAPTION_JOB_COMPLETED", "VAV_MOTION_JOB_COMPLETED"],
+      "artifactFootprint": ["RenderedCutVideo", "RemotionMotionStill", "MasterVideoArtifact"],
+      "exampleFlow": "Resolved timestamps received -> FFmpeg cuts jump-points -> Safe-zone captions styled -> Remotion motion rendered -> Master video outputted.",
+      "evidenceRefs": ["release:test-suite", "release:health-cuts", "release:health-motions", "evidence:cuts-ffmpeg-local", "evidence:vav-motion-remotion-render"],
+      "boundedDebt": ["Direct hardware NVENC encoding pipeline planned for Phase R8."],
+      "roadmapRefs": ["Gate P1 (VAV AV Core)"]
     },
     {
       "id": "ARQUITECTO",
@@ -67,7 +204,33 @@
       "role": "Contextual Guidance & Knowledge Projection",
       "responsibility": "Consumes Yod criteria and system state to provide architectural guidance; powers the deterministic Public Architect V1 responder.",
       "status": "PARTIAL_FOUNDATION",
-      "statusDetail": "Public Architect V1 guide verified locally; private reasoning runtime in specification."
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": "Public Architect V1 guide verified in released RC1; contextual recording/production coaching verified in post-RC1 candidate.",
+      "shortDefinition": "The contextual awareness lens observing system state and providing real-time operator guidance.",
+      "why": "Eliminates operational confusion by determining exact missing assets, explaining why blockers exist, and guiding next actions.",
+      "owns": [
+        "Deterministic public knowledge query resolution",
+        "Contextual stage diagnosis & next action guidance",
+        "Recording coach advice (framing, intention, pickup tips)",
+        "Production coach advice (NLE color/mastering notes)",
+        "QA compliance checking against brand criteria"
+      ],
+      "doesNotOwn": [
+        "Does NOT own a second copy of YOD criteria or Client Core",
+        "Does NOT directly mutate Lienzo without human/service authorization",
+        "Does NOT own task assignments (He owns this)"
+      ],
+      "inputs": ["User role", "Current route", "Lienzo lifecycle state", "Shim gap events", "Public knowledge"],
+      "outputs": ["ContextAnalysis", "RecordingGuidance", "PublicArchitectAnswer"],
+      "currentCapabilities": ["Public Architect V1 Deterministic Responder", "Word-Boundary Intent Matching", "Contextual Coaching (Working Candidate)"],
+      "targetCapabilities": ["Proactive Contextual Pipeline Copilot", "Cross-NLE Timeline Guidance"],
+      "connections": ["Observes YOD, LIENZO, HE, SHIM, VAV", "Guides user in Studio & Editor desks"],
+      "eventFootprint": ["ARQUITECTO_GUIDANCE_DISPATCHED", "PUBLIC_ARCHITECT_QUERY_RESOLVED"],
+      "artifactFootprint": ["ContextGuidanceSnapshot"],
+      "exampleFlow": "Query submitted to Public Architect -> Token boundary matched -> Verified answer returned -> 3D camera focuses matching chamber.",
+      "evidenceRefs": ["release:test-suite", "evidence:public-architect-v1"],
+      "boundedDebt": ["Autonomous voice coaching integration scheduled for Phase R9."],
+      "roadmapRefs": ["Gate P4 (Public Status & Architect)", "Gate R7 (Arquitecto Runtime)"]
     },
     {
       "id": "PIPELINE_ENGINE",
@@ -76,7 +239,31 @@
       "role": "Batch Orchestration & Stage Execution",
       "responsibility": "Coordinates multi-stage asset generation, offline compilation, and rendering pipelines.",
       "status": "PLANNED",
-      "statusDetail": "Batch execution specification scheduled for future gate."
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": "Batch execution specification scheduled in RC1; deterministic DAG orchestrator verified in post-RC1 working candidate.",
+      "shortDefinition": "The deterministic DAG orchestrator executing modular content pipelines.",
+      "why": "Enables flexible reordering, node skipping, and cascading failure recovery across multi-stage production workflows.",
+      "owns": [
+        "Pipeline DAG validation & cycle rejection",
+        "Topological node execution",
+        "Conditional node skipping & failure cascade",
+        "Execution result aggregation"
+      ],
+      "doesNotOwn": [
+        "Does NOT own individual module domain logic (modules own their handlers)",
+        "Does NOT own content state (Lienzo owns this)"
+      ],
+      "inputs": ["PipelineDefinition", "ModuleHandlers", "ExecutionContext"],
+      "outputs": ["PipelineExecutionResult", "NodeExecutionLogs"],
+      "currentCapabilities": ["DAG Validation Specifications", "11 Seed Modular Pipeline Blueprints", "DAG Orchestrator (Working Candidate)"],
+      "targetCapabilities": ["Distributed Cluster Job Dispatch", "Dynamic Re-execution on OUT_OF_SYNC"],
+      "connections": ["Connects SHIM, VAV, HE, and PUBLISHING into executable DAGs"],
+      "eventFootprint": ["PIPELINE_EXECUTION_STARTED", "PIPELINE_EXECUTION_COMPLETED", "PIPELINE_NODE_FAILED"],
+      "artifactFootprint": ["PipelineExecutionManifest"],
+      "exampleFlow": "Blueprint selected -> DAG topologically sorted -> Stage 1 executes -> Stage 2 skipped if configured -> Stage 3 completes.",
+      "evidenceRefs": ["release:test-suite", "evidence:pipeline-orchestrator"],
+      "boundedDebt": ["Persistent job queues with automatic worker retry scheduled for Phase R12."],
+      "roadmapRefs": ["Gate P1 (Contracts)", "Gate R9 (Pipeline Engine)"]
     },
     {
       "id": "AI_RUNTIME",
@@ -85,7 +272,31 @@
       "role": "Provider-Agnostic AI Dispatcher",
       "responsibility": "Executes controlled LLM and vision inference across local/hybrid providers with strict prompt boundaries.",
       "status": "PLANNED",
-      "statusDetail": "Provider dispatch interface scheduled for future gate."
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": "Provider dispatch interface scheduled in RC1; LogicProvider and ExternalRoundtripProvider verified in post-RC1 working candidate.",
+      "shortDefinition": "The provider-agnostic inference gateway powering deterministic logic, external LLMs, and vision analysis.",
+      "why": "Decouples ABRAXAS from proprietary AI vendors, supporting local-only execution and human-in-the-loop roundtrips.",
+      "owns": [
+        "Provider capability registration (TEXT, VISION, LOCAL_ONLY)",
+        "Deterministic Logic Provider execution",
+        "External Roundtrip prompt bundle export & response validation",
+        "Provider failover & error containment"
+      ],
+      "doesNotOwn": [
+        "Does NOT silently mutate Lienzo (all mutations require explicit service calls)",
+        "Does NOT own client brand criteria (Yod owns this)"
+      ],
+      "inputs": ["AIJob definition", "Required capabilities", "Prompt bundle"],
+      "outputs": ["AIResult", "Validated structured payload"],
+      "currentCapabilities": ["Provider Interface Contracts", "External Roundtrip TXT Bundle Format", "LogicProvider (Working Candidate)"],
+      "targetCapabilities": ["Local Ollama / Llama.cpp Direct Binding", "Multi-Provider Load Balancing"],
+      "connections": ["Powers YOD prompt synthesis", "Powers Universal Intake topic extraction"],
+      "eventFootprint": ["AI_JOB_SUBMITTED", "AI_JOB_COMPLETED", "AI_ROUNDTRIP_VALIDATED"],
+      "artifactFootprint": ["AIJobExportBundle", "AIResponseArtifact"],
+      "exampleFlow": "Prompt bundle exported to TXT -> Human passes to external LLM -> Response imported -> Schema validated -> Returned to YOD.",
+      "evidenceRefs": ["release:test-suite", "evidence:ai-runtime-service"],
+      "boundedDebt": ["Local GPU embedded quantization runtime planned for Phase R10."],
+      "roadmapRefs": ["Gate P1 (Contracts)", "Gate R8 (AI Runtime)"]
     },
     {
       "id": "PUBLISHING",
@@ -94,7 +305,32 @@
       "role": "Multi-Platform Export & Delivery Gateway",
       "responsibility": "Packages approved master media with platform metadata for distribution.",
       "status": "PLANNED",
-      "statusDetail": "Distribution gateway scheduled for future gate."
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": "Distribution gateway scheduled in RC1; multi-platform target snapshots verified in post-RC1 working candidate.",
+      "shortDefinition": "The multi-channel distribution gateway managing platform targets, schedules, and frozen snapshots.",
+      "why": "Separates master content identity from channel-specific copy, aspect ratios, and distribution schedules.",
+      "owns": [
+        "PublicationTarget definition (Instagram, TikTok, YouTube, LinkedIn)",
+        "Immutable PublicationSnapshot freeze at schedule time",
+        "Platform adapter execution",
+        "Remote post ID recording & sync tracking"
+      ],
+      "doesNotOwn": [
+        "Does NOT own master video rendering (VAV owns this)",
+        "Does NOT own performance analytics (Metrics owns this)",
+        "Does NOT own calendar UI (He owns this)"
+      ],
+      "inputs": ["Approved Master Video Artifact", "Channel copy text", "Schedule timestamp"],
+      "outputs": ["PublicationSnapshot", "RemotePostId", "DispatchConfirmation"],
+      "currentCapabilities": ["Publication Target Contracts", "Snapshot Immutability Specifications", "Snapshot Engine (Working Candidate)"],
+      "targetCapabilities": ["Direct OAuth Platform Dispatch", "Optimal Time Scheduling AI"],
+      "connections": ["Receives Master Video from VAV", "Visible in HE II calendar", "Provides TargetId to METRICS"],
+      "eventFootprint": ["PUBLICATION_TARGET_SCHEDULED", "PUBLICATION_TARGET_PUBLISHED"],
+      "artifactFootprint": ["PublicationSnapshotBundle"],
+      "exampleFlow": "Master video approved -> Publication target created for TikTok -> Copy & media frozen into snapshot -> Dispatch scheduled.",
+      "evidenceRefs": ["release:test-suite", "evidence:publishing-core"],
+      "boundedDebt": ["TikTok/Instagram Direct Content Publishing API integrations scheduled for Phase R11."],
+      "roadmapRefs": ["Gate P1 (Contracts)", "Gate R10 (Publishing Core)"]
     },
     {
       "id": "METRICS",
@@ -103,45 +339,133 @@
       "role": "Distribution Telemetry & Feedback",
       "responsibility": "Collects engagement signals to close the feedback loop back into Yod pattern criteria (target loop).",
       "status": "PLANNED",
-      "statusDetail": "Telemetry feedback scheduled for future gate."
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": "Telemetry feedback scheduled in RC1; 5-score normalization engine verified in post-RC1 working candidate.",
+      "shortDefinition": "The telemetry aggregation engine computing normalized performance scores across platforms.",
+      "why": "Provides empirical evidence of content performance to inform future strategic opportunities without contaminating source truth.",
+      "owns": [
+        "Raw metric ingestion (views, reach, watch time, completion, conversions)",
+        "5-score normalization formulas (Attention, Retention, Engagement, Amplification, Conversion)",
+        "MetricSnapshot immutable recording"
+      ],
+      "doesNotOwn": [
+        "Does NOT own strategic learning hypotheses (Yod owns this)",
+        "Does NOT modify ClientCore approved claims"
+      ],
+      "inputs": ["Raw platform metrics via API or manual JSON"],
+      "outputs": ["MetricSnapshot", "NormalizedMetrics (5 Scores)"],
+      "currentCapabilities": ["Normalization Formula Specifications", "Metric Snapshot Schema", "5-Score Normalizer (Working Candidate)"],
+      "targetCapabilities": ["Automated Social Platform Webhooks", "Real-Time Retention Curve Analysis"],
+      "connections": ["Receives TargetId from PUBLISHING", "Feeds NormalizedMetrics into YOD Learning"],
+      "eventFootprint": ["METRIC_SNAPSHOT_INGESTED", "METRICS_NORMALIZED"],
+      "artifactFootprint": ["MetricSnapshotRecord"],
+      "exampleFlow": "Platform views and retention ingested -> Normalized to 5 standard scores -> LearningSignal generated -> Fed to YOD.",
+      "evidenceRefs": ["release:test-suite", "evidence:metrics-engine"],
+      "boundedDebt": ["Platform API automated webhook aggregators scheduled for Phase R11."],
+      "roadmapRefs": ["Gate P1 (Contracts)", "Gate R11 (Metrics & Learning)"]
+    },
+    {
+      "id": "UNIVERSAL_INTAKE",
+      "name": "Universal Intake",
+      "domain": "Infrastructure",
+      "role": "Document & Media Ingestion Gateway",
+      "responsibility": "Parses structured documents and registers opaque binary media assets with SHA-256 verification.",
+      "status": "PLANNED",
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": "Universal ingest pipeline scheduled in RC1; structured parsing and media registration verified in post-RC1 candidate.",
+      "shortDefinition": "The universal ingestion port for text, structured data, and binary media.",
+      "why": "Allows external client documents, transcripts, and camera takes to enter ABRAXAS cleanly with cryptographic provenance.",
+      "owns": [
+        "Document parsing for TXT, Markdown, JSON, CSV",
+        "Opaque media registration (MP4, MOV, WAV, PNG, PDF)",
+        "SHA-256 checksum generation & ArtifactRegistry registration"
+      ],
+      "doesNotOwn": [
+        "Does NOT interpret speech audio directly (Shim aligns transcripts)",
+        "Does NOT mutate content state directly"
+      ],
+      "inputs": ["Raw files from disk, uploads, or external tools"],
+      "outputs": ["ParsedDocument", "MediaIntakeArtifact"],
+      "currentCapabilities": ["Text/CSV/JSON Ingestion Logic", "Binary Media Hashing Specifications", "Intake Service (Working Candidate)"],
+      "targetCapabilities": ["Automated Transcoding & Fast Proxy Generation", "Cloud S3 Bucket Watchers"],
+      "connections": ["Feeds raw media to SHIM", "Feeds client briefs to YOD"],
+      "eventFootprint": ["MEDIA_INTAKE_REGISTERED", "DOCUMENT_PARSED"],
+      "artifactFootprint": ["RawMediaArtifact"],
+      "exampleFlow": "Video take dropped in intake -> SHA-256 calculated -> Registered in ArtifactRegistry -> Handed to Shim for observation.",
+      "evidenceRefs": ["release:test-suite", "evidence:universal-intake"],
+      "boundedDebt": ["Hardware-accelerated parallel proxy generation scheduled for Phase R13."],
+      "roadmapRefs": ["Gate P1 (Contracts)", "Gate R8 (Intake Core)"]
+    },
+    {
+      "id": "EVENTS",
+      "name": "Event Ledger",
+      "domain": "Provenance",
+      "role": "Immutable System Activity Stream",
+      "responsibility": "Maintains an append-only, chronologically ordered ledger of all system transitions.",
+      "status": "CONTRACT_ONLY",
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": "Event schema and backbone ledger contracts frozen in RC1; append-only ledger verified in post-RC1 working candidate.",
+      "shortDefinition": "The chronological append-only record of every meaningful system transition.",
+      "why": "Provides complete forensic auditability—who changed what, when, and why across all modules.",
+      "owns": [
+        "Append-only event serialization",
+        "Deterministic event querying by contentId, actorId, taskId, or eventType"
+      ],
+      "doesNotOwn": [
+        "Does NOT replace Lienzo as the source of truth for content state"
+      ],
+      "inputs": ["Typed events from all domain services"],
+      "outputs": ["Immutable Event Log", "Activity Streams"],
+      "currentCapabilities": ["Event Schema Specifications", "Ledger Append Interfaces", "EventLedger Core (Working Candidate)"],
+      "targetCapabilities": ["Distributed Event Streaming", "Real-Time WebSocket Subscription Relay"],
+      "connections": ["Cross-cuts all modules (YOD, LIENZO, HE, SHIM, VAV, PUBLISHING, METRICS)"],
+      "eventFootprint": ["EVENT_APPENDED"],
+      "artifactFootprint": ["EventLedgerArchive"],
+      "exampleFlow": "Domain transition occurs -> Event payload signed -> Appended to ledger -> Available for audit trail.",
+      "evidenceRefs": ["release:test-suite", "evidence:event-ledger-backbone"],
+      "boundedDebt": ["Decentralized append-only ledger verification planned for Phase R14."],
+      "roadmapRefs": ["Gate P1 (Contracts)", "Gate R2 (Canonical Backbone)"]
+    },
+    {
+      "id": "ARTIFACTS",
+      "name": "Artifact Registry",
+      "domain": "Provenance",
+      "role": "Cryptographic Asset & Output Catalog",
+      "responsibility": "Catalogs all meaningful digital outputs with unique IDs, SHA-256 hashes, and recursive lineage.",
+      "status": "CONTRACT_ONLY",
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": "Artifact schema and lineage tracking contracts frozen in RC1; recursive lineage traversal verified in post-RC1 working candidate.",
+      "shortDefinition": "The immutable catalog of all produced digital assets and their derivation lineage.",
+      "why": "Eliminates orphan files and broken renders by tracking exact SHA-256 hashes and basedOn ancestry.",
+      "owns": [
+        "Artifact registration with SHA-256 checksums",
+        "Recursive lineage traversal (getLineage)",
+        "Lifecycle status tracking (ACTIVE, SUPERSEDED, DEPRECATED, ERROR)"
+      ],
+      "doesNotOwn": [
+        "Does NOT store raw binary payloads in JSON state"
+      ],
+      "inputs": ["Media URIs", "Computed SHA-256 hashes", "Ancestor artifact IDs"],
+      "outputs": ["ArtifactRecord", "ArtifactLineageTree"],
+      "currentCapabilities": ["Artifact Schema Specifications", "Recursive Lineage Interfaces", "ArtifactRegistry Core (Working Candidate)"],
+      "targetCapabilities": ["Automated S3 Object Storage Deduplication", "Zero-Copy Asset Relinking"],
+      "connections": ["Referenced by LIENZO components, VAV outputs, and PUBLISHING targets"],
+      "eventFootprint": ["ARTIFACT_REGISTERED", "ARTIFACT_STATUS_CHANGED"],
+      "artifactFootprint": ["ArtifactRegistrySnapshot"],
+      "exampleFlow": "Cut render finishes -> SHA-256 computed -> Registered with basedOn pointing to SourceAsset -> Attached to Lienzo.",
+      "evidenceRefs": ["release:test-suite", "evidence:artifact-registry-backbone"],
+      "boundedDebt": ["Automatic multi-region S3 artifact replication scheduled for Phase R14."],
+      "roadmapRefs": ["Gate P1 (Contracts)", "Gate R2 (Canonical Backbone)"]
     }
   ],
   "relationships": [
-    {
-      "from": "YOD",
-      "to": "LIENZO",
-      "description": "Provides content patterns, hooks, and forensic criteria for authoring."
-    },
-    {
-      "from": "LIENZO",
-      "to": "HE",
-      "description": "Supplies structured scenes and components requiring production tasks and approvals."
-    },
-    {
-      "from": "HE",
-      "to": "VAV",
-      "description": "Dispatches approved tasks and edit locks to render cut and motion deliverables."
-    },
-    {
-      "from": "SHIM",
-      "to": "LIENZO",
-      "description": "Observes real media assets and binds candidate files to scene components."
-    },
-    {
-      "from": "VAV",
-      "to": "PUBLISHING",
-      "description": "Delivers rendered video files and compiled captions for packaging."
-    },
-    {
-      "from": "METRICS",
-      "to": "YOD",
-      "description": "Feeds platform performance telemetry back into criteria registries (Target Loop)."
-    },
-    {
-      "from": "YOD",
-      "to": "ARQUITECTO",
-      "description": "Supplies criteria and system contracts to architectural guidance models."
-    }
+    { "from": "YOD", "to": "LIENZO", "description": "Provides content patterns, hooks, and strategic criteria for authoring." },
+    { "from": "LIENZO", "to": "HE", "description": "Supplies structured scenes and components requiring production tasks and approvals." },
+    { "from": "HE", "to": "VAV", "description": "Dispatches approved tasks and edit locks to render cut and motion deliverables." },
+    { "from": "SHIM", "to": "LIENZO", "description": "Observes real media assets and resolves candidate segments to scene components." },
+    { "from": "VAV", "to": "PUBLISHING", "description": "Delivers rendered video files and compiled captions for packaging." },
+    { "from": "METRICS", "to": "YOD", "description": "Feeds platform performance telemetry back into criteria registries (Target Loop)." },
+    { "from": "YOD", "to": "ARQUITECTO", "description": "Supplies criteria and system contracts to architectural guidance models." }
   ],
   "qaPairs": [
     {
@@ -162,8 +486,8 @@
       "id": "what-is-lienzo",
       "questionEn": "What is Lienzo?",
       "questionEs": "¿Qué es Lienzo?",
-      "answerEn": "Lienzo is the persistent authoring identity canvas serving as the immutable Source of Truth for scene structures and creative components.",
-      "answerEs": "Lienzo es el lienzo de identidad de autoría persistente que sirve como Fuente de Verdad inmutable para estructuras de escenas y componentes creativos."
+      "answerEn": "Lienzo is the persistent, editable, versioned Source of Truth for scene structures, component DAGs, and traceable revision history per content piece.",
+      "answerEs": "Lienzo es la Fuente de Verdad persistente, editable y versionada para estructuras de escenas, grafos de componentes e historial de revisiones trazable por pieza de contenido."
     },
     {
       "id": "what-is-he",
@@ -176,8 +500,8 @@
       "id": "what-is-shim",
       "questionEn": "What is Shim?",
       "questionEs": "¿Qué es Shim?",
-      "answerEn": "Shim observes real external media sources and verifies checksums and candidate assets for safe pipeline consumption.",
-      "answerEs": "Shim observa fuentes de medios externos reales y verifica sumas de comprobación y activos candidatos para un consumo seguro en el pipeline."
+      "answerEn": "Shim observes real external media sources, aligns transcripts, and truthfully detects missing beats as gaps rather than hallucinating content.",
+      "answerEs": "Shim observa fuentes de medios externos reales, alinea transcripciones y detecta con veracidad las tomas faltantes como brechas en lugar de inventar contenido."
     },
     {
       "id": "what-is-vav",
@@ -204,8 +528,8 @@
       "id": "what-works-now",
       "questionEn": "What works now in ABRAXAS OS?",
       "questionEs": "¿Qué funciona actualmente en ABRAXAS OS?",
-      "answerEn": "Currently verified local: VAV non-destructive cuts & Remotion motions, He Operations Core & Product UI (Solo Queue, Kanban, Calendar, Deadlines, Recordings, Time Tracking, Notifications), and Public Status V2 / Public Architect V1.",
-      "answerEs": "Actualmente verificado localmente: cortes no destructivos y movimiento Remotion de VAV, Núcleo Operativo e Interfaz de He (Solo Queue, Kanban, Calendario, Deadlines, Grabaciones, Registro de Tiempo, Notificaciones) y Estado Público V2 / Arquitecto Público V1."
+      "answerEn": "Currently verified in released v1.0.0-rc1: VAV non-destructive cuts & Remotion motions, He Operations Core & Product UI, and Public Status V2 / Public Architect V1. Post-RC1 working candidate features (Lienzo CAS, Shim observation, YOD runtime, Pipeline DAG) are verified locally under ongoing development.",
+      "answerEs": "Actualmente verificado en el release v1.0.0-rc1: cortes no destructivos y movimiento Remotion de VAV, Núcleo Operativo e Interfaz de He, y Estado Público V2 / Arquitecto Público V1. Las funciones de candidato de trabajo post-RC1 (CAS de Lienzo, observación de Shim, runtime de YOD, DAG de Pipeline) están verificadas localmente bajo desarrollo continuo."
     },
     {
       "id": "how-he-and-vav-relate",

@@ -1,0 +1,98 @@
+{
+  "registryClassification": "PUBLIC_EVIDENCE_REGISTRY",
+  "version": 3,
+  "lastAudited": "2026-08-31T08:58:00Z",
+  "items": [
+    {
+      "evidenceId": "release:v1.0.0-rc1-baseline",
+      "title": "ABRAXAS OS v1.0.0-rc1 Frozen Release Baseline",
+      "type": "RELEASE_METADATA",
+      "truthLayer": "RELEASED_CURRENT",
+      "whatItProves": "Official frozen release baseline tag v1.0.0-rc1 establishing canonical He Operations Core, VAV Captions Desktop, Cuts Foundation, and Visual Motions Foundation.",
+      "releaseVersion": "v1.0.0-rc1",
+      "sha": "91234741f0b3a1ac5bd7e4c0556fafa868d00769",
+      "healthStatus": "PASS",
+      "publicSafe": true
+    },
+    {
+      "evidenceId": "working-tree:current-regression",
+      "title": "Current Working Tree Continuous Regression Suite",
+      "type": "REGRESSION_VERIFICATION",
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "whatItProves": "Live local regression proving 86 test files, 226 unit/integration tests passing 100%, and zero TypeScript typecheck errors across all core packages.",
+      "testCount": 226,
+      "healthStatus": "PASS",
+      "publicSafe": true
+    },
+    {
+      "evidenceId": "evidence:he-operations-desk",
+      "title": "He Operations Core & Full Desk UI",
+      "type": "PRODUCT_RUNTIME",
+      "truthLayer": "RELEASED_CURRENT",
+      "whatItProves": "Solo Queue, Kanban board, multi-month calendar, deadline enforcement, talent booking, stopwatch time tracking, and notification routing.",
+      "releaseVersion": "v1.0.0-rc1",
+      "mediaPath": "media/screenshots/p4-closer-look-he.png",
+      "healthStatus": "PASS",
+      "publicSafe": true
+    },
+    {
+      "evidenceId": "evidence:cuts-ffmpeg-local",
+      "title": "VAV Non-Destructive FFmpeg Cut Engine",
+      "type": "AUDIOVISUAL_ENGINE",
+      "truthLayer": "RELEASED_CURRENT",
+      "whatItProves": "Lossless jump-cut assembly from resolved timestamps via local FFmpeg binary with frame-accurate PTS synchronization.",
+      "releaseVersion": "v1.0.0-rc1",
+      "healthStatus": "PASS",
+      "publicSafe": true
+    },
+    {
+      "evidenceId": "evidence:vav-motion-remotion-render",
+      "title": "VAV Visual Motion Engine & Remotion Compositions",
+      "type": "AUDIOVISUAL_ENGINE",
+      "truthLayer": "RELEASED_CURRENT",
+      "whatItProves": "13 programmatic visual motion families, platform 9:16 safe-zone collision avoidance, and frame-accurate Remotion compositions.",
+      "releaseVersion": "v1.0.0-rc1",
+      "mediaPath": "media/screenshots/p4-story-vav.png",
+      "healthStatus": "PASS",
+      "publicSafe": true
+    },
+    {
+      "evidenceId": "evidence:public-architect-v1",
+      "title": "Public Architect V1 Query Resolver",
+      "type": "SYSTEM_GUIDANCE",
+      "truthLayer": "RELEASED_CURRENT",
+      "whatItProves": "Deterministic word-boundary intent engine resolving architectural queries in EN/ES without cloud vendor dependency.",
+      "releaseVersion": "v1.0.0-rc1",
+      "mediaPath": "media/screenshots/p4-public-architect-he-vav.png",
+      "healthStatus": "PASS",
+      "publicSafe": true
+    },
+    {
+      "evidenceId": "evidence:lienzo-domain-core",
+      "title": "Lienzo Persistent Content Identity & CAS Store",
+      "type": "WORKING_CANDIDATE",
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "whatItProves": "Persistent contentId continuity, component DAG layer separation, content addressable revision history, and OUT_OF_SYNC dependency invalidation.",
+      "healthStatus": "PASS",
+      "publicSafe": true
+    },
+    {
+      "evidenceId": "evidence:shim-observation-core",
+      "title": "Shim Real-Source Observation & Gap Detection",
+      "type": "WORKING_CANDIDATE",
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "whatItProves": "SHA-256 media intake verification, speech-to-text transcript alignment against planned beats, and truthful gap detection (FOUND vs MISSING).",
+      "healthStatus": "PASS",
+      "publicSafe": true
+    },
+    {
+      "evidenceId": "evidence:pipeline-orchestrator",
+      "title": "Deterministic Pipeline DAG Orchestrator",
+      "type": "WORKING_CANDIDATE",
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "whatItProves": "Cycle-free topological sort execution across 11 modular seed blueprints with human gates and alternative input routing.",
+      "healthStatus": "PASS",
+      "publicSafe": true
+    }
+  ]
+}

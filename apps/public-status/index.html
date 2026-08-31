@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABRAXAS OS — Public Status V3</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <!-- Persistent 3D Spatial Canvas Background -->
+  <div id="spatial-canvas-container" aria-hidden="true"></div>
+
+  <!-- Projected 3D Spatial Labels Overlay -->
+  <div id="spatial-labels-overlay" aria-hidden="true"></div>
+
+  <!-- Fallback Static SVG Schematic (Visible automatically if WebGL disabled) -->
+  <div id="fallback-schematic-container" style="display:none;" aria-label="Static System Architecture Schematic">
+    <div class="fallback-card">
+      <span class="fallback-badge">STATIC ARCHITECTURE EDITION</span>
+      <h2 class="fallback-title">ABRAXAS Spatial Pyramid</h2>
+      <svg viewBox="0 0 100 80" class="fallback-pyramid-svg">
+        <polygon points="50,10 15,70 85,70" fill="none" stroke="#38bdf8" stroke-width="1.8"/>
+        <line x1="50" y1="10" x2="50" y2="70" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <circle cx="50" cy="14" r="3.5" fill="#38bdf8"/>
+        <circle cx="62" cy="28" r="3.5" fill="#10b981"/>
+        <circle cx="50" cy="40" r="4.0" fill="#818cf8"/>
+        <circle cx="38" cy="48" r="3.5" fill="#a78bfa"/>
+        <circle cx="50" cy="58" r="3.5" fill="#f59e0b"/>
+        <circle cx="65" cy="65" r="3.5" fill="#10b981"/>
+      </svg>
+      <div class="fallback-legend">
+        <span>&bull; YOD: Intelligence Apex</span>
+        <span>&bull; HE I: Intent Window</span>
+        <span>&bull; LIENZO: Identity Spine</span>
+        <span>&bull; SHIM: Reality Chamber</span>
+        <span>&bull; VAV: Production Forge</span>
+        <span>&bull; HE II: Manifestation Window</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="app-layout">
+    <!-- Sticky Header -->
+    <header class="site-header" role="banner">
+      <div class="brand-box">
+        <span class="brand-title">ABRAXAS OS</span>
+        <span class="release-pill">v1.0.0-rc1 RELEASED</span>
+      </div>
+
+      <nav class="mode-switcher" aria-label="Experience Mode Navigation" role="tablist">
+        <button class="mode-tab-btn active-mode" data-mode="STORY" role="tab" aria-selected="true">STORY</button>
+        <button class="mode-tab-btn" data-mode="SYSTEM" role="tab" aria-selected="false">SYSTEM</button>
+        <button class="mode-tab-btn" data-mode="FLOW" role="tab" aria-selected="false">FLOW</button>
+        <button class="mode-tab-btn" data-mode="PROOF" role="tab" aria-selected="false">PROOF</button>
+      </nav>
+    </header>
+
+    <!-- MODE 1: STORY VIEW -->
+    <main id="mode-view-story" class="mode-view-container" role="tabpanel">
+      <section class="hero-section">
+        <div class="hero-editorial-lead">
+          <span class="hero-tag">PUBLIC STATUS V3 &bull; SPATIAL PYRAMID</span>
+          <h1 class="hero-headline">The Operating System for Systematic Content.</h1>
+          <p class="hero-lead">Unifying content intelligence, operational workflow governance, and deterministic video synthesis into a closed-loop content lifecycle.</p>
+          <div class="hero-actions">
+            <a href="#story-scroll" class="btn-primary">Explore The Journey</a>
+            <button class="btn-secondary" onclick="window.location.hash='#proof'">Verified Evidence</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="story-scroll" class="story-scroll-container">
+        <!-- S0: Genesis -->
+        <article class="story-chapter-editorial chapter-statement active-chapter" data-state="0" aria-current="step">
+          <span class="chapter-number">0. GENESIS</span>
+          <h2 class="chapter-title">The Master Architecture</h2>
+          <p class="chapter-desc">ABRAXAS OS is an integrated operating system uniting content intelligence (YOD), operational governance (He), and deterministic audiovisual synthesis (VAV).</p>
+        </article>
+
+        <!-- S1: Overview -->
+        <article class="story-chapter-editorial chapter-callout" data-state="1">
+          <span class="chapter-number">1. TOPOLOGY</span>
+          <h2 class="chapter-title">The Spatial Pyramid</h2>
+          <p class="chapter-desc">A non-linear semantic spatial architecture where every chamber embodies strict domain ownership. Travel through the structure to witness how intent becomes frames.</p>
+        </article>
+
+        <!-- S2: YOD -->
+        <article class="story-chapter-editorial chapter-left-annotation" data-state="2">
+          <span class="chapter-number">2. INTELLIGENCE</span>
+          <h2 class="chapter-title">YOD — Intelligence Apex</h2>
+          <p class="chapter-desc">Before content is recorded, ABRAXAS decides why it should exist. YOD extracts forensic criteria, brand voice pillars, and audience opportunity hooks.</p>
+        </article>
+
+        <!-- S3: HE I -->
+        <article class="story-chapter-editorial chapter-callout" data-state="3">
+          <span class="chapter-number">3. INTENT</span>
+          <h2 class="chapter-title">HE I — Window of Intent</h2>
+          <p class="chapter-desc">Pre-production operational visibility. He orchestrates recording sessions, prompt packs, talent calendar, and pre-flight approvals without owning strategic truth.</p>
+        </article>
+
+        <!-- S4: LIENZO -->
+        <article class="story-chapter-editorial chapter-right-split" data-state="4">
+          <span class="chapter-number">4. IDENTITY</span>
+          <h2 class="chapter-title">LIENZO — Persistent Identity Spine</h2>
+          <p class="chapter-desc">One content piece. One persistent, editable, versioned identity. The crystalline central axis preserves traceable lineage across every revision, draft, cut, and target.</p>
+        </article>
+
+        <!-- S5: SHIM -->
+        <article class="story-chapter-editorial chapter-right-split" data-state="5">
+          <span class="chapter-number">5. REALITY</span>
+          <h2 class="chapter-title">SHIM — The Reality Chamber</h2>
+          <p class="chapter-desc">The plan is not the recording. Shim observes real takes, aligns transcripts, and truthfully detects missing beats as gaps rather than hallucinating content.</p>
+        </article>
+
+        <!-- S6: VAV -->
+        <article class="story-chapter-editorial chapter-statement" data-state="6">
+          <span class="chapter-number">6. EMBODIMENT</span>
+          <h2 class="chapter-title">VAV — The Production Forge</h2>
+          <p class="chapter-desc">Structured intent becomes audiovisual reality. VAV executes non-destructive FFmpeg jump-cuts, Remotion motion graphics, and kinetic captions.</p>
+        </article>
+
+        <!-- S7: PIPELINE & AI -->
+        <article class="story-chapter-editorial chapter-left-annotation" data-state="7">
+          <span class="chapter-number">7. RAILS & COMPUTE</span>
+          <h2 class="chapter-title">Pipeline Rails & AI Matrix</h2>
+          <p class="chapter-desc">Deterministic DAG rails route data without vendor lock-in. AI Runtime executes logic providers and external LLM roundtrips with strict prompt boundaries.</p>
+        </article>
+
+        <!-- S8: HE II -->
+        <article class="story-chapter-editorial chapter-callout" data-state="8">
+          <span class="chapter-number">8. MANIFESTATION</span>
+          <h2 class="chapter-title">HE II — Window of Manifestation</h2>
+          <p class="chapter-desc">Post-production governance. Review master video outputs, execute multi-role QA approvals, release edit locks, and monitor scheduled platform releases.</p>
+        </article>
+
+        <!-- S9: PUBLISHING -->
+        <article class="story-chapter-editorial chapter-left-annotation" data-state="9">
+          <span class="chapter-number">9. DISTRIBUTION</span>
+          <h2 class="chapter-title">Publishing — Multi-Channel Outward Gates</h2>
+          <p class="chapter-desc">Master assets are frozen into immutable publication snapshots with platform-specific aspect ratios and scheduled release dates.</p>
+        </article>
+
+        <!-- S10: METRICS -->
+        <article class="story-chapter-editorial chapter-callout" data-state="10">
+          <span class="chapter-number">10. LEARNING FEEDBACK</span>
+          <h2 class="chapter-title">Metrics Telemetry & Closing the Loop</h2>
+          <p class="chapter-desc">Base telemetry normalizes Attention, Retention, and Engagement scores, feeding learning signals back to YOD to refine future hooks.</p>
+        </article>
+
+        <!-- S11: RESOLVED CLOSE -->
+        <article class="story-chapter-editorial chapter-statement" data-state="11">
+          <span class="chapter-number">11. PROVENANCE</span>
+          <h2 class="chapter-title">Verified Engineering Truth</h2>
+          <p class="chapter-desc">Every capability shown is grounded in immutable SHA-256 artifacts, append-only event ledgers, and deterministic local test suites.</p>
+        </article>
+      </section>
+    </main>
+
+    <!-- MODE 2: SYSTEM VIEW -->
+    <section id="mode-view-system" class="mode-view-container system-view" style="display:none;" role="tabpanel">
+      <div class="section-header">
+        <span class="section-tag">SYSTEM ARCHITECTURE &bull; SPATIAL DIRECTORY</span>
+        <h2 class="section-title">Module Explorer & Architecture</h2>
+        <p class="section-lead">Explore module ownership domains below or click any 3D chamber to inspect active summaries.</p>
+        <div class="target-toggle-box">
+          <input type="checkbox" id="target-mode-toggle">
+          <label for="target-mode-toggle">Show Target Blueprint Architecture</label>
+        </div>
+      </div>
+
+      <div class="system-directory-layout">
+        <div class="system-dir-column" id="system-directory-list" role="tablist" aria-label="System Modules Directory">
+          <!-- Rendered dynamically -->
+        </div>
+        <div class="system-summary-column" id="system-active-summary">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- MODE 3: FLOW VIEW -->
+    <section id="mode-view-flow" class="mode-view-container flow-view" style="display:none;" role="tabpanel">
+      <div id="flow-blueprints-mount">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- MODE 4: PROOF VIEW -->
+    <section id="mode-view-proof" class="mode-view-container proof-view" style="display:none;" role="tabpanel">
+      <div class="section-header">
+        <span class="section-tag">ENGINEERING EVIDENCE REGISTRY</span>
+        <h2 class="section-title">Verified Technical Proof & Baselines</h2>
+        <p class="section-lead">All capabilities are backed by immutable commit SHAs, deterministic test suites, and verified local health checks.</p>
+      </div>
+
+      <div id="proof-evidence-mount">
+        <!-- Rendered dynamically from evidence-index.json -->
+      </div>
+    </section>
+
+    <!-- Public Architect Interactive Desk -->
+    <section class="architect-desk" aria-label="Public Architect Guidance">
+      <span class="section-tag">PUBLIC ARCHITECT V1</span>
+      <h3 style="font-size: 1.5rem; font-weight: 700; margin-top: 0.25rem;">Ask About System Architecture</h3>
+      <form id="architect-form" class="architect-form">
+        <input type="text" id="architect-input" class="architect-input" placeholder="e.g. What is Shim? What is Lienzo? What is OUT_OF_SYNC?" aria-label="Public Architect Query">
+        <button type="submit" class="btn-primary">Ask</button>
+      </form>
+      <div class="architect-chips">
+        <button type="button" class="architect-chip">What is Shim?</button>
+        <button type="button" class="architect-chip">What is Lienzo?</button>
+        <button type="button" class="architect-chip">What is OUT_OF_SYNC?</button>
+        <button type="button" class="architect-chip">How do He and VAV relate?</button>
+      </div>
+      <div id="architect-response"></div>
+    </section>
+  </div>
+
+  <!-- HUD Mounts -->
+  <div id="navigator-mount"></div>
+  <div id="dossier-modal-mount"></div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
