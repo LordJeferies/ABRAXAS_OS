@@ -1350,3 +1350,60 @@ a {
     transition-duration: 0.001ms !important;
   }
 }
+
+/* ==========================================================================
+   Locale Switcher & Bilingual UI Tokens
+   ========================================================================== */
+
+.locale-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.locale-btn {
+  color: var(--text-muted);
+  transition: color 0.15s ease;
+  cursor: pointer;
+}
+
+.locale-btn:hover, .locale-btn.active {
+  color: var(--text-primary);
+}
+
+.locale-btn.active {
+  color: var(--accent-gold-light);
+  font-weight: 600;
+}
+
+.locale-sep {
+  color: var(--border-medium);
+  font-size: 0.65rem;
+}
+
+.anti-pre {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.treatise-body {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.treatise-body p {
+  margin-bottom: 1.25rem;
+}

@@ -1,0 +1,858 @@
+{
+  "system": {
+    "name": "ABRAXAS OS",
+    "version": "v1.0.0-rc1",
+    "sha": "28eb35eff087be6ebd415dcf0becbce419167e25",
+    "tagline": {
+      "en": "The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis",
+      "es": "El Sistema Operativo para Inteligencia Sistemática de Contenido, Gobernanza Operativa y Síntesis Audiovisual Determinista"
+    },
+    "description": {
+      "en": "ABRAXAS OS transforms intent into structured, observable, producible and measurable reality through a closed-loop content lifecycle.",
+      "es": "ABRAXAS OS transforma la intención en realidad estructurada, observable, producible y medible a través de un ciclo de vida de contenido cerrado."
+    },
+    "premise": {
+      "en": "Criterion becomes infrastructure. One system. Many degrees of manifestation.",
+      "es": "El criterio se convierte en infraestructura. Un solo sistema. Múltiples grados de manifestación."
+    }
+  },
+  "truthLayers": {
+    "RELEASED_CURRENT": {
+      "label": {
+        "en": "RELEASED (RC1)",
+        "es": "PUBLICADO (RC1)"
+      },
+      "description": {
+        "en": "Included and verified in current public release v1.0.0-rc1 (RELEASED_RC1).",
+        "es": "Incluido y verificado en la versión pública actual v1.0.0-rc1 (RELEASED_RC1)."
+      }
+    },
+    "POST_RC1_CANDIDATE": {
+      "label": {
+        "en": "WORKING CANDIDATE",
+        "es": "CANDIDATO FUNCIONAL"
+      },
+      "description": {
+        "en": "Local working implementation verified in private repository post-RC1 (WORKING CANDIDATE — NOT IN RC1).",
+        "es": "Implementación funcional local verificada en repositorio privado post-RC1 (CANDIDATO EN DESARROLLO — NO EN RC1)."
+      }
+    },
+    "CONTRACT_ONLY": {
+      "label": {
+        "en": "CONTRACT ONLY",
+        "es": "SOLO CONTRATO"
+      },
+      "description": {
+        "en": "Architectural schema and domain boundary contract established; runtime under development.",
+        "es": "Esquema arquitectónico y contrato de límites de dominio establecido; runtime en desarrollo."
+      }
+    },
+    "PLANNED": {
+      "label": {
+        "en": "PLANNED TARGET",
+        "es": "OBJETIVO PLANIFICADO"
+      },
+      "description": {
+        "en": "Architectural contract and planned target roadmap milestone.",
+        "es": "Contrato arquitectónico e hito del roadmap objetivo planificado."
+      }
+    }
+  },
+  "fourWorlds": [
+    {
+      "id": "ATZILUTH",
+      "name": {
+        "en": "Atziluth (Emanation / Possibility)",
+        "es": "Atziluth (Emanación / Posibilidad)"
+      },
+      "archetype": {
+        "en": "Distributed Radiance & Strategic Criteria",
+        "es": "Radiancia Distribuida y Criterios Estratégicos"
+      },
+      "monumentLocation": {
+        "en": "Golden Apex Emanation Chamber (Upper 7–12%)",
+        "es": "Cámara de Emanación del Apex Dorado (7–12% superior)"
+      },
+      "description": {
+        "en": "The domain of pure potential. Potential exists as distributed golden radiance. Context, YOD criteria, and adaptive intelligence A cause one possibility to become salient as a Chokhmah-state point.",
+        "es": "El dominio del potencial puro. El potencial existe como radiancia dorada distribuida. El contexto, los criterios de YOD y la dimensión adaptativa A provocan que una posibilidad emerja como punto en estado Chokhmah."
+      },
+      "operator": "YOD"
+    },
+    {
+      "id": "BERIAH",
+      "name": {
+        "en": "Beri'ah (Creation / Identity Genesis)",
+        "es": "Beri'ah (Creación / Génesis de Identidad)"
+      },
+      "archetype": {
+        "en": "Contenido Crystal Genesis & Persistent Lineage",
+        "es": "Génesis del Cristal Contenido y Linaje Persistente"
+      },
+      "monumentLocation": {
+        "en": "Upper Crystalline Shaft & Binah Structural Vault",
+        "es": "Pozo Cristalino Superior y Bóveda Estructural de Binah"
+      },
+      "description": {
+        "en": "Where boundary and persistent identity begin. The emerging possibility is captured into a Contenido information core, establishing explicit lineage and initial revision strata.",
+        "es": "Donde comienzan el límite y la identidad persistente. La posibilidad emergente se fija en un núcleo de información Contenido, estableciendo linaje explícito y estratos iniciales de revisión."
+      },
+      "operator": "CONTENIDO (LIENZO)"
+    },
+    {
+      "id": "YETZIRAH",
+      "name": {
+        "en": "Yetzirah (Formation / Synthesis)",
+        "es": "Yetzirah (Formación / Síntesis)"
+      },
+      "archetype": {
+        "en": "Audiovisual Shaping & Formation Cathedral",
+        "es": "Modelado Audiovisual y Catedral de Formación"
+      },
+      "monumentLocation": {
+        "en": "Subterranean Bedrock Forge (Tiferet, Netzach, Hod, Yesod)",
+        "es": "Fragua Subterránea en Roca Madre (Tiferet, Netzach, Hod, Yesod)"
+      },
+      "description": {
+        "en": "Where information becomes media. VAV synthesizes non-destructive video cuts, kinetic typography hierarchies, and spring-physics motions into frame-accurate Remotion timelines.",
+        "es": "Donde la información se convierte en media audiovisual. VAV sintetiza cortes no destructivos, jerarquías de tipografía cinética y físicas de movimiento en líneas de tiempo de Remotion."
+      },
+      "operator": "VAV"
+    },
+    {
+      "id": "ASSIAH",
+      "name": {
+        "en": "Assiah (Action / Manifestation)",
+        "es": "Assiah (Acción / Manifestación)"
+      },
+      "archetype": {
+        "en": "Human Operational Interface & External World Loop",
+        "es": "Interfaz Operativa Humana y Ciclo del Mundo Exterior"
+      },
+      "monumentLocation": {
+        "en": "Malkhut Portals, Exterior Masonry Seams & Orbital Moon Station",
+        "es": "Portales de Malkhut, Costuras Exteriores y Estación Lunar Orbital"
+      },
+      "description": {
+        "en": "The realm of physical manifestation. HE exposes operational governance (tasks, approvals, deadlines, recording sessions), while Publisher distributes frozen versions to the external world and Metrics returns telemetry loops.",
+        "es": "El reino de la manifestación física. HE expone la gobernanza operativa (tareas, aprobaciones, plazos, sesiones de grabación), mientras Publisher distribuye versiones congeladas al mundo exterior y Metrics retorna telemetría."
+      },
+      "operator": "HE, PUBLISHING, METRICS"
+    }
+  ],
+  "modules": [
+    {
+      "id": "YOD",
+      "slug": "yod",
+      "name": "YOD",
+      "domain": "Intelligence",
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": {
+        "en": "Pattern and format registries verified locally; ClientCore and Opportunity runtime verified in post-RC1 candidate.",
+        "es": "Registros de patrones y formatos verificados localmente; runtime de ClientCore y Oportunidades verificado en candidato post-RC1."
+      },
+      "headline": {
+        "en": "Reusable intelligence before execution.",
+        "es": "Inteligencia reutilizable antes de la ejecución."
+      },
+      "lead": {
+        "en": "YOD owns criterion, client knowledge, planning intelligence, generation logic and learning interfaces. It helps determine what should exist and under which constraints. It does not own operational truth or silently rewrite Contenido.",
+        "es": "YOD posee el criterio, el conocimiento del cliente, la inteligencia de planificación, la lógica de generación y las interfaces de aprendizaje. Ayuda a determinar qué debería existir y bajo qué restricciones. No es dueño de la verdad operativa ni reescribe silenciosamente un Contenido."
+      },
+      "problemSolved": {
+        "en": "Eliminates blank-slate guesswork and prompt roulette by deriving all content from verified brand criteria, audience coverage gaps, and scored strategic opportunities.",
+        "es": "Elimina la improvisación desde cero y la ruleta de prompts derivando cada contenido a partir de criterios de marca verificados, brechas de audiencia y oportunidades estratégicas puntuadas."
+      },
+      "owns": {
+        "en": [
+          "Client Core & brand voice criteria",
+          "Opportunity generation & scoring algorithms",
+          "Strategic narrative structure definitions",
+          "Prompt compiler & Founder Studio recording packs",
+          "Feedback signal interpretation (Learning interfaces)"
+        ],
+        "es": [
+          "Criterios de Client Core y voz de marca",
+          "Algoritmos de generación y puntuación de Oportunidades",
+          "Definiciones de estructuras narrativas estratégicas",
+          "Compilador de prompts y packs de grabación de Founder Studio",
+          "Interpretación de señales de feedback (Interfaces de Aprendizaje)"
+        ]
+      },
+      "doesNotOwn": {
+        "en": [
+          "Does NOT own single-piece mutable content state (Contenido owns this)",
+          "Does NOT own operational deadlines or task assignments (HE owns this)",
+          "Does NOT own audiovisual media rendering (VAV owns this)",
+          "Does NOT own external distribution channels (Publishing owns this)"
+        ],
+        "es": [
+          "NO posee el estado mutable de una pieza individual de contenido (Contenido es dueño de esto)",
+          "NO posee plazos operativos ni asignación de tareas (HE es dueño de esto)",
+          "NO posee el renderizado de media audiovisual (VAV es dueño de esto)",
+          "NO posee los canales de distribución externa (Publishing es dueño de esto)"
+        ]
+      },
+      "inputs": ["ClientCore profile", "Performance LearningSignals", "Pillar coverage history"],
+      "outputs": ["Opportunity", "Plan", "RecordingPack", "18-Block Assembled Prompts"],
+      "connections": {
+        "en": "Feeds Plan & Strategy to Contenido; Supplies Prompts to HE recording sessions; Receives learning signals from Metrics.",
+        "es": "Alimenta Plan y Estrategia a Contenido; Suministra Prompts a sesiones de grabación de HE; Recibe señales de aprendizaje desde Metrics."
+      },
+      "exampleFlow": {
+        "en": "ClientCore criteria evaluated -> Audience coverage gap detected -> Opportunity generated -> Plan formulated -> Recording pack compiled for Founder Studio.",
+        "es": "Criterios de ClientCore evaluados -> Brecha de cobertura detectada -> Oportunidad generada -> Plan formulado -> Pack de grabación compilado para Founder Studio."
+      },
+      "sephirot": {
+        "en": "Supernal Triad (Keter, Chokhmah, Binah) // Golden Apex Emanation Chamber",
+        "es": "Tríada Supernal (Keter, Chokhmah, Binah) // Cámara de Emanación del Apex Dorado"
+      }
+    },
+    {
+      "id": "CONTENIDO",
+      "slug": "contenido",
+      "name": "CONTENIDO (LIENZO)",
+      "domain": "Identity",
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": {
+        "en": "Immutable revision storage, DAG dependency engine, and patch-based mutation verified in RC1.",
+        "es": "Almacenamiento de revisiones inmutables, motor de dependencias DAG y mutaciones basadas en parches verificadas en RC1."
+      },
+      "headline": {
+        "en": "One identity across many transformations.",
+        "es": "Una identidad a través de muchas transformaciones."
+      },
+      "lead": {
+        "en": "Contenido is the persistent, versioned identity of a content piece. The current implementation may still use the name Lienzo. Revisions preserve history; dependencies remain explicit; downstream derivatives can become OUT_OF_SYNC without destroying previous artifacts.",
+        "es": "Contenido es la identidad persistente y versionada de una pieza de contenido. La implementación actual todavía puede utilizar el nombre Lienzo. Las revisiones preservan la historia; las dependencias permanecen explícitas; los derivados posteriores pueden quedar OUT_OF_SYNC sin destruir artefactos anteriores."
+      },
+      "problemSolved": {
+        "en": "Prevents state corruption, untracked overwrites, and cascade breakage across editorial, cut, caption, and render stages by maintaining an immutable versioned DAG.",
+        "es": "Previene la corrupción de estado, sobreescrituras no rastreadas y roturas en cascada entre etapas editoriales, cortes, subtítulos y renderizado manteniendo un DAG inmutable versionado."
+      },
+      "owns": {
+        "en": [
+          "Canonical content data document (JSON schema)",
+          "Immutable revision history & strata hashing",
+          "Explicit DAG dependency graph between assets",
+          "OUT_OF_SYNC cascade invalidation marking",
+          "Deterministic patch mutation resolution"
+        ],
+        "es": [
+          "Documento de datos de contenido canónico (esquema JSON)",
+          "Historial de revisiones inmutables y hashing de estratos",
+          "Grafo de dependencias DAG explícito entre activos",
+          "Marcado de invalidación en cascada OUT_OF_SYNC",
+          "Resolución determinista de mutaciones por parches"
+        ]
+      },
+      "doesNotOwn": {
+        "en": [
+          "Does NOT own creative generation logic (YOD owns this)",
+          "Does NOT own human workflow status or calendar (HE owns this)",
+          "Does NOT own video encoding or timeline rendering (VAV owns this)",
+          "Does NOT own UI layout components or projection views"
+        ],
+        "es": [
+          "NO posee la lógica de generación creativa (YOD es dueño de esto)",
+          "NO posee el estado del flujo de trabajo humano ni calendario (HE es dueño de esto)",
+          "NO posee la codificación de video ni renderizado de timeline (VAV es dueño de esto)",
+          "NO posee los componentes de interfaz ni vistas de proyección"
+        ]
+      },
+      "inputs": ["YOD Strategy Plan", "Universal Intake Raw Media", "Human Editorial Edits"],
+      "outputs": ["ContenidoDocument (Canonical)", "RevisionHistory", "InvalidationSignal (OUT_OF_SYNC)"],
+      "connections": {
+        "en": "Central spine consumed by SHIM for verification; rendered by VAV into video; managed by HE in operational queues.",
+        "es": "Columna central consumida por SHIM para verificación; renderizada por VAV en video; gestionada por HE en colas operativas."
+      },
+      "exampleFlow": {
+        "en": "Plan accepted -> Contenido draft created -> Media ingested -> Timestamped script attached -> Revision 2 locked -> VAV consumes Revision 2 for cut assembly.",
+        "es": "Plan aceptado -> Borrador de Contenido creado -> Media ingresada -> Guion con timestamps adjunto -> Revisión 2 bloqueada -> VAV consume Revisión 2 para ensamblaje de corte."
+      },
+      "sephirot": {
+        "en": "Central Axis (Keter-to-Malkhut Continuity Spine) // Axial Crystalline Shaft",
+        "es": "Eje Central (Columna de Continuidad Keter a Malkhut) // Pozo Axial Cristalino"
+      }
+    },
+    {
+      "id": "HE",
+      "slug": "he",
+      "name": "HE",
+      "domain": "Operations",
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": {
+        "en": "Solo Queue, Team Desk, Kanban Board, Calendar, Deadlines, Stopwatch Time Tracking, and Notification Engine verified in RC1.",
+        "es": "Solo Queue, Team Desk, Tablero Kanban, Calendario, Deadlines, Stopwatch Time Tracking y Motor de Notificaciones verificados en RC1."
+      },
+      "headline": {
+        "en": "Human-operable visibility and governance.",
+        "es": "Visibilidad y gobierno operables por personas."
+      },
+      "lead": {
+        "en": "HE owns tasks, deadlines, assignments, sessions, approvals and operational control. HE I exposes intent becoming operable. HE II exposes manifestation becoming reviewable and distributable. They are two windows into the same operations core.",
+        "es": "HE posee tareas, fechas límite, asignaciones, sesiones, aprobaciones y control operativo. HE I expone la intención volviéndose operable. HE II expone la manifestación volviéndose revisable y distribuible. Son dos ventanas del mismo núcleo de operaciones."
+      },
+      "problemSolved": {
+        "en": "Eliminates operational chaos, missed production deadlines, and untracked bottlenecks by governing talent booking, recording sessions, and multi-stage review gates.",
+        "es": "Elimina el caos operativo, plazos de producción perdidos y cuellos de botella no rastreados gobernando la reserva de talento, sesiones de grabación y compuertas de revisión multietapa."
+      },
+      "owns": {
+        "en": [
+          "Task state machine (Draft, In_Progress, Review, Approved, Blocked, Published)",
+          "Deadline precedence & SLA enforcement",
+          "Solo Queue & Team workload distribution",
+          "Founder Studio recording session coordination",
+          "Stopwatch time tracking & operational activity ledger"
+        ],
+        "es": [
+          "Máquina de estados de tareas (Draft, In_Progress, Review, Approved, Blocked, Published)",
+          "Precedencia de plazos y cumplimiento de SLAs",
+          "Distribución de carga de trabajo en Solo Queue y Team",
+          "Coordinación de sesiones de grabación en Founder Studio",
+          "Seguimiento de tiempo con cronómetro y libro mayor de actividad operativa"
+        ]
+      },
+      "doesNotOwn": {
+        "en": [
+          "Does NOT own content data fields or revisions (Contenido owns this)",
+          "Does NOT own prompt generation algorithms (YOD owns this)",
+          "Does NOT own video stream rendering (VAV owns this)",
+          "Does NOT own external social network distribution (Publishing owns this)"
+        ],
+        "es": [
+          "NO posee los campos de datos de contenido ni revisiones (Contenido es dueño de esto)",
+          "NO posee algoritmos de generación de prompts (YOD es dueño de esto)",
+          "NO posee el renderizado de flujos de video (VAV es dueño de esto)",
+          "NO posee la distribución en redes sociales externas (Publishing es dueño de esto)"
+        ]
+      },
+      "inputs": ["Contenido Document", "Team Member Assignments", "Client SLA Targets"],
+      "outputs": ["TaskState", "ApprovalSignature", "TimeLogEntry", "NotificationEvent"],
+      "connections": {
+        "en": "Coordinates recording packs for Founder Studio; unlocks VAV render upon review approval; triggers Publisher upon final sign-off.",
+        "es": "Coordina packs de grabación para Founder Studio; desbloquea render en VAV tras aprobación; activa Publisher tras la firma final."
+      },
+      "exampleFlow": {
+        "en": "Recording session scheduled -> Prompts pulled from YOD -> Video recorded -> Editor assigned in Solo Queue -> Time tracked -> Approval passed to HE II -> Dispatched to Publishing.",
+        "es": "Sesión de grabación programada -> Prompts extraídos de YOD -> Video grabado -> Editor asignado en Solo Queue -> Tiempo registrado -> Aprobación pasada a HE II -> Despachado a Publishing."
+      },
+      "sephirot": {
+        "en": "Malkhut (Manifested Operations) // Ascending & Descending Facade Portals",
+        "es": "Malkhut (Operaciones Manifestadas) // Portales de Fachada Ascendentes y Descendentes"
+      }
+    },
+    {
+      "id": "SHIM",
+      "slug": "shim",
+      "name": "SHIM",
+      "domain": "Observation",
+      "truthLayer": "POST_RC1_CANDIDATE",
+      "statusDetail": {
+        "en": "Script-to-audio phonetic alignment, discrepancy verification matrix, and coverage ratio calculators verified in post-RC1 candidate.",
+        "es": "Alineación fonética guion-audio, matriz de verificación de discrepancias y calculadoras de ratio de cobertura verificadas en candidato post-RC1."
+      },
+      "headline": {
+        "en": "Where intention meets evidence.",
+        "es": "Donde la intención se encuentra con la evidencia."
+      },
+      "lead": {
+        "en": "SHIM observes real material, compares it with what was planned and identifies what can be responsibly resolved. Its fundamental distinction is: PLANNED != OBSERVED != RESOLVED.",
+        "es": "SHIM observa el material real, lo compara con lo planificado e identifica qué puede resolverse de forma responsable. Su distinción fundamental es: PLANIFICADO != OBSERVADO != RESUELTO."
+      },
+      "problemSolved": {
+        "en": "Prevents silent misalignment between what was scripted and what was actually spoken or recorded on camera before downstream rendering begins.",
+        "es": "Previene desalineaciones silenciosas entre lo que fue guionado y lo que realmente se grabó frente a la cámara antes de iniciar el renderizado downstream."
+      },
+      "owns": {
+        "en": [
+          "Phonetic & semantic alignment verification",
+          "Planned vs Observed transcript discrepancy scoring",
+          "Gap detection matrix (missing hooks, omitted CTAs, improvised segments)",
+          "Resolution recommendation engine",
+          "OUT_OF_SYNC verification gate"
+        ],
+        "es": [
+          "Verificación de alineación fonética y semántica",
+          "Puntuación de discrepancia entre transcripción Planificada y Observada",
+          "Matriz de detección de brechas (hooks faltantes, CTAs omitidos, segmentos improvisados)",
+          "Motor de recomendaciones de resolución",
+          "Compuerta de verificación OUT_OF_SYNC"
+        ]
+      },
+      "doesNotOwn": {
+        "en": [
+          "Does NOT own raw audio transcription models (AI Runtime owns this)",
+          "Does NOT own original script writing (YOD owns this)",
+          "Does NOT own video segment cutting execution (VAV owns this)",
+          "Does NOT own task reassignment (HE owns this)"
+        ],
+        "es": [
+          "NO posee modelos de transcripción de audio en crudo (AI Runtime es dueño de esto)",
+          "NO posee la redacción original del guion (YOD es dueño de esto)",
+          "NO posee la ejecución del corte de video (VAV es dueño de esto)",
+          "NO posee la reasignación de tareas (HE es dueño de esto)"
+        ]
+      },
+      "inputs": ["Planned Script (from Contenido)", "Observed Transcript (from Universal Intake)"],
+      "outputs": ["AlignmentReport", "DiscrepancyMap", "CoverageRatio", "ResolutionPlan"],
+      "connections": {
+        "en": "Intercepts ingested media at Da'at threshold; compares against Contenido plan; passes verified time segments to VAV Cuts Engine.",
+        "es": "Intercepta media ingresada en el umbral de Da'at; compara contra el plan de Contenido; entrega segmentos temporales verificados a VAV Cuts Engine."
+      },
+      "exampleFlow": {
+        "en": "Raw take ingested -> Speech transcribed -> SHIM compares against planned 3-hook structure -> Identifies Hook 2 was spoken with 94% fidelity -> Emits timecode map to VAV.",
+        "es": "Toma cruda ingresada -> Audio transcrito -> SHIM compara contra la estructura de 3 hooks planificada -> Identifica que el Hook 2 fue hablado con 94% de fidelidad -> Emite mapa de timecodes a VAV."
+      },
+      "sephirot": {
+        "en": "Da'at (Threshold Abyss) & Gevurah (Judgment) // Transverse Metrology Gallery",
+        "es": "Da'at (Abismo del Umbral) y Gevurah (Juicio) // Galería Transversal de Metrología"
+      }
+    },
+    {
+      "id": "VAV",
+      "slug": "vav",
+      "name": "VAV",
+      "domain": "Production",
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": {
+        "en": "Non-destructive multi-segment FFmpeg cut engine, kinetic typography hierarchy, and spring physics motion engine verified in RC1.",
+        "es": "Motor de corte FFmpeg multietapa no destructivo, jerarquía de tipografía cinética y motor de físicas de movimiento verificado en RC1."
+      },
+      "headline": {
+        "en": "Audiovisual manifestation.",
+        "es": "Manifestación audiovisual."
+      },
+      "lead": {
+        "en": "VAV converts resolved intent into audiovisual artifacts. Current verified areas must be represented truthfully; future production areas remain clearly classified as partial or planned.",
+        "es": "VAV convierte intención resuelta en artefactos audiovisuales. Las áreas verificadas actualmente deben representarse con precisión; las áreas futuras de producción deben permanecer clasificadas claramente como parciales o planificadas."
+      },
+      "problemSolved": {
+        "en": "Replaces manual timeline editing in bloated video editors with programmatic, deterministic, frame-accurate audiovisual synthesis pipelines.",
+        "es": "Reemplaza la edición manual en editores de video pesados con pipelines de síntesis audiovisual programáticos, deterministas y con precisión de fotograma."
+      },
+      "owns": {
+        "en": [
+          "Non-destructive multi-segment video trimming (VAV/Cuts)",
+          "Word-level kinetic caption typography hierarchies (VAV/Captions)",
+          "Spring-physics motion layouts & B-roll transitions (VAV/Motions)",
+          "Remotion programmatic composition compilation",
+          "Stream-copy & master export pipeline execution"
+        ],
+        "es": [
+          "Recorte de video multietapa no destructivo (VAV/Cuts)",
+          "Jerarquías de tipografía cinética a nivel de palabra (VAV/Captions)",
+          "Diseños de movimiento con físicas de resorte y transiciones de B-roll (VAV/Motions)",
+          "Compilación de composiciones programáticas en Remotion",
+          "Ejecución de pipeline de stream-copy y exportación master"
+        ]
+      },
+      "doesNotOwn": {
+        "en": [
+          "Does NOT own script writing or hook criteria (YOD owns this)",
+          "Does NOT own reality observation or coverage scoring (SHIM owns this)",
+          "Does NOT own approval statuses (HE owns this)",
+          "Does NOT own cloud social account publishing (Publishing owns this)"
+        ],
+        "es": [
+          "NO posee la redacción de guiones ni criterios de hooks (YOD es dueño de esto)",
+          "NO posee la observación de realidad ni puntuación de cobertura (SHIM es dueño de esto)",
+          "NO posee estados de aprobación (HE es dueño de esto)",
+          "NO posee la publicación en cuentas de redes sociales en la nube (Publishing es dueño de esto)"
+        ]
+      },
+      "inputs": ["Contenido Document", "Verified Timecodes (from SHIM)", "Typography Style Preset", "Raw Video Asset"],
+      "outputs": ["MasterExportVideo (MP4)", "CutListEDL", "KineticCaptionTrack", "RenderManifest"],
+      "connections": {
+        "en": "Consumes verified segments from SHIM; synthesizes audiovisual layers; deposits immutable video artifacts into Artifact Vault for HE II review.",
+        "es": "Consume segmentos verificados desde SHIM; sintetiza capas audiovisuales; deposita artefactos de video inmutables en Artifact Vault para revisión en HE II."
+      },
+      "exampleFlow": {
+        "en": "Verified timecodes received -> VAV Cuts trims raw video via FFmpeg stream-copy -> VAV Captions formats kinetic words -> VAV Motions applies B-roll zooms -> Final video compiled.",
+        "es": "Timecodes verificados recibidos -> VAV Cuts recorta video crudo vía stream-copy FFmpeg -> VAV Captions formatea palabras cinéticas -> VAV Motions aplica zooms de B-roll -> Video final compilado."
+      },
+      "sephirot": {
+        "en": "Tiferet (Heart of the Tree / Synthesis) // Subterranean Bedrock Formation Cathedral",
+        "es": "Tiferet (Corazón del Árbol / Síntesis) // Catedral de Formación Subterránea en Roca Madre"
+      }
+    },
+    {
+      "id": "ARQUITECTO",
+      "slug": "arquitecto",
+      "name": "ARQUITECTO",
+      "domain": "Guidance",
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": {
+        "en": "Deterministic NLP semantic query assistant, token-boundary governance responder, and system alignment validator verified in RC1.",
+        "es": "Asistente determinista de consultas semánticas NLP, respondedor de gobernanza con límites de tokens y validador de alineamiento de sistema verificado en RC1."
+      },
+      "headline": {
+        "en": "Contextual guidance, not another source of truth.",
+        "es": "Guía contextual, no una segunda fuente de verdad."
+      },
+      "lead": {
+        "en": "Arquitecto consumes ecosystem state and YOD intelligence to help a human understand where they are, what changed, what matters and what should happen next.",
+        "es": "Arquitecto consume el estado del ecosistema y la inteligencia de YOD para ayudar a una persona a comprender dónde se encuentra, qué cambió, qué importa y qué debería suceder a continuación."
+      },
+      "problemSolved": {
+        "en": "Provides immediate, reliable, deterministic explanations of system state, module boundaries, and next architectural actions without hallucinations or drift.",
+        "es": "Proporciona explicaciones inmediatas, confiables y deterministas del estado del sistema, límites de módulos y siguientes acciones arquitectónicas sin alucinaciones ni desvíos."
+      },
+      "owns": {
+        "en": [
+          "Contextual architectural guidance and query resolution",
+          "System state interpretation across XYZA state-space",
+          "Audit inspection of Taste Canon compliance",
+          "Public Architect inquiry interface"
+        ],
+        "es": [
+          "Guía arquitectónica contextual y resolución de consultas",
+          "Interpretación del estado del sistema en el espacio de estados XYZA",
+          "Auditoría de cumplimiento del Canon de Taste",
+          "Interfaz de consulta del Arquitecto Público"
+        ]
+      },
+      "doesNotOwn": {
+        "en": [
+          "Does NOT create or modify content data directly (Contenido owns this)",
+          "Does NOT store original brand voice criteria (YOD owns this)",
+          "Does NOT execute rendering or compilation (VAV owns this)"
+        ],
+        "es": [
+          "NO crea ni modifica datos de contenido directamente (Contenido es dueño de esto)",
+          "NO almacena criterios originales de voz de marca (YOD es dueño de esto)",
+          "NO ejecuta renderizado ni compilación (VAV es dueño de esto)"
+        ]
+      },
+      "inputs": ["User Query", "System State Vector", "Canonical Knowledge Graph"],
+      "outputs": ["ArchitecturalExplanation", "ProvenanceReference", "RecommendedAction"],
+      "connections": {
+        "en": "Observes total system state; responds to public user inquiries; enforces architectural taste invariants.",
+        "es": "Observa el estado total del sistema; responde a consultas de usuarios públicos; hace cumplir los invariantes de taste arquitectónico."
+      },
+      "exampleFlow": {
+        "en": "User queries module ownership -> Arquitecto validates against canonical contracts -> Emits verified boundary explanation with exact truth layer.",
+        "es": "Usuario consulta propiedad de un módulo -> Arquitecto valida contra contratos canónicos -> Emite explicación de límites verificada con capa de verdad exacta."
+      },
+      "sephirot": {
+        "en": "Ain Soph Aur (Volumetric Etching Eye) // Apex Gimbal Reticle Mount",
+        "es": "Ain Soph Aur (Ojo de Grabado Volumétrico) // Montura de Retícula en Gimbal del Apex"
+      }
+    },
+    {
+      "id": "PIPELINE_ENGINE",
+      "slug": "pipeline-engine",
+      "name": "PIPELINE ENGINE",
+      "domain": "Orchestration",
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": {
+        "en": "11 Canonical Pipeline Blueprints verified in registry; deterministic stage routing engine verified.",
+        "es": "11 Blueprints canónicos de Pipeline verificados en registro; motor de enrutamiento determinista por etapas verificado."
+      },
+      "headline": {
+        "en": "Orchestration without coupling.",
+        "es": "Orquestación sin acoplamiento."
+      },
+      "lead": {
+        "en": "Blueprint existence is not proof of runtime execution. Pipeline Engine orchestrates stage transitions deterministically while keeping module boundaries decoupled.",
+        "es": "La existencia de un Blueprint no demuestra ejecución runtime. Pipeline Engine orquesta transiciones de etapas de forma determinista manteniendo los límites de los módulos desacoplados."
+      },
+      "problemSolved": {
+        "en": "Coordinates multi-stage content workflows from intake to publication without hard-coding direct dependencies between modules.",
+        "es": "Coordina flujos de trabajo multietapa desde el ingreso hasta la publicación sin acoplar dependencias directas entre módulos."
+      },
+      "owns": {
+        "en": ["Blueprint registry & schema validation", "Stage transit state machine", "Payload routing between modules"],
+        "es": ["Registro de Blueprints y validación de esquema", "Máquina de estados de tránsito de etapas", "Enrutamiento de payloads entre módulos"]
+      },
+      "doesNotOwn": {
+        "en": ["Does NOT own module internal logic", "Does NOT persist content state directly", "Does NOT execute video renders"],
+        "es": ["NO posee la lógica interna de los módulos", "NO persiste estado de contenido directamente", "NO ejecuta renders de video"]
+      },
+      "inputs": ["PipelineBlueprintID", "ContenidoPayload"],
+      "outputs": ["PipelineRunResult", "StageTransitionEvent"],
+      "connections": {
+        "en": "Executes the 22 architectural connective channels between chambers.",
+        "es": "Ejecuta los 22 canales conectivos arquitectónicos entre cámaras."
+      },
+      "exampleFlow": {
+        "en": "Intake blueprint triggered -> Routes payload through Intake -> SHIM -> VAV -> HE -> Publishing in order.",
+        "es": "Blueprint de ingreso activado -> Enruta el payload a través de Intake -> SHIM -> VAV -> HE -> Publishing en orden."
+      },
+      "sephirot": {
+        "en": "The 22 Paths (Energy Conduits) // Internal Stone Corridors",
+        "es": "Los 22 Senderos (Canales de Energía) // Corredores de Piedra Interiores"
+      }
+    },
+    {
+      "id": "AI_RUNTIME",
+      "slug": "ai-runtime",
+      "name": "AI RUNTIME",
+      "domain": "Compute",
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": {
+        "en": "Provider-agnostic worker isolation contracts, fallback retry mechanics, and model adapter bridges verified.",
+        "es": "Contratos de aislamiento de workers independientes de proveedor, mecánicas de reintento y puentes de adaptadores de modelo verificados."
+      },
+      "headline": {
+        "en": "Execution without provider lock-in.",
+        "es": "Ejecución sin dependencia de un proveedor."
+      },
+      "lead": {
+        "en": "Provider selection remains separate from domain ownership and canonical truth. AI Runtime acts as the isolated execution substrate.",
+        "es": "La selección del proveedor permanece separada de la propiedad del dominio y de la verdad canónica. AI Runtime actúa como el sustrato de ejecución aislado."
+      },
+      "problemSolved": {
+        "en": "Prevents platform fragility by abstracting LLM, Whisper audio transcription, and computer vision models behind strict contracts.",
+        "es": "Previene la fragilidad de plataforma abstrayendo modelos de LLM, transcripción de audio Whisper y visión computacional tras contratos estrictos."
+      },
+      "owns": {
+        "en": ["Provider adapter bridges (OpenAI, Anthropic, Local Whisper, Ollama)", "Inference queue & worker process isolation", "Token boundary budget enforcement"],
+        "es": ["Puentes de adaptadores de proveedor (OpenAI, Anthropic, Local Whisper, Ollama)", "Cola de inferencia y aislamiento de procesos worker", "Cumplimiento de presupuesto de límites de tokens"]
+      },
+      "doesNotOwn": {
+        "en": ["Does NOT own content strategy (YOD owns this)", "Does NOT store canonical data (Contenido owns this)"],
+        "es": ["NO posee la estrategia de contenido (YOD es dueño de esto)", "NO almacena datos canónicos (Contenido es dueño de esto)"]
+      },
+      "inputs": ["InferenceContract", "ModelPromptPayload"],
+      "outputs": ["InferenceOutputJSON", "RawTranscriptionTokens"],
+      "connections": {
+        "en": "Executes raw AI computation on behalf of YOD, SHIM, and VAV.",
+        "es": "Ejecuta cómputo de IA en crudo en nombre de YOD, SHIM y VAV."
+      },
+      "exampleFlow": {
+        "en": "Audio file supplied -> AI Runtime executes local Whisper transcription -> Returns timestamped tokens to SHIM.",
+        "es": "Archivo de audio suministrado -> AI Runtime ejecuta transcripción local Whisper -> Retorna tokens con timestamps a SHIM."
+      },
+      "sephirot": {
+        "en": "Netzach (Endurance / Substrate) // Bedrock Compute Chamber",
+        "es": "Netzach (Resistencia / Sustrato) // Cámara de Cómputo en Roca Madre"
+      }
+    },
+    {
+      "id": "UNIVERSAL_INTAKE",
+      "slug": "universal-intake",
+      "name": "UNIVERSAL INTAKE",
+      "domain": "Ingress",
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": {
+        "en": "Multi-format video/audio ingest, metadata extraction (ffprobe), and normalization verified in RC1.",
+        "es": "Ingesta de video/audio multiformato, extracción de metadatos (ffprobe) y normalización verificada en RC1."
+      },
+      "headline": {
+        "en": "Deterministic ingress gate.",
+        "es": "Compuerta de ingreso determinista."
+      },
+      "lead": {
+        "en": "Normalizes raw video, audio, transcripts, and external assets into structured Contenido drafts without data loss.",
+        "es": "Normaliza video en crudo, audio, transcripciones y activos externos en borradores estructurados de Contenido sin pérdida de datos."
+      },
+      "problemSolved": {
+        "en": "Standardizes irregular video codecs, frame rates, and audio bitrates into unified production-ready assets.",
+        "es": "Estandariza códecs de video irregulares, tasas de cuadros y bitrates de audio en activos unificados listos para producción."
+      },
+      "owns": {
+        "en": ["Format normalization & metadata validation", "Raw asset hash registration", "Initial Contenido draft instantiation"],
+        "es": ["Normalización de formatos y validación de metadatos", "Registro de hash de activos en crudo", "Instanciación inicial del borrador de Contenido"]
+      },
+      "doesNotOwn": {
+        "en": ["Does NOT own video trimming (VAV owns this)", "Does NOT perform reality verification (SHIM owns this)"],
+        "es": ["NO posee el recorte de video (VAV es dueño de esto)", "NO realiza verificación de realidad (SHIM es dueño de esto)"]
+      },
+      "inputs": ["RawMediaFiles (MP4, MOV, WAV, TXT)"],
+      "outputs": ["NormalizedAssetRecord", "RawAssetChecksum"],
+      "connections": {
+        "en": "Ingress point feeding fresh material to Contenido and SHIM.",
+        "es": "Punto de ingreso que suministra material fresco a Contenido y SHIM."
+      },
+      "exampleFlow": {
+        "en": "Creator uploads phone video -> Intake extracts frame rate/resolution -> Hashes file -> Passes payload to Contenido.",
+        "es": "Creador sube video del móvil -> Intake extrae tasa de cuadros/resolución -> Hashea el archivo -> Entrega payload a Contenido."
+      },
+      "sephirot": {
+        "en": "Ingress Gate (Threshold) // Northern Perimeter Portal",
+        "es": "Compuerta de Ingreso (Umbral) // Portal del Perímetro Norte"
+      }
+    },
+    {
+      "id": "PUBLISHING",
+      "slug": "publishing",
+      "name": "PUBLISHING",
+      "domain": "Distribution",
+      "truthLayer": "CONTRACT_ONLY",
+      "statusDetail": {
+        "en": "Multi-platform export schemas, frozen version release contracts, and webhook syndication contracts verified.",
+        "es": "Esquemas de exportación multiplataforma, contratos de liberación de versión congelada y webhooks de sindicación verificados."
+      },
+      "headline": {
+        "en": "Frozen versions outward.",
+        "es": "Versiones congeladas hacia el exterior."
+      },
+      "lead": {
+        "en": "Publishing distributes approved versions; it does not own performance interpretation.",
+        "es": "Publishing distribuye versiones aprobadas; no posee la interpretación de rendimiento."
+      },
+      "problemSolved": {
+        "en": "Ensures that only frozen, immutable, signed release versions reach public distribution platforms.",
+        "es": "Garantiza que solo versiones congeladas, inmutables y firmadas alcancen las plataformas de distribución pública."
+      },
+      "owns": {
+        "en": ["Frozen version distribution packaging", "Platform API syndication connectors", "Public release verification hashes"],
+        "es": ["Empaquetado de distribución de versiones congeladas", "Conectores de sindicación API de plataformas", "Hashes de verificación de publicación pública"]
+      },
+      "doesNotOwn": {
+        "en": ["Does NOT own approval decisions (HE owns this)", "Does NOT own audience performance analysis (Metrics owns this)"],
+        "es": ["NO posee las decisiones de aprobación (HE es dueño de esto)", "NO posee el análisis de rendimiento de audiencia (Metrics es dueño de esto)"]
+      },
+      "inputs": ["Approved Master Video (from VAV/HE)", "PublishingMetadata"],
+      "outputs": ["PublishedPostRecord", "DistributionAuditLog"],
+      "connections": {
+        "en": "Projects outbound stream from Pyramid base to Celestial Moon Station.",
+        "es": "Proyecta el flujo saliente desde la base de la Pirámide hacia la Estación Lunar Celestial."
+      },
+      "exampleFlow": {
+        "en": "HE II signs off master render -> Publishing packages metadata & video -> Dispatches to YouTube/TikTok APIs.",
+        "es": "HE II firma el render master -> Publishing empaqueta metadatos y video -> Despacha a las APIs de YouTube/TikTok."
+      },
+      "sephirot": {
+        "en": "The Celestial Moon (Orbital Bridge) // Outbound Distribution Beam",
+        "es": "La Luna Celestial (Puente Orbital) // Haz de Distribución Saliente"
+      }
+    },
+    {
+      "id": "METRICS",
+      "slug": "metrics",
+      "name": "METRICS",
+      "domain": "Observability",
+      "truthLayer": "CONTRACT_ONLY",
+      "statusDetail": {
+        "en": "Audience telemetry schema, learning signal contracts, and performance feedback contracts verified.",
+        "es": "Esquema de telemetría de audiencia, contratos de señales de aprendizaje y feedback de rendimiento verificados."
+      },
+      "headline": {
+        "en": "External reality as evidence.",
+        "es": "La realidad externa como evidencia."
+      },
+      "lead": {
+        "en": "Metrics captures external performance. Evidence may inform learning through explicit contracts but never silently becomes Source Truth.",
+        "es": "Metrics captura rendimiento externo. La evidencia puede informar aprendizaje mediante contratos explícitos, pero nunca se convierte silenciosamente en Fuente de Verdad."
+      },
+      "problemSolved": {
+        "en": "Gathers empirical audience resonance data to improve future YOD criteria without polluting core content state.",
+        "es": "Recopila datos empíricos de resonancia de audiencia para mejorar futuros criterios de YOD sin contaminar el estado del contenido."
+      },
+      "owns": {
+        "en": ["Audience telemetry collection", "Retention curve & engagement parsing", "Performance feedback signal synthesis"],
+        "es": ["Recolección de telemetría de audiencia", "Curvas de retención y análisis de engagement", "Síntesis de señales de feedback de rendimiento"]
+      },
+      "doesNotOwn": {
+        "en": ["Does NOT silently rewrite canonical brand criteria (YOD owns this)", "Does NOT publish content (Publishing owns this)"],
+        "es": ["NO reescribe silenciosamente criterios de marca canónicos (YOD es dueño de esto)", "NO publica contenido (Publishing es dueño de esto)"]
+      },
+      "inputs": ["External Platform Analytics", "PublishedPostID"],
+      "outputs": ["TelemetryReport", "LearningSignalPackage"],
+      "connections": {
+        "en": "Transmits return telemetry loops from the Celestial Moon back into YOD.",
+        "es": "Transmite lazos de retorno de telemetría desde la Luna Celestial de vuelta hacia YOD."
+      },
+      "exampleFlow": {
+        "en": "Views and retention recorded -> Metrics parses drop-off point at second 14 -> Emits LearningSignal -> YOD refines hook pattern.",
+        "es": "Vistas y retención registradas -> Metrics detecta punto de caída en el segundo 14 -> Emite LearningSignal -> YOD refina el patrón de hook."
+      },
+      "sephirot": {
+        "en": "Yesod (Foundation / Return Loops) // Lunar Observability Deck",
+        "es": "Yesod (Fundación / Lazos de Retorno) // Plataforma de Observabilidad Lunar"
+      }
+    },
+    {
+      "id": "EVENTS",
+      "slug": "events",
+      "name": "EVENTS",
+      "domain": "Temporal",
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": {
+        "en": "Typed asynchronous event bus, state transition history, and event auditing ledger verified in RC1.",
+        "es": "Bus de eventos asíncronos tipados, historial de transiciones de estado y libro mayor de auditoría verificado en RC1."
+      },
+      "headline": {
+        "en": "What happened, when and why.",
+        "es": "Qué ocurrió, cuándo y por qué."
+      },
+      "lead": {
+        "en": "Captures all meaningful lifecycle transitions, state invalidations, and audit records as immutable typed events.",
+        "es": "Captura todas las transiciones de ciclo de vida significativas, invalidaciones de estado y registros de auditoría como eventos inmutables tipados."
+      },
+      "problemSolved": {
+        "en": "Provides total auditability and observability across the entire operating system lifecycle.",
+        "es": "Proporciona auditabilidad total y observabilidad a lo largo de todo el ciclo de vida del sistema operativo."
+      },
+      "owns": {
+        "en": ["Typed event schema definitions", "Asynchronous event bus routing", "Immutable audit trail persistence"],
+        "es": ["Definiciones de esquemas de eventos tipados", "Enrutamiento en bus de eventos asíncronos", "Persistencia de pistas de auditoría inmutables"]
+      },
+      "doesNotOwn": {
+        "en": ["Does NOT own content state data", "Does NOT own task logic"],
+        "es": ["NO posee los datos de estado de contenido", "NO posee la lógica de tareas"]
+      },
+      "inputs": ["Module Transition Triggers"],
+      "outputs": ["TypedSystemEvent", "AuditLogStream"],
+      "connections": {
+        "en": "Observes all system transitions and broadcasts signals to listeners.",
+        "es": "Observa todas las transiciones del sistema y transmite señales a los oyentes."
+      },
+      "exampleFlow": {
+        "en": "Task marked Approved -> HE emits HE_TASK_APPROVED -> Pipeline Engine advances workflow -> Audit record saved.",
+        "es": "Tarea marcada Aprobada -> HE emite HE_TASK_APPROVED -> Pipeline Engine avanza el flujo -> Registro de auditoría guardado."
+      },
+      "sephirot": {
+        "en": "Hod (Splendor / Event Ledger) // Subterranean Event Chamber",
+        "es": "Hod (Esplendor / Libro de Eventos) // Cámara de Eventos Subterránea"
+      }
+    },
+    {
+      "id": "ARTIFACTS",
+      "slug": "artifacts",
+      "name": "ARTIFACTS",
+      "domain": "Storage",
+      "truthLayer": "RELEASED_CURRENT",
+      "statusDetail": {
+        "en": "Content-addressed artifact registry, SHA256 checksum verification, and export vault verified in RC1.",
+        "es": "Registro de artefactos direccionado por contenido, verificación de checksum SHA256 y bóveda de exportación verificada en RC1."
+      },
+      "headline": {
+        "en": "What the system produced.",
+        "es": "Qué produjo el sistema."
+      },
+      "lead": {
+        "en": "Maintains content-addressed storage for all verified exports, cut lists, EDL files, prompt bundles, and master video renders.",
+        "es": "Mantiene almacenamiento direccionado por contenido para todas las exportaciones verificadas, listas de corte, archivos EDL, paquetes de prompts y renders de video master."
+      },
+      "problemSolved": {
+        "en": "Prevents lost media files and broken asset references by guaranteeing cryptographic content-addressed retrieval.",
+        "es": "Previene archivos de media perdidos y referencias rotas garantizando recuperación criptográfica direccionada por contenido."
+      },
+      "owns": {
+        "en": ["Content-addressed hash registry (SHA256)", "Immutable artifact storage and vault management", "Export manifest signing"],
+        "es": ["Registro de hashes direccionado por contenido (SHA256)", "Almacenamiento inmutable de artefactos y gestión de bóveda", "Firma de manifiestos de exportación"]
+      },
+      "doesNotOwn": {
+        "en": ["Does NOT own rendering logic", "Does NOT own task metadata"],
+        "es": ["NO posee la lógica de renderizado", "NO posee los metadatos de tareas"]
+      },
+      "inputs": ["RenderedMediaFiles", "PromptBundles", "EDLCutLists"],
+      "outputs": ["ArtifactRecordWithSHA", "ImmutableVaultURI"],
+      "connections": {
+        "en": "Immutable vault serving verified assets to HE, Reviewers, and Publishing.",
+        "es": "Bóveda inmutable que sirve activos verificados a HE, Revisores y Publishing."
+      },
+      "exampleFlow": {
+        "en": "VAV finishes master render -> Artifacts computes SHA256 -> Registers artifact record -> Links to Contenido revision.",
+        "es": "VAV finaliza render master -> Artifacts computa SHA256 -> Registra el artefacto -> Lo enlaza a la revisión de Contenido."
+      },
+      "sephirot": {
+        "en": "Otzar (The Vault / Hash Grid) // Bedrock Artifact Vault",
+        "es": "Otzar (La Bóveda / Rejilla de Hashes) // Bóveda de Artefactos en Roca Madre"
+      }
+    }
+  ]
+}

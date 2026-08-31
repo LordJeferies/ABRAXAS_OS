@@ -42,6 +42,9 @@ async function initPublicStatus() {
   }
   const prefix = depth > 0 ? '../'.repeat(depth) : './';
 
+  // Current Locale Detection
+  const currentLocale = document.documentElement.lang || (window.location.pathname.includes('/es/') ? 'es' : 'en');
+
   // 1. Fetch public truth datasets
   try {
     const [pkRes, bpRes, evRes] = await Promise.all([
@@ -60,7 +63,7 @@ async function initPublicStatus() {
       evidenceData = evJson.items || [];
     }
   } catch (e) {
-    console.warn('[Status V3] Fetching public datasets fallback:', e.message);
+    console.warn('[Status V6] Fetching public datasets fallback:', e.message);
   }
 
   // 2. Initialize Dossier Modal if container exists
@@ -71,7 +74,7 @@ async function initPublicStatus() {
   }
 
   // 3. Initialize 3D Spatial Canvas if present
-  const canvasContainer = document.getElementById('spatial-canvas-container');
+  const canvasContainer = document.getElementById('spatial-pyramid-container') || document.getElementById('spatial-canvas-container');
   let pyramid = null;
   let navigatorInstance = null;
 
@@ -100,11 +103,6 @@ async function initPublicStatus() {
       pyramid.setMode('SYSTEM');
     } else if (defaultMode === 'FLOW') {
       pyramid.setMode('FLOW');
-    }
-
-    if (window.__ABRAXAS_RENDERER_STATE__ === 'FALLBACK_ACTIVE') {
-      const fallbackEl = document.getElementById('fallback-schematic-container');
-      if (fallbackEl) fallbackEl.style.display = 'block';
     }
 
     // 4. Initialize Navigator if present
@@ -153,12 +151,13 @@ async function initPublicStatus() {
   const architectUI = new PublicArchitectUI(pyramid, publicKnowledge.qaPairs || [], dossierModal, publicKnowledge.modules || []);
   window.__ABRAXAS_PUBLIC_ARCHITECT__ = architectUI;
 
-  const drawerEl = document.getElementById('architect-drawer');
+  const drawerEl = document.getElementById('public-architect-drawer') || document.getElementById('architect-drawer');
+  
   window.__ABRAXAS_OPEN_ARCHITECT__ = () => {
     if (drawerEl) {
       drawerEl.classList.add('open');
       drawerEl.setAttribute('aria-hidden', 'false');
-      const input = document.getElementById('drawer-architect-input');
+      const input = document.getElementById('architect-query-input');
       if (input) input.focus();
     }
   };
@@ -174,22 +173,69 @@ async function initPublicStatus() {
     if (!query || !query.trim()) return;
     const res = architectUI.resolveIntent(query);
 
-    const card = document.getElementById('drawer-architect-response-card');
-    const topicEl = document.getElementById('drawer-response-topic');
-    const textEl = document.getElementById('drawer-response-text');
-    const metaEl = document.getElementById('drawer-response-meta');
+    const card = document.getElementById('architect-response-container');
+    const topicEl = document.getElementById('architect-response-topic');
+    const textEl = document.getElementById('architect-response-text');
+    const metaEl = document.getElementById('architect-response-meta');
 
     if (card && topicEl && textEl) {
       card.style.display = 'block';
-      topicEl.textContent = `TOPIC: ${res.title} [Module: ${res.moduleId || 'GLOBAL'}]`;
-      textEl.textContent = res.answerEn;
-      if (metaEl) metaEl.textContent = `Deterministic Authority: YOD Knowledge Graph • Status: VERIFIED_RC1`;
+      topicEl.textContent = `TOPIC: ${res.title} [${res.moduleId || 'SYSTEM'}]`;
+      const ans = (currentLocale === 'es' && res.answerEs) ? res.answerEs : res.answerEn;
+      textEl.textContent = ans;
+      if (metaEl) metaEl.textContent = currentLocale === 'es' ? 'Autoridad Determinista: Grafo de Conocimiento YOD • Estado: RC1 VERIFICADO' : 'Deterministic Authority: YOD Knowledge Graph • Status: VERIFIED_RC1';
     }
 
     if (res.node && pyramid && pyramid.focusModule) {
       pyramid.focusModule(res.node);
     }
   };
+
+  // Wire drawer query input and suggestion chips
+  const queryInput = document.getElementById('architect-query-input');
+  const querySubmit = document.getElementById('architect-query-submit');
+  if (querySubmit && queryInput) {
+    querySubmit.addEventListener('click', () => {
+      window.__ABRAXAS_QUERY_ARCHITECT__(queryInput.value);
+    });
+    queryInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        window.__ABRAXAS_QUERY_ARCHITECT__(queryInput.value);
+      }
+    });
+  }
+
+  document.querySelectorAll('.prompt-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const q = chip.getAttribute('data-q') || chip.textContent;
+      if (queryInput) queryInput.value = q;
+      window.__ABRAXAS_QUERY_ARCHITECT__(q);
+    });
+  });
+
+  // Dedicated Ask Page Execution Handler
+  window.__ABRAXAS_EXECUTE_PAGE_QUERY__ = () => {
+    const pInput = document.getElementById('ask-page-query-input');
+    const pCard = document.getElementById('ask-page-response-container');
+    const pTopic = document.getElementById('ask-page-response-topic');
+    const pText = document.getElementById('ask-page-response-text');
+
+    if (pInput && pInput.value.trim() && pCard && pTopic && pText) {
+      const res = architectUI.resolveIntent(pInput.value);
+      pCard.style.display = 'block';
+      pTopic.textContent = `TOPIC: ${res.title} [${res.moduleId || 'SYSTEM'}]`;
+      pText.textContent = (currentLocale === 'es' && res.answerEs) ? res.answerEs : res.answerEn;
+    }
+  };
+
+  const askPageInput = document.getElementById('ask-page-query-input');
+  if (askPageInput) {
+    askPageInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        window.__ABRAXAS_EXECUTE_PAGE_QUERY__();
+      }
+    });
+  }
 
   // 9. Deep Link Hash Router
   function handleHash() {
