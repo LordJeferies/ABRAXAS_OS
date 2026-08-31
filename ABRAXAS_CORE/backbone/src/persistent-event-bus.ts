@@ -19,6 +19,10 @@ export class PersistentEventBus {
 
   constructor(private readonly storageBackend?: { save(event: PersistentDomainEvent): Promise<void>; load(): Promise<PersistentDomainEvent[]> }) {}
 
+  public async append(input: { eventType: string; contentId: string; actorId: string; reason: string; metadata?: Record<string, unknown> }): Promise<PersistentDomainEvent> {
+    return this.emit(input.eventType, input.contentId, input.actorId, input.reason, input.metadata || {});
+  }
+
   public async emit(
     eventType: string,
     contentId: string,
