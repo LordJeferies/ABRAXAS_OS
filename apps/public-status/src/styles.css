@@ -1407,3 +1407,45 @@ a {
 .treatise-body p {
   margin-bottom: 1.25rem;
 }
+
+/* ==========================================================================
+   Editorial Layout Variants for Story Acts (Section 28)
+   ========================================================================== */
+
+.story-act-section.layout-cover-left {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.story-act-section.layout-bottom-left {
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-bottom: 8rem;
+}
+
+.story-act-section.layout-right-anchored {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.story-act-section.layout-right-anchored .act-content-wrap {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .story-act-section {
+    padding: 0 1.5rem;
+    min-height: 90vh;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+  .story-act-section.layout-bottom-left {
+    padding-bottom: 4rem;
+  }
+  .act-headline {
+    font-size: 2.2rem;
+  }
+  .act-lead {
+    font-size: 1rem;
+  }
+}
