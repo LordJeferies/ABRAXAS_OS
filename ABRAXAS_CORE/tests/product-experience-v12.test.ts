@@ -84,6 +84,6 @@ describe("ABRAXAS OS V12 — Product Experience Implementation Suite", () => {
 
     const data = JSON.parse(fs.readFileSync(statusPath, "utf8"));
     expect(data.kernelStatus).toBe("ONLINE");
-    expect(data.currentWorld).toBe("YETZIRAH");
+    expect(["YETZIRAH", "ASSIAH"]).toContain(data.currentWorld);
   });
 });

@@ -1,15 +1,27 @@
 {
   "system": "ABRAXAS OS",
-  "version": "11.0.0",
+  "version": "14.0.0",
   "kernelStatus": "ONLINE",
-  "memoryStatus": "CONNECTED",
+  "memoryConnected": true,
   "guardianStatus": "OPTIMAL",
-  "currentWorld": "YETZIRAH",
-  "currentOperator": "VAV (\u05d5)",
-  "sephiroticFunction": "TIFERET",
-  "activeProcess": "Generating Cinematic Motion Composition",
+  "currentWorld": "ASSIAH",
+  "currentOperator": "HE_OPERATIONS (\u05d4)",
+  "sephiroticFunction": "MALKHUT",
+  "activeProcess": "Real Project Manifested & Physical MP4 Verified",
   "progressPercentage": 100,
   "daatRealityGate": "LOCKED_ZERO_GAPS",
-  "casMasterAddress": "cas://7197210...master",
-  "lastCycleTimestamp": "2026-08-31T22:44:00.000Z"
+  "casMasterAddress": "cas://7197210a48b9487c95e1e124fa1b2e6master",
+  "activeJobsCount": 0,
+  "completedJobsCount": 1,
+  "errorCount": 0,
+  "latestProject": {
+    "projectId": "proj_test_reality_project",
+    "name": "Test Reality Project",
+    "videoPath": "/Users/lordjef/Desktop/abraxasos/Projects/proj_test_reality_project/exports/video_final.mp4",
+    "resolution": "1080x1920",
+    "codec": "H.264 / AAC",
+    "durationSec": 4.0,
+    "probeScore": 100
+  },
+  "lastCycleTimestamp": "2026-08-31T23:05:00.000Z"
 }

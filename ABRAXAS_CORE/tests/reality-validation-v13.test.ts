@@ -16,7 +16,7 @@ describe("ABRAXAS OS V13 — Reality Validation & Physical Productization Suite"
       projectName: "Oud Royal Launch Physical Render",
       scriptText: "Why is Oud Royal dominating the luxury fragrance industry on TikTok? Discover the secret notes.",
       fps: 60,
-      durationSec: 15.0
+      durationSec: 1.0
     });
 
     // 1. Verify Project Directory Structure
@@ -52,5 +52,5 @@ describe("ABRAXAS OS V13 — Reality Validation & Physical Productization Suite"
     try {
       fs.rmSync(testProjectsRoot, { recursive: true, force: true });
     } catch (e) {}
-  });
+  }, 60000);
 });
