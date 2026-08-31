@@ -1,116 +1,1496 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ABRAXAS OS — System Status</title>
-<style>
-:root{--bg:#0b0d10;--card:#13171c;--line:#262d35;--text:#eef2f7;--muted:#9aa6b2;--ok:#56d364;--warn:#d29922;--plan:#58a6ff;--danger:#f85149;--accent:#c084fc}
-*{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#090b0e,#11151a 45%,#0b0d10);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-header{padding:40px 24px 22px;max-width:1200px;margin:auto}.kicker{color:var(--accent);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px}
-h1{font-size:clamp(34px,6vw,68px);line-height:.95;margin:10px 0 18px;letter-spacing:-.05em}.lead{max-width:850px;color:var(--muted);font-size:17px;line-height:1.65}
-main{max-width:1200px;margin:auto;padding:0 24px 80px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.panel{background:rgba(19,23,28,.92);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.18)}
-.span12{grid-column:span 12}.span8{grid-column:span 8}.span6{grid-column:span 6}.span4{grid-column:span 4}
-@media(max-width:900px){.span8,.span6,.span4{grid-column:span 12}}
-h2{margin:0 0 14px;font-size:22px} h3{margin:0 0 8px;font-size:17px}.muted{color:var(--muted)} .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
-.badge{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.05em;border:1px solid var(--line)}
-.GREEN{color:var(--ok);background:rgba(86,211,100,.08)} .ACTIVE,.DESIGN_READY,.MIGRATION_DESIGN,.DESIGN_ACTIVE,.CURRENT_BASELINE_GREEN{color:var(--warn);background:rgba(210,153,34,.08)} .PLANNED{color:var(--plan);background:rgba(88,166,255,.08)}
-.module{display:flex;flex-direction:column;gap:12px}.bar{height:8px;background:#20262d;border-radius:999px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--plan));border-radius:inherit}
-.row{display:flex;justify-content:space-between;gap:12px;align-items:center}.small{font-size:12px}.tasks{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tasks ul{margin:8px 0 0;padding-left:18px;color:var(--muted);line-height:1.55}.tasks b{font-size:12px;text-transform:uppercase;letter-spacing:.08em}
-.arch{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:center}.box{padding:16px 10px;text-align:center;border:1px solid var(--line);border-radius:14px;background:#0f1318}.box strong{display:block;font-size:15px}.box span{display:block;color:var(--muted);font-size:11px;margin-top:4px}.center{grid-column:2/5;background:linear-gradient(135deg,rgba(192,132,252,.11),rgba(88,166,255,.09))}
-.arrow{text-align:center;color:#66717e;font-size:20px}.road{display:grid;gap:8px}.phase{display:grid;grid-template-columns:55px 1fr auto;gap:12px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#0f1318}.phase .state{font-size:11px;font-weight:800;color:var(--muted)}
-code{background:#090c10;padding:2px 6px;border-radius:6px;border:1px solid #20262d}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tab{background:#0f1318;color:var(--muted);border:1px solid var(--line);padding:8px 11px;border-radius:10px;cursor:pointer}.tab.active{color:var(--text);border-color:#6e40c9;background:rgba(110,64,201,.18)}.tabpane{display:none}.tabpane.active{display:block}
-footer{max-width:1200px;margin:auto;padding:0 24px 50px;color:var(--muted);font-size:12px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABRAXAS OS — Public Status &amp; Spatial Architecture</title>
+  <style>
+    :root {
+      --bg: #070a0f;
+      --surface: #0f1520;
+      --surface-elevated: #162030;
+      --surface-glass: rgba(15, 21, 32, 0.88);
+      --border: #223046;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --text: #c5d1de;
+      --text-bright: #ffffff;
+      --muted: #7d8b9f;
+      --primary: #2563eb;
+      --primary-hover: #3b82f6;
+      --accent: #38bdf8;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: "SF Mono", Monaco, "Fira Code", monospace;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Liquid Glass Sticky Header */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--surface-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0.85rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .brand h1 {
+      font-size: 1.3rem;
+      color: var(--text-bright);
+      letter-spacing: -0.02em;
+    }
+    .status-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.875rem;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .nav-links a:hover, .nav-links a:focus-visible {
+      color: var(--text-bright);
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 0.875rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .dropdown-btn:hover, .dropdown-btn:focus-visible {
+      color: var(--text-bright);
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.5rem 0;
+      min-width: 220px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      z-index: 210;
+    }
+    .dropdown-content.open {
+      display: block;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: var(--text);
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover, .dropdown-content a:focus-visible {
+      background: var(--surface);
+      color: var(--accent);
+    }
+
+    /* Mobile Hamburger */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-bright);
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 58px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--surface-glass);
+      backdrop-filter: blur(20px);
+      z-index: 190;
+      padding: 2rem;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .mobile-drawer.open {
+      display: flex;
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero-chapter {
+      padding: 4.5rem 0 3rem;
+      text-align: center;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .hero-title {
+      font-size: clamp(2.3rem, 5.5vw, 3.8rem);
+      color: var(--text-bright);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .hero-tagline {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 780px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* Spatial Stage Dual Canvas Container */
+    .spatial-stage-container {
+      position: relative;
+      width: 100%;
+      height: 440px;
+      background: radial-gradient(circle at center, rgba(37, 99, 235, 0.14) 0%, rgba(9, 13, 19, 0) 70%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 4rem;
+      overflow: hidden;
+    }
+    #spatial-stage-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    #webgl-spatial-canvas, #fallback-spatial-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .stage-overlay-meta {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.5rem;
+      right: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: rgba(15, 21, 32, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Chapters & Headings */
+    .chapter {
+      padding: 4rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .chapter-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .chapter-heading {
+      font-size: 2rem;
+      color: var(--text-bright);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      color: var(--text-bright);
+      margin-bottom: 1rem;
+    }
+    ul.check-list, ul.cross-list {
+      list-style: none;
+    }
+    ul.check-list li, ul.cross-list li {
+      margin-bottom: 0.65rem;
+      padding-left: 1.6rem;
+      position: relative;
+    }
+    ul.check-list li::before {
+      content: "✓";
+      color: var(--success);
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+    }
+    ul.cross-list li::before {
+      content: "✕";
+      color: var(--danger);
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+    }
+
+    /* Apple-style Highlights Carousel */
+    .carousel-section {
+      position: relative;
+      margin: 2rem 0;
+    }
+    .carousel-controls {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .carousel-btn {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-bright);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.15s ease;
+    }
+    .carousel-btn:hover, .carousel-btn:focus-visible {
+      background: var(--primary);
+    }
+    .carousel-track {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+      scrollbar-width: thin;
+    }
+    .carousel-card {
+      flex: 0 0 380px;
+      scroll-snap-align: start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 280px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .carousel-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .carousel-card-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .carousel-card h4 {
+      font-size: 1.4rem;
+      color: var(--text-bright);
+      margin: 0.5rem 0;
+    }
+    .carousel-card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Distinct Semantic Badges */
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .tag-verified {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--success);
+      color: var(--success);
+    }
+    .tag-under-audit {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+    .tag-partial {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--warning);
+      color: var(--warning);
+    }
+    .tag-contract {
+      background: rgba(129, 140, 248, 0.15);
+      border: 1px solid #818cf8;
+      color: #818cf8;
+    }
+    .tag-planned {
+      background: rgba(100, 116, 139, 0.15);
+      border: 1px solid #64748b;
+      color: #94a3b8;
+    }
+
+    /* Explorer */
+    .explorer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .explorer-tab {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
+      min-height: 44px;
+    }
+    .explorer-tab:hover, .explorer-tab.active, .explorer-tab:focus-visible {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+    .explorer-pane {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 768px) {
+      .explorer-pane { grid-template-columns: 1fr; }
+    }
+
+    /* Scroll-Driven Sticky Story */
+    .sticky-story-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .sticky-story-container { grid-template-columns: 1fr; }
+    }
+    .sticky-story-stage {
+      position: sticky;
+      top: 5.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      text-align: center;
+    }
+    .story-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .story-step.active-step {
+      border-color: var(--accent);
+      background: var(--surface-elevated);
+    }
+
+    /* Proof Grid */
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .proof-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .proof-media-wrapper {
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      height: 180px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+    }
+    .proof-media-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.25s ease;
+    }
+    .proof-media-wrapper:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Roadmap */
+    .roadmap-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .roadmap-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .gate-badge {
+      font-weight: 700;
+      font-size: 0.9rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    /* Chat Section */
+    .chat-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-top: 1.5rem;
+    }
+    .starter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .starter-pill {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.4rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      min-height: 38px;
+    }
+    .starter-pill:hover, .starter-pill:focus-visible {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+    .chat-history {
+      max-height: 380px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-bottom: 1.25rem;
+      padding-right: 0.5rem;
+    }
+    .chat-bubble {
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .chat-bubble.user {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      align-self: flex-end;
+      color: var(--text-bright);
+      max-width: 80%;
+    }
+    .chat-bubble.assistant {
+      background: rgba(37, 99, 235, 0.12);
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      align-self: flex-start;
+      color: var(--text);
+      max-width: 85%;
+    }
+    .chat-form {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .chat-input {
+      flex: 1;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-bright);
+      padding: 0.85rem 1.2rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      min-height: 44px;
+    }
+    .chat-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease;
+      min-height: 44px;
+    }
+    .chat-btn:hover, .chat-btn:focus-visible {
+      background: var(--primary-hover);
+    }
+    .chat-reset-btn {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      min-height: 44px;
+    }
+    .chat-reset-btn:hover, .chat-reset-btn:focus-visible {
+      color: var(--text-bright);
+    }
+
+    /* Calm Mode for Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="kicker">ABRAXAS OS · System Creation Dashboard</div>
-  <h1>Estado, lógica y roadmap.</h1>
-  <p class="lead">Panel versionable para GitHub. Muestra qué existe, qué está diseñado, qué falta y cómo se conectan YOD, Lienzo, He, Shim, VAV, Arquitecto, Publishing y Metrics. Los porcentajes son avance de roadmap por tareas, no cobertura automática de código.</p>
-</header>
-<main>
-<div class="grid">
-  <section class="panel span12">
-    <div class="row"><div><h2>Arquitectura</h2><div class="muted">YOD piensa · Lienzo conecta · He opera · Shim resuelve · VAV produce · Arquitecto acompaña.</div></div><span class="badge GREEN">FOUNDATION V2</span></div>
-    <div class="arch" style="margin-top:18px">
-      <div class="box"><strong>YOD</strong><span>Intelligence / memory</span></div>
-      <div class="arrow">→</div>
-      <div class="box center"><strong>LIENZO</strong><span>Living versioned content object</span></div>
-      <div class="arrow">←</div>
-      <div class="box"><strong>He</strong><span>Operational window</span></div>
-      <div class="box"><strong>Shim</strong><span>Source evidence / resolve</span></div>
-      <div class="arrow">↘</div>
-      <div class="box center"><strong>VAV</strong><span>Production / artifacts / state</span></div>
-      <div class="arrow">↙</div>
-      <div class="box"><strong>Arquitecto</strong><span>Total production coach</span></div>
+  <!-- Liquid Glass Sticky Global Nav -->
+  <header class="sticky-header">
+    <div class="brand">
+      <h1>ABRAXAS OS</h1>
+      <span class="status-badge" id="system-status-badge">IMPLEMENTED_LOCAL_UNDER_AUDIT</span>
     </div>
-  </section>
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="#what-it-is">ABRAXAS</a>
+      <div class="dropdown">
+        <button class="dropdown-btn" id="system-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-controls="system-dropdown-menu">
+          SYSTEM ▾
+        </button>
+        <div class="dropdown-content" id="system-dropdown-menu" role="menu">
+          <a href="#modules" role="menuitem" onclick="selectExplorerModule('YOD'); closeDropdown();">Intelligence: YOD</a>
+          <a href="#modules" role="menuitem" onclick="selectExplorerModule('LIENZO'); closeDropdown();">Identity: Lienzo</a>
+          <a href="#modules" role="menuitem" onclick="selectExplorerModule('HE'); closeDropdown();">Operations: He</a>
+          <a href="#modules" role="menuitem" onclick="selectExplorerModule('SHIM'); closeDropdown();">Reality: Shim</a>
+          <a href="#modules" role="menuitem" onclick="selectExplorerModule('VAV'); closeDropdown();">Production: VAV</a>
+          <a href="#modules" role="menuitem" onclick="selectExplorerModule('ARQUITECTO'); closeDropdown();">Guidance: Arquitecto</a>
+          <a href="#modules" role="menuitem" onclick="selectExplorerModule('PIPELINE_ENGINE'); closeDropdown();">Infra: Pipeline</a>
+          <a href="#modules" role="menuitem" onclick="selectExplorerModule('METRICS'); closeDropdown();">Infra: Metrics</a>
+        </div>
+      </div>
+      <a href="#highlights">PRODUCTS</a>
+      <a href="#roadmap">ROADMAP</a>
+      <a href="#story">STATUS</a>
+      <a href="#public-architect">ASK ABRAXAS</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle mobile menu">☰</button>
+  </header>
 
-  <section class="panel span12">
-    <div class="tabs">
-      <button class="tab active" data-tab="modules">Módulos</button>
-      <button class="tab" data-tab="flow">Flujo</button>
-      <button class="tab" data-tab="roadmap">Roadmap</button>
-      <button class="tab" data-tab="git">Git</button>
-    </div>
-    <div id="modules" class="tabpane active"><div id="moduleGrid" class="grid"></div></div>
-    <div id="flow" class="tabpane">
-      <h2>Flujo de un contenido</h2>
-      <div class="road">
-        <div class="phase"><b>01</b><span>YOD detecta oportunidad o recibe idea → crea Plan/Lienzo.</span><span class="state">CREATE</span></div>
-        <div class="phase"><b>02</b><span>He lo muestra y permite editar estrategia, copy, visuales y plan.</span><span class="state">OPERATE</span></div>
-        <div class="phase"><b>03</b><span>Arquitecto guía grabación, producción, navegación y decisiones.</span><span class="state">COACH</span></div>
-        <div class="phase"><b>04</b><span>Shim analiza source real → candidatos → gaps → RESOLVED.</span><span class="state">RESOLVE</span></div>
-        <div class="phase"><b>05</b><span>VAV produce edit/captions/motions/visuals y devuelve artefactos/estados.</span><span class="state">PRODUCE</span></div>
-        <div class="phase"><b>06</b><span>He refleja READY/REVIEW/OUT_OF_SYNC por componente.</span><span class="state">TRACK</span></div>
-        <div class="phase"><b>07</b><span>Publishing crea targets independientes por red y snapshot.</span><span class="state">PUBLISH</span></div>
-        <div class="phase"><b>08</b><span>Metrics sincroniza resultados → He visualiza → YOD aprende.</span><span class="state">LEARN</span></div>
+  <!-- Mobile Navigation Drawer -->
+  <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <a href="#what-it-is" onclick="toggleMobileDrawer()">ABRAXAS</a>
+    <a href="#highlights" onclick="toggleMobileDrawer()">PRODUCTS</a>
+    <a href="#modules" onclick="toggleMobileDrawer()">SYSTEM MODULES</a>
+    <a href="#story" onclick="toggleMobileDrawer()">SYSTEM STORY</a>
+    <a href="#proof" onclick="toggleMobileDrawer()">PROOF</a>
+    <a href="#roadmap" onclick="toggleMobileDrawer()">ROADMAP</a>
+    <a href="#public-architect" onclick="toggleMobileDrawer()">ASK ABRAXAS</a>
+  </nav>
+
+  <main class="container">
+    <!-- Chapter 0: Hero & Spatial Stage -->
+    <section class="hero-chapter" id="hero">
+      <p class="hero-eyebrow">Operating System Architecture</p>
+      <h2 class="hero-title">Audiovisual Intelligence &amp;<br>Operational Production System</h2>
+      <p class="hero-tagline">
+        A deterministic, local-first operating system unifying forensic content intelligence (Yod), team operations (He), and video synthesis engines (VAV).
+      </p>
+
+      <div class="spatial-stage-container">
+        <div id="spatial-stage-wrapper">
+          <canvas id="webgl-spatial-canvas" aria-label="3D WebGL Constellation of 10 ABRAXAS modules"></canvas>
+          <canvas id="fallback-spatial-canvas" aria-label="2D Fallback Constellation of 10 ABRAXAS modules"></canvas>
+        </div>
+        <div class="stage-overlay-meta">
+          <span>SPATIAL CONSTELLATION: <strong id="stage-render-mode">INITIALIZING...</strong></span>
+          <span>FOCUSED NODES: <strong id="stage-focused-node" style="color: var(--accent);">CORE SYSTEM</strong></span>
+          <span>10 CANONICAL MODULES MAPPED</span>
+        </div>
       </div>
-    </div>
-    <div id="roadmap" class="tabpane"><div id="roadmapList" class="road"></div></div>
-    <div id="git" class="tabpane">
-      <h2>Git / GitHub</h2>
-      <p>Repo canónico: <code>~/Desktop/abraxasos</code></p>
-      <p>Baseline reportado: <code id="sha">—</code></p>
-      <p class="muted">Antes de publicar un checkpoint: revisar status, archivos grandes, secretos, staged paths, push y SHA local == remoto.</p>
-    </div>
-  </section>
-</div>
-</main>
-<footer>ABRAXAS OS · Status dashboard versionable. Actualizar <code>system-status.json</code> al cerrar cada fase.</footer>
-<script>
-const fallback = {"generated_at": "2026-08-28", "note": "Los porcentajes son avance de roadmap basado en tareas definidas, no cobertura de tests ni una medición automática del código.", "git": {"reported_baseline": "0c4fa1a60487097b0604818bc668bf4d8b9ea527", "state": "GREEN_REPORTED__VERIFY_LIVE_BEFORE_UPDATE"}, "modules": [{"id": "monorepo", "name": "ABRAXAS OS / Git", "status": "GREEN", "progress": 100, "done": ["Monorepo raíz definido", "GitHub privado sincronizado según último reporte", "Política Git establecida"], "next": ["Verificar SHA antes de cada nueva fase"]}, {"id": "foundation", "name": "Arquitectura / Canon V2", "status": "ACTIVE", "progress": 85, "done": ["Roles YOD/He/Shim/VAV/Arquitecto definidos", "Lienzo definido", "Publishing/Metrics definidos", "Roadmap definido"], "next": ["Reconciliar canon con código actual", "Cerrar schemas finales"]}, {"id": "yod", "name": "YOD", "status": "DESIGN_READY", "progress": 28, "done": ["Rol definido", "Client Core spec", "Opportunity Engine spec", "Prompt/Copy/Visual/Motion canon", "Structure seed"], "next": ["Forensic inventory real", "Schemas finales", "Implementación engine/store"]}, {"id": "he", "name": "He", "status": "MIGRATION_DESIGN", "progress": 35, "done": ["Rol actualizado", "Lienzo UI definido", "Workflow/Calendar/Backlog definidos", "Legacy/base previa existente"], "next": ["Reconciliar He actual", "Implementar vista unificada YOD/Lienzo", "Tasks/team", "Metrics/Publishing UI"]}, {"id": "shim", "name": "Shim", "status": "DESIGN_ACTIVE", "progress": 25, "done": ["Rol definido", "Structure matching concept", "Gap loop", "Copy sync"], "next": ["Auditar implementación actual", "Contratos", "Candidate/Resolve engine"]}, {"id": "vav", "name": "VAV", "status": "CURRENT_BASELINE_GREEN", "progress": 62, "done": ["Base funcional actual preservada", "Captions verify histórico", "Motions/Shared packages versionables"], "next": ["Lienzo bridge", "Artifact/Event updates", "He state sync", "Production component statuses"]}, {"id": "architect", "name": "Arquitecto", "status": "DESIGN_READY", "progress": 24, "done": ["Rol definido", "Context model", "Suggestion model", "Total Production Coach"], "next": ["System Knowledge registry", "UI presence", "Action contracts", "Runtime/AI integration"]}, {"id": "publishing", "name": "Publishing", "status": "PLANNED", "progress": 12, "done": ["Publication Target model", "Adapter contract", "Calendar behavior"], "next": ["Manual export flow", "Provider registry", "Meta/TikTok/YouTube/LinkedIn adapters"]}, {"id": "metrics", "name": "Metrics", "status": "PLANNED", "progress": 12, "done": ["Raw/normalized model", "Snapshots", "YOD learning loop"], "next": ["Manual/CSV import", "He dashboard", "API sync"]}, {"id": "ai", "name": "AI Roundtrip / Providers", "status": "PLANNED", "progress": 15, "done": ["External roundtrip defined", "Structured result concept", "Provider-independent architecture"], "next": ["Schemas", "Parser/validator", "Internal provider interface"]}], "roadmap": [["F0", "Baseline / Safety", "GREEN"], ["F1", "Forensic Content Intelligence", "NEXT"], ["F2", "Contracts First", "NEXT"], ["F3", "YOD V1", "PLANNED"], ["F4", "He V1", "PLANNED"], ["F5", "Shim V1", "PLANNED"], ["F6", "VAV Integration", "PLANNED"], ["F7", "Visual Production", "PLANNED"], ["F8", "Arquitecto V1", "PLANNED"], ["F9", "Publishing", "PLANNED"], ["F10", "Metrics", "PLANNED"], ["F11", "Platform APIs", "PLANNED"], ["F12", "Internal AI Providers", "PLANNED"]]};
-async function loadData(){
-  try{
-    const r=await fetch('./system-status.json',{cache:'no-store'});
-    if(r.ok) return await r.json();
-  }catch(e){}
-  return fallback;
-}
-function badgeClass(s){return ['GREEN','PLANNED'].includes(s)?s:'ACTIVE'}
-function render(d){
-  document.getElementById('sha').textContent=d.git?.reported_baseline||'—';
-  const grid=document.getElementById('moduleGrid');
-  grid.innerHTML=(d.modules||[]).map(m=>`
-    <article class="panel span4 module">
-      <div class="row"><h3>${m.name}</h3><span class="badge ${badgeClass(m.status)}">${m.status}</span></div>
-      <div class="row small"><span class="muted">Roadmap progress</span><b>${m.progress}%</b></div>
-      <div class="bar"><div class="fill" style="width:${m.progress}%"></div></div>
-      <div class="tasks">
-        <div><b>Hecho</b><ul>${(m.done||[]).map(x=>`<li>${x}</li>`).join('')}</ul></div>
-        <div><b>Siguiente</b><ul>${(m.next||[]).map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    </section>
+
+    <!-- Chapter 1: Definition -->
+    <section class="chapter" id="what-it-is">
+      <p class="chapter-eyebrow">Chapter 1</p>
+      <h2 class="chapter-heading">System Definition &amp; Boundaries</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>WHAT ABRAXAS OS IS</h3>
+          <ul class="check-list">
+            <li>An integrated content intelligence and operational AV operating system.</li>
+            <li>A local-first, deterministic production pipeline bridging editorial concepts with render engines.</li>
+            <li>A unified task, approval, deadline, and time tracking operational core (He).</li>
+            <li>A non-destructive cuts and programmatic visual motion synthesis engine (VAV).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>WHAT ABRAXAS OS IS NOT</h3>
+          <ul class="cross-list">
+            <li>Not a generic project management SaaS wrapper.</li>
+            <li>Not a simple third-party AI chatbot prompt wrapper.</li>
+            <li>Not an automated spam publishing bot.</li>
+            <li>Not a destructive video editor.</li>
+          </ul>
+        </div>
       </div>
-    </article>`).join('');
-  document.getElementById('roadmapList').innerHTML=(d.roadmap||[]).map(x=>`
-    <div class="phase"><b>${x[0]}</b><span>${x[1]}</span><span class="state">${x[2]}</span></div>`).join('');
-}
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
-  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-  document.querySelectorAll('.tabpane').forEach(x=>x.classList.remove('active'));
-  b.classList.add('active'); document.getElementById(b.dataset.tab).classList.add('active');
-});
-loadData().then(render);
-</script>
+    </section>
+
+    <!-- Chapter 2: Get the Highlights (Apple Carousel) -->
+    <section class="chapter" id="highlights">
+      <p class="chapter-eyebrow">Chapter 2</p>
+      <h2 class="chapter-heading">Get the Highlights.</h2>
+      <div class="carousel-section">
+        <div class="carousel-controls">
+          <button class="carousel-btn" onclick="scrollCarousel(-1)" aria-label="Previous Highlight">&lt;</button>
+          <button class="carousel-btn" onclick="scrollCarousel(1)" aria-label="Next Highlight">&gt;</button>
+        </div>
+        <div class="carousel-track" id="highlights-track">
+          <div class="carousel-card">
+            <div>
+              <span class="carousel-card-tag">Intelligence</span>
+              <h4>Yod</h4>
+              <p>Forensic content pattern registries, hook taxonomies, and structural provenance truth.</p>
+            </div>
+            <span class="tag tag-partial">PARTIAL_FOUNDATION</span>
+          </div>
+          <div class="carousel-card">
+            <div>
+              <span class="carousel-card-tag">Operations</span>
+              <h4>He Operations Core</h4>
+              <p>Unified task graphs, typed approvals, deadline risk tracking, and in-app notification center.</p>
+            </div>
+            <span class="tag tag-verified">VERIFIED_LOCAL</span>
+          </div>
+          <div class="carousel-card">
+            <div>
+              <span class="carousel-card-tag">Production</span>
+              <h4>VAV Engine</h4>
+              <p>Non-destructive FFmpeg multi-segment cuts, Remotion motion graphics, and platform safe zones.</p>
+            </div>
+            <span class="tag tag-verified">VERIFIED_LOCAL</span>
+          </div>
+          <div class="carousel-card">
+            <div>
+              <span class="carousel-card-tag">Identity</span>
+              <h4>Lienzo Canvas</h4>
+              <p>Persistent, versioned semantic scene and component structures serving as Source of Truth.</p>
+            </div>
+            <span class="tag tag-contract">CONTRACT_ONLY</span>
+          </div>
+          <div class="carousel-card">
+            <div>
+              <span class="carousel-card-tag">Guidance</span>
+              <h4>Public Architect V1</h4>
+              <p>Deterministic bilingual architecture guide with real-time spatial node spotlighting.</p>
+            </div>
+            <span class="tag tag-verified">VERIFIED_LOCAL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 3: Take a Closer Look (Interactive Module Explorer) -->
+    <section class="chapter" id="modules">
+      <p class="chapter-eyebrow">Chapter 3</p>
+      <h2 class="chapter-heading">Take a Closer Look.</h2>
+      <div class="explorer-nav" id="explorer-nav">
+        <!-- Generated dynamically -->
+      </div>
+      <div class="explorer-pane" id="explorer-pane">
+        <!-- Updated dynamically on tab click -->
+      </div>
+    </section>
+
+    <!-- Chapter 4: Scroll-Driven Sticky System Story -->
+    <section class="chapter" id="story">
+      <p class="chapter-eyebrow">Chapter 4</p>
+      <h2 class="chapter-heading">The System Story</h2>
+      <div class="sticky-story-container">
+        <div class="sticky-story-stage">
+          <h4 id="story-stage-title" style="color: var(--text-bright); font-size: 1.3rem; margin-bottom: 0.5rem;">System Overview</h4>
+          <p id="story-stage-desc" style="color: var(--muted); font-size: 0.95rem;">ABRAXAS coordinates 10 specialized domains in a closed-loop engineering circuit.</p>
+          <div style="margin-top: 1.5rem; padding: 1rem; background: var(--surface-elevated); border-radius: 8px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent);">
+            CURRENT FOCUS: <span id="story-stage-focus">ABRAXAS OS</span>
+          </div>
+        </div>
+        <div class="sticky-story-steps">
+          <div class="story-step" data-mod="YOD" data-title="Intelligence First" data-desc="Yod establishes structured hook and content patterns before any video is produced.">
+            <span class="carousel-card-tag">Step 1</span>
+            <h4>1. Intelligence (Yod)</h4>
+            <p>Content creation begins with forensic criteria and structural patterns, avoiding blank-slate guesswork.</p>
+          </div>
+          <div class="story-step" data-mod="LIENZO" data-title="Persistent Identity" data-desc="Lienzo defines versioned scene blocks and creative components.">
+            <span class="carousel-card-tag">Step 2</span>
+            <h4>2. Authoring (Lienzo)</h4>
+            <p>Scripts and scene definitions are structured into persistent semantic identity objects.</p>
+          </div>
+          <div class="story-step" data-mod="HE" data-title="Operational Governance" data-desc="He schedules recording sessions, tasks, and multi-reviewer approvals.">
+            <span class="carousel-card-tag">Step 3</span>
+            <h4>3. Operations (He)</h4>
+            <p>Production milestones, team workload, edit locks, and deadline risks are governed with strict RBAC.</p>
+          </div>
+          <div class="story-step" data-mod="VAV" data-title="Deterministic Synthesis" data-desc="VAV cuts video with local FFmpeg and renders motion with Remotion.">
+            <span class="carousel-card-tag">Step 4</span>
+            <h4>4. Production (VAV)</h4>
+            <p>Non-destructive editorial cuts and programmatic motion graphics are compiled into master video.</p>
+          </div>
+          <div class="story-step" data-mod="METRICS" data-title="Target Architecture: Continuous Feedback" data-desc="Target Loop (PLANNED): Metrics will feed engagement telemetry back into Yod pattern intelligence.">
+            <span class="carousel-card-tag">Step 5 (Target Loop)</span>
+            <h4>5. Telemetry Feedback Loop <span class="tag tag-planned" style="font-size: 0.65rem;">PLANNED</span></h4>
+            <p>Target architecture: Performance signals feed directly back into pattern registries, closing the system circuit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 5: System Architecture & Concrete Product Evidence -->
+    <section class="chapter" id="proof">
+      <p class="chapter-eyebrow">Chapter 5</p>
+      <h2 class="chapter-heading">Product Architecture &amp; Concrete Evidence</h2>
+
+      <!-- Subsection A: EXPLAIN (Architecture Diagrams) -->
+      <h3 style="font-size: 1.3rem; color: var(--text-bright); margin-top: 1rem; margin-bottom: 0.75rem;">
+        1. System Architecture &amp; Workflow Illustrations
+      </h3>
+      <p style="color: var(--muted); margin-bottom: 1.25rem; font-size: 0.9rem;">
+        Structural models explaining non-destructive multi-segment cutting, motion graphic safe-zone constraints, and operational blocker trees.
+      </p>
+
+      <div class="proof-grid" style="margin-bottom: 3rem;">
+        <div class="proof-card">
+          <div class="proof-media-wrapper" title="SYSTEM DIAGRAM: VAV Cut Pipeline Model">
+            <img src="media/vav-cuts-proof.svg" alt="ARCHITECTURE ILLUSTRATION: VAV Non-Destructive FFmpeg Cut Engine Timeline" />
+          </div>
+          <span class="tag tag-contract" style="margin-bottom: 0.35rem;">ARCHITECTURE ILLUSTRATION</span>
+          <h4>Non-Destructive Cut Architecture</h4>
+          <p style="font-size: 0.85rem; color: var(--muted);">Conceptual diagram of master video stream isolation, multi-range segments, and lossless audio synchronization.</p>
+        </div>
+
+        <div class="proof-card">
+          <div class="proof-media-wrapper" title="WORKFLOW EXAMPLE: Remotion Motion Safe Zones">
+            <img src="media/vav-motion-proof.svg" alt="SYSTEM DIAGRAM: Remotion Motion Graphics and Safe Zone Model" />
+          </div>
+          <span class="tag tag-contract" style="margin-bottom: 0.35rem;">SYSTEM DIAGRAM</span>
+          <h4>Motion &amp; Safe-Zone Grammar</h4>
+          <p style="font-size: 0.85rem; color: var(--muted);">Visual model of 9:16 platform safe-zone margins and collision-avoidance layering for motion components.</p>
+        </div>
+
+        <div class="proof-card">
+          <div class="proof-media-wrapper" title="WORKFLOW EXAMPLE: He Blocker Resolution Tree">
+            <img src="media/he-operations-proof.svg" alt="WORKFLOW EXAMPLE: He Operations Blocker and Kanban Model" />
+          </div>
+          <span class="tag tag-contract" style="margin-bottom: 0.35rem;">WORKFLOW EXAMPLE</span>
+          <h4>Operational Governance Model</h4>
+          <p style="font-size: 0.85rem; color: var(--muted);">Illustrative diagram of typed blocker precedence, Kanban state transitions, and reviewer assignment trees.</p>
+        </div>
+      </div>
+
+      <!-- Subsection B: PROVE (Real Release-Safe Evidence) -->
+      <h3 style="font-size: 1.3rem; color: var(--text-bright); margin-bottom: 0.75rem;">
+        2. Real Release-Safe Product Evidence
+      </h3>
+      <p style="color: var(--muted); margin-bottom: 1.25rem; font-size: 0.9rem;">
+        Direct artifacts captured from local engine executions and browser runtimes.
+      </p>
+
+      <div class="proof-grid">
+        <div class="proof-card">
+          <div class="proof-media-wrapper" title="Click to view full real Remotion render">
+            <img src="media/evidence/vav-motion-remotion-render.png" alt="REAL RENDER STILL: Remotion Motion Composition Output" style="object-fit: cover;" />
+          </div>
+          <span class="tag tag-verified" style="margin-bottom: 0.35rem;">REAL_RENDER_STILL</span>
+          <h4>Remotion Motion Render (Frame 22)</h4>
+          <p style="font-size: 0.85rem; color: var(--muted);">Direct frame output rendered by <code>@remotion/renderer</code> (<code>renderStill</code>) evaluating the <code>PUSH_ZOOM</code> motion preset.</p>
+        </div>
+
+        <div class="proof-card">
+          <div class="proof-media-wrapper" title="Click to view real He application screenshot">
+            <img src="media/evidence/he-operations-desk.png" alt="REAL BROWSER RUNTIME: He Operations Desk Interface" style="object-fit: cover;" />
+          </div>
+          <span class="tag tag-verified" style="margin-bottom: 0.35rem;">REAL_BROWSER_SCREENSHOT</span>
+          <h4>He Operations Desk Runtime</h4>
+          <p style="font-size: 0.85rem; color: var(--muted);">Browser runtime capturing the live Tasks manager, active blocker indicators, and team workload summary.</p>
+        </div>
+
+        <div class="proof-card">
+          <div class="proof-media-wrapper" title="SYSTEM VERIFICATION: Cut Engine E2E Test" style="background: #0d131f; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; text-align: center;">
+            <span style="font-size: 2rem; margin-bottom: 0.5rem;">🎬</span>
+            <code style="font-size: 0.75rem; color: var(--accent);">packages/cut-engine/src/e2e.test.ts</code>
+          </div>
+          <span class="tag tag-verified" style="margin-bottom: 0.35rem;">CUTS_RUNTIME_VERIFIED_BY_TEST</span>
+          <h4>FFmpeg Multi-Segment Cut Engine</h4>
+          <p style="font-size: 0.85rem; color: var(--muted);">Local FFmpeg execution test validating non-destructive segment assembly, exact frame duration, and master stream immutability.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 6: Roadmap -->
+    <section class="chapter" id="roadmap">
+      <p class="chapter-eyebrow">Chapter 6</p>
+      <h2 class="chapter-heading">Engineering Roadmap &amp; Gate Verification</h2>
+      <div class="roadmap-list" id="roadmap-list">
+        <!-- Populated from roadmap.json -->
+      </div>
+    </section>
+
+    <!-- Chapter 7: Public Architect V1 -->
+    <section class="chapter" id="public-architect">
+      <p class="chapter-eyebrow">Chapter 7</p>
+      <h2 class="chapter-heading">Public Architect V1 — Deterministic Guide</h2>
+      <p style="color: var(--muted); margin-bottom: 1rem;">
+        Ask questions in English or Spanish. Public Architect queries verified public knowledge and focuses corresponding nodes on the spatial canvas.
+      </p>
+
+      <div class="chat-section">
+        <div class="starter-pills" id="starter-pills">
+          <button class="starter-pill" data-query="What is ABRAXAS OS?">What is ABRAXAS OS?</button>
+          <button class="starter-pill" data-query="What is He?">What is He?</button>
+          <button class="starter-pill" data-query="What is VAV?">What is VAV?</button>
+          <button class="starter-pill" data-query="How do He and VAV relate?">How do He and VAV relate?</button>
+          <button class="starter-pill" data-query="What works now?">What works now?</button>
+          <button class="starter-pill" data-query="¿Qué es ABRAXAS OS?">¿Qué es ABRAXAS OS?</button>
+          <button class="starter-pill" data-query="¿Cómo se relacionan He y VAV?">¿Cómo se relacionan He y VAV?</button>
+        </div>
+
+        <div class="chat-history" id="chat-history">
+          <div class="chat-bubble assistant">
+            Hello! I am Public Architect V1. I can answer questions regarding ABRAXAS OS architecture, canonical modules, and local verified status based strictly on deterministic public knowledge.
+          </div>
+        </div>
+
+        <form class="chat-form" id="chat-form">
+          <label for="chat-input" class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;">Ask Public Architect</label>
+          <input type="text" class="chat-input" id="chat-input" placeholder="Ask about ABRAXAS architecture or module relationships..." autocomplete="off" />
+          <button type="submit" class="chat-btn">Ask</button>
+          <button type="button" class="chat-reset-btn" id="chat-reset-btn" title="Reset conversation">Reset</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let publicKnowledge = null;
+    let focusedNodeIds = ["CORE"];
+
+    // 1. Dual-Canvas Spatial Engine
+    const webglCanvas = document.getElementById('webgl-spatial-canvas');
+    const fallbackCanvas = document.getElementById('fallback-spatial-canvas');
+    const modeLabel = document.getElementById('stage-render-mode');
+    const focusedLabel = document.getElementById('stage-focused-node');
+
+    let gl = null;
+    let glProgram = null;
+    let glBuffer = null;
+
+    try {
+      gl = webglCanvas.getContext('webgl2') || webglCanvas.getContext('webgl');
+      if (gl) {
+        const vsSrc = `
+          attribute vec2 a_pos;
+          attribute vec3 a_col;
+          varying vec3 v_col;
+          void main() {
+            gl_Position = vec4(a_pos, 0.0, 1.0);
+            gl_PointSize = 10.0;
+            v_col = a_col;
+          }
+        `;
+        const fsSrc = `
+          precision mediump float;
+          varying vec3 v_col;
+          void main() {
+            gl_FragColor = vec4(v_col, 1.0);
+          }
+        `;
+        const vs = gl.createShader(gl.VERTEX_SHADER);
+        gl.shaderSource(vs, vsSrc);
+        gl.compileShader(vs);
+        const vsOk = gl.getShaderParameter(vs, gl.COMPILE_STATUS);
+
+        const fs = gl.createShader(gl.FRAGMENT_SHADER);
+        gl.shaderSource(fs, fsSrc);
+        gl.compileShader(fs);
+        const fsOk = gl.getShaderParameter(fs, gl.COMPILE_STATUS);
+
+        if (!vsOk || !fsOk) {
+          gl = null;
+          glProgram = null;
+        } else {
+          glProgram = gl.createProgram();
+          gl.attachShader(glProgram, vs);
+          gl.attachShader(glProgram, fs);
+          gl.linkProgram(glProgram);
+          const linkOk = gl.getProgramParameter(glProgram, gl.LINK_STATUS);
+          if (!linkOk) {
+            gl = null;
+            glProgram = null;
+          } else {
+            glBuffer = gl.createBuffer();
+          }
+        }
+      }
+    } catch (e) {
+      gl = null;
+    }
+
+    const activeRenderMode = gl && glProgram ? "WEBGL_ACTIVE" : "FALLBACK_ACTIVE";
+    window.__ABRAXAS_RENDERER_STATE__ = activeRenderMode;
+    modeLabel.textContent = activeRenderMode;
+
+    if (activeRenderMode === "WEBGL_ACTIVE") {
+      webglCanvas.style.display = "block";
+      fallbackCanvas.style.display = "none";
+    } else {
+      webglCanvas.style.display = "none";
+      fallbackCanvas.style.display = "block";
+    }
+
+    const moduleNodes = [
+      { id: "YOD", name: "Yod", angle: 0, color: "#38bdf8", r: 0.22, g: 0.74, b: 0.97 },
+      { id: "LIENZO", name: "Lienzo", angle: 0.628, color: "#818cf8", r: 0.51, g: 0.55, b: 0.97 },
+      { id: "HE", name: "He", angle: 1.256, color: "#10b981", r: 0.06, g: 0.73, b: 0.51 },
+      { id: "SHIM", name: "Shim", angle: 1.884, color: "#a78bfa", r: 0.65, g: 0.55, b: 0.98 },
+      { id: "VAV", name: "VAV", angle: 2.512, color: "#f59e0b", r: 0.96, g: 0.62, b: 0.04 },
+      { id: "ARQUITECTO", name: "Arquitecto", angle: 3.14, color: "#ec4899", r: 0.93, g: 0.28, b: 0.6 },
+      { id: "PIPELINE_ENGINE", name: "Pipeline", angle: 3.768, color: "#64748b", r: 0.39, g: 0.45, b: 0.55 },
+      { id: "AI_RUNTIME", name: "AI Runtime", angle: 4.396, color: "#64748b", r: 0.39, g: 0.45, b: 0.55 },
+      { id: "PUBLISHING", name: "Publishing", angle: 5.024, color: "#64748b", r: 0.39, g: 0.45, b: 0.55 },
+      { id: "METRICS", name: "Metrics", angle: 5.652, color: "#64748b", r: 0.39, g: 0.45, b: 0.55 }
+    ];
+
+    let baseAngle = 0;
+    let animFrameId = null;
+    let isLoopRunning = false;
+    let isStageIntersecting = true;
+
+    function renderSpatialStage() {
+      const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!prefersReducedMotion) {
+        baseAngle += 0.006;
+      }
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2.0);
+
+      if (activeRenderMode === "WEBGL_ACTIVE" && gl && glProgram && glBuffer) {
+        const w = webglCanvas.width = (webglCanvas.clientWidth || 800) * dpr;
+        const h = webglCanvas.height = (webglCanvas.clientHeight || 440) * dpr;
+
+        gl.viewport(0, 0, w, h);
+        gl.clearColor(0.04, 0.06, 0.09, 1.0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+
+        gl.useProgram(glProgram);
+
+        // Map nodes into WebGL buffer
+        const radX = 0.78;
+        const radY = 0.44;
+        const nodeVerts = [];
+
+        // Center hub
+        nodeVerts.push(0, 0, 1.0, 1.0, 1.0);
+
+        moduleNodes.forEach(m => {
+          const theta = m.angle + baseAngle;
+          const isFocused = focusedNodeIds.includes(m.id);
+          nodeVerts.push(
+            Math.cos(theta) * radX,
+            Math.sin(theta) * radY,
+            isFocused ? 1.0 : m.r,
+            isFocused ? 1.0 : m.g,
+            isFocused ? 1.0 : m.b
+          );
+        });
+
+        gl.bindBuffer(gl.ARRAY_BUFFER, glBuffer);
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(nodeVerts), gl.DYNAMIC_DRAW);
+
+        const posAttr = gl.getAttribLocation(glProgram, "a_pos");
+        const colAttr = gl.getAttribLocation(glProgram, "a_col");
+
+        gl.enableVertexAttribArray(posAttr);
+        gl.vertexAttribPointer(posAttr, 2, gl.FLOAT, false, 5 * 4, 0);
+
+        gl.enableVertexAttribArray(colAttr);
+        gl.vertexAttribPointer(colAttr, 3, gl.FLOAT, false, 5 * 4, 2 * 4);
+
+        gl.drawArrays(gl.POINTS, 0, moduleNodes.length + 1);
+        gl.drawArrays(gl.LINE_LOOP, 1, moduleNodes.length);
+      } else {
+        // Fallback 2D
+        const ctx = fallbackCanvas.getContext('2d');
+        if (ctx) {
+          const width = fallbackCanvas.width = (fallbackCanvas.clientWidth || 800) * dpr;
+          const height = fallbackCanvas.height = (fallbackCanvas.clientHeight || 440) * dpr;
+
+          ctx.clearRect(0, 0, width, height);
+
+          const centerX = width / 2;
+          const centerY = height / 2;
+          const radiusX = Math.min(centerX, centerY) * 0.78;
+          const radiusY = radiusX * 0.44;
+
+          ctx.strokeStyle = "rgba(38, 51, 72, 0.4)";
+          ctx.lineWidth = 1 * dpr;
+          ctx.beginPath();
+          ctx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, Math.PI * 2);
+          ctx.stroke();
+
+          // Draw inter-module lines
+          ctx.strokeStyle = "rgba(56, 189, 248, 0.15)";
+          ctx.beginPath();
+          for (let i = 0; i < moduleNodes.length; i++) {
+            const cur = moduleNodes[i];
+            const nxt = moduleNodes[(i + 1) % moduleNodes.length];
+            const x1 = centerX + Math.cos(cur.angle + baseAngle) * radiusX;
+            const y1 = centerY + Math.sin(cur.angle + baseAngle) * radiusY;
+            const x2 = centerX + Math.cos(nxt.angle + baseAngle) * radiusX;
+            const y2 = centerY + Math.sin(nxt.angle + baseAngle) * radiusY;
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+          }
+          ctx.stroke();
+
+          // Dual focus connection
+          if (focusedNodeIds.length >= 2) {
+            const n1 = moduleNodes.find(m => m.id === focusedNodeIds[0]);
+            const n2 = moduleNodes.find(m => m.id === focusedNodeIds[1]);
+            if (n1 && n2) {
+              const x1 = centerX + Math.cos(n1.angle + baseAngle) * radiusX;
+              const y1 = centerY + Math.sin(n1.angle + baseAngle) * radiusY;
+              const x2 = centerX + Math.cos(n2.angle + baseAngle) * radiusX;
+              const y2 = centerY + Math.sin(n2.angle + baseAngle) * radiusY;
+
+              ctx.strokeStyle = "#38bdf8";
+              ctx.lineWidth = 2.5 * dpr;
+              ctx.beginPath();
+              ctx.moveTo(x1, y1);
+              ctx.lineTo(x2, y2);
+              ctx.stroke();
+            }
+          }
+
+          // Center ABRAXAS Core Sphere
+          const pulse = prefersReducedMotion ? 0 : Math.sin(baseAngle * 3) * (2 * dpr);
+          ctx.fillStyle = "#ffffff";
+          ctx.beginPath();
+          ctx.arc(centerX, centerY, (8 * dpr) + pulse, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.fillStyle = "#38bdf8";
+          ctx.font = `bold ${Math.round(11 * dpr)}px monospace`;
+          ctx.textAlign = "center";
+          ctx.fillText("ABRAXAS OS CORE", centerX, centerY + (24 * dpr));
+
+          // Module Nodes
+          moduleNodes.forEach((node) => {
+            const theta = node.angle + baseAngle;
+            const x = centerX + Math.cos(theta) * radiusX;
+            const y = centerY + Math.sin(theta) * radiusY;
+            const isFocused = focusedNodeIds.includes(node.id);
+
+            if (isFocused) {
+              ctx.fillStyle = "rgba(56, 189, 248, 0.35)";
+              ctx.beginPath();
+              ctx.arc(x, y, 16 * dpr, 0, Math.PI * 2);
+              ctx.fill();
+            }
+
+            ctx.fillStyle = isFocused ? "#ffffff" : node.color;
+            ctx.beginPath();
+            ctx.arc(x, y, (isFocused ? 7 : 5) * dpr, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = isFocused ? "#38bdf8" : "#c5d1de";
+            ctx.font = isFocused ? `bold ${Math.round(11 * dpr)}px sans-serif` : `${Math.round(10 * dpr)}px sans-serif`;
+            ctx.textAlign = "center";
+            ctx.fillText(node.name, x, y - (10 * dpr));
+          });
+        }
+      }
+
+      if (!prefersReducedMotion && document.visibilityState === "visible" && isStageIntersecting) {
+        animFrameId = requestAnimationFrame(renderSpatialStage);
+        isLoopRunning = true;
+      } else {
+        isLoopRunning = false;
+      }
+    }
+
+    renderSpatialStage();
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible" && !isLoopRunning && isStageIntersecting) {
+        renderSpatialStage();
+      } else if (document.visibilityState === "hidden" && animFrameId) {
+        cancelAnimationFrame(animFrameId);
+        isLoopRunning = false;
+      }
+    });
+
+    const stageObserver = new IntersectionObserver(([entry]) => {
+      isStageIntersecting = entry.isIntersecting;
+      if (isStageIntersecting && !isLoopRunning && document.visibilityState === "visible") {
+        renderSpatialStage();
+      } else if (!isStageIntersecting && animFrameId) {
+        cancelAnimationFrame(animFrameId);
+        isLoopRunning = false;
+      }
+    }, {threshold: 0.1});
+    stageObserver.observe(document.querySelector('.spatial-stage-container'));
+
+    function setFocusedNodes(nodeIds, label) {
+      focusedNodeIds = nodeIds;
+      focusedLabel.textContent = label.toUpperCase();
+    }
+
+    // 2. Data Loading & Explorer
+    async function loadData() {
+      try {
+        const [pkRes, statusRes, roadmapRes] = await Promise.all([
+          fetch('public-knowledge.json'),
+          fetch('system-status.json'),
+          fetch('roadmap.json')
+        ]);
+        publicKnowledge = await pkRes.json();
+        const systemStatus = await statusRes.json();
+        const roadmap = await roadmapRes.json();
+
+        renderExplorer(publicKnowledge.modules);
+        renderRoadmap(roadmap.gates);
+      } catch (err) {
+        console.error("Failed to load status data:", err);
+      }
+    }
+
+    function renderExplorer(modules) {
+      const nav = document.getElementById('explorer-nav');
+      nav.innerHTML = modules.map((m, idx) => `
+        <button class="explorer-tab ${idx === 0 ? 'active' : ''}" onclick="selectExplorerModule('${m.id}')" data-mod="${m.id}">
+          ${m.name}
+        </button>
+      `).join('');
+      selectExplorerModule(modules[0].id);
+    }
+
+    function selectExplorerModule(modId) {
+      if (!publicKnowledge) return;
+      const mod = publicKnowledge.modules.find(m => m.id === modId);
+      if (!mod) return;
+
+      document.querySelectorAll('.explorer-tab').forEach(t => {
+        t.classList.toggle('active', t.getAttribute('data-mod') === modId);
+      });
+
+      const getTagClass = (st) => {
+        if (st === "VERIFIED_LOCAL") return "tag-verified";
+        if (st === "PARTIAL_FOUNDATION") return "tag-partial";
+        if (st === "CONTRACT_ONLY") return "tag-contract";
+        return "tag-planned";
+      };
+
+      const pane = document.getElementById('explorer-pane');
+      pane.innerHTML = `
+        <div>
+          <span class="carousel-card-tag">${mod.domain} Domain</span>
+          <h3 style="font-size: 1.6rem; color: var(--text-bright); margin: 0.35rem 0;">${mod.name} (<code>${mod.id}</code>)</h3>
+          <p style="color: var(--accent); font-weight: 600; margin-bottom: 0.75rem;">${mod.role}</p>
+          <p style="color: var(--muted); margin-bottom: 1.25rem;">${mod.responsibility}</p>
+          <div style="font-size: 0.85rem; color: var(--text);">
+            <strong>Status:</strong> <span class="tag ${getTagClass(mod.status)}">${mod.status}</span>
+            <span style="display:block; margin-top:4px; color: var(--muted);">${mod.statusDetail}</span>
+          </div>
+        </div>
+        <div style="background: var(--surface-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+          <h4 style="color: var(--text-bright); margin-bottom: 0.75rem; font-size: 1rem;">System Relationships</h4>
+          <ul style="list-style: none; font-size: 0.85rem; color: var(--muted);">
+            ${publicKnowledge.relationships
+              .filter(r => r.from === mod.id || r.to === mod.id)
+              .map(r => `<li style="margin-bottom: 0.5rem;"><strong>${r.from} → ${r.to}:</strong> ${r.description}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+
+      setFocusedNodes([mod.id], mod.name);
+    }
+
+    function renderRoadmap(gates) {
+      const container = document.getElementById('roadmap-list');
+      const getTagClass = (st) => {
+        if (st === "VERIFIED_LOCAL") return "tag-verified";
+        if (st === "AWAITING_FINAL_AUDIT") return "tag-under-audit";
+        return "tag-planned";
+      };
+
+      container.innerHTML = gates.map(g => `
+        <div class="roadmap-item">
+          <span class="gate-badge">${g.gateId}</span>
+          <div>
+            <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.35rem;">
+              <h4 style="color: var(--text-bright); font-size: 1.1rem;">${g.title}</h4>
+              <span class="tag ${getTagClass(g.status)}">${g.status}</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--muted);">${g.description}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function scrollCarousel(direction) {
+      const track = document.getElementById('highlights-track');
+      track.scrollBy({left: direction * 400, behavior: 'smooth'});
+    }
+
+    // Scroll-driven sticky story observer
+    const storyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.story-step').forEach(s => s.classList.remove('active-step'));
+          entry.target.classList.add('active-step');
+
+          const modId = entry.target.getAttribute('data-mod');
+          const title = entry.target.getAttribute('data-title');
+          const desc = entry.target.getAttribute('data-desc');
+
+          document.getElementById('story-stage-title').textContent = title;
+          document.getElementById('story-stage-desc').textContent = desc;
+          document.getElementById('story-stage-focus').textContent = modId;
+
+          setFocusedNodes([modId], title);
+        }
+      });
+    }, {threshold: 0.6});
+
+    document.querySelectorAll('.story-step').forEach(step => storyObserver.observe(step));
+
+    // 3. Accessible Navigation Handlers
+    const dropdownBtn = document.getElementById('system-dropdown-btn');
+    const dropdownMenu = document.getElementById('system-dropdown-menu');
+
+    dropdownBtn.addEventListener('click', () => {
+      const isOpen = dropdownMenu.classList.toggle('open');
+      dropdownBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    function closeDropdown() {
+      dropdownMenu.classList.remove('open');
+      dropdownBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDropdown();
+      }
+    });
+
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+
+    mobileToggle.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('open');
+    });
+
+    function toggleMobileDrawer() {
+      mobileDrawer.classList.remove('open');
+    }
+
+    // 4. Token-Boundary Public Architect Intent Resolver
+    function resolveIntent(query) {
+      const raw = query.trim().toLowerCase();
+      const q = raw.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+      const hasHe = /\b(he|operaciones|operations|tareas|tasks)\b/i.test(q);
+      const hasVav = /\b(vav|cuts|motions|video|render|remotion)\b/i.test(q);
+      const hasYod = /\b(yod|inteligencia|intelligence|patrones|patterns|hooks)\b/i.test(q);
+      const hasLienzo = /\b(lienzo|canvas|guion|script|escena|scene)\b/i.test(q);
+      const hasShim = /\b(shim|fuente|source|observacion|observation|assets)\b/i.test(q);
+      const hasArquitecto = /\b(arquitecto|architect|grafo|graph|razonamiento)\b/i.test(q);
+      const hasRoadmap = /\b(roadmap|hoja de ruta|fases|gates|siguiente|proximo|next)\b/i.test(q);
+      const hasWorksNow = /\b(funciona|works now|capacidad|capabilities|actualmente|verified)\b/i.test(q);
+      const hasRelate = /\b(relacion|relate|connect|interact|flujo|loop|workflow)\b/i.test(q);
+
+      if (hasRelate || (hasHe && hasVav)) {
+        if (hasHe && hasVav) return { id: "how-he-and-vav-relate", nodes: ["HE", "VAV"], label: "He + VAV Relationship" };
+        return { id: "how-modules-relate", nodes: ["YOD", "LIENZO", "HE", "VAV"], label: "Module Feedback Loop" };
+      }
+      if (hasRoadmap) return { id: "what-is-roadmap", nodes: ["CORE"], label: "Engineering Roadmap" };
+      if (hasWorksNow) return { id: "what-works-now", nodes: ["YOD", "HE", "VAV"], label: "Verified Capabilities" };
+      if (hasYod) return { id: "what-is-yod", nodes: ["YOD"], label: "Yod (Intelligence)" };
+      if (hasLienzo) return { id: "what-is-lienzo", nodes: ["LIENZO"], label: "Lienzo (Identity)" };
+      if (hasHe) return { id: "what-is-he", nodes: ["HE"], label: "He (Operations)" };
+      if (hasShim) return { id: "what-is-shim", nodes: ["SHIM"], label: "Shim (Reality)" };
+      if (hasVav) return { id: "what-is-vav", nodes: ["VAV"], label: "VAV (Production)" };
+      if (hasArquitecto) return { id: "what-is-arquitecto", nodes: ["ARQUITECTO"], label: "Arquitecto (Guidance)" };
+      if (/\b(abraxas|sistema|system)\b/i.test(q)) return { id: "what-is-abraxas", nodes: ["CORE"], label: "ABRAXAS OS Core" };
+
+      return { id: "unknown", nodes: ["CORE"], label: "ABRAXAS OS Core" };
+    }
+
+    function askPublicArchitect(query) {
+      if (!publicKnowledge || !publicKnowledge.qaPairs) {
+        return "Public knowledge is loading. Please try again in a moment.";
+      }
+
+      const resolution = resolveIntent(query);
+      setFocusedNodes(resolution.nodes, resolution.label);
+
+      const isSpanish = /[¿áéíóúñ]|como|que|cual|funciona/i.test(query);
+
+      const pair = publicKnowledge.qaPairs.find(p => p.id === resolution.id);
+      if (pair) {
+        return isSpanish ? pair.answerEs : pair.answerEn;
+      }
+
+      return isSpanish
+        ? "No dispongo de conocimiento público verificado para esa consulta específica. Puede preguntar sobre ABRAXAS OS, Yod, He, Lienzo, Shim, VAV, Arquitecto, las capacidades verificadas o la relación entre módulos."
+        : "I do not have specific verified public knowledge matching that query. You can ask about ABRAXAS OS, Yod, He, Lienzo, Shim, VAV, Arquitecto, verified capabilities, or the relationship between modules.";
+    }
+
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatHistory = document.getElementById('chat-history');
+    const chatResetBtn = document.getElementById('chat-reset-btn');
+
+    function appendMessage(role, text) {
+      const bubble = document.createElement('div');
+      bubble.className = `chat-bubble ${role}`;
+      bubble.textContent = text;
+      chatHistory.appendChild(bubble);
+      chatHistory.scrollTop = chatHistory.scrollHeight;
+    }
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = chatInput.value.trim();
+      if (!text) return;
+      appendMessage('user', text);
+      chatInput.value = '';
+
+      setTimeout(() => {
+        const response = askPublicArchitect(text);
+        appendMessage('assistant', response);
+      }, 80);
+    });
+
+    chatResetBtn.addEventListener('click', () => {
+      chatHistory.innerHTML = `
+        <div class="chat-bubble assistant">
+          Conversation reset. Ask about ABRAXAS OS architecture, canonical modules, or verified status.
+        </div>
+      `;
+      setFocusedNodes(["CORE"], "ABRAXAS OS Core");
+    });
+
+    document.querySelectorAll('.starter-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const q = btn.getAttribute('data-query');
+        appendMessage('user', q);
+        setTimeout(() => {
+          const response = askPublicArchitect(q);
+          appendMessage('assistant', response);
+        }, 80);
+      });
+    });
+
+    loadData();
+  </script>
 </body>
 </html>

@@ -15,7 +15,7 @@ import type {
 } from "./fullAlphaTypes.ts";
 
 export type Section =
-  | "project" | "media" | "transcript" | "captions" | "styles"
+  | "project" | "media" | "cuts" | "transcript" | "captions" | "styles"
   | "structure" | "motion" | "scene-smart" | "context" | "abraxas"
   | "audio" | "diagnostics";
 

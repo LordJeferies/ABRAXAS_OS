@@ -1,4 +1,6 @@
-export {VavCaptionComposition} from "./VavCaptionComposition.tsx";
-export {createCaptionPlan} from "./plan.ts";
-export type {CreateCaptionPlanInput} from "./plan.ts";
-export type {CaptionPlanV1, VavCaptionCompositionProps, RenderCaption, RenderDesignState, RenderSceneMark, RenderContentCandidate, RenderMotionContext} from "./types.ts";
+export * from "./types.ts";
+export * from "./plan.ts";
+export * from "./VavCaptionComposition.tsx";
+export * from "./CaptionDemoComposition.tsx";
+export * from "./VavMotionComposition.tsx";
+export * from "./motion-adapter.ts";

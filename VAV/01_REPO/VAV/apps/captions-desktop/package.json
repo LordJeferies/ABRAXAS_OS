@@ -28,7 +28,17 @@
     "@vav/caption-styles": "workspace:*",
     "@vav/caption-motion": "workspace:*",
     "@vav/vision-contracts": "workspace:*",
-    "@vav/caption-hierarchy": "workspace:*"
+    "@vav/caption-hierarchy": "workspace:*",
+    "@vav/cut-domain": "workspace:*",
+    "@vav/cut-engine": "workspace:*",
+    "@vav/motion-engine": "workspace:*",
+    "@vav/platform-safe-zones": "workspace:*",
+    "@vav/project-session": "workspace:*",
+    "@vav/timebase": "workspace:*",
+    "@vav/time-mapping": "workspace:*",
+    "@vav/export-system": "workspace:*",
+    "@vav/interchange": "workspace:*",
+    "@vav/visual-motion-domain": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.3.3",

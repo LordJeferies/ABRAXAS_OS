@@ -1,0 +1,129 @@
+{
+  "taxonomy_id": "ABRAXAS_CTA_TAXONOMY_V1",
+  "version": "1.0.0",
+  "canonical_module": "YOD",
+  "status": "F1_READY_FOR_ARCHITECTURE_REVIEW",
+  "total_cta_types": 7,
+  "cta_types": [
+    {
+      "cta_type_id": "CTA_NO_CTA_AUTHORITY",
+      "name": "Deliberate No-CTA (Pure Authority Close)",
+      "context": "HIGH_VALUE_EDITORIAL",
+      "evidence_state": "OBSERVED",
+      "description": "No call to action or commercial ask whatsoever. Closes purely on a memorable governing rule or thesis statement to maximize perceived purity and trust.",
+      "formula": "[Final memorable operational rule / definitive statement].",
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_FICHA_GUIDE",
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_FICHA_GUIDE"
+        ]
+      },
+      "examples": [
+        "Un resultado negativo bien documentado ahorra más millones que diez publicaciones optimistas.",
+        "En ciencia aplicada, la reproducibilidad no es un trámite; es el activo."
+      ]
+    },
+    {
+      "cta_type_id": "CTA_CONTEXTUAL_DISCUSSION",
+      "name": "Contextual Peer Discussion",
+      "context": "TECHNICAL_COMMUNITY",
+      "evidence_state": "OBSERVED",
+      "description": "Invites experienced practitioners to weigh in on a specific trade-off or boundary condition.",
+      "formula": "Para quienes lideran [Domain]: ¿Cómo resuelven [Specific Trade-off X vs Y] en su pipeline?",
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_MOKADEX_P06",
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_MOKADEX_P06"
+        ]
+      },
+      "examples": [
+        "Para directores de I+D: ¿En qué punto de su pipeline detienen una molécula si el docking no correlaciona con wetlab?"
+      ]
+    },
+    {
+      "cta_type_id": "CTA_ASSET_TRANSFER",
+      "name": "Tangible Asset / Checklist Transfer",
+      "context": "OPERATIONAL_ENABLEMENT",
+      "evidence_state": "OBSERVED",
+      "description": "Offers an exact operational artifact (checklist, spec sheet, benchmark dataset) relevant to the piece.",
+      "formula": "Dejamos el [Artifact Name / Checklist] completo con [Specific Detail] en el primer comentario / enlace.",
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_VALIDATION_GUIDE",
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_VALIDATION_GUIDE"
+        ]
+      },
+      "examples": [
+        "Dejamos la guía de los 5 niveles de validación molecular en PDF para descargar y auditar proveedores."
+      ]
+    },
+    {
+      "cta_type_id": "CTA_CONSULTATIVE_INTAKE",
+      "name": "Consultative Intake / Audit Session",
+      "context": "HIGH_TICKET_QUALIFICATION",
+      "evidence_state": "OBSERVED",
+      "description": "Directs qualified decision-makers facing the specific diagnosed problem to request an architectural audit.",
+      "formula": "Si tu organización necesita auditar [Specific Vulnerability], agenda una sesión de diagnóstico técnico.",
+      "provenance": {
+        "source_id": "SRC_ARCHIVE_INENERGY_TOOLKIT",
+        "observed_in_files": [
+          "SRC_ARCHIVE_INENERGY_TOOLKIT"
+        ]
+      },
+      "examples": [
+        "Si evalúas proyectos de almacenamiento a escala utility, solicita nuestra precalificación de riesgo de interconexión."
+      ]
+    },
+    {
+      "cta_type_id": "CTA_SOURCE_ATTRIBUTION",
+      "name": "Primary Source Attribution & Proof Link",
+      "context": "SCIENTIFIC_VERIFICATION",
+      "evidence_state": "OBSERVED",
+      "description": "Invites audience to inspect the underlying research paper, DOI citation, or code repository to independently verify the claim.",
+      "formula": "Todos los datos y papers citados están compilados en el repositorio de Source Truth: [Link / DOI].",
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS",
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS"
+        ]
+      },
+      "examples": [
+        "Consulta los DOI de los ensayos de citotoxicidad y espectrometría citados en la ficha técnica."
+      ]
+    },
+    {
+      "cta_type_id": "CTA_SUBSCRIBE_SERIALIZED",
+      "name": "Serialized Case Follow-up",
+      "context": "SERIALIZED_NARRATIVE",
+      "evidence_state": "OBSERVED",
+      "description": "Prompts subscription to follow the unfolding resolution of an ongoing real-world case or investigation.",
+      "formula": "En el siguiente episodio analizamos [Next Milestone]. Síguenos para ver la resolución de la prueba de estrés.",
+      "provenance": {
+        "source_id": "SRC_INTRO_LAB_V2_1_CRITERIA",
+        "observed_in_files": [
+          "SRC_INTRO_LAB_V2_1_CRITERIA"
+        ]
+      },
+      "examples": [
+        "En la Parte 2 publicamos los resultados del ensayo en vivo de 40M tokens con la memoria optimizada."
+      ]
+    },
+    {
+      "cta_type_id": "CTA_COMMUNITY_PARTICIPATION",
+      "name": "Closed Peer Cohort Participation",
+      "context": "EXPERT_COMMUNITY",
+      "evidence_state": "NORMALIZED",
+      "description": "Invites vetted practitioners into a closed round-table or working group solving the specific operational bottleneck.",
+      "formula": "Abrimos mesa de trabajo técnica con 10 directores de [Domain]. Aplica si cumples los requisitos de [Criterion].",
+      "provenance": {
+        "source_id": "SRC_CANONICAL_UNIVERSAL_OPS_MANIFEST",
+        "observed_in_files": [
+          "SRC_CANONICAL_UNIVERSAL_OPS_MANIFEST"
+        ]
+      },
+      "examples": [
+        "Participa en la mesa de trabajo cerrada sobre estandarización de extractos botánicos para exportación."
+      ]
+    }
+  ]
+}

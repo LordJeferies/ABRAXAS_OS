@@ -1,5 +1,8 @@
 import React, {useEffect, useMemo, useRef} from "react";
 import {Player, type PlayerRef} from "@remotion/player";
+import {CutsWorkspace} from "./CutsWorkspace.tsx";
+import {MotionsWorkspace} from "./MotionsWorkspace.tsx";
+
 import {createCaptionPlan} from "@vav/remotion-composition";
 import {
   Activity, ArrowRight, Captions, Check, ChevronLeft, ChevronRight,
@@ -29,6 +32,7 @@ import {useFullAlpha, type Section} from "./fullAlphaState.ts";
 const nav: readonly [Section, string, React.ComponentType<{size?: number}>][] = [
   ["project", "Proyecto", Layers3],
   ["media", "Video", FileVideo2],
+            ["cuts", "Cortes", Scissors],
   ["transcript", "Transcripción", FileText],
   ["captions", "Subtítulos", Captions],
   ["styles", "Estilos", Palette],
@@ -550,6 +554,9 @@ export const App: React.FC = () => {
         </aside>
 
         <section className="fa-main">
+          {section === "cuts" && <CutsWorkspace />}
+          {section === "motion" && <MotionsWorkspace />}
+          {section !== "cuts" && section !== "motion" && (<>
           <div className="fa-workflow">
             <div><small>FLUJO</small><strong>¿Qué hago ahora?</strong></div>
             {[
@@ -746,6 +753,7 @@ export const App: React.FC = () => {
               </div>
             </div>
           </section>
+        </>)}
         </section>
 
         <aside className="fa-inspector">

@@ -1,0 +1,277 @@
+{
+  "registry_id": "ABRAXAS_FORMAT_REGISTRY_V1",
+  "version": "1.0.0",
+  "canonical_module": "YOD",
+  "status": "F1_READY_FOR_ARCHITECTURE_REVIEW",
+  "total_formats": 8,
+  "formats": [
+    {
+      "format_id": "FMT_SHORT_VERTICAL_VIDEO",
+      "name": "Short Vertical Video (9:16)",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "OBSERVED",
+      "physical_type": "VIDEO_VERTICAL",
+      "aspect_ratio": "9:16",
+      "target_duration_seconds": {
+        "min": 30,
+        "max": 90,
+        "sweet_spot": 60
+      },
+      "word_count_target": {
+        "min": 90,
+        "max": 160,
+        "sweet_spot": 130
+      },
+      "pacing_words_per_minute": 130,
+      "purpose": "High-velocity narrative capture and authority proof in under 90 seconds.",
+      "hook_logic": "Must deliver first hook trigger within 0-3 seconds; pain point open loop by 5 seconds.",
+      "visual_rules": "Vertical 9:16 safe zones (avoid UI overlays at top 15% and bottom 25%); kinetic subtitles; dynamic camera punch-ins.",
+      "compatible_structures": [
+        "STR_EVIDENCE_LIMITATION_DECISION",
+        "STR_DOUBLE_HOOK_INTENSITY_CURVE",
+        "STR_CONTRAST_BELIEF_CONTRADICTION",
+        "STR_PROBLEM_MECHANISM_DECISION",
+        "STR_THREE_ACT_INTRO_LAB",
+        "STR_MOKA_TOPIC_ROOM_RECORDING_FICHA"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_FICHA_GUIDE",
+        "corroborating_sources": [
+          "SRC_CANONICAL_CONTENT_LAB_START",
+          "SRC_INTRO_LAB_V2_1_CRITERIA"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_FICHA_GUIDE"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "format_id": "FMT_HORIZONTAL_LONGFORM_VIDEO",
+      "name": "Horizontal Episodic / Longform Video (16:9)",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "OBSERVED",
+      "physical_type": "VIDEO_HORIZONTAL",
+      "aspect_ratio": "16:9",
+      "target_duration_seconds": {
+        "min": 480,
+        "max": 1800,
+        "sweet_spot": 720
+      },
+      "word_count_target": {
+        "min": 1000,
+        "max": 3500,
+        "sweet_spot": 1800
+      },
+      "pacing_words_per_minute": 140,
+      "purpose": "In-depth case autopsies, strategic breakdowns, and master episodic deep-dives.",
+      "hook_logic": "Intro Lab 3-Act structure: unignorable promise in 0-45s with multi-layer VO and B-roll source replacement.",
+      "visual_rules": "16:9 cinematic framing; clean lower thirds; multi-camera switches; document and screen overlays.",
+      "compatible_structures": [
+        "STR_THREE_ACT_INTRO_LAB",
+        "STR_FRAMEWORK_MODEL_PARTS_RULES",
+        "STR_CONVERSATION_DISAGREEMENT_SYNTHESIS",
+        "STR_WETLAB_MOLECULAR_VALIDATION_LEVELS",
+        "STR_ENTERPRISE_PREQUALIFICATION_ROADMAP"
+      ],
+      "provenance": {
+        "source_id": "SRC_INTRO_LAB_V2_1_CRITERIA",
+        "corroborating_sources": [
+          "SRC_CANONICAL_JOC55_INTRO_DATA"
+        ],
+        "observed_in_files": [
+          "SRC_INTRO_LAB_V2_1_CRITERIA"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "format_id": "FMT_LINKEDIN_CAROUSEL",
+      "name": "LinkedIn Document Carousel (PDF Slide Set)",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "OBSERVED",
+      "physical_type": "DOCUMENT_CAROUSEL",
+      "aspect_ratio": "4:5_OR_1:1",
+      "target_slides": {
+        "min": 5,
+        "max": 12,
+        "sweet_spot": 8
+      },
+      "words_per_slide": {
+        "min": 15,
+        "max": 45,
+        "sweet_spot": 28
+      },
+      "purpose": "Visual thinking models, step-by-step protocols, and executive decision maps.",
+      "hook_logic": "Slide 1 cover hook with high tension title and subtitle; Slide 2 thesis reframe; progressive reveal.",
+      "visual_rules": "Strict typographic hierarchy; minimum 32pt body text equivalent; color-coded decision paths; no unformatted walls of text.",
+      "compatible_structures": [
+        "STR_EVIDENCE_LIMITATION_DECISION",
+        "STR_CONTRAST_BELIEF_CONTRADICTION",
+        "STR_FRAMEWORK_MODEL_PARTS_RULES",
+        "STR_WETLAB_MOLECULAR_VALIDATION_LEVELS",
+        "STR_ENTERPRISE_PREQUALIFICATION_ROADMAP"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_MOKADEX_P01",
+        "corroborating_sources": [
+          "SRC_MOKA_CAROUSEL_MOKADEX_P06",
+          "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_MOKADEX_P01"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "format_id": "FMT_PODCAST_MASTER",
+      "name": "Podcast Master Episode (Multi-Speaker Audio/Video)",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "OBSERVED",
+      "physical_type": "AUDIOVISUAL_RECORDING",
+      "aspect_ratio": "16:9",
+      "target_duration_seconds": {
+        "min": 1800,
+        "max": 5400,
+        "sweet_spot": 3600
+      },
+      "purpose": "Full-length conversational master recording serving as the unmined mother corpus for clips, shorts, and carousels.",
+      "hook_logic": "Dynamic cold open excerpting the highest tension moment of the interview in first 20 seconds.",
+      "visual_rules": "Isolated multi-track audio; dual ISO camera feeds + wide angle master.",
+      "compatible_structures": [
+        "STR_CONVERSATION_DISAGREEMENT_SYNTHESIS"
+      ],
+      "provenance": {
+        "source_id": "SRC_CANONICAL_JOC55_INTRO_DATA",
+        "corroborating_sources": [
+          "SRC_ARCHIVE_JOC_OS_HTML"
+        ],
+        "observed_in_files": [
+          "SRC_CANONICAL_JOC55_INTRO_DATA"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "format_id": "FMT_PODCAST_CLIP_STANDALONE",
+      "name": "Standalone Podcast Excerpt Clip (Horizontal or Vertical)",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "OBSERVED",
+      "physical_type": "EXTRACTED_VIDEO_CLIP",
+      "aspect_ratio": "16:9_OR_9:16",
+      "target_duration_seconds": {
+        "min": 90,
+        "max": 420,
+        "sweet_spot": 240
+      },
+      "purpose": "Self-contained thematic extract from a podcast master that resolves a full narrative arc without requiring parent episode context.",
+      "hook_logic": "Clear thesis question or debate opening stated within first 5 seconds.",
+      "visual_rules": "Active speaker tracking; waveform overlay when off-camera; contextual lower thirds.",
+      "compatible_structures": [
+        "STR_EVIDENCE_LIMITATION_DECISION",
+        "STR_DOUBLE_HOOK_INTENSITY_CURVE",
+        "STR_CONVERSATION_DISAGREEMENT_SYNTHESIS",
+        "STR_THREE_ACT_INTRO_LAB",
+        "STR_MOKA_TOPIC_ROOM_RECORDING_FICHA"
+      ],
+      "provenance": {
+        "source_id": "SRC_CANONICAL_JOC55_INTRO_DATA",
+        "corroborating_sources": [
+          "SRC_MOKA_V26_19_FICHA_GUIDE"
+        ],
+        "observed_in_files": [
+          "SRC_CANONICAL_JOC55_INTRO_DATA"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "format_id": "FMT_LINKEDIN_TEXT_POST",
+      "name": "LinkedIn Text / Editorial Post",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "OBSERVED",
+      "physical_type": "TEXT_PUBLICATION",
+      "character_count_target": {
+        "min": 500,
+        "max": 1800,
+        "sweet_spot": 1100
+      },
+      "purpose": "Direct written commentary, executive insight, and community discussion catalyst.",
+      "hook_logic": "High-impact opening sentence (first 140 chars before 'see more' truncation); generous line breaks for readability.",
+      "visual_rules": "Optional single high-resolution graph, screenshot, or quote card.",
+      "compatible_structures": [
+        "STR_CONTRAST_BELIEF_CONTRADICTION",
+        "STR_PROBLEM_MECHANISM_DECISION"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_PLANT_INGREDIENT",
+        "corroborating_sources": [
+          "SRC_ARCHIVE_INENERGY_TOOLKIT"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_PLANT_INGREDIENT"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "format_id": "FMT_HYBRID_VIDEO_SLIDES",
+      "name": "Hybrid Video-Slide Technical Briefing",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "physical_type": "VIDEO_COMPOSITE",
+      "aspect_ratio": "16:9",
+      "target_duration_seconds": {
+        "min": 180,
+        "max": 600,
+        "sweet_spot": 300
+      },
+      "purpose": "Technical walkthrough synchronizing talking-head video with interactive architecture slides and telemetry.",
+      "hook_logic": "Demonstrating a live software or lab benchmark problem within the first 10 seconds.",
+      "visual_rules": "70/30 split screen (70% slide/screen, 30% circular talking-head presenter).",
+      "compatible_structures": [
+        "STR_FRAMEWORK_MODEL_PARTS_RULES"
+      ],
+      "provenance": {
+        "source_id": "SRC_CANONICAL_CONTENT_LAB_START",
+        "corroborating_sources": [
+          "SRC_INTRO_LAB_V2_1_CRITERIA"
+        ],
+        "observed_in_files": [
+          "SRC_CANONICAL_CONTENT_LAB_START"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "format_id": "FMT_NEWSLETTER_DEEPDIVE",
+      "name": "Newsletter Technical Deep-Dive Article",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "physical_type": "LONGFORM_TEXT_EMAIL",
+      "word_count_target": {
+        "min": 800,
+        "max": 2500,
+        "sweet_spot": 1500
+      },
+      "purpose": "Comprehensive written analysis sent to subscribers with primary citations and actionable checklists.",
+      "hook_logic": "Curated editorial executive summary upfront answering 'Why this matters this week'.",
+      "visual_rules": "Embedded charts, callout blockquotes, code snippets, and structured subheaders.",
+      "compatible_structures": [
+        "STR_CONTRAST_BELIEF_CONTRADICTION",
+        "STR_ENTERPRISE_PREQUALIFICATION_ROADMAP"
+      ],
+      "provenance": {
+        "source_id": "SRC_CANONICAL_UNIVERSAL_OPS_MANIFEST",
+        "corroborating_sources": [
+          "SRC_ARCHIVE_ABRAXAS_QUALITY_CRITERIA"
+        ],
+        "observed_in_files": [
+          "SRC_CANONICAL_UNIVERSAL_OPS_MANIFEST"
+        ],
+        "confidence": "HIGH"
+      }
+    }
+  ]
+}

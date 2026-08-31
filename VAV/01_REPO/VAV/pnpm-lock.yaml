@@ -17,9 +17,21 @@ importers:
       '@types/react-dom':
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
+      '@vitejs/plugin-react':
+        specifier: 6.1.0
+        version: 6.1.0(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.51.2))
+      react:
+        specifier: 19.2.8
+        version: 19.2.8
+      react-dom:
+        specifier: 19.2.8
+        version: 19.2.8(react@19.2.8)
       typescript:
         specifier: 7.0.2
         version: 7.0.2
+      vite:
+        specifier: 8.2.2
+        version: 8.2.2(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.51.2)
       vitest:
         specifier: 4.1.11
         version: 4.1.11(@types/node@24.13.3)(vite@8.2.2(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.51.2))
@@ -50,18 +62,48 @@ importers:
       '@vav/caption-styles':
         specifier: workspace:*
         version: link:../../packages/caption-styles
+      '@vav/cut-domain':
+        specifier: workspace:*
+        version: link:../../packages/cut-domain
+      '@vav/cut-engine':
+        specifier: workspace:*
+        version: link:../../packages/cut-engine
       '@vav/engine-registry':
         specifier: workspace:*
         version: link:../../packages/engine-registry
+      '@vav/export-system':
+        specifier: workspace:*
+        version: link:../../packages/export-system
+      '@vav/interchange':
+        specifier: workspace:*
+        version: link:../../packages/interchange
+      '@vav/motion-engine':
+        specifier: workspace:*
+        version: link:../../packages/motion-engine
+      '@vav/platform-safe-zones':
+        specifier: workspace:*
+        version: link:../../packages/platform-safe-zones
+      '@vav/project-session':
+        specifier: workspace:*
+        version: link:../../packages/project-session
       '@vav/remotion-composition':
         specifier: workspace:*
         version: link:../../packages/remotion-composition
+      '@vav/time-mapping':
+        specifier: workspace:*
+        version: link:../../packages/time-mapping
+      '@vav/timebase':
+        specifier: workspace:*
+        version: link:../../packages/timebase
       '@vav/transcription':
         specifier: workspace:*
         version: link:../../packages/transcription
       '@vav/vision-contracts':
         specifier: workspace:*
         version: link:../../packages/vision-contracts
+      '@vav/visual-motion-domain':
+        specifier: workspace:*
+        version: link:../../packages/visual-motion-domain
       lucide-react:
         specifier: 1.34.0
         version: 1.34.0(react@19.2.8)
@@ -147,19 +189,53 @@ importers:
         specifier: workspace:*
         version: link:../ficha-domain
 
+  packages/cut-domain:
+    dependencies:
+      '@vav/timebase':
+        specifier: workspace:*
+        version: link:../timebase
+
+  packages/cut-engine:
+    dependencies:
+      '@vav/cut-domain':
+        specifier: workspace:*
+        version: link:../cut-domain
+      '@vav/export-system':
+        specifier: workspace:*
+        version: link:../export-system
+      '@vav/interchange':
+        specifier: workspace:*
+        version: link:../interchange
+      '@vav/time-mapping':
+        specifier: workspace:*
+        version: link:../time-mapping
+      '@vav/timebase':
+        specifier: workspace:*
+        version: link:../timebase
+
   packages/editor-foundation: {}
 
   packages/engine-registry: {}
 
-  packages/export-system: {}
+  packages/export-system:
+    dependencies:
+      '@vav/cut-domain':
+        specifier: workspace:*
+        version: link:../cut-domain
 
   packages/ficha-domain: {}
 
   packages/interchange:
     dependencies:
+      '@vav/cut-domain':
+        specifier: workspace:*
+        version: link:../cut-domain
       '@vav/time-mapping':
         specifier: workspace:*
         version: link:../time-mapping
+      '@vav/timebase':
+        specifier: workspace:*
+        version: link:../timebase
       '@vav/visual-motion-domain':
         specifier: workspace:*
         version: link:../visual-motion-domain
@@ -172,11 +248,39 @@ importers:
         specifier: workspace:*
         version: link:../visual-motion-domain
 
+  packages/motion-engine:
+    dependencies:
+      '@vav/cut-domain':
+        specifier: workspace:*
+        version: link:../cut-domain
+      '@vav/motion-caption-policy':
+        specifier: workspace:*
+        version: link:../motion-caption-policy
+      '@vav/platform-safe-zones':
+        specifier: workspace:*
+        version: link:../platform-safe-zones
+      '@vav/spatial-scene':
+        specifier: workspace:*
+        version: link:../spatial-scene
+      '@vav/timebase':
+        specifier: workspace:*
+        version: link:../timebase
+      '@vav/visual-motion-domain':
+        specifier: workspace:*
+        version: link:../visual-motion-domain
+
   packages/platform-safe-zones: {}
 
   packages/project-model: {}
 
-  packages/project-session: {}
+  packages/project-session:
+    dependencies:
+      '@vav/cut-domain':
+        specifier: workspace:*
+        version: link:../cut-domain
+      '@vav/cut-engine':
+        specifier: workspace:*
+        version: link:../cut-engine
 
   packages/remotion-composition:
     dependencies:
@@ -213,6 +317,18 @@ importers:
       '@vav/caption-styles':
         specifier: workspace:*
         version: link:../caption-styles
+      '@vav/cut-domain':
+        specifier: workspace:*
+        version: link:../cut-domain
+      '@vav/motion-engine':
+        specifier: workspace:*
+        version: link:../motion-engine
+      '@vav/timebase':
+        specifier: workspace:*
+        version: link:../timebase
+      '@vav/visual-motion-domain':
+        specifier: workspace:*
+        version: link:../visual-motion-domain
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -251,9 +367,12 @@ importers:
 
   packages/visual-motion-domain:
     dependencies:
-      '@vav/ficha-domain':
+      '@vav/cut-domain':
         specifier: workspace:*
-        version: link:../ficha-domain
+        version: link:../cut-domain
+      '@vav/timebase':
+        specifier: workspace:*
+        version: link:../timebase
 
   packages/visual-priors:
     dependencies:

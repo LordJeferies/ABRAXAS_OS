@@ -1,0 +1,14 @@
+{
+  "name": "@vav/cut-engine",
+  "version": "0.0.1-dev",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@vav/cut-domain": "workspace:*",
+    "@vav/export-system": "workspace:*",
+    "@vav/interchange": "workspace:*",
+    "@vav/time-mapping": "workspace:*",
+    "@vav/timebase": "workspace:*"
+  }
+}

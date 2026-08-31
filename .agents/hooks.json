@@ -1,0 +1,17 @@
+{
+  "abraxas-safety-gate": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$HOME/Desktop/abraxasos/.agents/scripts/safety_gate.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

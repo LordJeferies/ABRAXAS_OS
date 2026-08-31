@@ -1,0 +1,251 @@
+{
+  "taxonomy_id": "ABRAXAS_HOOK_TAXONOMY_V1",
+  "version": "1.0.0",
+  "canonical_module": "YOD",
+  "status": "F1_READY_FOR_ARCHITECTURE_REVIEW",
+  "total_mechanisms": 11,
+  "mechanisms": [
+    {
+      "hook_mechanism_id": "HK_QUESTION_DEBT",
+      "name": "Question Debt & Open Loop",
+      "mechanism_type": "COGNITIVE_GAP",
+      "evidence_state": "OBSERVED",
+      "description": "Asks an uncomfortably precise question that places the audience in cognitive debt until an answer is provided.",
+      "formula": "[Provocative condition] + [Hidden failure mechanism] + [Implied consequence]?",
+      "word_count_bounds": {
+        "min": 6,
+        "max": 16
+      },
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_DOUBLE_HOOK_GUIDE",
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_DOUBLE_HOOK_GUIDE"
+        ]
+      },
+      "examples": [
+        "¿Qué valor científico y comercial queda destruido cuando derechos y abastecimiento llegan demasiado tarde?",
+        "¿Cuánto de tu scoring computacional sobrevive cuando toca el primer ensayo de solubilidad en wetlab?"
+      ]
+    },
+    {
+      "hook_mechanism_id": "HK_EVIDENCE_FIRST",
+      "name": "Evidence First & Measurement Reveal",
+      "mechanism_type": "EMPIRICAL_ANCHOR",
+      "evidence_state": "OBSERVED",
+      "description": "Opens immediately by displaying a tangible measurement, unexpected benchmark data point, or physical test result.",
+      "formula": "Display [Exact Measurement / Anomaly] + [Operational Contradiction].",
+      "word_count_bounds": {
+        "min": 8,
+        "max": 18
+      },
+      "provenance": {
+        "source_id": "SRC_CANONICAL_JOC55_INTRO_DATA",
+        "observed_in_files": [
+          "SRC_CANONICAL_JOC55_INTRO_DATA"
+        ]
+      },
+      "examples": [
+        "Este modelo procesó 40 millones de tokens, pero en el token 12,000 empezó a degradar las decisiones clave.",
+        "En este espectro de masas, el pico no corresponde al extracto que el proveedor prometió."
+      ]
+    },
+    {
+      "hook_mechanism_id": "HK_CONTRARIAN_REFRAMING",
+      "name": "Contrarian Reframing",
+      "mechanism_type": "BELIEF_INTERRUPT",
+      "evidence_state": "OBSERVED",
+      "description": "Directly confronts an established industry sacred cow and reframes it as the root cause of systemic failure.",
+      "formula": "[Common Practice] no es [Expected Goal] — es [Hidden Cause of Failure].",
+      "word_count_bounds": {
+        "min": 7,
+        "max": 15
+      },
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS",
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS"
+        ]
+      },
+      "examples": [
+        "La ciencia y el negocio llevan libros distintos, y celebrar publicaciones prematuras destruye la valoración.",
+        "Una planta no es un ingrediente, y tratarla como tal arruina la estabilidad del producto final."
+      ]
+    },
+    {
+      "hook_mechanism_id": "HK_SPECIFIC_RESULT_PROMISE",
+      "name": "Specific Measurable Result",
+      "mechanism_type": "OUTCOME_PROMISE",
+      "evidence_state": "OBSERVED",
+      "description": "States a quantifiable, auditable operational victory achieved before pulling back the curtain on the method.",
+      "formula": "Cómo logramos [Specific Metric/Result] sin incurrir en [Common Expensive Trade-off].",
+      "word_count_bounds": {
+        "min": 8,
+        "max": 16
+      },
+      "provenance": {
+        "source_id": "SRC_INTRO_LAB_V2_1_CRITERIA",
+        "observed_in_files": [
+          "SRC_INTRO_LAB_V2_1_CRITERIA"
+        ]
+      },
+      "examples": [
+        "Cómo alineamos 48 cortes frame por frame en DaVinci Resolve sin tocar una sola tecla de edición manual.",
+        "Cómo redujimos 6 meses de búsqueda botánica a 48 horas de cribado molecular validado."
+      ]
+    },
+    {
+      "hook_mechanism_id": "HK_PROBLEM_DIAGNOSIS",
+      "name": "Root Problem Diagnosis",
+      "mechanism_type": "DIAGNOSTIC_CLARITY",
+      "evidence_state": "OBSERVED",
+      "description": "Names the exact structural disease causing superficial symptoms that everyone is complaining about.",
+      "formula": "Tu equipo no tiene un problema de [Symptom]; tiene un fallo en [Root Mechanism].",
+      "word_count_bounds": {
+        "min": 8,
+        "max": 16
+      },
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_MOKADEX_P06",
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_MOKADEX_P06"
+        ]
+      },
+      "examples": [
+        "Tu laboratorio no tiene un problema de capacidad; tiene un problema de handoffs no trazables.",
+        "No necesitas más prompts; necesitas un contrato de datos que valide el contexto antes de ejecutar."
+      ]
+    },
+    {
+      "hook_mechanism_id": "HK_UNEXPECTED_MECHANISM",
+      "name": "Unexpected Mechanism Reveal",
+      "mechanism_type": "CAUSAL_SURPRISE",
+      "evidence_state": "NORMALIZED",
+      "description": "Explains the counter-intuitive mechanical reason why doing the 'standard right thing' triggers catastrophe.",
+      "formula": "La razón por la que [Standard Best Practice] provoca [Catastrophic Failure].",
+      "word_count_bounds": {
+        "min": 7,
+        "max": 15
+      },
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS",
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS"
+        ]
+      },
+      "examples": [
+        "Por qué limpiar los datos de tu investigación en hojas de cálculo destruye la reproducibilidad del modelo.",
+        "Por qué firmar exclusividad territorial temprana estrangula el crecimiento de una molécula prometedora."
+      ]
+    },
+    {
+      "hook_mechanism_id": "HK_OBJECTION_INTERCEPT",
+      "name": "Objection Intercept",
+      "mechanism_type": "DEFENSIVE_DISARM",
+      "evidence_state": "NORMALIZED",
+      "description": "Speaks the audience's inner skepticism verbatim before they have time to mentally reject the thesis.",
+      "formula": "Sé lo que estás pensando: '[Exact Audience Objection]'. Y tendrías razón, excepto por un detalle.",
+      "word_count_bounds": {
+        "min": 9,
+        "max": 18
+      },
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS",
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS"
+        ]
+      },
+      "examples": [
+        "Sé lo que estás pensando: 'El bioprocesamiento celular es inviable a escala comercial'. Y tendrías razón, hasta los rendimientos de este mes."
+      ]
+    },
+    {
+      "hook_mechanism_id": "HK_DEFINITION_CHALLENGE",
+      "name": "Definition Challenge",
+      "mechanism_type": "SEMANTIC_SHOCK",
+      "evidence_state": "OBSERVED",
+      "description": "Proves that a ubiquitous industry word is being misused in a way that burns capital.",
+      "formula": "Si crees que [Term] significa [Common Definition], estás perdiendo [Valuable Asset].",
+      "word_count_bounds": {
+        "min": 7,
+        "max": 15
+      },
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_PATENT_FTO",
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_PATENT_FTO",
+          "SRC_MOKA_CAROUSEL_PLANT_INGREDIENT"
+        ]
+      },
+      "examples": [
+        "Tener una patente no significa tener libertad de operación comercial.",
+        "Biodiversidad no es una lista de plantas; es una matriz de datos moleculares auditables."
+      ]
+    },
+    {
+      "hook_mechanism_id": "HK_CASE_OPENING_SCENE",
+      "name": "In-Media-Res Case Scene",
+      "mechanism_type": "NARRATIVE_IMMERSION",
+      "evidence_state": "OBSERVED",
+      "description": "Drops the viewer right into the middle of a high-stakes crisis meeting or broken production incident.",
+      "formula": "[Timestamp/Location]: [Exact Emergency / High Stakes Operational Fork].",
+      "word_count_bounds": {
+        "min": 8,
+        "max": 16
+      },
+      "provenance": {
+        "source_id": "SRC_INTRO_LAB_V2_1_CRITERIA",
+        "observed_in_files": [
+          "SRC_INTRO_LAB_V2_1_CRITERIA"
+        ]
+      },
+      "examples": [
+        "Lunes 8:00 AM: El cliente principal rechaza el lote completo por una variación de lote no detectada.",
+        "Minuto 14 de la llamada: Los abogados descubren que la patente base no cubre la variante comercial."
+      ]
+    },
+    {
+      "hook_mechanism_id": "HK_PROCESS_REVEAL",
+      "name": "Process & Architecture Reveal",
+      "mechanism_type": "CURIOSITY_PULL",
+      "evidence_state": "OBSERVED",
+      "description": "Pulls back the curtain on the actual internal architecture or operational stages of an advanced system.",
+      "formula": "Lo que realmente ocurre entre [Input Stage] y [Output Stage] dentro de [Advanced System].",
+      "word_count_bounds": {
+        "min": 8,
+        "max": 16
+      },
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_MOKADEX_P01",
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_MOKADEX_P01",
+          "SRC_MOKA_CAROUSEL_MOKADEX_P06"
+        ]
+      },
+      "examples": [
+        "Qué entra, qué conecta y qué devuelve MokaDex en una búsqueda de bioactivos de 48 horas.",
+        "La arquitectura exacta de DAG y workers que sincroniza 14 subsistemas sin colapsar la memoria."
+      ]
+    },
+    {
+      "hook_mechanism_id": "HK_DOUBLE_HOOK_DIRECT_PAIN",
+      "name": "Double Hook (Direct Trigger + High Stakes Pain)",
+      "mechanism_type": "DUAL_TENSION",
+      "evidence_state": "OBSERVED",
+      "description": "Pairs an interview direct question (6-12 words) with an audible pain question (12-15 words) repeated before payoff.",
+      "formula": "Direct: [Natural Core Question] | Pain: [High-Stakes Tension + Operational Risk].",
+      "word_count_bounds": {
+        "min": 18,
+        "max": 28
+      },
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_DOUBLE_HOOK_GUIDE",
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_DOUBLE_HOOK_GUIDE"
+        ]
+      },
+      "examples": [
+        "Direct: ¿Qué criterio técnico aportas a Moka para decidir con resultados? | Pain: ¿Qué decisiones de I+D quedan expuestas cuando nadie audita la evidencia que las sostiene?"
+      ]
+    }
+  ]
+}

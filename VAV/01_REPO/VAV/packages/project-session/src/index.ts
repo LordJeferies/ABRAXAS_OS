@@ -5,3 +5,4 @@ export * from "./relink.ts";
 export * from "./fonts.ts";
 export * from "./workspace.ts";
 export * from "./multiwindow.ts";
+export * from "./cut-session.ts";

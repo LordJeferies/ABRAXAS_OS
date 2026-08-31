@@ -1,0 +1,144 @@
+{
+  "library_id": "ABRAXAS_SOURCE_REQUIREMENT_LIBRARY_V1",
+  "version": "1.0.0",
+  "canonical_module": "YOD",
+  "status": "F1_READY_FOR_ARCHITECTURE_REVIEW",
+  "total_requirements": 8,
+  "requirements": [
+    {
+      "requirement_id": "REQ_PRIMARY_METRIC_DATA",
+      "name": "Primary Metric Data / Benchmark Telemetry",
+      "required_source_class": "APPROVED_PRIMARY",
+      "evidence_state": "OBSERVED",
+      "verification_rule": "Must include raw unedited log files, telemetry graphs, or CSV benchmark outputs with timestamps.",
+      "applicable_structures": [
+        "STR_EVIDENCE_LIMITATION_DECISION",
+        "STR_CONTRAST_BELIEF_CONTRADICTION",
+        "STR_PROBLEM_MECHANISM_DECISION"
+      ],
+      "provenance": {
+        "source_id": "SRC_CANONICAL_CONTENT_LAB_START",
+        "observed_in_files": [
+          "SRC_CANONICAL_CONTENT_LAB_START"
+        ]
+      }
+    },
+    {
+      "requirement_id": "REQ_EXPERIMENTAL_ASSAY_LOG",
+      "name": "Laboratory Assay Protocol & Result Log",
+      "required_source_class": "APPROVED_PRIMARY",
+      "evidence_state": "OBSERVED",
+      "verification_rule": "Requires documented wetlab protocol, controls, equipment specification, and raw measurement logs.",
+      "applicable_structures": [
+        "STR_EVIDENCE_LIMITATION_DECISION",
+        "STR_WETLAB_MOLECULAR_VALIDATION_LEVELS"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS",
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS"
+        ]
+      }
+    },
+    {
+      "requirement_id": "REQ_EXPERT_RECORDING_SEGMENT",
+      "name": "Timestamped Expert Spoken Recording",
+      "required_source_class": "APPROVED_PRIMARY",
+      "evidence_state": "OBSERVED",
+      "verification_rule": "Must correspond to an auditable timestamped video/audio master transcript recording segment.",
+      "applicable_structures": [
+        "STR_DOUBLE_HOOK_INTENSITY_CURVE",
+        "STR_THREE_ACT_INTRO_LAB",
+        "STR_CONVERSATION_DISAGREEMENT_SYNTHESIS",
+        "STR_MOKA_TOPIC_ROOM_RECORDING_FICHA"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_DOUBLE_HOOK_GUIDE",
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_DOUBLE_HOOK_GUIDE"
+        ]
+      }
+    },
+    {
+      "requirement_id": "REQ_SYSTEM_ARCHITECTURE_MAP",
+      "name": "System Architecture / DAG Specification",
+      "required_source_class": "APPROVED_SECONDARY",
+      "evidence_state": "OBSERVED",
+      "verification_rule": "Must declare components, directional data flows, schemas, and failure states in a formal diagram or JSON specification.",
+      "applicable_structures": [
+        "STR_FRAMEWORK_MODEL_PARTS_RULES"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_MOKADEX_P06",
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_MOKADEX_P06"
+        ]
+      }
+    },
+    {
+      "requirement_id": "REQ_HISTORICAL_CASE_TIMELINE",
+      "name": "Historical Project Case Timeline & Audit Log",
+      "required_source_class": "APPROVED_PRIMARY",
+      "evidence_state": "NORMALIZED",
+      "verification_rule": "Requires verifiable project timeline, baseline state, intervention actions, and documented post-mortem results.",
+      "applicable_structures": [
+        "STR_CONTRAST_BELIEF_CONTRADICTION",
+        "STR_ENTERPRISE_PREQUALIFICATION_ROADMAP"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS",
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS"
+        ]
+      }
+    },
+    {
+      "requirement_id": "REQ_PEER_REVIEWED_PAPER_CITATION",
+      "name": "Peer-Reviewed Academic or Patent Citation",
+      "required_source_class": "APPROVED_SECONDARY",
+      "evidence_state": "OBSERVED",
+      "verification_rule": "Requires valid DOI link, journal citation, patent registration number, and exact quoted claim.",
+      "applicable_structures": [
+        "STR_WETLAB_MOLECULAR_VALIDATION_LEVELS"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_PATENT_FTO",
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_PATENT_FTO"
+        ]
+      }
+    },
+    {
+      "requirement_id": "REQ_REGULATORY_COMPLIANCE_STANDARD",
+      "name": "Regulatory Compliance & Legal Standard",
+      "required_source_class": "APPROVED_SECONDARY",
+      "evidence_state": "OBSERVED",
+      "verification_rule": "Must cite formal governmental, electrical, or pharmaceutical statutory guidelines (e.g. FDA, EMA, ISO, IEEE, Grid Code).",
+      "applicable_structures": [
+        "STR_ENTERPRISE_PREQUALIFICATION_ROADMAP"
+      ],
+      "provenance": {
+        "source_id": "SRC_ARCHIVE_INENERGY_TOOLKIT",
+        "observed_in_files": [
+          "SRC_ARCHIVE_INENERGY_TOOLKIT"
+        ]
+      }
+    },
+    {
+      "requirement_id": "REQ_LIVE_EXECUTION_SCREEN_CAPTURE",
+      "name": "Live Screen Capture & Code Artifact",
+      "required_source_class": "APPROVED_PRIMARY",
+      "evidence_state": "OBSERVED",
+      "verification_rule": "Direct screen recording showing CLI execution, terminal outputs, or IDE workspace without artificial cuts.",
+      "applicable_structures": [
+        "STR_THREE_ACT_INTRO_LAB"
+      ],
+      "provenance": {
+        "source_id": "SRC_CANONICAL_JOC55_INTRO_DATA",
+        "observed_in_files": [
+          "SRC_CANONICAL_JOC55_INTRO_DATA"
+        ]
+      }
+    }
+  ]
+}

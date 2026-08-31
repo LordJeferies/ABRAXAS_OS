@@ -5,7 +5,9 @@
   "type": "module",
   "exports": "./src/index.ts",
   "dependencies": {
+    "@vav/cut-domain": "workspace:*",
     "@vav/time-mapping": "workspace:*",
+    "@vav/timebase": "workspace:*",
     "@vav/visual-motion-domain": "workspace:*"
   }
 }

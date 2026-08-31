@@ -1,13 +1,14 @@
 import {create} from "zustand";
 
 export type ActiveSection =
+  | "cuts"
+  | "motion"
   | "project"
   | "media"
   | "transcript"
   | "captions"
   | "styles"
   | "structure"
-  | "motion"
   | "scene-smart"
   | "context"
   | "audio"
@@ -24,7 +25,7 @@ type Notice = Readonly<{
   text: string;
 }>;
 
-type UiState = {
+export type UiState = {
   activeSection: ActiveSection;
   selectedCaptionId: string | null;
   pendingMedia: PendingMedia | null;
@@ -32,6 +33,7 @@ type UiState = {
   playerPlaying: boolean;
   currentFrame: number;
   notice: Notice | null;
+  isRailCollapsed: boolean;
   setActiveSection: (section: ActiveSection) => void;
   setSelectedCaptionId: (captionId: string | null) => void;
   setPendingMedia: (media: PendingMedia | null) => void;
@@ -39,21 +41,24 @@ type UiState = {
   setPlayerPlaying: (playing: boolean) => void;
   setCurrentFrame: (frame: number) => void;
   setNotice: (notice: Notice | null) => void;
+  toggleRailCollapsed: () => void;
 };
 
 export const useUiState = create<UiState>((set) => ({
-  activeSection: "project",
+  activeSection: "cuts",
   selectedCaptionId: "cap-002",
   pendingMedia: null,
   exportOpen: false,
   playerPlaying: false,
   currentFrame: 120,
   notice: null,
+  isRailCollapsed: false,
   setActiveSection: (activeSection) => set({activeSection}),
   setSelectedCaptionId: (selectedCaptionId) => set({selectedCaptionId}),
   setPendingMedia: (pendingMedia) => set({pendingMedia}),
   setExportOpen: (exportOpen) => set({exportOpen}),
   setPlayerPlaying: (playerPlaying) => set({playerPlaying}),
   setCurrentFrame: (currentFrame) => set({currentFrame}),
-  setNotice: (notice) => set({notice})
+  setNotice: (notice) => set({notice}),
+  toggleRailCollapsed: () => set((state) => ({isRailCollapsed: !state.isRailCollapsed}))
 }));

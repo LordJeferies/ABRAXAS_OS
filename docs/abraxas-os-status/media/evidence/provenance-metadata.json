@@ -1,0 +1,36 @@
+{
+  "metadataVersion": "1.1.0",
+  "generatedAt": "2026-08-30T20:36:00Z",
+  "evidence": [
+    {
+      "id": "EVID-VAV-MOTION-001",
+      "evidenceType": "REAL_RENDER_STILL",
+      "sourceSubsystem": "VAV / packages/remotion-composition (@remotion/renderer)",
+      "file": "media/evidence/vav-motion-remotion-render.png",
+      "sha256": "92fa04380f0a15238c0aa8d679c97d654b4c90f01400cf9f614140f2af5b122b",
+      "dimensions": "720x1280 (9:16)",
+      "frame": 22,
+      "compositionId": "VAVMotionComposition",
+      "verificationCommand": "node services/local-engine/src/render-motion-frames.mjs",
+      "description": "Real frame rendered via Remotion engine evaluating PUSH_ZOOM visual preset with platform safe-zone overlay."
+    },
+    {
+      "id": "EVID-HE-OPERATIONS-001",
+      "evidenceType": "REAL_BROWSER_SCREENSHOT",
+      "sourceSubsystem": "ABRAXAS_CORE/HE/06_TASKS_AND_TEAMS",
+      "file": "media/evidence/he-operations-desk.png",
+      "sha256": "4f993323204ca694bca5c1a83724ea78d272032c6eee55f62478d7b12790a5c4",
+      "dimensions": "1440x1000",
+      "verificationCommand": "pnpm he:build && Chrome Headless capture",
+      "description": "Actual He Operations Desk browser runtime showing live tasks ledger, active blocker indicators, and team workload."
+    },
+    {
+      "id": "EVID-VAV-CUTS-001",
+      "evidenceType": "CUTS_RUNTIME_VERIFIED_BY_TEST",
+      "sourceSubsystem": "VAV / packages/cut-engine (FFmpeg non-destructive timeline)",
+      "verificationCommand": "vitest run packages/cut-engine/src/e2e.test.ts",
+      "targetSource": "packages/cut-engine/src/e2e.test.ts",
+      "description": "Real local FFmpeg multi-segment non-destructive cut execution test verifying lossless keyframe seeking, stream duration, and master source immutability."
+    }
+  ]
+}

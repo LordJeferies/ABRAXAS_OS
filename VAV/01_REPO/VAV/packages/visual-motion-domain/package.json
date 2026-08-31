@@ -5,6 +5,7 @@
   "type": "module",
   "exports": "./src/index.ts",
   "dependencies": {
-    "@vav/ficha-domain": "workspace:*"
+    "@vav/timebase": "workspace:*",
+    "@vav/cut-domain": "workspace:*"
   }
 }

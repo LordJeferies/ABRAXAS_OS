@@ -1,0 +1,910 @@
+{
+  "registry_id": "ABRAXAS_STRUCTURE_REGISTRY_V1",
+  "version": "1.0.0",
+  "canonical_module": "YOD",
+  "status": "F1_READY_FOR_ARCHITECTURE_REVIEW",
+  "total_structures": 10,
+  "classification_scopes": [
+    "UNIVERSAL",
+    "INDUSTRY_ADAPTATION",
+    "CLIENT_SPECIFIC"
+  ],
+  "structures": [
+    {
+      "structure_id": "STR_EVIDENCE_LIMITATION_DECISION",
+      "name": "Evidence → Limitation → Decision",
+      "family": "EVIDENCE",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "description": "Presents empirical proof or measurements, exposes their operational limitation or misinterpretation, and concludes with a definitive decision rule.",
+      "progression": [
+        {
+          "step": 1,
+          "role": "CLAIM_PRESENTATION",
+          "description": "States a clear empirical claim or industry metric."
+        },
+        {
+          "step": 2,
+          "role": "EVIDENCE_EXHIBIT",
+          "description": "Presents primary observation, data, or bench result."
+        },
+        {
+          "step": 3,
+          "role": "LIMITATION_EXPOSURE",
+          "description": "Reveals what the measurement fails to account for or where it breaks down."
+        },
+        {
+          "step": 4,
+          "role": "OPERATIONAL_INTERPRETATION",
+          "description": "Interprets the underlying causal mechanism."
+        },
+        {
+          "step": 5,
+          "role": "DECISION_RESOLUTION",
+          "description": "Concludes with the strategic or technical decision rule."
+        }
+      ],
+      "genome": {
+        "hook_role": "EVIDENCE_FIRST_OR_MEASUREMENT",
+        "hook_mechanism_ids": [
+          "HK_EVIDENCE_FIRST",
+          "HK_QUESTION_DEBT"
+        ],
+        "thesis": "A measurement without boundary conditions creates false operational confidence.",
+        "reengagement": "Demonstrating how relying solely on the metric causes failure.",
+        "payoff": "A robust decision boundary that prevents costly false positives.",
+        "cta_behavior": "CONTEXTUAL_DISCUSSION_OR_SOURCE_VERIFICATION",
+        "cta_type_ids": [
+          "CTA_CONTEXTUAL_DISCUSSION",
+          "CTA_SOURCE_ATTRIBUTION"
+        ],
+        "speaker_mode": "TECHNICAL_AUTHORITY",
+        "visual_mode": "BENCH_ARTIFACT_OR_DATA_OVERLAY",
+        "evidence_requirements": [
+          "REQ_PRIMARY_METRIC_DATA",
+          "REQ_EXPERIMENTAL_ASSAY_LOG"
+        ]
+      },
+      "format_compatibility": [
+        "FMT_SHORT_VERTICAL_VIDEO",
+        "FMT_LINKEDIN_CAROUSEL",
+        "FMT_PODCAST_CLIP_STANDALONE",
+        "FMT_NEWSLETTER_DEEPDIVE"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS",
+        "corroborating_sources": [
+          "SRC_CANONICAL_CONTENT_LAB_START",
+          "SRC_ARCHIVE_ABRAXAS_QUALITY_CRITERIA"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS"
+        ],
+        "confidence": "HIGH"
+      },
+      "examples": [
+        {
+          "example_id": "EX_MOKA_DOCKING_SCIENCE",
+          "example_kind": "OBSERVED",
+          "source_ref": "SRC_MOKA_CAROUSEL_VALIDATION_GUIDE",
+          "summary": "Examines computational docking scores, shows they lack solubility and wetlab binding context, and establishes wetlab validation criteria."
+        }
+      ],
+      "anti_examples": [
+        {
+          "anti_example_id": "ANTI_EX_BLIND_METRIC_PROMOTION",
+          "anti_example_kind": "INFERRED_NORMATIVE",
+          "reason": "Hyping an algorithm score without subjecting it to physical test limitations.",
+          "evidence_gap": "NO_OBSERVED_ANTI_EXAMPLE"
+        }
+      ],
+      "aliases": [
+        "CRITERIO_TECNICO_DECISION",
+        "EVIDENCE_LADDER"
+      ]
+    },
+    {
+      "structure_id": "STR_DOUBLE_HOOK_INTENSITY_CURVE",
+      "name": "Double Hook Intensity Curve (4-Part Spoken Route)",
+      "family": "DIAGNOSIS",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "OBSERVED",
+      "description": "4-part spoken structure pairing a short conversational direct trigger with a high-stakes pain question, building tension through escalating mechanism and resolving directly into P4 payoff.",
+      "progression": [
+        {
+          "step": 1,
+          "role": "DIRECT_TRIGGER_QUESTION",
+          "description": "Short 6-12 word natural question obtaining the core thesis."
+        },
+        {
+          "step": 2,
+          "role": "PAIN_QUESTION_OPEN_LOOP",
+          "description": "12-15 word question with high-stakes consequence and open loop."
+        },
+        {
+          "step": 3,
+          "role": "P1_PAIN_RECOGNITION",
+          "description": "18-24 words establishing a recognizable industry tension."
+        },
+        {
+          "step": 4,
+          "role": "P2_ESCALATING_MECHANISM",
+          "description": "18-24 words showing the mechanism that worsens the failure."
+        },
+        {
+          "step": 5,
+          "role": "P3_HIGH_STAKES_TEST",
+          "description": "18-24 words putting a real decision or asset on the line."
+        },
+        {
+          "step": 6,
+          "role": "DOUBLE_HOOK_CALLBACK",
+          "description": "Exact restatement of the pain question returning maximum clarity."
+        },
+        {
+          "step": 7,
+          "role": "P4_DIRECT_RELEASE",
+          "description": "Audible, direct answer to the pain question."
+        },
+        {
+          "step": 8,
+          "role": "MEMORABLE_CLOSE",
+          "description": "8-22 word memorable rule or audience transfer."
+        }
+      ],
+      "genome": {
+        "hook_role": "PAIN_POINT_DOUBLE_HOOK",
+        "hook_mechanism_ids": [
+          "HK_DOUBLE_HOOK_DIRECT_PAIN",
+          "HK_QUESTION_DEBT"
+        ],
+        "thesis": "A core problem escalated through mechanism requires an unambiguous operational answer.",
+        "reengagement": "Restating the exact pain question before delivering the breakthrough answer.",
+        "payoff": "Audible release of the tension built in P1-P3.",
+        "cta_behavior": "OPTIONAL_RULE_TRANSFER",
+        "cta_type_ids": [
+          "CTA_NO_CTA_AUTHORITY",
+          "CTA_ASSET_TRANSFER"
+        ],
+        "speaker_mode": "INTERVIEW_OR_SOLO_DIRECTOR",
+        "visual_mode": "TALKING_HEAD_WITH_KINETIC_ZOOMS",
+        "evidence_requirements": [
+          "REQ_EXPERT_RECORDING_SEGMENT"
+        ]
+      },
+      "format_compatibility": [
+        "FMT_SHORT_VERTICAL_VIDEO",
+        "FMT_PODCAST_CLIP_STANDALONE"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_DOUBLE_HOOK_GUIDE",
+        "corroborating_sources": [
+          "SRC_CANONICAL_CONTENT_LAB_START",
+          "SRC_ARCHIVE_MOKA_STRATEGIC_OS"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_DOUBLE_HOOK_GUIDE",
+          "SRC_MOKA_V26_19_FICHA_GUIDE"
+        ],
+        "confidence": "HIGH"
+      },
+      "examples": [
+        {
+          "example_id": "EX_MOKA_BIODIVERSITY_IP_HANDOFF",
+          "example_kind": "OBSERVED",
+          "source_ref": "SRC_MOKA_V26_19_FICHA_GUIDE",
+          "summary": "Direct: ¿Cuándo la biodiversidad se convierte en oportunidad? Pain: ¿Qué valor queda destruido cuando abastecimiento llega tarde? P1-P4 develops IP handoff breakdown."
+        }
+      ],
+      "anti_examples": [
+        {
+          "anti_example_id": "ANTI_EX_DISPARADOR_ECHO",
+          "anti_example_kind": "OBSERVED",
+          "source_ref": "SRC_MOKA_V26_19_FICHA_GUIDE",
+          "reason": "Starting trigger and reference with the same opening word, destroying development momentum."
+        }
+      ],
+      "aliases": [
+        "4_PART_SPOKEN_ROUTE",
+        "PAIN_DOUBLE_HOOK_CURVE"
+      ]
+    },
+    {
+      "structure_id": "STR_CONTRAST_BELIEF_CONTRADICTION",
+      "name": "Belief → Contradiction → Explanation → Implication",
+      "family": "CONTRAST",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "description": "Takes a widespread industry convention, exposes an undeniable contradiction in practice, explains the structural reason, and establishes the operational implication.",
+      "progression": [
+        {
+          "step": 1,
+          "role": "ACCEPTED_BELIEF",
+          "description": "States what everyone in the industry assumes or repeats."
+        },
+        {
+          "step": 2,
+          "role": "REAL_WORLD_CONTRADICTION",
+          "description": "Presents a real scenario where this belief completely fails."
+        },
+        {
+          "step": 3,
+          "role": "STRUCTURAL_EXPLANATION",
+          "description": "Explains why the assumption broke down (hidden variables)."
+        },
+        {
+          "step": 4,
+          "role": "STRATEGIC_IMPLICATION",
+          "description": "Redefines how forward-looking practitioners must operate."
+        }
+      ],
+      "genome": {
+        "hook_role": "CONTRARIAN_REFRAMING",
+        "hook_mechanism_ids": [
+          "HK_CONTRARIAN_REFRAMING",
+          "HK_PROBLEM_DIAGNOSIS"
+        ],
+        "thesis": "Industry convention survives through inertia, not operational efficacy.",
+        "reengagement": "Illustrating the financial or operational cost of continuing the old belief.",
+        "payoff": "Clarity on what truly drives results.",
+        "cta_behavior": "CONTEXTUAL_DISCUSSION",
+        "cta_type_ids": [
+          "CTA_CONTEXTUAL_DISCUSSION",
+          "CTA_NO_CTA_AUTHORITY"
+        ],
+        "speaker_mode": "STRATEGIC_AUTHORITY",
+        "visual_mode": "SPLIT_SCREEN_OR_SIDE_BY_SIDE_COMPARISON",
+        "evidence_requirements": [
+          "REQ_PRIMARY_METRIC_DATA",
+          "REQ_HISTORICAL_CASE_TIMELINE"
+        ]
+      },
+      "format_compatibility": [
+        "FMT_SHORT_VERTICAL_VIDEO",
+        "FMT_LINKEDIN_CAROUSEL",
+        "FMT_LINKEDIN_TEXT_POST",
+        "FMT_NEWSLETTER_DEEPDIVE"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS",
+        "corroborating_sources": [
+          "SRC_CANONICAL_CONTENT_LAB_START",
+          "SRC_INTRO_LAB_V2_1_CRITERIA"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS"
+        ],
+        "confidence": "HIGH"
+      },
+      "examples": [
+        {
+          "example_id": "EX_SCIENCE_BUSINESS_BOOKS",
+          "example_kind": "OBSERVED",
+          "source_ref": "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS",
+          "summary": "Belief: Scientific milestones equal startup valuation. Contradiction: Science and business keep different books. Explanation: IP and supply chain risk. Implication: Align capitalization with lab milestones."
+        }
+      ],
+      "anti_examples": [
+        {
+          "anti_example_id": "ANTI_EX_HOLLOW_EDGINESS",
+          "anti_example_kind": "INFERRED_NORMATIVE",
+          "reason": "Being contrarian just for shock value without providing the structural mechanism or empirical proof.",
+          "evidence_gap": "NO_OBSERVED_ANTI_EXAMPLE"
+        }
+      ],
+      "aliases": [
+        "DOLOR_CONTRADICCION",
+        "MYTH_CONTRADICTION"
+      ]
+    },
+    {
+      "structure_id": "STR_PROBLEM_MECHANISM_DECISION",
+      "name": "Problem → Mechanism → Decision",
+      "family": "PROBLEM_MECHANISM_DECISION",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "description": "Rapid triage structure identifying a friction point, dissecting its technical cause, and prescribing an immediate actionable correction.",
+      "progression": [
+        {
+          "step": 1,
+          "role": "PROBLEM_IDENTIFICATION",
+          "description": "States the visible bottleneck or operational friction."
+        },
+        {
+          "step": 2,
+          "role": "CAUSAL_MECHANISM",
+          "description": "Breaks down why the problem occurs at a system level."
+        },
+        {
+          "step": 3,
+          "role": "DECISION_DIRECTIVE",
+          "description": "Provides the exact operational change required."
+        }
+      ],
+      "genome": {
+        "hook_role": "PROBLEM_DIAGNOSIS",
+        "hook_mechanism_ids": [
+          "HK_PROBLEM_DIAGNOSIS",
+          "HK_UNEXPECTED_MECHANISM"
+        ],
+        "thesis": "Symptoms cannot be treated without addressing the root mechanism.",
+        "reengagement": "Highlighting the recurring waste caused by ignoring the mechanism.",
+        "payoff": "Immediate diagnostic clarity.",
+        "cta_behavior": "NO_CTA_OR_TOOL_CHECKLIST",
+        "cta_type_ids": [
+          "CTA_NO_CTA_AUTHORITY",
+          "CTA_ASSET_TRANSFER"
+        ],
+        "speaker_mode": "PRACTITIONER_EXPERT",
+        "visual_mode": "FLOWCHART_OR_SCREEN_CAPTURE",
+        "evidence_requirements": [
+          "REQ_PRIMARY_METRIC_DATA"
+        ]
+      },
+      "format_compatibility": [
+        "FMT_SHORT_VERTICAL_VIDEO",
+        "FMT_LINKEDIN_TEXT_POST",
+        "FMT_LINKEDIN_CAROUSEL"
+      ],
+      "provenance": {
+        "source_id": "SRC_CANONICAL_CONTENT_LAB_START",
+        "corroborating_sources": [
+          "SRC_MOKA_V26_19_FICHA_GUIDE",
+          "SRC_ARCHIVE_ABRAXAS_QUALITY_CRITERIA"
+        ],
+        "observed_in_files": [
+          "SRC_CANONICAL_CONTENT_LAB_START"
+        ],
+        "confidence": "HIGH"
+      },
+      "examples": [
+        {
+          "example_id": "EX_MOKA_DECISION_PAYOFF",
+          "example_kind": "OBSERVED",
+          "source_ref": "SRC_MOKA_CAROUSEL_VALIDATION_GUIDE",
+          "summary": "Problem: Unreproducible extract batches. Mechanism: Natural variation in plant harvesting season. Decision: Chemical fingerprinting before extraction."
+        }
+      ],
+      "anti_examples": [
+        {
+          "anti_example_id": "ANTI_EX_GENERIC_ADVICE",
+          "anti_example_kind": "INFERRED_NORMATIVE",
+          "reason": "Offering platitudes instead of an explicit causal mechanism and decision rule.",
+          "evidence_gap": "NO_OBSERVED_ANTI_EXAMPLE"
+        }
+      ],
+      "aliases": [
+        "DECISION_PAYOFF",
+        "TRIAGE_STRUCTURE"
+      ]
+    },
+    {
+      "structure_id": "STR_THREE_ACT_INTRO_LAB",
+      "name": "Intro Lab 3-Act Hook Spine (Promise → Development → Cliffhanger)",
+      "family": "STORY",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "OBSERVED",
+      "description": "High-retention video narrative spine dividing the opening into an unignorable promise, dynamic story development with source replacement, and a cliffhanger transitioning into longform.",
+      "progression": [
+        {
+          "step": 1,
+          "role": "ACT_I_HOOK_PROMISE",
+          "description": "High-stakes premise, undeniable visual or audio artifact in first 3-5 seconds."
+        },
+        {
+          "step": 2,
+          "role": "ACT_II_SPINE_DEVELOPMENT",
+          "description": "Rapid context building using VO, clean A-roll, and B-roll source replacement."
+        },
+        {
+          "step": 3,
+          "role": "ACT_III_CLIFFHANGER_TRANSITION",
+          "description": "Unresolved tension or pivotal question carrying viewer into full body."
+        }
+      ],
+      "genome": {
+        "hook_role": "QUESTION_DEBT_OR_CASE_OPENING",
+        "hook_mechanism_ids": [
+          "HK_CASE_OPENING_SCENE",
+          "HK_QUESTION_DEBT",
+          "HK_SPECIFIC_RESULT_PROMISE"
+        ],
+        "thesis": "An intro must establish the necessity of the entire video in under 45 seconds.",
+        "reengagement": "Pattern interrupt before the halfway mark of Act II.",
+        "payoff": "Irresistible open loop propelling viewer into the master episode.",
+        "cta_behavior": "WATCH_FULL_EPISODE_TRANSFER",
+        "cta_type_ids": [
+          "CTA_SUBSCRIBE_SERIALIZED",
+          "CTA_ASSET_TRANSFER"
+        ],
+        "speaker_mode": "NARRATIVE_STORYTELLER",
+        "visual_mode": "FAST_PACED_MULTILAYER_BROLL_AND_KINETIC_TEXT",
+        "evidence_requirements": [
+          "REQ_EXPERT_RECORDING_SEGMENT",
+          "REQ_LIVE_EXECUTION_SCREEN_CAPTURE"
+        ]
+      },
+      "format_compatibility": [
+        "FMT_SHORT_VERTICAL_VIDEO",
+        "FMT_PODCAST_CLIP_STANDALONE",
+        "FMT_HORIZONTAL_LONGFORM_VIDEO"
+      ],
+      "provenance": {
+        "source_id": "SRC_INTRO_LAB_V2_1_CRITERIA",
+        "corroborating_sources": [
+          "SRC_CANONICAL_CONTENT_LAB_START",
+          "SRC_ARCHIVE_JOC_OS_HTML"
+        ],
+        "observed_in_files": [
+          "SRC_INTRO_LAB_V2_1_CRITERIA"
+        ],
+        "confidence": "HIGH"
+      },
+      "examples": [
+        {
+          "example_id": "EX_JOC55_INTRO_ROUTE_A",
+          "example_kind": "OBSERVED",
+          "source_ref": "SRC_CANONICAL_JOC55_INTRO_DATA",
+          "summary": "Act I reveals a 40M token anomaly, Act II traces memory leakage to unindexed context, Act III asks how the team prevented catastrophic degradation."
+        }
+      ],
+      "anti_examples": [
+        {
+          "anti_example_id": "ANTI_EX_SPOILER_PAYOFF",
+          "anti_example_kind": "OBSERVED",
+          "source_ref": "SRC_INTRO_LAB_V2_1_CRITERIA",
+          "reason": "Giving away the complete resolution during the hook, destroying retention for the master episode."
+        }
+      ],
+      "aliases": [
+        "INTRO_LAB_SPINE",
+        "PROMISE_DEVELOPMENT_CLIFFHANGER"
+      ]
+    },
+    {
+      "structure_id": "STR_FRAMEWORK_MODEL_PARTS_RULES",
+      "name": "Framework: Problem → Mental Model → Component Parts → Governing Rules",
+      "family": "FRAMEWORK",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "description": "Constructs a reusable conceptual framework to solve recurring complex decisions, naming its component parts and defining interaction rules.",
+      "progression": [
+        {
+          "step": 1,
+          "role": "RECURRING_CHAOS",
+          "description": "Identifies the domain where people repeatedly make inconsistent decisions."
+        },
+        {
+          "step": 2,
+          "role": "MENTAL_MODEL_INTRODUCTION",
+          "description": "Introduces the overarching conceptual architecture."
+        },
+        {
+          "step": 3,
+          "role": "COMPONENT_PARTS_BREAKDOWN",
+          "description": "Defines each pillar, layer, or module in the system."
+        },
+        {
+          "step": 4,
+          "role": "INTERACTION_RULES",
+          "description": "The operational rules governing how parts interact."
+        },
+        {
+          "step": 5,
+          "role": "DECISION_HEURISTIC",
+          "description": "How to use the framework to make immediate trade-offs."
+        }
+      ],
+      "genome": {
+        "hook_role": "DEFINITION_CHALLENGE",
+        "hook_mechanism_ids": [
+          "HK_DEFINITION_CHALLENGE",
+          "HK_PROCESS_REVEAL"
+        ],
+        "thesis": "Without a shared mental model, teams optimize subcomponents at the expense of system integrity.",
+        "reengagement": "Contrasting ad-hoc decision making with framework-driven clarity.",
+        "payoff": "A permanent cognitive asset for the viewer.",
+        "cta_behavior": "ASSET_TRANSFER_OR_CONSULTATIVE_INTAKE",
+        "cta_type_ids": [
+          "CTA_ASSET_TRANSFER",
+          "CTA_CONSULTATIVE_INTAKE"
+        ],
+        "speaker_mode": "SYSTEM_ARCHITECT",
+        "visual_mode": "LAYERED_SYSTEM_ARCHITECTURE_DIAGRAM",
+        "evidence_requirements": [
+          "REQ_SYSTEM_ARCHITECTURE_MAP"
+        ]
+      },
+      "format_compatibility": [
+        "FMT_LINKEDIN_CAROUSEL",
+        "FMT_HORIZONTAL_LONGFORM_VIDEO",
+        "FMT_HYBRID_VIDEO_SLIDES"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_MOKADEX_P06",
+        "corroborating_sources": [
+          "SRC_CANONICAL_UNIVERSAL_OPS_MANIFEST",
+          "SRC_ARCHIVE_MOKA_STRATEGIC_OS"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_MOKADEX_P06"
+        ],
+        "confidence": "HIGH"
+      },
+      "examples": [
+        {
+          "example_id": "EX_MOKADEX_DECISION_ARCHITECTURE",
+          "example_kind": "OBSERVED",
+          "source_ref": "SRC_MOKA_CAROUSEL_MOKADEX_P06",
+          "summary": "Breakdown of MokaDex engine: Raw data ingestion → Context graph linking → Wetlab scoring → Explainable recommendation output."
+        }
+      ],
+      "anti_examples": [
+        {
+          "anti_example_id": "ANTI_EX_OVERCOMPLEX_ACRONYMS",
+          "anti_example_kind": "INFERRED_NORMATIVE",
+          "reason": "Inventing jargon acronyms that confuse rather than simplify physical realities.",
+          "evidence_gap": "NO_OBSERVED_ANTI_EXAMPLE"
+        }
+      ],
+      "aliases": [
+        "SYSTEM_ARCHITECTURE_MODEL",
+        "CONCEPTUAL_FRAMEWORK"
+      ]
+    },
+    {
+      "structure_id": "STR_CONVERSATION_DISAGREEMENT_SYNTHESIS",
+      "name": "Conversation: Disagreement → Exploration → Friction Test → Synthesis",
+      "family": "CONVERSATION",
+      "classification_scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "description": "Multi-speaker dialogue structure where two experts clash on a technical assertion, explore edge cases through joint debate, and emerge with a synthesized higher-order rule.",
+      "progression": [
+        {
+          "step": 1,
+          "role": "COLLISION_POINT",
+          "description": "Direct disagreement between two distinct perspectives."
+        },
+        {
+          "step": 2,
+          "role": "CASE_EXPLORATION",
+          "description": "Speaker A defends thesis with evidence; Speaker B counters with failure cases."
+        },
+        {
+          "step": 3,
+          "role": "FRICTION_TEST",
+          "description": "Stress-testing both positions against an extreme operational scenario."
+        },
+        {
+          "step": 4,
+          "role": "SYNTHESIS_RESOLUTION",
+          "description": "Discovering the underlying boundary condition where both are reconciled."
+        }
+      ],
+      "genome": {
+        "hook_role": "QUESTION_DEBT_OR_DEBATE",
+        "hook_mechanism_ids": [
+          "HK_QUESTION_DEBT",
+          "HK_UNEXPECTED_MECHANISM"
+        ],
+        "thesis": "Nuance is uncovered when two experienced practitioners collide with mutual respect.",
+        "reengagement": "The moment where both speakers realize a third unstated variable was missing.",
+        "payoff": "A breakthrough synthesis superior to either initial position.",
+        "cta_behavior": "CONTEXTUAL_DISCUSSION",
+        "cta_type_ids": [
+          "CTA_CONTEXTUAL_DISCUSSION",
+          "CTA_COMMUNITY_PARTICIPATION"
+        ],
+        "speaker_mode": "DUAL_SPEAKER_COLLISION",
+        "visual_mode": "TWO_CAMERA_SWITCH_WITH_SHARED_SCREEN",
+        "evidence_requirements": [
+          "REQ_EXPERT_RECORDING_SEGMENT"
+        ]
+      },
+      "format_compatibility": [
+        "FMT_PODCAST_MASTER",
+        "FMT_PODCAST_CLIP_STANDALONE",
+        "FMT_HORIZONTAL_LONGFORM_VIDEO"
+      ],
+      "provenance": {
+        "source_id": "SRC_CANONICAL_JOC55_INTRO_DATA",
+        "corroborating_sources": [
+          "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS",
+          "SRC_ARCHIVE_JOC_OS_HTML"
+        ],
+        "observed_in_files": [
+          "SRC_CANONICAL_JOC55_INTRO_DATA"
+        ],
+        "confidence": "HIGH"
+      },
+      "examples": [
+        {
+          "example_id": "EX_JOC55_SPEAKER_SYNTHESIS",
+          "example_kind": "OBSERVED",
+          "source_ref": "SRC_CANONICAL_JOC55_INTRO_DATA",
+          "summary": "Debate on whether MLX Whisper on Apple Silicon is ready for live captioning vs batch queueing, arriving at optimal memory buffer bounds."
+        }
+      ],
+      "anti_examples": [
+        {
+          "anti_example_id": "ANTI_EX_THEATRICAL_ARGUMENT",
+          "anti_example_kind": "INFERRED_NORMATIVE",
+          "reason": "Staging artificial conflict without technical substance or meaningful synthesis.",
+          "evidence_gap": "NO_OBSERVED_ANTI_EXAMPLE"
+        }
+      ],
+      "aliases": [
+        "SPEAKER_COLLISION",
+        "DIALECTICAL_SYNTHESIS"
+      ]
+    },
+    {
+      "structure_id": "STR_WETLAB_MOLECULAR_VALIDATION_LEVELS",
+      "name": "Five Levels of Molecular Evidence",
+      "family": "EVIDENCE",
+      "classification_scope": "INDUSTRY_ADAPTATION",
+      "evidence_state": "OBSERVED",
+      "description": "Specific biotechnology evidence progression moving from computational in-silico prediction through in-vitro binding, in-vivo efficacy, safety toxicology, to human clinical validation.",
+      "progression": [
+        {
+          "step": 1,
+          "role": "LEVEL_1_IN_SILICO",
+          "description": "Computational docking, AI prediction, molecular dynamics."
+        },
+        {
+          "step": 2,
+          "role": "LEVEL_2_IN_VITRO",
+          "description": "Enzyme inhibition, cell assay, chemical fingerprinting."
+        },
+        {
+          "step": 3,
+          "role": "LEVEL_3_IN_VIVO",
+          "description": "Model organism efficacy, bioavailability, pharmacokinetics."
+        },
+        {
+          "step": 4,
+          "role": "LEVEL_4_SAFETY_TOXICOLOGY",
+          "description": "Cytotoxicity, Ames test, regulatory compliance limits."
+        },
+        {
+          "step": 5,
+          "role": "LEVEL_5_CLINICAL_TRIAL",
+          "description": "Double-blind randomized human trial with verified endpoint."
+        }
+      ],
+      "genome": {
+        "hook_role": "DEFINITION_CHALLENGE",
+        "hook_mechanism_ids": [
+          "HK_DEFINITION_CHALLENGE",
+          "HK_EVIDENCE_FIRST"
+        ],
+        "thesis": "Not all scientific evidence has the same commercial or clinical weight.",
+        "reengagement": "Showing that 90% of in-silico hits fail Level 2 and Level 3.",
+        "payoff": "A rigorous auditing rubric for biotech investors and researchers.",
+        "cta_behavior": "ASSET_TRANSFER",
+        "cta_type_ids": [
+          "CTA_ASSET_TRANSFER",
+          "CTA_SOURCE_ATTRIBUTION"
+        ],
+        "speaker_mode": "WETLAB_CHIEF_SCIENTIST",
+        "visual_mode": "FIVE_TIER_PYRAMID_INFOGRAPHIC",
+        "evidence_requirements": [
+          "REQ_EXPERIMENTAL_ASSAY_LOG",
+          "REQ_PEER_REVIEWED_PAPER_CITATION"
+        ]
+      },
+      "format_compatibility": [
+        "FMT_LINKEDIN_CAROUSEL",
+        "FMT_HORIZONTAL_LONGFORM_VIDEO"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS",
+        "corroborating_sources": [
+          "SRC_MOKA_V26_19_FICHA_GUIDE",
+          "SRC_ARCHIVE_MOKA_STRATEGIC_OS"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS"
+        ],
+        "confidence": "HIGH"
+      },
+      "examples": [
+        {
+          "example_id": "EX_MOKA_FIVE_EVIDENCE_LEVELS",
+          "example_kind": "OBSERVED",
+          "source_ref": "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS",
+          "summary": "Breakdown of the 5 evidence tiers for cosmetic and nutraceutical bioactives, warning against making commercial claims based purely on docking."
+        }
+      ],
+      "anti_examples": [
+        {
+          "anti_example_id": "ANTI_EX_LEVEL_CONFUSION",
+          "anti_example_kind": "OBSERVED",
+          "source_ref": "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS",
+          "reason": "Claiming a bioactive is 'clinically proven' when only Level 1 molecular docking has been performed."
+        }
+      ],
+      "aliases": [
+        "FIVE_LEVELS_EVIDENCE",
+        "BIOACTIVE_VALIDATION_PYRAMID"
+      ]
+    },
+    {
+      "structure_id": "STR_ENTERPRISE_PREQUALIFICATION_ROADMAP",
+      "name": "Enterprise Strategic Prequalification & Maturity Audit",
+      "family": "DIAGNOSIS",
+      "classification_scope": "INDUSTRY_ADAPTATION",
+      "evidence_state": "OBSERVED",
+      "description": "Enterprise audit structure diagnosing organizational maturity, regulatory compliance readiness, and infrastructure transition readiness before recommending deployment.",
+      "progression": [
+        {
+          "step": 1,
+          "role": "BASELINE_ASSESSMENT",
+          "description": "Current infrastructure footprint and regulatory compliance status."
+        },
+        {
+          "step": 2,
+          "role": "VULNERABILITY_AUDIT",
+          "description": "Uncovering single points of failure and compliance exposure."
+        },
+        {
+          "step": 3,
+          "role": "CAPITAL_EFFICIENCY_METRIC",
+          "description": "Calculating operational expenditure vs modernization capital."
+        },
+        {
+          "step": 4,
+          "role": "PHASED_TRANSITION_ROADMAP",
+          "description": "3-phase mitigation plan prioritizing critical uptime."
+        }
+      ],
+      "genome": {
+        "hook_role": "PROBLEM_DIAGNOSIS",
+        "hook_mechanism_ids": [
+          "HK_PROBLEM_DIAGNOSIS",
+          "HK_SPECIFIC_RESULT_PROMISE"
+        ],
+        "thesis": "Large-scale infrastructure modernization fails when organizations bypass baseline prequalification.",
+        "reengagement": "Exposing regulatory fines or operational risks of un-audited infrastructure.",
+        "payoff": "A de-risked executive capital roadmap.",
+        "cta_behavior": "CONSULTATIVE_INTAKE",
+        "cta_type_ids": [
+          "CTA_CONSULTATIVE_INTAKE",
+          "CTA_ASSET_TRANSFER"
+        ],
+        "speaker_mode": "INFRASTRUCTURE_DIRECTOR",
+        "visual_mode": "EXECUTIVE_AUDIT_HEATMAP",
+        "evidence_requirements": [
+          "REQ_REGULATORY_COMPLIANCE_STANDARD",
+          "REQ_HISTORICAL_CASE_TIMELINE"
+        ]
+      },
+      "format_compatibility": [
+        "FMT_LINKEDIN_CAROUSEL",
+        "FMT_HORIZONTAL_LONGFORM_VIDEO",
+        "FMT_NEWSLETTER_DEEPDIVE"
+      ],
+      "provenance": {
+        "source_id": "SRC_ARCHIVE_INENERGY_TOOLKIT",
+        "corroborating_sources": [
+          "SRC_CANONICAL_UNIVERSAL_OPS_MANIFEST"
+        ],
+        "observed_in_files": [
+          "SRC_ARCHIVE_INENERGY_TOOLKIT"
+        ],
+        "confidence": "HIGH"
+      },
+      "examples": [
+        {
+          "example_id": "EX_INENERGY_PREQUAL",
+          "example_kind": "OBSERVED",
+          "source_ref": "SRC_ARCHIVE_INENERGY_TOOLKIT",
+          "summary": "Prequalification framework evaluating commercial energy storage feasibility based on interconnection queue delay risk."
+        }
+      ],
+      "anti_examples": [
+        {
+          "anti_example_id": "ANTI_EX_GENERIC_PITCH",
+          "anti_example_kind": "INFERRED_NORMATIVE",
+          "reason": "Pitching infrastructure solutions without analyzing regulatory compliance or grid capacity limits.",
+          "evidence_gap": "NO_OBSERVED_ANTI_EXAMPLE"
+        }
+      ],
+      "aliases": [
+        "ENTERPRISE_PREQUAL",
+        "INFRASTRUCTURE_AUDIT"
+      ]
+    },
+    {
+      "structure_id": "STR_MOKA_TOPIC_ROOM_RECORDING_FICHA",
+      "name": "Moka Bio 12-Topic Room Recording Ficha (Client-Specific)",
+      "family": "PROCESS",
+      "classification_scope": "CLIENT_SPECIFIC",
+      "evidence_state": "OBSERVED",
+      "description": "Specialized content recording ficha organized into 12 dedicated topic rooms across Science (Facu) and Commercial/IP Strategy (Rafa), balancing technical authority with investor messaging.",
+      "progression": [
+        {
+          "step": 1,
+          "role": "TOPIC_ROOM_ALIGNMENT",
+          "description": "Matches piece to one of 12 predefined thematic rooms."
+        },
+        {
+          "step": 2,
+          "role": "SPEAKER_VOICE_CALIBRATION",
+          "description": "Assigns speaker mode (Facu = wetlab rigor; Rafa = commercial strategy)."
+        },
+        {
+          "step": 3,
+          "role": "DUAL_QUESTION_PROMPT",
+          "description": "Direct trigger (6-12 words) + Pain question (12-15 words)."
+        },
+        {
+          "step": 4,
+          "role": "4_PART_SPOKEN_RECORDING",
+          "description": "P1-P4 spoken references recorded live."
+        },
+        {
+          "step": 5,
+          "role": "TAKEAWAY_CLOSING",
+          "description": "Definitive 8-22 word closing rule."
+        }
+      ],
+      "genome": {
+        "hook_role": "PAIN_POINT_DOUBLE_HOOK",
+        "hook_mechanism_ids": [
+          "HK_DOUBLE_HOOK_DIRECT_PAIN",
+          "HK_QUESTION_DEBT"
+        ],
+        "thesis": "Personal brand authority requires strict separation of scientific proof from business capitalization.",
+        "reengagement": "Restating the niche pain question before technical resolution.",
+        "payoff": "Audible clarity without salesperson hype.",
+        "cta_behavior": "NO_CTA_OR_SCIENTIFIC_COMMUNITY_TRANSFER",
+        "cta_type_ids": [
+          "CTA_NO_CTA_AUTHORITY",
+          "CTA_COMMUNITY_PARTICIPATION"
+        ],
+        "speaker_mode": "FACU_SCIENTIST_OR_RAFA_FOUNDER",
+        "visual_mode": "WETLAB_OR_EXECUTIVE_STUDIO_SPLIT",
+        "evidence_requirements": [
+          "REQ_EXPERT_RECORDING_SEGMENT"
+        ]
+      },
+      "format_compatibility": [
+        "FMT_SHORT_VERTICAL_VIDEO",
+        "FMT_PODCAST_CLIP_STANDALONE"
+      ],
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_TOPIC_ROOMS",
+        "corroborating_sources": [
+          "SRC_MOKA_V26_19_FICHA_GUIDE",
+          "SRC_ARCHIVE_MOKA_STRATEGIC_OS"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_TOPIC_ROOMS",
+          "SRC_MOKA_V26_19_FICHA_GUIDE"
+        ],
+        "confidence": "HIGH"
+      },
+      "examples": [
+        {
+          "example_id": "EX_MOKA_TOPIC_ROOM_04",
+          "example_kind": "OBSERVED",
+          "source_ref": "SRC_MOKA_V26_19_TOPIC_ROOMS",
+          "summary": "Topic Room 04 (MokaDex Search): Facu explains why text keyword search in chemical papers misses 80% of active isomers."
+        }
+      ],
+      "anti_examples": [
+        {
+          "anti_example_id": "ANTI_EX_SPEAKER_CONFUSION",
+          "anti_example_kind": "OBSERVED",
+          "source_ref": "SRC_MOKA_V26_19_FICHA_GUIDE",
+          "reason": "Turning the wetlab scientist into an aggressive sales promoter or the commercial founder into an unverified lab tech."
+        }
+      ],
+      "aliases": [
+        "MOKA_FICHA_PAUTA",
+        "TOPIC_ROOM_FICHA"
+      ]
+    }
+  ]
+}

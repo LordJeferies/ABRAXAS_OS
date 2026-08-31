@@ -1,0 +1,15 @@
+{
+  "name": "@vav/motion-engine",
+  "version": "0.0.1-dev",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@vav/visual-motion-domain": "workspace:*",
+    "@vav/spatial-scene": "workspace:*",
+    "@vav/motion-caption-policy": "workspace:*",
+    "@vav/platform-safe-zones": "workspace:*",
+    "@vav/timebase": "workspace:*",
+    "@vav/cut-domain": "workspace:*"
+  }
+}

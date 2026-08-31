@@ -1,11 +1,43 @@
 {
   "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules"
+    ],
+    "paths": {
+      "react": [
+        "./node_modules/@types/react"
+      ],
+      "react-dom": [
+        "./node_modules/@types/react-dom"
+      ],
+      "react-dom/server": [
+        "./node_modules/@types/react-dom/server"
+      ],
+      "react/jsx-runtime": [
+        "./node_modules/@types/react/jsx-runtime"
+      ],
+      "react/jsx-dev-runtime": [
+        "./node_modules/@types/react/jsx-dev-runtime"
+      ],
+      "vitest": [
+        "./node_modules/vitest/dist/index.d.ts"
+      ]
+    },
+    "types": [
+      "node",
+      "vitest"
+    ]
+  },
   "include": [
     "apps/**/*.ts",
     "apps/**/*.tsx",
     "services/**/*.ts",
     "packages/**/*.ts",
-    "packages/**/*.tsx"
+    "packages/**/*.tsx",
+    "../../../ABRAXAS_CORE/HE/**/*.ts",
+    "../../../ABRAXAS_CORE/HE/**/*.tsx"
   ],
   "exclude": [
     "**/node_modules/**",

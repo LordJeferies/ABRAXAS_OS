@@ -1,0 +1,145 @@
+{
+  "registry_id": "ABRAXAS_CONTENT_PATTERN_REGISTRY_V1",
+  "version": "1.0.0",
+  "canonical_module": "YOD",
+  "status": "F1_READY_FOR_ARCHITECTURE_REVIEW",
+  "total_patterns": 8,
+  "patterns": [
+    {
+      "pattern_id": "PAT_UPSTREAM_DIAGNOSIS_OVER_SYMPTOMS",
+      "name": "Upstream Diagnosis Over Symptom Patching",
+      "scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "principle": "Trace every operational failure upstream to its boundary handoff or contract failure instead of treating downstream symptoms.",
+      "provenance": {
+        "source_id": "SRC_CANONICAL_CONTENT_LAB_START",
+        "corroborating_sources": [
+          "SRC_MOKA_V26_19_FICHA_GUIDE"
+        ],
+        "observed_in_files": [
+          "SRC_CANONICAL_CONTENT_LAB_START"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "pattern_id": "PAT_TECHNICAL_RIGOR_OVER_MARKETING_HYPE",
+      "name": "Technical Rigor Over Marketing Hype",
+      "scope": "UNIVERSAL",
+      "evidence_state": "OBSERVED",
+      "principle": "Never use buzzwords ('disruptive', 'revolutionary', 'game-changing'); explain the physical or economic mechanism with precision.",
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS",
+        "corroborating_sources": [
+          "SRC_ARCHIVE_ABRAXAS_QUALITY_CRITERIA"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "pattern_id": "PAT_EVIDENCE_LADDER_VERIFICATION",
+      "name": "Evidence Ladder Verification",
+      "scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "principle": "Every claim must declare its evidence tier (in-silico, benchmark, in-vitro, verified telemetry, human trial). Never equate simulation with physical reality.",
+      "provenance": {
+        "source_id": "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS",
+        "corroborating_sources": [
+          "SRC_CANONICAL_CONTENT_LAB_START"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_CAROUSEL_EVIDENCE_LEVELS"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "pattern_id": "PAT_UNRESOLVED_COMPLEXITY_ACKNOWLEDGMENT",
+      "name": "Unresolved Complexity Acknowledgment",
+      "scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "principle": "Acknowledge edge cases and boundary conditions where the framework does not apply. Demonstrating limitations increases authority.",
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS",
+        "corroborating_sources": [
+          "SRC_INTRO_LAB_V2_1_CRITERIA"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_STRUCTURAL_ANALYSIS"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "pattern_id": "PAT_TOOL_AGNOSTIC_FIRST_PRINCIPLES",
+      "name": "Tool-Agnostic First Principles",
+      "scope": "UNIVERSAL",
+      "evidence_state": "NORMALIZED",
+      "principle": "Focus on data contracts, algorithmic invariants, and system architecture rather than endorsing specific software vendors.",
+      "provenance": {
+        "source_id": "SRC_CANONICAL_CONTENT_LAB_START",
+        "corroborating_sources": [
+          "SRC_CANONICAL_UNIVERSAL_OPS_MANIFEST"
+        ],
+        "observed_in_files": [
+          "SRC_CANONICAL_CONTENT_LAB_START"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "pattern_id": "PAT_DUAL_SPEAKER_SCIENTIFIC_COMMERCIAL_BALANCE",
+      "name": "Scientific Rigor vs Commercial Governance Balance",
+      "scope": "CLIENT_SPECIFIC",
+      "client_id": "MOKA_BIO",
+      "evidence_state": "OBSERVED",
+      "principle": "Strictly partition wetlab empirical proof (Facu) from commercial capitalization and IP governance (Rafa). Never blur laboratory findings into unverified sales claims.",
+      "provenance": {
+        "source_id": "SRC_MOKA_V26_19_TOPIC_ROOMS",
+        "corroborating_sources": [
+          "SRC_ARCHIVE_MOKA_STRATEGIC_OS"
+        ],
+        "observed_in_files": [
+          "SRC_MOKA_V26_19_TOPIC_ROOMS"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "pattern_id": "PAT_CONVERSATIONAL_STRESS_TESTING",
+      "name": "Conversational Boundary Stress Testing",
+      "scope": "CLIENT_SPECIFIC",
+      "client_id": "JOC_PODCAST",
+      "evidence_state": "OBSERVED",
+      "principle": "Use multi-speaker interview collision to stress-test software architecture assertions against edge cases live on camera.",
+      "provenance": {
+        "source_id": "SRC_CANONICAL_JOC55_INTRO_DATA",
+        "corroborating_sources": [
+          "SRC_ARCHIVE_JOC_OS_HTML"
+        ],
+        "observed_in_files": [
+          "SRC_CANONICAL_JOC55_INTRO_DATA"
+        ],
+        "confidence": "HIGH"
+      }
+    },
+    {
+      "pattern_id": "PAT_CAPITAL_EXPOSURE_PREQUALIFICATION",
+      "name": "Capital Expenditure & Regulatory Prequalification",
+      "scope": "INDUSTRY_ADAPTATION",
+      "evidence_state": "OBSERVED",
+      "principle": "Filter all energy and infrastructure initiatives through interconnection delay and tariff exposure before analyzing equipment efficiency.",
+      "provenance": {
+        "source_id": "SRC_ARCHIVE_INENERGY_TOOLKIT",
+        "observed_in_files": [
+          "SRC_ARCHIVE_INENERGY_TOOLKIT"
+        ],
+        "confidence": "HIGH",
+        "corroborating_sources": []
+      }
+    }
+  ]
+}

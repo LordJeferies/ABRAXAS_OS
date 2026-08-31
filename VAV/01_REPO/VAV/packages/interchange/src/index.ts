@@ -1,3 +1,4 @@
+export * from "./edl-fcpxml.ts";
 import type {EditClipMap} from "@vav/time-mapping";
 import type {MotionContext} from "@vav/visual-motion-domain";
 

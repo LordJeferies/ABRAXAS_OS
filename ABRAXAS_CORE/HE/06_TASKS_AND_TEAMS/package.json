@@ -1,0 +1,8 @@
+{
+  "name": "@abraxas/he-operations",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./runtime/index.ts",
+  "types": "./runtime/index.ts"
+}

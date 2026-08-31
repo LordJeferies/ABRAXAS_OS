@@ -18,6 +18,10 @@
     "@vav/abraxas-import": "workspace:*",
     "@vav/caption-hierarchy": "workspace:*",
     "@vav/caption-motion": "workspace:*",
-    "@vav/caption-styles": "workspace:*"
+    "@vav/caption-styles": "workspace:*",
+    "@vav/cut-domain": "workspace:*",
+    "@vav/motion-engine": "workspace:*",
+    "@vav/visual-motion-domain": "workspace:*",
+    "@vav/timebase": "workspace:*"
   }
 }
