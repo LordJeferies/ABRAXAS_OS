@@ -1,12 +1,12 @@
 [package]
-name = "vav-captions"
-version = "0.0.1"
-description = "VAV Captions"
-authors = ["VAV"]
+name = "abraxas-os"
+version = "4.0.0"
+description = "ABRAXAS OS — Intelligent Operating System"
+authors = ["ABRAXAS"]
 edition = "2021"
 
 [lib]
-name = "vav_captions_lib"
+name = "abraxas_os_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]
