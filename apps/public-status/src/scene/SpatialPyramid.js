@@ -85,6 +85,7 @@ export class SpatialPyramid {
       this.createInternalChambers();
       this.createCelestialMoonAndLoops();
       this.createHitProxies();
+      this.initLivingPlatePlanes();
       this.initSpatialCapabilityRegistry();
       this.initCameraDirector();
       this.initControls();
@@ -917,6 +918,7 @@ export class SpatialPyramid {
   }
 
   transitionToNarrativeState(stateIndex) {
+    this.transitionPlateToShot(stateIndex);
     if (!this.cameraDirector) return;
     this.cameraDirector.transitionToShot(stateIndex, (opacity, opening, duration) => {
       if (this.cameraDirector.isReducedMotion || duration === 0) {
@@ -968,6 +970,10 @@ export class SpatialPyramid {
     const isReduced = this.cameraDirector?.checkReducedMotion() || false;
 
     if (!isReduced) {
+      
+    if (this.godRayMesh) {
+      this.godRayMesh.rotation.y = time * 0.0002;
+    }
       if (this.particleField) {
         this.particleField.rotation.y = time * 0.00003;
       }
@@ -987,6 +993,107 @@ export class SpatialPyramid {
     }
 
     this.renderer.render(this.scene, this.camera);
+  }
+
+  
+  initLivingPlatePlanes() {
+    this.platePlanes = [];
+    const loader = new THREE.TextureLoader();
+    
+    // Plate asset filenames corresponding to shots S0 - S9
+    const plateFiles = [
+      'plate_01_hero.webp',
+      'plate_02_he_macro.webp',
+      'plate_03_continuity_axis.webp',
+      'plate_04_shim_metrology.webp',
+      'plate_05_vav_cathedral.webp',
+      'plate_06_arquitecto_lens.webp',
+      'plate_07_moon_loop.webp',
+      'plate_08_contenido_portal.webp',
+      'plate_09_system_dashboard.webp',
+      'plate_10_master_monument.webp'
+    ];
+
+    const prefix = typeof window !== 'undefined' && window.location.pathname.includes('/es/') ? '../' : './';
+    const basePath = `${prefix}assets/plates/`;
+
+    this.platesGroup = new THREE.Group();
+    this.platesGroup.name = 'LIVING_PLATES_MATRIX';
+    this.scene.add(this.platesGroup);
+
+    // Plane geometry with slight curvature for cinematic depth
+    const geo = new THREE.PlaneGeometry(16, 10, 32, 32);
+    // Add subtle curvature
+    const pos = geo.attributes.position;
+    for (let i = 0; i < pos.count; i++) {
+      const x = pos.getX(i);
+      const y = pos.getY(i);
+      pos.setZ(i, -(x * x + y * y) * 0.015);
+    }
+    geo.computeVertexNormals();
+
+    plateFiles.forEach((file, idx) => {
+      const tex = loader.load(`${basePath}${file}`, () => {
+        if (this.renderer && idx === 0) {
+          this.renderer.render(this.scene, this.camera);
+        }
+      });
+      tex.colorSpace = THREE.SRGBColorSpace;
+
+      const mat = new THREE.MeshBasicMaterial({
+        map: tex,
+        transparent: true,
+        opacity: idx === 0 ? 0.95 : 0.0,
+        depthWrite: false,
+        side: THREE.DoubleSide
+      });
+
+      const mesh = new THREE.Mesh(geo, mat);
+      mesh.name = `PLATE_${idx}_${file}`;
+      mesh.position.set(0, 0.4, -2.5);
+      mesh.scale.set(1.0, 1.0, 1.0);
+      mesh.userData = { shotIndex: idx, fileName: file };
+
+      this.platesGroup.add(mesh);
+      this.platePlanes.push(mesh);
+    });
+
+    // Create 3D Volumetric God Rays & Embers over the living plates
+    const rayGeo = new THREE.ConeGeometry(8, 16, 32, 1, true);
+    const rayMat = new THREE.MeshBasicMaterial({
+      color: 0xd4af37,
+      transparent: true,
+      opacity: 0.12,
+      blending: THREE.AdditiveBlending,
+      side: THREE.DoubleSide,
+      depthWrite: false
+    });
+    this.godRayMesh = new THREE.Mesh(rayGeo, rayMat);
+    this.godRayMesh.position.set(0, 4.0, -1.0);
+    this.godRayMesh.rotation.x = Math.PI;
+    this.scene.add(this.godRayMesh);
+  }
+
+  transitionPlateToShot(shotIndex) {
+    if (!this.platePlanes || this.platePlanes.length === 0) return;
+    const safeIdx = Math.max(0, Math.min(this.platePlanes.length - 1, shotIndex));
+
+    this.platePlanes.forEach((mesh, idx) => {
+      if (idx === safeIdx) {
+        gsap.to(mesh.material, { opacity: 0.92, duration: 1.2, ease: 'power2.out' });
+        gsap.to(mesh.scale, { x: 1.02, y: 1.02, z: 1.02, duration: 1.6, ease: 'power1.out' });
+      } else {
+        gsap.to(mesh.material, { opacity: 0.0, duration: 0.8, ease: 'power2.inOut' });
+        gsap.to(mesh.scale, { x: 1.0, y: 1.0, z: 1.0, duration: 0.8 });
+      }
+    });
+
+    if (this.godRayMesh) {
+      gsap.to(this.godRayMesh.material, {
+        opacity: safeIdx === 2 || safeIdx === 5 ? 0.22 : 0.10,
+        duration: 1.2
+      });
+    }
   }
 
   setupDebugHooks() {
