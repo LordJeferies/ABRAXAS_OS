@@ -1,8 +1,13 @@
 {
-  "version": "1.0.0-pre-release",
+  "version": "1.0.0-rc1",
   "statusDate": "2026-08-31",
-  "overallReleaseStatus": "IMPLEMENTED_LOCAL_UNDER_AUDIT",
-  "auditStatus": "AWAITING_FINAL_AUDIT",
+  "overallReleaseStatus": "RELEASED_RC1",
+  "auditStatus": "RELEASE_COMPLETE_RC1",
+  "release": {
+    "label": "v1.0.0-rc1",
+    "commitSha": "91234741f0b3a1ac5bd7e4c0556fafa868d00769",
+    "releasedAt": "2026-08-31T03:10:55.465Z"
+  },
   "moduleSummary": {
     "YOD": {
       "status": "PARTIAL_FOUNDATION",

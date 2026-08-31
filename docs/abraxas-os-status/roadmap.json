@@ -36,7 +36,7 @@
       "gateId": "P5",
       "title": "Integrated Pre-Release Audit & Release",
       "description": "Final global verification across all modules, zero regression validation, artifact promotion to released state.",
-      "status": "AWAITING_FINAL_AUDIT"
+      "status": "RELEASED_RC1"
     }
   ]
 }
