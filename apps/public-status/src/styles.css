@@ -1686,3 +1686,204 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Optimization (iOS & Android)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .site-header .header-inner {
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .header-nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 0.35rem 0;
+    gap: 0.5rem;
+    scrollbar-width: none;
+  }
+  
+  .header-nav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .header-nav .nav-link {
+    font-size: 0.82rem;
+    padding: 0.35rem 0.65rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Global Layout */
+  body {
+    font-size: 14px;
+  }
+
+  /* Story Scroll Container & Acts */
+  .story-scroll-container {
+    padding: 0 0.5rem;
+  }
+
+  .story-act-section {
+    min-height: auto;
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .story-act-section.layout-cover-left,
+  .story-act-section.layout-bottom-left,
+  .story-act-section.layout-right-anchored {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .act-content-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.25rem 1rem !important;
+    background: rgba(6, 9, 16, 0.92) !important;
+    border-radius: 12px !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .act-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+  }
+
+  .act-headline {
+    font-size: 1.35rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .act-4tier-card {
+    padding: 12px 10px !important;
+    gap: 10px !important;
+    margin-top: 12px !important;
+  }
+
+  .act-4tier-card p {
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions a,
+  .hero-actions button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  /* Master Shortcuts Bar */
+  .master-shortcuts-bar {
+    margin: 1.5rem 0.5rem !important;
+    padding: 12px 10px !important;
+    gap: 6px !important;
+  }
+
+  .master-shortcuts-bar a {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  /* Layman Guide, Process, Cabala Facil & Canon Sections */
+  .layman-guide-section,
+  .plain-workflow-section,
+  .cabala-facil-section,
+  .canon-reader-section {
+    margin: 2.5rem 0.5rem !important;
+    padding: 1.75rem 1rem !important;
+    border-radius: 12px !important;
+  }
+
+  .layman-guide-section h2,
+  .plain-workflow-section h2,
+  .cabala-facil-section h2,
+  .canon-reader-section h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .layman-guide-section p,
+  .plain-workflow-section p,
+  .cabala-facil-section p,
+  .canon-reader-section p {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Canon 37 TXT Dossiers on Mobile */
+  .canon-file-item summary {
+    font-size: 13px !important;
+  }
+
+  .canon-file-item summary > div {
+    gap: 6px !important;
+  }
+
+  .canon-file-item pre {
+    max-height: 280px !important;
+    font-size: 11px !important;
+    padding: 10px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .canon-search-input {
+    font-size: 14px !important; /* Prevents auto-zoom in Safari iOS */
+    padding: 10px 12px !important;
+  }
+
+  .filter-btn {
+    font-size: 11px !important;
+    padding: 5px 10px !important;
+  }
+
+  /* Background Plates on Mobile */
+  .plate-slide img {
+    object-position: center 25% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .act-headline {
+    font-size: 1.2rem !important;
+  }
+
+  .layman-guide-section h2,
+  .plain-workflow-section h2,
+  .cabala-facil-section h2,
+  .canon-reader-section h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .cta-banner-box {
+    padding: 1.25rem;
+  }
+
+  .cta-btn-row {
+    flex-direction: column;
+  }
+}
