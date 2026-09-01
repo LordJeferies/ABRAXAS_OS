@@ -66,6 +66,7 @@ function getHeader(locale, activeTab, currentRoutePath, depthFromLocale) {
       proof: 'Proof',
       roadmap: 'Roadmap',
       principles: 'Principles',
+      canon: 'Canon 37 TXT',
       ask: 'Ask Arquitecto'
     },
     es: {
@@ -78,6 +79,7 @@ function getHeader(locale, activeTab, currentRoutePath, depthFromLocale) {
       proof: 'Evidencia',
       roadmap: 'Roadmap',
       principles: 'Principios',
+      canon: 'Canon 37 TXT',
       ask: 'Preguntar a Arquitecto'
     }
   }[locale];
@@ -102,6 +104,7 @@ function getHeader(locale, activeTab, currentRoutePath, depthFromLocale) {
         <a href="${localeRoot}proof/index.html" class="nav-link ${activeTab === 'proof' ? 'active' : ''}">${t.proof}</a>
         <a href="${localeRoot}roadmap/index.html" class="nav-link ${activeTab === 'roadmap' ? 'active' : ''}">${t.roadmap}</a>
         <a href="${localeRoot}principles/index.html" class="nav-link ${activeTab === 'principles' ? 'active' : ''}">${t.principles}</a>
+        <a href="${localeRoot}canon/index.html" class="nav-link ${activeTab === 'canon' ? 'active' : ''}" style="color: #d4af37; font-weight: 700;">📚 ${t.canon}</a>
       </nav>
       <div class="header-right">
         <div class="locale-switcher" aria-label="Language selector">
@@ -11858,3 +11861,201 @@ function executeBilingualGeneration() {
 }
 
 executeBilingualGeneration();
+
+
+function generateCanonPage(locale) {
+  const assetsRoot = '../../';
+  const enRoot = '../../en/';
+  const esRoot = '../../es/';
+
+  const isEs = locale === 'es';
+  const pageTitle = isEs 
+    ? 'Canon 37 TXT — Biblioteca Canónica de ABRAXAS OS (Texto Completo y Resúmenes)' 
+    : 'Canon 37 TXT — ABRAXAS OS Master Canonical Library (Full Text & Summaries)';
+
+  const pageDesc = isEs
+    ? 'Lee directamente en el navegador los 37 documentos canónicos originales de ABRAXAS OS: ontología, espacio 4D, ingeniería de software y los 100 prompts cinematográficos.'
+    : 'Read all 37 authentic canonical source dossiers of ABRAXAS OS directly in your browser: ontology, 4D space, software engineering, and 100 cinematic film prompts.';
+
+  const html = `<!DOCTYPE html>
+<html lang="${locale}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${pageTitle}</title>
+  <meta name="description" content="${pageDesc}">
+  <link rel="alternate" hreflang="en" href="${enRoot}canon/index.html">
+  <link rel="alternate" hreflang="es" href="${esRoot}canon/index.html">
+  <link rel="alternate" hreflang="x-default" href="${enRoot}canon/index.html">
+  <link rel="stylesheet" href="${assetsRoot}assets/status-v3.css">
+  <style>
+    .canon-search-input {
+      width: 100%;
+      max-width: 600px;
+      padding: 12px 18px;
+      background: rgba(0,0,0,0.6);
+      border: 1px solid rgba(212,175,55,0.4);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .canon-search-input:focus {
+      border-color: #d4af37;
+      box-shadow: 0 0 16px rgba(212,175,55,0.3);
+    }
+    .filter-btn {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.8);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: rgba(212,175,55,0.2);
+      border-color: #d4af37;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="landing-story-body" style="background: #04060a; color: #fff; min-height: 100vh;">
+  ${getHeader(locale, 'canon', 'canon/index.html', 1)}
+
+  <main style="max-width: 1200px; margin: 3rem auto; padding: 2rem 1.5rem;">
+    
+    <!-- Hero Header -->
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <span style="font-family: monospace; font-size: 11px; font-weight: 800; color: #d4af37; letter-spacing: 0.15em; background: rgba(212,175,55,0.15); padding: 4px 16px; border-radius: 20px; border: 1px solid rgba(212,175,55,0.35);">
+        ${isEs ? 'BASE DE CONOCIMIENTO OFICIAL // 37 DOCUMENTOS' : 'CANONICAL KNOWLEDGE BASE // 37 DOSSIERS'}
+      </span>
+      <h1 style="font-size: 2.8rem; font-weight: 900; color: #fff; margin: 16px 0 10px 0; letter-spacing: -0.03em;">
+        ${isEs ? 'Biblioteca Canónica de ABRAXAS OS' : 'ABRAXAS OS Canonical Dossier Library'}
+      </h1>
+      <p style="font-size: 1.15rem; color: rgba(255,255,255,0.78); max-width: 820px; margin: 0 auto; line-height: 1.6;">
+        ${isEs 
+          ? 'Lee directamente en esta página el texto 100% completo y los resúmenes ejecutivos de los 37 archivos canónicos. Cero descargas requeridas.' 
+          : 'Read the 100% complete authentic text and executive summaries of all 37 canonical dossiers directly in this browser window. Zero downloads required.'}
+      </p>
+
+      <!-- Quick Jump Shortcuts -->
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 18px;">
+        <a href="../index.html#explicacion-para-todos" style="font-size: 12px; font-weight: 700; color: #fff; background: rgba(212,175,55,0.15); border: 1px solid rgba(212,175,55,0.35); padding: 6px 12px; border-radius: 6px; text-decoration: none;">⚡ ${isEs ? 'En 2 Minutos' : 'In 2 Minutes'}</a>
+        <a href="../index.html#proceso-simple" style="font-size: 12px; font-weight: 700; color: #fff; background: rgba(56,189,248,0.15); border: 1px solid rgba(56,189,248,0.35); padding: 6px 12px; border-radius: 6px; text-decoration: none;">🎯 ${isEs ? 'Sin Cábala (6 Pasos)' : 'Without Kabbalah (6 Steps)'}</a>
+        <a href="../index.html#cabala-facil" style="font-size: 12px; font-weight: 700; color: #fff; background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.35); padding: 6px 12px; border-radius: 6px; text-decoration: none;">🔯 ${isEs ? 'Cábala Fácil' : 'Kabbalah Made Easy'}</a>
+        <a href="../index.html#creation-narrative" style="font-size: 12px; font-weight: 700; color: #fff; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 6px; text-decoration: none;">📜 ${isEs ? 'Manifiesto de 6 Actos' : '6-Act Manifesto'}</a>
+      </div>
+    </div>
+
+    <!-- Interactive Search & Filter Controls -->
+    <div style="background: rgba(12, 16, 26, 0.9); border: 1px solid rgba(212,175,55,0.3); border-radius: 14px; padding: 20px; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+        <input type="text" id="canon-search-input" class="canon-search-input" placeholder="${isEs ? '🔍 Buscar por nombre, concepto, módulo (ej: Whisper, Daat, Motion, Dion)...' : '🔍 Search by filename, concept, module (e.g. Whisper, Daat, Motion, Dion)...'}" oninput="filterCanonFiles()">
+        
+        <div style="display: flex; gap: 8px;">
+          <button class="filter-btn" onclick="toggleAllDetails(true)">${isEs ? '➕ Expandir Todos' : '➕ Expand All'}</button>
+          <button class="filter-btn" onclick="toggleAllDetails(false)">${isEs ? '➖ Colapsar Todos' : '➖ Collapse All'}</button>
+        </div>
+      </div>
+
+      <!-- Filter Categories -->
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <button class="filter-btn active" onclick="setCategoryFilter('all', this)">${isEs ? 'Todos (37)' : 'All (37)'}</button>
+        <button class="filter-btn" onclick="setCategoryFilter('cat-1', this)">${isEs ? 'I. Ontología (7)' : 'I. Ontology (7)'}</button>
+        <button class="filter-btn" onclick="setCategoryFilter('cat-2', this)">${isEs ? 'II. Arquitectura & 4D (13)' : 'II. Architecture & 4D (13)'}</button>
+        <button class="filter-btn" onclick="setCategoryFilter('cat-3', this)">${isEs ? 'III. 100 Keyframes & Prompts (17)' : 'III. 100 Keyframes & Prompts (17)'}</button>
+      </div>
+    </div>
+
+    <!-- Dossiers List (Accordion Dropdowns) -->
+    <div id="canon-cards-container" style="display: flex; flex-direction: column; gap: 16px;">
+      ${corpusFiles.map((file, idx) => {
+        const summaryObj = fileSummaries[file.id] || { es: 'Documento canónico de ABRAXAS OS.', en: 'Canonical dossier of ABRAXAS OS.' };
+        const summary = isEs ? summaryObj.es : summaryObj.en;
+        
+        let catClass = 'cat-1';
+        if (file.category.includes('ARQUITECTURA')) catClass = 'cat-2';
+        else if (file.category.includes('KEYFRAMES')) catClass = 'cat-3';
+
+        return `
+      <details class="canon-file-item ${catClass}" data-filename="${file.fileName.toLowerCase()}" data-category="${file.category.toLowerCase()}" data-summary="${summary.toLowerCase()}" style="background: rgba(10, 14, 22, 0.9); border: 1px solid rgba(212,175,55,0.25); border-radius: 12px; padding: 16px 20px; transition: all 0.2s ease;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: #fff; font-size: 15px; list-style: none;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <span style="color: #d4af37; font-family: monospace; font-size: 13.5px;">📄 ${file.fileName}</span>
+            <span style="font-size: 10.5px; font-family: monospace; color: #38bdf8; background: rgba(56,189,248,0.12); padding: 3px 10px; border-radius: 4px; border: 1px solid rgba(56,189,248,0.25);">${isEs ? file.category : file.categoryEn}</span>
+          </div>
+          <span style="color: #d4af37; font-size: 11.5px; font-family: monospace; background: rgba(212,175,55,0.12); padding: 4px 10px; border-radius: 4px;">${isEs ? '+ VER TEXTO COMPLETO' : '+ READ FULL TEXT'} (${(file.sizeBytes / 1024).toFixed(1)} KB)</span>
+        </summary>
+        
+        <!-- Executive Summary -->
+        <div style="margin-top: 14px; padding: 12px 16px; background: rgba(212,175,55,0.08); border-left: 3px solid #d4af37; border-radius: 0 8px 8px 0;">
+          <div style="font-size: 10.5px; font-weight: 800; color: #d4af37; font-family: monospace; margin-bottom: 3px;">📌 ${isEs ? 'RESUMEN EJECUTIVO:' : 'EXECUTIVE SUMMARY:'}</div>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.92); margin: 0; line-height: 1.5;">${summary}</p>
+        </div>
+
+        <!-- Full Original Untruncated Text -->
+        <div style="margin-top: 14px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="font-size: 11px; font-weight: 800; color: #94a3b8; font-family: monospace;">📄 ${isEs ? 'TEXTO ORIGINAL COMPLETO (100% SIN DESCARGAS):' : 'FULL ORIGINAL TEXT (100% IN-BROWSER):'}</span>
+            <button onclick="navigator.clipboard.writeText(this.closest('.canon-file-item').querySelector('code').innerText); alert('${isEs ? '¡Texto copiado al portapapeles!' : 'Text copied to clipboard!'}')" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #d4af37; font-size: 11px; padding: 3px 8px; border-radius: 4px; cursor: pointer;">📋 ${isEs ? 'Copiar' : 'Copy'}</button>
+          </div>
+          <pre style="max-height: 480px; overflow-y: auto; background: #030508; padding: 16px; border-radius: 8px; font-family: 'SF Mono', Menlo, monospace; font-size: 12px; color: #e2e8f0; line-height: 1.6; white-space: pre-wrap; word-break: break-word; border: 1px solid rgba(212,175,55,0.3);"><code>${escapeHtml(file.content)}</code></pre>
+        </div>
+      </details>
+        `;
+      }).join('\n')}
+    </div>
+
+  </main>
+
+  <footer class="site-footer" style="text-align: center; padding: 3rem 1rem; border-top: 1px solid rgba(212,175,55,0.2); margin-top: 4rem; color: rgba(255,255,255,0.6); font-size: 12px; font-family: monospace;">
+    ABRAXAS OS // ${isEs ? 'Biblioteca Canónica' : 'Canonical Library'} // SHA-256 Verified
+  </footer>
+
+  <script>
+    let currentCategory = 'all';
+
+    function setCategoryFilter(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterCanonFiles();
+    }
+
+    function filterCanonFiles() {
+      const q = (document.getElementById('canon-search-input').value || '').toLowerCase().trim();
+      const items = document.querySelectorAll('.canon-file-item');
+      
+      items.forEach(item => {
+        const matchesCategory = (currentCategory === 'all') || item.classList.contains(currentCategory);
+        const name = item.getAttribute('data-filename') || '';
+        const summary = item.getAttribute('data-summary') || '';
+        const matchesQuery = !q || name.includes(q) || summary.includes(q);
+
+        if (matchesCategory && matchesQuery) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleAllDetails(expand) {
+      document.querySelectorAll('.canon-file-item').forEach(details => {
+        details.open = expand;
+      });
+    }
+  </script>
+</body>
+</html>`;
+
+  const outDir = isEs ? path.join(esRootPath, 'canon') : path.join(enRootPath, 'canon');
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
+  console.log(`[Bilingual Generator] Generated /${locale}/canon/index.html (Dedicated Canon 37 TXT Library)`);
+}
+
