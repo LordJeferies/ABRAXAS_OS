@@ -8,12 +8,12 @@
     "releaseTestFileCount": 59,
     "currentRegressionStatus": "PASS_86_FILES_226_TESTS",
     "tagline": {
-      "en": "Operating System for Content Intelligence & Operational Governance",
-      "es": "Sistema Operativo para Inteligencia de Contenido y Gobernanza Operativa"
+      "en": "Operating System for Multi-Channel Content Intelligence, Governance & Industrial Synthesis",
+      "es": "Sistema Operativo para Inteligencia de Contenido Multicanal, Gobernanza y Síntesis Industrial"
     },
     "description": {
-      "en": "ABRAXAS OS is an operating architecture for transforming intent into structured, observable, producible, and measurable reality.",
-      "es": "ABRAXAS OS es una arquitectura operativa para transformar la intención en realidad estructurada, observable, producible y medible."
+      "en": "ABRAXAS OS is an operating architecture that transforms a single brand thesis into an entire multi-channel content ecosystem (short videos, carousels, text threads, newsletters, and podcasts) with industrial speed and closed-loop retention intelligence.",
+      "es": "ABRAXAS OS es una arquitectura operativa que transforma una sola tesis de marca en un ecosistema completo de contenidos multicanal (videos cortos, carruseles visuales, hilos de texto, newsletters y podcasts) a velocidad industrial y con inteligencia de retención en lazo cerrado."
     }
   },
   "truthLayers": {
