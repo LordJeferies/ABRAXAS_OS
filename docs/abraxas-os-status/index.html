@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>ABRAXAS OS</title>
+  <meta http-equiv="refresh" content="0; url=./es/index.html">
+  <title>ABRAXAS OS — Loading Experience...</title>
   <script>
-    const stored = localStorage.getItem('abraxas_locale');
-    if (stored === 'es' || stored === 'en') {
-      window.location.replace('./' + stored + '/index.html');
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang && userLang.startsWith('en')) {
+      window.location.replace('./en/index.html');
     } else {
-      const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-      if (browserLang.startsWith('es')) {
-        window.location.replace('./es/index.html');
-      } else {
-        window.location.replace('./en/index.html');
-      }
+      window.location.replace('./es/index.html');
     }
   </script>
 </head>
-<body>
-  <p>Redirecting to <a href="./en/index.html">English</a> or <a href="./es/index.html">Español</a>...</p>
+<body style="background:#000; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif;">
+  <p>Cargando ABRAXAS OS...</p>
 </body>
 </html>

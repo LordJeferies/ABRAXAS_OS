@@ -2,15 +2,14 @@
 set -e
 
 echo "=========================================="
-echo "⚡ ABRAXAS OS — MASTER DEPLOY CONTROLLER"
+echo "⚡ ABRAXAS OS — MASTER 2026 APPLE DEPLOY CONTROLLER"
 echo "=========================================="
 
-# 1. Build latest status website & Canon 37 TXT library
-echo "📦 [1/4] Rebuilding master cinematic website & Canon 37 TXT library..."
-node apps/public-status/scripts/project-public-data.mjs
-pnpm --dir apps/public-status build
-node apps/public-status/scripts/generate-multipage.mjs
-cp -r apps/public-status/dist/assets/* docs/assets/ 2>/dev/null || true
+# 1. Build latest Apple 2026 suite assets
+echo "📦 [1/4] Rebuilding Apple MacBook Pro 2026 Suite & Canon 37 TXT library..."
+node apps/public-status/scripts/generate-master-2026.mjs
+cp apps/public-status/src/apple-design-system.css docs/assets/apple-design-system.css 2>/dev/null || true
+cp apps/public-status/src/apple-design-system.css docs/abraxas-os-status/assets/apple-design-system.css 2>/dev/null || true
 cp -r docs/abraxas-os-status/* docs/ 2>/dev/null || true
 touch docs/.nojekyll
 
@@ -18,7 +17,7 @@ touch docs/.nojekyll
 echo "🔒 [2/4] Syncing to private core repo (LordJeferies/ABRAXAS_OS)..."
 git add -A
 if ! git diff --cached --quiet; then
-  git commit -m "feat(sync): master cinematic release with multi-channel ecosystem and executive governance $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+  git commit -m "feat(apple-2026): pristine MacBook Pro release with bento grids and multi-channel factory $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
   git push origin main || true
   echo "✅ Core repository updated."
 else
@@ -34,7 +33,7 @@ if git clone --depth 1 https://github.com/LordJeferies/lordjeferies.github.io.gi
   cd "$TEMP_DIR"
   git add -A
   if ! git diff --cached --quiet; then
-    git commit -m "deploy: master cinematic website release $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+    git commit -m "deploy: Apple MacBook Pro 2026 master website release $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
     git push origin main || true
     echo "✅ Root domain (lordjeferies.github.io) updated."
   else
@@ -44,7 +43,7 @@ if git clone --depth 1 https://github.com/LordJeferies/lordjeferies.github.io.gi
   rm -rf "$TEMP_DIR"
 fi
 
-# 4. Sync to public status repo (LordJeferies/ABRAXAS_OS_STATUS)
+# 4. Sync to public status mirror (LordJeferies/ABRAXAS_OS_STATUS)
 echo "🌐 [4/4] Syncing to public status mirror (LordJeferies/ABRAXAS_OS_STATUS)..."
 TEMP_DIR_STATUS=$(mktemp -d)
 if git clone --depth 1 https://github.com/LordJeferies/ABRAXAS_OS_STATUS.git "$TEMP_DIR_STATUS" >/dev/null 2>&1; then
@@ -53,7 +52,7 @@ if git clone --depth 1 https://github.com/LordJeferies/ABRAXAS_OS_STATUS.git "$T
   cd "$TEMP_DIR_STATUS"
   git add -A
   if ! git diff --cached --quiet; then
-    git commit -m "deploy: master cinematic website mirror $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+    git commit -m "deploy: Apple MacBook Pro 2026 master website mirror $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
     git push origin main || true
     echo "✅ Status mirror updated."
   else
@@ -67,9 +66,13 @@ fi
 echo "🔍 [5/5] Verifying live URLs..."
 HTTP_ROOT=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/index.html || true)
 HTTP_CANON=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/canon/index.html || true)
+HTTP_ECO=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/ecosistema/index.html || true)
+HTTP_GER=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/gerencia/index.html || true)
 
-echo "🚀 Master URL: https://lordjeferies.github.io/es/index.html [HTTP $HTTP_ROOT]"
+echo "🚀 Master Overview URL: https://lordjeferies.github.io/es/index.html [HTTP $HTTP_ROOT]"
+echo "💼 Executive Suite URL: https://lordjeferies.github.io/es/gerencia/index.html [HTTP $HTTP_GER]"
+echo "⚡ 8-in-1 Ecosystem URL: https://lordjeferies.github.io/es/ecosistema/index.html [HTTP $HTTP_ECO]"
 echo "📚 Canon Library URL: https://lordjeferies.github.io/es/canon/index.html [HTTP $HTTP_CANON]"
 echo "=========================================="
-echo "✨ All repositories & root domain deployed successfully!"
+echo "✨ Apple MacBook Pro 2026 experience deployed successfully!"
 echo "=========================================="
