@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard del Sistema — ABRAXAS OS</title>
+  <meta name="description" content="ABRAXAS OS es una arquitectura operativa para transformar la intención en realidad estructurada, observable, producible y medible.">
+  <link rel="alternate" hreflang="en" href="../../en/system/index.html">
+  <link rel="alternate" hreflang="es" href="../../es/system/index.html">
+  <link rel="alternate" hreflang="x-default" href="../../en/system/index.html">
+  <link rel="stylesheet" href="../../assets/status-v3.css">
+</head>
+<body class="system-dashboard-body">
+  
+  <header id="global-header" class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../index.html" class="brand-logo" aria-label="ABRAXAS OS Home">
+          <span class="brand-glyph">▲</span>
+          <span class="brand-text">ABRAXAS OS</span>
+        </a>
+        <span class="brand-tag">v1.0.0-rc1</span>
+      </div>
+      <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
+        <a href="../index.html" class="nav-link ">Manifiesto</a>
+        <a href="../system/index.html" class="nav-link active">Sistema</a>
+        <a href="../architecture/index.html" class="nav-link ">Arquitectura</a>
+        <a href="../tools/index.html" class="nav-link ">Operadores</a>
+        <a href="../flow/index.html" class="nav-link ">Flujo</a>
+        <a href="../taste/index.html" class="nav-link ">Taste</a>
+        <a href="../proof/index.html" class="nav-link ">Evidencia</a>
+        <a href="../roadmap/index.html" class="nav-link ">Roadmap</a>
+        <a href="../principles/index.html" class="nav-link ">Principios</a>
+      </nav>
+      <div class="header-right">
+        <div class="locale-switcher" aria-label="Language selector">
+          <a href="../../en/system/index.html" class="locale-btn " onclick="localStorage.setItem('abraxas_locale', 'en')">EN</a>
+          <span class="locale-sep">/</span>
+          <a href="#" class="locale-btn active" onclick="return false;">ES</a>
+        </div>
+        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Preguntar a Arquitecto">
+          <span class="architect-spark">✦</span> Preguntar a Arquitecto
+        </button>
+      </div>
+    </div>
+  </header>
+  
+
+  <div id="spatial-pyramid-container" class="spatial-canvas-fullscreen" aria-label="ABRAXAS 3D Spatial Canvas"></div>
+
+  <div class="system-workspace-layout">
+    <aside class="system-directory-rail" aria-label="Jerarquía del Sistema">
+      <div class="directory-header">
+        <div class="rail-title-group">
+          <span class="rail-glyph">◈</span>
+          <h2>Jerarquía del Sistema</h2>
+        </div>
+        <div class="truth-toggle-wrapper">
+          <label class="truth-toggle-label" for="target-mode-toggle">
+            <input type="checkbox" id="target-mode-toggle" class="truth-toggle-input">
+            <span class="truth-toggle-slider"></span>
+            <span class="truth-toggle-text">Mostrar Estado Objetivo</span>
+          </label>
+        </div>
+      </div>
+      <div class="directory-list" id="system-directory-list" role="listbox">
+        <!-- Injected dynamically by modes.js -->
+      </div>
+    </aside>
+
+    <main class="system-center-overlay" aria-label="Interactive 3D Spatial Center">
+      <div class="system-spatial-hint">
+        <span class="hint-glyph">✦</span> Haz clic en cualquier cámara o selecciona del directorio
+      </div>
+    </main>
+
+    <aside class="system-inspector-rail" id="system-inspector-rail" aria-label="Module Details Inspector">
+      <div class="inspector-header">
+        <div class="truth-pill post_rc1_candidate" id="inspector-truth-badge">CANDIDATO DE TRABAJO</div>
+        <h3 class="inspector-title" id="inspector-title">YOD</h3>
+        <div class="inspector-role" id="inspector-domain">Intelligence // Criterio</div>
+      </div>
+      <div class="inspector-body" id="inspector-body">
+        <div class="inspector-section">
+          <h4>Responsabilidad</h4>
+          <p id="inspector-responsibility">YOD es la capa de inteligencia pre-contenido de ABRAXAS OS. Evalúa espacios de oportunidad, criterios de marca y ángulos de enganche antes de redactar cualquier contenido.</p>
+        </div>
+        <div class="inspector-section">
+          <h4>Asociación Espacial y Simbólica</h4>
+          <p id="inspector-sephirot">Atziluth / Cámara de Emanación Dorada (foco en Tríada Supernal)</p>
+          <small class="disclaimer-text">Esta es una asociación espacial visual y operativa de ABRAXAS, no una identidad del módulo. Los estados del Árbol describen transformaciones del Contenido; los módulos actúan sobre ellos.</small>
+        </div>
+        <div class="inspector-section">
+          <h4>Posee</h4>
+          <ul id="inspector-owns-list">
+            <li>Algoritmos de clasificación de oportunidades</li>
+<li>Puntuación de taxonomía de hooks</li>
+<li>Evaluación de criterios de voz de marca</li>
+          </ul>
+        </div>
+        <div class="inspector-section">
+          <h4>No Posee</h4>
+          <ul id="inspector-not-owns-list">
+            <li>Almacenamiento persistente de piezas (poseído por Contenido)</li>
+<li>Planificación de tareas y humanos (poseído por HE)</li>
+          </ul>
+        </div>
+        <div class="inspector-section">
+          <h4>Dependencias y Evidencia</h4>
+          <p id="inspector-evidence">Candidato de trabajo activo en runtime de núcleo local. Verificado por tests unitarios e integración; candidato para la compuerta RC2.</p>
+        </div>
+        <a href="../tools/yod/index.html" class="inspector-deep-btn" id="inspector-deep-link">Abrir Dossier Completo →</a>
+      </div>
+    </aside>
+  </div>
+
+  
+  <div id="public-architect-drawer" class="architect-drawer" aria-hidden="true" role="dialog" aria-label="Arquitecto Público">
+    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
+    <div class="architect-drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <span class="architect-spark">✦</span>
+          <h3>Arquitecto Público</h3>
+          <span class="drawer-badge">NLP Determinista</span>
+        </div>
+        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close">✕</button>
+      </div>
+      <div class="drawer-body">
+        <p class="drawer-intro">Consulta la arquitectura canónica, límites de propiedad de módulos, estado de verdad o principios semánticos directamente.</p>
+        <div class="architect-form-group">
+          <input type="text" id="architect-query-input" class="architect-input" placeholder="ej., ¿Qué posee Shim? ¿Cómo sintetiza Vav?" aria-label="Query input">
+          <button id="architect-query-submit" class="architect-submit-btn">Consultar</button>
+        </div>
+        <div class="quick-prompt-chips">
+          <span class="chip-label">Sugerencias:</span>
+          <button class="prompt-chip" data-q="Yod">YOD</button>
+          <button class="prompt-chip" data-q="Contenido">Contenido</button>
+          <button class="prompt-chip" data-q="Shim">SHIM</button>
+          <button class="prompt-chip" data-q="Vav">VAV</button>
+          <button class="prompt-chip" data-q="He">HE</button>
+          <button class="prompt-chip" data-q="OUT_OF_SYNC">OUT_OF_SYNC</button>
+        </div>
+        <div id="architect-response-container" class="architect-response-card" style="display: none;">
+          <div class="response-topic" id="architect-response-topic">TOPIC</div>
+          <div class="response-body" id="architect-response-text">Response content...</div>
+          <div class="response-meta" id="architect-response-meta">Línea Base Verificada v1.0.0-rc1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="../../assets/status-v3.js"></script>
+</body>
+</html>

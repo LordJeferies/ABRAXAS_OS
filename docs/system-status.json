@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0-rc1",
+  "statusDate": "2026-08-31",
+  "overallReleaseStatus": "RELEASED_RC1",
+  "auditStatus": "RELEASE_COMPLETE_RC1",
+  "release": {
+    "label": "v1.0.0-rc1",
+    "commitSha": "91234741f0b3a1ac5bd7e4c0556fafa868d00769",
+    "releasedAt": "2026-08-31T03:10:55.465Z"
+  },
+  "moduleSummary": {
+    "YOD": {
+      "status": "PARTIAL_FOUNDATION",
+      "verified": true
+    },
+    "LIENZO": {
+      "status": "CONTRACT_ONLY",
+      "verified": true
+    },
+    "HE": {
+      "status": "VERIFIED_LOCAL",
+      "verified": true
+    },
+    "SHIM": {
+      "status": "CONTRACT_ONLY",
+      "verified": true
+    },
+    "VAV": {
+      "status": "VERIFIED_LOCAL",
+      "verified": true
+    },
+    "ARQUITECTO": {
+      "status": "PARTIAL_FOUNDATION",
+      "verified": true
+    },
+    "PIPELINE_ENGINE": {
+      "status": "PLANNED",
+      "verified": false
+    },
+    "AI_RUNTIME": {
+      "status": "PLANNED",
+      "verified": false
+    },
+    "PUBLISHING": {
+      "status": "PLANNED",
+      "verified": false
+    },
+    "METRICS": {
+      "status": "PLANNED",
+      "verified": false
+    }
+  },
+  "verificationSummary": {
+    "testFileCount": 59,
+    "testCount": 167,
+    "typecheckStatus": "PASS",
+    "healthCheckSystems": [
+      {
+        "name": "Pro Foundation Health",
+        "status": "PASS",
+        "filesChecked": 14
+      },
+      {
+        "name": "Content Motion Bridge Health",
+        "status": "PASS",
+        "systems": 9
+      },
+      {
+        "name": "Cuts Foundation Health",
+        "status": "PASS",
+        "systems": 7
+      },
+      {
+        "name": "Motions Foundation Health",
+        "status": "PASS",
+        "motionFamilies": 13,
+        "smokeEvaluation": "PASS"
+      }
+    ]
+  }
+}

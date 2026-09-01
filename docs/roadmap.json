@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-08-31",
+  "gates": [
+    {
+      "gateId": "P1",
+      "title": "VAV Audiovisual Core & Platform Safe Zones",
+      "description": "Non-destructive FFmpeg multi-segment cut engine, 13 simple motion families, frame-accurate Remotion composition, platform safe zones.",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "gateId": "P2",
+      "title": "He Operations Core & Security",
+      "description": "Task graph, typed approval engine, blocker precedence, persistent local-first JSON store with referential integrity, RBAC.",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "gateId": "P3A",
+      "title": "He Product UI Core",
+      "description": "Modular operational UI, Solo Queue, Team Dashboard, Kanban board, Production Calendar (Month/Week/List), Deadlines, Recording Sessions, Reviews, People Workload, Activity Ledger.",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "gateId": "P3B",
+      "title": "He Time Tracking & Notifications",
+      "description": "Timer sessions, pause/resume, manual time tracking, time reports, in-app notification engine with deduplication and read isolation, store schema v1->v2 migration.",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "gateId": "P4",
+      "title": "Public Status V2 & Public Architect V1",
+      "description": "Story Mode public architecture, Apple-style highlights carousel, interactive module explorer, sticky storytelling, token-boundary Public Architect responder.",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "gateId": "P5",
+      "title": "Integrated Pre-Release Audit & Release",
+      "description": "Final global verification across all modules, zero regression validation, artifact promotion to released state.",
+      "status": "RELEASED_RC1"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "system": "ABRAXAS OS",
+  "version": "15.0.0",
+  "kernelStatus": "ONLINE",
+  "currentWorld": "ASSIAH",
+  "currentOperator": "HE_OPERATIONS (ה)",
+  "sephiroticFunction": "MALKHUT",
+  "activeProcess": "Real Organism Unified · Whisper + Vision + VideoToolbox Online",
+  "progressPercentage": 100,
+  "engineHealth": {
+    "whisper": {
+      "available": true,
+      "model": "ggml-large-v3-turbo.bin (1.5 GB)",
+      "binary": "/opt/homebrew/bin/whisper-cli"
+    },
+    "vision": {
+      "available": true,
+      "sidecar": "vav-vision-macos (Apple Vision Native)",
+      "capabilitiesCount": 6
+    },
+    "ffmpeg": {
+      "available": true,
+      "videoToolbox": true
+    },
+    "remotion": {
+      "available": true
+    }
+  },
+  "storage": {
+    "projectsCount": 2,
+    "projectsPath": "/Users/lordjef/Desktop/abraxasos/Projects"
+  },
+  "daatRealityGate": "LOCKED_ZERO_GAPS",
+  "casMasterAddress": "cas://7197210a48b9487c95e1e124fa1b2e6master",
+  "lastCycleTimestamp": "2026-09-01T00:45:00.000Z"
+}

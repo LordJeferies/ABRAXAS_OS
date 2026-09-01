@@ -1,0 +1,1245 @@
+{
+  "registryClassification": "DESIGN_REGISTRY",
+  "executionState": "NOT_RUNTIME_EXECUTABLE",
+  "version": 1,
+  "projectedAt": "2026-09-01T12:48:08.585Z",
+  "blueprints": [
+    {
+      "blueprintId": "CORE_LOOP_FULL_V1",
+      "version": 1,
+      "name": "Master Core Loop Full Lifecycle",
+      "description": "Complete 10-module closed-loop pipeline from Client Intelligence to Learning Feedback.",
+      "supportedScopes": [
+        "FULL",
+        "FROM_STAGE",
+        "TO_STAGE",
+        "RANGE",
+        "SELECTED_STAGES"
+      ],
+      "stages": [
+        {
+          "stageId": "s_yod_opp",
+          "ownerModule": "YOD",
+          "operation": "OPPORTUNITY_GENERATE",
+          "executionKind": "AUTOMATED",
+          "title": "Opportunity Generation",
+          "description": "Detect coverage gaps and generate strategic content hooks.",
+          "requiredInputs": [
+            "ClientCore"
+          ],
+          "emittedOutputs": [
+            "Opportunity"
+          ]
+        },
+        {
+          "stageId": "s_yod_plan",
+          "ownerModule": "YOD",
+          "operation": "PLAN_CREATE",
+          "executionKind": "AUTOMATED",
+          "title": "Plan Formulation",
+          "description": "Formulate strategic beats and narrative structure.",
+          "requiredInputs": [
+            "Opportunity"
+          ],
+          "emittedOutputs": [
+            "Plan"
+          ]
+        },
+        {
+          "stageId": "s_lienzo_init",
+          "ownerModule": "LIENZO",
+          "operation": "LIENZO_CREATE",
+          "executionKind": "AUTOMATED",
+          "title": "Lienzo Initialization",
+          "description": "Instantiate persistent content identity and PLANNED layer.",
+          "requiredInputs": [
+            "Plan"
+          ],
+          "emittedOutputs": [
+            "Lienzo"
+          ]
+        },
+        {
+          "stageId": "s_yod_pack",
+          "ownerModule": "YOD",
+          "operation": "PROMPT_COMPILE",
+          "executionKind": "AUTOMATED",
+          "title": "Recording Pack Compilation",
+          "description": "Assemble Founder Studio prompt pack and teleprompter cues.",
+          "requiredInputs": [
+            "Lienzo"
+          ],
+          "emittedOutputs": [
+            "RecordingPack"
+          ]
+        },
+        {
+          "stageId": "s_he_rec",
+          "ownerModule": "HE",
+          "operation": "SESSION_SCHEDULE",
+          "executionKind": "AUTOMATED",
+          "title": "Recording Session Booking",
+          "description": "Schedule studio session and assign talent on production calendar.",
+          "requiredInputs": [
+            "RecordingPack"
+          ],
+          "emittedOutputs": [
+            "RecordingSession"
+          ]
+        },
+        {
+          "stageId": "s_shim_obs",
+          "ownerModule": "SHIM",
+          "operation": "SOURCE_OBSERVE",
+          "executionKind": "AUTOMATED",
+          "title": "Real-Source Observation",
+          "description": "Ingest take transcripts and verify coverage against planned beats.",
+          "requiredInputs": [
+            "SourceAsset",
+            "TranscriptSegments",
+            "Lienzo"
+          ],
+          "emittedOutputs": [
+            "ObservationReport"
+          ]
+        },
+        {
+          "stageId": "s_human_res",
+          "ownerModule": "SHIM",
+          "operation": "BEAT_RESOLVE",
+          "executionKind": "HUMAN_GATE",
+          "title": "Explicit Human Resolution",
+          "description": "Human editor verifies and locks resolved take segments into RESOLVED layer.",
+          "isHumanGate": true,
+          "requiredInputs": [
+            "ObservationReport"
+          ],
+          "emittedOutputs": [
+            "ResolvedLayer"
+          ]
+        },
+        {
+          "stageId": "s_vav_cuts",
+          "ownerModule": "VAV",
+          "operation": "CUT_EXECUTE",
+          "executionKind": "AUTOMATED",
+          "title": "FFmpeg Cut Engine",
+          "description": "Assemble non-destructive multi-segment video timeline.",
+          "requiredInputs": [
+            "ResolvedLayer"
+          ],
+          "emittedOutputs": [
+            "CutArtifact"
+          ]
+        },
+        {
+          "stageId": "s_vav_captions",
+          "ownerModule": "VAV",
+          "operation": "CAPTION_EXECUTE",
+          "executionKind": "AUTOMATED",
+          "title": "Kinetic Caption Placement",
+          "description": "Generate safe-zone aligned typography layers.",
+          "canSkip": true,
+          "requiredInputs": [
+            "CutArtifact"
+          ],
+          "emittedOutputs": [
+            "CaptionArtifact"
+          ]
+        },
+        {
+          "stageId": "s_vav_motion",
+          "ownerModule": "VAV",
+          "operation": "MOTION_EXECUTE",
+          "executionKind": "AUTOMATED",
+          "title": "Remotion Motion Graphics",
+          "description": "Render programmatic kinetic graphics and visual emphasis.",
+          "canSkip": true,
+          "requiredInputs": [
+            "CutArtifact",
+            "CaptionArtifact"
+          ],
+          "emittedOutputs": [
+            "MotionArtifact"
+          ]
+        },
+        {
+          "stageId": "s_vav_render",
+          "ownerModule": "VAV",
+          "operation": "RENDER_EXECUTE",
+          "executionKind": "AUTOMATED",
+          "title": "Master Video Render",
+          "description": "Render final lossless master video file.",
+          "requiredInputs": [
+            "MotionArtifact"
+          ],
+          "emittedOutputs": [
+            "MasterVideoArtifact"
+          ]
+        },
+        {
+          "stageId": "s_he_qa",
+          "ownerModule": "HE",
+          "operation": "QA_APPROVE",
+          "executionKind": "HUMAN_GATE",
+          "title": "QA Approval Gate",
+          "description": "Multi-role review verifying compliance and rendering quality.",
+          "isHumanGate": true,
+          "requiredInputs": [
+            "MasterVideoArtifact"
+          ],
+          "emittedOutputs": [
+            "QAResult"
+          ]
+        },
+        {
+          "stageId": "s_publishing",
+          "ownerModule": "PUBLISHING",
+          "operation": "TARGET_PUBLISH",
+          "executionKind": "AUTOMATED",
+          "title": "Target Snapshot & Publish",
+          "description": "Freeze snapshot and publish to scheduled social targets.",
+          "requiredInputs": [
+            "MasterVideoArtifact",
+            "QAResult",
+            "PublicationTarget"
+          ],
+          "emittedOutputs": [
+            "RemotePostId"
+          ]
+        },
+        {
+          "stageId": "s_metrics",
+          "ownerModule": "METRICS",
+          "operation": "METRICS_NORMALIZE",
+          "executionKind": "AUTOMATED",
+          "title": "Metrics Normalization",
+          "description": "Ingest views, retention, and conversions; compute 5 normalized scores.",
+          "requiredInputs": [
+            "RawMetrics"
+          ],
+          "emittedOutputs": [
+            "NormalizedMetrics"
+          ]
+        },
+        {
+          "stageId": "s_learning",
+          "ownerModule": "YOD",
+          "operation": "LEARNING",
+          "executionKind": "AUTOMATED",
+          "title": "Learning Signal Synthesis",
+          "description": "Synthesize feedback signals to inform future YOD opportunities.",
+          "requiredInputs": [
+            "NormalizedMetrics"
+          ],
+          "emittedOutputs": [
+            "LearningSignal"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_yod_opp",
+          "toStageId": "s_yod_plan"
+        },
+        {
+          "fromStageId": "s_yod_plan",
+          "toStageId": "s_lienzo_init"
+        },
+        {
+          "fromStageId": "s_lienzo_init",
+          "toStageId": "s_yod_pack"
+        },
+        {
+          "fromStageId": "s_yod_pack",
+          "toStageId": "s_he_rec"
+        },
+        {
+          "fromStageId": "s_he_rec",
+          "toStageId": "s_shim_obs"
+        },
+        {
+          "fromStageId": "s_shim_obs",
+          "toStageId": "s_human_res"
+        },
+        {
+          "fromStageId": "s_human_res",
+          "toStageId": "s_vav_cuts"
+        },
+        {
+          "fromStageId": "s_vav_cuts",
+          "toStageId": "s_vav_captions"
+        },
+        {
+          "fromStageId": "s_vav_captions",
+          "toStageId": "s_vav_motion"
+        },
+        {
+          "fromStageId": "s_vav_motion",
+          "toStageId": "s_vav_render"
+        },
+        {
+          "fromStageId": "s_vav_render",
+          "toStageId": "s_he_qa"
+        },
+        {
+          "fromStageId": "s_he_qa",
+          "toStageId": "s_publishing"
+        },
+        {
+          "fromStageId": "s_publishing",
+          "toStageId": "s_metrics"
+        },
+        {
+          "fromStageId": "s_metrics",
+          "toStageId": "s_learning"
+        }
+      ]
+    },
+    {
+      "blueprintId": "YOD_TO_RECORDING_V1",
+      "version": 1,
+      "name": "Intelligence to Recording Session",
+      "description": "Pre-production pipeline from opportunity detection to studio session scheduling.",
+      "supportedScopes": [
+        "FULL",
+        "RANGE"
+      ],
+      "stages": [
+        {
+          "stageId": "s_opp",
+          "ownerModule": "YOD",
+          "operation": "OPPORTUNITY_GENERATE",
+          "executionKind": "AUTOMATED",
+          "title": "Opportunity Generation",
+          "description": "Generate strategic content hooks.",
+          "requiredInputs": [
+            "ClientCore"
+          ],
+          "emittedOutputs": [
+            "Opportunity"
+          ]
+        },
+        {
+          "stageId": "s_plan",
+          "ownerModule": "YOD",
+          "operation": "PLAN_CREATE",
+          "executionKind": "AUTOMATED",
+          "title": "Plan Formulation",
+          "description": "Structure plan beats.",
+          "requiredInputs": [
+            "Opportunity"
+          ],
+          "emittedOutputs": [
+            "Plan"
+          ]
+        },
+        {
+          "stageId": "s_lienzo",
+          "ownerModule": "LIENZO",
+          "operation": "LIENZO_CREATE",
+          "executionKind": "AUTOMATED",
+          "title": "Lienzo Initialization",
+          "description": "Write initial strategy and planned beats.",
+          "requiredInputs": [
+            "Plan"
+          ],
+          "emittedOutputs": [
+            "Lienzo"
+          ]
+        },
+        {
+          "stageId": "s_rec_pack",
+          "ownerModule": "YOD",
+          "operation": "PROMPT_COMPILE",
+          "executionKind": "AUTOMATED",
+          "title": "Recording Pack Compilation",
+          "description": "Assemble Founder Studio prompt pack.",
+          "requiredInputs": [
+            "Lienzo"
+          ],
+          "emittedOutputs": [
+            "RecordingPack"
+          ]
+        },
+        {
+          "stageId": "s_he_session",
+          "ownerModule": "HE",
+          "operation": "SESSION_SCHEDULE",
+          "executionKind": "AUTOMATED",
+          "title": "Session Governance",
+          "description": "Schedule calendar time and assign talent.",
+          "requiredInputs": [
+            "RecordingPack"
+          ],
+          "emittedOutputs": [
+            "RecordingSession"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_opp",
+          "toStageId": "s_plan"
+        },
+        {
+          "fromStageId": "s_plan",
+          "toStageId": "s_lienzo"
+        },
+        {
+          "fromStageId": "s_lienzo",
+          "toStageId": "s_rec_pack"
+        },
+        {
+          "fromStageId": "s_rec_pack",
+          "toStageId": "s_he_session"
+        }
+      ]
+    },
+    {
+      "blueprintId": "RECORDING_TO_RESOLVED_V1",
+      "version": 1,
+      "name": "Recording Ingest to Resolved State",
+      "description": "Observation and alignment of raw recordings against planned beats.",
+      "supportedScopes": [
+        "FULL",
+        "RANGE"
+      ],
+      "stages": [
+        {
+          "stageId": "s_intake",
+          "ownerModule": "UNIVERSAL_INTAKE",
+          "operation": "MEDIA_INGEST",
+          "executionKind": "AUTOMATED",
+          "title": "Media Intake",
+          "description": "Register raw take buffer and compute SHA-256 hash.",
+          "requiredInputs": [
+            "MediaFile"
+          ],
+          "emittedOutputs": [
+            "SourceAsset"
+          ]
+        },
+        {
+          "stageId": "s_transcribe",
+          "ownerModule": "SHIM",
+          "operation": "TRANSCRIPT_ALIGN",
+          "executionKind": "AUTOMATED",
+          "title": "Transcription Alignment",
+          "description": "Align speech-to-text segments with timestamps.",
+          "requiredInputs": [
+            "SourceAsset"
+          ],
+          "emittedOutputs": [
+            "TranscriptSegments"
+          ]
+        },
+        {
+          "stageId": "s_observe",
+          "ownerModule": "SHIM",
+          "operation": "SOURCE_OBSERVE",
+          "executionKind": "AUTOMATED",
+          "title": "Shim Observation",
+          "description": "Match transcript against planned beats and detect gaps.",
+          "requiredInputs": [
+            "TranscriptSegments",
+            "Lienzo"
+          ],
+          "emittedOutputs": [
+            "ObservationReport"
+          ]
+        },
+        {
+          "stageId": "s_resolve",
+          "ownerModule": "SHIM",
+          "operation": "BEAT_RESOLVE",
+          "executionKind": "HUMAN_GATE",
+          "title": "Human Beat Resolution",
+          "description": "Lock confirmed timestamps into RESOLVED layer.",
+          "isHumanGate": true,
+          "requiredInputs": [
+            "ObservationReport"
+          ],
+          "emittedOutputs": [
+            "ResolvedLayer"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_intake",
+          "toStageId": "s_transcribe"
+        },
+        {
+          "fromStageId": "s_transcribe",
+          "toStageId": "s_observe"
+        },
+        {
+          "fromStageId": "s_observe",
+          "toStageId": "s_resolve"
+        }
+      ]
+    },
+    {
+      "blueprintId": "GAP_RECOVERY_V1",
+      "version": 1,
+      "name": "Shim Gap Detection & Pickup Recovery",
+      "description": "Automated recovery workflow when a planned beat is missing from source footage.",
+      "supportedScopes": [
+        "FULL",
+        "RANGE"
+      ],
+      "stages": [
+        {
+          "stageId": "s_gap_event",
+          "ownerModule": "SHIM",
+          "operation": "GAP_DETECT",
+          "executionKind": "AUTOMATED",
+          "title": "Gap Detection Event",
+          "description": "Emit SHIM_GAP_DETECTED for missing beat.",
+          "requiredInputs": [
+            "ObservationReport"
+          ],
+          "emittedOutputs": [
+            "GapEvent"
+          ]
+        },
+        {
+          "stageId": "s_pickup_task",
+          "ownerModule": "HE",
+          "operation": "TASK_CREATE",
+          "executionKind": "AUTOMATED",
+          "title": "Auto-Create Pickup Task",
+          "description": "He creates prioritized pickup recording task.",
+          "requiredInputs": [
+            "GapEvent"
+          ],
+          "emittedOutputs": [
+            "Task"
+          ]
+        },
+        {
+          "stageId": "s_coach_guide",
+          "ownerModule": "ARQUITECTO",
+          "operation": "RECORDING_COACH",
+          "executionKind": "AUTOMATED",
+          "title": "Recording Coach Framing",
+          "description": "Arquitecto suggests framing and tone for missing beat.",
+          "requiredInputs": [
+            "Task"
+          ],
+          "emittedOutputs": [
+            "PickupGuidance"
+          ]
+        },
+        {
+          "stageId": "s_human_record",
+          "ownerModule": "HE",
+          "operation": "RECORD_PICKUP",
+          "executionKind": "HUMAN_GATE",
+          "title": "Human Pickup Session",
+          "description": "Talent records secondary take following coaching guidance.",
+          "isHumanGate": true,
+          "requiredInputs": [
+            "PickupGuidance"
+          ],
+          "emittedOutputs": [
+            "RawPickupMedia"
+          ]
+        },
+        {
+          "stageId": "s_pickup_ingest",
+          "ownerModule": "UNIVERSAL_INTAKE",
+          "operation": "MEDIA_INGEST",
+          "executionKind": "AUTOMATED",
+          "title": "Pickup Take Ingest",
+          "description": "Ingest secondary take and register SHA-256 artifact.",
+          "requiredInputs": [
+            "RawPickupMedia"
+          ],
+          "emittedOutputs": [
+            "PickupSourceAsset"
+          ]
+        },
+        {
+          "stageId": "s_pickup_observe",
+          "ownerModule": "SHIM",
+          "operation": "SOURCE_OBSERVE",
+          "executionKind": "AUTOMATED",
+          "title": "Pickup Observation",
+          "description": "Align transcript of pickup take against missing beat.",
+          "requiredInputs": [
+            "PickupSourceAsset"
+          ],
+          "emittedOutputs": [
+            "PickupObservationReport"
+          ]
+        },
+        {
+          "stageId": "s_pickup_resolve",
+          "ownerModule": "SHIM",
+          "operation": "BEAT_RESOLVE",
+          "executionKind": "HUMAN_GATE",
+          "title": "Pickup Beat Resolution",
+          "description": "Lock confirmed pickup timestamp into RESOLVED layer.",
+          "isHumanGate": true,
+          "requiredInputs": [
+            "PickupObservationReport"
+          ],
+          "emittedOutputs": [
+            "ResolvedLayer"
+          ]
+        },
+        {
+          "stageId": "s_lienzo_update",
+          "ownerModule": "LIENZO",
+          "operation": "COMPONENT_UPDATE",
+          "executionKind": "AUTOMATED",
+          "title": "Lienzo Layer Update",
+          "description": "Update Lienzo RESOLVED layer and clear gap state.",
+          "requiredInputs": [
+            "ResolvedLayer"
+          ],
+          "emittedOutputs": [
+            "SynchronizedLienzo"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_gap_event",
+          "toStageId": "s_pickup_task"
+        },
+        {
+          "fromStageId": "s_pickup_task",
+          "toStageId": "s_coach_guide"
+        },
+        {
+          "fromStageId": "s_coach_guide",
+          "toStageId": "s_human_record"
+        },
+        {
+          "fromStageId": "s_human_record",
+          "toStageId": "s_pickup_ingest"
+        },
+        {
+          "fromStageId": "s_pickup_ingest",
+          "toStageId": "s_pickup_observe"
+        },
+        {
+          "fromStageId": "s_pickup_observe",
+          "toStageId": "s_pickup_resolve"
+        },
+        {
+          "fromStageId": "s_pickup_resolve",
+          "toStageId": "s_lienzo_update"
+        }
+      ]
+    },
+    {
+      "blueprintId": "VAV_STANDARD_VIDEO_V1",
+      "version": 1,
+      "name": "Standard VAV Audiovisual Synthesis",
+      "description": "Complete production pipeline from resolved beats to final composite video.",
+      "supportedScopes": [
+        "FULL",
+        "RANGE",
+        "SELECTED_STAGES"
+      ],
+      "stages": [
+        {
+          "stageId": "s_cut",
+          "ownerModule": "VAV",
+          "operation": "CUT_EXECUTE",
+          "executionKind": "AUTOMATED",
+          "title": "Non-Destructive FFmpeg Cut",
+          "description": "Execute precision jump-cuts on resolved timestamps.",
+          "requiredInputs": [
+            "ResolvedLayer"
+          ],
+          "emittedOutputs": [
+            "CutArtifact"
+          ]
+        },
+        {
+          "stageId": "s_caption",
+          "ownerModule": "VAV",
+          "operation": "CAPTION_EXECUTE",
+          "executionKind": "AUTOMATED",
+          "title": "Kinetic Caption Styling",
+          "description": "Apply typography style and safe-zone margin rules.",
+          "canSkip": true,
+          "requiredInputs": [
+            "CutArtifact"
+          ],
+          "emittedOutputs": [
+            "CaptionArtifact"
+          ]
+        },
+        {
+          "stageId": "s_motion",
+          "ownerModule": "VAV",
+          "operation": "MOTION_EXECUTE",
+          "executionKind": "AUTOMATED",
+          "title": "Remotion Motion Composition",
+          "description": "Render programmatic kinetic graphics and visual accents.",
+          "canSkip": true,
+          "requiredInputs": [
+            "CutArtifact"
+          ],
+          "emittedOutputs": [
+            "MotionArtifact"
+          ],
+          "optionalInputs": [
+            "CaptionArtifact"
+          ],
+          "acceptedInputAlternatives": [
+            [
+              "CutArtifact",
+              "CaptionArtifact"
+            ],
+            [
+              "CutArtifact"
+            ]
+          ]
+        },
+        {
+          "stageId": "s_render",
+          "ownerModule": "VAV",
+          "operation": "RENDER_EXECUTE",
+          "executionKind": "AUTOMATED",
+          "title": "Master Video Render",
+          "description": "Render lossless master video file with all composite layers.",
+          "requiredInputs": [
+            "CutArtifact"
+          ],
+          "emittedOutputs": [
+            "MasterVideoArtifact"
+          ],
+          "optionalInputs": [
+            "MotionArtifact",
+            "CaptionArtifact"
+          ],
+          "acceptedInputAlternatives": [
+            [
+              "MotionArtifact"
+            ],
+            [
+              "CaptionArtifact"
+            ],
+            [
+              "CutArtifact"
+            ]
+          ]
+        },
+        {
+          "stageId": "s_qa",
+          "ownerModule": "HE",
+          "operation": "QA_APPROVE",
+          "executionKind": "HUMAN_GATE",
+          "title": "QA Gate Review",
+          "description": "Human inspection of frame timing and audio levels.",
+          "isHumanGate": true,
+          "requiredInputs": [
+            "MasterVideoArtifact"
+          ],
+          "emittedOutputs": [
+            "QAResult"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_cut",
+          "toStageId": "s_caption"
+        },
+        {
+          "fromStageId": "s_caption",
+          "toStageId": "s_motion"
+        },
+        {
+          "fromStageId": "s_motion",
+          "toStageId": "s_render"
+        },
+        {
+          "fromStageId": "s_render",
+          "toStageId": "s_qa"
+        }
+      ]
+    },
+    {
+      "blueprintId": "VAV_MINIMAL_VIDEO_V1",
+      "version": 1,
+      "name": "Minimal Fast-Path Video Cut",
+      "description": "Rapid turnaround video production skipping captions and motion graphics.",
+      "supportedScopes": [
+        "FULL"
+      ],
+      "stages": [
+        {
+          "stageId": "s_cut",
+          "ownerModule": "VAV",
+          "operation": "CUT_EXECUTE",
+          "executionKind": "AUTOMATED",
+          "title": "Non-Destructive FFmpeg Cut",
+          "description": "Execute precision jump-cuts on resolved timestamps.",
+          "requiredInputs": [
+            "ResolvedLayer"
+          ],
+          "emittedOutputs": [
+            "CutArtifact"
+          ]
+        },
+        {
+          "stageId": "s_render",
+          "ownerModule": "VAV",
+          "operation": "RENDER_EXECUTE",
+          "executionKind": "AUTOMATED",
+          "title": "Direct Master Video Render",
+          "description": "Render lossless video stream directly.",
+          "requiredInputs": [
+            "CutArtifact"
+          ],
+          "emittedOutputs": [
+            "MasterVideoArtifact"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_cut",
+          "toStageId": "s_render"
+        }
+      ]
+    },
+    {
+      "blueprintId": "LONGFORM_TO_SHORT_V1",
+      "version": 1,
+      "name": "Longform Content Repurposing",
+      "description": "Extracting viral short-form hooks and clips from longform webinar or podcast footage.",
+      "supportedScopes": [
+        "FULL",
+        "RANGE"
+      ],
+      "stages": [
+        {
+          "stageId": "s_long_ingest",
+          "ownerModule": "UNIVERSAL_INTAKE",
+          "operation": "MEDIA_INGEST",
+          "executionKind": "AUTOMATED",
+          "title": "Longform Video Intake",
+          "description": "Ingest full-length recording.",
+          "requiredInputs": [
+            "LongformVideo"
+          ],
+          "emittedOutputs": [
+            "SourceAsset"
+          ]
+        },
+        {
+          "stageId": "s_topic_extract",
+          "ownerModule": "YOD",
+          "operation": "TOPIC_EXTRACT",
+          "executionKind": "AUTOMATED",
+          "title": "Topic & Hook Formulation",
+          "description": "Strategic evaluation identifying high-retention topics.",
+          "requiredInputs": [
+            "SourceAsset"
+          ],
+          "emittedOutputs": [
+            "ExtractionPlan"
+          ]
+        },
+        {
+          "stageId": "s_ai_dispatch",
+          "ownerModule": "AI_RUNTIME",
+          "operation": "INFERENCE_DISPATCH",
+          "executionKind": "AUTOMATED",
+          "title": "AI Semantic Segmentation",
+          "description": "Execute transcript segmentation and timestamp extraction via AI provider.",
+          "requiredInputs": [
+            "ExtractionPlan"
+          ],
+          "emittedOutputs": [
+            "ExtractedClips"
+          ]
+        },
+        {
+          "stageId": "s_short_lienzo",
+          "ownerModule": "LIENZO",
+          "operation": "LIENZO_CREATE",
+          "executionKind": "AUTOMATED",
+          "title": "Short-Form Lienzo Creation",
+          "description": "Instantiate dedicated Lienzo per extracted clip.",
+          "requiredInputs": [
+            "ExtractedClips"
+          ],
+          "emittedOutputs": [
+            "LienzoList"
+          ]
+        },
+        {
+          "stageId": "s_batch_prod",
+          "ownerModule": "VAV",
+          "operation": "BATCH_PRODUCE",
+          "executionKind": "AUTOMATED",
+          "title": "Batch Short Production",
+          "description": "Batch cut and caption short-form clips.",
+          "requiredInputs": [
+            "LienzoList"
+          ],
+          "emittedOutputs": [
+            "ShortVideoArtifacts"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_long_ingest",
+          "toStageId": "s_topic_extract"
+        },
+        {
+          "fromStageId": "s_topic_extract",
+          "toStageId": "s_ai_dispatch"
+        },
+        {
+          "fromStageId": "s_ai_dispatch",
+          "toStageId": "s_short_lienzo"
+        },
+        {
+          "fromStageId": "s_short_lienzo",
+          "toStageId": "s_batch_prod"
+        }
+      ]
+    },
+    {
+      "blueprintId": "OUT_OF_SYNC_REPAIR_V1",
+      "version": 1,
+      "name": "Upstream Change & OUT_OF_SYNC Invalidation Repair",
+      "description": "Targeted re-render of only affected downstream derivatives when an upstream component is edited.",
+      "supportedScopes": [
+        "FULL",
+        "SELECTED_STAGES"
+      ],
+      "stages": [
+        {
+          "stageId": "s_edit_upstream",
+          "ownerModule": "LIENZO",
+          "operation": "COMPONENT_UPDATE",
+          "executionKind": "AUTOMATED",
+          "title": "Upstream Component Edit",
+          "description": "Direct edit increments component version and marks downstream OUT_OF_SYNC.",
+          "requiredInputs": [
+            "LienzoEditCommand"
+          ],
+          "emittedOutputs": [
+            "ImpactReport"
+          ]
+        },
+        {
+          "stageId": "s_detect_impact",
+          "ownerModule": "LIENZO",
+          "operation": "IMPACT_EVALUATE",
+          "executionKind": "AUTOMATED",
+          "title": "Impact Engine Detection",
+          "description": "Evaluate DAG dependency tree and emit LIENZO_IMPACT_DETECTED.",
+          "requiredInputs": [
+            "ImpactReport"
+          ],
+          "emittedOutputs": [
+            "InvalidatedComponentList"
+          ]
+        },
+        {
+          "stageId": "s_targeted_rerender",
+          "ownerModule": "VAV",
+          "operation": "TARGETED_RERENDER",
+          "executionKind": "AUTOMATED",
+          "title": "Targeted Derivative Re-render",
+          "description": "Re-execute only invalidated production components.",
+          "requiredInputs": [
+            "InvalidatedComponentList"
+          ],
+          "emittedOutputs": [
+            "UpdatedArtifacts"
+          ]
+        },
+        {
+          "stageId": "s_sync_resolve",
+          "ownerModule": "LIENZO",
+          "operation": "STATUS_RESOLVE",
+          "executionKind": "AUTOMATED",
+          "title": "Status Resolution to GENERATED",
+          "description": "Clear OUT_OF_SYNC flags and attach new artifact references.",
+          "requiredInputs": [
+            "UpdatedArtifacts"
+          ],
+          "emittedOutputs": [
+            "SynchronizedLienzo"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_edit_upstream",
+          "toStageId": "s_detect_impact"
+        },
+        {
+          "fromStageId": "s_detect_impact",
+          "toStageId": "s_targeted_rerender"
+        },
+        {
+          "fromStageId": "s_targeted_rerender",
+          "toStageId": "s_sync_resolve"
+        }
+      ]
+    },
+    {
+      "blueprintId": "PUBLISH_MULTI_TARGET_V1",
+      "version": 1,
+      "name": "Multi-Target Publication & Snapshot Freeze",
+      "description": "Distribute approved content across multiple platforms with independent schedules and copy snapshots.",
+      "supportedScopes": [
+        "FULL"
+      ],
+      "stages": [
+        {
+          "stageId": "s_create_targets",
+          "ownerModule": "PUBLISHING",
+          "operation": "TARGET_CREATE",
+          "executionKind": "AUTOMATED",
+          "title": "Target Definition",
+          "description": "Create publication targets for Instagram, TikTok, LinkedIn, and YouTube.",
+          "requiredInputs": [
+            "Lienzo"
+          ],
+          "emittedOutputs": [
+            "PublicationTargets"
+          ]
+        },
+        {
+          "stageId": "s_freeze_snapshots",
+          "ownerModule": "PUBLISHING",
+          "operation": "SNAPSHOT_FREEZE",
+          "executionKind": "AUTOMATED",
+          "title": "Snapshot Freeze",
+          "description": "Freeze immutable copy and media artifact references at schedule time.",
+          "requiredInputs": [
+            "PublicationTargets",
+            "ApprovedArtifact"
+          ],
+          "emittedOutputs": [
+            "FrozenSnapshots"
+          ]
+        },
+        {
+          "stageId": "s_dispatch",
+          "ownerModule": "PUBLISHING",
+          "operation": "PLATFORM_DISPATCH",
+          "executionKind": "AUTOMATED",
+          "title": "Platform Dispatch",
+          "description": "Execute scheduled API publish through platform adapters.",
+          "requiredInputs": [
+            "FrozenSnapshots"
+          ],
+          "emittedOutputs": [
+            "RemotePostIds"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_create_targets",
+          "toStageId": "s_freeze_snapshots"
+        },
+        {
+          "fromStageId": "s_freeze_snapshots",
+          "toStageId": "s_dispatch"
+        }
+      ]
+    },
+    {
+      "blueprintId": "METRICS_TO_LEARNING_V1",
+      "version": 1,
+      "name": "Metrics Telemetry to YOD Learning Feedback",
+      "description": "Ingest external performance data, normalize scores, and synthesize learning signals for future opportunities.",
+      "supportedScopes": [
+        "FULL"
+      ],
+      "stages": [
+        {
+          "stageId": "s_raw_metrics",
+          "ownerModule": "METRICS",
+          "operation": "METRICS_INGEST",
+          "executionKind": "AUTOMATED",
+          "title": "Raw Telemetry Ingest",
+          "description": "Ingest views, watch time, completion rate, likes, and conversions.",
+          "requiredInputs": [
+            "TargetId"
+          ],
+          "emittedOutputs": [
+            "MetricSnapshot"
+          ]
+        },
+        {
+          "stageId": "s_norm_calc",
+          "ownerModule": "METRICS",
+          "operation": "METRICS_NORMALIZE",
+          "executionKind": "AUTOMATED",
+          "title": "5-Score Normalization",
+          "description": "Compute Attention, Retention, Engagement, Amplification, and Conversion scores.",
+          "requiredInputs": [
+            "MetricSnapshot"
+          ],
+          "emittedOutputs": [
+            "NormalizedMetrics"
+          ]
+        },
+        {
+          "stageId": "s_signal_synth",
+          "ownerModule": "YOD",
+          "operation": "LEARNING",
+          "executionKind": "AUTOMATED",
+          "title": "Learning Signal Synthesis",
+          "description": "Generate LearningSignal evaluating hook and structure performance.",
+          "requiredInputs": [
+            "NormalizedMetrics"
+          ],
+          "emittedOutputs": [
+            "LearningSignal"
+          ]
+        },
+        {
+          "stageId": "s_yod_boost",
+          "ownerModule": "YOD",
+          "operation": "OPPORTUNITY_BOOST",
+          "executionKind": "AUTOMATED",
+          "title": "Opportunity Scoring Refinement",
+          "description": "YOD references high-performing structure signal to boost future rankings.",
+          "requiredInputs": [
+            "LearningSignal"
+          ],
+          "emittedOutputs": [
+            "BoostedOpportunity"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_raw_metrics",
+          "toStageId": "s_norm_calc"
+        },
+        {
+          "fromStageId": "s_norm_calc",
+          "toStageId": "s_signal_synth"
+        },
+        {
+          "fromStageId": "s_signal_synth",
+          "toStageId": "s_yod_boost"
+        }
+      ]
+    },
+    {
+      "blueprintId": "EXTERNAL_EDITOR_ROUNDTRIP_V1",
+      "version": 1,
+      "name": "External NLE Roundtrip (DaVinci / Premiere)",
+      "description": "Exporting timeline cut lists to external professional NLEs and synchronizing final edits back to Lienzo.",
+      "supportedScopes": [
+        "FULL",
+        "RANGE"
+      ],
+      "stages": [
+        {
+          "stageId": "s_export_edl",
+          "ownerModule": "VAV",
+          "operation": "EDL_EXPORT",
+          "executionKind": "AUTOMATED",
+          "title": "EDL / XML Timeline Export",
+          "description": "Export resolved cut timestamps to standard EDL/FCPXML timeline.",
+          "requiredInputs": [
+            "ResolvedLayer"
+          ],
+          "emittedOutputs": [
+            "TimelineXML"
+          ]
+        },
+        {
+          "stageId": "s_external_edit",
+          "ownerModule": "ARQUITECTO",
+          "operation": "PRODUCTION_COACH",
+          "executionKind": "AUTOMATED",
+          "title": "External Editor Guidance",
+          "description": "Arquitecto provides color grading and audio mastering notes for DaVinci.",
+          "requiredInputs": [
+            "TimelineXML"
+          ],
+          "emittedOutputs": [
+            "ExternalEditorProject"
+          ]
+        },
+        {
+          "stageId": "s_human_edit",
+          "ownerModule": "HE",
+          "governanceOwner": "HE",
+          "executorLabel": "DaVinci Resolve / Human Colorist",
+          "operation": "EXTERNAL_EDIT_LOCK",
+          "executionKind": "EXTERNAL_TOOL",
+          "title": "External NLE Studio Execution",
+          "description": "Human editor refines color, dialogue, and VFX in DaVinci Resolve.",
+          "requiredInputs": [
+            "ExternalEditorProject"
+          ],
+          "emittedOutputs": [
+            "RenderedMediaFile"
+          ]
+        },
+        {
+          "stageId": "s_reimport_render",
+          "ownerModule": "UNIVERSAL_INTAKE",
+          "operation": "MEDIA_INGEST",
+          "executionKind": "AUTOMATED",
+          "title": "Master Render Re-import",
+          "description": "Import final rendered master from external NLE and compute checksum.",
+          "requiredInputs": [
+            "RenderedMediaFile"
+          ],
+          "emittedOutputs": [
+            "MasterVideoArtifact"
+          ]
+        },
+        {
+          "stageId": "s_lienzo_attach",
+          "ownerModule": "LIENZO",
+          "operation": "ARTIFACT_ATTACH",
+          "executionKind": "AUTOMATED",
+          "title": "Lienzo Artifact Attachment",
+          "description": "Attach external master artifact to Lienzo EDIT component.",
+          "requiredInputs": [
+            "MasterVideoArtifact"
+          ],
+          "emittedOutputs": [
+            "UpdatedLienzo"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "fromStageId": "s_export_edl",
+          "toStageId": "s_external_edit"
+        },
+        {
+          "fromStageId": "s_external_edit",
+          "toStageId": "s_human_edit"
+        },
+        {
+          "fromStageId": "s_human_edit",
+          "toStageId": "s_reimport_render"
+        },
+        {
+          "fromStageId": "s_reimport_render",
+          "toStageId": "s_lienzo_attach"
+        }
+      ]
+    }
+  ]
+}

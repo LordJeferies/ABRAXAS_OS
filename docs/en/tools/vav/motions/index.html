@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAV / Motions — ABRAXAS OS</title>
+  <link rel="alternate" hreflang="en" href="../../../../en/tools/vav/motions/index.html">
+  <link rel="alternate" hreflang="es" href="../../../../es/tools/vav/motions/index.html">
+  <link rel="alternate" hreflang="x-default" href="../../../../en/tools/vav/motions/index.html">
+  <link rel="stylesheet" href="../../../../assets/status-v3.css">
+</head>
+<body class="page-body">
+  
+  <header id="global-header" class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="../../../index.html" class="brand-logo" aria-label="ABRAXAS OS Home">
+          <span class="brand-glyph">▲</span>
+          <span class="brand-text">ABRAXAS OS</span>
+        </a>
+        <span class="brand-tag">v1.0.0-rc1</span>
+      </div>
+      <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
+        <a href="../../../index.html" class="nav-link ">Manifesto</a>
+        <a href="../../../system/index.html" class="nav-link ">System</a>
+        <a href="../../../architecture/index.html" class="nav-link ">Architecture</a>
+        <a href="../../../tools/index.html" class="nav-link active">Operators</a>
+        <a href="../../../flow/index.html" class="nav-link ">Flow</a>
+        <a href="../../../taste/index.html" class="nav-link ">Taste</a>
+        <a href="../../../proof/index.html" class="nav-link ">Proof</a>
+        <a href="../../../roadmap/index.html" class="nav-link ">Roadmap</a>
+        <a href="../../../principles/index.html" class="nav-link ">Principles</a>
+      </nav>
+      <div class="header-right">
+        <div class="locale-switcher" aria-label="Language selector">
+          <a href="#" class="locale-btn active" onclick="return false;">EN</a>
+          <span class="locale-sep">/</span>
+          <a href="../../../../es/tools/vav/motions/index.html" class="locale-btn " onclick="localStorage.setItem('abraxas_locale', 'es')">ES</a>
+        </div>
+        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Ask Arquitecto">
+          <span class="architect-spark">✦</span> Ask Arquitecto
+        </button>
+      </div>
+    </div>
+  </header>
+  
+
+  <main class="page-main">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="breadcrumb"><a href="../../../index.html">Home</a> / <a href="../../../system/index.html">System</a> / <a href="../../index.html">Operators</a> / <a href="../index.html">VAV</a> / <span>motions</span></div>
+        <div class="module-title-row">
+          <h1 class="page-title">VAV / Motions</h1>
+          <div class="truth-pill released_current">RELEASED (RC1)</div>
+        </div>
+        <p class="page-description">Spring physics, optical visual priors, B-roll overlays, and smooth layout transform transitions.</p>
+      </div>
+
+      <div class="dossier-grid">
+        <div class="dossier-main-col">
+          <section class="dossier-section">
+            <h2 class="section-title">1. Operational Role</h2>
+            <p class="section-lead">Spring physics, optical visual priors, B-roll overlays, and smooth layout transform transitions.</p>
+          </section>
+        </div>
+        <aside class="dossier-sidebar">
+          <div class="sidebar-card">
+            <h3>Evidence & Verification</h3>
+            <p>Verified by current regression tests and frozen v1.0.0-rc1 release evidence.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  
+  <div id="public-architect-drawer" class="architect-drawer" aria-hidden="true" role="dialog" aria-label="Public Architect">
+    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
+    <div class="architect-drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <span class="architect-spark">✦</span>
+          <h3>Public Architect</h3>
+          <span class="drawer-badge">Deterministic NLP</span>
+        </div>
+        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close">✕</button>
+      </div>
+      <div class="drawer-body">
+        <p class="drawer-intro">Query canonical architecture, module ownership boundaries, truth status, or semantic principles directly.</p>
+        <div class="architect-form-group">
+          <input type="text" id="architect-query-input" class="architect-input" placeholder="e.g., What does Shim own? How does Vav synthesize?" aria-label="Query input">
+          <button id="architect-query-submit" class="architect-submit-btn">Query</button>
+        </div>
+        <div class="quick-prompt-chips">
+          <span class="chip-label">Suggestions:</span>
+          <button class="prompt-chip" data-q="Yod">YOD</button>
+          <button class="prompt-chip" data-q="Contenido">Contenido</button>
+          <button class="prompt-chip" data-q="Shim">SHIM</button>
+          <button class="prompt-chip" data-q="Vav">VAV</button>
+          <button class="prompt-chip" data-q="He">HE</button>
+          <button class="prompt-chip" data-q="OUT_OF_SYNC">OUT_OF_SYNC</button>
+        </div>
+        <div id="architect-response-container" class="architect-response-card" style="display: none;">
+          <div class="response-topic" id="architect-response-topic">TOPIC</div>
+          <div class="response-body" id="architect-response-text">Response content...</div>
+          <div class="response-meta" id="architect-response-meta">v1.0.0-rc1 Verified Baseline</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col brand-col">
+        <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
+        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
+        <div class="footer-truth-badge"><span class="truth-dot"></span> v1.0.0-rc1 Historical Baseline</div>
+      </div>
+      <div class="footer-col">
+        <h4>Architecture</h4>
+        <ul>
+          <li><a href="../../../system/index.html">System Dashboard</a></li>
+          <li><a href="../../../architecture/pyramid/index.html">Giza Monument</a></li>
+          <li><a href="../../../architecture/four-worlds/index.html">Four Worlds</a></li>
+          <li><a href="../../../architecture/tree-of-life/index.html">Tree of Life</a></li>
+          <li><a href="../../../architecture/content-state-space/index.html">State Space XYZA</a></li>
+          <li><a href="../../../architecture/closed-loop/index.html">Closed Loop</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Canon & Taste</h4>
+        <ul>
+          <li><a href="../../../taste/index.html">The Taste System</a></li>
+          <li><a href="../../../principles/index.html">Core Principles</a></li>
+          <li><a href="../../../proof/index.html">Verified Evidence</a></li>
+          <li><a href="../../../roadmap/index.html">Roadmap Gates</a></li>
+          <li><a href="../../../flow/index.html">Pipeline Blueprints</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Operators</h4>
+        <ul>
+          <li><a href="../../../tools/yod/index.html">YOD</a></li>
+          <li><a href="../../../tools/contenido/index.html">CONTENIDO</a></li>
+          <li><a href="../../../tools/he/index.html">HE</a></li>
+          <li><a href="../../../tools/shim/index.html">SHIM</a></li>
+          <li><a href="../../../tools/vav/index.html">VAV</a></li>
+          <li><a href="../../../tools/publishing/index.html">PUBLISHING</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 ABRAXAS OS. Deterministic Closed-Loop Architecture.</div>
+      <div class="footer-meta">
+        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
+      </div>
+    </div>
+  </footer>
+  
+  <script type="module" src="../../../../assets/status-v3.js"></script>
+</body>
+</html>

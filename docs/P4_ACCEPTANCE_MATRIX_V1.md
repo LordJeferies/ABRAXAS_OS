@@ -1,0 +1,15 @@
+# P4 ACCEPTANCE MATRIX V1 — FROZEN SPECIFICATION
+
+## Gate
+P4 — PUBLIC STATUS V2 + PUBLIC ARCHITECT V1
+
+| AC_ID | Capability | Owner | Contract / Schema | Command / Generator | Permission | Happy Path | Empty State | Loading State | Error State | Permission-Denied State | Evidence Level | Test / Runtime Evidence | Status |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| AC-P4-001 | Public Projection Allowlist Builder | Public Status | Public Schema | `build-public-status` | N/A | Generates public-knowledge.json, system-status.json, roadmap.json via strict allowlist | Empty projection handled | Generator running | Invalid source structure rejected | N/A | E1 STATIC | `tests/p4-status.test.ts` | FROZEN |
+| AC-P4-002 | Zero Private Leakage Security Scan | Public Status | Security Policy | Automated Scan | N/A | 0 occurrences of private paths, usernames, Client Cores, API keys, secrets, or internal emails | Clean outputs verified | Scan running | Leaked token or path detected and rejected | Leak alert raised | E3 INTEGRATION | `tests/p4-status.test.ts` | FROZEN |
+| AC-P4-003 | Status V2 Educational Presentation | Public Status | Status V2 UI | Web Page | Public | Explains what ABRAXAS OS is, what it is not, current working state, 10 modules, roadmap, and relationships | Default clean view | Loading knowledge | Failed load shows offline fallback | N/A | E4 RUNTIME | `tests/p4-status.test.ts` | FROZEN |
+| AC-P4-004 | 10 Canonical Modules & Relationship Map | Public Status | Architecture Model | Status Model | Public | Renders YOD, LIENZO, HE, SHIM, VAV, ARQUITECTO, PIPELINE ENGINE, AI RUNTIME, PUBLISHING, METRICS | Empty module list handled | Fetching modules | Missing module definition rejected | N/A | E3 INTEGRATION | `tests/p4-status.test.ts` | FROZEN |
+| AC-P4-005 | Honest System Status & Local Evidence | Public Status | Verification Model | Status JSON | Public | Displays IMPLEMENTED_LOCAL, VERIFIED_LOCAL, AWAITING_FINAL_AUDIT; zero fabricated percentages or release claims | "Status pending" | Fetching status | Invalid status enum rejected | N/A | E3 INTEGRATION | `tests/p4-status.test.ts` | FROZEN |
+| AC-P4-006 | Public Architect V1 Deterministic Responder | Public Architect | Knowledge Contract | `LocalPublicKnowledgeProvider` | Public | Answers starter and domain questions accurately in English and Spanish strictly from public-knowledge.json | "Ask me about ABRAXAS" | Answering | Unknown query returns honest fallback | N/A | E3 INTEGRATION | `tests/p4-status.test.ts` | FROZEN |
+| AC-P4-007 | Public Architect Chat Interface | Public Architect | Chat UI | Web Component | Public | Message input, send, starter pills, session conversation history, reset | Empty conversation | Answering query | Input validation error | N/A | E4 RUNTIME | `tests/p4-status.test.ts` | FROZEN |
+| AC-P4-008 | Static Local Runtime Verification | Public Status | Web Host | HTTP Server / Browser | Public | HTML, CSS, JS, and JSON assets load with zero fatal errors in local preview | Zero 404s on assets | Asset fetching | Network/file error caught | N/A | E4 RUNTIME | `tests/p4-status.test.ts` | FROZEN |
