@@ -1650,8 +1650,6 @@ function generateBackupSnapshotPage(locale) {
 
 // Master Execution
 function executeMaster2026Generation() {
-  generateRootRedirector();
-
   ['es', 'en'].forEach(locale => {
     generateAppleOverviewPage(locale);
     generateAppleManagementPage(locale);
@@ -1663,6 +1661,23 @@ function executeMaster2026Generation() {
     generateBackupSnapshotPage(locale);
   });
 
+  // Make root index.html directly load the full Spanish master experience with correct relative asset paths
+  const esIndex = fs.readFileSync(path.join(docsDir, 'es/index.html'), 'utf8');
+  const rootIndex = esIndex
+    .replace(/href="\.\.\/assets\//g, 'href="./assets/')
+    .replace(/src="\.\.\/assets\//g, 'src="./assets/')
+    .replace(/href="\.\/ecosistema\//g, 'href="./es/ecosistema/')
+    .replace(/href="\.\/gerencia\//g, 'href="./es/gerencia/')
+    .replace(/href="\.\/herramientas\//g, 'href="./es/herramientas/')
+    .replace(/href="\.\/arquitectura\//g, 'href="./es/arquitectura/')
+    .replace(/href="\.\/canon\//g, 'href="./es/canon/')
+    .replace(/href="\.\/guia\//g, 'href="./es/guia/')
+    .replace(/href="\.\/backup\//g, 'href="./es/backup/')
+    .replace(/href="\.\/index\.html"/g, 'href="./es/index.html"')
+    .replace(/href="\.\.\/index\.html"/g, 'href="./index.html"');
+
+  fs.writeFileSync(path.join(docsDir, 'index.html'), rootIndex, 'utf8');
+  console.log('[Master 2026] Generated root /index.html as direct Spanish MacBook Pro experience!');
   console.log('✨ [Master 2026 Engine] Complete 2026 Apple Suite compiled flawlessly!');
 }
 
