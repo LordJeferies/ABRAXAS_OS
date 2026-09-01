@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MacBook Pro — ABRAXAS OS Edition (v3 Oficial)</title>
+  <meta name="description" content="Mente abierta. Poder total. El Sistema Operativo de Contenidos a velocidad industrial en Apple Silicon.">
+  <link rel="stylesheet" href="../assets/apple-macbook-pro-v3.css">
+</head>
+<body class="theme-dark">
+
+  <!-- Apple Sticky Localnav -->
+  <nav class="localnav" aria-label="Local Navigation">
+    <div class="localnav-wrapper">
+      <div class="localnav-title">
+        <span>ABRAXAS OS</span>
+        <span class="badge">v3.0 PRO</span>
+      </div>
+      <div class="localnav-menu">
+        <a href="#welcome" class="localnav-link active">Visión general</a>
+        <a href="#highlights" class="localnav-link">Destacados</a>
+        <a href="#viewer" class="localnav-link">Ecosistema 8-en-1</a>
+        <a href="#performance" class="localnav-link">Rendimiento</a>
+        <a href="#governance" class="localnav-link">Gerencia</a>
+        <a href="#sequences" class="localnav-link">12 Secuencias</a>
+        <a href="../es/canon/index.html" class="localnav-link" style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../es/backup/index.html" class="localnav-link">🏛️ Backup</a>
+      </div>
+      <div class="localnav-actions">
+        <a href="../index.html" class="btn-apple-buy">Abrir Sistema</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. SECTION: WELCOME (Hero "Mente abierta. Poder total.") -->
+  <section id="welcome" class="section-welcome">
+    <div class="product-eyebrow">
+      MACBOOK PRO // ABRAXAS OS EDITION 2026
+    </div>
+    <h1 class="headline-gradient">
+      Mente abierta.<br/>Poder total.
+    </h1>
+    <p class="subhead">
+      Una sola semilla de marca. Ocho formatos vivos. Cero margen de error. ABRAXAS transforma ideas atómicas en videos cortos, carruseles visuales, hilos y newsletters a velocidad de hardware local.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#viewer" class="btn-pill-primary">⚡ Explorar Ecosistema 8-en-1</a>
+      <a href="#governance" class="btn-pill-secondary">💼 Para Gerencia y Directores</a>
+      <a href="../es/canon/index.html" class="btn-pill-secondary">📚 Leer el Canon 37 TXT</a>
+    </div>
+
+    <!-- Master Hardware Chassis with Plate 01 -->
+    <div class="hero-hardware-chassis">
+      <div class="hardware-bezel">
+        <div class="hardware-screen">
+          <img src="../assets/plates/plate_01_hero.webp" alt="ABRAXAS OS Hardware Chamber" loading="eager">
+          <div class="hardware-notch-badge">
+            ◈ ATZILUTH CORE CHAMBER // SILICON ARCHITECTURE
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SECTION: HIGHLIGHTS ("Mira lo más destacado.") -->
+  <section id="highlights" class="section-highlights">
+    <div class="section-container">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">LO MÁS DESTACADO</span>
+        <h2 class="section-title">Mira lo más destacado.</h2>
+      </div>
+
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-stat gold">18s</div>
+          <div class="highlight-label">Auto-edición y síntesis completa en Apple Silicon</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-stat cyan">1 ➔ 8</div>
+          <div class="highlight-label">Formatos derivados de una sola semilla</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-stat">50</div>
+          <div class="highlight-label">Activos gobernados en una sola tarde</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-stat emerald">0.00%</div>
+          <div class="highlight-label">GAPs de error (Metrología Whisper V3)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SECTION: PRODUCT VIEWER ("Mírala en detalle." / 8-in-1 Explorer) -->
+  <section id="viewer" class="section-product-viewer">
+    <div class="section-container">
+      <div class="section-title-wrap" style="text-align: center;">
+        <span class="section-eyebrow">FÁBRICA MULTICANAL</span>
+        <h2 class="section-title">Mírala en detalle.<br/>Una semilla. Ocho formatos vivos.</h2>
+      </div>
+
+      <!-- Format Tab Pills -->
+      <div class="format-tab-pills">
+        <button class="format-pill-btn active" onclick="switchV3Format(0, this)">🎬 Videos Cortos (9:16)</button>
+        <button class="format-pill-btn" onclick="switchV3Format(1, this)">🖼️ Carruseles (4:5)</button>
+        <button class="format-pill-btn" onclick="switchV3Format(2, this)">✍️ Hilos X/LinkedIn</button>
+        <button class="format-pill-btn" onclick="switchV3Format(3, this)">📧 Newsletters & Email</button>
+        <button class="format-pill-btn" onclick="switchV3Format(4, this)">🎙️ Audio & Podcasts</button>
+        <button class="format-pill-btn" onclick="switchV3Format(5, this)">🎥 YouTube (16:9)</button>
+      </div>
+
+      <!-- Interactive Bento Display -->
+      <div class="viewer-bento-grid">
+        <div class="bento-box bento-col-8">
+          <div>
+            <span class="apple-card-tag gold" id="v3-tab-tag">FORMAT 01 // AUDIVISUAL SYNTHESIS</span>
+            <h3 class="bento-box-title" id="v3-tab-title">Videos Cortos de Alta Retención (TikTok, Reels, Shorts)</h3>
+            <p class="bento-box-desc" id="v3-tab-desc">
+              Auto-edición en 18 segundos con cortes quirúrgicos de silencios, subtítulos virales animados en Remotion, gráficos 3D y diseño sonoro a 45Hz.
+            </p>
+          </div>
+          <div class="bento-media" style="aspect-ratio: 16/9;">
+            <img id="v3-tab-img" src="../assets/plates/plate_05_vav_cathedral.webp" alt="Format Preview">
+          </div>
+        </div>
+
+        <div class="bento-box bento-col-4">
+          <div>
+            <span class="apple-card-tag cyan">ESPECIFICACIONES PRO</span>
+            <h3 class="bento-box-title" style="font-size: 1.35rem;">Velocidad & Hardware</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 1.5rem; font-size: 0.92rem; color: #cbd5e1;">
+              <li style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;">⚡ <strong>Velocidad de Síntesis:</strong> 18s en Apple Silicon</li>
+              <li style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;">🎯 <strong>Gancho Dialéctico:</strong> Score 0-100 por YOD</li>
+              <li style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;">🎙️ <strong>Auditoría en Set:</strong> Whisper Large V3 Turbo</li>
+              <li>🔒 <strong>Sellado CAS:</strong> SHA-256 Inmutable</li>
+            </ul>
+          </div>
+          <a href="../es/ecosistema/index.html" class="btn-pill-primary" style="margin-top: 2rem; justify-content: center;">
+            Ver Ecosistema Completo →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. SECTION: PERFORMANCE ("Rendimiento // Como estos tres motores no hay dos") -->
+  <section id="performance" class="section-performance">
+    <div class="section-container">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">ARQUITECTURA DE PROCESAMIENTO</span>
+        <h2 class="section-title">Rendimiento.<br/>Como estos tres motores no hay dos.</h2>
+      </div>
+
+      <div class="chip-cards-grid">
+        <div class="chip-card">
+          <div class="chip-badge">י</div>
+          <h3 class="chip-name">Motor YOD</h3>
+          <div class="chip-tagline">Inteligencia de Nicho y Ganchos</div>
+          <p class="chip-desc">
+            Escanea los puntos ciegos de tu sector y genera 3 variantes de apertura calificadas de 0 a 100 para detener el scroll de inmediato.
+          </p>
+        </div>
+
+        <div class="chip-card">
+          <div class="chip-badge">ו</div>
+          <h3 class="chip-name">Motor VAV</h3>
+          <div class="chip-tagline">Auto-Síntesis Audiovisual en 18s</div>
+          <p class="chip-desc">
+            Corta pausas con microsegundos de precisión, genera subtítulos animados virales y renderiza láminas gráficas de alta resolución.
+          </p>
+        </div>
+
+        <div class="chip-card">
+          <div class="chip-badge">ש</div>
+          <h3 class="chip-name">Motor SHIM</h3>
+          <div class="chip-tagline">Metrología y Verificación 0.00% GAPs</div>
+          <p class="chip-desc">
+            Audita con Whisper Large V3 y visión computacional que lo grabado coincida palabra por palabra con el guion antes de salir del set.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SECTION: GOVERNANCE ("El Poder de la Gerencia") -->
+  <section id="governance" class="section-product-viewer" style="background: var(--apple-bg);">
+    <div class="section-container">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow" style="color: var(--apple-cyan);">ALTA DIRECCIÓN & GOBERNANZA</span>
+        <h2 class="section-title">Control Total para CEOs y Directores.<br/>Cero Caos Operativo.</h2>
+      </div>
+
+      <div class="viewer-bento-grid">
+        <div class="bento-box bento-col-6">
+          <div>
+            <span class="apple-card-tag gold">🛡️ CUSTODIA INMUTABLE DE MARCA</span>
+            <h3 class="bento-box-title">Criterio Blindado y Anti-Deriva</h3>
+            <p class="bento-box-desc">
+              Fijas tus pilares de autoridad, tono de voz y reglas una sola vez. Ningún colaborador puede publicar contenido fuera de compliance.
+            </p>
+          </div>
+          <div class="bento-media" style="aspect-ratio: 16/9;">
+            <img src="../assets/plates/plate_03_continuity_axis.webp" alt="Brand Custody">
+          </div>
+        </div>
+
+        <div class="bento-box bento-col-6">
+          <div>
+            <span class="apple-card-tag cyan">📊 TELEMETRÍA DE COSTOS SQLITE</span>
+            <h3 class="bento-box-title">Auditoría al Centavo y Tiempos</h3>
+            <p class="bento-box-desc">
+              Tablas relacionales que miden tiempos por etapa, cuellos de botella del equipo y el costo de manufactura exacto por activo.
+            </p>
+          </div>
+          <div class="bento-media" style="aspect-ratio: 16/9;">
+            <img src="../assets/plates/plate_09_system_dashboard.webp" alt="Cost Telemetry">
+          </div>
+        </div>
+
+        <div class="bento-box bento-col-6">
+          <div>
+            <span class="apple-card-tag emerald">⚡ APALANCAMIENTO 1 = 10</span>
+            <h3 class="bento-box-title">1 Operador = Una Agencia Entera</h3>
+            <p class="bento-box-desc">
+              Elimina retainers de agencias de $5,000–$15,000/mes. Un solo líder gobierna y aprueba 50 a 100 piezas multicanal en una tarde.
+            </p>
+          </div>
+          <div class="bento-media" style="aspect-ratio: 16/9;">
+            <img src="../assets/plates/plate_02_he_macro.webp" alt="Team Leverage">
+          </div>
+        </div>
+
+        <div class="bento-box bento-col-6">
+          <div>
+            <span class="apple-card-tag purple">🔒 PRIVACIDAD EN APPLE SILICON</span>
+            <h3 class="bento-box-title">100% Silicio Apple Local</h3>
+            <p class="bento-box-desc">
+              Todo corre en local en tu Mac. Tus estrategias confidenciales y grabaciones jamás se suben a servidores externos ni entrenan IA de terceros.
+            </p>
+          </div>
+          <div class="bento-media" style="aspect-ratio: 16/9;">
+            <img src="../assets/plates/plate_04_shim_metrology.webp" alt="Local Security">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. SECTION: 12 MASTER SEQUENCES -->
+  <section id="sequences" class="section-product-viewer" style="background: var(--apple-bg-alt);">
+    <div class="section-container">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow" style="color: var(--apple-gold);">ARQUITECTURA OPERATIVA COMPLETA</span>
+        <h2 class="section-title">Las 12 Secuencias de Creación.<br/>Del dolor real a la obra terminada.</h2>
+      </div>
+
+      <div class="sequence-card-grid">
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">01. ATZILUTH & KETER // LA SEMILLA MAESTRA DE MARCA</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP ATZILUTH</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Elimina el pánico a la página en blanco: 1 sola tesis alimenta 8 canales a la vez.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Pasar días pensando ideas desconectadas para reels, carruseles, newsletters y posts de LinkedIn, terminando con contenido genérico que nadie recuerda.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">Convierte una sola tesis de marca validada en la semilla matriz que genera automáticamente todo tu despliegue multicanal.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">Configuras tu voz de marca y pilares de autoridad una sola vez. YOD genera una tesis angular calificada de 0 a 100 de la que nacen 8 formatos listos.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">Atziluth (Emanación) y Keter (La Corona). La Voluntad Pura (state = NULL). Una sola intención se ramifica en infinitas expresiones sin perder identidad.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_01_hero.webp" alt="Elimina el pánico a la página en blanco: 1 sola tesis alimenta 8 canales a la vez." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">02. CHOKHMAH & YOD // RADAR DE GANCHOS MULTICANAL</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP CHOKHMAH</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Detén el scroll en los primeros 3 segundos en videos, carruseles, hilos y emails.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Publicar contenido valioso en múltiples redes que la gente ignora de inmediato porque el gancho del video, la portada del carrusel o el asunto del email es aburrido.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">Genera ganchos dialécticos calificados de 0 a 100 adaptados para frenar el scroll en videos cortos, carruseles de Instagram, hilos de X y bandejas de correo.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">YOD escanea los puntos ciegos de tu nicho y entrega 3 variantes de apertura por formato. Si el gancho no supera 85/100, exige optimizarlo antes de grabar.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">Chokhmah (Sabiduría) y Módulo YOD (י). El relámpago primordial (Kav) que rompe la inercia cósmica y despierta el interés inmediato en todos los planos.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_06_arquitecto_lens.webp" alt="Detén el scroll en los primeros 3 segundos en videos, carruseles, hilos y emails." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">03. BERI'AH & CONTINUIDAD // EL EJE DE CONTINUIDAD (1 IDEA -> 8 FORMATOS)</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP BERI'AH</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Fin a reescribir lo mismo 5 veces: actualiza tu guion y sincroniza 8 formatos automáticamente.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Reescribir manualmente la misma idea para TikTok, carruseles, LinkedIn y emails, terminando con 20 archivos desordenados y mensajes desincronizados.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">Otorga a cada proyecto un contentId inmutable en un Eje de Continuidad vertical donde 8 formatos derivados se actualizan solos en tiempo real.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">Contenido usa un árbol de datos Merkle-DAG. Si editas una frase del guion, los subtítulos del video 9:16, las láminas del carrusel 4:5 y la newsletter se actualizan al unísono.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">Beri'ah (Creación) y La Gran Pirámide. La vasija indestructible (Keli) que contiene la luz creativa a lo largo de un eje vertical unificado, evitando el caos.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_03_continuity_axis.webp" alt="Fin a reescribir lo mismo 5 veces: actualiza tu guion y sincroniza 8 formatos automáticamente." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">04. TOPOLOGÍA SEFIROTICA // SUITE UNIFICADA DE 13 MÓDULOS</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP SEFIROT</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Reemplaza 8 aplicaciones desconectadas por un solo sistema operativo multicanal soberano.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Perder horas saltando entre Notion para notas, Figma/Canva para carruseles, Premiere para videos, Typefully para X, Mailchimp para emails y Drive para almacenar.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">Un solo sistema operativo soberano donde todo tu ecosistema de contenidos fluye de Idea -> Generación Multiformato -> Verificación -> Auto-Edición -> Publicación.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">Unifica redacción de guiones, teleprompter, diseño de carruseles, normalización de audio, auto-edición de video y publicación en lote en una sola ventana de macOS.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">Topología del Árbol de la Vida. Las 10 Sefirot son los estados naturales del contenido; los 13 Módulos de ABRAXAS son los verbos que ejecutan la transformación.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_10_master_monument.webp" alt="Reemplaza 8 aplicaciones desconectadas por un solo sistema operativo multicanal soberano." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">05. DA'AT & SHIM // VERIFICACIÓN EMPÍRICA MULTI-MODAL EN VIVO</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP DA'AT</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Cero errores en el set, cero datos equivocados y cero subtítulos desincronizados.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Grabar durante 2 horas para descubrir que te comiste una frase clave, tuviste clipping de audio o cometiste un error de datos en las láminas de tu carrusel.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">La IA de metrología SHIM escucha tu grabación en vivo y audita las diapositivas visuales, avisándote al instante para corregir en segundos antes de exportar.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">SHIM usa Whisper Large V3 Turbo y visión computacional para auditar audio y texto palabra por palabra contra el guion, marcando omisiones con 0.00% de tolerancia a fallos.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">Da'at (Conocimiento Lúcido) y La Letra Shin (ש). Da'at es la lucidez de la conciencia saltando a la acción física. Es el umbral donde la intención se confronta con la verdad observada.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_04_shim_metrology.webp" alt="Cero errores en el set, cero datos equivocados y cero subtítulos desincronizados." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">06. YHSHVH & CAS // BÓVEDA CRIPTOGRÁFICA MULTI-FORMATO</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP YHSHVH</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Cero archivos perdidos, cero proyectos rotos y cero pérdida de calidad por compresión.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Abrir proyectos y encontrarse la pantalla roja de Media Offline, láminas de carruseles borradas o videos que pierden nitidez al subirlos a la nube.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">Congela videos, carruseles, audios y copys en un solo bloque blindado con sello criptográfico SHA-256 que nunca se corrompe ni pierde resolución.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">Guarda los activos en Almacenamiento Direccionado por Contenido (CAS). Mover carpetas de disco nunca rompe enlaces y todos los medios cargan al instante con 100% de calidad.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">Sello YHSHVH (Pentagramatón). Las 4 barras del cuerpo material (Y-H-V-H) reciben el fuego sagrado de Shin (ש) en su centro, sellando el espíritu con la materia en un cuerpo indestructible.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_08_he_assiah_operations.webp" alt="Cero archivos perdidos, cero proyectos rotos y cero pérdida de calidad por compresión." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">07. QABALAH RELACIONAL // VELOCIDAD DE PRODUCCIÓN Y AUDITORÍA DE COSTOS</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP MATRIX</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Mide costos exactos, cuellos de botella del equipo y velocidad de entrega en todos los formatos.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">No saber por qué la producción de contenidos se atrasa, qué colaborador está bloqueado o cuánto dinero te cuesta realmente producir tu volumen mensual multicanal.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">Tablas de control relacionales que auditan tiempos de entrega, cuellos de botella del equipo y costo por pieza al centavo para videos, carruseles y textos.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">Registra cada edición, ciclo de revisión, tiempo de renderizado y aprobación en una base de datos local SQLite. En un clic auditas la eficiencia total de tu equipo.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">Qabalah Occidental de Dion Fortune. Traducir la potencia creativa intuitiva a leyes matemáticas exactas, estructuras transparentes y métricas auditables para mantener gobierno total.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_09_system_dashboard.webp" alt="Mide costos exactos, cuellos de botella del equipo y velocidad de entrega en todos los formatos." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">08. ESPACIO XYZA // ESTRATIGRAFÍA DE CONTENIDOS POR OBJETIVO</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP XYZA</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Adapta cada video, carrusel e hilo a su objetivo exacto en el embudo de ventas.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Tratar todo el contenido igual: hacer videos educativos con ritmo aburrido o publicar carruseles con demasiado texto que no convierten seguidores en clientes.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">El motor modula automáticamente la velocidad de cortes, la densidad de texto y el estilo visual según el objetivo específico de cada pieza en el embudo.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">Mapea activos en 4D: Polaridad (X), Manifestación (Y), Contexto (Z) y Memoria (A). Los contenidos de atracción reciben cortes rápidos; los carruseles educativos reciben alta densidad.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">Espacio de Estados Cuatridimensional XYZA. Cada creación ocupa una coordenada de fase exacta entre la expansión y la restricción para lograr su manifestación perfecta en el embudo.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_08_contenido_portal.webp" alt="Adapta cada video, carrusel e hilo a su objetivo exacto en el embudo de ventas." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">09. CÚSPIDE Y EL OJO // TELEMETRÍA DE HARDWARE APPLE SILICON</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP APEX</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Cero Macs sobrecalentadas, cero líneas de tiempo congeladas y cero cuelgues al 99%.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Que tu editor se congele al 99% del renderizado, los ventiladores suenen como turbinas y la máquina colapse al exportar lotes pesados de contenido multicanal.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">Monitorea memoria y temperatura de Apple Silicon en tiempo real, exportando lotes de 50 videos y carruseles simultáneamente sin un solo cuelgue.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">El Ojo se conecta directamente a los procesadores Apple Silicon (M1/M2/M3/M4) mediante Metal y VideoToolbox, balanceando la carga entre GPU y Neural Engine sin estrangulamiento térmico.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">El Ojo del Ápice en la Pirámide. La mirada vigilante que supervisa el flujo de energía en la cúspide para garantizar que el templo físico no sufra rupturas de tensión.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_06_optical_port_eye.webp" alt="Cero Macs sobrecalentadas, cero líneas de tiempo congeladas y cero cuelgues al 99%." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">10. VAV SÍNTESIS // FORJA INDUSTRIAL MULTI-FORMATO EN 18 SEGUNDOS</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP VAV</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Auto-edita videos en 18s, genera tipografía cinética, renderiza carruseles y formatea hilos.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Perder 8 horas cortando pausas a mano en Premiere, diseñando láminas de carruseles en Canva y reformateando textos para cada red social.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">Corta silencios muertos, pone subtítulos animados virales, inyecta sonido sub-bajo a 45Hz y exporta diapositivas gráficas e hilos formateados en segundos.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">La catedral VAV ejecuta cortes con microsegundos de precisión, aplica 13 familias de movimiento en Remotion, normaliza audio a -14 LUFS y genera láminas de carrusel en alta resolución.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">Módulo VAV (ו) // El Gancho Universal en Yetzirah. En hebreo, Vav es el gancho sagrado que une el sonido, la tipografía, el movimiento y la imagen en un solo cuerpo vivo sensorial.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_05_vav_cathedral.webp" alt="Auto-edita videos en 18s, genera tipografía cinética, renderiza carruseles y formatea hilos." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">11. DESPACHO DE HE // GOBIERNO DE 50 ACTIVOS MULTICANAL EN UNA TARDE</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP HE</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Produce, aprueba y programa un mes entero de contenido multicanal en una sola tarde.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Sentirse abrumado intentando publicar diario en 5 redes sociales, perdiendo fechas límite y dependiendo de agencias costosas para mantener volumen.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">Un tablero Kanban nativo en macOS donde un solo creador u operador organiza, aprueba y exporta 50 activos multicanal en una sola tarde.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">Arrastras proyectos a través de 6 compuertas de calidad (Idea -> Guion -> Grabación -> Verificación -> Síntesis -> Aprobado). La aprobación en un clic exporta un mes de contenido.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">Módulo HE (ה) // El Taller de Manifestación en Assiah. El mundo físico de la acción concreta donde el operador humano toma el control con sus manos para gobernar la manufactura final.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_02_he_macro.webp" alt="Produce, aprueba y programa un mes entero de contenido multicanal en una sola tarde." loading="lazy">
+          </div>
+        </div>
+        
+        <div class="bento-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="apple-card-tag gold">12. LA LUNA CELESTE // BUCLE CERRADO DE APRENDIZAJE MULTICANAL</span>
+              <span style="font-family: var(--apple-mono); font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 2px 8px; border-radius: 4px;">CHIP MOON</span>
+            </div>
+            <h3 class="bento-box-title" style="font-size: 1.35rem; margin-bottom: 1rem;">Convierte la retención real de tus videos, carruseles e hilos en contenido futuro más efectivo.</h3>
+
+            <div class="tier-box pain">
+              <span class="tier-label" style="color: #ef4444;">💥 EL DOLOR REAL:</span>
+              <p class="tier-text" style="color: #f1f5f9;">Publicar a ciegas en TikTok, Instagram y LinkedIn sin entender por qué un formato funcionó y otro fracasó, repitiendo los mismos errores siempre.</p>
+            </div>
+
+            <div class="tier-box solution">
+              <span class="tier-label" style="color: #d4af37;">⚡ LA SOLUCIÓN ABRAXAS:</span>
+              <p class="tier-text" style="color: #fff; font-weight: 600;">Mide la curva exacta de retención de video, la tasa de lectura de carruseles y la interacción de hilos, retroalimentando al sistema para el próximo lote.</p>
+            </div>
+
+            <div class="tier-box tool">
+              <span class="tier-label" style="color: #38bdf8;">🛠️ CÓMO LO HACE EL SOFTWARE:</span>
+              <p class="tier-text" style="color: #cbd5e1;">Metrics consolida el rendimiento real en la Dimensión A: S(t+1) = S(t) + A(t). El sistema aprende qué ganchos y formatos retienen más para que tu próximo mes sea más viral.</p>
+            </div>
+
+            <div class="tier-box cabala">
+              <span class="tier-label" style="color: #c084fc;">🔯 PRINCIPIO CABALÍSTICO:</span>
+              <p class="tier-text" style="color: #94a3b8; font-family: var(--apple-mono); font-size: 11.5px;">La Luna Celeste y el Retorno Telemétrico. La luna refleja la luz hacia la Tierra y devuelve las mareas telemétricas hacia el Sol/YOD. La creación es una espiral infinita de aprendizaje.</p>
+            </div>
+          </div>
+
+          <div class="bento-media" style="aspect-ratio: 16/9; margin-top: 1.5rem;">
+            <img src="../assets/plates/plate_07_moon_loop.webp" alt="Convierte la retención real de tus videos, carruseles e hilos en contenido futuro más efectivo." loading="lazy">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SECTION: CANON 37 TXT TEASER -->
+  <section class="section-product-viewer" style="background: #000; text-align: center;">
+    <div class="section-container">
+      <span class="apple-card-tag gold">📚 BASE DE CONOCIMIENTO OFICIAL // 37 ARCHIVOS</span>
+      <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.25rem;">El Canon Completo en tu Navegador</h2>
+      <p class="subhead" style="margin-bottom: 2.5rem;">
+        Lee directamente los 37 textos canónicos: ontología, ingeniería 4D, gobernanza y los 100 prompts cinematográficos con buscador instantáneo.
+      </p>
+      <a href="../es/canon/index.html" class="btn-pill-primary" style="font-size: 1.1rem; padding: 14px 32px;">
+        Abrir Biblioteca Canon 37 TXT →
+      </a>
+    </div>
+  </section>
+
+  <!-- Apple Global Footer v3 -->
+  <footer class="apple-footer-v3">
+    <div class="footer-v3-inner">
+      <div class="footer-v3-columns">
+        <div class="footer-v3-col">
+          <h4>Ecosistema de Contenido</h4>
+          <ul>
+            <li><a href="#viewer">Videos Cortos (9:16)</a></li>
+            <li><a href="#viewer">Carruseles Visuales (4:5)</a></li>
+            <li><a href="#viewer">Hilos X / LinkedIn</a></li>
+            <li><a href="#viewer">Newsletters & Email</a></li>
+            <li><a href="#viewer">Audio & Podcasts</a></li>
+          </ul>
+        </div>
+        <div class="footer-v3-col">
+          <h4>Rendimiento & Módulos</h4>
+          <ul>
+            <li><a href="#performance">YOD // Radar de Nicho</a></li>
+            <li><a href="#performance">CONTENIDO // Eje de Continuidad</a></li>
+            <li><a href="#performance">SHIM // Metrología Whisper</a></li>
+            <li><a href="#performance">VAV // Auto-Síntesis 18s</a></li>
+            <li><a href="#performance">HE // Despacho Kanban</a></li>
+          </ul>
+        </div>
+        <div class="footer-v3-col">
+          <h4>Gobernanza & Alta Dirección</h4>
+          <ul>
+            <li><a href="#governance">Custodia Inmutable de Marca</a></li>
+            <li><a href="#governance">Telemetría SQLite al Centavo</a></li>
+            <li><a href="#governance">Apalancamiento 1 Operador = 10</a></li>
+            <li><a href="#governance">Soberanía Apple Silicon</a></li>
+          </ul>
+        </div>
+        <div class="footer-v3-col">
+          <h4>Base de Conocimiento</h4>
+          <ul>
+            <li><a href="../es/canon/index.html">Biblioteca Canon 37 TXT</a></li>
+            <li><a href="../arquitectura/index.html">Cábala & Arquitectura 4D</a></li>
+            <li><a href="../guia/index.html">Guía Rápida en 2 Minutos</a></li>
+            <li><a href="../es/backup/index.html">🏛️ Versión Backup / Legacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-v3-bottom">
+        <p>Copyright © 2026 ABRAXAS OS. Todos los derechos reservados. Edición Oficial Apple MacBook Pro.</p>
+        <p style="font-family: var(--apple-mono); color: var(--apple-gold); font-size: 11px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const v3Tabs = [
+      {
+        tag: 'FORMAT 01 // AUDIVISUAL SYNTHESIS',
+        title: 'Videos Cortos de Alta Retención (TikTok, Reels, Shorts)',
+        desc: 'Auto-edición en 18 segundos con cortes quirúrgicos de silencios, subtítulos virales animados en Remotion, gráficos 3D y diseño sonoro a 45Hz.',
+        img: '../../assets/plates/plate_05_vav_cathedral.webp'
+      },
+      {
+        tag: 'FORMAT 02 // EDITORIAL GRAPHICS',
+        title: 'Carruseles Visuales de Alta Conversión (Instagram / LinkedIn)',
+        desc: 'Diapositivas en formato 4:5 y 1:1 con tipografía editorial de impacto, densidad de información calibrada y esquemas que detienen el scroll.',
+        img: '../../assets/plates/plate_08_contenido_portal.webp'
+      },
+      {
+        tag: 'FORMAT 03 // WRITTEN AUTHORITY',
+        title: 'Hilos de Autoridad & Posts Largos (X / LinkedIn)',
+        desc: 'Hilos de 6 a 10 publicaciones redactados con tensión dialéctica y listas de valor listas para publicar en X y LinkedIn.',
+        img: '../../assets/plates/plate_03_continuity_axis.webp'
+      },
+      {
+        tag: 'FORMAT 04 // RETENTION & SALES',
+        title: 'Newsletters y Correos de Venta Sincronizados',
+        desc: 'Correos electrónicos con narrativa envolvente y llamados a la acción comerciales sincronizados con la tesis del video.',
+        img: '../../assets/plates/plate_07_moon_loop.webp'
+      },
+      {
+        tag: 'FORMAT 05 // AUDIO BROADCAST',
+        title: 'Snippets de Audio & Guiones de Podcast',
+        desc: 'Pistas de audio normalizadas a -14 LUFS con reducción de ruido y resúmenes para comunidades de Telegram y Spotify.',
+        img: '../../assets/plates/plate_04_shim_metrology.webp'
+      },
+      {
+        tag: 'FORMAT 06 // DEEP-DIVE ESSAY',
+        title: 'Ensayos Audiovisuales Largos (YouTube 16:9)',
+        desc: 'Estructura narrativa en 4 tiempos para videos horizontales de 8 a 15 minutos con retención continua.',
+        img: '../../assets/plates/plate_10_master_monument.webp'
+      }
+    ];
+
+    function switchV3Format(idx, btn) {
+      document.querySelectorAll('.format-pill-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const d = v3Tabs[idx];
+      document.getElementById('v3-tab-tag').innerText = d.tag;
+      document.getElementById('v3-tab-title').innerText = d.title;
+      document.getElementById('v3-tab-desc').innerText = d.desc;
+      document.getElementById('v3-tab-img').src = d.img;
+    }
+  </script>
+</body>
+</html>
