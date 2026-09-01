@@ -2,7 +2,7 @@
   "registryClassification": "DESIGN_REGISTRY",
   "executionState": "NOT_RUNTIME_EXECUTABLE",
   "version": 1,
-  "projectedAt": "2026-09-01T13:01:17.840Z",
+  "projectedAt": "2026-09-01T13:10:49.284Z",
   "blueprints": [
     {
       "blueprintId": "CORE_LOOP_FULL_V1",
