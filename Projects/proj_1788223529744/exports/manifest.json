@@ -1,0 +1,27 @@
+{
+  "packageVersion": "15.0.0",
+  "projectId": "proj_1788223529744",
+  "projectName": "Reality Acceptance Test",
+  "casMasterAddress": "cas://76133f31af2c94141fb562af7da1a68f0ab2cb8855dab186a270bcbdd49458eb",
+  "generatedAt": "2026-09-01T00:45:47.429Z",
+  "world": "ASSIAH",
+  "operator": "HE_OPERATIONS (ה)",
+  "artifacts": [
+    {
+      "path": "exports/video_final.mp4",
+      "sha256": "76133f31af2c94141fb562af7da1a68f0ab2cb8855dab186a270bcbdd49458eb",
+      "bytes": 57760647
+    },
+    {
+      "path": "captions/captions.srt",
+      "sha256": "bae8bfdb7567f123bf297e4865dbde80f4c2cecaebf0b2b54848d0acbc715b23",
+      "bytes": 1386
+    }
+  ],
+  "creativeScores": {
+    "hookScore": 83,
+    "retentionScore": 73,
+    "visualClarityScore": 95,
+    "overallViabilityScore": 84
+  }
+}

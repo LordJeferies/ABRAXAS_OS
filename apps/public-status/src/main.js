@@ -73,8 +73,9 @@ async function initPublicStatus() {
     dossierModal = new ModuleDossierModal(dossierContainer, publicKnowledge.modules || []);
   }
 
-  // 3. Initialize 3D Spatial Canvas if present
-  const canvasContainer = document.getElementById('spatial-pyramid-container') || document.getElementById('spatial-canvas-container');
+  // 3. Initialize 3D Spatial Canvas (Dedicated for System Dashboard)
+  const isLandingStory = defaultMode === "STORY" && !isSystemPage && !isFlowPage;
+  const canvasContainer = !isLandingStory ? (document.getElementById("spatial-pyramid-container") || document.getElementById("spatial-canvas-container")) : null;
   let pyramid = null;
   let navigatorInstance = null;
 
@@ -92,59 +93,59 @@ async function initPublicStatus() {
       },
       (shot) => {
         appState.cameraShotId = shot.id;
-        appState.activeModule = shot.nodeId || 'CORE';
+        appState.activeModule = shot.nodeId || "CORE";
         if (navigatorInstance) navigatorInstance.updateState(shot, appState.storyIndex / 11);
       },
       publicKnowledge,
       { items: evidenceData }
     );
 
-    if (defaultMode === 'SYSTEM') {
-      pyramid.setMode('SYSTEM');
-    } else if (defaultMode === 'FLOW') {
-      pyramid.setMode('FLOW');
+    if (defaultMode === "SYSTEM") {
+      pyramid.setMode("SYSTEM");
+    } else if (defaultMode === "FLOW") {
+      pyramid.setMode("FLOW");
     }
 
-    // 4. Initialize Navigator if present
-    const navContainer = document.getElementById('navigator-mount');
-    let storyController = null;
-    if (navContainer) {
-      navigatorInstance = new SpatialNavigator(navContainer, (stateIdx) => {
-        if (storyController) storyController.jumpToState(stateIdx);
-      });
-    }
-
-    // 5. Initialize Story Controller on landing
-    if (document.querySelector('.story-scroll-container') || document.querySelector('.story-act-section')) {
-      storyController = new StoryController(pyramid, navigatorInstance, appState);
-      window.__ABRAXAS_STORY_CONTROLLER__ = storyController;
-    }
-
-    // 6. Initialize Modes Manager
-    const modeManager = new ModeManager(pyramid, dossierModal, blueprintsData, publicKnowledge.modules || [], evidenceData, appState);
-    window.__ABRAXAS_MODE_MANAGER__ = modeManager;
-
-    if (defaultMode !== 'STORY') {
-      modeManager.switchMode(defaultMode);
-    }
-
-    // 7. Animation Render Loop with Visibility Pause
+    // Animation Render Loop with Visibility Pause
     let animationFrameId = null;
     function loop(time) {
-      if (document.visibilityState !== 'hidden' && pyramid.activeMode !== 'PROOF') {
+      if (document.visibilityState !== "hidden" && pyramid && pyramid.activeMode !== "PROOF") {
         pyramid.animate(time);
       }
       animationFrameId = requestAnimationFrame(loop);
     }
     animationFrameId = requestAnimationFrame(loop);
 
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'hidden') {
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") {
         if (animationFrameId) cancelAnimationFrame(animationFrameId);
       } else {
-        animationFrameId = requestAnimationFrame(loop);
+        if (!animationFrameId) animationFrameId = requestAnimationFrame(loop);
       }
     });
+  }
+
+  // 4. Initialize Navigator if present
+  const navContainer = document.getElementById("navigator-mount");
+  let storyController = null;
+  if (navContainer) {
+    navigatorInstance = new SpatialNavigator(navContainer, (stateIdx) => {
+      if (storyController) storyController.jumpToState(stateIdx);
+    });
+  }
+
+  // 5. Initialize Story Controller (Always initialized so scroll listeners and plate transitions execute on Landing!)
+  if (document.querySelector(".story-scroll-container") || document.querySelector(".story-act-section")) {
+    storyController = new StoryController(pyramid, navigatorInstance, appState);
+    window.__ABRAXAS_STORY_CONTROLLER__ = storyController;
+  }
+
+  // 6. Initialize Modes Manager
+  const modeManager = new ModeManager(pyramid, dossierModal, blueprintsData, publicKnowledge.modules || [], evidenceData, appState);
+  window.__ABRAXAS_MODE_MANAGER__ = modeManager;
+
+  if (defaultMode !== "STORY" && modeManager) {
+    modeManager.switchMode(defaultMode);
   }
 
   // 8. Initialize Public Architect Engine

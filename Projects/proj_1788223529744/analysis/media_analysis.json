@@ -1,0 +1,18 @@
+{
+  "probe": {
+    "path": "/Users/lordjef/Desktop/abraxasos/Projects/proj_1788223529744/input/vav-captioned-quality.mp4",
+    "name": "vav-captioned-quality.mp4",
+    "sizeBytes": 52204787,
+    "durationUs": 45184000,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "fpsRational": "30/1",
+    "rotation": 0,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "audioTracks": 1
+  },
+  "scenesCount": 1,
+  "captionsCount": 20
+}

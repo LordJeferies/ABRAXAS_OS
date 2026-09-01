@@ -1,0 +1,235 @@
+{
+  "projectId": "proj_abr_1788223539817",
+  "world": "BERIAH",
+  "activeOperator": "CONTENIDO_LIENZO (מ)",
+  "narrativeStructure": {
+    "hook": {
+      "startUs": 0,
+      "endUs": 3500000,
+      "text": "El laboratorio no debería decidir una lista, debería decidir una hipótesis.",
+      "retentionDriver": "High-Contrast Sensory Anchor"
+    },
+    "development": {
+      "startUs": 3500000,
+      "endUs": 10000000,
+      "text": "En la plataforma hoy, la idea es que funciona así. El usuario puede ser el director de",
+      "retentionDriver": "Logical Thesis Flow"
+    },
+    "proof": {
+      "startUs": 10000000,
+      "endUs": 22000000,
+      "text": "investigación y desarrollo de una farmacéutica o el director de investigación y desarrollo en una industria cosmética, por ejemplo, o un estudiante, un investigador de universidad",
+      "retentionDriver": "Empirical Demonstration"
+    },
+    "callToAction": {
+      "startUs": 22000000,
+      "endUs": 45184000,
+      "text": "que esté desarrollando o que quiera investigar productos reactivos. Entonces, todos van a tener su propia necesidad o algo que quieran resolver. Entonces, MOCA lo que hace en este punto es organizar primero toda la información disponible de las plantas, en este caso, del mundo que hay en general, y particularmente estas plantas latinoamericanas. Entonces, hoy,",
+      "retentionDriver": "High-Conversion Directive"
+    }
+  },
+  "cutDecisions": [
+    {
+      "startUs": 0,
+      "endUs": 45184000,
+      "action": "KEEP",
+      "rationale": "Validated continuous timeline bitstream"
+    }
+  ],
+  "zoomDirectives": [
+    {
+      "startUs": 0,
+      "endUs": 3500000,
+      "targetScale": 1.12,
+      "targetCenter": {
+        "x": 0.5,
+        "y": 0.35
+      },
+      "curve": "spring(1, 90, 12, 0)"
+    }
+  ],
+  "captionDirectives": [
+    {
+      "captionId": "cap-00001",
+      "role": "hook",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00002",
+      "role": "hook",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00003",
+      "role": "development",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00004",
+      "role": "development",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00005",
+      "role": "development",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00006",
+      "role": "proof",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00007",
+      "role": "proof",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00008",
+      "role": "proof",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00009",
+      "role": "proof",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00010",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00011",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00012",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00013",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00014",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00015",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00016",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00017",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00018",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00019",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    },
+    {
+      "captionId": "cap-00020",
+      "role": "cta",
+      "emphasisKeywords": [],
+      "suggestedPlacement": "center-low"
+    }
+  ],
+  "motionContexts": [
+    {
+      "id": "motion-hook",
+      "startUs": 0,
+      "endUs": 3500000,
+      "family": "ABRAXAS_MOTION_02",
+      "visualMode": "hook-punch",
+      "textOwnership": "hybrid",
+      "captionVisibility": "visible",
+      "sceneSmartMode": "restricted"
+    },
+    {
+      "id": "motion-proof",
+      "startUs": 10000000,
+      "endUs": 22000000,
+      "family": "ABRAXAS_MOTION_01",
+      "visualMode": "evidence-emphasis",
+      "textOwnership": "caption-engine",
+      "captionVisibility": "visible",
+      "sceneSmartMode": "normal"
+    }
+  ],
+  "contentCandidates": [
+    {
+      "id": "content-1",
+      "startUs": 0,
+      "endUs": 3500000,
+      "role": "hook",
+      "label": "Hook: El laboratorio no debería decidir una li...",
+      "motionHint": "HERO_POP"
+    },
+    {
+      "id": "content-2",
+      "startUs": 3500000,
+      "endUs": 10000000,
+      "role": "development",
+      "label": "Development: En la plataforma hoy, la idea es que fun...",
+      "motionHint": "SMART_FLOW"
+    },
+    {
+      "id": "content-3",
+      "startUs": 10000000,
+      "endUs": 22000000,
+      "role": "proof",
+      "label": "Proof: investigación y desarrollo de una farmac...",
+      "motionHint": "EVIDENCE_GLOW"
+    },
+    {
+      "id": "content-4",
+      "startUs": 22000000,
+      "endUs": 45184000,
+      "role": "cta",
+      "label": "CTA: que esté desarrollando o que quiera inve...",
+      "motionHint": "CALL_TO_ACTION"
+    }
+  ],
+  "creativeScores": {
+    "hookScore": 83,
+    "retentionScore": 73,
+    "visualClarityScore": 95,
+    "overallViabilityScore": 84
+  }
+}

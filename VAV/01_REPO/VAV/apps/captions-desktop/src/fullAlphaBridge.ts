@@ -14,10 +14,23 @@ import type {
   VisionProviderReport
 } from "./fullAlphaTypes.ts";
 
-const run = <T>(command: string, payload: Record<string, unknown>): Promise<T> =>
-  invoke<T>("run_full_alpha_engine", {command, payload});
+const run = async <T>(command: string, payload: Record<string, unknown>): Promise<T> => {
+  try {
+    return await invoke<T>("run_full_alpha_engine", { command, payload });
+  } catch (err) {
+    console.warn(`[Tauri Bridge] run_full_alpha_engine (${command}) warning:`, err);
+    throw err;
+  }
+};
 
-export const assetUrl = (path: string) => convertFileSrc(path);
+export const assetUrl = (path: string) => {
+  try {
+    return convertFileSrc(path);
+  } catch {
+    return path;
+  }
+};
+
 export const probeMedia = (path: string) => run<MediaProbe>("probe", {path});
 
 export const transcribeMedia = (
@@ -41,7 +54,6 @@ export const importContent = (path: string) =>
 export const importMotion = (path: string) =>
   run<{items: MotionContext[]}>("import-motion", {path});
 
-
 export const importAbraxas = (path: string, trust: "candidate" | "approved" = "candidate") =>
   run<{artifact: AbraxasArtifact; provenance?: {sourceName: string; sourcePath: string; sha256: string; kind: string; importedAt: string}; registry?: {approvedStyles: CaptionStylePreset[]; approvedMotions: MotionPreset[]}}>("import-abraxas", {path, trust});
 
@@ -59,34 +71,39 @@ export const saveProject = (path: string, project: SavedProject) =>
 export const loadProject = (path: string) =>
   run<SavedProject>("load-project", {path});
 
-export const exportSrt = (path: string, captions: readonly RuntimeCaption[]) =>
-  run<{path: string}>("export-srt", {path, captions});
+export const designState = (path: string) =>
+  run<DesignState>("design-state", {path});
 
-export const exportMp4 = (args: {
-  inputPath: string;
-  outputPath: string;
-  captions: readonly RuntimeCaption[];
-  design: DesignState;
-  motionContexts: readonly MotionContext[];
-  contentCandidates: readonly ContentCandidate[];
-  width: number;
-  height: number;
-}) => run<{path: string; renderer: string}>("export-mp4", args);
+export const exportAss = (path: string, outputPath: string) =>
+  run<{outputPath: string}>("export-ass", {path, outputPath});
 
-export const exportQualityMp4 = (args: {
-  inputPath: string;
-  outputPath: string;
-  plan: CaptionPlanV1;
-  jobId: string;
-}) => run<{path: string; renderer: string; compositionId: string; width: number; height: number; fps: number; durationInFrames: number; jobId: string}>("export-quality-mp4", args);
+export const exportMp4 = (
+  payload: {
+    videoPath: string;
+    plan: CaptionPlanV1;
+    outputPath: string;
+    targetWidth: number;
+    targetHeight: number;
+    fps: number;
+    concurrency: number;
+  }
+) => run<{outputPath: string}>("export-mp4", payload as unknown as Record<string, unknown>);
 
-export const renderProgress = (jobId: string) =>
-  run<{jobId: string; state: string; progress: number; renderer?: string; outputPath?: string; error?: string}>("render-progress", {jobId});
+export const getAbraxasSystemStatus = () =>
+  run<any>("get_system_status", {});
 
-export const cancelQualityRender = (jobId: string) =>
-  run<{jobId: string; requested: boolean}>("cancel-render", {jobId});
+export const executeAbraxasPipeline = (payload: {
+  videoPath: string;
+  projectName: string;
+  productName?: string;
+  targetAudience?: string;
+  creativeObjective?: string;
+  scriptText?: string;
+  mode?: "FROM_ZERO" | "EXISTING_MATERIAL" | "ONLY_CAPTIONS" | "ONLY_MOTION";
+  renderQuality?: "FAST_HARDWARE" | "REMOTION_QUALITY";
+  styleId?: string;
+}) => run<any>("render_pipeline", payload);
 
-// ABRAXAS OS V11 Real Backend Commands
 export const createAbraxasProject = (payload: { mode?: string; idea?: string; product?: string; targetAudience?: string; objective?: string; option?: string; scriptText?: string; title?: string }) =>
   run<any>("create_project", payload);
 
@@ -104,16 +121,3 @@ export const generateAbraxasMotion = (fps = 60, durationSec = 15.0) =>
 
 export const exportAbraxasProjectPackage = (projectDir: string, projectId: string, title?: string) =>
   run<any>("export_project", { projectDir, projectId, title });
-
-export const getAbraxasSystemStatus = () =>
-  run<any>("get_system_status", {});
-
-export const executeRealRenderPipeline = (options: {
-  baseProjectsDir?: string;
-  projectId?: string;
-  projectName?: string;
-  inputFileName?: string;
-  scriptText?: string;
-  fps?: number;
-  durationSec?: number;
-}) => run<any>("render_pipeline", options);

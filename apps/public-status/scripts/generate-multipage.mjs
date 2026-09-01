@@ -288,26 +288,248 @@ function generateLandingPage(locale) {
 
   const acts = {
     en: [
-      { tag: '0. PREMISE // GENESIS', title: 'Criterion becomes infrastructure.', lead: 'ABRAXAS is an operating architecture for transforming intent into structured, observable, producible and measurable reality.', layout: 'layout-cover-left', plateIdx: 0 },
-      { tag: '1. ARCHITECTURE // FOUR WORLDS', title: 'One system. Many degrees of manifestation.', lead: 'The Giza monument structures reality across Atziluth, Beri\'ah, Yetzirah, and Assiah, anchoring intent to empirical manifestation.', layout: 'layout-bottom-left', plateIdx: 9 },
-      { tag: '2. INTELLIGENCE // SUPERNAL TRIAD', title: 'Before something exists, it must become possible.', lead: 'In the Golden Emanation Chamber, YOD evaluates brand voice criteria, hook taxonomies, and opportunity gaps without blank-slate guesswork.', layout: 'layout-right-anchored', plateIdx: 5 },
-      { tag: '3. IDENTITY // CONTINUITY AXIS', title: 'The form changes. The identity survives.', lead: 'Contenido preserves single-piece identity across all revisions through a content-addressed DAG and the vertical sapphire Continuity Axis.', layout: 'layout-bottom-left', plateIdx: 2 },
-      { tag: '4. REALITY // DA\'AT METROLOGY', title: 'Planned is not observed. Observed is not resolved.', lead: 'SHIM scans the discrepancy between scripted intent and recorded media, preventing silent drift before downstream production begins.', layout: 'layout-cover-left', plateIdx: 3 },
-      { tag: '5. FORMATION // YETZIRAH CATHEDRAL', title: 'Information becomes media.', lead: 'Deep in the bedrock forge, VAV operates three industrial tracks: non-destructive cuts, kinetic typography hierarchies, and spring-physics motions.', layout: 'layout-right-anchored', plateIdx: 4 },
-      { tag: '6. OPERATION // ASSIAH VISIBILITY', title: 'Complexity becomes operable.', lead: 'HE governs tasks, deadlines, recording sessions, and reviews through human-accessible operational portals.', layout: 'layout-bottom-left', plateIdx: 1 },
-      { tag: '7. EXTERNAL LOOP // THE CELESTIAL MOON', title: 'Manifestation leaves the Pyramid. Evidence returns.', lead: 'Publisher dispatches frozen versions to external channels, while telemetry feedback loops return audience signals into YOD.', layout: 'layout-right-anchored', plateIdx: 6 },
-      { tag: '8. ADAPTATION // DIMENSION A', title: 'The system returns, but never to the same state.', lead: 'Adaptive dimension A preserves cognitive stratigraphy—memory, learning, and criteria refinement—closing the perpetual intelligence loop.', layout: 'layout-cover-left', plateIdx: 7 }
+      {
+        tag: '01. ATZILUTH & KETER // THE ZERO STATE',
+        title: 'Kill the blank-page panic before writing a single word.',
+        pain: 'Spending days staring at a blank screen terrified of what to say, or writing generic AI fluff that nobody watches or respects.',
+        solution: 'Destroys the blank page by forcing every video to be born from an unshakeable brand thesis instead of improvisation.',
+        howItWorks: 'You set your brand authority pillars, tone of voice, and forbidden topics once. ABRAXAS blocks generic fluff and only lets you write scripts grounded in proven audience demand.',
+        cabala: 'Atziluth (Emanation) & Keter (The Crown). Before physical matter can exist, Pure Intention and Criterion must be defined (state = NULL). If the seed lacks clear intention, creation is born corrupted.',
+        layout: 'layout-cover-left',
+        plateIdx: 0
+      },
+      {
+        tag: '02. CHOKHMAH & YOD // VIRAL HOOK RADAR',
+        title: 'Stop the 2-second scroll drop before you turn on the camera.',
+        pain: 'Spending hours recording valuable content only for viewers to scroll past in 2 seconds because your first sentence was boring or predictable.',
+        solution: 'Generates 3 magnetic opening hooks scored 0-100 to stop the scroll immediately before you even hit record.',
+        howItWorks: 'The YOD module scans audience blind spots in your niche and outputs 3 hook angles (Contrarian, Curiosity, or Story). If a hook scores below 85/100, it forces you to optimize it before recording.',
+        cabala: 'Chokhmah (Wisdom) & Module YOD (י). The primordial spark of insight (Kav). Creation cannot begin without the initial lightning spark that shatters cosmic inertia and commands attention.',
+        layout: 'layout-bottom-left',
+        plateIdx: 5
+      },
+      {
+        tag: '03. BERIAH & CONTINUITY // SINGLE-PIECE IDENTITY',
+        title: 'End script version chaos and orphaned video files forever.',
+        pain: 'The chaos of having 20 files like script_v2_final_edit.docx, losing video takes in messy folders, and breaking project links with a single edit.',
+        solution: 'Gives every video an indestructible unique ID (contentId) on a vertical timeline where nothing gets lost or duplicated.',
+        howItWorks: 'Contenido uses an immutable Merkle-DAG data tree. You can edit the script 20 times and all captions, takes, and final video renders update automatically without breaking files.',
+        cabala: 'Beriah (Creation) & The Basalt Pyramid. The primordial vessel (Keli). Creative light needs an unshakeable structural container to hold form and never dissipate into disorder.',
+        layout: 'layout-right-anchored',
+        plateIdx: 9
+      },
+      {
+        tag: '04. SEFIROTIC TOPOLOGY // UNIFIED 13-MODULE SUITE',
+        title: 'Replace 6 disconnected apps with one seamless operating system.',
+        pain: 'Wasting hours juggling Notion for scripts, mobile teleprompters, CapCut for trimming, Premiere for color, Drive for storage, and Metricool for stats.',
+        solution: 'A single unified operating suite where your video flows from Script -> Teleprompter -> Verification -> Auto-Edit -> Publishing without leaving the app.',
+        howItWorks: 'The app unifies all 6 tools into one native macOS window. When you finish reading on the teleprompter, the video flows directly into the editor with zero file exports or cloud uploads.',
+        cabala: 'Tree of Life Topology. Sefirot are passive content states (Draft, Take, Comp); the 13 ABRAXAS Modules are the active verbs transmuting content from sphere to sphere across connected paths.',
+        layout: 'layout-bottom-left',
+        plateIdx: 2
+      },
+      {
+        tag: '05. DAAT & SHIM // LIVE RECORDING VERIFICATION',
+        title: 'Catch missed lines and audio errors while you are still on set.',
+        pain: 'Recording for 2 hours only to discover in the editor that you forgot a key sentence or had audio clipping, forcing a painful set rebuild.',
+        solution: 'The AI listens to your recording live and alerts you in seconds if a line was skipped so you only re-take 5 seconds on the spot.',
+        howItWorks: 'The SHIM module uses Whisper Large V3 Turbo and computer vision to check your audio word-by-word against the script. If there is a missed phrase or stumble, it flags the line in red before you turn off the camera.',
+        cabala: 'Daat (Awakened Consciousness) & The Letter Shin (ש). Daat is not an abyss: it is consciousness awakening into physical action. It is the fire of Shin, fusing scripted intent with observed reality (Planned = Observed).',
+        layout: 'layout-cover-left',
+        plateIdx: 3
+      },
+      {
+        tag: '06. YHSHVH & CAS // CRYPTOGRAPHIC VAULT',
+        title: 'Zero corrupted files, zero missing media, and zero quality loss.',
+        pain: 'Opening your editor to red Missing Media offline screens or having video quality butchered by cloud compression tools.',
+        solution: 'Freezes your video, audio, and captions into an SHA-256 cryptographic vault that never corrupts or loses quality.',
+        howItWorks: 'Stores assets in Content-Addressable Storage (CAS). The project receives a permanent cryptographic seal; moving disk folders never breaks project links and media always loads at 100% resolution.',
+        cabala: 'The Seal of YHSHVH (Pentagrammaton). The 4 gold bars of the physical body (Y-H-V-H) receive the living flame of Shin (ש) at their center, welding spirit and matter into an indestructible physical body.',
+        layout: 'layout-right-anchored',
+        plateIdx: 8
+      },
+      {
+        tag: '07. RELATIONAL MATRIX // PRODUCTION COST & SPEED CONTROL',
+        title: 'Track exact production costs, team bottlenecks, and turnaround speed.',
+        pain: 'Not knowing why video editing takes so long, which editor has pending tasks, or how much each reel actually costs to produce.',
+        solution: 'Real-time production dashboards showing exact turnaround speeds, team bottlenecks, and cost-per-video down to the cent.',
+        howItWorks: 'Logs every cut, render time, and approval into a local SQLite database. In one click you see which videos are ready, who is delayed, and how long each stage took.',
+        cabala: 'Western Qabalah of Dion Fortune. Translating intuitive creative energy into exact mathematical laws, relationships, and auditable metrics to maintain absolute sovereignty over matter.',
+        layout: 'layout-bottom-left',
+        plateIdx: 1
+      },
+      {
+        tag: '08. XYZA STATE-SPACE // CONTENT STRATIGRAPHY',
+        title: 'Stop guessing video formats: tailor every edit to its exact funnel goal.',
+        pain: 'Editing a top-of-funnel viral video with boring corporate pacing or making a sales video too fast-paced to build trust.',
+        solution: 'The engine automatically adapts cut cadence, caption styles, and sound design to match the exact objective of the video.',
+        howItWorks: 'Classifies every asset across a 4D map: Polarity (X), Manifestation (Y), Context (Z), and Memory (A). Top-of-funnel videos get snappy jump-cuts; bottom-of-funnel videos get elegant editorial pacing.',
+        cabala: 'Four-Dimensional State Space XYZA. Nothing in the universe floats randomly: every creation occupies an exact phase coordinate between expansion and restriction to achieve its perfect manifestation.',
+        layout: 'layout-cover-left',
+        plateIdx: 7
+      },
+      {
+        tag: '09. THE APEX & THE EYE // APPLE SILICON TELEMETRY',
+        title: 'No more overheating Macs, frozen timelines, or 99% render crashes.',
+        pain: 'Your editing app freezing at 99% render, spinning rainbow wheels, and laptop fans screaming during heavy video exports.',
+        solution: 'Monitors Apple Silicon memory and temperature in real time so you can batch-export 50 videos without a single freeze.',
+        howItWorks: 'The Eye connects directly to Apple Silicon chips (M1/M2/M3/M4) via Metal and VideoToolbox, balancing encoding loads to leverage 100% GPU acceleration without thermal throttling.',
+        cabala: 'The Eye of the Apex. The vigilant watcher overseeing energy flow at the pyramid summit, ensuring the physical vessel never suffers structural breakdown.',
+        layout: 'layout-right-anchored',
+        plateIdx: 4
+      },
+      {
+        tag: '10. VAV SYNTHESIS // AUTOMATED 18-SECOND POST-PRODUCTION',
+        title: 'Cut jump-cuts, viral captions, and cinematic sound design in 18 seconds.',
+        pain: 'Spending 4 to 8 hours per video cutting silences by hand in Premiere, styling captions word-by-word, and searching for whoosh sound effects.',
+        solution: 'Trims silences, adds kinetic bouncy captions (Viral Gold, Cyber, Minimal), and injects cinematic sub-bass SFX in 18 seconds per video.',
+        howItWorks: 'VAV detects dead pauses and jump-cuts them with microsecond precision, renders bouncy animated subtitles, and injects 45Hz sub-bass hook impacts automatically on your local GPU.',
+        cabala: 'Module VAV (ו) // The Binding Hook in Yetzirah. In Hebrew, Vav means hook. It is the force that joins sound, typography, and visuals into a single living organism in the World of Formation.',
+        layout: 'layout-bottom-left',
+        plateIdx: 0
+      },
+      {
+        tag: '11. HE GOVERNANCE // 50-VIDEO BATCH DESK',
+        title: 'Produce and review 50 ready-to-publish videos in a single afternoon.',
+        pain: 'Feeling overwhelmed trying to post daily, losing track of which videos were recorded, and needing an entire agency team to manage volume.',
+        solution: 'A native macOS Kanban desk where you organize, approve, and batch-export 50 videos in one afternoon without internet lag.',
+        howItWorks: 'Drag video cards across 6 clear stages (Idea -> Script -> Record -> Verify -> Edit -> Approved). Approve 50 videos in one click and batch-render an entire month of content in hours.',
+        cabala: 'Module HE (ה) // The Physical Workshop in Assiah. The concrete world of physical action where the human operator takes sovereign command to govern tangible manifestation.',
+        layout: 'layout-cover-left',
+        plateIdx: 1
+      },
+      {
+        tag: '12. THE CELESTIAL MOON // CLOSED-LOOP RETENTION FEEDBACK',
+        title: 'Turn real audience watch time into smarter, higher-retention future videos.',
+        pain: 'Posting blindly on social media without knowing why one video hit 1M views and the next got 300, repeating the same retention mistakes forever.',
+        solution: 'Tracks the exact second viewers dropped off and uses that data to make your next batch of scripts scientifically more addictive.',
+        howItWorks: 'Metrics analyzes retention curves on TikTok, Reels, and Shorts. If viewers drop off at second 5, it automatically retrains the YOD module to strengthen future hook structures.',
+        cabala: 'The Celestial Moon & The Telemetric Loop. The moon reflects light back to Earth and returns telemetric tides to nourish the primordial seed (YOD): S(t+1) = S(t) + A(t). Creation is a perpetual learning cycle.',
+        layout: 'layout-right-anchored',
+        plateIdx: 6
+      }
     ],
     es: [
-      { tag: '0. PREMISA // GÉNESIS', title: 'El criterio se convierte en infraestructura.', lead: 'ABRAXAS es una arquitectura operativa para transformar la intención en realidad estructurada, observable, producible y medible.', layout: 'layout-cover-left', plateIdx: 0 },
-      { tag: '1. ARQUITECTURA // CUATRO MUNDOS', title: 'Un solo sistema. Múltiples grados de manifestación.', lead: 'El monumento de Giza estructura la realidad a través de Atziluth, Beri\'ah, Yetzirah y Assiah, anclando la intención a la manifestación empírica.', layout: 'layout-bottom-left', plateIdx: 9 },
-      { tag: '2. INTELIGENCIA // TRÍADA SUPERNAL', title: 'Antes de que algo exista, debe volverse posible.', lead: 'En la Cámara de Emanación Dorada, YOD evalúa criterios de voz de marca, taxonomías de hooks y brechas de oportunidad sin conjeturas.', layout: 'layout-right-anchored', plateIdx: 5 },
-      { tag: '3. IDENTIDAD // EJE DE CONTINUIDAD', title: 'La forma cambia. La identidad sobrevive.', lead: 'Contenido preserva la identidad única a través de todas las revisiones mediante un DAG direccionado por contenido y el Eje de Continuidad vertical.', layout: 'layout-bottom-left', plateIdx: 2 },
-      { tag: '4. REALIDAD // METROLOGÍA DE DA\'AT', title: 'Planificado no es observado. Observado no es resuelto.', lead: 'SHIM escanea la discrepancia entre la intención guionada y la media grabada, previniendo desviaciones silenciosas antes de la producción.', layout: 'layout-cover-left', plateIdx: 3 },
-      { tag: '5. FORMACIÓN // CATEDRAL DE YETZIRAH', title: 'La información se convierte en media.', lead: 'En la fragua de roca madre, VAV opera tres pistas industriales: cortes no destructivos, jerarquías de tipografía cinética y físicas de movimiento.', layout: 'layout-right-anchored', plateIdx: 4 },
-      { tag: '6. OPERACIÓN // VISIBILIDAD DE ASSIAH', title: 'La complejidad se vuelve operable.', lead: 'HE gobierna tareas, plazos, sesiones de grabación y revisiones a través de portales operativos accesibles para personas.', layout: 'layout-bottom-left', plateIdx: 1 },
-      { tag: '7. CICLO EXTERNO // LA LUNA CELESTE', title: 'La manifestación sale de la Pirámide. La evidencia retorna.', lead: 'Publishing distribuye versiones congeladas al exterior, mientras los lazos de feedback de telemetría retornan señales de audiencia a YOD.', layout: 'layout-right-anchored', plateIdx: 6 },
-      { tag: '8. ADAPTACIÓN // DIMENSIÓN A', title: 'El sistema retorna, pero nunca al mismo estado.', lead: 'La dimensión adaptativa A preserva la estratigrafía cognitiva (memoria, aprendizaje y refinamiento de criterios), cerrando el ciclo perpetuo.', layout: 'layout-cover-left', plateIdx: 7 }
+      {
+        tag: '01. ATZILUTH Y KETER // EL ESTADO CERO',
+        title: 'Elimina el pánico a la página en blanco antes de escribir una sola palabra.',
+        pain: 'Pasar días mirando una pantalla en blanco con pánico a no saber qué decir, o crear contenido genérico con ChatGPT que nadie respeta ni ve.',
+        solution: 'Destruye la hoja en blanco forzando a que cada video nazca de un criterio de marca inmutable y no de la improvisación.',
+        howItWorks: 'Configuras tus pilares de autoridad, tono de voz y temas prohibidos una sola vez. ABRAXAS bloquea el relleno y solo te deja escribir sobre tesis validadas con demanda real de audiencia.',
+        cabala: 'Atziluth (Emanación) y Keter (La Corona). Antes de que exista la materia, debe existir la Voluntad Pura y el Criterio Inmutable (state = NULL). Si la semilla no tiene intención clara, la creación nace corrupta.',
+        layout: 'layout-cover-left',
+        plateIdx: 0
+      },
+      {
+        tag: '02. CHOKHMAH Y YOD // RADAR DE GANCHOS VIRALES',
+        title: 'Detén el scroll en los primeros 2 segundos antes de encender la cámara.',
+        pain: 'Gastar horas grabando videos con gran contenido pero que la gente pasa de largo en los primeros 2 segundos porque la primera frase fue aburrida o predecible.',
+        solution: 'Te da 3 ganchos magnéticos calificados de 0 a 100 para detener el scroll de inmediato antes de que prendas la cámara.',
+        howItWorks: 'El módulo YOD escanea los puntos ciegos de tu nicho y crea 3 opciones de ganchos (Contrario, Curiosidad o Historia). Si el gancho no supera los 85 puntos de retención estimada, te pide ajustarlo antes de grabar.',
+        cabala: 'Chokhmah (Sabiduría) y Módulo YOD (י). La chispa primordial de intuición (Kav). No se puede empezar un proceso creador sin la chispa inicial que rompe la inercia cósmica y despierta el interés.',
+        layout: 'layout-bottom-left',
+        plateIdx: 5
+      },
+      {
+        tag: '03. BERIAH Y CONTINUIDAD // IDENTIDAD DE PIEZA ÚNICA',
+        title: 'Fin al caos de versiones de guiones y archivos de video desordenados.',
+        pain: 'El caos de tener 20 archivos como guion_final_v2_editado.docx, perder tomas de video en carpetas desordenadas y desincronizar todo el proyecto al hacer un cambio.',
+        solution: 'Cada video tiene un código único indestructible (contentId) en una línea de tiempo vertical donde nada se pierde ni se duplica.',
+        howItWorks: 'El módulo Contenido usa un árbol de datos inmutable (Merkle-DAG). Puedes cambiar el guion 20 veces y los subtítulos, tomas grabadas y videos finales se actualizan solos sin romper archivos.',
+        cabala: 'Beriah (Creación) y La Gran Pirámide. La vasija primordial (Keli). La luz creativa necesita un recipiente estructural sólido e inmutable para contenerse y no disiparse en el desorden.',
+        layout: 'layout-right-anchored',
+        plateIdx: 9
+      },
+      {
+        tag: '04. TOPOLOGÍA SEFIROTICA // SUITE UNIFICADA DE 13 MÓDULOS',
+        title: 'Reemplaza 6 aplicaciones desconectadas por un solo sistema operativo fluido.',
+        pain: 'Perder horas saltando entre 6 aplicaciones desconectadas (Notion para guiones, app de teleprompter, CapCut para cortar, Premiere para color, Drive para almacenar y Metricool para estadísticas).',
+        solution: 'Un solo sistema operativo donde tu video pasa de Guion -> Teleprompter -> Verificación -> Auto-Edición -> Publicación sin salir de la app.',
+        howItWorks: 'La app unifica las 6 herramientas en una sola ventana nativa de macOS. Al terminar de leer tu guion en el teleprompter, el video pasa automáticamente al editor sin exportar ni subir nada a la nube.',
+        cabala: 'Topología del Árbol de la Vida. Las 10 Sefirot son los estados naturales del contenido (Guion, Toma, Compuesto); los 13 Módulos de ABRAXAS son los verbos activos que transforman el contenido de una esfera a otra.',
+        layout: 'layout-bottom-left',
+        plateIdx: 2
+      },
+      {
+        tag: '05. DAAT Y SHIM // VERIFICACIÓN EN VIVO (CERO ERRORES)',
+        title: 'Detecta frases olvidadas y errores de audio mientras sigues en el set.',
+        pain: 'Grabar 2 horas para descubrir al editar que te comiste la frase clave del guion o que el audio se arruinó, teniendo que montar las luces y el set otra vez.',
+        solution: 'La IA escucha tu grabación en vivo y te avisa al segundo si te faltó una palabra para regrabar solo esa línea en 5 segundos.',
+        howItWorks: 'El módulo SHIM usa Whisper Large V3 Turbo y visión artificial para comparar tu audio palabra por palabra contra el guion. Si hay una omisión o duda, te marca la frase exacta en rojo en la pantalla antes de apagar la cámara.',
+        cabala: 'Daat (Conocimiento Lúcido) y La Letra Shin (ש). Daat no es un abismo pasivo: es la conciencia despierta que salta directamente a la acción. Es el encendido del fuego de Shin (Planificado = Observado).',
+        layout: 'layout-cover-left',
+        plateIdx: 3
+      },
+      {
+        tag: '06. YHSHVH Y CAS // BÓVEDA INMUTABLE SIN CORRUPCIÓN',
+        title: 'Cero archivos corruptos, cero media perdida y cero pérdida de calidad.',
+        pain: 'Abrir tu proyecto y encontrarte la pantalla roja de Media Offline / Archivos Perdidos, o videos que pierden calidad al enviarlos por WhatsApp o Drive.',
+        solution: 'Congela tu video, audio y subtítulos en un solo bloque blindado con sello criptográfico SHA-256 que nunca se corrompe ni pierde calidad.',
+        howItWorks: 'Guarda el video en Almacenamiento Direccionado por Contenido (CAS). El archivo recibe un código digital único; no importa si mueves carpetas de disco, el proyecto siempre carga al instante con 100% de nitidez.',
+        cabala: 'Sello YHSHVH (Pentagramatón). Las 4 barras del cuerpo material (Y-H-V-H) reciben el fuego sagrado de Shin (ש) en su centro, soldando el espíritu con la materia en un cuerpo físico indestructible.',
+        layout: 'layout-right-anchored',
+        plateIdx: 8
+      },
+      {
+        tag: '07. QABALAH RELACIONAL // CONTROL Y COSTOS EXACTOS',
+        title: 'Mide costos exactos, cuellos de botella del equipo y velocidad de entrega.',
+        pain: 'No saber por qué la edición se atrasa, qué editor del equipo tiene trabajo pendiente o cuánto dinero te cuesta realmente producir cada reel.',
+        solution: 'Tablas de control en tiempo real que te muestran el tiempo exacto de producción, cuellos de botella del equipo y costo por video al centavo.',
+        howItWorks: 'Registra cada clic, tiempo de renderizado y aprobación en una base de datos local SQLite. En un clic ves qué videos están listos, quién tiene entregas retrasadas y cuánto tardó cada fase.',
+        cabala: 'Qabalah Occidental de Dion Fortune. Traducir los principios creativos a leyes matemáticas, relaciones exactas y correspondencias medibles para tener gobierno total sobre la materia.',
+        layout: 'layout-bottom-left',
+        plateIdx: 1
+      },
+      {
+        tag: '08. ESPACIO XYZA // ESTRATIGRAFÍA DE CONTENIDO',
+        title: 'No adivines el formato: adapta cada edición al objetivo exacto del video.',
+        pain: 'Editar un video viral de atracción con ritmo lento y aburrido, o hacer un video de venta directa demasiado rápido como para generar confianza.',
+        solution: 'El motor adapta la velocidad de los cortes, el estilo de los subtítulos y los efectos de sonido según el objetivo específico del video.',
+        howItWorks: 'Clasifica cada pieza en un mapa 4D: Polaridad (X), Manifestación (Y), Contexto (Z) y Memoria (A). Si el video es de atracción viral, aplica cortes rápidos; si es de venta, usa tipografía editorial limpia y música sutil.',
+        cabala: 'Espacio de Estados Cuatridimensional XYZA. Cada creación ocupa una coordenada de fase exacta entre la expansión y la restricción para lograr su manifestación perfecta en el embudo.',
+        layout: 'layout-cover-left',
+        plateIdx: 7
+      },
+      {
+        tag: '09. CÚSPIDE Y EL OJO // TELEMETRÍA DE SILICIO APPLE',
+        title: 'Cero Macs sobrecalentadas, cero pantallas congeladas y cero cuelgues al 99%.',
+        pain: 'Que tu ordenador se sobrecaliente, los ventiladores suenen como una turbina y el programa se congele al 99% del renderizado haciéndote perder horas de trabajo.',
+        solution: 'El sistema monitorea la memoria y temperatura de tu Mac en tiempo real para que exportes 50 videos seguidos sin que la máquina se congele.',
+        howItWorks: 'El Ojo se conecta directamente a los chips Apple Silicon (M1/M2/M3/M4) mediante Metal y VideoToolbox, balanceando la carga para que el renderizado use el 100% de la aceleración gráfica sin sobrecalentar el equipo.',
+        cabala: 'El Ojo del Ápice en la Pirámide. La mirada vigilante que supervisa el flujo de energía en la cúspide para garantizar que el templo físico no sufra rupturas de tensión.',
+        layout: 'layout-right-anchored',
+        plateIdx: 4
+      },
+      {
+        tag: '10. VAV SÍNTESIS // AUTO-EDICIÓN EN 18 SEGUNDOS',
+        title: 'Corta silencios, pon subtítulos virales y añade sonido de cine en 18 segundos.',
+        pain: 'Perder de 4 a 8 horas por video cortando pausas a mano en Premiere, acomodando subtítulos palabra por palabra y buscando efectos de sonido.',
+        solution: 'Corta silencios, pone subtítulos animados virales (Hormozi, Mr Beast, Cyber) y añade efectos de sonido de cine en 18 segundos por video.',
+        howItWorks: 'El motor VAV detecta silencios muertos y los corta con microsegundos de precisión (jump cuts), genera subtítulos cinéticos con colores llamativos e inyecta impactos de sub-bajo a 45 Hz automáticamente.',
+        cabala: 'Módulo VAV (ו) // La Fuerza de Unión en Yetzirah. En hebreo, Vav significa gancho de unión. Es la fuerza que toma el sonido, el texto y la imagen y los ensambla en un solo cuerpo vivo.',
+        layout: 'layout-bottom-left',
+        plateIdx: 0
+      },
+      {
+        tag: '11. DESPACHO DE HE // CONTROL DE 50 VIDEOS EN LOTE',
+        title: 'Produce y aprueba 50 videos listos para publicar en una sola tarde.',
+        pain: 'Sentirte abrumado intentando publicar diario, no saber qué videos ya se grabaron y necesitar una agencia entera para mantener el volumen.',
+        solution: 'Un tablero Kanban nativo donde organizas, apruebas y exportas 50 videos a la vez en una sola tarde sin depender de internet.',
+        howItWorks: 'Arrastras tus videos a través de 6 columnas claras (Idea -> Guion -> Grabación -> Verificación -> Edición -> Aprobado). Puedes aprobar 50 videos con un solo clic y mandarlos a exportar en lote.',
+        cabala: 'Módulo HE (ה) // El Taller de Manifestación en Assiah. El mundo físico de la acción concreta donde el operador humano toma el control con sus manos para gobernar la manufactura final.',
+        layout: 'layout-cover-left',
+        plateIdx: 1
+      },
+      {
+        tag: '12. LA LUNA CELESTE // BUCLE CERRADO Y RETENCIÓN',
+        title: 'Convierte el tiempo de retención real de tu audiencia en videos futuros más virales.',
+        pain: 'Publicar a ciegas en redes sin entender por qué un video tuvo 1 millón de vistas y el siguiente 300, repitiendo los mismos errores una y otra vez.',
+        solution: 'Mide exactamente en qué segundo la gente dejó de ver tu video y usa esa información para que tus próximos guiones sean más adictivos.',
+        howItWorks: 'El módulo Metrics analiza las curvas de retención en TikTok, Reels y Shorts. Si detecta que la gente se fue en el segundo 5, le enseña al módulo YOD a cambiar la estructura de tus futuros ganchos automáticamente.',
+        cabala: 'La Luna Celeste y el Retorno Telemétrico. La luna refleja la luz hacia la Tierra y devuelve las mareas telemétricas hacia el Sol/YOD (S(t+1) = S(t) + A(t)). La creación es un ciclo infinito que aprende y evoluciona.',
+        layout: 'layout-right-anchored',
+        plateIdx: 6
+      }
     ]
   }[locale];
 
@@ -340,16 +562,13 @@ function generateLandingPage(locale) {
   <div id="plate-backdrop-container" class="plate-backdrop-container" aria-hidden="true">
     ${manifest.map((p, idx) => `
     <div class="plate-slide ${idx === 0 ? 'active' : ''}" data-plate="${idx}">
-      <picture>
-        <source srcset="${assetsRoot}${p.webpPath}" type="image/webp">
-        <img src="${assetsRoot}${p.pngPath}" alt="${locale === 'en' ? p.titleEn : p.titleEs}" loading="${idx === 0 ? 'eager' : 'lazy'}">
-      </picture>
+      <img src="${assetsRoot}${p.pngPath}" alt="${locale === 'en' ? p.titleEn : p.titleEs}" loading="${idx === 0 ? 'eager' : 'lazy'}">
     </div>
     `).join('\n')}
     <div class="plate-vignette-overlay"></div>
   </div>
 
-  <div id="spatial-pyramid-container" class="spatial-canvas-fullscreen" aria-label="ABRAXAS 3D Spatial Canvas"></div>
+  <!-- 3D Pyramid Canvas removed from Home/Landing Page to present pure high-resolution photographic source plates -->
 
   <main id="story-scroll-container" class="story-scroll-container">
     ${acts.map((a, idx) => `
@@ -357,16 +576,174 @@ function generateLandingPage(locale) {
       <div class="act-content-wrap">
         <div class="act-tag">${a.tag}</div>
         <h2 class="act-headline">${a.title}</h2>
-        <p class="act-lead">${a.lead}</p>
+        
+        <!-- 4-Tier Real Production Architecture Card -->
+        <div class="act-4tier-card" style="margin-top: 18px; display: flex; flex-direction: column; gap: 12px; background: rgba(5, 7, 14, 0.84); border: 1px solid rgba(212,175,55,0.3); border-radius: 12px; padding: 18px 20px; backdrop-filter: blur(16px); box-shadow: 0 12px 36px rgba(0,0,0,0.6);">
+          
+          <!-- 1. El Dolor Real -->
+          <div style="border-left: 3px solid #ef4444; padding-left: 12px;">
+            <div style="font-size: 10px; font-weight: 800; color: #ef4444; letter-spacing: 0.05em; margin-bottom: 3px; font-family: monospace;">
+              💥 ${locale === 'en' ? 'THE PAIN POINT' : 'EL DOLOR REAL'}
+            </div>
+            <p style="font-size: 13.5px; color: rgba(255,255,255,0.9); margin: 0; line-height: 1.45;">${a.pain}</p>
+          </div>
+
+          <!-- 2. La Solución Directa con Punch -->
+          <div style="border-left: 3px solid #d4af37; padding-left: 12px;">
+            <div style="font-size: 10px; font-weight: 800; color: #d4af37; letter-spacing: 0.05em; margin-bottom: 3px; font-family: monospace;">
+              ⚡ ${locale === 'en' ? 'ABRAXAS PUNCH SOLUTION' : 'LA SOLUCIÓN ABRAXAS'}
+            </div>
+            <p style="font-size: 14px; font-weight: 700; color: #fff; margin: 0; line-height: 1.45;">${a.solution}</p>
+          </div>
+
+          <!-- 3. Cómo lo hace la herramienta en simple -->
+          <div style="border-left: 3px solid #38bdf8; padding-left: 12px;">
+            <div style="font-size: 10px; font-weight: 800; color: #38bdf8; letter-spacing: 0.05em; margin-bottom: 3px; font-family: monospace;">
+              🛠️ ${locale === 'en' ? 'HOW THE SOFTWARE DOES IT' : 'CÓMO LO HACE LA HERRAMIENTA'}
+            </div>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.85); margin: 0; line-height: 1.45;">${a.howItWorks}</p>
+          </div>
+
+          <!-- 4. Principio Cabalístico / Ontológico -->
+          <div style="border-left: 3px solid #a855f7; padding-left: 12px;">
+            <div style="font-size: 10px; font-weight: 800; color: #c084fc; letter-spacing: 0.05em; margin-bottom: 3px; font-family: monospace;">
+              🔯 ${locale === 'en' ? 'CABALISTIC CREATION PRINCIPLE' : 'EL PRINCIPIO CABALÍSTICO'}
+            </div>
+            <p style="font-size: 12px; color: rgba(255,255,255,0.75); margin: 0; line-height: 1.45; font-family: monospace;">${a.cabala}</p>
+          </div>
+
+        </div>
+
         ${idx === 0 ? `
-        <div class="hero-actions">
-          <a href="./system/index.html" class="btn-primary">${locale === 'en' ? 'Explore System Dashboard →' : 'Explorar Dashboard del Sistema →'}</a>
-          <a href="#creation-narrative" class="btn-secondary">${locale === 'en' ? 'Read Creation Story' : 'Leer la Historia de Creación'}</a>
+        <div class="hero-actions" style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+          <a href="#proceso-simple" class="btn-primary" style="background: linear-gradient(135deg, #d4af37 0%, #fef08a 100%); color: #000; font-weight: 800;">${locale === 'en' ? '🎯 How It Works (Simple)' : '🎯 Cómo Funciona (En Simple)'}</a>
+          <a href="./system/index.html" class="btn-secondary">${locale === 'en' ? 'System Dashboard →' : 'Dashboard del Sistema →'}</a>
+          <a href="#creation-narrative" class="btn-secondary">${locale === 'en' ? 'Cinematic Story' : 'Historia Cinemática'}</a>
         </div>
         ` : ''}
       </div>
     </section>
     `).join('\n')}
+
+    
+    <!-- PLAIN-LANGUAGE CONTENT WORKFLOW SECTION (ZERO JARGON) -->
+    <section id="proceso-simple" class="plain-workflow-section" style="max-width: 1100px; margin: 5rem auto; padding: 3rem 2rem; background: rgba(12, 16, 24, 0.88); border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 16px; backdrop-filter: blur(20px); box-shadow: 0 20px 60px rgba(0,0,0,0.8);">
+      
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span style="font-family: monospace; font-size: 11px; font-weight: 800; color: #d4af37; letter-spacing: 0.1em; background: rgba(212,175,55,0.15); padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(212,175,55,0.3);">
+          ${locale === "en" ? "PRACTICAL WORKFLOW // NO JARGON" : "FLUJO PRÁCTICO // SIN COMPLICACIONES"}
+        </span>
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff; margin: 12px 0 8px 0; letter-spacing: -0.02em;">
+          ${locale === "en" ? "How ABRAXAS Works in Real Life" : "¿Cómo Funciona ABRAXAS en la Vida Real?"}
+        </h2>
+        <p style="font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto; line-height: 1.5;">
+          ${locale === "en" 
+            ? "The exact step-by-step to create, edit, and export 50 high-retention videos with viral subtitles, sound design, and zero editing headaches." 
+            : "El paso a paso exacto para crear, editar y exportar 50 videos de alta retención con subtítulos virales, efectos de sonido y sin dolores de cabeza."}
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+        
+        <!-- Step 1 -->
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 22px; display: flex; flexDirection: column; gap: 10px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 24px;">💡</span>
+            <span style="font-size: 10px; font-family: monospace; color: #d4af37; font-weight: 800; background: rgba(212,175,55,0.15); padding: 2px 8px; border-radius: 4px;">PASO 01</span>
+          </div>
+          <h3 style="font-size: 16px; font-weight: 800; color: #fff; margin: 0;">
+            ${locale === "en" ? "1. Idea & Viral Hook Generator" : "1. Encuentra la Idea y el Gancho Viral"}
+          </h3>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; margin: 0;">
+            ${locale === "en" 
+              ? "Type your topic or product. ABRAXAS analyzes what people are actually watching in your niche and creates 3 magnetic opening hooks scored 0-100 to stop the scroll in the first 3 seconds." 
+              : "Escribes el tema de tu video o producto. ABRAXAS analiza qué contenido funciona en tu nicho y te genera 3 ganchos magnéticos calificados de 0 a 100 para atrapar a la audiencia en los primeros 3 segundos."}
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 22px; display: flex; flexDirection: column; gap: 10px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 24px;">📝</span>
+            <span style="font-size: 10px; font-family: monospace; color: #38bdf8; font-weight: 800; background: rgba(56,189,248,0.15); padding: 2px 8px; border-radius: 4px;">PASO 02</span>
+          </div>
+          <h3 style="font-size: 16px; font-weight: 800; color: #fff; margin: 0;">
+            ${locale === "en" ? "2. 4-Beat Narrative Script" : "2. Guión Estructurado en 4 Tiempos"}
+          </h3>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; margin: 0;">
+            ${locale === "en" 
+              ? "Your script is structured automatically into 4 clear parts: The Hook (0-3.5s), The Core Thesis (3.5-20s), The Proof or Demo (20-35s), and The Call to Action (35-45s)." 
+              : "Tu guión se organiza automáticamente en 4 bloques claros: Gancho de impacto (0-3.5s), Explicación principal (3.5-20s), Demostración o prueba visual (20-35s) y Llamado a la acción (35-45s)."}
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 22px; display: flex; flexDirection: column; gap: 10px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 24px;">🎙️</span>
+            <span style="font-size: 10px; font-family: monospace; color: #ec4899; font-weight: 800; background: rgba(236,72,153,0.15); padding: 2px 8px; border-radius: 4px;">PASO 03</span>
+          </div>
+          <h3 style="font-size: 16px; font-weight: 800; color: #fff; margin: 0;">
+            ${locale === "en" ? "3. Recording & Teleprompter" : "3. Grabación con Teleprompter"}
+          </h3>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; margin: 0;">
+            ${locale === "en" 
+              ? "Open the integrated teleprompter, read your script at your natural pace, and ABRAXAS automatically saves, tags, and organizes all your takes cleanly." 
+              : "Abres el teleprompter integrado en la app, lees tu guión a tu propio ritmo y la plataforma organiza automáticamente todas tus tomas y clips de video sin desorden."}
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 22px; display: flex; flexDirection: column; gap: 10px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 24px;">⚖️</span>
+            <span style="font-size: 10px; font-family: monospace; color: #a855f7; font-weight: 800; background: rgba(168,85,247,0.15); padding: 2px 8px; border-radius: 4px;">PASO 04</span>
+          </div>
+          <h3 style="font-size: 16px; font-weight: 800; color: #fff; margin: 0;">
+            ${locale === "en" ? "4. Automatic Quality Check" : "4. Verificación Automática (Cero Errores)"}
+          </h3>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; margin: 0;">
+            ${locale === "en" 
+              ? "Before editing, the AI listens to your audio with Whisper and compares it to your script to make sure you did not skip words or make mistakes. Zero bad takes slip through." 
+              : "Antes de editar, el sistema escucha tu grabación con Whisper y la compara con el guión para avisarte si se te olvidó alguna frase o si dijiste algo mal. Nada sale con errores."}
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 22px; display: flex; flexDirection: column; gap: 10px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 24px;">⚡</span>
+            <span style="font-size: 10px; font-family: monospace; color: #34c759; font-weight: 800; background: rgba(52,199,89,0.15); padding: 2px 8px; border-radius: 4px;">PASO 05</span>
+          </div>
+          <h3 style="font-size: 16px; font-weight: 800; color: #fff; margin: 0;">
+            ${locale === "en" ? "5. Instant 18s Auto-Editing" : "5. Edición Automática en 18 Segundos"}
+          </h3>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; margin: 0;">
+            ${locale === "en" 
+              ? "In 18 seconds, the engine trims silences, generates dynamic bouncy subtitles (Viral Gold, Cyber, Minimal), injects 3D motion plates, and adds cinematic sub-bass impact audio effects." 
+              : "En solo 18 segundos, el motor corta los silencios muertos, genera subtítulos animados llamativos (estilo Viral Gold, Cyber o Minimal), inserta gráficos 3D y añade efectos de sonido de cine (graves profundos y transiciones)."}
+          </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 22px; display: flex; flexDirection: column; gap: 10px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 24px;">🚀</span>
+            <span style="font-size: 10px; font-family: monospace; color: #f59e0b; font-weight: 800; background: rgba(245,158,11,0.15); padding: 2px 8px; border-radius: 4px;">PASO 06</span>
+          </div>
+          <h3 style="font-size: 16px; font-weight: 800; color: #fff; margin: 0;">
+            ${locale === "en" ? "6. 50-Video Batch & Telemetry" : "6. Exportación de 50 Videos y Aprendizaje"}
+          </h3>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; margin: 0;">
+            ${locale === "en" 
+              ? "Export 50 videos in batch in just a couple hours. Publish directly to TikTok, Reels, and Shorts. The platform tracks real watch time to make your next batch even more viral." 
+              : "Exportas 50 videos en lote en un par de horas usando la potencia de tu Mac. Los programas para TikTok, Reels y YouTube Shorts, y el sistema aprende qué videos tuvieron más vistas para mejorar los siguientes."}
+          </p>
+        </div>
+
+      </div>
+
+    </section>
 
     <!-- Grand Philosophical Narrative & Kabbalah Creation Story -->
     <section id="creation-narrative" class="philosophical-story-wrap">

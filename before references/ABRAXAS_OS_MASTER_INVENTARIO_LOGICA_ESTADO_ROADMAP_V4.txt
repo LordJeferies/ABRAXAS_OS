@@ -1,0 +1,2368 @@
+ABRAXAS OS — MASTER INVENTARIO + LÓGICA + ESTADO + ROADMAP V4
+Fecha de consolidación: 2026-08-28
+
+======================================================================
+0. ALCANCE Y REGLA DE VERDAD
+======================================================================
+
+Este archivo concentra el inventario conocido de la Mac, Git/GitHub, la
+función de cada familia de archivos, la lógica de fondo, estructuras,
+estado actual, roadmap y recomendaciones funcionales.
+
+NO es un escaneo en vivo de todo el disco. Es el inventario consolidado
+respaldado por logs, scripts, auditorías, Git, handoffs y decisiones.
+
+Estados usados:
+CURRENT_FUNCTIONAL
+IMPLEMENTED
+IMPLEMENTED_UNVERIFIED_RUNTIME
+DESIGN_READY
+PLANNED
+CANON
+REFERENCE
+HISTORICAL
+DEPRECATED
+BLOCKED
+GREEN
+
+Regla:
+DOCUMENTACIÓN != IMPLEMENTACIÓN.
+ZIP != REPO.
+HANDOFF != REPO.
+DASHBOARD != PRUEBA.
+PORCENTAJE != TEST COVERAGE.
+
+Autoridad:
+1. decisión actual aprobada;
+2. código vivo + tests actuales;
+3. canon/contracts actuales;
+4. evidencia GREEN;
+5. referencias actuales;
+6. histórico funcional;
+7. backups/handoffs/legacy.
+
+======================================================================
+1. DEFINICIÓN DEL SISTEMA
+======================================================================
+
+ABRAXAS OS convierte criterio en infraestructura.
+
+YOD recuerda y piensa.
+Shim observa y resuelve.
+VAV produce.
+He organiza, gerencia y muestra.
+Arquitecto guía y coach.
+Lienzo conecta todo.
+Publishing distribuye.
+Metrics devuelve realidad.
+YOD aprende.
+
+ABRAXAS OS no es solamente:
+chatbot, prompt generator, Trello, calendario, editor o IA.
+Es un sistema operativo de inteligencia, creación, producción, gerencia,
+publicación, medición y aprendizaje de contenidos.
+
+======================================================================
+2. GIT / GITHUB / STATUS
+======================================================================
+
+Raíz canónica general:
+~/Desktop/abraxasos
+
+Repo principal:
+https://github.com/LordJeferies/ABRAXAS_OS
+Última visibilidad confirmada: privado.
+
+Último Foundation V2 confirmado:
+40dee102e34048cb4243758a5a31ac45db73f2f7
+
+Ese checkpoint añadió:
+49 archivos
+3695 inserciones
+y terminó con local SHA == remote SHA.
+
+Siempre revalidar antes de cambios:
+git status
+git fetch origin main
+git rev-parse HEAD
+git rev-parse origin/main
+
+Repo público de estado:
+https://github.com/LordJeferies/ABRAXAS_OS_STATUS
+
+Dashboard:
+https://lordjeferies.github.io/ABRAXAS_OS_STATUS/
+
+Repo local dashboard:
+~/Desktop/ABRAXAS_OS_STATUS_SITE
+
+Commit público inicial confirmado:
+5c941ff89c5dfe97ccbb360fac3439f47af9ac50
+
+Archivos públicos iniciales:
+.nojekyll
+README.md
+index.html
+system-status.json
+
+Lógica:
+el código principal permanece privado; el repo público recibe solo una
+proyección permitida del estado y roadmap.
+
+======================================================================
+3. ESTRUCTURA FÍSICA GLOBAL CONOCIDA
+======================================================================
+
+~/Desktop/abraxasos/
+├── 00_START_HERE/
+├── ABRAXAS_CORE/
+├── VAV/
+├── SHARED_KNOWLEDGE/
+├── ARCHIVE/
+├── VAV_ORGANIZATION_REPORTS/
+├── VAV_CLEANUP_QUARANTINE/
+└── docs/
+
+00_START_HERE:
+puerta de entrada humana, criterios, mapas, políticas, roadmap y handoffs.
+
+ABRAXAS_CORE:
+lógica funcional histórica + arquitectura/canon nuevo.
+
+VAV:
+ecosistema audiovisual y su código, productos, continuidad, evidencia,
+referencias y handoffs.
+
+SHARED_KNOWLEDGE:
+gramáticas y contratos reutilizables por ABRAXAS/VAV.
+
+ARCHIVE:
+histórico después de auditar.
+
+QUARANTINE:
+material retirado de rutas activas pero NO borrado.
+
+docs:
+documentación y dashboard/status.
+
+======================================================================
+4. 00_START_HERE — ARCHIVOS CONOCIDOS
+======================================================================
+
+Organización previa:
+README.md
+VAV_ECOSYSTEM_MAP.md
+CURRENT_STATE.md
+WHERE_IS_EVERYTHING.md
+TARGET_STRUCTURE.md
+PHASE2_MOVE_PLAN.md
+
+Foundation V2:
+ABRAXAS_OS_FOUNDATION_V2_README.md
+ABRAXAS_OS_MASTER_CRITERIA_V2.md
+ABRAXAS_OS_MASTER_SYSTEM_MAP_V2.md
+ABRAXAS_OS_MODULE_DEFINITION_CHECKLIST_V1.md
+ABRAXAS_OS_NEXT_FOUNDATION_V1_INSTALLED_MANIFEST.txt
+ABRAXAS_OS_ROADMAP_V2.md
+ABRAXAS_OS_SOURCE_AUTHORITY_POLICY_V1.md
+ABRAXAS_OS_TARGET_FOLDER_STRUCTURE_V2.md
+ABRAXAS_OS_WHAT_IT_IS_AND_IS_NOT_V2.md
+FILES_TO_UPLOAD_TO_NEW_CHAT_V1.md
+NEW_CHAT_ABRAXAS_OS_MASTER_EXECUTION_PROMPT_V1.md
+
+Lógica:
+esta carpeta debe explicar el sistema sin obligar a leer código.
+Debe apuntar a la autoridad actual y no convertirse en un basurero.
+
+======================================================================
+5. ABRAXAS_CORE — SISTEMAS FUNCIONALES/HISTÓRICOS
+======================================================================
+
+ABRAXAS_CORE/
+├── content_engine/
+├── automation/
+├── motion_intelligence/
+├── selectors/
+├── manifests/
+├── workers/
+└── legacy_functional/
+
+Root:
+ABRAXAS_CORE/README.md
+ABRAXAS_CORE/CANONICAL_SYSTEMS.md
+
+Sistemas consolidados conocidos:
+
+content_engine/
+- ABRAXAS_CONTENT_LAB_V3_1_VERIFIED
+- ABRAXAS_Universal_Content_Operations_A_v1.2_FULL_RELEASE_2
+
+automation/
+- ABRAXAS_V4_2_24_CONTINUITY_MASTER_PACKAGE
+
+motion_intelligence/
+- ABRAXAS_V4_1_MOTION_AUTOMATION
+
+workers/
+- ABRAXAS_V4_2_24_APPLE40M_RESUME_MASTER_PACKAGE
+
+legacy_functional/
+- ABRAXAS_V3_1_EXECUTABLE_AUTOMATION
+- hotfixes/ABRAXAS_V4_2_24_MOTION_1080P_40M_HOTFIX
+- hotfixes/ABRAXAS_V4_2_5_HORIZONTAL_LONGFORM_HOTFIX
+
+Estos sistemas NO deben desecharse. Deben auditarse para extraer lógica
+funcional hacia la arquitectura nueva.
+
+CONTENT LAB:
+aporta Content Router, intros, clips, carruseles, estructuras,
+versioning/regression y material para Structure Mining.
+
+UNIVERSAL CONTENT OPERATIONS v1.2:
+sustrato histórico funcional para Content Studio, Talent/Teleprompter,
+Calendar Month/Week/List/Backlog, Planning Insight, Architect, Brain,
+He piece/batch, Shim confirmed-manifest, bridges FFmpeg/DaVinci, assets,
+AI mapping, client intelligence, technique registry y visual fidelity.
+
+Principio histórico:
+“El formato físico define qué se produce.
+El patrón define cómo piensa la pieza.”
+
+CONTINUITY MASTER:
+contiene reglas/contratos de producción, motion engine, criterios IA para
+motions, vertical/horizontal, HTML engine, render/DaVinci y archivos
+protegidos.
+
+MOTION AUTOMATION:
+linaje funcional útil para VAV Motions y Motion Intelligence.
+
+WORKERS/HOTFIXES:
+patrones de workers, render, automatización y edge cases; no deben
+convertirse en core editorial.
+
+======================================================================
+6. FOUNDATION V2 — YOD / HE / SHIM / ARQUITECTO
+======================================================================
+
+YOD versionado en Git:
+
+ABRAXAS_CORE/YOD/
+├── YOD_FOUNDATION_README_V1.md
+├── 00_CANON/ABRAXAS_CONTENT_QUALITY_CANON_V2.md
+├── 01_CLIENT_INTELLIGENCE/CLIENT_CORE_SPEC_V1.md
+├── 02_CONTENT_INTELLIGENCE/OPPORTUNITY_ENGINE_V1.md
+├── 03_FORMATS/FORMAT_LIBRARY_CANON_V1.md
+├── 04_STRUCTURES/STRUCTURE_MINING_SPEC_V1.md
+├── 04_STRUCTURES/STRUCTURE_REGISTRY_SEED_V1.json
+├── 05_PROMPT_INTELLIGENCE/PROMPT_CANON_V2.md
+├── 06_VISUAL_INTELLIGENCE/VISUAL_CRITERIA_CANON_V2.md
+├── 07_MOTION_INTELLIGENCE/MOTION_VFX_SFX_CRITERIA_V2.md
+├── 08_COPY_INTELLIGENCE/COPY_CANON_V2.md
+├── 09_PLANNING_AND_CADENCE/PLAN_AND_CADENCE_ENGINE_V1.md
+└── 11_SOURCE_TRUTH/SOURCE_TRUTH_AND_CLAIMS_V2.md
+
+Estado YOD:
+DESIGN_READY/canon versionado.
+No afirmar engine/store funcional hasta implementarlo/probarlo.
+
+HE:
+
+ABRAXAS_CORE/HE/
+├── 00_PRODUCT/HE_PRODUCT_DEFINITION_V1.md
+├── 01_LIENZO_UI/LIENZO_EDITING_EXPERIENCE_V1.md
+├── 02_WORKFLOW/WORKFLOW_AND_DEPENDENCY_MODEL_V1.md
+├── 03_CALENDAR/CALENDAR_AND_BACKLOG_V1.md
+└── 08_SYSTEM_STATUS/
+    ├── STATUS_UPDATE_PROTOCOL_V1.md
+    └── system-status.json
+
+Estado He:
+MIGRATION_DESIGN.
+Hay precedentes históricos funcionales, pero el He nuevo unificado requiere
+auditoría/reconciliación/implementación.
+
+SHIM:
+
+ABRAXAS_CORE/SHIM/
+├── 00_CANON/SHIM_ROLE_V1.md
+└── 06_COPY_SYNC/YOD_SHIM_COPY_CONTRACT_V1.md
+
+Estado:
+DESIGN_ACTIVE + linajes históricos/continuity.
+
+ARQUITECTO:
+
+ABRAXAS_CORE/ARQUITECTO/
+├── 00_CANON/ARQUITECTO_ROLE_V1.md
+├── 01_CONTEXT/CONTEXT_MODEL_V1.md
+├── 03_SUGGESTIONS/SUGGESTION_MODEL_V1.md
+└── 06_PRODUCTION_COACH/TOTAL_PRODUCTION_COACH_V1.md
+
+Estado:
+DESIGN_READY.
+Arquitecto transversal todavía no debe llamarse implementación completa.
+
+======================================================================
+7. CONTRACTS FOUNDATION V2
+======================================================================
+
+ABRAXAS_CORE/contracts/
+
+ai-roundtrip/
+- AI_JOB.schema.seed.json
+- AI_ROUNDTRIP_CONTRACT_V1.md
+
+artifacts/
+- ARTIFACT_REGISTRY_V1.md
+
+events/
+- EVENT_MODEL_V1.md
+
+lienzo/
+- LIENZO.schema.seed.json
+- LIENZO_CANON_V1.md
+
+metrics/
+- METRICS_MODEL_V1.md
+
+publishing/
+- PUBLISHER_ADAPTER_CONTRACT_V1.md
+- PUBLISHING_MODEL_V1.md
+
+Estado:
+canon/contracts iniciales.
+Los “seed” todavía deben promoverse a schemas testeados.
+
+======================================================================
+8. VAV — ESTRUCTURA Y ESTADO
+======================================================================
+
+Estructura organizada conocida:
+
+VAV/
+├── 00_START_HERE/
+├── 01_REPO/
+├── 02_PRODUCTS/
+│   ├── vavcaptions/
+│   ├── vavmotions/
+│   ├── vavshim/
+│   ├── vavcuts/
+│   └── future/
+├── 03_CONTINUITY/
+├── 04_REFERENCES/
+│   ├── captions/
+│   ├── motions/
+│   ├── ui/
+│   ├── abraxas/
+│   └── apple_vision/
+├── 05_EVIDENCE/
+│   ├── verification_reports/
+│   └── render_parity/
+├── 06_CHAT_HANDOFFS/
+│   ├── captions/
+│   ├── motions/
+│   ├── shim/
+│   ├── cuts/
+│   ├── ecosystem/
+│   └── live_repo/
+├── 07_BACKUPS/
+├── 08_FORENSIC_AUDITS/
+└── 90_RUNTIME_POINTERS/
+
+Fuente canónica reorganizada:
+~/Desktop/abraxasos/VAV/01_REPO/VAV
+
+Compatibilidad histórica:
+~/Developer/VAV
+
+En verificación posterior, ~/Developer/VAV debía/estaba apuntando mediante
+symlink al source canónico.
+
+Runtime:
+~/Library/Application Support/VAV
+
+Runtime NO va a Git.
+No moverlo dentro del repo.
+
+----------------------------------------------------------------------
+8.1 VAV CAPTIONS
+----------------------------------------------------------------------
+
+Workspace:
+VAV/02_PRODUCTS/vavcaptions
+
+Referencias/evidencia históricas:
+06_REFERENCIAS_SUBTITULOS
+07_REFERENCIAS_UI
+03_REPORTES_Y_VERIFICACION
+09_EVIDENCIA_EXPORTS
+
+Baseline:
+V12.1 GREEN.
+
+Evidencia histórica fuerte:
+23 test files
+55 tests PASS
+typecheck PASS
+build PASS
+Remotion parity PASS.
+
+Áreas:
+import/transcription
+CaptionPlan
+styles
+caption motion
+timebase
+vision/spatial contracts
+preview/export parity
+Scene Smart roadmap
+
+Estado:
+CURRENT_BASELINE_GREEN histórico.
+Revalidar antes de cambios.
+
+----------------------------------------------------------------------
+8.2 VAV MOTIONS
+----------------------------------------------------------------------
+
+Workspace:
+VAV/02_PRODUCTS/vavmotions
+
+Referencia oficial conocida:
+00_MOTION_SYSTEM_REFERENCE_V1
+
+Áreas:
+MotionFamily registry
+MotionPlan/resolver
+transcript/timeline/viewer
+assignments/ranges
+VisualOwnership
+Vision/tracking/depth
+render/QA
+
+Estado:
+referencia fuerte + contenido versionable.
+No llamar motor completo live sin nueva prueba.
+
+----------------------------------------------------------------------
+8.3 VAV SHIM
+----------------------------------------------------------------------
+
+Workspace:
+VAV/02_PRODUCTS/vavshim
+
+Rol:
+análisis/normalización/continuidad audiovisual.
+
+Hay material Shim/Cuts R1 y antecedentes funcionales.
+Debe separarse conceptualmente:
+
+SHIM CORE:
+inteligencia editorial/source.
+
+VAV SHIM BRIDGE:
+integración con material audiovisual/VAV.
+
+No mover/eliminar lo existente hasta clasificar.
+
+----------------------------------------------------------------------
+8.4 VAV CUTS
+----------------------------------------------------------------------
+
+Workspace:
+VAV/02_PRODUCTS/vavcuts
+
+Rol:
+cortes/edición.
+
+Estado:
+continuidad/reference compartida con Shim.
+Auditar runtime actual.
+
+----------------------------------------------------------------------
+8.5 VAV ↔ LIENZO
+----------------------------------------------------------------------
+
+Foundation V2 añadió:
+VAV/integrations/README_ABRAXAS_LIENZO_BRIDGE_FOUNDATION_V1.md
+
+VAV debe devolver:
+component status
+artifact IDs
+versions
+timestamps
+hashes
+errors
+events
+provenance
+
+No producir outputs huérfanos.
+
+======================================================================
+9. CONTINUIDAD / BACKUPS / EVIDENCIA
+======================================================================
+
+Autoridad actual conocida después de reorganización:
+
+VAV/03_CONTINUITY/VAV_CONTINUITY_HUB/V14_UNIVERSAL
+
+Shim/Cuts:
+VAV/03_CONTINUITY/VAV_CONTINUITY_HUB/SHIM_CUTS_R1
+
+Backup anterior:
+VAV/03_CONTINUITY/VAV_CONTINUITY_HUB/PREVIOUS_BACKUP/V13_READY
+
+Rutas antiguas bajo ~/Desktop/abraxasos/VAV_CONTINUITY_HUB fueron autoridad
+antes de centralización; pueden existir como compatibilidad/histórico.
+
+Handoffs:
+continuidad, no source of truth Git.
+
+Regla de retención:
+actual + generación anterior cuando tenga valor de continuidad.
+
+Cuarentena:
+VAV_CLEANUP_QUARANTINE
+No borrar sin auditoría/hash/cobertura.
+
+======================================================================
+10. AUDITORÍAS / REPORTES
+======================================================================
+
+VAV_ORGANIZATION_REPORTS conocidos:
+PHASE3_ABRAXAS_FUNCTIONAL_AUDIT_20260828_151951
+PHASE3_ABRAXAS_FUNCTIONAL_AUDIT_20260828_152013
+PHASE3B_ABRAXAS_CANONICAL_SELECTION_20260828_152306
+PHASE4_ABRAXAS_CORE_CONSOLIDATION_20260828_153241
+
+VAV/08_FORENSIC_AUDITS/
+
+Forensic Audit V2 histórico:
+104655 items indexados
+12560 high confidence
+67172 possible
+207 repo code files
+42 features clasificadas.
+
+Lógica de autoridad forense:
+live code
+> fresh runtime verification
+> V14
+> historical GREEN evidence
+> archive/reference
+> Downloads.
+
+======================================================================
+11. SHARED_KNOWLEDGE
+======================================================================
+
+SHARED_KNOWLEDGE/
+├── visual_grammar/
+├── motion_grammar/
+├── content_intelligence/
+└── cross_product_contracts/
+
+Debe contener:
+gramáticas normalizadas,
+taxonomías,
+contratos compartidos,
+primitivas y criterios reutilizables.
+
+No:
+runtime,
+artefactos finales,
+Client Core particular,
+estado de una pieza.
+
+======================================================================
+12. FORMATOS
+======================================================================
+
+Seed/canon actual:
+
+SHORT_VERTICAL_VIDEO
+HORIZONTAL_VIDEO
+LONGFORM_VIDEO
+PODCAST
+PODCAST_CLIP
+CAROUSEL
+HYBRID_VIDEO_SLIDES
+IMAGE_POST
+STORY_SET
+LINKEDIN_POST
+ARTICLE
+NEWSLETTER
+STATEMENT
+
+Posibles futuros, no canon todavía:
+THREAD
+EMAIL_SEQUENCE
+CASE_STUDY
+TESTIMONIAL
+WEBINAR
+LIVE
+ADVERTISEMENT
+LANDING_CONTENT
+
+Principio:
+FORMATO FÍSICO != ESTRUCTURA NARRATIVA.
+
+======================================================================
+13. STRUCTURE REGISTRY
+======================================================================
+
+Seed actual:
+
+DIAGNOSIS
+PROBLEM_MECHANISM_DECISION
+CONTRAST
+EVIDENCE
+CASE
+PROCESS
+MYTH
+STORY
+FRAMEWORK
+DECISION
+DEMO
+AUTHORITY
+CONVERSATION
+MYTH_REALITY
+OBJECTION
+DEFINITION
+SYSTEM
+
+El Registry definitivo NO debe salir de imaginación.
+Debe salir de Forensic Structure Mining.
+
+Structure Genome por pieza:
+hook_type
+progression[]
+reengagement_type
+payoff_type
+cta_type
+speaker_mode
+visual_mode
+evidence_mode
+
+Matriz de minería:
+
+STRUCTURE_ID
+SOURCE
+CLIENT
+PHYSICAL_TYPE
+FORMAT
+HOOK_LOGIC
+BEATS
+PAYOFF
+CTA
+SOURCE_REQUIREMENTS
+VISUAL_LOGIC
+COPY_LOGIC
+GOOD_EXAMPLES
+BAD_EXAMPLES
+REUSABLE_ACROSS_CLIENTS
+CONFIDENCE
+STATUS
+PROVENANCE
+VERSION
+
+======================================================================
+14. CORPUS PARA INGENIERÍA INVERSA
+======================================================================
+
+Fuentes/familias identificadas y su función:
+
+ABRAXAS v1.1.1 Definición Maestra
+→ arquitectura Content/He/Shim/Production Graph/lifecycle/handoffs.
+
+ABRAXAS v1.1.1 Criterio Maestro
+→ calidad, client packs, format packs, prompt compiler, QA.
+
+Content Lab v2.2 Maintainable
+→ Content Router, Intro/Clip/Carousel labs, structures, regression/versioning.
+
+JOC OS V5.7
+→ ejemplo real de formatos, cadencia, prompts, fichas/Lienzos y QA.
+
+Moka Core + Branding Method
+→ modelo de Client Intelligence.
+
+Moka Strategic Brand Content AI OS
+→ pillars, production logic, interview extraction, agents.
+
+Moka 48 videos + Gantt
+→ corpus real para Structure Mining y planificación multicanal.
+
+Moka Dashboard v4 editable
+→ precedente funcional de He.
+
+INENERGY Strategic System
+→ comparar universal vs client-specific.
+
+INENERGY Content Toolkit
+→ prompt/context compiler modular.
+
+INENERGY Monthly Continuation
+→ cadence/campaign/planning.
+
+Shim Podcast Composer
+→ contrato Shim↔YOD↔Review↔He.
+
+MOKA V26.20
+→ Studios, Review OS, Recording Coach, modern card/Lienzo UX.
+
+ABRAXAS Motion hotfix
+→ VAV Motion lineage.
+
+Transcripción larga
+→ fixture para Shim→YOD→He.
+
+ZIP importante:
+“Referencias para logica de abraxas y sus contenidos y creaciones”
+→ corpus central de lógica editorial/creativa.
+
+======================================================================
+15. CRITERIO DE CALIDAD
+======================================================================
+
+Una pieza debe:
+tener razón de existir;
+tener tesis;
+hook legítimo;
+payoff;
+información nueva;
+mecanismo cuando corresponda;
+ejemplos específicos;
+source truth;
+client fit;
+format/platform fit;
+visual funcional;
+copy funcional;
+trazabilidad;
+versionado;
+QA.
+
+Distinguir:
+FACT
+INFERENCE
+HYPOTHESIS
+ASPIRATION
+UNVERIFIED.
+
+Evitar:
+gurú genérico,
+clichés de IA,
+falsa tensión,
+“secreto que nadie te cuenta”,
+simetría artificial,
+CTA automático,
+claims sin mecanismo/evidencia.
+
+======================================================================
+16. PROMPT INTELLIGENCE
+======================================================================
+
+Prompt ABRAXAS = especificación de producción.
+
+Bloques:
+ROLE
+OBJECTIVE
+CONTEXT
+INPUTS
+WHAT_IT_IS
+WHAT_IT_IS_NOT
+STRUCTURE
+CLIENT_RULES
+FORMAT_RULES
+PLATFORM_RULES
+EVIDENCE
+RESTRICTIONS
+NEGATIVES
+OUTPUT_CONTRACT
+ACCEPTANCE_CRITERIA
+QA
+HANDOFF
+CONTINUITY
+
+YOD guarda componentes.
+Compiler genera prompt autónomo.
+
+No guardar solo megatextos finales.
+
+======================================================================
+17. COPY INTELLIGENCE
+======================================================================
+
+Copy nace temprano.
+
+copy.master
+copy.platforms.instagram
+copy.platforms.tiktok
+copy.platforms.linkedin
+copy.platforms.youtube
+
+Funciones:
+CONTEXTUALIZE
+EXTEND
+TRANSFER
+CONVERT
+DISCUSS
+SOURCE
+FRAME
+
+YOD crea desde estrategia.
+Shim verifica/adapta contra material real.
+Arquitecto sugiere.
+Usuario edita.
+
+Si video/contenido cambia:
+copy puede quedar OUT_OF_SYNC.
+
+Cada versión guarda:
+version
+source
+based_on_lienzo_version
+status
+created_by
+updated_by
+change_reason.
+
+======================================================================
+18. VISUAL / MOTION / VFX / SFX
+======================================================================
+
+Visual functions:
+EXPLAIN
+CONTRAST
+ANCHOR
+PROVE
+ORIENT
+HUMANIZE
+SYMBOLIZE
+CREATE_TENSION
+SHOW_PROCESS
+SHOW_RESULT
+
+Generación:
+INTERNAL_AI
+EXTERNAL_AI_ROUNDTRIP
+PROCEDURAL/DETERMINISTIC
+
+Generar no cierra:
+BASE PROMPT + CORRECTION + PRESERVE RULES → nueva versión.
+
+Motion debe justificar función narrativa.
+
+Treatments:
+KEEP_SOURCE
+PLATES_CLOSEUPS
+TYPOGRAPHIC
+INFOGRAPHIC
+DIAGRAM
+MICROSEQUENCE
+SYMBOLIC_OBJECT
+PIP
+TRACKED_SURFACE
+BEHIND_SUBJECT
+PARALLAX
+PERSPECTIVE_3D
+
+VFX:
+WHAT_CHANGES / WHEN / TRIGGER / WHY / DURATION / PLACEMENT / PRESERVE / NEGATIVES
+
+SFX:
+SOUND / WHEN / TRIGGER / LEVEL / FUNCTION
+
+Si no hay evento:
+no_sfx_needed.
+
+======================================================================
+19. LIENZO — OBJETO CENTRAL
+======================================================================
+
+Nombre actual:
+LIENZO.
+
+“Ficha” queda como alias histórico/backward compatibility.
+
+Definición:
+objeto creativo, editorial y productivo versionado de un contenido.
+
+Mismo content_id a través de todo el ciclo.
+
+Capas:
+CORE
+STRATEGY
+PLANNED
+OBSERVED
+RESOLVED
+PRODUCTION
+DISTRIBUTION
+PUBLICATION
+LEARNING
+HISTORY
+
+Secciones editables:
+GENERAL
+CONTENT
+COPY
+VISUAL
+COVER
+MOTIONS
+CAPTIONS
+EDIT
+AUDIO
+VFX
+SFX
+PUBLISHING
+METRICS
+
+Component states:
+NOT_NEEDED
+NOT_STARTED
+DRAFT
+IN_PROGRESS
+WAITING
+BLOCKED
+READY_FOR_REVIEW
+REVIEW
+APPROVED
+LOCKED
+GENERATING
+GENERATED
+OUT_OF_SYNC
+READY
+DONE
+ERROR
+
+LOCKED significa:
+esta versión alimenta la siguiente etapa.
+No significa que nunca pueda cambiar.
+
+======================================================================
+20. EVENT + ARTIFACT + IMPACT GRAPH
+======================================================================
+
+Event Model:
+los módulos deben emitir cambios trazables, no sobrescribir todo el Lienzo.
+
+Eventos:
+YOD_PLAN_CREATED
+YOD_COPY_CREATED
+SHIM_ANALYSIS_COMPLETED
+SHIM_CONTENT_RESOLVED
+EDIT_STARTED
+EDIT_LOCKED
+CAPTIONS_COMPLETED
+MOTIONS_COMPLETED
+COPY_UPDATED
+COVER_UPDATED
+ARTIFACT_GENERATED
+QA_APPROVED
+PLATFORM_SCHEDULED
+PLATFORM_PUBLISHED
+METRICS_SYNCED
+
+V3 propuesto:
+TASK_ASSIGNED
+TASK_COMPLETED
+TIME_ENTRY_STARTED
+NOTIFICATION_CREATED
+AI_JOB_CREATED
+AI_RESULT_IMPORTED
+AI_RESULT_ACCEPTED
+RECORDING_SESSION_CREATED
+
+Event fields:
+event_id
+content_id?
+task_id?
+component
+actor
+timestamp
+previous_version
+new_version
+reason
+metadata
+
+Artifact Registry:
+source_video
+transcript
+shim_map
+edit_project
+edit_master
+caption_document
+caption_plan
+motion_plan
+image_plan
+generated_image
+cover_plan
+cover_image
+render_preview
+render_master
+copy_export
+publishing_asset
+external_import
+ai_result
+
+Artifact fields:
+artifact_id
+content_id
+type
+version
+created_by
+created_at
+based_on
+path_or_uri
+hash
+status
+provider
+prompt_job_id
+metadata
+
+Regla:
+NO artefactos huérfanos.
+
+Impact Graph:
+un cambio upstream invalida solo lo afectado.
+
+Ejemplo:
+Hook
+→ Master Copy
+→ Instagram Copy
+→ Cover headline
+→ Motion title
+→ Caption emphasis
+
+No regenerar todo automáticamente.
+
+======================================================================
+21. HE — GERENCIA Y OPERACIONES V3
+======================================================================
+
+ESTADO:
+DISEÑO APROBADO.
+No confirmado como implementación en Git/runtime.
+
+He debe servir para:
+
+CONTENT OPERATIONS
+PROJECT/TASK MANAGEMENT
+TEAM MANAGEMENT
+PERSONAL WORKFLOW
+
+SOLO y TEAM usan el mismo motor.
+
+SOLO:
+dónde quedé
+qué sigue
+qué está bloqueado
+qué vence
+qué debo revisar
+tiempo empleado.
+
+TEAM:
+quién hace qué
+workload
+assignments
+reviews
+blocked_by
+waiting_for
+deadlines
+handoffs
+recordings
+dashboard de supervisor.
+
+TASK:
+
+task_id
+client_id?
+content_id?
+plan_id?
+parent_task_id?
+task_type
+title
+description
+assigned_to?
+created_by
+status
+priority
+start_at?
+due_at?
+estimated_minutes?
+tracked_minutes
+location?
+depends_on[]
+blocked_by[]
+waiting_for[]
+reviewers[]
+checklist[]
+tags[]
+history[]
+
+Task states:
+BACKLOG
+READY
+IN_PROGRESS
+WAITING
+BLOCKED
+REVIEW
+DONE
+CANCELLED
+
+RecordingSession:
+
+recording_session_id
+title
+client_id
+start_at
+end_at
+timezone
+location
+participants[]
+lienzo_ids[]
+preparation_tasks[]
+notes
+status
+
+Deadlines:
+PLAN
+LIENZO
+COMPONENT
+TASK
+RECORDING_SESSION
+PUBLICATION_TARGET
+
+He calcula:
+AT_RISK.
+
+Kanban:
+BACKLOG
+READY
+IN_PROGRESS
+REVIEW
+BLOCKED
+DONE
+
+Cards:
+TASK
+LIENZO
+REVIEW
+RECORDING_SESSION
+PUBLICATION_TARGET
+
+Mover tarjeta no debe saltarse dependencias silenciosamente.
+
+Manager Dashboard debe responder:
+qué se hace
+quién lo hace
+quién está bloqueado
+quién espera a quién
+qué vence
+qué está vencido
+qué grabaciones vienen
+qué reviews esperan
+workload
+pipeline
+time spent.
+
+======================================================================
+22. TIME TRACKING
+======================================================================
+
+DISEÑO V3.
+
+Acciones:
+START
+PAUSE
+RESUME
+STOP
+ADD_MANUAL_ENTRY
+
+TimeEntry:
+time_entry_id
+user_id
+task_id
+content_id?
+started_at
+ended_at?
+duration_seconds
+source
+note?
+
+Reportes por:
+user
+task
+client
+Lienzo
+component
+plan
+date range
+
+Operational Time != editorial Metrics.
+
+======================================================================
+23. NOTIFICATIONS
+======================================================================
+
+DISEÑO V3.
+
+V1:
+in-app.
+
+Tipos:
+deadline_approaching
+deadline_missed
+task_assigned
+task_completed
+review_requested
+dependency_resolved
+blocked
+waiting_for_you
+lienzo_out_of_sync
+render_complete
+copy_needs_review
+recording_upcoming
+publication_failed
+architect_suggestion
+
+Futuro:
+push/email/Slack/etc.
+
+Separar:
+Notification Event
+de
+Delivery Channel.
+
+======================================================================
+24. AI RUNTIME
+======================================================================
+
+DISEÑO V3.
+No confirmado instalado/implementado.
+
+Cualquier paso que necesite IA debe tener opciones cuando sea aplicable:
+
+LOGIC
+MANUAL
+EXTERNAL_ROUNDTRIP
+API_PROVIDER
+OLLAMA
+MCP
+LOCAL_MODEL
+
+Provider Registry capabilities:
+
+TEXT
+STRUCTURED_OUTPUT
+VISION
+IMAGE_GENERATION
+IMAGE_EDIT
+VIDEO_ANALYSIS
+VIDEO_GENERATION
+AUDIO
+TRANSCRIPTION
+TOOLS
+LONG_CONTEXT
+LOCAL_ONLY
+
+Providers:
+Logic Engine
+External Roundtrip
+Ollama
+OpenAI-compatible
+Other cloud API
+MCP
+Local model/tool
+
+Arquitecto puede recomendar provider.
+Usuario puede elegir.
+
+======================================================================
+25. ROUNDTRIP TXT + JSON
+======================================================================
+
+Norma aprobada.
+
+ABRAXAS genera:
+AI_JOB.txt
+
+Debe contener:
+JOB ID
+CONTENT ID
+CLIENT
+TASK
+PURPOSE
+ROLE
+CLIENT CORE SNAPSHOT
+LIENZO CONTEXT
+CURRENT MATERIAL
+SOURCE EVIDENCE
+WHAT THIS IS
+WHAT THIS IS NOT
+CRITERIA
+CONSTRAINTS
+NEGATIVES
+EXPECTED RESULT
+OUTPUT CONTRACT
+QA
+RETURN INSTRUCTIONS
+
+La IA devuelve:
+AI_RESULT.txt
+
+=== ABRAXAS HUMAN RESPONSE ===
+texto humano
+
+=== ABRAXAS MACHINE RESULT ===
+JSON obligatorio con:
+schema_version
+job_id
+content_id
+changes[]
+artifacts[]
+warnings[]
+confidence
+
+Pipeline:
+RESULT
+→ PARSE
+→ VALIDATE
+→ QA
+→ DIFF
+→ ACCEPT ALL / ACCEPT FIELD / REJECT
+→ NEW VERSION/EVENT/ARTIFACT.
+
+Freeform:
+compatibility mode
+MANUAL_REVIEW_REQUIRED.
+
+Nunca:
+AI result → sobrescritura directa.
+
+======================================================================
+26. UNIVERSAL INTAKE
+======================================================================
+
+DISEÑO V3.
+
+Importar:
+TXT
+MD
+JSON
+CSV
+PNG
+JPG
+WEBP
+MP4
+MOV
+WAV
+MP3
+PDF
+DOCX
+ZIP
+
+Pipeline:
+IMPORT
+→ TYPE DETECTION
+→ HASH
+→ PROVENANCE
+→ TARGET LINK
+→ PREVIEW
+→ VALIDATION
+→ ACCEPT
+→ ARTIFACT + EVENT
+
+Targets:
+Client
+Plan
+Lienzo
+Lienzo component
+Task
+Recording Session
+AI Job
+Publication Target
+
+Objetivo:
+ABRAXAS → herramienta externa → ABRAXAS
+sin romper provenance.
+
+======================================================================
+27. VAV SIMPLE MOTION ENGINE
+======================================================================
+
+DISEÑO V3.
+
+Primitives seed:
+ZOOM_IN
+ZOOM_OUT
+PUSH_IN
+PULL_OUT
+PAN_LEFT
+PAN_RIGHT
+PAN_UP
+PAN_DOWN
+SCALE
+TRANSLATE
+ROTATE_SUBTLE
+FADE
+BLUR_TRANSITION
+CROP_REVEAL
+MASK_REVEAL
+PARALLAX_2_5D
+PERSPECTIVE_SHIFT
+DIP
+MATCH_TRANSITION
+WHIP_CONTROLLED
+SIMPLE_SPEED_RAMP
+
+Preset:
+preset_id
+primitive
+duration
+easing
+intensity
+safe_area_behavior
+caption_policy
+subject_policy
+motion_blur
+constraints
+fallback
+
+YOD:
+semántica.
+
+Arquitecto:
+recomendación/coaching.
+
+VAV:
+ejecución.
+
+======================================================================
+28. ARQUITECTO TOTAL + PUBLIC
+======================================================================
+
+Arquitecto Total:
+
+Navigation Coach
+Producer
+Director
+Editor Coach
+Copy Coach
+Visual Coach
+Cover Coach
+Motion Coach
+Recording Coach
+VFX Coach
+SFX Coach
+Music Coach
+QA Coach
+Technical/Training Coach
+
+Puede guiar aunque el usuario trabaje en:
+DaVinci
+Premiere
+After Effects
+Photoshop
+otras apps.
+
+Debe saber:
+dónde estás
+de dónde vienes
+qué sigue
+qué falta
+qué está bloqueado
+qué ruta/botón usar
+cómo terminar.
+
+Arquitecto Public:
+
+En Status público debe responder:
+qué es ABRAXAS
+YOD
+He
+Shim
+VAV
+Lienzo
+Arquitecto
+estado
+roadmap
+qué falta
+hacia dónde va.
+
+V1:
+Public Logic Knowledge.
+
+V2:
+server-side AI.
+
+Futuro:
+MCP/Ollama donde sea viable.
+
+Nunca:
+API keys en JS.
+Nunca:
+private client data.
+
+======================================================================
+29. PUBLISHING
+======================================================================
+
+Content != Publication.
+
+Lienzo:
+publication_targets[].
+
+Target:
+platform
+account_id
+scheduled_at
+timezone
+status
+copy_version
+asset_version
+cover_version
+snapshot
+remote_post_id
+provider
+last_sync_at
+
+PublisherAdapter:
+validate()
+prepare()
+schedule()
+publish()
+reschedule()
+cancel()
+getStatus()
+getMetrics()
+
+Estado actual:
+contract documentado.
+Adapters reales: PLANNED hasta verificar.
+
+======================================================================
+30. METRICS
+======================================================================
+
+Raw:
+views
+reach
+impressions
+likes
+comments
+shares
+saves
+watch_time
+average_view_duration
+completion
+profile_visits
+followers_gained
+clicks
+leads
+conversions
+
+Normalized:
+ATTENTION
+RETENTION
+ENGAGEMENT
+AMPLIFICATION
+CONVERSION
+
+Toda fórmula debe ser explícita/versionada.
+
+Snapshots:
++1h
++24h
++7d
++30d
+
+V1:
+manual/CSV/JSON.
+
+V2:
+APIs.
+
+He muestra.
+YOD aprende.
+
+======================================================================
+31. ESTADO ACTUAL POR ÁREA
+======================================================================
+
+ABRAXAS OS / Git
+Último estado confirmado: GREEN.
+Foundation V2 en Git.
+Revalidar HEAD actual antes de tocar.
+
+ABRAXAS historical functional core
+Estado: consolidado/versionado con sistemas funcionales/históricos.
+Uso: REUSE/ADAPT, no rebuild a ciegas.
+
+VAV
+Estado: baseline GREEN histórico fuerte.
+
+VAV Captions
+Estado: evidencia fuerte: 55 tests + typecheck + build + parity históricos.
+
+VAV Motions
+Estado: reference/versionable importante; runtime completo requiere auditoría.
+
+VAV Shim
+Estado: continuidad/reference + antecedentes; auditar.
+
+VAV Cuts
+Estado: continuidad/reference; auditar.
+
+YOD
+Estado: DESIGN_READY / canon en Git.
+Engine/store: no confirmado.
+
+He
+Estado: MIGRATION_DESIGN.
+Base histórica existe; nueva capa Operations V3 es diseño aprobado.
+
+Shim Core
+Estado: DESIGN_ACTIVE.
+
+Arquitecto
+Estado: DESIGN_READY.
+
+Publishing
+Estado: PLANNED/DESIGN contract.
+
+Metrics
+Estado: PLANNED/DESIGN contract.
+
+AI Roundtrip Foundation
+Estado: contrato inicial V2.
+AI Runtime/Ollama/MCP/Universal Intake V3: diseño aprobado, no confirmado en Git.
+
+Simple Motion:
+diseño aprobado, no confirmado implementado.
+
+Arquitecto Public:
+diseño aprobado, no confirmado implementado.
+
+======================================================================
+32. ROADMAP MAESTRO
+======================================================================
+
+F0 BASELINE / SAFETY
+Estado: GREEN histórico.
+
+F1 FORENSIC CONTENT INTELLIGENCE
+Estado: NEXT.
+Objetivo:
+Structure Mining real.
+
+F2 CONTRACTS FIRST
+Estado: iniciado.
+Falta:
+promover seeds,
+tests,
+Task/Time/Notification/Provider/Recording contracts.
+
+F3 YOD V1
+Estado: DESIGN_READY.
+
+F4 HE V1 / OPERATIONS
+Estado: MIGRATION_DESIGN.
+
+F5 SHIM V1
+Estado: DESIGN_ACTIVE.
+
+F6 VAV INTEGRATION
+Estado: PLANNED.
+
+F7 VISUAL PRODUCTION
+Estado: PLANNED.
+
+F8 ARQUITECTO V1
+Estado: DESIGN_READY.
+
+F9 PUBLISHING
+Estado: PLANNED.
+
+F10 METRICS
+Estado: PLANNED.
+
+F11 PLATFORM APIs
+Estado: FUTURE.
+
+F12 AI PROVIDERS
+Estado: roadmap V3 refinado.
+
+WAVE A:
+AUDIT + CONTRACTS.
+
+WAVE B:
+HE Operations
+Kanban
+Manager Dashboard
+Recording Sessions
+Deadlines
+Time Tracking
+Notifications.
+
+WAVE C:
+AI Runtime
+TXT+JSON
+Logic
+Roundtrip
+Ollama
+API
+MCP
+Universal Intake.
+
+WAVE D:
+VAV Simple Motion
+Artifact/Event/Lienzo
+Arquitecto Production Runtime.
+
+WAVE E:
+Public Knowledge
+Public Architect
+safe server provider.
+
+Orden:
+AUDIT LIVE
+→ CONTRACTS
+→ HE OPERATIONS
+→ TIME/NOTIFICATIONS
+→ AI RUNTIME
+→ UNIVERSAL INTAKE
+→ SIMPLE MOTION
+→ PUBLIC ARCHITECT
+→ ampliar YOD/He/Shim/VAV.
+
+======================================================================
+33. PIEZAS FUNCIONALES QUE CONVIENE AÑADIR Y PUEDEN ESTAR FALTANDO
+======================================================================
+
+Estas son RECOMENDACIONES NUEVAS.
+No están marcadas como implementadas.
+
+----------------------------------------------------------------------
+33.1 PERMISSIONS / RBAC
+----------------------------------------------------------------------
+
+Si He gerencia equipos, no todos pueden hacer todo.
+
+Roles seed:
+OWNER
+ADMIN
+MANAGER
+SUPERVISOR
+PRODUCER
+EDITOR
+COPYWRITER
+DESIGNER
+VIEWER
+CUSTOM
+
+Permisos ejemplo:
+task.assign
+task.review
+lienzo.edit
+client.edit_core
+publication.schedule
+publication.cancel
+metrics.view
+provider.configure
+team.manage
+
+Arquitecto debe respetar permisos.
+
+Prioridad:
+MUY ALTA antes de colaboración real.
+
+----------------------------------------------------------------------
+33.2 APPROVAL ENGINE
+----------------------------------------------------------------------
+
+Formalizar Review.
+
+Approval:
+approval_id
+target_type
+target_id
+requested_by
+reviewers[]
+decision
+comment
+version
+timestamp
+
+Aplicable a:
+copy
+cover
+edit
+motion
+Client Core changes
+publication.
+
+Evita que “Review” sea solo una columna visual.
+
+Prioridad:
+ALTA.
+
+----------------------------------------------------------------------
+33.3 GLOBAL SEARCH + COMMAND PALETTE
+----------------------------------------------------------------------
+
+Con muchos clientes/Lienzos/tasks/assets hace falta búsqueda global.
+
+Buscar:
+cliente
+Lienzo
+task
+prompt
+structure
+asset
+person
+publication.
+
+Command Palette:
+Cmd+K
+
+Ejemplos:
+“abrir copy MOKA R052”
+“crear tarea”
+“ir a Motion M03”
+“mostrar bloqueados de Ana”
+
+Arquitecto puede reutilizar el mismo Navigation Registry.
+
+----------------------------------------------------------------------
+33.4 AUTOMATION RULE ENGINE
+----------------------------------------------------------------------
+
+Ejemplos:
+
+WHEN Edit Lock = DONE
+THEN create Captions Task
+AND notify Caption Editor.
+
+WHEN due_at < 24h AND not DONE
+THEN alert manager.
+
+WHEN Shim detects GAP
+THEN create Recording Follow-up.
+
+WHEN render READY
+THEN request QA.
+
+Modelo:
+TRIGGER
+CONDITIONS
+ACTIONS
+
+Arquitecto puede sugerir reglas.
+Usuario aprueba.
+
+Prioridad:
+ALTA después de Operations Core.
+
+----------------------------------------------------------------------
+33.5 CONNECTIONS / SECRETS CENTER
+----------------------------------------------------------------------
+
+He > Settings > Connections
+
+Conexiones:
+Ollama
+APIs
+MCP
+Publishing platforms
+Storage/services
+
+Mostrar:
+provider
+status
+capabilities
+account
+last_check
+permissions
+
+Acciones:
+Test Connection
+Disable
+Rotate
+Edit Scopes
+
+Secrets:
+Keychain / backend / env.
+Nunca Git.
+
+Prioridad:
+ALTA.
+
+----------------------------------------------------------------------
+33.6 AI COST / USAGE OBSERVABILITY
+----------------------------------------------------------------------
+
+Registrar por AI Job:
+provider
+model
+tokens/input
+tokens/output
+duration
+estimated cost
+status
+retry count
+
+Permite:
+budget por cliente,
+comparar API/local,
+detectar gasto invisible.
+
+No mezclar con Time Tracking.
+
+----------------------------------------------------------------------
+33.7 JOB QUEUE / BACKGROUND WORK
+----------------------------------------------------------------------
+
+Render, transcription, AI, import y sync pueden ser largos.
+
+Job states:
+QUEUED
+RUNNING
+RETRYING
+COMPLETED
+FAILED
+CANCELLED
+
+Campos:
+progress
+started_at
+heartbeat
+error
+retry_policy
+outputs
+
+Notifications/Arquitecto pueden informar resultados.
+
+Prioridad:
+ALTA al conectar procesos reales.
+
+----------------------------------------------------------------------
+33.8 SYSTEM HEALTH / DIAGNOSTICS
+----------------------------------------------------------------------
+
+He > System Health
+
+Mostrar:
+Git state
+VAV runtime
+renderer
+Ollama
+API providers
+MCP
+workers
+storage
+last successful jobs
+schema version
+public status sync
+
+Botón:
+Run Diagnostics
+
+Muy útil en un ecosistema grande.
+
+----------------------------------------------------------------------
+33.9 SCHEMA MIGRATIONS
+----------------------------------------------------------------------
+
+Todo object importante:
+schema_version.
+
+Migration Registry:
+v1→v2
+v2→v3
+
+No transformar datos reales sin backup.
+
+Prioridad:
+MUY ALTA antes de acumular producción real.
+
+----------------------------------------------------------------------
+33.10 RECOVERY / SNAPSHOT
+----------------------------------------------------------------------
+
+Git protege código, no necesariamente datos operativos.
+
+Necesitamos:
+workspace export
+database backup
+restore point
+artifact manifest
+hash verify
+undo accepted change using Event Log.
+
+Prioridad:
+ALTA.
+
+----------------------------------------------------------------------
+33.11 ACTIVITY / AUDIT LOG HUMANO
+----------------------------------------------------------------------
+
+Vista:
+Ana cambió Copy v3→v4
+Carlos terminó Edit Lock
+Luis aprobó Cover
+Arquitecto sugirió Motion
+post fue programado
+
+Diferente del Event Log técnico.
+Sirve para gerencia/accountability.
+
+----------------------------------------------------------------------
+33.12 ASSET LIBRARY / MEDIA BIN
+----------------------------------------------------------------------
+
+Artifact Registry necesita UI.
+
+Filtrar:
+client
+content
+type
+version
+source
+approved
+generated
+external
+rights
+
+Assets:
+logos
+B-roll
+photos
+renders
+audio
+covers
+references.
+
+----------------------------------------------------------------------
+33.13 REGISTRY STUDIO
+----------------------------------------------------------------------
+
+Para extender el sistema sin tocar código:
+
+Structure Builder
+Format Builder
+Motion Family Builder
+Prompt Preset Builder
+Copy Profile Builder
+Automation Rule Builder
+
+Arquitecto guía y valida.
+
+----------------------------------------------------------------------
+33.14 UNIVERSAL DIFF / VERSION EXPLORER
+----------------------------------------------------------------------
+
+No solo para IA.
+
+Comparar:
+Lienzo v4 vs v5
+Copy v2 vs v3
+MotionPlan v3 vs v4
+ClientCore v8 vs v9
+
+Mostrar:
+qué cambió
+quién
+por qué
+qué impacta.
+
+----------------------------------------------------------------------
+33.15 PUBLIC/PRIVATE KNOWLEDGE PROJECTION
+----------------------------------------------------------------------
+
+Para Arquitecto Public:
+
+Private Canon
+→ Public Projection Builder
+→ allowlist
+→ public-knowledge.json
+→ public repo.
+
+Evita filtraciones accidentales.
+
+======================================================================
+34. PRIORIDADES FUNCIONALES PROPUESTAS
+======================================================================
+
+P0 — FUNDACIÓN DE ESCALA:
+live audit
+contracts
+schema versioning
+Event/Artifact
+Task/dependencies
+RBAC
+Approvals
+Secrets/Connections
+
+P1 — OPERACIÓN:
+Kanban
+Manager Dashboard
+deadlines
+recordings
+notifications
+time tracking
+activity log
+
+P2 — IA:
+AI Runtime
+TXT/JSON roundtrip
+Universal Intake
+Provider Registry
+Ollama
+API
+MCP
+cost observability
+
+P3 — PRODUCCIÓN:
+VAV bridge
+Simple Motion
+Background Job Queue
+Asset Library
+System Health
+
+P4 — EXPERIENCIA:
+Arquitecto
+Global Search
+Command Palette
+Registry Studio
+Public Architect
+
+P5 — ESCALA:
+Platform APIs
+push notifications
+advanced automations
+client portal
+advanced analytics/learning
+
+======================================================================
+35. GIT POLICY
+======================================================================
+
+Única raíz:
+~/Desktop/abraxasos
+
+NO nested Git.
+
+Versionar:
+source
+tests
+scripts
+schemas
+contracts
+manifests
+criteria
+registries
+docs
+development config
+ABRAXAS_CORE versionable
+VAV
+YOD/He/Shim/Arquitecto source.
+
+Local-only:
+node_modules
+venv
+cache
+dist/build
+models
+runtime payloads
+media pesada
+renders
+ZIP/7z
+evidence pesada
+backups
+quarantine
+forensic dumps
+secrets.
+
+No usar:
+git add .
+
+Antes de push:
+staged paths
+large-file check
+secret check
+nested-git check
+tests
+typecheck/build.
+
+Después:
+push
+fetch
+local SHA == remote SHA.
+
+======================================================================
+36. PRE-EXECUTION MASTER TRUTH
+======================================================================
+
+Antes de cualquier gran fase, el chat/agente debe producir:
+
+GIT
+- HEAD local;
+- origin/main;
+- clean/dirty;
+- remote;
+- nested git.
+
+FILES
+- paths físicos;
+- symlinks;
+- tracked;
+- ignored;
+- local-only.
+
+CODE
+- qué corre;
+- tests;
+- typecheck;
+- build;
+- runtime.
+
+CLASSIFICATION
+- CURRENT_FUNCTIONAL;
+- IMPLEMENTED;
+- DESIGN_READY;
+- REFERENCE;
+- HISTORICAL;
+- LEGACY.
+
+MIGRATION
+- REUSE_DIRECT;
+- ADAPT;
+- MIGRATE;
+- REFERENCE_ONLY;
+- DO_NOT_TOUCH.
+
+Solo después modificar.
+
+======================================================================
+37. QUÉ DEBE LEER UN CHAT NUEVO
+======================================================================
+
+Orden recomendado:
+
+1. este TXT;
+2. repo live;
+3. 00_START_HERE/ABRAXAS_OS_MASTER_CRITERIA_V2.md;
+4. ABRAXAS_OS_MASTER_SYSTEM_MAP_V2.md;
+5. ABRAXAS_OS_ROADMAP_V2.md;
+6. ABRAXAS_OS_SOURCE_AUTHORITY_POLICY_V1.md;
+7. YOD canon;
+8. Lienzo/Event/Artifact contracts;
+9. He/Shim/Arquitecto canon;
+10. código histórico funcional;
+11. VAV tests/evidence;
+12. “Referencias para logica de abraxas y sus contenidos y creaciones”;
+13. Universal/MOKA/Spatial/Style Mining/Motions según fase.
+
+======================================================================
+38. PROMPT DE CONTINUACIÓN
+======================================================================
+
+CONTINÚA ABRAXAS OS COMO SISTEMA EXISTENTE.
+
+NO reconstruyas desde cero.
+NO confundas documentación con implementación.
+NO reescribas sin auditar.
+NO hagas cambios destructivos.
+
+Repo esperado:
+~/Desktop/abraxasos
+
+Primero crea PRE-EXECUTION MASTER TRUTH:
+Git + filesystem + código + tests + runtime + clasificación.
+
+Lee este TXT completo.
+
+Arquitectura:
+YOD = criterio/memoria.
+Lienzo = objeto vivo.
+He = operación/gerencia.
+Shim = evidencia/resolución.
+VAV = producción.
+Arquitecto = guía/coach.
+Publishing = distribución.
+Metrics = aprendizaje.
+
+Prioridad:
+AUDIT
+→ CONTRACTS
+→ HE OPERATIONS
+→ TIME/NOTIFICATIONS
+→ AI RUNTIME
+→ UNIVERSAL INTAKE
+→ VAV SIMPLE MOTION
+→ ARQUITECTO PUBLIC.
+
+Para cada fase:
+1. audit;
+2. contrato;
+3. failing test;
+4. implementación mínima;
+5. pass;
+6. integración;
+7. typecheck/build;
+8. status;
+9. targeted staging;
+10. commit/push;
+11. SHA verify;
+12. sync public status.
+
+No afirmar funcionalidad sin evidencia.
+
+======================================================================
+39. CONCLUSIÓN MAESTRA
+======================================================================
+
+ABRAXAS OS ya tiene dos capas que deben unirse, no reemplazarse:
+
+A) BASE FUNCIONAL REAL/HISTÓRICA:
+Content Lab,
+Universal Content Operations,
+automation,
+motion,
+workers,
+hotfixes,
+VAV Captions,
+VAV source,
+continuity/evidence.
+
+B) ARQUITECTURA NUEVA FORMALIZADA:
+YOD,
+Lienzo,
+He nuevo,
+Shim Core,
+Arquitecto transversal,
+contracts,
+Publishing,
+Metrics,
+AI Runtime,
+gerencia,
+Universal Intake,
+Simple Motion,
+Public Architect.
+
+Estrategia correcta:
+
+AUDITAR A
+→ extraer lo funcional
+→ normalizar en contratos B
+→ testear
+→ migrar
+→ conectar
+→ operar
+→ medir
+→ aprender.
+
+Ese principio debe conservarse en todos los chats y fases futuras.
+
+FIN DEL DOCUMENTO

@@ -1,0 +1,1678 @@
+ABRAXAS OS — CONTINUIDAD V3
+Documento maestro para continuar el sistema en un chat nuevo
+Fecha de consolidación: 2026-08-28
+
+======================================================================
+0. PROPÓSITO DE ESTE TXT
+======================================================================
+
+Este documento concentra la lógica y las decisiones nuevas aprobadas desde
+la última actualización de ABRAXAS OS para poder continuar el desarrollo en
+otro chat sin perder contexto.
+
+NO significa que todo lo aquí descrito esté implementado.
+Debe distinguirse siempre entre:
+
+- IMPLEMENTED / VERIFICADO
+- IMPLEMENTED_UNVERIFIED_RUNTIME
+- DESIGN_READY
+- PLANNED
+- REFERENCE
+- LEGACY / HISTORICAL
+
+Este TXT debe usarse como contexto de diseño y continuidad.
+Antes de programar, el nuevo chat debe inspeccionar el repo real y comprobar
+qué ya existe, qué es reutilizable y qué falta.
+
+======================================================================
+1. ESTADO CONOCIDO DEL REPO / GITHUB
+======================================================================
+
+Repo principal privado:
+https://github.com/LordJeferies/ABRAXAS_OS
+
+Repo público de estado:
+https://github.com/LordJeferies/ABRAXAS_OS_STATUS
+
+Dashboard público:
+https://lordjeferies.github.io/ABRAXAS_OS_STATUS/
+
+Repo local principal:
+~/Desktop/abraxasos
+
+Repo local del dashboard público:
+~/Desktop/ABRAXAS_OS_STATUS_SITE
+
+Último checkpoint confirmado del Foundation V2:
+40dee102e34048cb4243758a5a31ac45db73f2f7
+
+En ese checkpoint:
+- Foundation V2 fue commit/push correctamente.
+- SHA local y origin/main coincidieron.
+- GitHub Pages no pudo activarse en el repo privado por limitación de plan.
+- Se creó ABRAXAS_OS_STATUS como repo público separado.
+- El dashboard público quedó GREEN.
+
+IMPORTANTE:
+No asumir que el SHA sigue siendo el mismo en un chat futuro.
+Siempre verificar el estado vivo antes de tocar nada.
+
+======================================================================
+2. PRINCIPIO RECTOR DE ABRAXAS OS
+======================================================================
+
+ABRAXAS OS convierte criterio en infraestructura.
+
+No es un chatbot.
+No es un simple generador de prompts.
+No es un Trello con IA.
+No es un calendario social.
+No es una IA que toma control creativo.
+No es un sistema donde un render final destruye la editabilidad.
+
+Es un sistema operativo de:
+- inteligencia;
+- creación;
+- producción;
+- organización;
+- gerencia;
+- publicación;
+- medición;
+- aprendizaje de contenidos.
+
+Regla resumen:
+
+YOD recuerda y piensa.
+Shim observa y resuelve.
+VAV produce.
+He organiza, gerencia y muestra.
+Arquitecto guía, acompaña y coach.
+Lienzo conecta todo.
+Publishing distribuye.
+Metrics devuelve la realidad.
+YOD aprende.
+
+======================================================================
+3. ROLES DEL SISTEMA
+======================================================================
+
+3.1 YOD
+-------
+
+YOD es el Core de Inteligencia de Contenidos.
+
+Contiene o coordina:
+- Client Core
+- Brand Core
+- Content Intelligence
+- Format Library
+- Structure Registry
+- Pattern Library
+- Prompt Intelligence
+- Copy Intelligence
+- Visual Intelligence
+- Motion Intelligence
+- Source Truth
+- Opportunity Engine
+- Coverage Engine
+- Plan / Cadence Engine
+- Content History
+- Learning
+- Metrics Intelligence
+
+YOD puede crear:
+- una pieza;
+- varias;
+- una semana;
+- dos semanas;
+- un mes;
+- desde una idea;
+- sin idea, usando Opportunity Engine;
+- desde fuentes;
+- desde grabaciones;
+- desde gaps;
+- desde campañas;
+- desde aprendizaje previo.
+
+YOD NO es un LLM.
+Debe poder trabajar con lógica interna determinista.
+
+3.2 LIENZO
+----------
+
+Lienzo es el objeto vivo, editable, versionado y trazable de cada contenido.
+
+Nace temprano y evoluciona:
+
+IDEA
+→ PLANNED
+→ PREPRODUCTION
+→ RECORDING
+→ INGESTED
+→ RESOLVED
+→ PRODUCTION
+→ QA
+→ READY
+→ SCHEDULED
+→ PUBLISHED
+→ LEARNING
+→ ARCHIVED
+
+Capas conceptuales:
+CORE
+STRATEGY
+PLANNED
+OBSERVED
+RESOLVED
+PRODUCTION
+DISTRIBUTION
+PUBLICATION
+LEARNING
+HISTORY
+
+Secciones editables:
+GENERAL
+CONTENT
+COPY
+VISUAL
+COVER
+MOTIONS
+CAPTIONS
+EDIT
+AUDIO
+VFX
+SFX
+PUBLISHING
+METRICS
+
+Regla:
+GENERAR NO SIGNIFICA CERRAR.
+
+Si un elemento cambia después de generar un artefacto:
+- conservar artefacto previo;
+- crear nueva versión;
+- calcular impacto;
+- marcar dependientes OUT_OF_SYNC o REVIEW;
+- permitir revisar / regenerar / conservar;
+- nunca sobreescribir silenciosamente.
+
+3.3 HE
+------
+
+He es la ventana operativa y gerencial de ABRAXAS OS.
+
+Debe servir tanto para una sola persona como para equipos.
+
+NO son dos sistemas distintos.
+SOLO y TEAM son dos vistas/proyecciones del mismo motor operativo.
+
+HE permite:
+- ver YOD;
+- ver Client Core;
+- ver oportunidades;
+- ver planes;
+- ver Lienzos;
+- editar Lienzos;
+- ver producción;
+- manejar tareas;
+- manejar equipo;
+- asignar;
+- revisar;
+- administrar deadlines;
+- ver dependencias;
+- ver blockers;
+- ver waiting-for;
+- manejar calendario;
+- organizar grabaciones;
+- publicar;
+- ver métricas;
+- usar Arquitecto;
+- time tracking;
+- notificaciones internas;
+- Kanban;
+- dashboard gerencial.
+
+3.4 SHIM
+--------
+
+Shim trabaja con material real.
+
+Hace:
+- source ingest;
+- transcripción;
+- segmentación;
+- detección de speakers/scenes;
+- structure matching;
+- candidates;
+- gaps;
+- claims/evidence checks;
+- editorial resolution;
+- copy verification/update;
+- recording gap feedback.
+
+No inventa material faltante.
+No convierte candidatos no confirmados en decisiones finales.
+
+Loop deseado:
+Shim detecta gap
+→ YOD formula necesidad/pregunta
+→ Arquitecto Recording Coach guía
+→ nueva toma
+→ Shim reanaliza
+
+3.5 VAV
+-------
+
+VAV es el brazo de producción audiovisual.
+
+Materializa:
+- edición;
+- captions;
+- motions;
+- visuales;
+- renders;
+- simple motion;
+- artefactos audiovisuales.
+
+VAV debe devolver al Lienzo:
+- estado;
+- versión;
+- artefactos;
+- timestamps;
+- hashes;
+- errors;
+- provenance;
+- eventos.
+
+No debe crear otro source-of-truth paralelo.
+
+3.6 ARQUITECTO
+--------------
+
+Arquitecto es una presencia transversal en todo ABRAXAS OS.
+
+Es:
+- asistente;
+- guía;
+- coach;
+- productor;
+- director;
+- editor coach;
+- copy coach;
+- visual coach;
+- motion coach;
+- recording coach;
+- VFX coach;
+- SFX coach;
+- music coach;
+- QA coach;
+- navegador;
+- documentación viva;
+- ayuda contextual;
+- recomendador de provider de IA.
+
+Arquitecto debe saber:
+- dónde estás;
+- de dónde vienes;
+- hacia dónde vas;
+- qué falta;
+- qué está bloqueado;
+- qué botón/ruta usar;
+- qué hacer después;
+- cómo saber que terminaste.
+
+Arquitecto consulta:
+- YOD para criterio;
+- He para contexto operativo;
+- Lienzo para estado;
+- Shim para evidencia;
+- VAV para producción;
+- System Knowledge para saber cómo funciona ABRAXAS.
+
+Arquitecto puede sugerir libremente.
+Cambios relevantes al Lienzo requieren confirmación humana salvo
+automatización autorizada expresamente.
+
+======================================================================
+4. HE COMO PLATAFORMA DE GERENCIA / OPERACIONES
+======================================================================
+
+Esta es una ampliación importante.
+
+HE debe funcionar como una plataforma para gerenciar contenido, producción,
+personas, tareas y tiempos.
+
+4.1 SOLO MODE
+-------------
+
+Para una persona sola:
+
+He debe mostrar:
+- dónde quedó ayer;
+- qué hacer ahora;
+- siguiente acción;
+- secuencia de tareas;
+- qué está bloqueado;
+- qué vence;
+- cuánto tiempo ha invertido;
+- qué debe revisar;
+- qué depende de qué.
+
+Ejemplo:
+
+Ayer quedaste:
+MOKA-R052 → Cover v3
+
+Siguiente:
+Revisar contraste
+
+Después:
+Actualizar Motion M03
+→ Render master
+→ QA
+
+4.2 TEAM MODE
+-------------
+
+Para gerente/supervisor:
+
+He debe mostrar:
+- quién hace qué;
+- en qué parte está cada persona;
+- tareas activas;
+- workload;
+- tareas bloqueadas;
+- quién espera a quién;
+- deadlines;
+- tareas vencidas;
+- grabaciones próximas;
+- revisiones pendientes;
+- Lienzos por estado;
+- tiempos por persona;
+- tiempos por cliente;
+- tiempos por proceso.
+
+Campos operativos importantes:
+assigned_to
+depends_on
+blocked_by
+waiting_for
+due_date
+priority
+reviewers
+estimated_time
+tracked_time
+
+======================================================================
+5. TASK MODEL
+======================================================================
+
+No toda tarea es un Lienzo.
+
+Debe existir un objeto TASK.
+
+Campos conceptuales:
+
+task_id
+client_id nullable
+content_id nullable
+plan_id nullable
+parent_task_id nullable
+task_type
+title
+description
+assigned_to nullable
+created_by
+status
+priority
+start_at nullable
+due_at nullable
+estimated_minutes nullable
+tracked_minutes derived
+location nullable
+depends_on[]
+blocked_by[]
+waiting_for[]
+reviewers[]
+checklist[]
+tags[]
+history[]
+
+Estados seed:
+BACKLOG
+READY
+IN_PROGRESS
+WAITING
+BLOCKED
+REVIEW
+DONE
+CANCELLED
+
+Ejemplos de tareas ligadas a Lienzo:
+- editar Reel;
+- crear portada;
+- revisar captions;
+- aprobar copy;
+- crear motion.
+
+Ejemplos de tareas operativas no necesariamente ligadas:
+- ir a grabar;
+- preparar equipo;
+- llamar cliente;
+- comprar elemento;
+- organizar archivos;
+- reunión;
+- scouting;
+- preparar set.
+
+======================================================================
+6. RECORDING SESSION
+======================================================================
+
+Debe existir un objeto/entidad de grabación física.
+
+RecordingSession:
+recording_session_id
+title
+client_id
+start_at
+end_at
+timezone
+location
+participants[]
+lienzo_ids[]
+preparation_tasks[]
+notes
+status
+
+Una grabación puede vincular múltiples Lienzos.
+
+Ejemplo:
+
+GRABACIÓN MOKA
+Sábado 12
+10:00–14:00
+Estudio X
+
+Personas:
+Director
+Cámara
+Cliente
+
+Lienzos:
+R052
+R053
+C014
+R054
+
+Preparación:
+Preguntas
+Props
+Baterías
+Confirmación cliente
+
+======================================================================
+7. DEADLINES MULTINIVEL
+======================================================================
+
+No existe un único deadline.
+
+Deadlines pueden existir en:
+- PLAN
+- LIENZO
+- COMPONENT
+- TASK
+- RECORDING_SESSION
+- PUBLICATION_TARGET
+
+He debe calcular AT_RISK usando:
+- dependencias;
+- bloqueos;
+- tiempo restante;
+- tareas pendientes;
+- deadline de publicación.
+
+Ejemplo:
+Publicar viernes 18:00
+
+Copy miércoles 12:00
+Edit Lock miércoles 18:00
+Captions jueves 12:00
+Motions jueves 16:00
+QA viernes 10:00
+Publishing viernes 18:00
+
+Si Motions se retrasa:
+He debe mostrar qué afecta.
+
+======================================================================
+8. KANBAN / TRELLO PRO
+======================================================================
+
+He debe incluir un Kanban avanzado.
+
+Columnas seed:
+BACKLOG
+READY
+IN_PROGRESS
+REVIEW
+BLOCKED
+DONE
+
+Cards posibles:
+TASK
+LIENZO
+REVIEW
+RECORDING_SESSION
+PUBLICATION_TARGET
+
+Diferencia con Trello:
+la tarjeta conoce el estado real del sistema.
+
+Mover una tarjeta NO puede saltar una dependencia silenciosamente.
+
+Ejemplo:
+No puedes marcar QA como READY porque faltan:
+- Copy approval
+- Motion M03 review
+
+Puede existir override explícito si el usuario autorizado decide forzarlo.
+
+======================================================================
+9. DASHBOARD GERENCIAL
+======================================================================
+
+Debe responder:
+
+¿Qué se está haciendo?
+¿Quién trabaja en qué?
+¿Quién está bloqueado?
+¿Quién espera a quién?
+¿Qué está por vencer?
+¿Qué está vencido?
+¿Qué grabaciones vienen?
+¿Qué reviews esperan?
+¿Cuánto tiempo se está gastando?
+¿Qué Lienzos están en cada fase?
+¿Quién tiene sobrecarga?
+
+Ejemplo de pipeline:
+
+IDEA
+PLANNED
+RECORDING
+SHIM
+EDITING
+CAPTIONS
+MOTIONS
+QA
+READY
+SCHEDULED
+PUBLISHED
+
+======================================================================
+10. TIME TRACKING / CLOCKIFY INTERNO
+======================================================================
+
+He debe incluir time tracking.
+
+Acciones:
+START
+PAUSE
+RESUME
+STOP
+ADD_MANUAL_ENTRY
+
+TimeEntry:
+time_entry_id
+user_id
+task_id
+content_id nullable
+started_at
+ended_at nullable
+duration_seconds
+source
+note nullable
+
+Reportes:
+por usuario
+por tarea
+por cliente
+por Lienzo
+por componente
+por plan
+por fecha
+
+Ejemplo:
+
+MOKA-R052
+Planning 35m
+Recording 2h10m
+Shim 18m
+Editing 4h42m
+Captions 1h03m
+Motions 2h27m
+QA 32m
+
+Operational time debe permanecer separado de Metrics de performance editorial.
+
+======================================================================
+11. NOTIFICATION CENTER
+======================================================================
+
+V1:
+notificaciones dentro de He.
+
+Futuro:
+push, email, Slack u otros.
+
+Tipos seed:
+deadline_approaching
+deadline_missed
+task_assigned
+task_completed
+review_requested
+dependency_resolved
+blocked
+waiting_for_you
+lienzo_out_of_sync
+render_complete
+copy_needs_review
+recording_upcoming
+publication_failed
+architect_suggestion
+
+Ejemplo:
+Carlos terminó Edit Lock.
+Ya puedes comenzar Captions.
+
+Arquitectura:
+Notification Event separado del Delivery Channel.
+
+======================================================================
+12. AI RUNTIME
+======================================================================
+
+Nueva capa transversal.
+
+AI Runtime decide cómo se ejecuta una tarea compatible con IA.
+
+Execution modes:
+
+LOGIC
+MANUAL
+EXTERNAL_ROUNDTRIP
+API_PROVIDER
+OLLAMA
+MCP
+LOCAL_MODEL
+
+Cada paso de ABRAXAS que pueda usar IA debe admitir varias rutas cuando
+tenga sentido.
+
+Ejemplo para copy:
+
+YOD Copy Intelligence
+→ AI Runtime
+→ Logic Engine
+o OpenAI API
+o Ollama
+o MCP
+o External Roundtrip
+→ AI Result
+→ Parser
+→ Validator
+→ QA
+→ Diff
+→ Accept
+→ Lienzo
+
+La procedencia cambia.
+El contrato no.
+
+======================================================================
+13. PROVIDER REGISTRY
+======================================================================
+
+Cada provider declara capacidades.
+
+Capabilities seed:
+
+TEXT
+STRUCTURED_OUTPUT
+VISION
+IMAGE_GENERATION
+IMAGE_EDIT
+VIDEO_ANALYSIS
+VIDEO_GENERATION
+AUDIO
+TRANSCRIPTION
+TOOLS
+LONG_CONTEXT
+LOCAL_ONLY
+
+Providers posibles:
+
+LOGIC ENGINE
+EXTERNAL ROUNDTRIP
+OLLAMA
+OPENAI-COMPATIBLE API
+OTHER CLOUD API
+MCP SERVER/TOOL
+LOCAL MODEL
+LOCAL TOOL
+
+Arquitecto puede recomendar provider.
+
+Ejemplo:
+Task: analizar video
+Needs:
+VIDEO_ANALYSIS
+LONG_CONTEXT
+
+Provider A compatible
+Provider B no compatible
+Ollama model X no compatible
+External Roundtrip compatible
+
+Usuario puede elegir otro provider.
+
+======================================================================
+14. OLLAMA
+======================================================================
+
+Debe funcionar como provider local.
+
+Concepto:
+
+AI Job
+→ Ollama Adapter
+→ local model
+→ AI Result
+→ Parser/Validator/QA/Diff/Accept
+
+Configuración:
+- base URL local;
+- modelo;
+- capabilities;
+- parámetros.
+
+No poner secrets en Git.
+
+Si Ollama no está disponible:
+provider error recuperable;
+ofrecer otros providers.
+
+======================================================================
+15. MCP
+======================================================================
+
+MCP puede funcionar como:
+- acceso a modelos;
+- acceso a herramientas;
+- servicios externos;
+- archivos;
+- calendario;
+- analytics;
+- bases de datos;
+- publishing;
+- otros tools.
+
+Debe existir registry/allowlist/permisos.
+
+Resultado de MCP también debe convertirse en:
+AIResult
+Artifact
+Event
+según corresponda.
+
+MCP NO debe saltarse las reglas de seguridad ni escribir silenciosamente
+al Lienzo.
+
+======================================================================
+16. AI JOB
+======================================================================
+
+Campos:
+
+job_id
+task_type
+content_id nullable
+client_id nullable
+lienzo_version nullable
+client_core_version nullable
+required_capabilities[]
+prompt_preset_version
+input_artifacts[]
+expected_output_schema
+status
+execution_mode
+provider_id nullable
+created_at
+created_by
+
+Todo trabajo de IA debe poder tener provenance.
+
+======================================================================
+17. ROUNDTRIP TXT — NORMA OFICIAL
+======================================================================
+
+El roundtrip es una función oficial, no workaround.
+
+17.1 ARCHIVO DE SALIDA
+----------------------
+
+Filename sugerido:
+
+<CLIENT>__<CONTENT_OR_TASK>__<TASK>__AI_JOB_<JOBID>.txt
+
+Contenido:
+
+ABRAXAS AI JOB
+JOB ID
+CONTENT ID
+CLIENT
+TASK
+PURPOSE
+
+ROLE
+
+CLIENT CORE SNAPSHOT
+
+LIENZO CONTEXT
+
+CURRENT MATERIAL
+
+SOURCE EVIDENCE
+
+WHAT THIS IS
+
+WHAT THIS IS NOT
+
+CRITERIA
+
+CONSTRAINTS
+
+NEGATIVES
+
+EXPECTED RESULT
+
+OUTPUT CONTRACT
+
+QA
+
+RETURN INSTRUCTIONS
+
+17.2 ARCHIVO DE REGRESO
+-----------------------
+
+Filename sugerido:
+
+<CLIENT>__<CONTENT_OR_TASK>__<TASK>__AI_RESULT_<JOBID>.txt
+
+Debe incluir DOS capas:
+
+=== ABRAXAS HUMAN RESPONSE ===
+
+Explicación legible.
+
+=== ABRAXAS MACHINE RESULT ===
+
+JSON obligatorio.
+
+Ejemplo:
+
+{
+  "schema_version": "1",
+  "job_id": "ABX-JOB-001",
+  "content_id": "MOKA-R052",
+  "changes": [],
+  "artifacts": [],
+  "warnings": [],
+  "confidence": 0.0
+}
+
+17.3 COMPATIBILITY MODE
+-----------------------
+
+Si el usuario trae texto libre:
+
+- aceptar importación;
+- marcar MANUAL_REVIEW_REQUIRED;
+- intentar parseo best-effort;
+- mostrar mapping;
+- no modificar Lienzo automáticamente;
+- exigir aprobación.
+
+======================================================================
+18. RESULT PIPELINE
+======================================================================
+
+Cualquier resultado de IA:
+
+RESULT
+→ PARSE
+→ VALIDATE
+→ ABRAXAS QA
+→ PREVIEW DIFF
+→ ACCEPT ALL / ACCEPT FIELD / REJECT
+→ NEW LIENZO VERSION
+→ EVENT
+→ ARTIFACT cuando corresponda
+
+Nunca:
+AI RESULT → sobrescribir Lienzo directamente.
+
+======================================================================
+19. UNIVERSAL INTAKE
+======================================================================
+
+ABRAXAS debe importar resultados externos.
+
+Tipos seed:
+
+TXT
+MD
+JSON
+CSV
+PNG
+JPG
+WEBP
+MP4
+MOV
+WAV
+MP3
+PDF
+DOCX
+ZIP
+
+Pipeline:
+
+IMPORT
+→ TYPE DETECTION
+→ HASH
+→ PROVENANCE
+→ TARGET LINK
+→ PREVIEW
+→ VALIDATION
+→ ACCEPT
+→ ARTIFACT + EVENT
+
+Targets:
+
+Client
+Plan
+Lienzo
+Lienzo component
+Task
+Recording Session
+AI Job
+Publication Target
+
+Ejemplo:
+subir imagen creada en otra IA
+→ elegir MOKA-R052
+→ Visual
+→ Image 03
+→ source External AI
+→ prompt opcional
+→ guardar artifact + hash + provenance.
+
+Ejemplo:
+video editado en DaVinci
+→ importar como EDIT MASTER v6
+→ link al Lienzo
+→ nuevo artifact
+→ He/VAV conocen la nueva versión.
+
+ABRAXAS no debe obligar a trabajar siempre dentro de ABRAXAS.
+
+======================================================================
+20. COPY INTELLIGENCE — CONTINUIDAD
+======================================================================
+
+Copy nace temprano desde YOD.
+
+Puede existir:
+copy.master
+copy.platforms.instagram
+copy.platforms.tiktok
+copy.platforms.linkedin
+copy.platforms.youtube
+
+Cada copy:
+version
+source
+based_on_lienzo_version
+status
+created_by
+updated_by
+change_reason
+
+YOD crea desde estrategia.
+Shim verifica/adapta desde evidencia real.
+Arquitecto sugiere mejoras.
+Usuario edita en cualquier etapa.
+
+Si cambia el contenido:
+Copy puede quedar OUT_OF_SYNC.
+
+Copy no es resumen automático.
+
+Funciones:
+CONTEXTUALIZE
+EXTEND
+TRANSFER
+CONVERT
+DISCUSS
+SOURCE
+FRAME
+
+======================================================================
+21. VISUALES / IMÁGENES
+======================================================================
+
+Una imagen no existe para decorar.
+
+Funciones:
+EXPLAIN
+CONTRAST
+ANCHOR
+PROVE
+ORIENT
+HUMANIZE
+SYMBOLIZE
+CREATE_TENSION
+SHOW_PROCESS
+SHOW_RESULT
+
+Generación:
+
+1. INTERNAL AI
+2. EXTERNAL AI ROUNDTRIP
+3. PROCEDURAL / DETERMINISTIC RENDERER
+
+Después de generar, sigue editable.
+
+Correction model:
+
+BASE PROMPT
++ CORRECTION REQUEST
++ PRESERVE RULES
+= nueva versión
+
+Aplica a:
+images
+covers
+motions
+captions
+copy
+renders
+visual text
+
+======================================================================
+22. VAV SIMPLE MOTION ENGINE
+======================================================================
+
+Debe existir un motor sencillo de movimiento y transiciones con buen gusto,
+separado del sistema semántico complejo de Motions.
+
+Seed primitives:
+
+ZOOM_IN
+ZOOM_OUT
+PUSH_IN
+PULL_OUT
+PAN_LEFT
+PAN_RIGHT
+PAN_UP
+PAN_DOWN
+SCALE
+TRANSLATE
+ROTATE_SUBTLE
+FADE
+BLUR_TRANSITION
+CROP_REVEAL
+MASK_REVEAL
+PARALLAX_2_5D
+PERSPECTIVE_SHIFT
+DIP
+MATCH_TRANSITION
+WHIP_CONTROLLED
+SIMPLE_SPEED_RAMP
+
+Cada preset:
+
+preset_id
+primitive
+duration
+easing
+intensity
+safe_area_behavior
+caption_policy
+subject_policy
+motion_blur
+constraints
+fallback
+
+YOD:
+decide si semánticamente conviene.
+
+Arquitecto:
+sugiere cómo usarlo.
+
+VAV:
+ejecuta.
+
+======================================================================
+23. ARQUITECTO TOTAL PRODUCTION COACH
+======================================================================
+
+Arquitecto debe poder ayudar incluso si el usuario está editando fuera
+de ABRAXAS.
+
+Ejemplo:
+“Estoy editando este Lienzo en DaVinci.”
+
+Arquitecto puede indicar:
+
+CORTE
+Mantener source 2.4 s
+
+ENTRADA
+J-cut
+
+MOTION
+M4 diagram
+
+STILL-ONLY
+parallax/push/crop
+
+VFX
+qué cambia / cuándo / trigger / por qué / duración / preserve
+
+SFX
+sonido / cuándo / trigger / level / función
+
+CAPTIONS
+safe area
+
+SALIDA
+volver a source antes del payoff
+
+Puede ayudar con:
+- editing;
+- motion;
+- fotos animadas;
+- VFX;
+- SFX;
+- música;
+- imágenes;
+- portadas;
+- copy;
+- grabación;
+- QA.
+
+======================================================================
+24. ARQUITECTO PUBLIC EN STATUS
+======================================================================
+
+La página pública de Status debe tener un chat tipo Arquitecto primitivo.
+
+Objetivo:
+que alguien sin conocimiento de ABRAXAS OS pueda entrar y preguntar:
+
+¿Qué es ABRAXAS OS?
+¿Qué es YOD?
+¿Qué hace He?
+¿Qué es Lienzo?
+¿Qué hace Shim?
+¿Qué hace VAV?
+¿Qué es Arquitecto?
+¿Qué está terminado?
+¿Qué está diseñado?
+¿Qué falta?
+¿Cómo va el roadmap?
+¿Hacia dónde quiere llegar ABRAXAS OS?
+¿Cómo se conectan las partes?
+
+Arquitectura segura:
+
+PUBLIC ARCHITECT
+→ Public Knowledge
+→ public system-status.json
+→ public roadmap
+
+No acceso a:
+- repo privado;
+- Client Cores;
+- clientes;
+- private prompts;
+- artifacts privados;
+- secrets.
+
+V1:
+PUBLIC_LOGIC_KNOWLEDGE
+
+V2:
+PUBLIC_AI_PROVIDER a través de backend seguro.
+
+Futuro:
+PUBLIC_MCP / OLLAMA cuando despliegue/arquitectura lo permitan.
+
+Nunca poner API keys en JS público.
+
+======================================================================
+25. PUBLIC ARCHITECT PROVIDER OPTIONS
+======================================================================
+
+Debe poder evolucionar igual que el AI Runtime:
+
+- lógica pública local;
+- API server-side;
+- MCP;
+- Ollama/local donde sea viable;
+- otros providers.
+
+Pero siempre con frontera pública/privada.
+
+======================================================================
+26. EVENT MODEL
+======================================================================
+
+Los módulos no deberían sobrescribir el Lienzo entero.
+
+Eventos ejemplo:
+
+YOD_PLAN_CREATED
+YOD_COPY_CREATED
+SHIM_ANALYSIS_COMPLETED
+SHIM_CONTENT_RESOLVED
+EDIT_STARTED
+EDIT_LOCKED
+CAPTIONS_COMPLETED
+MOTIONS_COMPLETED
+COPY_UPDATED
+COVER_UPDATED
+ARTIFACT_GENERATED
+QA_APPROVED
+PLATFORM_SCHEDULED
+PLATFORM_PUBLISHED
+METRICS_SYNCED
+TASK_ASSIGNED
+TASK_COMPLETED
+TIME_ENTRY_STARTED
+NOTIFICATION_CREATED
+AI_JOB_CREATED
+AI_RESULT_IMPORTED
+AI_RESULT_ACCEPTED
+RECORDING_SESSION_CREATED
+
+Cada evento:
+event_id
+content_id nullable
+task_id nullable
+component
+actor
+timestamp
+previous_version
+new_version
+reason
+metadata
+
+======================================================================
+27. ARTIFACT REGISTRY
+======================================================================
+
+Tipos:
+
+source_video
+transcript
+shim_map
+edit_project
+edit_master
+caption_document
+caption_plan
+motion_plan
+image_plan
+generated_image
+cover_plan
+cover_image
+render_preview
+render_master
+copy_export
+publishing_asset
+external_import
+ai_result
+
+Campos:
+
+artifact_id
+content_id
+type
+version
+created_by
+created_at
+based_on
+path_or_uri
+hash
+status
+provider
+prompt_job_id
+metadata
+
+No dejar archivos finales huérfanos.
+
+======================================================================
+28. PUBLISHING
+======================================================================
+
+Content != Publication.
+
+Un Lienzo puede tener varias publication_targets.
+
+Cada target:
+
+platform
+account_id
+scheduled_at
+timezone
+status
+copy_version
+asset_version
+cover_version
+snapshot
+remote_post_id
+provider
+last_sync_at
+
+Al programar:
+guardar snapshot de asset/copy/cover/metadata/time/account/version.
+
+Cambios posteriores del Lienzo no cambian silenciosamente posts ya programados.
+
+PublisherAdapter conceptual:
+
+validate()
+prepare()
+schedule()
+publish()
+reschedule()
+cancel()
+getStatus()
+getMetrics()
+
+======================================================================
+29. METRICS
+======================================================================
+
+Metrics son resultados post-publicación.
+
+Raw:
+
+views
+reach
+impressions
+likes
+comments
+shares
+saves
+watch_time
+average_view_duration
+completion
+profile_visits
+followers_gained
+clicks
+leads
+conversions
+
+Normalized:
+
+ATTENTION
+RETENTION
+ENGAGEMENT
+AMPLIFICATION
+CONVERSION
+
+Toda fórmula debe ser explícita/versionada.
+
+Snapshots sugeridos:
++1h
++24h
++7d
++30d
+
+He muestra.
+YOD aprende.
+
+V1:
+manual/CSV/JSON.
+
+V2:
+APIs.
+
+======================================================================
+30. STATUS / EVIDENCIA
+======================================================================
+
+No marcar IMPLEMENTED solo porque haya documentación.
+
+Estados recomendados:
+
+IMPLEMENTED
+IMPLEMENTED_UNVERIFIED_RUNTIME
+DESIGN_READY
+PLANNED
+BLOCKED
+GREEN
+REFERENCE
+HISTORICAL
+DEPRECATED
+
+El dashboard es una proyección del estado.
+No es prueba por sí mismo.
+
+======================================================================
+31. ROADMAP NUEVO
+======================================================================
+
+WAVE A — AUDIT + CONTRACTS
+1. Auditar He / AI / Arquitecto / VAV live.
+2. Reconciliar Foundation V2 con implementación real.
+3. Promover seed schemas a contracts testeados.
+
+WAVE B — HE MANAGEMENT
+4. He Operations Core.
+5. Kanban + manager dashboard.
+6. Mixed tasks + recording sessions + deadlines.
+7. Time Tracking.
+8. Notification Center V1.
+
+WAVE C — AI RUNTIME
+9. AI Job/Result/Provider.
+10. TXT + mandatory JSON roundtrip.
+11. Logic + External Roundtrip providers.
+12. Ollama.
+13. API provider.
+14. MCP provider.
+15. Universal Intake.
+
+WAVE D — PRODUCTION
+16. VAV Simple Motion Engine.
+17. Lienzo Artifact/Event integration.
+18. Arquitecto Total Production Coach runtime integration.
+
+WAVE E — PUBLIC ARCHITECT
+19. Public Knowledge projection.
+20. Static Public Architect chat.
+21. Safe provider boundary for server-backed AI.
+
+NO ejecutar todas las waves en paralelo.
+
+======================================================================
+32. ORDEN RECOMENDADO DE IMPLEMENTACIÓN
+======================================================================
+
+AUDIT LIVE
+↓
+CONTRACTS
+↓
+HE OPERATIONS
+↓
+TIME + NOTIFICATIONS
+↓
+AI RUNTIME
+↓
+UNIVERSAL INTAKE
+↓
+VAV SIMPLE MOTION
+↓
+ARQUITECTO PUBLIC
+↓
+más integración de Arquitecto
+↓
+seguir ampliando YOD / He / Shim / VAV
+
+======================================================================
+33. QUÉ DEBE HACER EL CHAT NUEVO
+======================================================================
+
+1. NO reconstruir ABRAXAS OS desde cero.
+2. Inspeccionar repo real:
+   ~/Desktop/abraxasos
+3. Verificar:
+   git status
+   git rev-parse HEAD
+   git fetch origin main
+   comparar HEAD/origin
+   no nested Git
+4. Leer:
+   - ABRAXAS_OS_MASTER_CRITERIA_V2.md
+   - este TXT
+   - roadmap actual
+   - código vivo relevante
+5. Distinguir:
+   CURRENT_FUNCTIONAL
+   CANON
+   REFERENCE
+   LEGACY
+6. Antes de implementar una función:
+   auditar si ya existe algo reutilizable.
+7. Implementar un subsistema por vez.
+8. Usar TDD.
+9. Correr tests/typecheck/build.
+10. No usar git add .
+11. No guardar secrets.
+12. Commit/push después de GREEN.
+13. Verificar SHA local == remote.
+14. Actualizar status.
+15. Sincronizar dashboard público.
+
+======================================================================
+34. PROMPT DE ARRANQUE PARA EL CHAT NUEVO
+======================================================================
+
+Copia este bloque como primer mensaje después de subir este TXT y los
+archivos históricos/referencias:
+
+----------------------------------------------------------------------
+CONTINÚA EL SISTEMA EXISTENTE ABRAXAS OS. NO LO RECONSTRUYAS DESDE CERO.
+
+Repo esperado:
+~/Desktop/abraxasos
+
+Primero haz PRE-EXECUTION MASTER TRUTH:
+- Git status / SHA local / origin
+- implementación actual real
+- tests/build actuales
+- qué es CURRENT_FUNCTIONAL
+- qué es DESIGN_READY
+- qué es REFERENCE
+- qué es LEGACY
+- qué ya existe de He, YOD, Shim, VAV, Arquitecto, AI/provider logic,
+  calendar, tasks, prompt composer, imports, motions, status.
+
+Lee este TXT completo como criterio aprobado actual.
+
+Nuevas decisiones obligatorias:
+- He = operations + management + solo/team + kanban + deadlines +
+  recording sessions + time tracking + notifications.
+- IA = Logic/Manual/External/API/Ollama/MCP/Local.
+- Roundtrip = TXT humano + JSON obligatorio.
+- Universal Intake = TXT/images/video/audio/docs/ZIP con provenance.
+- VAV Simple Motion Engine.
+- Arquitecto Total Production Coach.
+- Arquitecto Public aislado de datos privados.
+
+No programes todo a la vez.
+Empieza por el primer subsistema incompleto según la evidencia.
+Preserva código funcional.
+Usa TDD.
+No hagas claims de implementación sin pruebas.
+----------------------------------------------------------------------
+
+======================================================================
+35. ARCHIVOS QUE CONVIENE SUBIR AL CHAT NUEVO
+======================================================================
+
+OBLIGATORIO:
+- este TXT.
+
+MUY IMPORTANTE:
+- `Referencias para logica de abraxas y sus contenidos y creaciones...zip`
+
+SI LOS TIENES:
+- ABRAXAS_OS_GIT_CRITERIA_PACK
+- UNIVERSAL_CONTENT_OS_CALL_TO_PUBLISH
+- MOKA_V26_20_HTML_STANDALONE_R14
+- ABRAXAS_COMPLETE_SYSTEM...MOTIONS...R4
+- ABRAXAS_SPATIAL_MOTION_CAMERA_GRAMMAR_V3
+- VAV_ABRAXAS_STYLE_MINING_SYSTEM_V2_MERGED
+- último VAV Live/Ecosystem handoff si el nuevo chat no puede inspeccionar repo
+
+Si el chat nuevo puede inspeccionar GitHub/repo vivo:
+repo vivo > ZIP histórico.
+
+======================================================================
+36. QUÉ NO DEBE HACER EL CHAT NUEVO
+======================================================================
+
+NO:
+- borrar/quarantines sin necesidad;
+- crear repo anidado;
+- mover runtime macOS a lugares arbitrarios;
+- asumir que docs = implementación;
+- afirmar que YOD/He/Arquitecto están funcionales sin probar;
+- meter API keys en repo;
+- poner secretos en HTML público;
+- sobrescribir Lienzo por respuesta de IA;
+- convertir external result en canonical sin review;
+- confundir Metrics editoriales con time tracking;
+- copiar Trello/Clockify literalmente sin integrarlos con Lienzo/Tasks;
+- crear otro source-of-truth paralelo;
+- regenerar todo por un cambio pequeño si puede calcularse impacto.
+
+======================================================================
+37. DEFINICIÓN FINAL DE ÉXITO
+======================================================================
+
+ABRAXAS OS debe permitir que:
+
+- una persona sola organice y ejecute todo su trabajo;
+- un gerente controle equipo, tareas, deadlines y producción;
+- cada contenido viva en un Lienzo editable/versionado;
+- YOD pueda proponer y crear con o sin IA;
+- Shim convierta evidencia real en resolución;
+- VAV produzca y devuelva estado/artefactos;
+- Arquitecto acompañe todo el proceso;
+- IA pueda ejecutarse por lógica, API, Ollama, MCP, local o roundtrip;
+- resultados externos vuelvan al sistema con provenance;
+- el usuario pueda editar dentro o fuera de ABRAXAS;
+- el sistema mantenga trazabilidad;
+- Publishing distribuya;
+- Metrics cierre el loop;
+- YOD aprenda;
+- Status público explique el sistema a cualquier persona;
+- Arquitecto Public responda preguntas sin exponer datos privados.
+
+FIN DEL DOCUMENTO

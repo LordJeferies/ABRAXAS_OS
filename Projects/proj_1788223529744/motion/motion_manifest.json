@@ -1,0 +1,22 @@
+[
+  {
+    "id": "motion-hook",
+    "startUs": 0,
+    "endUs": 3500000,
+    "family": "ABRAXAS_MOTION_02",
+    "visualMode": "hook-punch",
+    "textOwnership": "hybrid",
+    "captionVisibility": "visible",
+    "sceneSmartMode": "restricted"
+  },
+  {
+    "id": "motion-proof",
+    "startUs": 10000000,
+    "endUs": 22000000,
+    "family": "ABRAXAS_MOTION_01",
+    "visualMode": "evidence-emphasis",
+    "textOwnership": "caption-engine",
+    "captionVisibility": "visible",
+    "sceneSmartMode": "normal"
+  }
+]

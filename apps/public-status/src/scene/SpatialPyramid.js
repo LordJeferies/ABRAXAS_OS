@@ -85,6 +85,7 @@ export class SpatialPyramid {
       this.createInternalChambers();
       this.createCelestialMoonAndLoops();
       this.createHitProxies();
+      this.createTechnicalDrawingHUDLayer();
       this.initLivingPlatePlanes();
       this.initSpatialCapabilityRegistry();
       this.initCameraDirector();
@@ -970,12 +971,32 @@ export class SpatialPyramid {
     const isReduced = this.cameraDirector?.checkReducedMotion() || false;
 
     if (!isReduced) {
-      
-    if (this.godRayMesh) {
-      this.godRayMesh.rotation.y = time * 0.0002;
-    }
+      // 1. Cinematic Ambient Drift (Slow Anamorphic IMAX Floating Motion)
+      const driftX = Math.sin(time * 0.00025) * 0.06;
+      const driftY = Math.cos(time * 0.0002) * 0.04;
+      if (this.platesGroup) {
+        this.platesGroup.position.x = driftX * 0.5;
+        this.platesGroup.position.y = 0.4 + driftY * 0.3;
+      }
+
+      // 2. Scanline Metrology Sweep
+      if (this.scanLineMesh) {
+        this.scanLineMesh.position.y = Math.sin(time * 0.0008) * (this.halfHeight * 0.9);
+      }
+
+      // 3. Optical Reticle Slow Rotation
+      if (this.reticleMesh) {
+        this.reticleMesh.rotation.z = time * 0.00015;
+      }
+
+      // 4. God Rays & Embers Atmospheric Swirl
+      if (this.godRayMesh) {
+        this.godRayMesh.rotation.y = time * 0.0002;
+        this.godRayMesh.scale.x = 1.0 + Math.sin(time * 0.0005) * 0.03;
+      }
       if (this.particleField) {
-        this.particleField.rotation.y = time * 0.00003;
+        this.particleField.rotation.y = time * 0.00004;
+        this.particleField.position.y = Math.sin(time * 0.0003) * 0.05;
       }
       if (this.eyeFilaments) {
         this.eyeFilaments.rotation.y = Math.sin(time * 0.0005) * 0.05;
@@ -996,6 +1017,54 @@ export class SpatialPyramid {
   }
 
   
+  
+  createTechnicalDrawingHUDLayer() {
+    this.techDrawingGroup = new THREE.Group();
+    this.techDrawingGroup.name = 'TECHNICAL_BLUEPRINT_HUD';
+    this.scene.add(this.techDrawingGroup);
+
+    // Laser Technical Slopes (Giza 51.8487° Angle Projection)
+    const slopeLines = [];
+    const apex = new THREE.Vector3(0, this.halfHeight, 0);
+    const corners = [
+      new THREE.Vector3(-this.halfBase, -this.halfHeight, -this.halfBase),
+      new THREE.Vector3(this.halfBase, -this.halfHeight, -this.halfBase),
+      new THREE.Vector3(this.halfBase, -this.halfHeight, this.halfBase),
+      new THREE.Vector3(-this.halfBase, -this.halfHeight, this.halfBase)
+    ];
+
+    corners.forEach(c => {
+      slopeLines.push(apex.x, apex.y, apex.z, c.x, c.y, c.z);
+    });
+
+    const slopeGeo = new THREE.BufferGeometry();
+    slopeGeo.setAttribute('position', new THREE.Float32BufferAttribute(slopeLines, 3));
+    const slopeMat = new THREE.LineBasicMaterial({ color: 0xd4af37, transparent: true, opacity: 0.45 });
+    this.slopeLinesMesh = new THREE.LineSegments(slopeGeo, slopeMat);
+    this.techDrawingGroup.add(this.slopeLinesMesh);
+
+    // Dynamic Vertical Laser Scanline (Daat Metrology Sweep)
+    const scanGeo = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(-this.halfBase * 1.1, 0, 0.1),
+      new THREE.Vector3(this.halfBase * 1.1, 0, 0.1)
+    ]);
+    this.scanMat = new THREE.LineBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.65 });
+    this.scanLineMesh = new THREE.Line(scanGeo, this.scanMat);
+    this.scanLineMesh.position.set(0, 0, 0);
+    this.techDrawingGroup.add(this.scanLineMesh);
+
+    // Golden Coordinate Reticle at Apex (Optical Targeting Crosshairs)
+    const reticleLines = [
+      -0.8, this.halfHeight, 0, 0.8, this.halfHeight, 0,
+      0, this.halfHeight - 0.8, 0, 0, this.halfHeight + 0.8, 0
+    ];
+    const reticleGeo = new THREE.BufferGeometry();
+    reticleGeo.setAttribute('position', new THREE.Float32BufferAttribute(reticleLines, 3));
+    const reticleMat = new THREE.LineBasicMaterial({ color: 0xd4af37, transparent: true, opacity: 0.5 });
+    this.reticleMesh = new THREE.LineSegments(reticleGeo, reticleMat);
+    this.techDrawingGroup.add(this.reticleMesh);
+  }
+
   initLivingPlatePlanes() {
     this.platePlanes = [];
     const loader = new THREE.TextureLoader();

@@ -32,14 +32,14 @@ fn resolve_node() -> Result<PathBuf, String> {
         }
     }
 
-    Err("Node.js no pudo resolverse para el VAV local engine.".to_string())
+    Err("Node.js no pudo resolverse para el ABRAXAS local engine.".to_string())
 }
 
 fn full_alpha_cli() -> Result<PathBuf, String> {
     PathBuf::from(env!("CARGO_MANIFEST_DIR"))
         .join("../../../services/local-engine/src/full-alpha-cli.ts")
         .canonicalize()
-        .map_err(|error| format!("Full Alpha CLI no encontrado: {error}"))
+        .map_err(|error| format!("ABRAXAS CLI no encontrado: {error}"))
 }
 
 #[tauri::command]
@@ -51,11 +51,12 @@ async fn run_full_alpha_engine(command: String, payload: Value) -> Result<Value,
             .map_err(|error| format!("Payload no serializable: {error}"))?;
 
         let output = Command::new(node)
+            .arg("--experimental-strip-types")
             .arg(cli)
             .arg(command)
             .arg(payload_text)
             .output()
-            .map_err(|error| format!("No pude iniciar VAV local engine: {error}"))?;
+            .map_err(|error| format!("No pude iniciar ABRAXAS local engine: {error}"))?;
 
         if !output.status.success() {
             let stderr = String::from_utf8_lossy(&output.stderr).trim().to_string();
@@ -80,5 +81,5 @@ pub fn run() {
             run_full_alpha_engine
         ])
         .run(tauri::generate_context!())
-        .expect("error while running VAV Captions");
+        .expect("error while running ABRAXAS OS");
 }

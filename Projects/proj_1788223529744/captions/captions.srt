@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:01,000
+El laboratorio no debería decidir una lista,
+
+2
+00:00:01,000 --> 00:00:03,000
+debería decidir una hipótesis.
+
+3
+00:00:04,000 --> 00:00:06,000
+En la plataforma hoy, la idea es
+
+4
+00:00:06,000 --> 00:00:07,000
+que funciona así.
+
+5
+00:00:08,000 --> 00:00:11,000
+El usuario puede ser el director de
+
+6
+00:00:11,000 --> 00:00:13,000
+investigación y desarrollo de una farmacéutica
+
+7
+00:00:13,000 --> 00:00:16,000
+o el director de investigación y desarrollo
+
+8
+00:00:16,000 --> 00:00:18,000
+en una industria cosmética, por ejemplo,
+
+9
+00:00:19,000 --> 00:00:22,000
+o un estudiante, un investigador de universidad
+
+10
+00:00:22,000 --> 00:00:24,000
+que esté desarrollando
+
+11
+00:00:24,000 --> 00:00:26,000
+o que quiera investigar productos reactivos.
+
+12
+00:00:26,000 --> 00:00:29,000
+Entonces, todos van a tener su propia
+
+13
+00:00:29,000 --> 00:00:31,000
+necesidad o algo que quieran resolver.
+
+14
+00:00:32,000 --> 00:00:34,000
+Entonces, MOCA lo que hace en este
+
+15
+00:00:34,000 --> 00:00:37,000
+punto es organizar primero toda la información
+
+16
+00:00:37,000 --> 00:00:37,000
+disponible
+
+17
+00:00:37,000 --> 00:00:39,000
+de las plantas, en este caso, del
+
+18
+00:00:39,000 --> 00:00:41,000
+mundo que hay en general,
+
+19
+00:00:41,000 --> 00:00:44,000
+y particularmente estas plantas latinoamericanas.
+
+20
+00:00:44,000 --> 00:00:45,000
+Entonces, hoy,

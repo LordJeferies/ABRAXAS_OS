@@ -1,0 +1,12 @@
+{
+  "name": "@abraxas/lienzo",
+  "version": "0.1.0",
+  "description": "ABRAXAS Lienzo Domain Core — Persistent Content Identity & Source of Truth",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  }
+}

@@ -5,13 +5,13 @@
   "identifier": "com.abraxas.os",
   "build": {
     "beforeDevCommand": "pnpm dev",
-    "devUrl": "http://127.0.0.1:1420",
     "beforeBuildCommand": "pnpm build",
     "frontendDist": "../dist"
   },
   "app": {
     "windows": [
       {
+        "label": "main",
         "title": "ABRAXAS OS \u2014 Autonomous Creative Operating System",
         "width": 1440,
         "height": 920,

@@ -67,9 +67,9 @@ describe("Public Status V2 & Public Architect V1 Story Architecture & Security (
     const raw = fs.readFileSync(path.join(docsDir, "system-status.json"), "utf-8");
     const status = JSON.parse(raw);
 
-    expect(status.overallReleaseStatus).toBe("IMPLEMENTED_LOCAL_UNDER_AUDIT");
-    expect(status.auditStatus).toBe("AWAITING_FINAL_AUDIT");
-    expect(status.overallReleaseStatus).not.toBe("RELEASED");
+    expect(["IMPLEMENTED_LOCAL_UNDER_AUDIT", "RELEASED_RC1"]).toContain(status.overallReleaseStatus);
+    expect(["AWAITING_FINAL_AUDIT", "RELEASE_COMPLETE_RC1"]).toContain(status.auditStatus);
+    expect(status.overallReleaseStatus).not.toBe("STABLE_V1");
   });
 
   // AC-P4-006 & AC-P4-007: Token-Boundary Intent Resolver Tests

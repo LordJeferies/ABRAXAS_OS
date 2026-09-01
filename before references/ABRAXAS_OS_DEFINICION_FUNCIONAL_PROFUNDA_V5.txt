@@ -1,0 +1,1497 @@
+ABRAXAS OS — DEFINICIÓN FUNCIONAL PROFUNDA V5
+Documento de arquitectura funcional, lógica de fondo y relación entre herramientas
+Fecha: 2026-08-28
+
+======================================================================
+0. OBJETIVO DE ESTE DOCUMENTO
+======================================================================
+
+Este documento no intenta resumir ABRAXAS OS en una frase corta. Su objetivo
+es explicar cómo piensa el sistema, qué problema resuelve, por qué existen sus
+módulos, qué información es responsabilidad de cada uno, cómo se conectan y
+qué debe ocurrir desde que aparece una oportunidad de contenido hasta que esa
+pieza se publica, produce métricas y modifica el aprendizaje futuro.
+
+La definición funcional debe servir para:
+
+- explicar ABRAXAS OS a una persona nueva;
+- orientar a un diseñador o desarrollador;
+- evitar duplicar responsabilidades entre módulos;
+- permitir que Arquitecto explique el sistema;
+- distinguir inteligencia, interfaz, producción y evidencia;
+- preservar la filosofía original de ABRAXAS mientras se moderniza;
+- servir como autoridad conceptual antes de implementar nuevas funciones.
+
+Este documento describe principalmente la arquitectura objetivo aprobada.
+Cuando se menciona implementación histórica o estado real, debe validarse
+contra el repo y los tests antes de afirmar que está funcionando hoy.
+
+======================================================================
+1. QUÉ ES ABRAXAS OS
+======================================================================
+
+ABRAXAS OS es un sistema operativo para crear, producir, organizar, gerenciar,
+publicar y aprender de contenidos de manera trazable.
+
+Su diferencia principal frente a una aplicación de marketing convencional es
+que no trata cada fase como una herramienta aislada.
+
+No existe una app para ideas desconectada de otra para copy, otra para video,
+otra para calendario y otra para métricas sin una memoria común.
+
+ABRAXAS intenta mantener una identidad continua:
+
+CLIENTE
+   ↓
+OPORTUNIDAD
+   ↓
+PLAN
+   ↓
+LIENZO
+   ↓
+FUENTES / GRABACIÓN
+   ↓
+RESOLUCIÓN
+   ↓
+PRODUCCIÓN
+   ↓
+QA
+   ↓
+PUBLICACIÓN
+   ↓
+MÉTRICAS
+   ↓
+APRENDIZAJE
+
+La pieza conserva el mismo content_id durante todo ese recorrido.
+
+El sistema busca que una decisión tomada temprano pueda ser entendida más
+tarde y que un resultado posterior pueda explicar de dónde vino.
+
+Por eso ABRAXAS OS no se define por una pantalla.
+Se define por una red de objetos, criterios, contratos, estados y eventos.
+
+======================================================================
+2. LA TESIS CENTRAL: CONVERTIR CRITERIO EN INFRAESTRUCTURA
+======================================================================
+
+Una gran parte del trabajo creativo tradicional depende de conocimiento
+implícito:
+
+“este hook funciona para este cliente”;
+“esta toma necesita un push-in”;
+“este carrusel no debe cerrar así”;
+“esa promesa no está respaldada por la fuente”;
+“este copy no coincide con lo que realmente se grabó”;
+“esta estructura ya se usó demasiado este mes”;
+“este editor está bloqueado esperando aprobación”.
+
+ABRAXAS busca convertir ese conocimiento implícito en objetos reutilizables:
+
+CLIENT CORE
+FORMAT
+STRUCTURE
+PATTERN
+PROMPT COMPONENT
+COPY PROFILE
+VISUAL CRITERIA
+MOTION FAMILY
+SOURCE CLAIM
+TASK
+DEPENDENCY
+EVENT
+ARTIFACT
+PUBLICATION TARGET
+METRIC SNAPSHOT
+LEARNING SIGNAL
+
+La frase “convertir criterio en infraestructura” significa que una decisión
+editorial o productiva importante debe poder almacenarse, consultarse,
+versionarse, reutilizarse, compararse y auditarse.
+
+======================================================================
+3. LAS CINCO CAPAS DEL SISTEMA
+======================================================================
+
+ABRAXAS OS puede entenderse en cinco capas funcionales.
+
+CAPA 1 — INTELIGENCIA
+YOD
+Client Intelligence
+Content Intelligence
+Prompt Intelligence
+Copy Intelligence
+Visual Intelligence
+Motion Intelligence
+Source Truth
+Learning
+
+CAPA 2 — OBJETO VIVO
+LIENZO
+PLAN
+TASK
+EVENT
+ARTIFACT
+
+CAPA 3 — RESOLUCIÓN Y PRODUCCIÓN
+SHIM
+VAV
+Workers
+Renderers
+AI Runtime
+Universal Intake
+
+CAPA 4 — OPERACIÓN
+HE
+Calendar
+Kanban
+Team Management
+Time Tracking
+Notifications
+Approvals
+Publishing
+Metrics views
+
+CAPA 5 — ACOMPAÑAMIENTO
+ARQUITECTO
+Navigation
+Coach
+Director
+Producer
+QA
+System Help
+Public Architect
+
+Estas capas no deben confundirse.
+
+YOD no debe convertirse en un dashboard.
+He no debe convertirse en el almacén de criterio.
+VAV no debe decidir arbitrariamente la estrategia editorial.
+Arquitecto no debe tener una segunda copia de toda la base de conocimiento.
+Shim no debe inventar información.
+Lienzo no debe convertirse en un simple documento plano.
+
+======================================================================
+4. YOD — EL CEREBRO DE INTELIGENCIA Y MEMORIA
+======================================================================
+
+YOD existe porque la inteligencia de contenidos no debe quedar repartida en
+cientos de HTMLs, prompts o archivos específicos de clientes.
+
+YOD representa la memoria estructurada de ABRAXAS.
+
+YOD responde preguntas como:
+
+- ¿qué sabemos de este cliente?
+- ¿qué temas y pilares trabaja?
+- ¿qué estructuras existen?
+- ¿qué estructura encaja con este objetivo?
+- ¿qué formatos ya usamos demasiado?
+- ¿qué tipo de hook está repetido?
+- ¿qué promesas puede hacer esta marca?
+- ¿qué fuentes respaldan una afirmación?
+- ¿qué contenido hace falta crear?
+- ¿qué contenido funcionó antes?
+- ¿qué patrón conviene repetir o evitar?
+- ¿qué prompt debe compilarse para esta tarea?
+- ¿qué visual cumple una función real?
+- ¿qué copy necesita este canal?
+- ¿qué motion es semánticamente adecuado?
+
+YOD no debe “tener creatividad” como una caja negra.
+
+Debe almacenar y combinar criterios explícitos.
+
+----------------------------------------------------------------------
+4.1 Client Intelligence
+----------------------------------------------------------------------
+
+Client Intelligence representa la memoria estable y versionada de cada marca.
+
+Debe distinguir:
+
+IDENTIDAD
+- propósito;
+- posicionamiento;
+- tono;
+- personalidad;
+- vocabulario;
+- restricciones.
+
+NEGOCIO
+- oferta;
+- audiencia;
+- objetivos;
+- productos;
+- mecanismos;
+- diferenciadores.
+
+CONTENIDO
+- pilares;
+- formatos;
+- canales;
+- cadencia;
+- niveles de profundidad;
+- tipos de CTA.
+
+SOURCE TRUTH
+- hechos aprobados;
+- fuentes;
+- claims permitidos;
+- claims prohibidos;
+- incógnitas.
+
+LEARNING
+- hipótesis aprendidas;
+- estructuras que mejor rinden;
+- temas saturados;
+- hooks exitosos;
+- tiempos de producción;
+- observaciones.
+
+La regla importante es:
+LEARNING no debe sobrescribir SOURCE TRUTH.
+
+Una inferencia estadística del sistema no se convierte automáticamente en
+verdad de marca.
+
+----------------------------------------------------------------------
+4.2 Content Intelligence
+----------------------------------------------------------------------
+
+Content Intelligence responde:
+“¿qué pieza merece existir y cómo debería pensar?”
+
+Debe separar:
+
+TEMA
+IDEA
+TESIS
+OBJETIVO
+FORMATO
+ESTRUCTURA
+PATRÓN
+HOOK
+PROGRESIÓN
+PAYOFF
+CTA
+SOURCE REQUIREMENTS
+VISUAL LOGIC
+COPY LOGIC
+
+Ejemplo:
+
+TEMA:
+liderazgo.
+
+IDEA:
+haber ejecutado varias funciones al principio puede mejorar el criterio con
+el que luego delegas.
+
+OBJETIVO:
+Authority.
+
+FORMATO:
+SHORT_VERTICAL_VIDEO.
+
+ESTRUCTURA:
+EVIDENCE → LIMITATION → DECISION.
+
+Esa separación evita la creación genérica.
+
+----------------------------------------------------------------------
+4.3 Opportunity Engine
+----------------------------------------------------------------------
+
+YOD no debe depender de que el usuario llegue con una idea.
+
+Opportunity Engine analiza:
+
+Client Core
++
+pilares
++
+historial
++
+coverage
++
+format mix
++
+structure mix
++
+hook history
++
+CTA history
++
+calendario
++
+métricas
++
+fuentes disponibles
++
+objetivos
+
+y detecta huecos.
+
+Ejemplo:
+
+“Este cliente lleva 23 días sin contenido de evidencia.”
+“Se usó CONTRAST cinco veces en diez piezas.”
+“Hay una entrevista con material no explotado.”
+“LinkedIn tiene poca cobertura.”
+“Hay buen rendimiento de CASE pero poca frecuencia.”
+
+La salida no debería ser “50 ideas”.
+Debe ser una oportunidad razonada.
+
+----------------------------------------------------------------------
+4.4 Format Library
+----------------------------------------------------------------------
+
+Format Library describe qué se produce físicamente.
+
+Ejemplos:
+SHORT_VERTICAL_VIDEO
+CAROUSEL
+PODCAST
+LONGFORM_VIDEO
+STORY_SET
+IMAGE_POST
+LINKEDIN_POST
+
+Cada formato define:
+duración/rango;
+aspect ratio;
+componentes;
+cantidad de slides;
+reglas de edición;
+restricciones;
+derivados posibles;
+requisitos de assets.
+
+FORMATO no define el pensamiento narrativo.
+
+----------------------------------------------------------------------
+4.5 Structure Registry
+----------------------------------------------------------------------
+
+Structure Registry describe cómo progresa una pieza.
+
+Ejemplos seed:
+DIAGNOSIS
+CONTRAST
+EVIDENCE
+CASE
+PROCESS
+MYTH
+STORY
+FRAMEWORK
+DECISION
+DEMO
+
+Cada Structure debería almacenar:
+
+structure_id
+name
+version
+family
+applicable_formats[]
+hook_logic
+beats[]
+reengagement
+payoff
+cta_logic
+source_requirements
+visual_affinities
+copy_affinities
+good_examples
+bad_examples
+client_overrides
+confidence
+provenance
+
+La biblioteca definitiva debe salir de minería forense de contenidos reales,
+no de inventar nombres elegantes.
+
+----------------------------------------------------------------------
+4.6 Cadence / Coverage Engine
+----------------------------------------------------------------------
+
+El sistema no debe evaluar cada contenido aislado.
+
+Debe entender el lote.
+
+Debe vigilar:
+pilares;
+formatos;
+estructuras;
+hooks;
+objetivos;
+energía;
+CTA;
+plataformas;
+frecuencia;
+repetición;
+cannibalization.
+
+Un contenido puede ser bueno individualmente y malo para el plan si repite
+exactamente lo que se publicó ayer.
+
+----------------------------------------------------------------------
+4.7 Prompt Intelligence
+----------------------------------------------------------------------
+
+Un prompt ABRAXAS no es un párrafo improvisado.
+
+Es una especificación compilada.
+
+ROLE
+OBJECTIVE
+CONTEXT
+INPUTS
+WHAT IT IS
+WHAT IT IS NOT
+STRUCTURE
+CLIENT RULES
+FORMAT RULES
+PLATFORM RULES
+SOURCE EVIDENCE
+RESTRICTIONS
+NEGATIVES
+OUTPUT CONTRACT
+ACCEPTANCE CRITERIA
+QA
+HANDOFF
+CONTINUITY
+
+YOD almacena los componentes.
+Prompt Compiler produce la versión final.
+
+Esto permite:
+versionado;
+reuso;
+debugging;
+comparación;
+auditoría;
+roundtrip;
+providers diferentes.
+
+----------------------------------------------------------------------
+4.8 Copy Intelligence
+----------------------------------------------------------------------
+
+Copy no debe aparecer solo al final.
+
+El primer draft puede nacer cuando nace el Lienzo.
+
+MASTER COPY
+↓
+PLATFORM VARIANTS
+
+YOD crea según intención.
+Shim revisa según material real.
+Arquitecto sugiere.
+Usuario aprueba/edita.
+
+Si el contenido cambia:
+copy puede quedar OUT_OF_SYNC.
+
+Copy tiene función, no solo longitud.
+
+CONTEXTUALIZE
+EXTEND
+TRANSFER
+CONVERT
+DISCUSS
+SOURCE
+FRAME
+
+----------------------------------------------------------------------
+4.9 Visual Intelligence
+----------------------------------------------------------------------
+
+Visual Intelligence responde:
+“¿qué función tiene este visual?”
+
+Funciones:
+EXPLAIN
+CONTRAST
+ANCHOR
+PROVE
+ORIENT
+HUMANIZE
+SYMBOLIZE
+CREATE_TENSION
+SHOW_PROCESS
+SHOW_RESULT
+
+Pregunta obligatoria:
+“¿Qué se pierde si este visual desaparece?”
+
+Si no se pierde nada, probablemente es decoración.
+
+----------------------------------------------------------------------
+4.10 Motion Intelligence
+----------------------------------------------------------------------
+
+Motion Intelligence no es el renderer.
+
+Decide:
+por qué;
+cuándo;
+qué tipo;
+duración;
+relación con source;
+relación con captions;
+tracking;
+depth;
+fallback.
+
+Luego VAV ejecuta.
+
+Eso separa inteligencia semántica de tecnología de render.
+
+======================================================================
+5. LIENZO — EL OBJETO VIVO DE CADA CONTENIDO
+======================================================================
+
+Lienzo es probablemente el objeto más importante de ABRAXAS OS.
+
+No es una tarjeta de Trello.
+No es un HTML.
+No es un formulario.
+No es un render.
+
+Es la identidad persistente de una pieza.
+
+Debe poder responder:
+
+¿qué intentábamos hacer?
+¿qué planeamos?
+¿qué material llegó?
+¿qué encontró Shim?
+¿qué resolvimos?
+¿qué copy estaba aprobado?
+¿qué versión de portada generó este JPG?
+¿qué motion produjo este render?
+¿quién aprobó?
+¿dónde se publicó?
+¿qué métricas obtuvo?
+¿qué aprendimos?
+
+----------------------------------------------------------------------
+5.1 Capas del Lienzo
+----------------------------------------------------------------------
+
+CORE:
+identidad estable.
+
+STRATEGY:
+objetivo, audiencia, pilar, tesis.
+
+PLANNED:
+lo que se esperaba producir.
+
+OBSERVED:
+lo que realmente está presente en la fuente.
+
+RESOLVED:
+decisión editorial confirmada.
+
+PRODUCTION:
+edit, captions, motions, audio, visuales.
+
+DISTRIBUTION:
+variantes/assets finales.
+
+PUBLICATION:
+targets y snapshots.
+
+LEARNING:
+métricas y observaciones.
+
+HISTORY:
+versiones, eventos y decisiones.
+
+Nunca mezclar:
+PLANNED
+con OBSERVED
+con RESOLVED.
+
+======================================================================
+6. SHIM — DE MATERIAL REAL A DECISIÓN EDITORIAL
+======================================================================
+
+Shim existe para evitar que el sistema crea que lo planeado es exactamente lo
+que ocurrió en una grabación.
+
+Shim toma material real:
+
+video
+audio
+transcript
+documentos
+entrevista
+podcast
+source assets
+
+y responde:
+
+¿qué se dijo?
+¿qué existe?
+¿quién lo dijo?
+¿en qué timestamp?
+¿qué estructura puede construirse?
+¿qué falta?
+¿qué claim está respaldado?
+¿qué candidato merece revisión?
+
+Pipeline:
+
+SOURCE
+→ INGEST
+→ TRANSCRIBE / PARSE
+→ SEGMENT
+→ DETECT CANDIDATES
+→ MATCH STRUCTURES
+→ FIND GAPS
+→ HUMAN REVIEW
+→ RESOLVE
+→ UPDATE LIENZO
+
+Shim no debe inventar un beat que no está grabado.
+
+Si falta:
+FOUND / MISSING.
+
+YOD puede formular una pregunta.
+Arquitecto puede guiar una nueva toma.
+La nueva toma vuelve a Shim.
+
+======================================================================
+7. VAV — BRAZO DE PRODUCCIÓN AUDIOVISUAL
+======================================================================
+
+VAV recibe intención estructurada.
+
+No debería tener que adivinar:
+qué queremos decir;
+qué hook usar;
+qué claim es cierto;
+qué estructura conviene.
+
+Su trabajo es materializar.
+
+Áreas:
+
+CUTS
+CAPTIONS
+MOTIONS
+SIMPLE MOTION
+VISUAL LAYERS
+AUDIO
+VFX
+SFX
+RENDER
+QA
+EXPORT
+
+Cada acción relevante debe devolver estado al Lienzo.
+
+Ejemplo:
+
+CAPTIONS_COMPLETED
+version: 4
+artifact: CAPTION_PLAN_004
+rendered: true
+
+No basta con guardar:
+final_v7_REAL_final.mp4
+
+Debe existir Artifact Registry.
+
+======================================================================
+8. VAV SIMPLE MOTION — MOVIMIENTO ÚTIL Y DETERMINISTA
+======================================================================
+
+No todo necesita una Motion Family compleja.
+
+ABRAXAS necesita un nivel básico elegante:
+
+zoom in/out
+push/pull
+pan
+scale
+translate
+subtle rotation
+crop reveal
+mask reveal
+parallax
+dip
+blur
+match transition
+controlled whip
+simple speed ramp
+
+Objetivo:
+resolver el 80% de movimientos simples de manera consistente.
+
+YOD:
+decide si conviene.
+
+Arquitecto:
+explica cómo.
+
+VAV:
+renderiza.
+
+======================================================================
+9. HE — LA VENTANA OPERATIVA Y GERENCIAL
+======================================================================
+
+He es donde una persona “vive” operativamente dentro de ABRAXAS.
+
+No debe almacenar el conocimiento original.
+Debe consultarlo y hacerlo accionable.
+
+He responde:
+
+¿qué clientes tengo?
+¿qué oportunidades existen?
+¿qué contenidos están abiertos?
+¿qué falta?
+¿qué está atrasado?
+¿quién hace qué?
+¿qué espera aprobación?
+¿qué grabación viene?
+¿qué debo hacer ahora?
+¿qué está listo para publicar?
+¿qué métricas llegaron?
+
+----------------------------------------------------------------------
+9.1 Solo Mode
+----------------------------------------------------------------------
+
+Para una persona:
+
+“Dónde quedé.”
+“Qué sigue.”
+“Qué está bloqueado.”
+“Qué vence.”
+“Qué puedo hacer ahora.”
+“Cuánto tiempo llevo.”
+
+El sistema puede derivar Next Action usando dependencias.
+
+----------------------------------------------------------------------
+9.2 Team Mode
+----------------------------------------------------------------------
+
+Para gerente/supervisor:
+
+personas;
+roles;
+asignaciones;
+reviews;
+deadline risk;
+workload;
+blocked/waiting;
+handoffs;
+grabaciones;
+actividad.
+
+Solo y Team deben usar la misma base.
+
+----------------------------------------------------------------------
+9.3 Task Engine
+----------------------------------------------------------------------
+
+Task puede estar ligada o no a un Lienzo.
+
+Ejemplos creativos:
+editar;
+copy;
+motion;
+QA.
+
+Ejemplos operativos:
+ir a grabar;
+alquilar estudio;
+comprar prop;
+llamar cliente;
+organizar archivos.
+
+Campos:
+task_id
+assigned_to
+due_at
+priority
+depends_on
+blocked_by
+waiting_for
+reviewers
+estimated_time
+tracked_time
+
+----------------------------------------------------------------------
+9.4 Kanban
+----------------------------------------------------------------------
+
+BACKLOG
+READY
+IN_PROGRESS
+REVIEW
+BLOCKED
+DONE
+
+No es solo visual.
+
+Si QA depende de Motion:
+no debería pasar a READY sin Motion,
+salvo override autorizado.
+
+----------------------------------------------------------------------
+9.5 Calendar
+----------------------------------------------------------------------
+
+El calendario debe manejar:
+
+publication targets;
+tasks;
+recording sessions;
+meetings;
+deadlines;
+production milestones.
+
+Una fecha de publicación no sustituye todos los deadlines internos.
+
+----------------------------------------------------------------------
+9.6 Time Tracking
+----------------------------------------------------------------------
+
+Clockify-like interno:
+
+START
+PAUSE
+RESUME
+STOP
+MANUAL ENTRY
+
+Reportes:
+persona;
+cliente;
+pieza;
+task;
+proceso.
+
+Esto permite aprender cuánto cuesta producir realmente.
+
+----------------------------------------------------------------------
+9.7 Notifications
+----------------------------------------------------------------------
+
+Inicialmente in-app.
+
+deadline;
+assignment;
+review;
+dependency;
+render;
+publication;
+recording;
+Architect suggestion.
+
+Más adelante:
+push/email/Slack.
+
+======================================================================
+10. ARQUITECTO — PRESENCIA CONTEXTUAL TRANSVERSAL
+======================================================================
+
+Arquitecto no es únicamente un chat.
+
+Es una capa de asistencia que conoce:
+
+WHERE YOU ARE
+WHAT YOU ARE DOING
+WHAT CAME BEFORE
+WHAT IS NEXT
+WHAT IS BLOCKED
+WHAT THE SYSTEM EXPECTS
+
+Roles:
+
+NAVIGATOR
+COACH
+PRODUCER
+DIRECTOR
+EDITORIAL ADVISOR
+COPY COACH
+VISUAL COACH
+MOTION COACH
+RECORDING DIRECTOR
+QA
+TECHNICAL GUIDE
+
+Ejemplo:
+usuario está editando afuera en DaVinci.
+
+Arquitecto puede responder:
+
+“Estás en MOKA-R052, Edit v5.
+La estructura aprobada es CASE→MECHANISM→DECISION.
+En P2 conviene mantener source 2.4s.
+Luego usa push 103→108%.
+Motion M03 entra después del mechanism.
+No pongas SFX en cada corte.
+Copy está todavía basado en Resolved v3 y ahora el Edit Lock usa v4;
+deberás revisarlo al cerrar.”
+
+Arquitecto debe usar datos reales, no fingir contexto.
+
+======================================================================
+11. AI RUNTIME — IA COMO PROVIDER, NO COMO SISTEMA
+======================================================================
+
+Todo paso que pueda beneficiarse de IA debe poder elegir una ruta.
+
+LOGIC
+MANUAL
+EXTERNAL_ROUNDTRIP
+API_PROVIDER
+OLLAMA
+MCP
+LOCAL_MODEL
+
+Un mismo AI Job debe ser ejecutable por providers diferentes.
+
+El provider declara capacidades:
+
+TEXT
+VISION
+IMAGE_GENERATION
+IMAGE_EDIT
+VIDEO_ANALYSIS
+TRANSCRIPTION
+TOOLS
+STRUCTURED_OUTPUT
+LOCAL_ONLY
+
+La app puede recomendar un provider.
+El usuario decide.
+
+======================================================================
+12. ROUNDTRIP — IA EXTERNA SIN INTEGRACIÓN
+======================================================================
+
+ABRAXAS debe funcionar aunque no haya API.
+
+Exporta:
+AI_JOB.txt
+
+El usuario lo abre en ChatGPT/Claude/Gemini/etc.
+
+La IA devuelve:
+AI_RESULT.txt
+
+Dos capas:
+
+HUMAN RESPONSE
++
+MACHINE RESULT JSON
+
+Después:
+
+PARSE
+→ VALIDATE
+→ QA
+→ DIFF
+→ HUMAN ACCEPT
+→ LIENZO
+
+Esto convierte “copiar y pegar prompts” en un workflow formal.
+
+======================================================================
+13. UNIVERSAL INTAKE — EL SISTEMA ACEPTA TRABAJO EXTERNO
+======================================================================
+
+ABRAXAS no debe encerrar al usuario.
+
+Debe aceptar:
+TXT
+MD
+JSON
+CSV
+PNG/JPG/WEBP
+MP4/MOV
+WAV/MP3
+PDF
+DOCX
+ZIP
+
+Flow:
+
+IMPORT
+→ DETECT TYPE
+→ HASH
+→ PROVENANCE
+→ TARGET
+→ PREVIEW
+→ VALIDATE
+→ ACCEPT
+→ ARTIFACT + EVENT
+
+Así alguien puede:
+editar en DaVinci;
+crear una imagen en otra IA;
+hacer un copy en ChatGPT;
+grabar fuera;
+y volver al mismo Lienzo.
+
+======================================================================
+14. PUBLISHING — UNA PIEZA, MUCHOS TARGETS
+======================================================================
+
+El contenido no debe tener “una fecha” global.
+
+Puede existir:
+
+Instagram lunes 10:00
+TikTok lunes 18:00
+LinkedIn martes 09:00
+YouTube miércoles
+
+Cada target guarda snapshot de:
+asset;
+copy;
+cover;
+metadata;
+account;
+time;
+version.
+
+Así una edición futura del Lienzo no muta lo ya programado.
+
+======================================================================
+15. METRICS — REALIDAD DEL MERCADO
+======================================================================
+
+Metrics cierra el ciclo.
+
+Raw:
+views;
+reach;
+watch time;
+retention;
+likes;
+comments;
+shares;
+saves;
+clicks;
+leads;
+conversions.
+
+Normalized:
+ATTENTION
+RETENTION
+ENGAGEMENT
+AMPLIFICATION
+CONVERSION
+
+He muestra.
+
+YOD aprende.
+
+Pero aprendizaje != verdad absoluta.
+
+Los signals deben conservar:
+confidence;
+source;
+window;
+version;
+sample size.
+
+======================================================================
+16. EVENT LOG — MEMORIA DE LO QUE OCURRIÓ
+======================================================================
+
+ABRAXAS debe saber no solo “cómo está” un objeto, sino “cómo llegó ahí”.
+
+Ejemplo:
+
+COPY_CREATED v1
+COPY_EDITED v2
+SHIM_RESOLVED v4
+COPY_OUT_OF_SYNC
+COPY_UPDATED v3
+COPY_APPROVED
+
+Event Log permite:
+auditoría;
+undo/recovery;
+Activity Feed;
+dependencias;
+notifications;
+learning;
+debugging.
+
+======================================================================
+17. ARTIFACT REGISTRY — MEMORIA DE LO PRODUCIDO
+======================================================================
+
+Artifact Registry conecta archivos con decisiones.
+
+Ejemplo:
+
+cover_v3.png
+
+no basta.
+
+Debe saberse:
+
+artifact_id
+type=cover_image
+version=3
+based_on=cover_plan_v4
+provider=external_ai
+prompt_job=ABX-029
+hash=...
+created_at=...
+status=approved
+
+Ese modelo permite saber cuándo un output queda OUT_OF_SYNC.
+
+======================================================================
+18. IMPACT GRAPH — EDITABILIDAD SIN REGENERAR TODO
+======================================================================
+
+El sistema debe conocer dependencias.
+
+Cambiar Hook podría afectar:
+
+Copy
+Cover
+Motion Title
+Caption emphasis
+
+Pero no Audio.
+
+Entonces He muestra:
+
+CHANGE IMPACT
+3 components affected.
+
+El usuario decide qué actualizar.
+
+Esta lógica es fundamental para que Lienzo sea verdaderamente editable.
+
+======================================================================
+19. APPROVALS, PERMISSIONS Y RESPONSABILIDAD
+======================================================================
+
+Para operar equipos profesionalmente se necesitan dos capas adicionales.
+
+RBAC:
+qué puede hacer cada persona.
+
+APPROVAL:
+quién tiene que aceptar una versión.
+
+Ejemplo:
+
+Editor termina Edit Lock.
+Producer approves.
+Motion starts.
+QA waits.
+Manager can override.
+
+Sin esto, He sería un Trello bonito, no una herramienta gerencial.
+
+======================================================================
+20. AUTOMATION RULE ENGINE
+======================================================================
+
+La gestión puede automatizarse con reglas explícitas.
+
+WHEN Edit Lock DONE
+THEN create Captions Task
+AND notify Caption Editor.
+
+WHEN deadline <24h
+AND status != DONE
+THEN notify Manager.
+
+WHEN Shim GAP detected
+THEN create Recording Follow-up.
+
+Automation no debe ser IA arbitraria.
+
+TRIGGER
+CONDITIONS
+ACTIONS
+
+Arquitecto puede sugerir.
+Humano aprueba.
+
+======================================================================
+21. JOB QUEUE / BACKGROUND WORK
+======================================================================
+
+Transcripción, renders, imports y AI jobs pueden tardar.
+
+Necesitan:
+
+QUEUED
+RUNNING
+RETRYING
+COMPLETED
+FAILED
+CANCELLED
+
+progress
+heartbeat
+retry
+error
+outputs
+
+La UI no debe congelarse esperando.
+
+Notifications informa resultado.
+
+======================================================================
+22. SYSTEM HEALTH
+======================================================================
+
+ABRAXAS crece en complejidad.
+
+Necesita una vista de salud:
+
+Git
+VAV runtime
+renderer
+Ollama
+APIs
+MCP
+workers
+storage
+job queue
+schema versions
+last success
+status sync
+
+“Run Diagnostics” debe convertirse en una función central.
+
+======================================================================
+23. SEARCH / COMMAND PALETTE
+======================================================================
+
+Cuando haya cientos de objetos, navegar por menús será lento.
+
+Global Search:
+clientes;
+Lienzos;
+tasks;
+assets;
+structures;
+prompts;
+personas;
+publications.
+
+Command Palette:
+Cmd+K
+
+Arquitecto debe usar el mismo Navigation Registry.
+
+======================================================================
+24. REGISTRY STUDIO
+======================================================================
+
+Una herramienta madura no debe requerir editar JSON a mano para crecer.
+
+Registry Studio debería permitir crear:
+
+Structure
+Format
+Motion Family
+Prompt Preset
+Copy Profile
+Automation Rule
+
+Arquitecto explica campos.
+Validator protege contracts.
+
+======================================================================
+25. PUBLIC ARCHITECT
+======================================================================
+
+La página Status debe servir también como portal explicativo.
+
+Una persona que no sabe qué es ABRAXAS puede preguntar:
+
+“¿Qué hace YOD?”
+“¿Qué falta?”
+“¿Está listo?”
+“¿Cómo funciona He?”
+“¿Qué quiere llegar a ser?”
+
+V1:
+Public Knowledge local.
+
+V2:
+AI server-side.
+
+Nunca exponer:
+private repo;
+clients;
+secrets;
+private prompts.
+
+======================================================================
+26. ARQUITECTURA DE DATOS CENTRAL
+======================================================================
+
+Objetos mínimos objetivo:
+
+CLIENT
+CLIENT_CORE
+PLAN
+LIENZO
+COMPONENT
+TASK
+RECORDING_SESSION
+APPROVAL
+EVENT
+ARTIFACT
+AI_JOB
+AI_RESULT
+PROVIDER
+TIME_ENTRY
+NOTIFICATION
+PUBLICATION_TARGET
+METRIC_SNAPSHOT
+LEARNING_SIGNAL
+AUTOMATION_RULE
+USER
+ROLE
+PERMISSION
+
+La fortaleza de ABRAXAS no depende de una pantalla.
+Depende de que estos objetos tengan contratos claros y relaciones estables.
+
+======================================================================
+27. FLUJO COMPLETO EJEMPLO
+======================================================================
+
+1. YOD detecta oportunidad:
+“poco contenido Evidence en pilar X”.
+
+2. Usuario acepta.
+
+3. Se crea Plan/Lienzo.
+
+4. YOD elige:
+format = SHORT_VERTICAL_VIDEO
+structure = EVIDENCE→LIMITATION→DECISION.
+
+5. YOD compila preguntas de grabación.
+
+6. He crea Recording Session.
+
+7. Arquitecto guía al director.
+
+8. Se graba.
+
+9. Shim ingiere/transcribe.
+
+10. Shim encuentra:
+P1 found
+P2 found
+P3 missing.
+
+11. Arquitecto pide toma adicional.
+
+12. Shim resuelve.
+
+13. Copy v1 queda OUT_OF_SYNC.
+Shim/YOD proponen Copy v2.
+
+14. He crea Edit Task.
+
+15. Editor usa VAV o DaVinci externo.
+
+16. Edit Lock v4.
+
+17. VAV Captions genera plan.
+
+18. YOD/Arquitecto recomiendan Motion.
+
+19. VAV Simple Motion ejecuta push/pan.
+VAV Motions ejecuta motion complejo.
+
+20. QA.
+
+21. Cover cambia.
+Impact Graph marca render final.
+
+22. Regeneración selectiva.
+
+23. Publication Targets:
+IG
+TikTok
+LinkedIn.
+
+24. Publishing snapshots.
+
+25. Metrics llegan.
+
+26. He muestra performance.
+
+27. YOD crea Learning Signal.
+
+28. Opportunity Engine usa ese signal en próximos planes.
+
+Ese es ABRAXAS OS funcionando como sistema.
+
+======================================================================
+28. QUÉ NO DEBE VOLVERSE ABRAXAS
+======================================================================
+
+No debe convertirse en:
+
+- un monolito donde cada módulo conoce todo;
+- un generador de texto sin contratos;
+- un sistema que inventa evidencia;
+- un gestor de archivos sin provenance;
+- un Trello desconectado de producción;
+- un editor que ignora estrategia;
+- una IA que cambia contenido sin review;
+- una colección de HTMLs independientes;
+- un sistema donde el mismo dato se copia en cinco sitios;
+- una plataforma que obliga a abandonar herramientas externas;
+- una base donde todas las versiones antiguas se destruyen.
+
+======================================================================
+29. DEFINICIÓN FINAL
+======================================================================
+
+ABRAXAS OS es una infraestructura creativa y operativa versionada donde el
+conocimiento de marca y contenido vive en YOD; cada pieza conserva su identidad
+en un Lienzo; Shim compara intención con evidencia real; VAV materializa la
+producción audiovisual; He coordina personas, tareas, calendarios, deadlines,
+publicación y métricas; Arquitecto acompaña al usuario con contexto del sistema
+y criterio de YOD; AI Runtime permite usar lógica, IA externa, APIs, Ollama,
+MCP o modelos locales sin cambiar los contratos; Publishing distribuye
+snapshots controlados; Metrics devuelve desempeño real; y el aprendizaje
+resultante vuelve a YOD sin borrar la historia ni convertir inferencias en
+verdad de marca.
+
+La arquitectura busca que cada decisión sea:
+trazable,
+editable,
+versionada,
+explicable,
+reutilizable,
+auditable,
+y conectada con el resultado que produjo.
+
+FIN

@@ -1,0 +1,12 @@
+#!/bin/bash
+NODE_BIN=$(which node)
+if [ -z "$NODE_BIN" ]; then
+  if [ -f "/opt/homebrew/bin/node" ]; then
+    NODE_BIN="/opt/homebrew/bin/node"
+  elif [ -f "/usr/local/bin/node" ]; then
+    NODE_BIN="/usr/local/bin/node"
+  fi
+fi
+
+CLI_PATH="/Users/lordjef/Desktop/abraxasos/VAV/01_REPO/VAV/services/local-engine/src/abraxas-cli.ts"
+exec "$NODE_BIN" --experimental-strip-types "$CLI_PATH" "$@"

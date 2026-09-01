@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+import json, re, sys
+
+try:
+    payload = json.load(sys.stdin)
+except Exception:
+    print(json.dumps({"decision":"force_ask","reason":"ABRAXAS safety gate could not parse the proposed tool call."}))
+    raise SystemExit(0)
+
+args = payload.get("toolCall", {}).get("args", {})
+cmd = args.get("CommandLine") or args.get("commandLine") or ""
+
+deny = [
+    r"\bgit\s+reset\s+--hard\b",
+    r"\bgit\s+clean\s+-[^\s]*f[^\s]*d",
+    r"\bgit\s+clean\s+-[^\s]*d[^\s]*f",
+    r"\bgit\s+push\b[^\n]*(?:--force(?:-with-lease)?|\s-f(?:\s|$))",
+    r"\bgit\s+checkout\s+--\s+\.",
+    r"\bgit\s+restore\b[^\n]*\s+\.(?:\s|$)",
+    r"\bgit\s+add\s+(?:\.|-A|--all)(?:\s|$)",
+    r"\brm\s+-rf\s+/(?:\s|$)",
+]
+
+force = [
+    r"\bgit\s+commit\b",
+    r"\bgit\s+push\b",
+    r"\bgit\s+(?:merge|rebase|cherry-pick)\b",
+    r"\brm\s+",
+    r"\bsudo\b",
+    r"\bbrew\s+install\b",
+    r"\b(?:pnpm|npm|yarn)\s+(?:install|add)\b",
+    r"\bchmod\s+-R\b",
+]
+
+for p in deny:
+    if re.search(p, cmd):
+        print(json.dumps({"decision":"deny","reason":"Blocked by ABRAXAS safety policy."}))
+        raise SystemExit(0)
+
+for p in force:
+    if re.search(p, cmd):
+        print(json.dumps({"decision":"force_ask","reason":"ABRAXAS requires explicit approval for this consequential command."}))
+        raise SystemExit(0)
+
+print(json.dumps({"decision":"ask","reason":"ABRAXAS keeps terminal commands reviewable."}))

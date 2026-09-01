@@ -1,0 +1,1891 @@
+ABRAXAS OS — LÓGICA PROFUNDA DE ARCHIVOS + ROADMAP DE EJECUCIÓN V5
+Mapa de archivos conocidos, función, autoridad, dependencias y próximos pasos
+Fecha: 2026-08-28
+
+======================================================================
+0. PROPÓSITO
+======================================================================
+
+Este documento explica la razón de existir de las familias y archivos
+actualmente conocidos del ecosistema ABRAXAS OS y propone un roadmap de
+ejecución de mayor calidad.
+
+No intenta fingir que conocemos cada archivo interno de todos los paquetes
+históricos. Cuando un gran paquete tiene cientos o miles de archivos, se
+explica su función como sistema y se indica que requiere auditoría file-level.
+
+Objetivo:
+
+PATH
+→ QUÉ ES
+→ POR QUÉ EXISTE
+→ QUÉ AUTORIDAD TIENE
+→ QUIÉN LO CONSUME
+→ QUÉ NO DEBE HACER
+→ QUÉ SIGUE
+
+======================================================================
+1. 00_START_HERE — CAPA DE ORIENTACIÓN
+======================================================================
+
+00_START_HERE/README.md
+
+Qué es:
+entrada humana al repo.
+
+Lógica:
+no debe contener el canon completo. Debe decir qué leer primero.
+
+Consumidor:
+persona nueva, desarrollador, Arquitecto System Knowledge.
+
+Siguiente:
+mantenerlo breve y apuntando a documentos autoridad.
+
+----------------------------------------------------------------------
+VAV_ECOSYSTEM_MAP.md
+----------------------------------------------------------------------
+
+Qué es:
+mapa histórico de relación ABRAXAS↔VAV.
+
+Lógica:
+explicar que ABRAXAS OS es raíz y VAV ecosistema audiovisual.
+
+Valor:
+continuidad de reorganización.
+
+Estado:
+REFERENCE/HISTORICAL ORGANIZATION.
+
+Siguiente:
+si el Master System Map V2 lo reemplaza, mantener como historial y enlazar al
+mapa actual.
+
+----------------------------------------------------------------------
+CURRENT_STATE.md
+----------------------------------------------------------------------
+
+Qué es:
+snapshot de estado creado durante reorganización.
+
+Lógica:
+conservar qué estaba GREEN en esa fase.
+
+No debe:
+tratarse como estado actual permanente.
+
+Siguiente:
+reemplazar su autoridad operativa por system-status.json + verificación live.
+
+----------------------------------------------------------------------
+WHERE_IS_EVERYTHING.md
+----------------------------------------------------------------------
+
+Qué es:
+mapa de paths de una fase.
+
+Lógica:
+ayudar durante migración.
+
+Riesgo:
+paths pueden quedar obsoletos después de centralización.
+
+Siguiente:
+convertirlo en una “Location Registry” generada/verificada, no manual.
+
+----------------------------------------------------------------------
+TARGET_STRUCTURE.md
+----------------------------------------------------------------------
+
+Qué es:
+estructura objetivo histórica de carpetas.
+
+Lógica:
+guió la reorganización.
+
+Estado:
+HISTORICAL DESIGN que luego fue parcialmente ejecutado.
+
+Siguiente:
+compararlo con ABRAXAS_OS_TARGET_FOLDER_STRUCTURE_V2.md.
+
+----------------------------------------------------------------------
+PHASE2_MOVE_PLAN.md
+----------------------------------------------------------------------
+
+Qué es:
+plan previo a una migración.
+
+Estado:
+HISTORICAL EXECUTION PLAN.
+
+No debe:
+usarse como tarea actual sin verificar si la fase ya ocurrió.
+
+======================================================================
+2. FOUNDATION V2 — DOCUMENTOS RAÍZ
+======================================================================
+
+ABRAXAS_OS_FOUNDATION_V2_README.md
+
+Función:
+explicar qué agregó Foundation V2.
+
+Autoridad:
+CANON/RELEASE NOTE.
+
+Consumidor:
+nuevo chat, developer, Arquitecto.
+
+Siguiente:
+crear Foundation V3 release note cuando los nuevos contracts se instalen.
+
+----------------------------------------------------------------------
+ABRAXAS_OS_MASTER_CRITERIA_V2.md
+----------------------------------------------------------------------
+
+Función:
+canon global de criterio.
+
+Debe responder:
+qué es/qué no es,
+roles,
+calidad,
+prompt,
+copy,
+visual,
+motion,
+Lienzo,
+AI,
+publishing,
+metrics,
+Git.
+
+Autoridad:
+ALTA.
+
+Siguiente:
+no inflarlo con detalles de implementación; referencias técnicas deben vivir
+en specs específicas.
+
+----------------------------------------------------------------------
+ABRAXAS_OS_MASTER_SYSTEM_MAP_V2.md
+----------------------------------------------------------------------
+
+Función:
+mapa de módulos y relaciones.
+
+Lógica:
+documentar ownership de datos y fronteras.
+
+Siguiente:
+actualizar con AI Runtime, Task Engine, Permissions, Job Queue y Public
+Knowledge sin mezclar lógica específica de UI.
+
+----------------------------------------------------------------------
+ABRAXAS_OS_MODULE_DEFINITION_CHECKLIST_V1.md
+----------------------------------------------------------------------
+
+Función:
+plantilla para definir cada módulo de manera consistente.
+
+Debe exigir:
+purpose;
+what it is/isn't;
+inputs;
+outputs;
+state;
+events;
+permissions;
+errors;
+versioning;
+tests;
+migration;
+DoD.
+
+Valor:
+previene módulos “bonitos” pero incompletos.
+
+----------------------------------------------------------------------
+ABRAXAS_OS_NEXT_FOUNDATION_V1_INSTALLED_MANIFEST.txt
+----------------------------------------------------------------------
+
+Función:
+lista exacta de paths instalados por Foundation.
+
+Autoridad:
+EVIDENCE/INSTALL MANIFEST.
+
+No debe:
+contener lógica de producto.
+
+Valor:
+Git staging seguro y reconstrucción.
+
+----------------------------------------------------------------------
+ABRAXAS_OS_ROADMAP_V2.md
+----------------------------------------------------------------------
+
+Función:
+roadmap de producto/arquitectura.
+
+Problema:
+roadmaps envejecen.
+
+Siguiente:
+Roadmap V5 debe incluir:
+dependencies;
+entry criteria;
+deliverables;
+tests;
+exit criteria;
+status evidence.
+
+----------------------------------------------------------------------
+ABRAXAS_OS_SOURCE_AUTHORITY_POLICY_V1.md
+----------------------------------------------------------------------
+
+Función:
+resolver conflictos entre código, docs, backups y referencias.
+
+Es uno de los archivos más importantes.
+
+Siguiente:
+añadir reglas explícitas para:
+live DB/data;
+public projection;
+AI output;
+MCP output;
+Learning Signals.
+
+----------------------------------------------------------------------
+ABRAXAS_OS_TARGET_FOLDER_STRUCTURE_V2.md
+----------------------------------------------------------------------
+
+Función:
+estructura destino.
+
+Lógica:
+evitar crecimiento desordenado.
+
+Siguiente:
+añadir carpetas:
+contracts/tasks
+contracts/time
+contracts/notifications
+contracts/permissions
+contracts/approvals
+contracts/providers
+contracts/jobs
+contracts/recordings
+migrations
+system_health
+public_projection.
+
+----------------------------------------------------------------------
+ABRAXAS_OS_WHAT_IT_IS_AND_IS_NOT_V2.md
+----------------------------------------------------------------------
+
+Función:
+anti-scope-creep.
+
+Lógica:
+preservar identidad del producto.
+
+Siguiente:
+añadir:
+“ABRAXAS no es un proveedor de IA;
+los providers son intercambiables.”
+
+----------------------------------------------------------------------
+FILES_TO_UPLOAD_TO_NEW_CHAT_V1.md
+----------------------------------------------------------------------
+
+Función:
+continuidad entre chats.
+
+Siguiente:
+actualizar con:
+Master Definition V5;
+File Logic/Roadmap V5;
+corpus Structure Mining;
+último status;
+últimos verify reports.
+
+----------------------------------------------------------------------
+NEW_CHAT_ABRAXAS_OS_MASTER_EXECUTION_PROMPT_V1.md
+----------------------------------------------------------------------
+
+Función:
+boot prompt para un nuevo agente/chat.
+
+Lógica:
+obligar audit-first.
+
+Siguiente:
+V2 debe exigir:
+PRE-EXECUTION MASTER TRUTH;
+plan selection;
+TDD;
+status evidence;
+Git checkpoint;
+public status sync.
+
+======================================================================
+3. ABRAXAS_CORE — ARCHIVOS RAÍZ
+======================================================================
+
+ABRAXAS_CORE/README.md
+
+Función:
+explicar qué pertenece al core.
+
+Debe separar:
+funcional histórico;
+canon actual;
+runtime externo;
+legacy.
+
+----------------------------------------------------------------------
+ABRAXAS_CORE/CANONICAL_SYSTEMS.md
+----------------------------------------------------------------------
+
+Función:
+inventario de sistemas históricos canónicos seleccionados por auditoría.
+
+Autoridad:
+muy importante para no volver a descargar/reseleccionar versiones incorrectas.
+
+Siguiente:
+añadir classification:
+CURRENT_FUNCTIONAL
+REUSE_DIRECT
+ADAPT
+REFERENCE
+LEGACY.
+
+======================================================================
+4. CONTENT ENGINE HISTÓRICO
+======================================================================
+
+content_engine/ABRAXAS_CONTENT_LAB_V3_1_VERIFIED/
+
+Función:
+linaje de Content Lab.
+
+Lógica reusable:
+router;
+intro structures;
+clips;
+carousels;
+regression/versioning.
+
+Consumido por:
+Forensic Structure Mining/YOD.
+
+No hacer:
+migrar HTML/UI monolítica como core.
+
+Próximo paso:
+inventario de estructuras y funciones de routing.
+
+----------------------------------------------------------------------
+content_engine/ABRAXAS_Universal_Content_Operations_A_v1.2_FULL_RELEASE_2/
+
+Función:
+sistema histórico funcional amplio.
+
+Áreas a extraer:
+He/calendar/backlog;
+Content Studio;
+Talent/Teleprompter;
+Architect;
+Brain;
+Shim;
+production graph;
+AI handoff;
+client intelligence.
+
+Próximo paso:
+crear matriz file-level:
+path
+capability
+current equivalent
+reuse strategy
+tests.
+
+======================================================================
+5. AUTOMATION / MOTION HISTÓRICO
+======================================================================
+
+automation/ABRAXAS_V4_2_24_CONTINUITY_MASTER_PACKAGE/
+
+Archivos conocidos:
+
+00_LEER_PRIMERO.txt
+→ índice humano.
+
+01_CONTEXTO_COMPLETO_ABRAXAS.md
+→ contexto de sistema de esa versión.
+
+02_ESTADO_ACTUAL_V4_2_23.md
+→ snapshot anterior a hotfix.
+
+03_OBJETIVO_HOTFIX_V4_2_24.md
+→ razón del cambio.
+
+04_REGLAS_Y_CONTRATOS_DE_PRODUCCION.md
+→ reglas de producción.
+
+05_LOGICA_MOTION_ENGINE.md
+→ lógica del engine.
+
+06_CRITERIOS_IA_PARA_SELECCIONAR_MOTIONS.md
+→ relación de IA con selección semántica.
+
+07_REGLAS_VERTICALES.md
+→ constraints de vertical.
+
+08_REGLAS_HORIZONTALES.md
+→ constraints horizontal/longform.
+
+09_REGLAS_HTML_ENGINE.md
+→ engine HTML.
+
+10_REGLAS_RENDER_Y_DAVINCI.md
+→ bridge/render.
+
+11_ARCHIVOS_PROTEGIDOS.md
+→ invariantes que no debían romperse.
+
+Lógica global:
+este package tiene valor porque documenta no solo “qué archivos”, sino las
+razones y contratos detrás de producción.
+
+Próximo paso:
+minar sus reglas hacia:
+YOD Motion Intelligence;
+VAV Motion contracts;
+VAV Simple Motion;
+Renderer/worker specs.
+
+----------------------------------------------------------------------
+motion_intelligence/ABRAXAS_V4_1_MOTION_AUTOMATION/
+
+Función:
+automation funcional histórica.
+
+Próximo paso:
+auditar primitives, sequence logic, contracts y renderer hooks.
+
+----------------------------------------------------------------------
+workers/ABRAXAS_V4_2_24_APPLE40M_RESUME_MASTER_PACKAGE/
+
+Función:
+worker/continuity para producción pesada.
+
+Próximo paso:
+extraer:
+worker lifecycle;
+retry;
+job state;
+artifact handoff;
+failure recovery.
+
+Esta fuente debe informar el futuro Background Job Queue.
+
+----------------------------------------------------------------------
+legacy_functional/...
+----------------------------------------------------------------------
+
+Función:
+preservar soluciones ejecutables/hotfix.
+
+Regla:
+legacy no significa inútil.
+
+Uso:
+regression reference;
+edge case;
+compatibility.
+
+No convertir en canon editorial.
+
+======================================================================
+6. YOD — ARCHIVO POR ARCHIVO
+======================================================================
+
+YOD_FOUNDATION_README_V1.md
+
+Función:
+entrada al dominio YOD.
+
+Debe explicar:
+qué información vive en YOD;
+qué no pertenece;
+relación con He/Shim/VAV.
+
+Próximo paso:
+cuando exista engine/store, enlazar implementación real.
+
+----------------------------------------------------------------------
+00_CANON/ABRAXAS_CONTENT_QUALITY_CANON_V2.md
+
+Función:
+Definition of Good.
+
+Lógica:
+YOD no debe generar solo por “formato correcto”.
+Debe evaluar:
+tesis;
+hook;
+payoff;
+density;
+source;
+client fit;
+anti-slop;
+QA.
+
+Próximo paso:
+convertir partes objetivables en validators.
+
+----------------------------------------------------------------------
+01_CLIENT_INTELLIGENCE/CLIENT_CORE_SPEC_V1.md
+
+Función:
+modelo de memoria de cliente.
+
+Próximo paso:
+crear CLIENT_CORE.schema.json;
+versioning;
+provenance;
+overlay;
+permissions;
+migration.
+
+----------------------------------------------------------------------
+02_CONTENT_INTELLIGENCE/OPPORTUNITY_ENGINE_V1.md
+
+Función:
+crear oportunidades aunque no exista idea inicial.
+
+Próximo paso:
+definir inputs reales;
+score;
+explanations;
+anti-repetition;
+tests con varios clientes.
+
+----------------------------------------------------------------------
+03_FORMATS/FORMAT_LIBRARY_CANON_V1.md
+
+Función:
+inventario físico de output.
+
+Próximo paso:
+FORMAT.schema.json
++
+registry real.
+
+----------------------------------------------------------------------
+04_STRUCTURES/STRUCTURE_MINING_SPEC_V1.md
+
+Función:
+metodología de minería.
+
+Próximo paso:
+ejecutarla sobre corpus, no seguir expandiendo teoría.
+
+----------------------------------------------------------------------
+04_STRUCTURES/STRUCTURE_REGISTRY_SEED_V1.json
+
+Función:
+seed inicial.
+
+Estado:
+NO debe tratarse como registry final.
+
+Próximo paso:
+reemplazar/enriquecer con resultados forenses y provenance.
+
+----------------------------------------------------------------------
+05_PROMPT_INTELLIGENCE/PROMPT_CANON_V2.md
+
+Función:
+componentes del Prompt Compiler.
+
+Próximo paso:
+PromptComponent schema;
+PromptPreset;
+compiler;
+snapshot tests;
+roundtrip export.
+
+----------------------------------------------------------------------
+06_VISUAL_INTELLIGENCE/VISUAL_CRITERIA_CANON_V2.md
+
+Función:
+qué debe hacer un visual y qué evitar.
+
+Próximo paso:
+VisualPlan schema;
+function field;
+preserve rules;
+generation adapter;
+correction flow.
+
+----------------------------------------------------------------------
+07_MOTION_INTELLIGENCE/MOTION_VFX_SFX_CRITERIA_V2.md
+
+Función:
+criterio semántico.
+
+Próximo paso:
+separar:
+Motion Intelligence
+de
+VAV execution.
+
+Crear:
+MotionIntent schema;
+VFXCue;
+SFXCue.
+
+----------------------------------------------------------------------
+08_COPY_INTELLIGENCE/COPY_CANON_V2.md
+
+Función:
+copy lifecycle y plataforma.
+
+Próximo paso:
+COPY.schema;
+master/platform variants;
+source version;
+out-of-sync rules;
+approval.
+
+----------------------------------------------------------------------
+09_PLANNING_AND_CADENCE/PLAN_AND_CADENCE_ENGINE_V1.md
+
+Función:
+planear lotes y diversidad.
+
+Próximo paso:
+PLAN.schema;
+coverage metrics;
+cadence rules;
+anti-cannibalization;
+Plan→Lienzos creation.
+
+----------------------------------------------------------------------
+11_SOURCE_TRUTH/SOURCE_TRUTH_AND_CLAIMS_V2.md
+
+Función:
+no inventar claims.
+
+Próximo paso:
+SourceReference;
+Claim;
+verification status;
+evidence link;
+Shim integration.
+
+======================================================================
+7. HE — ARCHIVO POR ARCHIVO
+======================================================================
+
+00_PRODUCT/HE_PRODUCT_DEFINITION_V1.md
+
+Función:
+definir He como ventana operacional.
+
+Próximo paso:
+actualizar formalmente con management/operations V3.
+
+----------------------------------------------------------------------
+01_LIENZO_UI/LIENZO_EDITING_EXPERIENCE_V1.md
+
+Función:
+cómo editar un Lienzo sin convertirlo en formulario gigante.
+
+Próximo paso:
+views:
+Overview
+Content
+Visual
+Production
+Publishing
+History.
+
+Añadir:
+Diff;
+Impact;
+Approval;
+Architect sidecar.
+
+----------------------------------------------------------------------
+02_WORKFLOW/WORKFLOW_AND_DEPENDENCY_MODEL_V1.md
+
+Función:
+state/dependency logic.
+
+Próximo paso:
+integrar Task Graph, deadlines y automation rules.
+
+----------------------------------------------------------------------
+03_CALENDAR/CALENDAR_AND_BACKLOG_V1.md
+
+Función:
+calendar/backlog.
+
+Próximo paso:
+mixed items:
+Task
+RecordingSession
+PublicationTarget
+Deadline/Milestone.
+
+----------------------------------------------------------------------
+08_SYSTEM_STATUS/STATUS_UPDATE_PROTOCOL_V1.md
+
+Función:
+evitar status ficticio.
+
+Próximo paso:
+status generation from verification artifacts.
+
+----------------------------------------------------------------------
+08_SYSTEM_STATUS/system-status.json
+
+Función:
+proyección machine-readable del roadmap/status.
+
+No es:
+source-of-truth de código.
+
+Próximo paso:
+añadir:
+evidence refs;
+last_verified_at;
+current_commit;
+public visibility flag.
+
+======================================================================
+8. SHIM — ARCHIVO POR ARCHIVO
+======================================================================
+
+00_CANON/SHIM_ROLE_V1.md
+
+Función:
+definir que Shim observa/extrae/resuelve, no inventa.
+
+Próximo paso:
+SourceIngest;
+Segment;
+Candidate;
+Gap;
+ResolvedContent schemas.
+
+----------------------------------------------------------------------
+06_COPY_SYNC/YOD_SHIM_COPY_CONTRACT_V1.md
+
+Función:
+sincronizar copy con lo realmente resuelto.
+
+Próximo paso:
+formalizar out-of-sync detector y CopyUpdateProposal.
+
+======================================================================
+9. ARQUITECTO — ARCHIVO POR ARCHIVO
+======================================================================
+
+00_CANON/ARQUITECTO_ROLE_V1.md
+
+Función:
+definir Arquitecto como presencia transversal.
+
+Próximo paso:
+definir capability matrix y permission rules.
+
+----------------------------------------------------------------------
+01_CONTEXT/CONTEXT_MODEL_V1.md
+
+Función:
+qué necesita saber para entender “dónde estoy”.
+
+Próximo paso:
+ContextResolver conectado a:
+route;
+selected Client;
+selected Lienzo;
+selected component;
+current Task;
+current user;
+permissions.
+
+----------------------------------------------------------------------
+03_SUGGESTIONS/SUGGESTION_MODEL_V1.md
+
+Función:
+modelar sugerencias sin aplicarlas automáticamente.
+
+Próximo paso:
+Suggestion schema:
+proposal;
+reason;
+affected paths;
+confidence;
+accept/reject;
+event.
+
+----------------------------------------------------------------------
+06_PRODUCTION_COACH/TOTAL_PRODUCTION_COACH_V1.md
+
+Función:
+coach end-to-end.
+
+Próximo paso:
+modos concretos:
+Recording;
+Editing;
+Motion;
+VFX;
+SFX;
+Copy;
+Visual;
+QA;
+External App.
+
+======================================================================
+10. CONTRACTS — ARCHIVO POR ARCHIVO
+======================================================================
+
+AI_JOB.schema.seed.json
+
+Función:
+primer modelo de trabajo IA.
+
+Estado:
+SEED.
+
+Próximo:
+promover a AI_JOB.schema.json testeado.
+
+----------------------------------------------------------------------
+AI_ROUNDTRIP_CONTRACT_V1.md
+
+Función:
+manual/external AI contract.
+
+Próximo:
+TXT+JSON V2;
+parser;
+validator;
+diff.
+
+----------------------------------------------------------------------
+ARTIFACT_REGISTRY_V1.md
+
+Función:
+identidad de archivos producidos.
+
+Próximo:
+ARTIFACT.schema.json;
+hashing;
+storage adapters;
+Asset Library UI.
+
+----------------------------------------------------------------------
+EVENT_MODEL_V1.md
+
+Función:
+historial/event sourcing ligero.
+
+Próximo:
+EVENT.schema;
+event store;
+projection;
+activity log.
+
+----------------------------------------------------------------------
+LIENZO.schema.seed.json
+
+Función:
+primer shape machine-readable del Lienzo.
+
+Estado:
+SEED.
+
+Próximo:
+reconciliar con component versions,
+dependencies,
+publishing,
+metrics,
+events;
+promover a tested schema.
+
+----------------------------------------------------------------------
+LIENZO_CANON_V1.md
+
+Función:
+reglas conceptuales.
+
+Próximo:
+mantener estable;
+mover detalles técnicos a schema/specs.
+
+----------------------------------------------------------------------
+METRICS_MODEL_V1.md
+
+Función:
+raw + normalized metrics.
+
+Próximo:
+manual ingestion;
+snapshot schema;
+formula versioning;
+Learning Signal.
+
+----------------------------------------------------------------------
+PUBLISHER_ADAPTER_CONTRACT_V1.md
+
+Función:
+evitar acoplar He a Meta/TikTok/etc.
+
+Próximo:
+provider connection registry;
+manual adapter;
+test adapter;
+después APIs reales.
+
+----------------------------------------------------------------------
+PUBLISHING_MODEL_V1.md
+
+Función:
+modelar publication target y snapshot.
+
+Próximo:
+target schema;
+calendar integration;
+status sync.
+
+======================================================================
+11. VAV — ARCHIVOS Y FAMILIAS
+======================================================================
+
+VAV/01_REPO/VAV
+
+Función:
+source canónico audiovisual.
+
+Autoridad:
+live code > reference.
+
+Próximo:
+verificación fresca antes de cambios.
+
+----------------------------------------------------------------------
+VAV/02_PRODUCTS/vavcaptions
+
+Función:
+workspace/reference/evidence de Captions.
+
+No confundir con source canónico.
+
+Próximo:
+mantener pointer + evidence.
+
+----------------------------------------------------------------------
+VAV/02_PRODUCTS/vavmotions
+
+Función:
+workspace/reference de Motions.
+
+Próximo:
+audit implementation vs reference.
+
+----------------------------------------------------------------------
+VAV/02_PRODUCTS/vavshim
+VAV/02_PRODUCTS/vavcuts
+
+Función:
+workspaces de continuidad/reference.
+
+Próximo:
+clasificar funcionalidad live.
+
+----------------------------------------------------------------------
+VAV/03_CONTINUITY/VAV_CONTINUITY_HUB/V14_UNIVERSAL
+
+Función:
+autoridad de continuidad.
+
+No es:
+source Git.
+
+----------------------------------------------------------------------
+VAV/03_CONTINUITY/.../SHIM_CUTS_R1
+
+Función:
+continuidad Shim/Cuts.
+
+----------------------------------------------------------------------
+VAV/03_CONTINUITY/.../PREVIOUS_BACKUP/V13_READY
+
+Función:
+rollback/reference anterior.
+
+----------------------------------------------------------------------
+VAV/04_REFERENCES/
+
+Función:
+referencias centralizadas.
+
+Regla:
+reference no implementa.
+
+----------------------------------------------------------------------
+VAV/05_EVIDENCE/
+
+Función:
+verification reports/render parity.
+
+Regla:
+evidence puede demostrar comportamiento cubierto, no totalidad del producto.
+
+----------------------------------------------------------------------
+VAV/06_CHAT_HANDOFFS/
+
+Función:
+continuidad conversacional.
+
+No es:
+repo.
+
+----------------------------------------------------------------------
+VAV/07_BACKUPS/
+
+Función:
+respaldo histórico.
+
+----------------------------------------------------------------------
+VAV/08_FORENSIC_AUDITS/
+
+Función:
+classification evidence.
+
+----------------------------------------------------------------------
+VAV/90_RUNTIME_POINTERS/
+
+Función:
+documentar runtime externo.
+
+Runtime real:
+~/Library/Application Support/VAV
+
+Nunca subir runtime a Git.
+
+----------------------------------------------------------------------
+VAV/integrations/README_ABRAXAS_LIENZO_BRIDGE_FOUNDATION_V1.md
+
+Función:
+definir vínculo VAV→Lienzo.
+
+Próximo:
+contrato ejecutable,
+integration tests,
+Event/Artifact writeback.
+
+======================================================================
+12. SHARED_KNOWLEDGE
+======================================================================
+
+visual_grammar/
+→ reglas visuales comunes.
+
+motion_grammar/
+→ motion/spatial common grammar.
+
+content_intelligence/
+→ conocimiento editorial reusable.
+
+cross_product_contracts/
+→ contratos compartidos entre ABRAXAS/VAV.
+
+Próximo:
+hacer ownership explícito para evitar duplicar los mismos schemas en YOD y VAV.
+
+======================================================================
+13. DOCS / STATUS
+======================================================================
+
+docs/abraxas-os-status/index.html
+
+Función:
+dashboard público/privado de estado.
+
+Próximo:
+Arquitecto Public chat;
+public knowledge loader;
+evidence-aware status.
+
+----------------------------------------------------------------------
+docs/abraxas-os-status/system-status.json
+
+Función:
+proyección publicable.
+
+Próximo:
+generarlo desde una fuente privada filtrada.
+
+----------------------------------------------------------------------
+docs/.nojekyll
+
+Función:
+GitHub Pages static publishing behavior.
+
+No requiere lógica de producto.
+
+======================================================================
+14. NUEVOS ARCHIVOS/CONTRATOS QUE DEBEN CREARSE
+======================================================================
+
+P0 CONTRACTS:
+
+contracts/tasks/TASK.schema.json
+contracts/tasks/RECORDING_SESSION.schema.json
+contracts/time/TIME_ENTRY.schema.json
+contracts/notifications/NOTIFICATION.schema.json
+contracts/permissions/ROLE.schema.json
+contracts/permissions/PERMISSION.schema.json
+contracts/approvals/APPROVAL.schema.json
+contracts/providers/PROVIDER.schema.json
+contracts/jobs/JOB.schema.json
+contracts/ai-roundtrip/AI_RESULT.schema.json
+contracts/import/IMPORT_RESULT.schema.json
+
+P0 INFRA:
+
+migrations/MIGRATION_REGISTRY.md
+system_health/HEALTH_CHECK_REGISTRY.md
+connections/CONNECTION_MODEL.md
+
+P1:
+Activity Log spec
+Automation Rule schema
+Search Index contract
+
+P2:
+AI Provider registry
+Roundtrip TXT exporter/parser
+Universal Intake processors
+
+P3:
+Simple Motion preset schema
+VAV Lienzo bridge implementation
+Background workers
+
+P4:
+Public Knowledge schema
+Architect Provider interface
+Registry Studio specs
+
+======================================================================
+15. ROADMAP V5 — PRINCIPIOS
+======================================================================
+
+Un roadmap de calidad no debe decir solo:
+“hacer YOD”.
+
+Cada fase debe definir:
+
+ENTRY CRITERIA
+INPUTS
+DELIVERABLES
+TESTS
+MIGRATION
+EXIT CRITERIA
+EVIDENCE
+DEPENDENCIES
+GIT CHECKPOINT
+
+======================================================================
+16. FASE 0 — REVALIDAR BASELINE
+======================================================================
+
+Objetivo:
+saber exactamente desde dónde empezamos.
+
+Entry:
+repo accesible.
+
+Acciones:
+git status;
+fetch;
+SHA local/remoto;
+nested Git;
+paths;
+symlinks;
+test inventory;
+runtime pointers.
+
+Deliverable:
+PRE_EXECUTION_MASTER_TRUTH_<date>.md
+
+Tests:
+VAV existing tests;
+typecheck;
+build targets;
+selected ABRAXAS historical smoke tests si existen.
+
+Exit:
+estado limpio documentado.
+
+No implementar features en esta fase.
+
+======================================================================
+17. FASE 1 — FORENSIC CONTENT INTELLIGENCE
+======================================================================
+
+Dependencia:
+Baseline.
+
+Objetivo:
+convertir corpus histórico en inteligencia editorial reusable.
+
+Inputs:
+Content Lab;
+JOC;
+MOKA;
+INENERGY;
+Universal Operations;
+“Referencias para logica…”;
+Shim examples.
+
+Deliverables:
+
+STRUCTURE_REGISTRY_V1.json
+FORMAT_REGISTRY_V1.json
+HOOK_TAXONOMY_V1.json
+CTA_TAXONOMY_V1.json
+CONTENT_PATTERN_REGISTRY_V1.json
+SOURCE_REQUIREMENT_LIBRARY_V1.json
+FORENSIC_PROVENANCE_REPORT.md
+
+Cada structure:
+provenance;
+confidence;
+examples;
+anti-examples;
+client scope;
+format compatibility.
+
+Tests:
+schema validation;
+duplicate IDs;
+required provenance;
+cross-client classification.
+
+Exit:
+YOD puede consultar un registry real, no seed.
+
+======================================================================
+18. FASE 2 — CONTRACTS FIRST V2
+======================================================================
+
+Objetivo:
+cerrar contratos antes de UI.
+
+Deliverables:
+
+CLIENT_CORE.schema
+PLAN.schema
+LIENZO.schema
+COMPONENT.schema
+EVENT.schema
+ARTIFACT.schema
+TASK.schema
+RECORDING_SESSION.schema
+TIME_ENTRY.schema
+NOTIFICATION.schema
+APPROVAL.schema
+ROLE/PERMISSION
+AI_JOB/RESULT
+PROVIDER
+PUBLICATION_TARGET
+METRIC_SNAPSHOT
+LEARNING_SIGNAL
+AUTOMATION_RULE
+JOB
+
+Tests:
+valid/invalid fixtures;
+version fields;
+ID integrity;
+foreign-reference rules.
+
+Add:
+Migration Registry.
+
+Exit:
+todos los objetos base tienen schema versionado y tests.
+
+======================================================================
+19. FASE 3 — YOD V1
+======================================================================
+
+Dependencia:
+Structure Registry + Contracts.
+
+Implementar primero:
+Client Core Store;
+Format Registry;
+Structure Registry;
+Source Truth;
+Prompt Compiler.
+
+Después:
+Opportunity Engine;
+Coverage Engine;
+Plan/Cadence;
+Copy lifecycle.
+
+Tests:
+deterministic recommendations;
+anti-repetition;
+provenance;
+prompt snapshots;
+copy out-of-sync.
+
+Exit:
+YOD puede crear un Plan/Lienzo sin UI avanzada.
+
+======================================================================
+20. FASE 4 — HE OPERATIONS CORE
+======================================================================
+
+Dependencia:
+contracts.
+
+Implementar:
+
+Task Store
+Dependency Graph
+Deadline Engine
+Solo Queue
+Team Snapshot
+Recording Sessions
+Kanban projection
+Manager Dashboard data
+
+No empezar por diseño visual sofisticado.
+
+Tests:
+dependency cycles;
+blocked states;
+next action;
+at-risk;
+assignment;
+recording linkage.
+
+Exit:
+funciona con fixtures y una UI mínima.
+
+======================================================================
+21. FASE 5 — RBAC + APPROVALS
+======================================================================
+
+Debe ocurrir antes de colaboración seria.
+
+Implementar:
+roles;
+permissions;
+approval requests;
+review decisions;
+override permissions.
+
+Tests:
+una persona sin permiso no puede aprobar/publicar/editar Client Core.
+
+Exit:
+Team Mode seguro.
+
+======================================================================
+22. FASE 6 — TIME + NOTIFICATIONS + ACTIVITY
+======================================================================
+
+Implementar:
+Timer;
+TimeEntry;
+Reports;
+Notification Center;
+Activity Feed.
+
+Tests:
+one active timer/user;
+event dedupe;
+deadline notifications;
+dependency-resolved notification.
+
+Exit:
+He funciona como herramienta operativa diaria.
+
+======================================================================
+23. FASE 7 — AUTOMATION RULE ENGINE
+======================================================================
+
+Implementar:
+
+TRIGGER
+CONDITIONS
+ACTIONS
+
+Initial triggers:
+task.completed
+deadline.approaching
+shim.gap_detected
+render.completed
+approval.granted
+
+Actions:
+create_task
+notify
+request_approval
+change_state
+suggest_next_action
+
+No AI required.
+
+Exit:
+workflow puede automatizar secuencias repetitivas.
+
+======================================================================
+24. FASE 8 — AI RUNTIME CORE
+======================================================================
+
+Implementar:
+
+Provider Registry
+Capability Matcher
+AI Job Store
+AI Result Store
+Logic Provider
+External Roundtrip Provider
+
+Todavía no conectar todas las APIs.
+
+Tests:
+capability matching;
+job lifecycle;
+result validation;
+no direct Lienzo mutation.
+
+Exit:
+un mismo AI Job puede ejecutarse con Logic o Roundtrip.
+
+======================================================================
+25. FASE 9 — ROUNDTRIP + UNIVERSAL INTAKE
+======================================================================
+
+Implementar:
+TXT exporter;
+TXT+JSON parser;
+freeform compatibility;
+diff UI;
+accept/reject;
+file import;
+hash;
+provenance;
+Artifact link.
+
+Tests:
+wrong job_id;
+bad JSON;
+unknown file;
+duplicate hash;
+accept partial fields.
+
+Exit:
+ABRAXAS funciona profesionalmente con IA externa y herramientas externas.
+
+======================================================================
+26. FASE 10 — OLLAMA / API / MCP
+======================================================================
+
+Implementar en este orden:
+
+Ollama
+→ OpenAI-compatible API interface
+→ MCP interface
+→ additional providers
+
+Añadir Connections Center.
+
+Tests:
+provider unavailable;
+timeout;
+structured output;
+permissions;
+secret leakage prevention.
+
+Exit:
+providers intercambiables.
+
+======================================================================
+27. FASE 11 — VAV LIENZO BRIDGE
+======================================================================
+
+Implementar:
+read Production Intent;
+write Event;
+write Artifact;
+write component status;
+hash outputs;
+out-of-sync propagation.
+
+Integrar:
+Captions primero, porque tiene baseline fuerte.
+
+Después:
+Motions;
+Cuts;
+Shim bridge.
+
+Exit:
+VAV y He ven el mismo estado.
+
+======================================================================
+28. FASE 12 — SIMPLE MOTION
+======================================================================
+
+Audit primitives existentes.
+
+Implementar:
+zoom/pan/scale/fade;
+still push/parallax;
+simple transitions;
+preset registry.
+
+Tests:
+deterministic interpolation;
+safe area;
+caption policy;
+render fixture.
+
+Exit:
+usuario puede resolver movimientos simples sin Motion complejo.
+
+======================================================================
+29. FASE 13 — ARQUITECTO V1
+======================================================================
+
+Implementar:
+
+Context Resolver
+System Knowledge
+Navigation Registry
+Suggestion Engine
+Next Action
+Coach modes
+Permission awareness
+
+No empezar por un LLM “mágico”.
+
+Primero debe poder responder correctamente con lógica interna.
+
+Luego usar AI Runtime para lenguaje/razonamiento adicional.
+
+Exit:
+Arquitecto puede guiar workflows reales.
+
+======================================================================
+30. FASE 14 — PUBLIC ARCHITECT
+======================================================================
+
+Implementar:
+
+Private→Public Projection
+public-knowledge.json
+LocalKnowledgeProvider
+chat UI
+starter questions
+status integration
+
+Después:
+safe server-side AI.
+
+Security test:
+repo público allowlist exacta.
+
+Exit:
+una persona externa puede entender ABRAXAS sin acceder a datos privados.
+
+======================================================================
+31. FASE 15 — PUBLISHING
+======================================================================
+
+Primero:
+Manual Export / Scheduled Target model.
+
+Después:
+test adapter.
+
+Luego:
+plataformas reales.
+
+Añadir:
+Connections;
+snapshots;
+remote IDs;
+status sync.
+
+Exit:
+multiple platform targets independientes.
+
+======================================================================
+32. FASE 16 — METRICS
+======================================================================
+
+Primero:
+manual/CSV/JSON.
+
+Después:
+per-platform adapters.
+
+Implementar:
+Metric Snapshot
+Normalized metrics
+Learning Signal
+confidence/provenance.
+
+Exit:
+YOD puede aprender sin contaminar Source Truth.
+
+======================================================================
+33. FASE 17 — JOB QUEUE / HEALTH / RECOVERY
+======================================================================
+
+Implementar:
+background jobs;
+retry;
+progress;
+health checks;
+workspace export;
+restore;
+schema migration.
+
+Esto convierte la plataforma de prototipo a sistema operable.
+
+======================================================================
+34. FASE 18 — SEARCH / COMMAND PALETTE / ASSET LIBRARY
+======================================================================
+
+Global Search.
+Cmd+K.
+Asset Browser.
+Version explorer.
+
+Exit:
+escala en uso cotidiano.
+
+======================================================================
+35. FASE 19 — REGISTRY STUDIO
+======================================================================
+
+UI para:
+Structures;
+Formats;
+Motion Families;
+Prompt Presets;
+Copy Profiles;
+Automation Rules.
+
+Arquitecto actúa como guía.
+
+Exit:
+el sistema se puede extender sin modificar código.
+
+======================================================================
+36. CRITERIO DE PRIORIDAD
+======================================================================
+
+P0:
+Audit
+Contracts
+Migrations
+Events/Artifacts
+RBAC/Approvals
+Secrets
+
+P1:
+He Operations
+Tasks
+Calendar
+Kanban
+Deadlines
+Notifications
+Time
+
+P2:
+YOD
+Structure Registry
+Prompt
+Copy
+Source Truth
+
+P3:
+AI Runtime
+Roundtrip
+Universal Intake
+Ollama/API/MCP
+
+P4:
+VAV Bridge
+Simple Motion
+Job Queue
+
+P5:
+Arquitecto
+Public Architect
+Search
+Registry Studio
+
+P6:
+Publishing APIs
+Metrics APIs
+advanced automation.
+
+======================================================================
+37. DEFINITION OF DONE POR FEATURE
+======================================================================
+
+Una feature no está DONE porque exista un archivo.
+
+DONE exige:
+
+spec aprobada;
+schema/contract cuando aplique;
+tests;
+implementation;
+integration;
+error states;
+permissions;
+versioning;
+docs;
+status update;
+Git commit;
+remote SHA match.
+
+Para features de UI:
+también happy path + empty + loading + error + permission denied.
+
+Para providers:
+timeout + unavailable + malformed output + secret isolation.
+
+Para imports:
+hash + provenance + preview + rejection.
+
+======================================================================
+38. GIT CHECKPOINT POR FASE
+======================================================================
+
+Antes:
+clean baseline.
+
+Durante:
+targeted files.
+
+Antes de commit:
+tests
+typecheck
+build
+git diff --cached
+secret check
+large-file check
+nested Git check.
+
+Commit.
+
+Push.
+
+Fetch.
+
+Verificar:
+HEAD == origin/main.
+
+Actualizar:
+system-status.json.
+
+Sincronizar:
+ABRAXAS_OS_STATUS público si cambia información pública.
+
+======================================================================
+39. QUÉ NO HACER EN LOS PRÓXIMOS PASOS
+======================================================================
+
+No hacer cinco módulos simultáneamente.
+No crear UI antes de contracts.
+No convertir seed en canon sin minería.
+No duplicar YOD dentro de Arquitecto.
+No conectar APIs antes del Provider Registry.
+No poner keys en JS.
+No automatizar sin audit log.
+No publicar sin snapshot.
+No construir Team sin RBAC.
+No acumular datos sin schema migrations/backups.
+No reescribir VAV Captions si ya hay base funcional.
+
+======================================================================
+40. PRÓXIMA SECUENCIA RECOMENDADA
+======================================================================
+
+PASO 1:
+PRE-EXECUTION MASTER TRUTH.
+
+PASO 2:
+FORENSIC STRUCTURE MINING V1.
+
+PASO 3:
+CONTRACTS V2 + MIGRATIONS.
+
+PASO 4:
+YOD minimal core.
+
+PASO 5:
+He Operations minimal core.
+
+PASO 6:
+RBAC/Approvals.
+
+PASO 7:
+Time/Notifications/Automation.
+
+PASO 8:
+AI Runtime + Roundtrip + Intake.
+
+PASO 9:
+Ollama/API/MCP.
+
+PASO 10:
+VAV Lienzo Bridge + Captions.
+
+PASO 11:
+Simple Motion.
+
+PASO 12:
+Arquitecto Runtime.
+
+PASO 13:
+Public Architect.
+
+PASO 14:
+Publishing.
+
+PASO 15:
+Metrics.
+
+PASO 16:
+Job Queue/Health/Recovery/Search/Registry Studio.
+
+FIN
