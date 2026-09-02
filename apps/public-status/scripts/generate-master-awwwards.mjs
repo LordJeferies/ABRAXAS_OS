@@ -1069,6 +1069,95 @@ function getMasterUnifiedPage(locale, depth = 0) {
       </div>
     </section>
 
+    
+    <!-- SECCIÓN MAESTRA: LA ARQUITECTURA DE CAMPAÑAS DE ABRAXAS OS -->
+    <section id="sistema-campanas" class="section-wrap" style="padding-top: 80px; padding-bottom: 60px; background: #07070b; border-top: 1px solid rgba(255,255,255,0.08);">
+      <div style="max-width: 1240px; margin: 0 auto;">
+        <div class="section-head" style="text-align: center; margin-bottom: 3.5rem;">
+          <span class="tag" style="color: #f59e0b;">ESTRATEGIA MACRO // LA ARQUITECTURA DE CAMPAÑAS</span>
+          <h2 class="h2">${isEs ? 'No Creas Videos Sueltos.<br/>Gobiernas Campañas Estratégicas Multioferta.' : 'Do Not Create Random Posts.<br/>Govern Strategic Multi-Offer Campaigns.'}</h2>
+          <p class="p">${isEs 
+            ? 'En ABRAXAS OS el contenido no se produce al azar. Se organiza en Campañas Maestras de 10 a 50 piezas que articulan tu tesis, destruyen dogmas de la competencia, demuestran tu mecanismo único y cierran ventas de uno o múltiples productos en WhatsApp y checkout.' 
+            : 'In ABRAXAS OS content is never random. It is structured into Master Campaigns of 10-50 assets articulating your brand thesis, dismantling competitors dogmas, proving your unique mechanism, and driving multi-product sales.'}</p>
+        </div>
+
+        <!-- Bento Grid: Cómo Funciona el Sistema de Campañas -->
+        <div class="bento-grid" style="margin-bottom: 3rem;">
+          <div class="spotlight-card col-6" style="background: #0a0b12; border-left: 4px solid #f59e0b;">
+            <span class="card-pill-tag gold">${isEs ? 'TOPOLOGÍA RELACIONAL N:M' : 'N:M RELATIONAL TOPOLOGY'}</span>
+            <h3 class="card-h3">${isEs ? '1 Campaña ➔ 10 a 50 Piezas ➔ Múltiples Productos' : '1 Campaign ➔ 10-50 Assets ➔ Multiple Products'}</h3>
+            <p class="card-desc" style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+              ${isEs 
+                ? 'Una campaña puede impulsar un solo producto insignia (Lanzamiento dedicado) o distribuir la atención entre varios productos de tu catálogo (Campaña Ecosistema). Cada pieza tiene su formato (Reel 9:16, Carrusel 4:5, Hilo X) pero todas comparten el mismo identificador de campaña inmutable en el Merkle-DAG.' 
+                : 'A campaign can promote a single flagship offer or distribute authority across your entire product suite. Every asset has its format but shares the same immutable campaign identifier in the Merkle-DAG.'}
+            </p>
+          </div>
+
+          <div class="spotlight-card col-6" style="background: #0a0b12; border-left: 4px solid #30d158;">
+            <span class="card-pill-tag emerald">${isEs ? 'ATRIBUCIÓN SIN FUGAS EN LUNA 3' : 'LEAK-FREE ATTRIBUTION IN MOON 3'}</span>
+            <h3 class="card-h3">${isEs ? 'ROI Consolidado de Lote vs. ROI Forense de Pieza' : 'Consolidated Batch ROI vs Forensic Asset ROI'}</h3>
+            <p class="card-desc" style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6;">
+              ${isEs 
+                ? 'Luna 3 compara el costo de manufactura de todo el lote de piezas ($680 USD) contra la facturación acumulada de todas las ofertas vendidas ($13,450 USD). Si un cliente vio 4 videos distintos antes de comprar en WhatsApp, la venta se asigna a la campaña general sin perder trazabilidad.' 
+                : 'Moon 3 compares the batch manufacturing cost ($680) against total sales from all sold offers ($13,450). When a buyer views multiple videos before texting sales reps, the transaction is cleanly credited to the campaign.'}
+            </p>
+          </div>
+        </div>
+
+        <!-- Las 4 Campañas Canónicas del Branding Method -->
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1.5rem; text-align: center;">${isEs ? 'Las 4 Campañas Pre-Diseñadas de Alta Conversión' : 'The 4 Pre-Designed High-Conversion Campaigns'}</h3>
+          <div class="bento-grid">
+            <div class="spotlight-card col-3" style="background: #0b0c16; border-top: 3px solid #d4af37;">
+              <span class="card-pill-tag gold">CAMPAÑA 01</span>
+              <h4 style="color: #fff; font-size: 1.05rem; margin: 8px 0;">${isEs ? 'Tesis & Autoridad' : 'Thesis & Authority'}</h4>
+              <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5;">
+                ${isEs 
+                  ? 'Establece el territorio intelectual del fundador. Fija los axiomas inmutables y explica por qué tu solución es la única alternativa seria.' 
+                  : 'Claims intellectual territory. Establishes immutable axioms and frames your solution as the only serious alternative.'}
+              </p>
+            </div>
+
+            <div class="spotlight-card col-3" style="background: #0b0c16; border-top: 3px solid #c084fc;">
+              <span class="card-pill-tag purple">CAMPAÑA 02</span>
+              <h4 style="color: #fff; font-size: 1.05rem; margin: 8px 0;">${isEs ? 'Destrucción de Dogmas' : 'Dogma Destruction'}</h4>
+              <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5;">
+                ${isEs 
+                  ? 'Ataque frontal a las mentiras y malas prácticas de los competidores de tu nicho. Erradica objeciones antes de que el cliente pregunte.' 
+                  : 'Frontal attack on industry myths and bad practices. Destroys buyer objections before sales calls happen.'}
+              </p>
+            </div>
+
+            <div class="spotlight-card col-3" style="background: #0b0c16; border-top: 3px solid #38bdf8;">
+              <span class="card-pill-tag cyan">CAMPAÑA 03</span>
+              <h4 style="color: #fff; font-size: 1.05rem; margin: 8px 0;">${isEs ? 'Prueba de Mecanismo' : 'Mechanism Proof'}</h4>
+              <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5;">
+                ${isEs 
+                  ? 'Evidencia técnica transparente. Muestra las entrañas de cómo funciona tu producto o servicio con datos duros y demostraciones reales.' 
+                  : 'Transparent technical evidence. Displays how your system delivers results with real walkthroughs and proof.'}
+              </p>
+            </div>
+
+            <div class="spotlight-card col-3" style="background: #0b0c16; border-top: 3px solid #30d158;">
+              <span class="card-pill-tag emerald">CAMPAÑA 04</span>
+              <h4 style="color: #fff; font-size: 1.05rem; margin: 8px 0;">${isEs ? 'Conversión Directa' : 'Direct Conversion'}</h4>
+              <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5;">
+                ${isEs 
+                  ? 'Llamadas a la acción precisas hacia WhatsApp, pasarelas de pago o llamadas con closers. Convierte la autoridad acumulada en facturación.' 
+                  : 'Sharp call to action pushing traffic into WhatsApp, checkouts, and closers, converting accumulated authority into cash.'}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="${langPrefix}branding-method/index.html#campanas" class="btn-apple-cta" style="margin-right: 12px;">${isEs ? 'Ver el Generador de Campañas YOD ➔' : 'Explore YOD Campaign Generator ➔'}</a>
+          <a href="${langPrefix}luna-comercial/index.html#ventas-campana" class="btn-control-center" style="padding: 10px 20px;">${isEs ? 'Ver Telemetría de Ventas por Campaña ➔' : 'View Campaign Sales Telemetry ➔'}</a>
+        </div>
+      </div>
+    </section>
+
+
     <!-- 8. SECTION: BÓVEDA DE RESPALDO & SHA-256 -->
     <section id="backup" class="section-wrap" style="padding-top: 80px; padding-bottom: 80px;">
       <div class="spotlight-card col-12" style="background: linear-gradient(180deg, rgba(212,175,55,0.08) 0%, rgba(9,10,16,0.95) 100%); border: 1px solid rgba(212,175,55,0.35); text-align: center; padding: 3rem;">
