@@ -1,246 +1,523 @@
-================================================================================
-                    ABRAXAS OS — ULTRA ESENCIA TOTAL (v3.3 PRO)
-               CANON ABSOLUTO, CRITERIOS, ARQUITECTURA Y METODOLOGÍA
-================================================================================
+ABRAXAS v3.3 PRO CERTIFIED
+DEFINICIÓN MAESTRA DE PRODUCTO, OPERACIÓN, HERRAMIENTAS, FLUJOS Y CRITERIO
+SOURCE OF TRUTH ABSOLUTO PARA CONTINUAR EL DESARROLLO
+
+Versión objetivo: v3.3 PRO ALL-IN-ONE (EVOLUCIÓN DESDE v1.1.1 HASTA v4.2 KERNEL)
+Documento: Master Product Definition + Sephirotic Content Lifecycle + 7 Motions Canon + Shim Metrology + Total Production Coach + 3 Moons Closed-Loop
+Propósito: Explicar con precisión matemática y operativa qué es ABRAXAS, qué no es, cómo se relacionan sus herramientas reales de código, cómo operan los 7 motions fijos, cómo audita SHIM con certificados SHA-256, qué gobierna HE en macOS y cómo replicar todo el sistema desde cero sin perder jamás el criterio.
 
 ================================================================================
-1. LA TESIS FUNDACIONAL INMUTABLE
+0. RESUMEN EJECUTIVO Y TESIS FUNDACIONAL INMUTABLE
 ================================================================================
 
-«ABRAXAS convierte criterio en infraestructura.»
+ABRAXAS es un Content Operating System determinista, soberano y local.
 
-La Inteligencia Artificial no es el sistema: es un proveedor utilitario, interchangeable y subordinado.
-Lo que hace único y soberano a ABRAXAS OS es que codifica las leyes del criterio humano de élite
-(ritmo, verdad, dialéctica, deuda narrativa, metrología de cero errores, dirección de arte de lujo y retorno comercial)
-en reglas matemáticas deterministas de software aceleradas por hardware en Apple Silicon (M-Series).
+No debe definirse simplemente como una plataforma para generar contenido, un generador de prompts, un calendario editorial, un gestor de proyectos o una biblioteca de archivos.
 
-Principios Ontológicos:
-- Determinismo Puro: Mismas entradas en el Lienzo producen idénticos hashes en el Content Addressable Storage (CAS).
-- Soberanía Local: Operación 100% nativa en macOS sin dependencia obligatoria de servidores cloud ni costos de API recurrentes.
-- Closed-Loop Learning: Memoria compuesta cerrada donde la telemetría de retención (Luna 2) y facturación (Luna 3)
-  alimenta el radar de ganchos de YOD: S(t+1) = S(t) + A(t).
+ABRAXAS busca convertir conocimiento estratégico, editorial, creativo, visual, acústico y comercial —que normalmente vive fragmentado en la cabeza de un director creativo, un fundador, un editor o una agencia— en infraestructura reproducible de software.
 
-================================================================================
-2. LA COSMOGONÍA SOLAR Y LA GEOLOGÍA MÍSTICA DE LA CREACIÓN
-================================================================================
+La tesis fundamental del producto es:
 
-1. EL SOL PRIMORDIAL Y EL SOL NEGRO:
-En el vacío primordial, un Sol de Luz Pura se crea de la nada representando la Voluntad Absoluta y la Intención Infinita (Keter / Atziluth).
-Para evitar que la energía se disperse de forma caótica y estéril, un Sol Negro gravitacional se superpone en eclipse perfecto,
-creando un punto focal hiperdenso de concentración dialéctica (Chokhmah / YOD).
+    «ABRAXAS convierte criterio en infraestructura.»
 
-2. EL RAYO DE MANIFESTACIÓN Y LA PIRÁMIDE DORADA:
-Del vórtice del eclipse se dispara el Rayo de Manifestación (Kav) hacia la Tierra, portando la Gran Pirámide Dorada.
-Al impactar en el plano físico, del subsuelo terrestre brotan cristales geológicos gigantescos que elevan la pirámide hacia lo alto.
+El sistema captura:
+- cómo es una marca y cuáles son sus axiomas inmutables (YOD Brand Core);
+- qué defiende y qué rechaza frontalmente (dialéctica y enemigo conceptual);
+- cómo habla, con qué tono y con qué restricciones ontológicas;
+- cómo vende y cómo se traduce la atención en transacciones bancarias auditadas;
+- quién es su audiencia y qué puntos ciegos tiene el mercado;
+- qué formatos vivos utiliza (1 semilla ➔ 8 derivados en cascada);
+- cómo debe estructurarse cada formato (4 tiempos: Hook ➔ Tesis ➔ Mecanismo ➔ Payoff);
+- qué no debe hacer jamás (leyes editoriales y prohibición estricta de AI-slop);
+- qué criterios visuales y cinematográficos debe respetar (los 7 Motions fijos M0 a M6);
+- qué tres imágenes exactas conectadas requiere cada motion (START ➔ DEVELOPMENT ➔ RESULT);
+- qué reglas acústicas de broadcast deben cumplirse (-14 LUFS, ducking a -18dB, directiva no_sfx_needed);
+- qué evidencia fonética en vivo certifica la toma (metrología SHIM 0.00% GAPs con firma SHA-256);
+- qué tareas faltan para gobernar un lote mensual de 50 piezas en una sola tarde (HE en macOS);
+- qué pasó con cada centavo facturado atribuido a cada pieza (Luna 3 Comercial);
+- y cómo la retención segundo a segundo re-alimenta el radar de ganchos en bucle cerrado:
+  S(t+1) = S(t) + A(t).
 
-3. LA GEODA DE AMATISTA Y LA CÚSPIDE DE ORO MACIZO:
-Los cristales que elevan la pirámide son recubiertos por formaciones de roca sólida y se transforman en una geoda translúcida
-de amatista púrpura imperial. La cúspide de la pirámide queda rematada en oro macizo puro: la morada de YOD (Inteligencia de Nicho).
+La Inteligencia Artificial es un proveedor utilitario y subordinado dentro de ABRAXAS.
+El producto no depende de que una IA concreta sea "la inteligencia" del sistema.
 
-4. EL ÁRBOL DE LA VIDA (10 SEPHIROTH Y 22 SENDEROS):
-En la base de la pirámide, los cristales crecen formando exactamente la estructura del Árbol de la Vida.
-Las 10 Sephiroth y sus 22 senderos conectores sirven como canales físicos de datos por donde viaja y muta el contenido.
+La inteligencia principal de ABRAXAS es:
+- estructura matemática;
+- criterio estético y de lujo;
+- contexto inmutable;
+- memoria editorial cerrada;
+- reglas de corte en DaVinci Resolve y Remotion;
+- metrología fonética en set;
+- gobernanza relacional en SQLite;
+- y trazabilidad criptográfica por Content Addressable Storage (CAS).
 
-5. EL MICRO AGUJERO NEGRO Y EL OJO DIGITAL 3D DE ARQUITECTO:
-En la punta de oro se abre un micro agujero negro que absorbe la luz cósmica y la reorganiza en un Ojo Digital 3D
-suspendido entre nubes volumétricas 3D. El Ojo canaliza la energía de los dos soles y proyecta 3 cristales hacia la estratosfera:
-las Tres Lunas Orbitales.
-
-6. LAS TRES LUNAS ORBITALES Y EL BUCLE CERRADO DE APRENDIZAJE:
-- Luna 1 (El Publicador): Despacho adaptativo a 8 plataformas sociales.
-- Luna 2 (Analizador de Retención): Ingesta watch-time y drop-offs segundo a segundo.
-- Luna 3 (Luna Comercial & Gerencia de Equipo): Facturas OCR, Ventas WhatsApp/ML, Closers y ROI.
-Las tres lunas emiten sus rayos hacia la Tierra, y la Tierra devuelve compras, atención y datos cerrando el bucle evolutivo.
+Una IA puede cambiar. Un modelo LLM puede quedar obsoleto. Una herramienta de imagen o video puede ser reemplazada. La infraestructura de criterio de ABRAXAS permanece inmutable y soberana en Apple Silicon.
 
 ================================================================================
-3. LAS 10 ESFERAS DEL CICLO DE VIDA DEL CONTENIDO (DE LA IDEA AL DINERO REAL)
+1. LA DEFINICIÓN MÁS PRECISA DE ABRAXAS
+================================================================================
+
+ABRAXAS es un sistema operativo editorial determinista para creadores, marcas de élite y agencias que captura el conocimiento estratégico y creativo de una marca, lo transforma en estructuras inmutables en un Merkle-DAG, audita la grabación física en set mediante metrología Whisper local a 0.00% GAPs, ensambla el video cinematográfico bajo 7 motions fijos gobernados por el Total Production Coach y cierra el ciclo con telemetría de retención y facturación comercial por OCR.
+
+Su ventaja no consiste en inundar las redes con basura automatizada.
+Su ventaja consiste en hacer que:
+
+    criterio de fundador
+    + verdad fonética certificada
+    + ritmo cinematográfico en 18s
+    + dirección de arte Apple 2026
+    + atribución comercial exacta
+
+puedan repetirse de forma industrial sin degradación estética y sin depender de la fatiga humana.
+
+================================================================================
+2. QUÉ SÍ ES ABRAXAS
+================================================================================
+
+ABRAXAS SÍ es:
+
+1. Un compilador de criterio humano hacia infraestructura de software reproducible.
+2. Un objeto vivo inmutable estructurado en un Merkle-DAG llamado LIENZO.
+3. Un sistema de metrología fonética en set (SHIM) que emite certificados criptográficos SHA-256.
+4. Una gramática cinematográfica fija de 7 Visual Motions (M0 a M6) con tracks de video dedicados (V1-V4).
+5. Un motor de auto-corte en 18s calibrado por FFT a -38 dBFS con respiraciones orgánicas de 80ms.
+6. Un supervisor forense de producción (ARQUITECTO) con 9 disciplinas: Editing, VFX, SFX, Music, Motion, Image, Cover, Copy y Recording.
+7. Un eje de continuidad (CONTENIDO) que deriva 8 formatos sincronizados en cascada desde 1 sola semilla.
+8. Una ventana operativa nativa en macOS (HE) para gobernar 50 lotes mensuales bajo 6 compuertas inmutables.
+9. Una base de datos relacional local en SQLite (metrics.db) que elimina costos de cloud y APIs recurrentes.
+10. Un bucle cerrado de aprendizaje (Las Tres Lunas) donde retención y ventas re-alimentan a YOD: S(t+1) = S(t) + A(t).
+11. Un escáner OCR de facturas y tickets POS que calcula el ROI matemático exacto por contentId.
+12. Una plataforma de dirección de arte de lujo (Apple 2026: Negro OLED, Space Black, Saffron Gold, 3% Film Grain).
+13. Una formulación epistemológica formal (Cátedra 165 IQ) con autómatas finitos delta(s,e) y espacios de Hilbert (>= 0.88).
+14. Un backlog de ingeniería Scrum riguroso con salida validada en 1 Semana (MVP) y 1 Mes (Enterprise).
+15. Un sistema de almacenamiento CAS (Content Addressable Storage) con línea base SHA-256 certificada.
+
+================================================================================
+3. QUÉ NO ES ABRAXAS
+================================================================================
+
+ABRAXAS NO es:
+
+1. Un chatbot abierto donde todo empieza con una caja de texto en blanco.
+2. Un generador genérico de "50 ideas virales para redes sociales".
+3. Notion con un tema oscuro ni Asana con prompts incrustados.
+4. Una herramienta de IA que decide por sí misma qué es bello, bueno o verdadero.
+5. Una colección de 13 transiciones CSS de Remotion haciéndose pasar por motions de dirección cinematográfica.
+6. Un editor de video que mete whooshes, risers o efectos decorativos sin anclaje en el guion.
+7. Un teleprompter que solo muestra texto sin auditar fonéticamente omisiones contra el plan.
+8. Un sistema en la nube dependiente de suscripciones mensuales, servidores externos o fugas de privacidad.
+9. Una fábrica de "AI-slop" que produce contenido gramaticalmente correcto pero vacío de sustancia y números reales.
+10. Un sistema donde editar una frase en el guion rompe los derivados o genera "Media Offline".
+11. Un producto donde un Reel o Carrusel se publica sin pasar por las 6 compuertas inmutables de calidad.
+12. Un software donde el proceso de creación se reduce a 6 pasos abstractos ignorando las 10 esferas del Árbol de la Vida.
+
+================================================================================
+4. EVOLUCIÓN HISTÓRICA: DE v1.1.1 (JOC PROOF) A v3.3 (ENTERPRISE OPERATING SYSTEM)
+================================================================================
+
+La versión v1.1.1 nació como una prueba de concepto monocliente centrada en JOC para demostrar que el criterio editorial podía capturarse y estructurarse sin degradarse.
+
+A partir de los aprendizajes reales en DaVinci Resolve, en set de grabación y en producción de lotes, el sistema evolucionó orgánicamente a través de 6 fases hasta consolidarse en v3.3 Pro Certified:
+
+FASE 1: Moka & DaVinci Resolve Automation (Mayo - 11 Agosto 2026)
+- Se probó la automatización de corte en podcasts reales (Episodio 55 de Amanda Vicari y Joc).
+- Se detectó el problema de los SRT Gaps y la desincronización de frames (FrameMatching).
+- Se crearon los primeros scripts Python batch para DaVinci Resolve Studio.
+
+FASE 2: ABRAXAS Content Lab & Motions V4.1 / V4.2 (13 - 22 Agosto 2026)
+- Se descubrió la cadencia óptima de corte: 4 a 9 segundos (media 7 a 9 segundos).
+- Se crearon los 7 Motions Fijos de ABRAXAS (M0 a M6).
+- Se estableció la regla inmutable: Para M1 a M6 se requieren exactamente 3 imágenes conectadas (START ➔ DEVELOPMENT ➔ RESULT) guardadas en __ASSETS_MOTION.
+
+FASE 3: VAV Captions Desktop & Remotion (27 - 28 Agosto 2026)
+- Se migró la interfaz audiovisual a una aplicación de escritorio nativa en Tauri 2 + Rust + Remotion 4.
+- Se integró Whisper.cpp Large V3 Turbo local sobre el Apple Neural Engine (cero latencia de cloud).
+- Se formalizó el desacoplamiento sagrado: Visual Motion (M0-M6) vs Caption Motion (animación de texto).
+
+FASE 4: Consolidación, Handoffs Seguros & Scripts .command (28 - 29 Agosto 2026)
+- Se encapsuló el contexto de desarrollo en ABRAXAS_CHATGPT_PRO_CONTEXT para evitar alucinaciones en chats de IA.
+- Se aislaron los módulos ontológicos y se crearon scripts de inicio y recarga estancos.
+
+FASE 5: Portal Web Status & Awwwards Apple 2026 (31 Agosto 2026)
+- Se diseñó la interfaz de presentación con chasis de hardware de MacBook Pro 2026 (Zero CLS).
+- Se implementó el selector interactivo de 8 formatos vivos en resolución 8K y bento grids.
+
+FASE 6: Monorepo Total Unificado abraxasos (1 - 2 Septiembre 2026)
+- Se unificó ABRAXAS_CORE, VAV, apps/public-status, docs/ y CANON_37_TXT en un solo monorepo.
+- Se creó el motor Canvas 3D a 60 FPS con la pirámide de Giza, apertura de coraza (exploded view) y glifos "A" conectados.
+- Se auditaron 5,634 enlaces con 0 enlaces rotos (0 broken links) y sincronización a 3 repositorios GitHub.
+
+================================================================================
+5. LA COSMOGONÍA SOLAR Y LA GEOLOGÍA MÍSTICA (LOS 6 PASOS REALES)
+================================================================================
+
+La cosmogonía de ABRAXAS no es un adorno mitológico; es la formulación poética y exacta de cómo el contenido transmuta desde la nada conceptual hasta el dinero y la influencia real:
+
+PASO 1: EL SOL PRIMORDIAL Y EL SOL NEGRO (Keter ➔ Chokhmah)
+En el vacío primordial, un Sol de Luz Pura se crea de la nada representando la Voluntad Absoluta y la Intención Infinita (Keter / Atziluth). Para evitar que la energía se disperse de forma caótica y estéril, un Sol Negro gravitacional se superpone en eclipse perfecto, creando un punto focal hiperdenso de concentración dialéctica (Chokhmah / YOD).
+- Módulo de Software: YOD Brand Core & Niche Opportunity Engine.
+
+PASO 2: EL RAYO DE MANIFESTACIÓN (KAV) Y LA GRAN PIRÁMIDE (Binah)
+Del vórtice del eclipse se dispara el Rayo de Manifestación (Kav) hacia la Tierra portando la Gran Pirámide Dorada. Al impactar en el plano físico, del subsuelo terrestre brotan cristales geológicos gigantescos que elevan la pirámide hacia lo alto.
+- Módulo de Software: LIENZO (Eje de Continuidad en Merkle-DAG en 4 tiempos).
+
+PASO 3: LA GEODA DE AMATISTA Y LA CÚSPIDE DE ORO MACIZO (Da'at)
+Los cristales que elevan la pirámide son recubiertos por formaciones de roca sólida y se transforman en una geoda translúcida de amatista púrpura imperial. La cúspide de la pirámide queda rematada en oro macizo puro: la morada de YOD (Inteligencia de Nicho).
+- Módulo de Software: SHIM (Reality Metrology Gate a 0.00% GAPs).
+
+PASO 4: EL ÁRBOL DE LA VIDA: 10 SEPHIROTH Y 22 SENDEROS (Chesed ➔ Tiferet)
+En la base de la pirámide, los cristales crecen formando exactamente la estructura del Árbol de la Vida. Las 10 Sephiroth y sus 22 senderos conectores sirven como canales físicos de datos por donde viaja y muta el contenido sin perder coherencia.
+- Módulo de Software: CONTENIDO 1➔8 (Ramificación y sincronización en cascada).
+
+PASO 5: EL MICRO AGUJERO NEGRO Y EL OJO DIGITAL 3D (Arquitecto)
+En la punta de oro se abre un micro agujero negro que absorbe la luz cósmica y la reorganiza en un Ojo Digital 3D suspendido entre nubes volumétricas. El Ojo canaliza la energía de los dos soles y proyecta 3 cristales hacia la estratosfera: las Tres Lunas Orbitales.
+- Módulo de Software: ARQUITECTO (Total Production Coach y cognición).
+
+PASO 6: LAS TRES LUNAS ORBITALES Y EL BUCLE CERRADO (Netzach ➔ Hod ➔ Malkhut)
+- Luna 1 (El Publicador): Netzach (Esfera 08) — Despacho adaptativo a 8 plataformas.
+- Luna 2 (Analizador de Retención): Hod (Esfera 09) — Watch-time segundo a segundo y re-alimentación a YOD.
+- Luna 3 (Luna Comercial & Gerencia de Equipo): Malkhut (Esfera 10) — Facturas OCR, libro contable y ROI.
+Las tres lunas emiten rayos hacia la Tierra, y la Tierra devuelve compras, atención y datos cerrando el bucle: S(t+1) = S(t) + A(t).
+
+================================================================================
+6. LAS 10 ESFERAS SEFIRÓTICAS DEL CICLO DE VIDA DEL CONTENIDO
 ================================================================================
 
 ESFERA 01: KETER // LA CORONA (VOLUNTAD PURA DE MARCA)
 - Herramienta: YOD Brand Core & Axiom Vault.
-- Función: Ingesta de la voz de marca, axiomas inmutables y tesis fundacionales.
+- Función: Ingesta inmutable de la voz de marca, axiomas fundacionales y territorio de autoridad.
 - Estado en Lienzo: PLANNED.
 
 ESFERA 02: CHOKHMAH // SABIDURÍA (RADAR DIALÉCTICO DE GANCHOS)
 - Herramienta: YOD Niche Opportunity Engine.
-- Función: Escaneo de puntos ciegos del mercado y generación de 3 aperturas dialécticas (0-100).
+- Función: Escaneo de dogmas del mercado y formulación de ganchos dialécticos.
 - Regla: Hook Score >= 85/100 obligatorio para proceder.
 
 ESFERA 03: BINAH // ENTENDIMIENTO (ESTRUCTURA DE 4 TIEMPOS EN LIENZO)
-- Herramienta: LIENZO Eje de Continuidad (Merkle-DAG).
-- Función: Estructuración en 4 tiempos: Hook -> Tesis -> Mecanismo -> Payoff.
+- Herramienta: LIENZO (Merkle-DAG inmutable).
+- Función: Estructuración obligatoria en 4 tiempos: Hook ➔ Tesis ➔ Mecanismo ➔ Payoff.
 - Estado en Lienzo: OBSERVED.
 
 ESFERA 04: DA'AT // CONOCIMIENTO & UMBRAL DE LA VERDAD (METROLOGÍA LÚCIDA)
 - Herramienta: SHIM Reality Metrology Gate.
-- Función: Auditoría fonética en vivo durante la grabación mediante Whisper Large V3.
-- Regla: Distancia Levenshtein GAP = 0.00%. Cero desvíos no autorizados.
+- Función: Auditoría fonética en set con Whisper Large V3 local (< 40ms latencia).
+- Regla: Distancia Levenshtein GAP = 0.00%. Si hay omisiones, bloqueo a status BLOCKED.
 
 ESFERA 05: CHESED // EXPANSIÓN (RAMIFICACIÓN 1➔8)
 - Herramienta: CONTENIDO Format Synthesizer.
-- Función: De 1 sola semilla validada se derivan 8 formatos sincronizados:
-  1. Reels 9:16 | 2. Carruseles 4:5 | 3. Hilos X | 4. Newsletters | 5. Podcasts | 6. YouTube 16:9 | 7. Infografías | 8. Artículos.
+- Función: De 1 sola semilla validada se derivan en cascada 8 formatos sincronizados (Reels, Carruseles, Hilos, Newsletters, Podcasts, YouTube 16:9, Infografías, Artículos).
 
 ESFERA 06: GEVURAH // RIGOR & RESTRICCIÓN (6 COMPUERTAS DE CALIDAD)
 - Herramienta: HE Operations Desk (macOS Native).
-- Función: Auditoría estricta de Safe Zones, directivas 'no_sfx', contraste WCAG AAA y dignidad de marca.
+- Función: Auditoría estricta de Safe Zones, directivas no_sfx, contraste WCAG AAA y ducking -18dB.
 - Estado en Lienzo: RESOLVED.
 
-ESFERA 07: TIFERET // BELLEZA & ARMONÍA (LA CATEDRAL DE SÍNTESIS)
+ESFERA 07: TIFERET // BELLEZA & ARMONÍA (CATEDRAL DE SÍNTESIS VAV)
 - Herramienta: VAV Audio-Visual Engine & Remotion.
-- Función: Auto-corte en 18s (RMS -38 dBFS, respiraciones de 80ms), subtítulos cinéticos, 13 motions, VFX, framing y mastering a -14 LUFS.
+- Función: Auto-corte en 18s (RMS -38 dBFS, respiraciones 80ms), 7 Motions fijos, subtítulos cinéticos y mastering a -14 LUFS.
 - Estado en Lienzo: PRODUCTION.
 
 ESFERA 08: NETZACH // VICTORIA E IMPACTO (DESPACHO MULTICANAL)
 - Herramienta: LUNA 1 (El Publicador).
-- Función: Empaquetado y distribución automática a las 8 plataformas sociales con metadatos optimizados.
+- Función: Empaquetado y distribución automática a 8 plataformas con metadatos optimizados.
 - Estado en Lienzo: PUBLISHED.
 
 ESFERA 09: HOD // RESONANCIA & TELEMETRÍA (ANÁLISIS DE RETENCIÓN)
 - Herramienta: LUNA 2 (Analizador de Estadísticas Creativas).
-- Función: Auditoría segundo a segundo de retención (APV, drop-off en segundo 3) y re-alimentación a YOD.
+- Función: Auditoría segundo a segundo de retención (APV, drop-off en segundo 3) y penalización a YOD.
 
 ESFERA 10: MALKHUT // REINO & MANIFESTACIÓN FÍSICA (COMERCIO & GERENCIA)
-- Herramienta: LUNA 3 (La Luna Comercial & Gerencia de Equipo en HE).
-- Función: Ingesta OCR de facturas, libro contable por contentId, telemetría de closers, comisiones y cálculo matemático de ROI.
+- Herramienta: LUNA 3 (La Luna Comercial & Gerencia en HE).
+- Función: Ingesta OCR de facturas, libro contable por contentId, closers y cálculo matemático de ROI.
 - Estado en Lienzo: LEARNING.
 
 ================================================================================
-4. INVENTARIO COMPLETO DE LAS 16 HERRAMIENTAS Y MÓDULOS DE ABRAXAS
+7. LOS 7 MOTIONS FIJOS ORIGINALES CANÓNICOS DE ABRAXAS (M0 A M6)
 ================================================================================
 
-01. YOD (י) — Core de Inteligencia Seminal:
-    - Escaneo de dogmas obsoletos del nicho.
-    - Generación de ganchos de confrontación directa, curiosidad intelectual e historia práctica.
-    - Fórmula de Hook Score: (Tensión * 0.4) + (Claridad * 0.3) + (Autoridad * 0.3).
+La gramática de dirección cinematográfica de ABRAXAS no es una lista arbitraria de efectos CSS; es una arquitectura probada en DaVinci Resolve y Remotion:
 
-02. LIENZO — Objeto Vivo Inmutable en Merkle-DAG:
-    - Seis bloques: metadata, thesis_intent, observed_audio, derivatives, coach_audit, commerce_telemetry.
-    - Versionado criptográfico SHA-256.
+REGLA FUNDAMENTAL DE DESACOPLAMIENTO:
+- Visual Motion (VMOT): El tratamiento de cámara y escena que altera la imagen en el timeline (M0 a M6).
+- Caption Motion (CMOT): La animación tipográfica de los subtítulos (Slide Blur, Elastic Pop, Block Fade).
+- NUNCA llamar a ambos simplemente "motion" internamente.
 
-03. CONTENIDO — Eje de Continuidad 1➔8:
-    - Sincronización en cascada: editar una frase en el guion actualiza automáticamente los 8 derivados.
-    - Almacenamiento CAS (Content Addressable Storage) sin enlaces rotos ("Media Offline").
+CATÁLOGO MAESTRO:
 
-04. SHIM (ש) — Metrología Lúcida en Set:
-    - Live Teleprompter inteligente con Whisper local (< 40ms latencia).
-    - Detección de omisiones en caliente: pantalla ámbar y re-grabación quirúrgica de la frase omitida.
-    - Bloqueo de exportación si GAP > 0.00%.
+M0: KEEP_SOURCE (Alternative Camera Coverage / Mantener Speaker)
+- Track de Video: V1
+- Placement Mode: KEEP_SOURCE
+- Propiedad de Texto: caption-engine
+- Subtítulos: Visibles (visible).
+- Función: Mantiene al orador o alterna entre cámaras en plano frontal. Cero imágenes generadas.
 
-05. VAV CUTS (ו) — Auto-Edición en 18 Segundos:
-    - Algoritmo de detección de silencios RMS por ventana FFT de 10ms a -38 dBFS (> 120ms).
-    - Pre/post-padding de respiración orgánica de 80ms con micro-fades parabólicos de 5ms.
-    - Selector de Densidad de Cortes:
-      * Nivel 1 (Cinematic Minimal): Cortes cada 10-15s (CEOs, ensayos YouTube 16:9).
-      * Nivel 2 (Dynamic Authority): Cortes cada 3-5s (Reels, Instagram, LinkedIn).
-      * Nivel 3 (Hyper-Retention Rush): Cortes cada 1.5-2.5s (TikTok, Shorts).
+M1: FLEXIBLE_PLATE_OR_CLOSEUPS (Speaker + B-Roll de Evidencia)
+- Track de Video: V2
+- Placement Mode: COMPOSITE_BEHIND_SPEAKER
+- Propiedad de Texto: caption-engine
+- Subtítulos: Adaptativos en espacio negativo (Scene Smart: required). Evita la figura del orador.
+- Regla de Imágenes: 3 plates o close-ups que observan y profundizan la idea dicha por el speaker.
 
-06. VAV CAPTIONS — Subtítulos Cinéticos Whisper:
-    - 4 estilos: Viral Gold, Cyber Neon, Clean Minimal, Kinetic Impact.
-    - Sincronización palabra por palabra por microsegundos y Safe Zone OCR en 9:16 y 4:5.
+M2: PROGRESSIVE_SCENE_EXACT_TEXT (Transformación Progresiva con Texto Integrado)
+- Track de Video: V3
+- Placement Mode: REPLACE_VISUAL_KEEP_SOURCE_AUDIO
+- Propiedad de Texto: hybrid / visual-motion
+- Subtítulos: SUPRIME subtítulos estándar duplicados. El motion ya integra el texto exacto animado.
+- Algoritmo: split_exact_three(text) divide la frase hablada en:
+  START ➔ MIDDLE ➔ END
 
-07. VAV MOTIONS — 13 Familias de Motion Remotion:
-    - Física de resortes elásticos: mass: 0.5, damping: 12, stiffness: 100.
-    - Familias: Zoom In/Out, Push In, Pull Out, Pan Left/Right, Scale, Translate, Fade In/Out, Wipe, Parallax, Whip Transition.
+M3: EDITORIAL_TYPE (Golpe Tipográfico Editorial)
+- Track de Video: V4
+- Placement Mode: REPLACE_VISUAL_KEEP_SOURCE_AUDIO
+- Propiedad de Texto: visual-motion
+- Subtítulos: TOTALMENTE SUPRIMIDOS durante el takeover tipográfico.
+- Función: La tipografía domina la pantalla en centro absoluto para sentar una tesis, contradicción dialéctica o payoff de alto impacto.
 
-08. VAV VFX — Motor de Efectos Ópticos & Movimiento:
-    - Zooms ópticos progresivos del 1.0x al 1.35x en picos de tensión.
-    - Mapa de profundidad selectivo (Selective Depth Map Blur) para aislar al orador.
-    - Directiva del Total Production Coach: cero efectos decorativos gratuitos sin anclaje en el guion.
+M4: MASTER_INFOGRAPHIC_Z (Infografía Navegable en Eje Z)
+- Track de Video: V3
+- Placement Mode: REPLACE_VISUAL_KEEP_SOURCE_AUDIO
+- Propiedad de Texto: caption-engine (salvo que la infografía lleve el texto exacto).
+- Subtítulos: Subordinados. Scene Smart detecta zonas de datos y mueve el texto a espacios despejados.
+- Función: Una infografía vectorial recorrida con cámara virtual para explicar sistemas, relaciones o procesos.
 
-09. VAV FRAMING — Multi-Cámara Dinámica desde 1 Sola Toma:
-    - Transforma un video estático 4K en una producción con múltiples ángulos mediante heurística de Apple Motion y Whisper.
-    - Planos Básicos: Plano Medio Frontal (1.0x), Close-Up Emocional (1.35x), Ángulo 45° Desplazado (Regla de Tercios).
-    - Planos Experimentales: Ángulo Picado (High Angle), Contrapicado de Autoridad (Low Angle), Dutch Angle (Inclinación 4°).
+M5: CINEMATIC_MICROSEQUENCE (Acción Física Cinematográfica)
+- Track de Video: V2
+- Placement Mode: REPLACE_VISUAL_KEEP_SOURCE_AUDIO
+- Propiedad de Texto: caption-engine
+- Subtítulos: Visibles con re-evaluación en cada corte de toma.
+- Estructura de 3 Tomas:
+  Wide (Plano General) ➔ Detail (Detalle Quirúrgico) ➔ Result (Efecto Final)
 
-10. VAV CAROUSEL — Tipografía Inteligente & Capas PNG:
-    - Auto-montaje desde fotos limpias sin texto guardadas en la carpeta del proyecto.
-    - Animación de tipografía para convertir carruseles en video:
-      * Typewriter (letra a letra, 25-60ms).
-      * Kinetic Elastic Pop (palabra a palabra con rebote spring).
-      * Smooth Block Fade (disolvencia de oraciones completas).
-    - Superposición de PNGs con efecto 'Paper-Cut' (caída con sombra realista), difuminado suave o flotación senoidal.
-    - Modos: 100% automatizado con agentes de IA o 100% manual con control tipográfico.
+M6: SOFTWARE_INPUT_PROCESS_OUTPUT (Lógica Digital SaaS)
+- Track de Video: V3
+- Placement Mode: REPLACE_VISUAL_KEEP_SOURCE_AUDIO
+- Propiedad de Texto: caption-engine a menos que la UI contenga la frase exacta.
+- Estructura de 3 Pasos:
+  Input (Entrada de Datos) ➔ Process (Cálculo/Transformación) ➔ Output (Resultado en Pantalla)
 
-11. VAV MASTERING — Ingeniería Acústica:
-    - Normalización a -14.0 LUFS Integrated / -1.0 dBTP Peak.
-    - High-pass en 80Hz, ecualizador dinámico en 350Hz, de-esser en 6.5kHz y limitador Brickwall.
-
-12. HE (ה) — Ventana Operativa & Kanban de 50 Lotes en macOS:
-    - 6 compuertas de calidad inmutables.
-    - Tablero Kanban de 50 activos mensuales gobernados en 1 tarde por 1 solo operador.
-    - Base de datos relacional SQLite 'metrics.db' con persistencia local soberana.
-
-13. ARQUITECTO — Cognición, Asistencia & Total Production Coach:
-    - 4 Roles: Coach Exigente, Asistente Infatigable, Guía 4D y Auditor de Sistema.
-    - Total Production Coach:
-      * Editing Coach: Cortes J y L (audio entra 300ms antes del corte visual).
-      * SFX Coach: Directiva 'no_sfx_needed' para eliminar whooshes gratuitos.
-      * Music Coach: Sidechain ducking de música a -18dB cuando habla la voz.
-
-14. LUNA 1: EL PUBLICADOR (DISTRIBUCIÓN):
-    - Adaptadores para TikTok, Instagram Graph, YouTube Data API, X, Substack y Spotify.
-
-15. LUNA 2: ANALIZADOR DE RETENCIÓN CREATIVA:
-    - Ingesta de curvas de drop-off y cálculo de Average Percentage Viewed (APV).
-
-16. LUNA 3: LA LUNA COMERCIAL & GERENCIA DE EQUIPO:
-    - Escáner OCR de facturas por foto/PDF (WhatsApp, MercadoLibre, Stripe, POS).
-    - Libro contable vivo por pieza (contentId).
-    - Panel de telemetría de closers / vendedores y cálculo de comisiones.
-    - Ecuación de ROI: ROI = ((Ingresos Atribuidos - Costos) / Costos) * 100%.
+REGLA OPERATIVA DE ASSETS (HOTFIX V4.2):
+Para cada fragmento que use M1 a M6, la carpeta __ASSETS_MOTION debe contener exactamente 3 archivos:
+- IMAGE_01_START.png
+- IMAGE_02_DEVELOPMENT.png
+- IMAGE_03_RESULT.png
+- Duración de cada fragmento: Entre 4 y 9 segundos (promedio estricto: 7 a 9 segundos).
 
 ================================================================================
-5. EL MÉTODO DE BRANDING Y LAS 4 CAMPAÑAS PRE-DISEÑADAS EN YOD
+8. METROLOGÍA SHIM (ש): AUDITORÍA FONÉTICA Y CERTIFICADOS SHA-256
 ================================================================================
 
-MATRIZ DE 4 VECTORES ESTRATÉGICOS:
-1. ORIGEN (El Dolor): Cuellos de botella, fatiga creativa, dependencia de agencias lentas.
-2. DESTINO (La Visión): Facturación escalable, soberanía técnica, autoridad de categoría.
-3. IDENTIDAD ACTUAL (La Verdad): Axiomas inmutables, ventajas injustas, casos de éxito reales.
-4. POTENCIAL EXPANDIDO (La Victoria): Tesis de nicho contraria calificada de 0 a 100 que elimina la competencia por precio.
+QUÉ ES:
+SHIM es el auditor de realidad de ABRAXAS. Su misión es garantizar que lo grabado en set coincida al 100% con lo planificado en el guion.
 
-LAS 4 CAMPAÑAS PRE-DISEÑADAS:
-1. Conquista de Nicho: Deconstrucción de los 3 mitos más repetidos en la industria.
-2. Reactivación por WhatsApp: Reactivación de bases de datos frías mediante caso de estudio real.
-3. El Gran Monumento: Manifiesto visual y técnico de 15 minutos en YouTube que establece el estándar de oro.
-4. Cierre High-Ticket: Serie de 3 piezas de ultra-especificación orientada a directores y decisores.
-
-================================================================================
-6. PLAN SCRUM DE INGENIERÍA: 1 SEMANA (MVP) VS 1 MES (ENTERPRISE)
-================================================================================
-
-PLAN DE 1 SEMANA (SPRINT MVP ULTRARRÁPIDO EN MAC):
-- Día 1: Cimientos de datos, contratos TypeScript, almacenamiento CAS SHA-256.
-- Día 2: Motor YOD y radar de ganchos dialécticos (0-100).
-- Día 3: Metrología SHIM (Whisper Large V3 local a 0.00% GAPs).
-- Día 4: Motor VAV de auto-corte en 18s y subtítulos cinéticos.
-- Día 5: 13 Familias de motion Remotion, VAV VFX y VAV Framing.
-- Día 6: VAV Carousel, Luna Comercial con escáner OCR de facturas y panel de closers.
-- Día 7: Tablero Kanban HE en macOS y prueba de 50 lotes en 4 horas.
-
-PLAN DE 1 MES (ROLLOUT ENTERPRISE EN APPLE SILICON):
-- Semana 1: Núcleo determinista, persistencia SQLite metrics.db y 37 dossiers canónicos.
-- Semana 2: Aceleración VideoToolbox (ProRes/HEVC), de-esser en 6.5kHz y mastering a -14 LUFS.
-- Semana 3: Total Production Coach, bucle cerrado S(t+1) = S(t) + A(t) y telemetría de ventas.
-- Semana 4: Empaquetado en instalador DMG firmado para macOS y pruebas de estrés de 200 videos continuos.
+CÓMO FUNCIONA:
+1. Recibe PlannedBeat[] del Lienzo y TranscriptSegment[] generados por Whisper Large V3 local.
+2. Compara palabra por palabra y keyword por keyword.
+3. Si un beat coincide: status = "FOUND" (confidence >= 0.95).
+4. Si un beat no se encuentra en el audio grabado: status = "MISSING" (GAP DETECTADO).
+5. Si gaps.length === 0:
+   - Emite el certificado criptográfico ShimVerificationCertificate con firma SHA-256 inmutable:
+     signature = sha256(contentId + reportId + alignmentScore + gapStatus + timestamp + verifiedBy)
+   - El componente en el Lienzo pasa a status: APPROVED.
+6. Si gaps.length > 0:
+   - El componente en el Lienzo queda en status: BLOCKED.
+   - Se registra el evento SHIM_GAP_DETECTED en el EventLedger.
+   - Se bloquea físicamente la exportación del video hasta que se re-grabe quirúrgicamente la frase omitida.
 
 ================================================================================
-7. CANON DE GUSTOS VISUALES, EDITORIALES Y ANATOMÍA DEL LIENZO
+9. ARQUITECTO: LAS 9 DISCIPLINAS DEL TOTAL PRODUCTION COACH
+================================================================================
+
+Arquitecto supervisa la calidad creativa y técnica en 9 áreas de especialidad:
+
+1. Editing Coach:
+   - Audita ritmo, estructura y respiraciones.
+   - Exige Cortes J y L (audio entra/sale 300ms desfasado del video para fluidez cinematográfica).
+   - Prohíbe cortes visuales sin cambio de idea o propósito narrativo.
+
+2. VFX Coach:
+   - Todo efecto visual debe definir 8 variables obligatorias:
+     WHAT CHANGES, WHEN, TRIGGER, WHY, DURATION, LAYER/PLACEMENT, PRESERVE, NEGATIVES.
+   - Cero efectos decorativos sin anclaje en el guion.
+
+3. SFX Coach (Directiva no_sfx_needed):
+   - Cada sonido requiere: SOUND, WHEN, TRIGGER, LEVEL, FUNCTION.
+   - Si no hay un evento visual o emocional concreto que lo justifique: directiva no_sfx_needed. Cero whooshes decorativos.
+
+4. Music Coach:
+   - Supervisa BPM, textura, energía y resolución.
+   - Sidechain Ducking obligatorio: La música de fondo se atenúa a -18dB en el rango vocal humano (85Hz-8kHz) cuando habla el orador.
+
+5. Motion Coach:
+   - Clasifica y recomienda: KEEP_SOURCE, STILL_ONLY (pan/zoom sutil, parallax, push/pull, depth shift), FRAME_SEQUENCE (START/MIDDLE/END), FULL_ANIMATION o SOURCE_PLUS_MOTION.
+
+6. Image Editing Coach:
+   - Audita composición, espacio negativo, posición del sujeto, contraste WCAG y jerarquía visual.
+
+7. Cover Coach (Portadas):
+   - Revisa promesa, legibilidad a tamaño thumbnail en móvil, longitud del titular y diferenciación de categoría.
+
+8. Copy Coach:
+   - Verifica que el texto complemente al video y no lo repita como loro. Claims comprobables antes del CTA.
+
+9. Recording Director:
+   - Guía en set sugiriendo encuadre, mirada, energía y movimiento de manos. Tras la toma diagnostica: FOUND, MISSING, RETAKE.
+
+================================================================================
+10. LIENZO Y EL EJE DE CONTINUIDAD 1➔8 (CONTENIDO)
+================================================================================
+
+EL OBJETO LIENZO:
+Cada pieza vive en un Merkle-DAG con 6 bloques inmutables:
+1. metadata: Identidad única, cliente, campaña, lote, fecha de publicación.
+2. thesis_intent: Gancho, tesis dialéctica, mecanismo y payoff.
+3. observed_audio: Transcripción fonética y certificado SHIM.
+4. derivatives: Los 8 formatos derivados sincronizados en cascada.
+5. coach_audit: Aprobación forense de las 9 disciplinas del Arquitecto.
+6. commerce_telemetry: Unidades vendidas, facturación atribuida y ROI.
+
+LOS 8 FORMATOS DERIVADOS:
+De 1 sola semilla validada se derivan automáticamente:
+1. Videos Cortos (9:16) — TikTok, Reels, Shorts.
+2. Carruseles (4:5) — Instagram, LinkedIn.
+3. Hilos de Autoridad — X (Twitter).
+4. Newsletters — Substack, Beehiiv.
+5. Micro-Podcasts — Spotify, Apple Podcasts.
+6. YouTube Documental (16:9).
+7. Infografías de Síntesis Vectorial.
+8. Artículos de Fondo — Medium, Blog corporativo.
+
+SINCRONIZACIÓN EN CASCADA:
+Editar una frase en el guion central de la Ficha actualiza automáticamente los 8 derivados. Almacenamiento CAS direccionado por contenido: cero errores de "Media Offline".
+
+================================================================================
+11. HE (ה): GOBERNANZA OPERATIVA Y BASE DE DATOS LOCAL SQLITE
+================================================================================
+
+VENTANA OPERATIVA EN MACOS:
+HE permite a un solo operador con criterio gobernar 50 activos al mes en una sola tarde, organizados en 3 capas de lotes:
+- Lote 1 (Premium): 1 Reel + 1 Carrusel insignia por semana.
+- Lote 2 (Frecuencia): Derivados y clips de opinión.
+- Lote 3 (Soporte): Stories, frases, tarjetas visuales.
+
+LAS 6 COMPUERTAS DE CALIDAD:
+1. Compuerta Fonética: SHIM 0.00% GAPs certificado con SHA-256.
+2. Compuerta Espacial: Safe Zones 9:16 y 4:5 probadas contra la UI de redes sociales.
+3. Compuerta Sonora: Directiva no_sfx_needed aplicada.
+4. Compuerta de Inteligibilidad: Sidechain ducking de música a -18dB y mastering a -14 LUFS.
+5. Compuerta de Coherencia: Derivados sincronizados en el Merkle-DAG.
+6. Compuerta de Dignidad: Aprobación final firmada por el operador humano.
+
+PERSISTENCIA LOCAL metrics.db (SQLite):
+- Tablas: assets, renders, discrepancies, sales_ledger, closers_performance.
+- Cero servidores externos, cero suscripciones cloud, 100% de soberanía y privacidad.
+
+================================================================================
+12. LAS TRES LUNAS ORBITALES Y TELEMETRÍA COMERCIAL
+================================================================================
+
+LUNA 01: EL PUBLICADOR (Netzach)
+- Empaquetado adaptativo con metadatos específicos por canal: resolución nativa, thumbnails, hashtags y scheduling automático a 8 plataformas.
+
+LUNA 02: ANALIZADOR DE RETENCIÓN (Hod)
+- Ingesta de curvas de drop-off segundo a segundo y Average Percentage Viewed (APV).
+- Penalización dialéctica: Si la retención cae más del 30% en los primeros 3 segundos, YOD descarta esa estructura de gancho.
+
+LUNA 03: LA LUNA COMERCIAL & GERENCIA (Malkhut)
+- Escáner OCR de Facturas: Ingesta de comprobantes por foto o PDF (WhatsApp, MercadoLibre, Stripe, tickets POS). Extrae automáticamente: Monto, Fecha, SKU/Producto, Comprador y Canal.
+- Libro Contable por Pieza: Cada contenido (contentId) mantiene un registro vivo de ventas y dólares generados.
+- Telemetría de Closers: Seguimiento de leads atendidos, ventas cerradas y cálculo de comisiones.
+- Ecuación de ROI Matemático:
+  ROI = ((Facturación Atribuida - Costos) / Costos) * 100%
+
+BUCLE CERRADO:
+S(t+1) = S(t) + A(t)
+
+================================================================================
+13. CANON DE GUSTOS APPLE 2026 Y LEYES EDITORIALES
 ================================================================================
 
 DIRECCIÓN DE ARTE APPLE 2026:
 - Fondo: Negro Puro OLED (#000000).
 - Chasis Space Black: #0b0b0f, #161617, #1d1d1f, #2d2d2f.
-- Acentos: Saffron Gold (#d4af37), Electric Iris (#bf5af2), Emerald (#30d158), Cyan (#2997ff).
+- Acentos de Lujo: Saffron Gold (#d4af37), Electric Iris (#bf5af2), Emerald (#30d158), Cyan (#2997ff).
 - Textura: 3% Film Grain dinámico en 35mm.
-- Tipografía: SF Pro Display / SF Pro Text / SF Mono.
-- Interactividad: Botón '+' estilo Apple en la esquina de cada cuadro que rota 45° a '✕' y despliega el drawer técnico.
+- Tipografía: SF Pro Display (titulares), SF Pro Text (cuerpo), SF Mono (datos y código).
+- Movimiento: Restringido y seguro. Transiciones de 0.2s en hover y reveals atmosféricos suaves de 2.5s. Cero rebotes innecesarios.
 
-LEYES EDITORIALES DE RESPUESTA DIRECTA:
-- Ley 1: Tema != Idea ("Productividad" es un tema hueco; una idea es una afirmación dialéctica comprobable).
-- Ley 2: Deuda Narrativa Obligatoria (El gancho abre una promesa que el cuerpo y cierre pagan exactamente).
-- Ley 3: Prohibición de AI-Slop (Cero clichés genéricos; solo mecanismos y números reales).
+LAS TRES LEYES EDITORIALES:
+1. Ley 1: Tema != Idea
+   "Productividad" es un tema hueco. Una idea es una afirmación dialéctica comprobable que despierta debate y abre deuda narrativa. YOD descarta semillas que sean solo temas.
+2. Ley 2: Deuda Narrativa Obligatoria
+   El gancho abre una promesa implícita (la deuda); el cuerpo presenta la prueba técnica y el cierre salda la deuda con un payoff real. Si no la pagas, pierdes autoridad.
+3. Ley 3: Prohibición de AI-Slop
+   Cero clichés ni frases motivacionales genéricas. Toda afirmación debe validarse mediante similitud en espacio de Hilbert:
+   Coherencia(A, B) = (A · B) / (||A|| ||B||) >= 0.88
 
-Línea Base Certificada SHA-256: 91234741f0b3a1ac5bd7e4c0556fafa868d00769
+================================================================================
+14. EL MÉTODO DE BRANDING Y LAS 4 CAMPAÑAS PRE-DISEÑADAS EN YOD
+================================================================================
+
+MATRIZ DE 4 VECTORES ESTRATÉGICOS:
+1. Origen (El Dolor): Cuellos de botella, dependencia de agencias lentas, rotación de editores, cero atribución de ventas.
+2. Destino (La Visión): Metas de facturación mensual, soberanía técnica en Mac, autoridad de categoría sin competir por precio.
+3. Identidad Actual (La Verdad): Axiomas inmutables de marca, ventajas injustas, casos de éxito reales y verificables.
+4. Potencial Expandido (La Victoria): Tesis de nicho contraria que elimina la competencia por precio.
+
+LAS 4 CAMPAÑAS PRE-DISEÑADAS:
+1. Conquista de Nicho: Deconstrucción dialéctica de los 3 mitos más arraigados de la industria.
+2. Reactivación de Base Fría: Secuencia de alta deuda narrativa para bases de datos inactivas en WhatsApp y Email.
+3. El Gran Monumento: Manifiesto técnico y visual de 15 minutos en YouTube que establece el estándar de oro.
+4. Cierre High-Ticket: Trilogía de ultra-especificación orientada a directores y decisores.
+
+================================================================================
+15. GUÍA PASO A PASO PARA COMENZAR DESDE CERO
+================================================================================
+
+Para arrancar el sistema completo sin ambigüedades:
+
+1. Clonar o acceder al monorepo:
+   cd /Users/lordjef/Desktop/abraxasos
+
+2. Verificar los 7 Motions en Python:
+   python3 ABRAXAS_CORE/motion_intelligence/ABRAXAS_V4_1_MOTION_AUTOMATION/TOOLS/abraxas/motions.py
+
+3. Ejecutar las pruebas unitarias de metrología SHIM:
+   cd ABRAXAS_CORE/SHIM && npm test
+
+4. Compilar los paquetes audiovisuales de VAV:
+   cd /Users/lordjef/Desktop/abraxasos/VAV/01_REPO/VAV && pnpm install && pnpm build
+
+5. Generar la plataforma web unificada con el motor 3D:
+   cd /Users/lordjef/Desktop/abraxasos
+   node apps/public-status/scripts/generate-apple-v3.mjs
+   node apps/public-status/scripts/generate-deepdive-suite.mjs
+   node apps/public-status/scripts/generate-commercial-moon-suite.mjs
+   node apps/public-status/scripts/generate-total-masterpiece.mjs
+   node apps/public-status/scripts/generate-all-unified.mjs
+   node apps/public-status/scripts/generate-master-awwwards.mjs
+   cp -r docs/abraxas-os-status/* docs/
+
+6. Auditar enlaces y desplegar:
+   node -e "/* link audit script con 0 broken links */"
+   git push origin main (sincronizado a los 3 repositorios oficiales)
+
+================================================================================
+16. DEFINITION FOR ANOTHER AI / NEW DEVELOPMENT CHAT
+================================================================================
+
+Si otro agente de IA o ingeniero recibe este archivo, debe respetar las siguientes INVARIANTES ABSOLUTAS:
+
+1. NUNCA sustituir los 7 Motions Fijos de ABRAXAS (M0 a M6) por transiciones CSS genéricas de Remotion.
+2. PRESERVAR la distinción obligatoria: Visual Motion (M0-M6) vs Caption Motion (animación de texto).
+3. EXIGIR para cada motion M1 a M6 exactamente 3 imágenes conectadas (START, DEVELOPMENT, RESULT).
+4. MANTENER la duración de fragmento entre 4 y 9 segundos (media 7 a 9 segundos).
+5. NO REDUCIR SHIM a un simple teleprompter: SHIM es un motor de certificación criptográfica con hashes SHA-256.
+6. NO DESMEMBRAR al Arquitecto: Es un único supervisor forense con 9 disciplinas (Editing, VFX, SFX, Music, Motion, Image, Cover, Copy, Recording).
+7. RESPETAR las 10 Esferas Sefiróticas del Ciclo de Vida del Contenido.
+8. NO PERMITIR pantallas de carga artificiales (preloaders) que bloqueen el acceso al usuario en 0%.
+9. MANTENER los 5,600+ enlaces internos con CERO roturas (0 broken links).
+10. PRESERVAR la línea base criptográfica SHA-256: 91234741f0b3a1ac5bd7e4c0556fafa868d00769.
+
+================================================================================
+FIN DE LA DEFINICIÓN MAESTRA SOURCE OF TRUTH v3.3
 ================================================================================

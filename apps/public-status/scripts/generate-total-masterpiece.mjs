@@ -211,7 +211,7 @@ function generateCosmogoniaPage(locale) {
   const quickItems = [
     { label: '⚡ En 30s (Externos)', href: '#externos' },
     { label: '☀️ Génesis Solar & Eclipse', href: '#soles' },
-    { label: '▲ Pirámide Dorada & Amatista', href: '#piramide' },
+    { label: '▲ Pirámide Bloque Negro & Oro', href: '#piramide' },
     { label: '🌳 Árbol de la Vida', href: '#arbol' },
     { label: '👁️ Ojo Digital 3D', href: '#ojo' },
     { label: '🌙 Las 3 Lunas & Retorno', href: '#tres-lunas' },
@@ -273,7 +273,7 @@ function generateCosmogoniaPage(locale) {
         <h4 class="card-h3">${isEs ? 'El Impacto sobre la Tierra' : 'The Ray of Manifestation & Earth Impact'}</h4>
         <p class="card-desc">
           ${isEs 
-            ? 'Del centro del eclipse se dispara un rayo de energía dorada hacia la Tierra portando la <strong>Pirámide Dorada</strong>. Al impactar, el suelo reacciona haciendo brotar cristales gigantescos que elevan la pirámide hacia lo alto.' 
+            ? 'Del centro del eclipse se dispara un rayo de energía dorada hacia la Tierra enviando a la Tierra una <strong>Pirámide Negra</strong>. Al impactar, del suelo brotan cristales gigantescos (el Árbol de la Vida) que elevan la pirámide hacia lo alto.' 
             : 'A focused beam of golden energy shoots toward Earth carrying the Golden Pyramid. Crystalline pillars emerge from the ground, lifting the pyramid skyward.'}
         </p>
       </div>
@@ -370,19 +370,19 @@ function generateCosmogoniaPage(locale) {
             </thead>
             <tbody>
               <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); color: #e2e8f0;">
-                <td style="padding: 12px;"><strong style="color: #fef08a;">Sol Primordial + Sol Negro</strong></td>
+                <td style="padding: 12px;"><strong style="color: #fef08a;">Sol Negro Preexistente + Sol Blanco Marca</strong></td>
                 <td>YOD Client Core</td>
                 <td><code>ClientCoreContract.ts</code></td>
                 <td>Inyección de axiomas de marca y delimitación de restricciones dialécticas.</td>
               </tr>
               <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); color: #e2e8f0;">
-                <td style="padding: 12px;"><strong style="color: #d4af37;">Pirámide Dorada (Vértice)</strong></td>
+                <td style="padding: 12px;"><strong style="color: #d4af37;">Pirámide Bloque Negro & Punta de Oro</strong></td>
                 <td>YOD Opportunity Engine</td>
                 <td><code>YodOpportunityPlan.ts</code></td>
                 <td>Formulación de tesis semántica y calificación de ganchos (0-100).</td>
               </tr>
               <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); color: #e2e8f0;">
-                <td style="padding: 12px;"><strong style="color: #bf5af2;">Geoda de Amatista & Sephirot</strong></td>
+                <td style="padding: 12px;"><strong style="color: #bf5af2;">Cristales Telúricos & 4 Regímenes de Densidad</strong></td>
                 <td>Lienzo Merkle-DAG</td>
                 <td><code>LienzoStateSpace.ts</code></td>
                 <td>Ramificación inmutable a los 8 formatos derivados en el Eje de Continuidad.</td>

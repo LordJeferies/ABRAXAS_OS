@@ -363,11 +363,11 @@ function getMasterUnifiedPage(locale, depth = 0) {
         <div class="spotlight-card col-4" style="background: #090a10; border-left: 4px solid #fef08a; position: relative;">
           <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag gold">PASO 1 // ATZILUTH</span>
-          <h3 class="card-h3">${isEs ? 'El Sol Primordial y el Sol Negro' : 'The Primordial Sun & Black Sun'}</h3>
-          <p class="card-desc">${isEs ? 'La Voluntad Absoluta (Keter) se concentra en un punto focal hiperdenso (Chokhmah/YOD) mediante un eclipse gravitacional.' : 'Absolute Will (Keter) focused into a hyperdense focal point (Chokhmah/YOD) via gravitational eclipse.'}</p>
+          <h3 class="card-h3">${isEs ? 'El Sol Negro Preexistente y el Sol Blanco de la Marca' : 'The Pre-existing Black Sun & The Brand White Sun'}</h3>
+          <p class="card-desc">${isEs ? 'El Sol Negro (software + sabiduría editorial ABRAXAS) eclipsa y comprime la luz viva del Sol Blanco (la marca del cliente vía Branding Method).' : 'The Black Sun (software + ABRAXAS editorial wisdom) eclipses and compresses the White Sun (client brand via Branding Method).'}</p>
           <div class="card-deepdive-drawer"><div class="deepdive-content-box">
             <span class="deepdive-tag">KETER → CHOKHMAH — HERRAMIENTA: YOD BRAND CORE</span>
-            <p><strong>Cosmogonía:</strong> En el vacío primordial, un Sol de Luz Pura se crea de la nada representando la Voluntad Absoluta e Intención Infinita (Keter / Atziluth). Para evitar que la energía se disperse de forma caótica, un Sol Negro gravitacional se superpone en eclipse perfecto, creando un punto focal hiperdenso de concentración dialéctica (Chokhmah / YOD).</p>
+            <p><strong>Cosmogonía:</strong> Antes de que exista un cliente, el <strong>Sol Negro</strong> de ABRAXAS ya preexiste conteniendo la infraestructura de software dura Y toda la sabiduría editorial pre-hecha (estructuras de 4 tiempos, calidad de copies, formas de crear mejor y las 4 campañas prediseñadas). Cuando el cliente llega, se enciende el <strong>Sol Blanco</strong>, que se llena con la información viva, voz, números, axiomas y dolor de nicho de su marca mediante el Branding Method. Ninguno habita en Keter: son el criterio de fondo pre-sefirótico. El Sol Negro eclipsa al Sol Blanco comprimiendo la luz de la marca con su gravedad y sabiduría.</p>
             <p><strong>Herramienta Real:</strong> <em>YOD Brand Core & Axiom Vault</em> — Ingesta de la voz de marca, axiomas inmutables y tesis fundacionales. La IA NO puede contradecir ni inventar nada que no esté en el Brand Core. Esto elimina el «AI-slop» (clichés genéricos sin sustancia).</p>
             <p><strong>YOD Niche Opportunity Engine:</strong> Escanea los 3 dogmas más repetidos en tu industria y genera ganchos de confrontación directa, curiosidad intelectual e historia práctica. Fórmula Hook Score: (Tensión × 0.4) + (Claridad × 0.3) + (Autoridad × 0.3). Score mínimo obligatorio: ≥ 85/100.</p>
             <p style="margin-top: 8px;"><a href="${langPrefix}tools/yod/index.html" style="color: #d4af37; font-weight: 700;">🔗 Abrir YOD en Detalle ➔</a></p>
@@ -378,11 +378,11 @@ function getMasterUnifiedPage(locale, depth = 0) {
         <div class="spotlight-card col-4" style="background: #090a10; border-left: 4px solid #d4af37; position: relative;">
           <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag gold">PASO 2 // KAV</span>
-          <h3 class="card-h3">${isEs ? 'El Rayo de Manifestación y la Pirámide' : 'The Manifestation Ray & Pyramid'}</h3>
-          <p class="card-desc">${isEs ? 'Del vórtice del eclipse se dispara el Rayo (Kav) portando la Gran Pirámide Dorada hacia el plano físico.' : 'From the eclipse vortex, the Ray (Kav) fires carrying the Golden Pyramid to the physical plane.'}</p>
+          <h3 class="card-h3">${isEs ? 'El Rayo del Eclipse y la Pirámide Negra' : 'The Eclipse Ray & The Black Pyramid'}</h3>
+          <p class="card-desc">${isEs ? 'Del vórtice del eclipse se dispara el Rayo (Kav) enviando una Pirámide Negra a la Tierra, que al chocar es elevada por cristales gigantescos.' : 'From the eclipse vortex, the Ray fires sending a Black Pyramid to Earth, lifted skyward by giant crystals upon impact.'}</p>
           <div class="card-deepdive-drawer"><div class="deepdive-content-box">
             <span class="deepdive-tag">BINAH (ESFERA 03) — HERRAMIENTA: LIENZO MERKLE-DAG</span>
-            <p><strong>Cosmogonía:</strong> Del vórtice del eclipse se dispara el Rayo de Manifestación (Kav) hacia la Tierra, portando la Gran Pirámide Dorada. Al impactar en el plano físico, del subsuelo terrestre brotan cristales geológicos gigantescos que elevan la pirámide hacia lo alto.</p>
+            <p><strong>Cosmogonía:</strong> Del vórtice del eclipse se dispara el Rayo de Manifestación (Kav) enviando a la Tierra una <strong>Pirámide Negra</strong>. Al impactar en el plano físico (Assiah), del suelo brotan cristales gigantescos facetados (el Árbol de la Vida) que crecen desde la tierra y elevan la pirámide hacia lo alto.</p>
             <p><strong>Herramienta Real:</strong> <em>LIENZO — Eje de Continuidad Merkle-DAG.</em> Cada pieza de contenido vive en un objeto inmutable con 6 bloques: metadata, thesis_intent, observed_audio, derivatives, coach_audit y commerce_telemetry. Versionado criptográfico SHA-256. La estructura del guion sigue los 4 tiempos: Hook → Tesis → Mecanismo → Payoff.</p>
             <p><strong>CAS (Content Addressable Storage):</strong> Almacenamiento direccionado por hash. Imposible perder archivos o generar «Media Offline». Mismas entradas producen idénticos hashes — determinismo puro.</p>
           </div></div>
@@ -392,11 +392,12 @@ function getMasterUnifiedPage(locale, depth = 0) {
         <div class="spotlight-card col-4" style="background: #090a10; border-left: 4px solid #bf5af2; position: relative;">
           <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag iris">PASO 3 // GEODA</span>
-          <h3 class="card-h3">${isEs ? 'La Geoda de Amatista y Cúspide de Oro' : 'Amethyst Geode & Gold Capstone'}</h3>
-          <p class="card-desc">${isEs ? 'Los cristales se transforman en amatista púrpura imperial. La cúspide queda rematada en oro macizo: la morada de YOD.' : 'Crystals transmute to imperial purple amethyst. Gold capstone = YOD residence.'}</p>
+          <h3 class="card-h3">${isEs ? 'La Pirámide de Bloque Negro y la Punta de Oro' : 'The Black Block Pyramid & The Gold Capstone'}</h3>
+          <p class="card-desc">${isEs ? 'Alrededor de los cristales se consolida la pirámide de bloque negro monumental (estilo Egipto, textura Space Black refinada). Al completarse la forma, su punta se vuelve totalmente dorada.' : 'Around the crystals, the black block pyramid consolidates. Upon completion, the capstone turns pure solid gold (YOD).'}</p>
           <div class="card-deepdive-drawer"><div class="deepdive-content-box">
-            <span class="deepdive-tag">DA'AT (ESFERA 04) — HERRAMIENTA: SHIM METROLOGÍA</span>
-            <p><strong>Cosmogonía:</strong> Los cristales que elevan la pirámide son recubiertos por formaciones de roca sólida y se transforman en una geoda translúcida de amatista púrpura imperial. La cúspide de la pirámide queda rematada en oro macizo puro: la morada de YOD (Inteligencia de Nicho).</p>
+            <span class="deepdive-tag">DA'AT: CONCIENCIA ACTIVA — HERRAMIENTA: SHIM REALITY METROLOGY GATE</span>
+    <p><strong>Cosmogonía:</strong> Alrededor de los cristales que elevan la estructura se consolida la <strong>Pirámide de Bloque Negro Monumental</strong> (piedra negra con relieve y textura mineral Space Black, no un negro plano muerto) que da soporte a todo. Una vez erigida la pirámide, <strong>la punta se vuelve totalmente dorada</strong> (el piramidión de oro macizo, asiento del motor YOD).</p>
+    <p><strong>Da'at no es un abismo pasivo:</strong> Es la conciencia despierta que salta a la acción (fuego de Shin). Rige el principio <code>PLANNED != OBSERVED != RESOLVED</code>, confrontando lo planificado con lo observado.</p>
             <p><strong>Herramienta Real:</strong> <em>SHIM (ש) — Reality Metrology Gate.</em> Auditoría fonética en vivo durante la grabación con Whisper Large V3 local (< 40ms latencia). Live Teleprompter inteligente: si una frase del guion se omite, la pantalla parpadea en ámbar y sugiere re-grabación quirúrgica.</p>
             <p><strong>Bloqueo de Exportación:</strong> Si la distancia Levenshtein GAP > 0.00%, el sistema bloquea la exportación hasta que se corrija la discrepancia. Cero desvíos no autorizados entre plan y audio grabado.</p>
             <p style="margin-top: 8px;"><a href="${langPrefix}tools/shim/index.html" style="color: #2997ff; font-weight: 700;">🔗 Abrir SHIM en Detalle ➔</a></p>
@@ -410,20 +411,15 @@ function getMasterUnifiedPage(locale, depth = 0) {
           <h3 class="card-h3">${isEs ? 'El Árbol de la Vida: 10 Esferas y 22 Senderos' : 'Tree of Life: 10 Spheres & 22 Paths'}</h3>
           <p class="card-desc">${isEs ? 'En la base de la pirámide, los cristales crecen formando las 10 Sephiroth como canales de datos del contenido.' : '10 Sephiroth grow at the pyramid base as physical data conduits for content.'}</p>
           <div class="card-deepdive-drawer"><div class="deepdive-content-box">
-            <span class="deepdive-tag">10 ESFERAS = 10 HERRAMIENTAS DEL SISTEMA</span>
-            <p><strong>Cosmogonía:</strong> En la base de la pirámide, los cristales crecen formando exactamente la estructura del Árbol de la Vida. Las 10 Sephiroth y sus 22 senderos conectores sirven como canales físicos de datos por donde viaja y muta el contenido.</p>
-            <ol style="color: #cbd5e1; font-size: 0.82rem; margin: 8px 0; padding-left: 1.2rem; line-height: 1.6;">
-              <li><strong>Keter (Corona):</strong> YOD Brand Core — Voluntad pura de marca, axiomas inmutables.</li>
-              <li><strong>Chokhmah (Sabiduría):</strong> YOD Niche Radar — Ganchos dialécticos (Hook Score ≥ 85/100).</li>
-              <li><strong>Binah (Entendimiento):</strong> LIENZO — Estructura de 4 tiempos en Merkle-DAG inmutable.</li>
-              <li><strong>Da'at (Conocimiento):</strong> SHIM — Metrología fonética lúcida 0.00% GAPs.</li>
-              <li><strong>Chesed (Expansión):</strong> CONTENIDO — Ramificación 1→8 formatos vivos sincronizados.</li>
-              <li><strong>Gevurah (Rigor):</strong> HE — 6 compuertas de calidad inmutables en macOS.</li>
-              <li><strong>Tiferet (Belleza):</strong> VAV — Catedral de síntesis audiovisual en 18s.</li>
-              <li><strong>Netzach (Victoria):</strong> LUNA 1 — Despacho multicanal a 8 plataformas.</li>
-              <li><strong>Hod (Resonancia):</strong> LUNA 2 — Análisis de retención segundo a segundo.</li>
-              <li><strong>Malkhut (Reino):</strong> LUNA 3 — Comercio, facturas OCR y gerencia de equipo.</li>
-            </ol>
+            <span class="deepdive-tag">LOS 4 MUNDOS EN LA ALTURA DE LA PIRÁMIDE (DION FORTUNE)</span>
+    <p><strong>Regla Dura (WORLD != FLOOR):</strong> La pirámide no divide mundos en caras exteriores ni pisos de oficina; se divide verticalmente en <strong>4 Regímenes de Densidad</strong> que albergan las 10 Sephiroth del Árbol de la Vida:</p>
+    <ol style="color: #cbd5e1; font-size: 0.82rem; margin: 8px 0; padding-left: 1.2rem; line-height: 1.6;">
+      <li><strong>Atziluth (Cúspide de Oro / Nivel Mental / Fuego):</strong> Keter (Corona), Jojmá (Sabiduría) y Binah (Entendimiento). Herramientas: YOD Brand Core y LIENZO Merkle-DAG en CAS SHA-256.</li>
+      <li><strong>Da'at (Umbral Intersticial / Conciencia Activa):</strong> SHIM Reality Metrology Gate — Whisper sobre ANE a 0.00% GAPs resolviendo la tensión Chesed/Gevurah.</li>
+      <li><strong>Briah (Bloque Negro Superior / Nivel Astral / Agua):</strong> Jesed (CONTENIDO 1→8), Gevurah (HE 6 compuertas inmutables) y Tiféret (VAV Engine: auto-corte en 18s por FFT a -38 dBFS, 7 motions con 3 imágenes reales, EBU R128 a -14 LUFS).</li>
+      <li><strong>Yetzirah (Bloque Negro Medio / Nivel Etérico / Aire):</strong> Netsaj (perfiles técnicos a L1), Hod (telemetría a L2) y Yesod (Merkle-Packer: lote sellado).</li>
+      <li><strong>Assiah (Base y Bóveda / Nivel Físico / Tierra):</strong> Malkut (El Reino / Manifestación comercial, facturas OCR, libro contable en SQLite y cálculo de ROI real).</li>
+    </ol>
             <p style="margin-top: 8px;"><a href="${langPrefix}flujo/index.html" style="color: #2997ff; font-weight: 700;">🔗 Ver Ciclo de Vida Completo ➔</a></p>
           </div></div>
         </div>
@@ -455,11 +451,12 @@ function getMasterUnifiedPage(locale, depth = 0) {
           <h3 class="card-h3">${isEs ? 'Las 3 Lunas Orbitales y el Bucle Cerrado' : 'The 3 Orbital Moons & Closed Loop'}</h3>
           <p class="card-desc">${isEs ? 'Publicar, medir retención y facturar. La Tierra devuelve datos cerrando el bucle evolutivo S(t+1) = S(t) + A(t).' : 'Publish, measure retention, invoice. Earth returns data closing the evolutionary loop.'}</p>
           <div class="card-deepdive-drawer"><div class="deepdive-content-box">
-            <span class="deepdive-tag">NETZACH, HOD, MALKHUT — 3 HERRAMIENTAS DE RETORNO</span>
-            <p><strong>Luna 1 — El Publicador (Netzach, Esfera 08):</strong> Empaquetado y distribución automática a TikTok, Instagram, YouTube, X, Substack, Spotify, LinkedIn y Beehiiv con metadatos optimizados por canal.</p>
-            <p><strong>Luna 2 — Analizador de Retención (Hod, Esfera 09):</strong> Ingesta de curvas de drop-off segundo a segundo, Average Percentage Viewed (APV). Si la retención cae +30% en los primeros 3s, YOD descarta esa estructura de gancho y genera 3 alternativas.</p>
-            <p><strong>Luna 3 — La Luna Comercial (Malkhut, Esfera 10):</strong> Escáner OCR de facturas (foto/PDF), libro contable por contentId, panel de closers con comisiones y ROI = ((Ingresos - Costos) / Costos) × 100%.</p>
-            <p><strong>Bucle Cerrado:</strong> Las 3 lunas emiten rayos hacia la Tierra, y la Tierra devuelve compras, atención y datos. S(t+1) = S(t) + A(t).</p>
+            <span class="deepdive-tag">LAS TRES LUNAS: SATÉLITES ORBITALES EXTERIORES (NO SON SEPHIROTH)</span>
+    <p><strong>Directiva Canónica:</strong> Las Tres Lunas no son Sephiroth ni habitan dentro de la pirámide. Orbitan en la ionosfera proyectadas por el Ojo 3D de Arquitecto:</p>
+    <p><strong>Luna 1 — El Publicador Multicanal:</strong> Satélite de distribución que adapta y emite a las 8 plataformas respetando Safe Zones 9:16 (280px inferiores y 120px derechos libres).</p>
+    <p><strong>Luna 2 — Analizador de Retención:</strong> Satélite sensorial que audita APV y drop-off a los 3s; si la retención cae de 60%, penaliza con -25 puntos al Hook Score de YOD.</p>
+    <p><strong>Luna 3 — La Luna Comercial:</strong> Satélite de recolección física con escáner OCR on-device en Python que lee facturas y comprobantes, registrando el dinero en SQLite (metrics.db) y calculando el ROI matemático exacto.</p>
+    <p><strong>Cierre del Bucle Continuo:</strong> La telemetría de las lunas nutre la base de la pirámide y asciende a YOD: <strong>S(t+1) = S(t) + A(t)</strong>.</p>
             <p style="margin-top: 8px;"><a href="${langPrefix}luna-comercial/index.html" style="color: #30d158; font-weight: 700;">🔗 Abrir Luna Comercial ➔</a></p>
           </div></div>
         </div>
