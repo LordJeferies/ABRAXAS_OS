@@ -91,6 +91,14 @@ a {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  animation: preloaderAutoDismiss 0.4s ease 1.2s forwards;
+  pointer-events: all;
+}
+
+@keyframes preloaderAutoDismiss {
+  0% { opacity: 1; pointer-events: all; }
+  99% { opacity: 0; pointer-events: all; }
+  100% { opacity: 0; pointer-events: none; display: none; visibility: hidden; }
 }
 
 .preloader-glyph {
