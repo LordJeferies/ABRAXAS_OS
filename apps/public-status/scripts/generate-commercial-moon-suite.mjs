@@ -247,6 +247,46 @@ function generateLunaComercialPage(locale) {
       </div>
     </div>
 
+    
+    <!-- SECCIÓN DE BIPARTICIÓN ESTRICTA: COSTOS DE MANUFACTURA VS VENTAS EXTERNAS -->
+    <section id="biparticion-luna3" style="margin-bottom: 4rem;">
+      <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
+        <span class="tag" style="color: #30d158;">ARQUITECTURA SQLITE // BIPARTICIÓN ESTRICTA DE LUNA 3</span>
+        <h2 class="h2" style="font-size: 2rem;">${isEs ? 'Separación Inmutable: Costos de Fábrica vs. Ventas de Mercado' : 'Strict Partition: Manufacturing Costs vs. Sales Revenue'}</h2>
+        <p class="p" style="margin: 0; font-size: 1rem;">${isEs ? 'Los costos operativos de equipo y las ventas registradas por OCR nunca se mezclan en las mismas tablas. Se auditan por separado y solo se cruzan en una vista sintética de ROI.' : 'Operating team costs and OCR-extracted sales never mix in the same tables. Audited independently and crossed only in a synthetic ROI view.'}</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="spotlight-card col-6" style="background: #090a10; border-left: 4px solid #2997ff;">
+          <span class="card-pill-tag cyan">BÓVEDA A // COSTOS DE MANUFACTURA (INTERNO)</span>
+          <h3 class="card-h3">${isEs ? 'Tiempos, Cuellos de Botella y Fábrica' : 'Turnaround, Bottlenecks & Factory'}</h3>
+          <ul style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; margin-top: 10px; padding-left: 1.2rem;">
+            <li>⏱️ <strong>Tabla manufacturing_time_entries:</strong> Registra segundos exactos trabajados en Guion, Set SHIM, Edición VAV y QA.</li>
+            <li>🚨 <strong>Tabla manufacturing_bottlenecks:</strong> Mide tiempos muertos (idleSeconds) y detecta bloqueos del equipo.</li>
+            <li>💵 <strong>Tabla manufacturing_cost_ledger:</strong> Calcula el costo exacto de manufactura por pieza ($/activo) sumando horas de colaboradores y overhead.</li>
+          </ul>
+        </div>
+
+        <div class="spotlight-card col-6" style="background: #090a10; border-left: 4px solid #30d158;">
+          <span class="card-pill-tag emerald">BÓVEDA B // INGRESOS Y VENTAS (EXTERNO)</span>
+          <h3 class="card-h3">${isEs ? 'Facturas OCR, WhatsApp y Closers' : 'OCR Invoices, WhatsApp & Closers'}</h3>
+          <ul style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6; margin-top: 10px; padding-left: 1.2rem;">
+            <li>📸 <strong>Tabla sales_ocr_invoices:</strong> Ingesta fotos y PDFs de facturas extrayendo monto, fecha y producto on-device.</li>
+            <li>💬 <strong>Tabla sales_revenue_ledger:</strong> Consolida ingresos brutos y netos atribuidos a cada contentId en WhatsApp y web.</li>
+            <li>👥 <strong>Tabla closers_transactions:</strong> Registra el desempeño de los vendedores y comisiones liquidadas.</li>
+          </ul>
+        </div>
+
+        <div class="spotlight-card col-12" style="background: #0d1117; border-top: 2px solid #d4af37;">
+          <span class="card-pill-tag gold">CRUCE SEGURO // VISTA SQL DE P&L Y ROI</span>
+          <h3 class="card-h3">${isEs ? 'Cálculo Matemático Dinámico en SQLite (metrics.db)' : 'Dynamic Mathematical ROI in SQLite'}</h3>
+          <p style="color: #94a3b8; font-size: 0.9rem; font-family: var(--font-mono); margin-top: 8px;">
+            CREATE VIEW v_asset_pnl_roi AS SELECT c.content_id, c.total_manufacturing_cost, s.net_revenue_usd, ((s.net_revenue_usd - c.total_manufacturing_cost) / c.total_manufacturing_cost) * 100 AS roi_percentage FROM manufacturing_cost_ledger c LEFT JOIN sales_revenue_ledger s ON c.content_id = s.content_id;
+          </p>
+        </div>
+      </div>
+    </section>
+  
     <!-- 1. Vínculo Pieza-Venta (Content Revenue Ledger) -->
     <section id="atribucion" style="margin-bottom: 4rem;">
       <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
