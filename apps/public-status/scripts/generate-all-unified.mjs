@@ -218,7 +218,8 @@ function generateEcosistemaPage(locale) {
 
     <!-- Resumen Ejecutivo -->
     <div id="resumen" class="bento-grid" style="margin-bottom: 4rem;">
-      <div class="spotlight-card col-12" style="background: rgba(212,175,55,0.08); border-color: rgba(212,175,55,0.35);">
+      <div class="spotlight-card col-12" style="position: relative;">
+        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(212,175,55,0.08); border-color: rgba(212,175,55,0.35);">
         <span class="card-pill-tag gold">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
         <h3 class="card-h3">${isEs ? '¿Por qué la Multiplicación 1 a 8 Multiplica tu Autoridad?' : 'Why 1-to-8 Multiplication Amplifies Authority?'}</h3>
         <p class="card-desc" style="color: #e2e8f0; font-size: 1rem;">
@@ -340,7 +341,8 @@ function generateGerenciaPage(locale) {
 
     <!-- Resumen Ejecutivo -->
     <div id="resumen" class="bento-grid" style="margin-bottom: 4rem;">
-      <div class="spotlight-card col-12" style="background: rgba(48,209,88,0.08); border-color: rgba(48,209,88,0.35);">
+      <div class="spotlight-card col-12" style="position: relative;">
+        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(48,209,88,0.08); border-color: rgba(48,209,88,0.35);">
         <span class="card-pill-tag emerald">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
         <h3 class="card-h3">${isEs ? 'El Retorno Financiero de ABRAXAS OS' : 'The Financial ROI of ABRAXAS OS'}</h3>
         <p class="card-desc" style="color: #e2e8f0; font-size: 1rem;">
@@ -524,7 +526,8 @@ function generateBackupPage(locale) {
     </div>
 
     <div class="bento-grid">
-      <div class="spotlight-card col-12" style="background: rgba(255,69,58,0.06); border-color: rgba(255,69,58,0.35);">
+      <div class="spotlight-card col-12" style="position: relative;">
+        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(255,69,58,0.06); border-color: rgba(255,69,58,0.35);">
         <span class="card-pill-tag ruby">EVIDENCIA DE LÍNEA BASE</span>
         <h3 class="card-h3">Compromiso Criptográfico SHA-256</h3>
         <p class="card-desc">Todos los archivos fundacionales, pruebas unitarias y contratos de software están respaldados inmutablemente con el hash <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code>.</p>

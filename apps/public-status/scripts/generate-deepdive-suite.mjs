@@ -409,6 +409,17 @@ function generateCaptionsPage(locale) {
           <li>🔥 <strong>Auto-Inyección de Emojis:</strong> Coloca emojis contextuales en palabras de emoción (fuego, dinero, cohete, cerebro) sin buscarlos a mano.</li>
           <li>📱 <strong>Zona Segura (Safe Zone) Garantizada:</strong> Los subtítulos nunca quedan tapados por los botones de TikTok, Reels o la descripción.</li>
         </ul>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">DETALLE EXHAUSTIVO // SHIM TELEPROMPTER & VERIFICACIÓN</span>
+            <p><strong>Reglas de Auditoría en Vivo:</strong> El teleprompter inteligente de SHIM utiliza un hilo de inferencia Whisper local con latencia menor a 40ms. Si se detecta un desvío léxico:</p>
+            <ul style="padding-left: 18px; margin-top: 6px;">
+              <li>1. Emite advertencia visual ámbar en pantalla sin detener la grabación.</li>
+              <li>2. Al finalizar el párrafo, añade un marcador de corte para regrabar solo la oración omitida.</li>
+              <li>3. Verifica automáticamente la coincidencia de métricas numéricas con el Brand Core.</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="bento-box bento-col-6" style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.35);">
@@ -619,6 +630,14 @@ function generateShimPage(locale) {
         <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 11px; color: #38bdf8; border: 1px solid rgba(255,255,255,0.1);">
           GAP_SCORE = 1.0 - (LevenshteinDistance(T_plan, T_audio) / MaxLength) -> PASS if GAP == 0.00%
         </div>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">FÓRMULA MATEMÁTICA // LEVENSHTEIN GAP SCORE</span>
+            <p><strong>Cálculo Fonético:</strong> La distancia de Levenshtein se normaliza sobre la longitud del vector de palabras $N = \max(|T_{\text{plan}}|, |T_{\text{audio}}|)$:</p>
+            <p style="font-family: monospace; color: #38bdf8; margin: 6px 0;">\text{GAP} = \frac{\text{dist}(T_{\text{plan}}, T_{\text{audio}})}{N} \times 100\%</p>
+            <p>Solo los activos con $\text{GAP} = 0.00\%$ o con sobreescritura manual firmada pasan al compilador de Remotion.</p>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -633,16 +652,34 @@ function generateShimPage(locale) {
         <span class="apple-card-tag gold">FASE 1: PRE-PRODUCCIÓN</span>
         <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">${isEs ? 'Validación de Guion' : 'Script Compliance'}</h4>
         <p style="font-size: 0.88rem; color: #94a3b8;">Verifica que el guion cumpla con las leyes de tono de marca y no contenga frases prohibidas.</p>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">CHECKLIST FASE 1</span>
+            <p>• Verificación de axiomas de marca.<br/>• Detección de cliches y palabras prohibidas.<br/>• Validación de Hook Score superior a 85/100.</p>
+          </div>
+        </div>
       </div>
       <div class="bento-box bento-col-4">
         <span class="apple-card-tag cyan">FASE 2: EN EL SET</span>
         <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">${isEs ? 'Auditoría en Vivo' : 'Live Speech Audit'}</h4>
         <p style="font-size: 0.88rem; color: #94a3b8;">Escucha en tiempo real mediante Whisper y te avisa al instante si omitiste una palabra clave.</p>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">CHECKLIST FASE 2</span>
+            <p>• Teleprompter con seguimiento acústico.<br/>• Detección de distorsión y ruido de sala.<br/>• Confirmación de tomas buenas en caliente.</p>
+          </div>
+        </div>
       </div>
       <div class="bento-box bento-col-4">
         <span class="apple-card-tag purple">FASE 3: POST-EXPORTACIÓN</span>
         <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">${isEs ? 'Inspección Visual 8K' : 'Visual Slide Inspection'}</h4>
         <p style="font-size: 0.88rem; color: #94a3b8;">Escanea las diapositivas del carrusel y subtítulos para garantizar que no haya texto cortado.</p>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">CHECKLIST FASE 3</span>
+            <p>• Safe Zone OCR (9:16 y 4:5).<br/>• Verificación de contraste WCAG AAA.<br/>• Firma de hash SHA-256 del archivo exportado.</p>
+          </div>
+        </div>
       </div>
     </div>
 

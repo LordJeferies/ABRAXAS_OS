@@ -389,3 +389,19 @@
   });
 
 })();
+
+// Global Interactive Card Expand Handler
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.card-expand-btn');
+  if (btn) {
+    const card = btn.closest('.spotlight-card, .highlight-card, .bento-card');
+    if (card) {
+      const drawer = card.querySelector('.card-deepdive-drawer');
+      if (drawer) {
+        const isOpen = drawer.classList.toggle('open');
+        btn.classList.toggle('active', isOpen);
+        btn.setAttribute('aria-expanded', isOpen);
+      }
+    }
+  }
+});
