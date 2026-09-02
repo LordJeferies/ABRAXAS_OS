@@ -7,39 +7,63 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '../../..');
 const docsDir = path.join(rootDir, 'docs/abraxas-os-status');
 
+
+function getRootPrefix(depth) {
+  if (depth === 0) return '';
+  return '../'.repeat(depth);
+}
+
 function getHeader(locale, activeTab, depth = 2) {
   const isEs = locale === 'es';
-  const prefix = '../'.repeat(depth);
-  const esPrefix = `${prefix}es/`;
-  const enPrefix = `${prefix}en/`;
+  const root = getRootPrefix(depth);
+  const langPrefix = `${root}${locale}/`;
+  const otherLocale = isEs ? 'en' : 'es';
 
   return `
-  <nav class="localnav" aria-label="Local Navigation">
-    <div class="localnav-wrapper">
-      <a href="${prefix}index.html" class="localnav-title">
+  <!-- Film Grain Overlay -->
+  <div class="film-grain-overlay"></div>
+
+  <!-- Apple Sticky Localnav -->
+  <nav class="apple-localnav" aria-label="Local Navigation">
+    <div class="localnav-inner">
+      <a href="${root}index.html" class="localnav-brand">
         <span>ABRAXAS OS</span>
-        <span class="badge">DOCS PRO</span>
+        <span class="tag">v3.0 PRO</span>
       </a>
-      <div class="localnav-menu">
-        <a href="${prefix}index.html" class="localnav-link">${isEs ? 'Inicio' : 'Home'}</a>
-        <a href="${prefix}v3/index.html" class="localnav-link">${isEs ? '🍎 Edición v3' : '🍎 v3 Edition'}</a>
-        <a href="${prefix}${locale}/ecosistema/index.html" class="localnav-link">${isEs ? '⚡ Ecosistema 8-en-1' : '⚡ 8-in-1 Ecosystem'}</a>
-        <a href="${prefix}${locale}/flujo/index.html" class="localnav-link ${activeTab === 'flujo' ? 'active' : ''}">${isEs ? '🔄 Ciclo de Vida' : '🔄 Lifecycle Flow'}</a>
-        <a href="${prefix}${locale}/tools/vav/motions/index.html" class="localnav-link ${activeTab === 'motions' ? 'active' : ''}">🎬 Motions</a>
-        <a href="${prefix}${locale}/tools/vav/captions/index.html" class="localnav-link ${activeTab === 'captions' ? 'active' : ''}">💬 Captions</a>
-        <a href="${prefix}${locale}/tools/vav/cuts/index.html" class="localnav-link ${activeTab === 'cuts' ? 'active' : ''}">✂️ Cuts 18s</a>
-        <a href="${prefix}${locale}/tools/shim/index.html" class="localnav-link ${activeTab === 'shim' ? 'active' : ''}">🔍 SHIM (0% GAPs)</a>
-        <a href="${prefix}${locale}/tools/arquitecto/index.html" class="localnav-link ${activeTab === 'arquitecto' ? 'active' : ''}">👁️ Arquitecto</a>
-        <a href="${prefix}${locale}/tools/he/index.html" class="localnav-link ${activeTab === 'he' ? 'active' : ''}">💼 HE (50 Lotes)</a>
-        <a href="${prefix}${locale}/canon/index.html" class="localnav-link" style="color: #d4af37;">📚 Canon 37 TXT</a>
-        <a href="${prefix}${locale}/backup/index.html" class="localnav-link">🏛️ Backup</a>
+      <div class="localnav-items">
+        <a href="${root}index.html" class="localnav-a">${isEs ? 'Inicio' : 'Home'}</a>
+        <a href="${root}v3/index.html" class="localnav-a">🍎 v3 MacBook Pro</a>
+        <a href="${langPrefix}ecosistema/index.html" class="localnav-a ${activeTab === 'ecosistema' ? 'active' : ''}">${isEs ? '⚡ Ecosistema 8-en-1' : '⚡ 8-in-1 Ecosystem'}</a>
+        <a href="${langPrefix}gerencia/index.html" class="localnav-a ${activeTab === 'gerencia' ? 'active' : ''}">${isEs ? '💼 Gerencia & ROI' : '💼 Governance & ROI'}</a>
+        <a href="${langPrefix}flujo/index.html" class="localnav-a ${activeTab === 'flujo' ? 'active' : ''}">${isEs ? '🔄 Ciclo de Vida' : '🔄 Lifecycle Flow'}</a>
+        <a href="${langPrefix}tools/vav/motions/index.html" class="localnav-a ${activeTab === 'motions' ? 'active' : ''}">🎬 Motions</a>
+        <a href="${langPrefix}tools/vav/captions/index.html" class="localnav-a ${activeTab === 'captions' ? 'active' : ''}">💬 Captions</a>
+        <a href="${langPrefix}tools/vav/cuts/index.html" class="localnav-a ${activeTab === 'cuts' ? 'active' : ''}">✂️ Cuts 18s</a>
+        <a href="${langPrefix}tools/shim/index.html" class="localnav-a ${activeTab === 'shim' ? 'active' : ''}">🔍 SHIM (0% GAPs)</a>
+        <a href="${langPrefix}tools/arquitecto/index.html" class="localnav-a ${activeTab === 'arquitecto' ? 'active' : ''}">👁️ Arquitecto</a>
+        <a href="${langPrefix}canon/index.html" class="localnav-a ${activeTab === 'canon' ? 'active' : ''}" style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="${langPrefix}backup/index.html" class="localnav-a ${activeTab === 'backup' ? 'active' : ''}">🏛️ Backup</a>
       </div>
-      <div class="localnav-actions">
-        <a href="${prefix}${locale === 'es' ? 'en' : 'es'}/index.html" class="localnav-link" style="font-family: monospace; font-weight: 700; color: #fff;">${isEs ? 'EN' : 'ES'}</a>
-        <a href="${prefix}index.html" class="btn-apple-buy">${isEs ? 'Abrir Sistema' : 'Launch OS'}</a>
+      <div class="localnav-right">
+        <a href="${root}${otherLocale}/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${isEs ? 'EN' : 'ES'}</a>
+        <button id="btn-open-control-center" class="btn-control-center">
+          <span>⚙️ Menú</span>
+        </button>
+        <a href="${root}index.html" class="btn-apple-cta">${isEs ? 'Abrir Sistema' : 'Launch OS'}</a>
       </div>
     </div>
   </nav>
+  `;
+}
+
+function getInternalQuickMenu(items) {
+  return `
+  <div style="background: rgba(14, 14, 20, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px 1.5rem; position: sticky; top: 52px; z-index: 999; overflow-x: auto; scrollbar-width: none;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; gap: 8px; align-items: center; white-space: nowrap;">
+      <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800; margin-right: 6px;">IR A:</span>
+      ${items.map(item => `<a href="${item.href}" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">${item.label}</a>`).join('')}
+    </div>
+  </div>
   `;
 }
 
@@ -99,6 +123,7 @@ function generateMotionsPage(locale) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${isEs ? 'Las 13 Familias de Motion y Física de Animación — ABRAXAS OS' : '13 Motion Families & Spring Physics — ABRAXAS OS'}</title>
   <meta name="description" content="${isEs ? 'Cómo funcionan los motions en Remotion: física de resortes, interpolación, composición 3D, creación, inserción y edición en tiempo real.' : 'Deep dive into Remotion motion families, spring physics, and real-time editing in ABRAXAS OS.'}">
+  <link rel="stylesheet" href="../../../../assets/abraxas-apple-canon.css">
   <link rel="stylesheet" href="../../../../assets/apple-macbook-pro-v3.css">
 </head>
 <body class="theme-dark">
@@ -348,6 +373,7 @@ function generateCaptionsPage(locale) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${isEs ? 'Subtítulos Cinéticos & Tipografía Viral — ABRAXAS OS' : 'Kinetic Subtitles & Viral Typography — ABRAXAS OS'}</title>
   <meta name="description" content="${isEs ? 'Cómo funcionan los subtítulos cinéticos en ABRAXAS: sincronización palabra por palabra con Whisper, estilos de marca, emojis y animación.' : 'Deep dive into Whisper word-level synchronization and kinetic subtitle styling in ABRAXAS OS.'}">
+  <link rel="stylesheet" href="../../../../assets/abraxas-apple-canon.css">
   <link rel="stylesheet" href="../../../../assets/apple-macbook-pro-v3.css">
 </head>
 <body class="theme-dark">
@@ -472,6 +498,7 @@ function generateCutsPage(locale) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${isEs ? 'Cortes Quirúrgicos & Auto-Edición en 18s — ABRAXAS OS' : 'Surgical Auto-Cuts & 18s Synthesis — ABRAXAS OS'}</title>
   <meta name="description" content="${isEs ? 'Cómo el motor VAV elimina silencios muertos, preserva la respiración natural y auto-edita videos en 18 segundos en Apple Silicon.' : 'Deep dive into VAV automated silence trimming, jump cuts, and 18-second video synthesis on Apple Silicon.'}">
+  <link rel="stylesheet" href="../../../../assets/abraxas-apple-canon.css">
   <link rel="stylesheet" href="../../../../assets/apple-macbook-pro-v3.css">
 </head>
 <body class="theme-dark">
@@ -543,6 +570,7 @@ function generateShimPage(locale) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${isEs ? 'SHIM: Metrología 0.00% GAPs y Verificación en Set — ABRAXAS OS' : 'SHIM: 0.00% GAP Metrology & Set Verification — ABRAXAS OS'}</title>
   <meta name="description" content="${isEs ? 'Cómo SHIM audita en vivo grabaciones, subtítulos y diapositivas con Whisper y visión computacional con cero tolerancia a fallos.' : 'Deep dive into SHIM Reality Metrology, Whisper on-set audit, and zero error tolerance in ABRAXAS OS.'}">
+  <link rel="stylesheet" href="../../../assets/abraxas-apple-canon.css">
   <link rel="stylesheet" href="../../../assets/apple-macbook-pro-v3.css">
 </head>
 <body class="theme-dark">
@@ -637,6 +665,7 @@ function generateArquitectoPage(locale) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${isEs ? 'ARQUITECTO: Tu Coach, Asistente y Guía Estratégico — ABRAXAS OS' : 'ARQUITECTO: Your Coach, Assistant & Strategic Guide — ABRAXAS OS'}</title>
   <meta name="description" content="${isEs ? 'Descubre cómo funciona ARQUITECTO: como coach que desafía tus ideas, asistente de redacción, orquestador de módulos y guía de crecimiento.' : 'Deep dive into ARQUITECTO: system orchestrator, creative coach, writing assistant, and strategic guide in ABRAXAS OS.'}">
+  <link rel="stylesheet" href="../../../assets/abraxas-apple-canon.css">
   <link rel="stylesheet" href="../../../assets/apple-macbook-pro-v3.css">
 </head>
 <body class="theme-dark">
@@ -750,6 +779,7 @@ function generateLifecycleFlowPage(locale) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${isEs ? 'El Ciclo de Vida del Contenido: De la Idea al Retorno — ABRAXAS OS' : 'Content Lifecycle Journey: Idea to Closed-Loop ROI — ABRAXAS OS'}</title>
   <meta name="description" content="${isEs ? 'El proceso completo paso a paso que atraviesa una pieza de contenido en ABRAXAS OS para convertirse en un ecosistema de 8 formatos vivos.' : 'The complete 6-stage lifecycle journey of content inside ABRAXAS OS.'}">
+  <link rel="stylesheet" href="../../assets/abraxas-apple-canon.css">
   <link rel="stylesheet" href="../../assets/apple-macbook-pro-v3.css">
 </head>
 <body class="theme-dark">
@@ -858,6 +888,7 @@ function generateContenidoPage(locale) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${isEs ? 'CONTENIDO: Eje de Continuidad y Merkle-DAG — ABRAXAS OS' : 'CONTENIDO: Continuity Axis & Merkle-DAG — ABRAXAS OS'}</title>
   <meta name="description" content="${isEs ? 'Cómo funciona el Eje de Continuidad de CONTENIDO: identidad de pieza única, árbol Merkle-DAG y ramificación automática en 8 formatos.' : 'Deep dive into CONTENIDO Merkle-DAG single piece identity and 8-format synchronized branching in ABRAXAS OS.'}">
+  <link rel="stylesheet" href="../../../assets/abraxas-apple-canon.css">
   <link rel="stylesheet" href="../../../assets/apple-macbook-pro-v3.css">
 </head>
 <body class="theme-dark">
@@ -929,6 +960,7 @@ function generateYodPage(locale) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${isEs ? 'YOD: Inteligencia de Nicho y Radar de Ganchos — ABRAXAS OS' : 'YOD: Niche Radar & Contrarian Hooks — ABRAXAS OS'}</title>
   <meta name="description" content="${isEs ? 'Cómo funciona el motor creativo YOD: radar de puntos ciegos, generación de ganchos dialécticos y calificación de 0 a 100.' : 'Deep dive into YOD Creative Intelligence, niche blind spot scanning, and 0-100 hook scoring.'}">
+  <link rel="stylesheet" href="../../../assets/abraxas-apple-canon.css">
   <link rel="stylesheet" href="../../../assets/apple-macbook-pro-v3.css">
 </head>
 <body class="theme-dark">
@@ -1000,6 +1032,7 @@ function generateHePage(locale) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${isEs ? 'HE: Despacho de Operaciones Kanban de 50 Lotes — ABRAXAS OS' : 'HE: 50-Asset Batch Operations Desk — ABRAXAS OS'}</title>
   <meta name="description" content="${isEs ? 'Cómo funciona el módulo HE: tablero Kanban nativo en macOS, 6 compuertas de control de calidad y despacho de 50 activos en una tarde.' : 'Deep dive into HE operational Kanban desk and 50-asset batch governance in ABRAXAS OS.'}">
+  <link rel="stylesheet" href="../../../assets/abraxas-apple-canon.css">
   <link rel="stylesheet" href="../../../assets/apple-macbook-pro-v3.css">
 </head>
 <body class="theme-dark">

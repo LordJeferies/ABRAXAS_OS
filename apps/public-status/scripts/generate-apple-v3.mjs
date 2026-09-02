@@ -1,3 +1,45 @@
+
+function getHeadStyles(depth) {
+  const root = depth === 1 ? '../' : depth === 2 ? '../../' : '';
+  return `
+  <link rel="stylesheet" href="${root}assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="${root}assets/apple-macbook-pro-v3.css">`;
+}
+
+function getV3Localnav(locale, depth) {
+  const isEs = locale === 'es';
+  const root = depth === 1 ? '../' : depth === 2 ? '../../' : '';
+  const langPrefix = `${root}${locale}/`;
+  const otherLocale = isEs ? 'en' : 'es';
+
+  return `
+  <nav class="localnav" aria-label="Local Navigation">
+    <div class="localnav-wrapper">
+      <a href="${root}index.html" class="localnav-title" style="color: #fff; text-decoration: none;">
+        <span>ABRAXAS OS</span>
+        <span class="badge">v3.0 PRO</span>
+      </a>
+      <div class="localnav-menu">
+        <a href="#welcome" class="localnav-link active">${isEs ? 'Visión general' : 'Overview'}</a>
+        <a href="#highlights" class="localnav-link">${isEs ? 'Destacados' : 'Highlights'}</a>
+        <a href="#viewer" class="localnav-link">${isEs ? 'Ecosistema 8-en-1' : '8-in-1 Ecosystem'}</a>
+        <a href="#performance" class="localnav-link">${isEs ? 'Rendimiento' : 'Performance'}</a>
+        <a href="#governance" class="localnav-link">${isEs ? 'Gerencia' : 'Executive Suite'}</a>
+        <a href="#sequences" class="localnav-link">${isEs ? '12 Secuencias' : '12 Sequences'}</a>
+        <a href="${langPrefix}tools/vav/motions/index.html" class="localnav-link">🎬 Motions</a>
+        <a href="${langPrefix}tools/shim/index.html" class="localnav-link">🔍 SHIM</a>
+        <a href="${langPrefix}tools/arquitecto/index.html" class="localnav-link">👁️ Arquitecto</a>
+        <a href="${langPrefix}canon/index.html" class="localnav-link" style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="${langPrefix}backup/index.html" class="localnav-link">🏛️ Backup</a>
+      </div>
+      <div class="localnav-actions">
+        <a href="${root}index.html" class="btn-apple-buy">${isEs ? 'Abrir Sistema' : 'Launch OS'}</a>
+      </div>
+    </div>
+  </nav>
+  `;
+}
+
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -292,7 +334,7 @@ const actsData = {
   ]
 };
 
-function generateAppleV3Page(locale) {
+function generateAppleV3Page(locale, depth = 2) {
   const isEs = locale === 'es';
   const acts = actsData[locale];
   const targetDir = path.join(docsDir, locale, 'v3');
@@ -305,32 +347,11 @@ function generateAppleV3Page(locale) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${isEs ? 'MacBook Pro — ABRAXAS OS Edition (v3 Oficial)' : 'MacBook Pro — ABRAXAS OS Edition (Official v3)'}</title>
   <meta name="description" content="${isEs ? 'Mente abierta. Poder total. El Sistema Operativo de Contenidos a velocidad industrial en Apple Silicon.' : 'Mind-blowing. Head-turning. The Content Operating System at industrial speed on Apple Silicon.'}">
-  <link rel="stylesheet" href="../../assets/apple-macbook-pro-v3.css">
+  ${getHeadStyles(depth)}
 </head>
 <body class="theme-dark">
 
-  <!-- Apple Sticky Localnav -->
-  <nav class="localnav" aria-label="Local Navigation">
-    <div class="localnav-wrapper">
-      <div class="localnav-title">
-        <span>ABRAXAS OS</span>
-        <span class="badge">v3.0 PRO</span>
-      </div>
-      <div class="localnav-menu">
-        <a href="#welcome" class="localnav-link active">${isEs ? 'Visión general' : 'Overview'}</a>
-        <a href="#highlights" class="localnav-link">${isEs ? 'Destacados' : 'Highlights'}</a>
-        <a href="#viewer" class="localnav-link">${isEs ? 'Ecosistema 8-en-1' : '8-in-1 Ecosystem'}</a>
-        <a href="#performance" class="localnav-link">${isEs ? 'Rendimiento' : 'Performance'}</a>
-        <a href="#governance" class="localnav-link">${isEs ? 'Gerencia' : 'Executive Suite'}</a>
-        <a href="#sequences" class="localnav-link">${isEs ? '12 Secuencias' : '12 Sequences'}</a>
-        <a href="../canon/index.html" class="localnav-link" style="color: #d4af37;">📚 Canon 37 TXT</a>
-        <a href="../backup/index.html" class="localnav-link">🏛️ Backup</a>
-      </div>
-      <div class="localnav-actions">
-        <a href="../index.html" class="btn-apple-buy">${isEs ? 'Abrir Sistema' : 'Launch OS'}</a>
-      </div>
-    </div>
-  </nav>
+  ${getV3Localnav(locale, depth)}
 
   <!-- 1. SECTION: WELCOME (Hero "Mente abierta. Poder total.") -->
   <section id="welcome" class="section-welcome">

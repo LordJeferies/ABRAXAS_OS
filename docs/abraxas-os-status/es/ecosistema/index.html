@@ -4,216 +4,225 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ecosistema de Contenidos 8-en-1 — ABRAXAS OS</title>
-  <meta name="description" content="Descubre cómo una sola idea se transforma en 8 formatos de contenido vivos a velocidad industrial con ABRAXAS OS.">
-  <link rel="stylesheet" href="../../assets/apple-design-system.css">
+  <link rel="stylesheet" href="../../assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="../../assets/apple-macbook-pro-v3.css">
 </head>
 <body>
   
-  <!-- Apple Global Glass Header -->
-  <header class="apple-global-nav">
-    <div class="apple-nav-wrapper">
-      
-      <!-- Brand Logo -->
-      <a href="../../index.html" class="apple-brand-logo">
-        <span class="apple-logo-glyph">▲</span>
-        <span class="apple-logo-text">ABRAXAS <span class="apple-logo-badge">OS</span></span>
+  <!-- Film Grain Overlay (Principle 17) -->
+  <div class="film-grain-overlay"></div>
+
+  <!-- Master Sticky Localnav (Principle 26) -->
+  <nav class="apple-localnav" aria-label="Local Navigation">
+    <div class="localnav-inner">
+      <a href="../../index.html" class="localnav-brand">
+        <span>ABRAXAS OS</span>
+        <span class="tag">v3.0 PRO</span>
       </a>
-
-      <!-- Desktop Nav Links -->
-      <nav class="apple-nav-links">
-        
-          <a href="../../index.html" class="apple-nav-item ">
-            Visión General
-          </a>
-        
-          <a href="../../gerencia/index.html" class="apple-nav-item ">
-            💼 Gerencia & Negocio
-          </a>
-        
-          <a href="../../ecosistema/index.html" class="apple-nav-item active">
-            ⚡ Ecosistema 8-en-1
-          </a>
-        
-          <a href="../../herramientas/index.html" class="apple-nav-item ">
-            🛠️ 13 Herramientas
-          </a>
-        
-          <a href="../../arquitectura/index.html" class="apple-nav-item ">
-            🔯 Cábala & 4D
-          </a>
-        
-          <a href="../../canon/index.html" class="apple-nav-item ">
-            📚 Canon 37 TXT
-          </a>
-        
-          <a href="../../guia/index.html" class="apple-nav-item ">
-            🧭 Guía Rápida
-          </a>
-        
-          <a href="../../backup/index.html" class="apple-nav-item ">
-            🏛️ Versión Backup
-          </a>
-        
-      </nav>
-
-      <!-- Right Controls: Locale & CTA -->
-      <div class="apple-nav-right">
-        <div class="apple-locale-pill">
-          <a href="#" class="apple-locale-btn active">ES</a>
-          <span class="apple-locale-sep">/</span>
-          <a href="../../en/ecosistema/index.html" class="apple-locale-btn ">EN</a>
-        </div>
-        <a href="../../ecosistema/index.html" class="apple-nav-cta">
-          Explorar OS
-        </a>
+      <div class="localnav-items">
+        <a href="../../index.html" class="localnav-a ">Inicio</a>
+        <a href="../../v3/index.html" class="localnav-a ">🍎 v3 MacBook Pro</a>
+        <a href="../../es/ecosistema/index.html" class="localnav-a active">⚡ Ecosistema 8-en-1</a>
+        <a href="../../es/gerencia/index.html" class="localnav-a ">💼 Gerencia & ROI</a>
+        <a href="../../es/flujo/index.html" class="localnav-a ">🔄 Ciclo de Vida</a>
+        <a href="../../es/tools/vav/motions/index.html" class="localnav-a ">🎬 Motions</a>
+        <a href="../../es/tools/vav/captions/index.html" class="localnav-a ">💬 Captions</a>
+        <a href="../../es/tools/vav/cuts/index.html" class="localnav-a ">✂️ Cuts 18s</a>
+        <a href="../../es/tools/shim/index.html" class="localnav-a ">🔍 SHIM (0% GAPs)</a>
+        <a href="../../es/tools/arquitecto/index.html" class="localnav-a ">👁️ Arquitecto</a>
+        <a href="../../es/canon/index.html" class="localnav-a " style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../../es/backup/index.html" class="localnav-a ">🏛️ Backup</a>
       </div>
-
+      <div class="localnav-right">
+        <a href="../../en/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">EN</a>
+        <button id="btn-open-control-center" class="btn-control-center">
+          <span>⚙️ Menú</span>
+        </button>
+        <a href="../../index.html" class="btn-apple-cta">Abrir Sistema</a>
+      </div>
     </div>
-  </header>
+  </nav>
+  
+  
+  <div style="background: rgba(14, 14, 20, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px 1.5rem; position: sticky; top: 52px; z-index: 999; overflow-x: auto; scrollbar-width: none;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; gap: 8px; align-items: center; white-space: nowrap;">
+      <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800; margin-right: 6px;">IR A:</span>
+      <a href="#resumen" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">⚡ En 30s</a><a href="#reels" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🎬 Reels (9:16)</a><a href="#carousels" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📑 Carruseles (4:5)</a><a href="#threads" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🧵 Hilos X</a><a href="#newsletters" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">✉️ Newsletters</a><a href="#podcasts" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🎙️ Podcasts</a><a href="#youtube" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📺 YouTube (16:9)</a>
+    </div>
+  </div>
   
 
-  <main class="apple-section" style="padding-top: 100px;">
-    <div class="apple-section-header">
-      <span class="apple-section-eyebrow" style="color: var(--apple-gold);">FÁBRICA MULTICANAL INDUSTRIAL</span>
-      <h1 class="apple-section-headline">1 Sola Semilla. 8 Formatos Vivos.</h1>
-      <p class="apple-section-subhead">
-        El Módulo Contenido y el Eje de Continuidad eliminan para siempre el retrabajo manual. Una sola tesis aprobada se ramifica automáticamente en todo tu ecosistema de publicaciones.
-      </p>
+  <main class="section-wrap" style="padding-top: 50px;">
+    
+    <div class="section-head" style="text-align: center;">
+      <span class="tag">BERI'AH CREATION // MERKLE-DAG MULTIPLICATION</span>
+      <h1 class="h2">El Ecosistema 8-en-1.<br/>Una Sola Semilla. Ocho Formatos Vivos.</h1>
+      <p class="p">Descubre cómo una sola tesis de autoridad se transforma simultáneamente en videos cortos, carruseles, hilos, newsletters, podcasts y ensayos largos sin rehacer el trabajo a mano.</p>
     </div>
 
-    <!-- Formats Grid -->
-    <div class="apple-bento-grid">
-      
-      <div class="apple-bento-card apple-bento-col-6">
-        <div>
-          <span class="apple-card-tag gold">🎬 TikTok, Instagram Reels, YouTube Shorts</span>
-          <h3 class="apple-card-title">Videos Cortos (9:16)</h3>
-          <p class="apple-card-desc">Auto-edición en 18s con cortes de silencio, subtítulos cinéticos con 13 familias de movimiento en Remotion y diseño sonoro a 45Hz.</p>
-        </div>
-        <div class="apple-card-media" style="aspect-ratio: 16/9;">
-          <img src="../../assets/plates/plate_05_vav_cathedral.webp" alt="Videos Cortos (9:16)">
-        </div>
-      </div>
-      
-      <div class="apple-bento-card apple-bento-col-6">
-        <div>
-          <span class="apple-card-tag gold">🖼️ Instagram, LinkedIn Carousel PDF</span>
-          <h3 class="apple-card-title">Carruseles Visuales (4:5 y 1:1)</h3>
-          <p class="apple-card-desc">Diapositivas de alto impacto visual con jerarquía tipográfica impecable, densidad de valor y esquemas visuales diseñados para maximizar shares y guardados.</p>
-        </div>
-        <div class="apple-card-media" style="aspect-ratio: 16/9;">
-          <img src="../../assets/plates/plate_08_contenido_portal.webp" alt="Carruseles Visuales (4:5 y 1:1)">
-        </div>
-      </div>
-      
-      <div class="apple-bento-card apple-bento-col-6">
-        <div>
-          <span class="apple-card-tag gold">✍️ X (Twitter), LinkedIn Articles</span>
-          <h3 class="apple-card-title">Hilos y Posts de Autoridad</h3>
-          <p class="apple-card-desc">Hilos de 6 a 10 publicaciones redactados con tensión dialéctica y listas de valor que posicionan tu marca como referente de autoridad en tu sector.</p>
-        </div>
-        <div class="apple-card-media" style="aspect-ratio: 16/9;">
-          <img src="../../assets/plates/plate_03_continuity_axis.webp" alt="Hilos y Posts de Autoridad">
-        </div>
-      </div>
-      
-      <div class="apple-bento-card apple-bento-col-6">
-        <div>
-          <span class="apple-card-tag gold">📧 Substack, Mailchimp, Klaviyo, ActiveCampaign</span>
-          <h3 class="apple-card-title">Newsletters y Correos de Venta</h3>
-          <p class="apple-card-desc">Emails de alto valor editorial y venta directa sincronizados con la tesis del video para nutrir a tu lista de suscriptores y generar conversiones.</p>
-        </div>
-        <div class="apple-card-media" style="aspect-ratio: 16/9;">
-          <img src="../../assets/plates/plate_07_moon_loop.webp" alt="Newsletters y Correos de Venta">
-        </div>
-      </div>
-      
-      <div class="apple-bento-card apple-bento-col-6">
-        <div>
-          <span class="apple-card-tag gold">🎙️ Spotify Podcasts, Telegram Audio, Voice Drops</span>
-          <h3 class="apple-card-title">Audio Broadcast y Podcasts</h3>
-          <p class="apple-card-desc">Pistas de audio normalizadas a -14 LUFS con reducción de ruido y resúmenes ejecutivos listos para enviar a tus comunidades privadas.</p>
-        </div>
-        <div class="apple-card-media" style="aspect-ratio: 16/9;">
-          <img src="../../assets/plates/plate_04_shim_metrology.webp" alt="Audio Broadcast y Podcasts">
-        </div>
-      </div>
-      
-      <div class="apple-bento-card apple-bento-col-6">
-        <div>
-          <span class="apple-card-tag gold">🎥 YouTube Long-form, Webinars</span>
-          <h3 class="apple-card-title">Ensayos Audiovisuales Largos (16:9)</h3>
-          <p class="apple-card-desc">Guiones estructurados en 4 tiempos para videos horizontales de 8 a 15 minutos que mantienen la retención de la audiencia de principio a fin.</p>
-        </div>
-        <div class="apple-card-media" style="aspect-ratio: 16/9;">
-          <img src="../../assets/plates/plate_10_master_monument.webp" alt="Ensayos Audiovisuales Largos (16:9)">
-        </div>
-      </div>
-      
-    </div>
-
-    <!-- Merkle-DAG Single Piece Identity Banner -->
-    <div class="apple-bento-card apple-bento-col-12" style="margin-top: 3rem; background: rgba(12, 16, 24, 0.88); border: 1px solid rgba(212, 175, 55, 0.35);">
-      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-        <span class="apple-card-tag cyan">MERKLE-DAG & CONTINUITY AXIS</span>
-        <h3 style="font-size: 2rem; color: #fff; margin: 10px 0;">Sincronización Automática en Tiempo Real</h3>
-        <p style="font-size: 1rem; color: #94a3b8; line-height: 1.6;">
-          Si editas una sola frase en el guion central, los subtítulos del video 9:16, las diapositivas del carrusel 4:5, el hilo de X y la newsletter se actualizan solos al unísono. Cero archivos desincronizados.
+    <!-- Resumen Ejecutivo -->
+    <div id="resumen" class="bento-grid" style="margin-bottom: 4rem;">
+      <div class="spotlight-card col-12" style="background: rgba(212,175,55,0.08); border-color: rgba(212,175,55,0.35);">
+        <span class="card-pill-tag gold">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+        <h3 class="card-h3">¿Por qué la Multiplicación 1 a 8 Multiplica tu Autoridad?</h3>
+        <p class="card-desc" style="color: #e2e8f0; font-size: 1rem;">
+          La mayoría de creadores se queman intentando redactar por separado para cada red social. En ABRAXAS introduces una tesis central (YOD), y el motor Merkle-DAG genera automáticamente los 8 derivados adaptados al lenguaje nativo de cada plataforma.
         </p>
       </div>
     </div>
+
+    <!-- The 8 Formats Breakdown -->
+    <div class="bento-grid">
+      
+      <div id="reels" class="spotlight-card col-6">
+        <span class="card-pill-tag gold">01 // VIDEOS CORTOS (9:16)</span>
+        <h3 class="card-h3">TikTok, Reels y YouTube Shorts</h3>
+        <p class="card-desc">Auto-edición en 18s con eliminación de silencios, subtítulos cinéticos Whisper y 13 familias de motion.</p>
+        <div class="card-aspect-media">
+          <img src="../../assets/plate_05_vav_cathedral.webp" alt="Reels 9:16" loading="lazy" width="800" height="450">
+        </div>
+      </div>
+
+      <div id="carousels" class="spotlight-card col-6">
+        <span class="card-pill-tag cyan">02 // CARRUSELES (4:5)</span>
+        <h3 class="card-h3">Instagram y LinkedIn PDF</h3>
+        <p class="card-desc">Estructura editorial de 8 diapositivas con jerarquía visual de alto impacto y copy diseñado para guardados.</p>
+        <div class="card-aspect-media">
+          <img src="../../assets/plate_08_contenido_portal.webp" alt="Carousels 4:5" loading="lazy" width="800" height="450">
+        </div>
+      </div>
+
+      <div id="threads" class="spotlight-card col-6">
+        <span class="card-pill-tag iris">03 // HILOS DE AUTORIDAD</span>
+        <h3 class="card-h3">X (Twitter) & LinkedIn Posts</h3>
+        <p class="card-desc">Cadena de 7 tweets conectados aplicando dialéctica Tesis-Antítesis-Síntesis para máxima viralidad.</p>
+        <div class="card-aspect-media">
+          <img src="../../assets/plate_03_continuity_axis.webp" alt="Threads" loading="lazy" width="800" height="450">
+        </div>
+      </div>
+
+      <div id="newsletters" class="spotlight-card col-6">
+        <span class="card-pill-tag emerald">04 // NEWSLETTERS & EMAIL</span>
+        <h3 class="card-h3">Substack, Beehiiv & Broadcasts</h3>
+        <p class="card-desc">Ensayo profundo en Markdown con gancho de retención de correo y llamado a la acción comercial directo.</p>
+        <div class="card-aspect-media">
+          <img src="../../assets/plate_07_moon_loop.webp" alt="Newsletters" loading="lazy" width="800" height="450">
+        </div>
+      </div>
+
+      <div id="podcasts" class="spotlight-card col-6">
+        <span class="card-pill-tag gold">05 // AUDIO & PODCASTS</span>
+        <h3 class="card-h3">Spotify & Apple Podcasts</h3>
+        <p class="card-desc">Masterización a -14 LUFS con balance a 45Hz y micro-cortes para episodios impecables.</p>
+        <div class="card-aspect-media">
+          <img src="../../assets/plate_04_shim_metrology.webp" alt="Podcasts" loading="lazy" width="800" height="450">
+        </div>
+      </div>
+
+      <div id="youtube" class="spotlight-card col-6">
+        <span class="card-pill-tag cyan">06 // ENSAYOS LARGOS (16:9)</span>
+        <h3 class="card-h3">YouTube Video Ensayos</h3>
+        <p class="card-desc">Guiones estructurados en 4 tiempos con retención superior al 60% y capítulos automáticos.</p>
+        <div class="card-aspect-media">
+          <img src="../../assets/plate_10_master_monument.webp" alt="YouTube Long" loading="lazy" width="800" height="450">
+        </div>
+      </div>
+
+    </div>
+
   </main>
 
   
-  <footer class="apple-global-footer">
-    <div class="apple-footer-inner">
-      <div class="apple-footer-top">
-        <div class="apple-footer-col">
-          <h4>Ecosistema de Contenido</h4>
-          <ul>
-            <li><a href="../../ecosistema/index.html">Videos Cortos (9:16)</a></li>
-            <li><a href="../../ecosistema/index.html">Carruseles Visuales (4:5)</a></li>
-            <li><a href="../../ecosistema/index.html">Hilos de Autoridad X/LinkedIn</a></li>
-            <li><a href="../../ecosistema/index.html">Newsletters y Correos</a></li>
-            <li><a href="../../ecosistema/index.html">Audio y Podcasts</a></li>
-          </ul>
-        </div>
-        <div class="apple-footer-col">
-          <h4>Suite de 13 Herramientas</h4>
-          <ul>
-            <li><a href="../../herramientas/index.html">YOD // Inteligencia de Nicho</a></li>
-            <li><a href="../../herramientas/index.html">CONTENIDO // Eje de Continuidad</a></li>
-            <li><a href="../../herramientas/index.html">SHIM // Metrología 0.00% GAPs</a></li>
-            <li><a href="../../herramientas/index.html">VAV // Auto-Síntesis en 18s</a></li>
-            <li><a href="../../herramientas/index.html">HE // Despacho Kanban</a></li>
-          </ul>
-        </div>
-        <div class="apple-footer-col">
-          <h4>Gobernanza & Alta Dirección</h4>
-          <ul>
-            <li><a href="../../gerencia/index.html">Custodia Inmutable de Marca</a></li>
-            <li><a href="../../gerencia/index.html">Auditoría de Costos al Centavo</a></li>
-            <li><a href="../../gerencia/index.html">Apalancamiento 1 Operador = 10</a></li>
-            <li><a href="../../gerencia/index.html">6 Compuertas de Control</a></li>
-            <li><a href="../../gerencia/index.html">Soberanía Apple Silicon</a></li>
-          </ul>
-        </div>
-        <div class="apple-footer-col">
-          <h4>Base de Conocimiento</h4>
-          <ul>
-            <li><a href="../../canon/index.html">Biblioteca Canon 37 TXT</a></li>
-            <li><a href="../../arquitectura/index.html">Los 4 Mundos y el Árbol</a></li>
-            <li><a href="../../guia/index.html">En 2 Minutos (Principiantes)</a></li>
-            <li><a href="../../backup/index.html">🏛️ Versión Backup / Legacy</a></li>
-          </ul>
-        </div>
+  <footer style="background: #050508; border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 1.5rem 3rem 1.5rem; font-size: 0.85rem; color: #86868b;">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Herramientas de Síntesis</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../es/tools/vav/motions/index.html">13 Familias de Motion</a></li>
+          <li><a href="../../es/tools/vav/captions/index.html">Subtítulos Cinéticos</a></li>
+          <li><a href="../../es/tools/vav/cuts/index.html">Cortes en 18s</a></li>
+          <li><a href="../../es/tools/shim/index.html">Metrología 0.00% GAPs</a></li>
+        </ul>
       </div>
-      <div class="apple-footer-bottom">
-        <p>Copyright © 2026 ABRAXAS OS. Todos los derechos reservados. Arquitectura de Alta Fidelidad en Silicio Local.</p>
-        <p class="apple-footer-hash">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Inteligencia & Orquestación</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../es/tools/arquitecto/index.html">ARQUITECTO Coach</a></li>
+          <li><a href="../../es/tools/yod/index.html">YOD (Radar de Nicho)</a></li>
+          <li><a href="../../es/tools/contenido/index.html">CONTENIDO (Merkle-DAG)</a></li>
+          <li><a href="../../es/tools/he/index.html">HE (Despacho de 50 Lotes)</a></li>
+        </ul>
       </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Gobernanza & Documentación</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../es/flujo/index.html">Ciclo de Vida de 6 Fases</a></li>
+          <li><a href="../../es/gerencia/index.html">Control de Costos SQLite</a></li>
+          <li><a href="../../es/canon/index.html">Biblioteca Canon 37 TXT</a></li>
+          <li><a href="../../es/backup/index.html">Versión Backup de Respaldo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="max-width: 1240px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <p>Copyright © 2026 ABRAXAS OS. Todos los derechos reservados. Arquitectura Determinista en Apple Silicon.</p>
+      <p style="font-family: var(--font-mono); color: #d4af37; font-size: 0.78rem;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
     </div>
   </footer>
   
+  
+  <!-- Contextual Floating Arquitecto Widget (Principle 30) -->
+  <div id="floating-architect-widget">
+    <div id="architect-popup-card" class="architect-popup-card">
+      <div class="popup-header">
+        <span class="popup-title">👁️ ARQUITECTO // COACH & ASISTENTE</span>
+        <button id="architect-popup-close" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.1rem;">✕</button>
+      </div>
+      <p class="popup-body">
+        «ABRAXAS convierte criterio en infraestructura.» Recuerda: un tema no es una idea. Abre una deuda narrativa con tu hook y págala exactamente con el payoff.
+      </p>
+      <button id="btn-copy-prompt" class="btn-copy-prompt">
+        📋 Preparar pregunta para IA
+      </button>
+    </div>
+    
+    <div id="architect-pill-trigger" class="architect-pill-trigger">
+      <span class="architect-sparkle">✦</span>
+      <span class="architect-pill-text">Arquitecto Coach</span>
+    </div>
+  </div>
+
+  <!-- Dashboard Control Center Drawer (Principle 26) -->
+  <div id="control-center-drawer">
+    <div class="drawer-header-row">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.2rem; color: #d4af37;">▲</span>
+        <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700;">Panel de Control Central</h3>
+      </div>
+      <button id="btn-close-control-center" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.2rem;">✕</button>
+    </div>
+
+    <div class="drawer-nav-grid">
+      <a href="../../index.html" class="drawer-nav-btn">🏠 <span>Visión General (Home)</span></a>
+      <a href="../../v3/index.html" class="drawer-nav-btn">🍎 <span>Edición Oficial v3 MacBook Pro</span></a>
+      <a href="../../es/ecosistema/index.html" class="drawer-nav-btn">⚡ <span>Ecosistema 8-en-1</span></a>
+      <a href="../../es/gerencia/index.html" class="drawer-nav-btn">💼 <span>Gobernanza & ROI</span></a>
+      <a href="../../es/flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (6 Fases)</span></a>
+      <a href="../../es/tools/vav/motions/index.html" class="drawer-nav-btn">🎬 <span>13 Familias de Motion</span></a>
+      <a href="../../es/tools/vav/captions/index.html" class="drawer-nav-btn">💬 <span>Subtítulos Cinéticos Whisper</span></a>
+      <a href="../../es/tools/vav/cuts/index.html" class="drawer-nav-btn">✂️ <span>Cortes en 18s & RMS</span></a>
+      <a href="../../es/tools/shim/index.html" class="drawer-nav-btn">🔍 <span>Metrología SHIM 0.00% GAPs</span></a>
+      <a href="../../es/tools/arquitecto/index.html" class="drawer-nav-btn">👁️ <span>ARQUITECTO (Coach & Asistente)</span></a>
+      <a href="../../es/canon/index.html" class="drawer-nav-btn" style="border-color: rgba(212,175,55,0.4);">📚 <span>Biblioteca Canon 37 TXT</span></a>
+      <a href="../../es/backup/index.html" class="drawer-nav-btn">🏛️ <span>Respaldo / Backup Completo</span></a>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding: 18px; background: rgba(212,175,55,0.08); border-radius: 14px; border: 1px solid rgba(212,175,55,0.25);">
+      <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800;">LÍNEA BASE CERTIFICADA</span>
+      <p style="font-size: 0.82rem; color: #cbd5e1; margin-top: 4px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </div>
+  
+
+  <script src="../../assets/abraxas-engine-v3.js"></script>
 </body>
 </html>

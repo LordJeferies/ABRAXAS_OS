@@ -5,33 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HE: 50-Asset Batch Operations Desk — ABRAXAS OS</title>
   <meta name="description" content="Deep dive into HE operational Kanban desk and 50-asset batch governance in ABRAXAS OS.">
+  <link rel="stylesheet" href="../../../assets/abraxas-apple-canon.css">
   <link rel="stylesheet" href="../../../assets/apple-macbook-pro-v3.css">
 </head>
 <body class="theme-dark">
   
-  <nav class="localnav" aria-label="Local Navigation">
-    <div class="localnav-wrapper">
-      <a href="../../../index.html" class="localnav-title">
+  <!-- Film Grain Overlay -->
+  <div class="film-grain-overlay"></div>
+
+  <!-- Apple Sticky Localnav -->
+  <nav class="apple-localnav" aria-label="Local Navigation">
+    <div class="localnav-inner">
+      <a href="../../../index.html" class="localnav-brand">
         <span>ABRAXAS OS</span>
-        <span class="badge">DOCS PRO</span>
+        <span class="tag">v3.0 PRO</span>
       </a>
-      <div class="localnav-menu">
-        <a href="../../../index.html" class="localnav-link">Home</a>
-        <a href="../../../v3/index.html" class="localnav-link">🍎 v3 Edition</a>
-        <a href="../../../en/ecosistema/index.html" class="localnav-link">⚡ 8-in-1 Ecosystem</a>
-        <a href="../../../en/flujo/index.html" class="localnav-link ">🔄 Lifecycle Flow</a>
-        <a href="../../../en/tools/vav/motions/index.html" class="localnav-link ">🎬 Motions</a>
-        <a href="../../../en/tools/vav/captions/index.html" class="localnav-link ">💬 Captions</a>
-        <a href="../../../en/tools/vav/cuts/index.html" class="localnav-link ">✂️ Cuts 18s</a>
-        <a href="../../../en/tools/shim/index.html" class="localnav-link ">🔍 SHIM (0% GAPs)</a>
-        <a href="../../../en/tools/arquitecto/index.html" class="localnav-link ">👁️ Arquitecto</a>
-        <a href="../../../en/tools/he/index.html" class="localnav-link active">💼 HE (50 Lotes)</a>
-        <a href="../../../en/canon/index.html" class="localnav-link" style="color: #d4af37;">📚 Canon 37 TXT</a>
-        <a href="../../../en/backup/index.html" class="localnav-link">🏛️ Backup</a>
+      <div class="localnav-items">
+        <a href="../../../index.html" class="localnav-a">Home</a>
+        <a href="../../../v3/index.html" class="localnav-a">🍎 v3 MacBook Pro</a>
+        <a href="../../../en/ecosistema/index.html" class="localnav-a ">⚡ 8-in-1 Ecosystem</a>
+        <a href="../../../en/gerencia/index.html" class="localnav-a ">💼 Governance & ROI</a>
+        <a href="../../../en/flujo/index.html" class="localnav-a ">🔄 Lifecycle Flow</a>
+        <a href="../../../en/tools/vav/motions/index.html" class="localnav-a ">🎬 Motions</a>
+        <a href="../../../en/tools/vav/captions/index.html" class="localnav-a ">💬 Captions</a>
+        <a href="../../../en/tools/vav/cuts/index.html" class="localnav-a ">✂️ Cuts 18s</a>
+        <a href="../../../en/tools/shim/index.html" class="localnav-a ">🔍 SHIM (0% GAPs)</a>
+        <a href="../../../en/tools/arquitecto/index.html" class="localnav-a ">👁️ Arquitecto</a>
+        <a href="../../../en/canon/index.html" class="localnav-a " style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../../../en/backup/index.html" class="localnav-a ">🏛️ Backup</a>
       </div>
-      <div class="localnav-actions">
-        <a href="../../../es/index.html" class="localnav-link" style="font-family: monospace; font-weight: 700; color: #fff;">ES</a>
-        <a href="../../../index.html" class="btn-apple-buy">Launch OS</a>
+      <div class="localnav-right">
+        <a href="../../../es/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">ES</a>
+        <button id="btn-open-control-center" class="btn-control-center">
+          <span>⚙️ Menú</span>
+        </button>
+        <a href="../../../index.html" class="btn-apple-cta">Launch OS</a>
       </div>
     </div>
   </nav>

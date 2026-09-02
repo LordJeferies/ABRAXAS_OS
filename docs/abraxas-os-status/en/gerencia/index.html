@@ -3,225 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Executive Governance & Business Command — ABRAXAS OS</title>
-  <meta name="description" content="How ABRAXAS empowers marketing directors, CEOs, and agency owners with strict brand custody and cost telemetry.">
-  <link rel="stylesheet" href="../../assets/apple-design-system.css">
+  <title>Executive Governance & ROI — ABRAXAS OS</title>
+  <link rel="stylesheet" href="../../assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="../../assets/apple-macbook-pro-v3.css">
 </head>
 <body>
   
-  <!-- Apple Global Glass Header -->
-  <header class="apple-global-nav">
-    <div class="apple-nav-wrapper">
-      
-      <!-- Brand Logo -->
-      <a href="../../index.html" class="apple-brand-logo">
-        <span class="apple-logo-glyph">▲</span>
-        <span class="apple-logo-text">ABRAXAS <span class="apple-logo-badge">OS</span></span>
+  <!-- Film Grain Overlay (Principle 17) -->
+  <div class="film-grain-overlay"></div>
+
+  <!-- Master Sticky Localnav (Principle 26) -->
+  <nav class="apple-localnav" aria-label="Local Navigation">
+    <div class="localnav-inner">
+      <a href="../../index.html" class="localnav-brand">
+        <span>ABRAXAS OS</span>
+        <span class="tag">v3.0 PRO</span>
       </a>
-
-      <!-- Desktop Nav Links -->
-      <nav class="apple-nav-links">
-        
-          <a href="../../index.html" class="apple-nav-item ">
-            Overview
-          </a>
-        
-          <a href="../../gerencia/index.html" class="apple-nav-item active">
-            💼 Executive Suite
-          </a>
-        
-          <a href="../../ecosistema/index.html" class="apple-nav-item ">
-            ⚡ 8-in-1 Ecosystem
-          </a>
-        
-          <a href="../../herramientas/index.html" class="apple-nav-item ">
-            🛠️ 13 Modular Tools
-          </a>
-        
-          <a href="../../arquitectura/index.html" class="apple-nav-item ">
-            🔯 Kabbalah & 4D
-          </a>
-        
-          <a href="../../canon/index.html" class="apple-nav-item ">
-            📚 Canon 37 TXT
-          </a>
-        
-          <a href="../../guia/index.html" class="apple-nav-item ">
-            🧭 Quick Guide
-          </a>
-        
-          <a href="../../backup/index.html" class="apple-nav-item ">
-            🏛️ Backup Legacy
-          </a>
-        
-      </nav>
-
-      <!-- Right Controls: Locale & CTA -->
-      <div class="apple-nav-right">
-        <div class="apple-locale-pill">
-          <a href="../../es/gerencia/index.html" class="apple-locale-btn ">ES</a>
-          <span class="apple-locale-sep">/</span>
-          <a href="#" class="apple-locale-btn active">EN</a>
-        </div>
-        <a href="../../ecosistema/index.html" class="apple-nav-cta">
-          Explore OS
-        </a>
+      <div class="localnav-items">
+        <a href="../../index.html" class="localnav-a ">Home</a>
+        <a href="../../v3/index.html" class="localnav-a ">🍎 v3 MacBook Pro</a>
+        <a href="../../en/ecosistema/index.html" class="localnav-a ">⚡ 8-in-1 Ecosystem</a>
+        <a href="../../en/gerencia/index.html" class="localnav-a active">💼 Governance & ROI</a>
+        <a href="../../en/flujo/index.html" class="localnav-a ">🔄 Lifecycle Flow</a>
+        <a href="../../en/tools/vav/motions/index.html" class="localnav-a ">🎬 Motions</a>
+        <a href="../../en/tools/vav/captions/index.html" class="localnav-a ">💬 Captions</a>
+        <a href="../../en/tools/vav/cuts/index.html" class="localnav-a ">✂️ Cuts 18s</a>
+        <a href="../../en/tools/shim/index.html" class="localnav-a ">🔍 SHIM (0% GAPs)</a>
+        <a href="../../en/tools/arquitecto/index.html" class="localnav-a ">👁️ Arquitecto</a>
+        <a href="../../en/canon/index.html" class="localnav-a " style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../../en/backup/index.html" class="localnav-a ">🏛️ Backup</a>
       </div>
-
+      <div class="localnav-right">
+        <a href="../../es/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">ES</a>
+        <button id="btn-open-control-center" class="btn-control-center">
+          <span>⚙️ Menú</span>
+        </button>
+        <a href="../../index.html" class="btn-apple-cta">Launch OS</a>
+      </div>
     </div>
-  </header>
+  </nav>
+  
+  
+  <div style="background: rgba(14, 14, 20, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px 1.5rem; position: sticky; top: 52px; z-index: 999; overflow-x: auto; scrollbar-width: none;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; gap: 8px; align-items: center; white-space: nowrap;">
+      <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800; margin-right: 6px;">IR A:</span>
+      <a href="#resumen" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">⚡ En 30s</a><a href="#telemetria" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📊 Telemetría SQLite</a><a href="#custodia" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🛡️ Custodia de Marca</a><a href="#leverage" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">👥 Apalancamiento 1=10</a><a href="#silicon" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🍎 Apple Silicon</a>
+    </div>
+  </div>
   
 
-  <main class="apple-section" style="padding-top: 100px;">
-    <div class="apple-section-header">
-      <span class="apple-section-eyebrow" style="color: var(--apple-cyan);">EXECUTIVE COMMAND & OPERATIONAL GOVERNANCE</span>
-      <h1 class="apple-section-headline">Total Brand Custody. Zero Operational Chaos.</h1>
-      <p class="apple-section-subhead">
-        For executives and marketing leaders, ABRAXAS is an enterprise command center auditing costs to the penny, eliminating agency retainers, and enforcing zero error tolerance.
-      </p>
+  <main class="section-wrap" style="padding-top: 50px;">
+    
+    <div class="section-head" style="text-align: center;">
+      <span class="tag" style="color: #d4af37;">EXECUTIVE CONTROL // ROI & GOVERNANCE</span>
+      <h1 class="h2">Total Executive Governance.<br/>Forensic Cost Telemetry.</h1>
+      <p class="p">How executives reduce cost per content asset by 90% with zero brand drift.</p>
     </div>
 
-    <!-- 4 Executive Power Pillars Bento Grid -->
-    <div class="apple-bento-grid" style="margin-bottom: 4rem;">
+    <!-- Resumen Ejecutivo -->
+    <div id="resumen" class="bento-grid" style="margin-bottom: 4rem;">
+      <div class="spotlight-card col-12" style="background: rgba(48,209,88,0.08); border-color: rgba(48,209,88,0.35);">
+        <span class="card-pill-tag emerald">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+        <h3 class="card-h3">The Financial ROI of ABRAXAS OS</h3>
+        <p class="card-desc" style="color: #e2e8f0; font-size: 1rem;">
+          Traditional agencies charge thousands for 10 videos. With ABRAXAS, one in-house operator exports 50 multi-channel assets in one afternoon.
+        </p>
+      </div>
+    </div>
+
+    <div class="bento-grid">
       
-      <div class="apple-bento-card apple-bento-col-6">
-        <div>
-          <span class="apple-card-tag gold">🛡️ PILAR 01 // CUSTODIA DE MARCA</span>
-          <h3 class="apple-card-title">Immutable Brand Voice Custody</h3>
-          <p class="apple-card-desc">
-            Management defines brand voice axioms and compliance once. No junior copywriter or freelancer can publish off-brand content.
-          </p>
-        </div>
-        <div class="apple-card-media" style="aspect-ratio: 16/9;">
-          <img src="../../assets/plates/plate_03_continuity_axis.webp" alt="Brand Custody">
+      <div id="telemetria" class="spotlight-card col-6">
+        <span class="card-pill-tag gold">01 // TELEMETRÍA SQLITE LOCAL</span>
+        <h3 class="card-h3">SQLite Cost & Render Telemetry</h3>
+        <p class="card-desc">Audit render times, dispatched asset counts, and exact compute cost per piece.</p>
+        <div class="card-aspect-media">
+          <img src="../../assets/plate_09_system_dashboard.webp" alt="Dashboard Telemetry" loading="lazy" width="800" height="450">
         </div>
       </div>
 
-      <div class="apple-bento-card apple-bento-col-6">
-        <div>
-          <span class="apple-card-tag cyan">📊 PILAR 02 // TELEMETRÍA DE COSTOS</span>
-          <h3 class="apple-card-title">Cost & Turnaround Telemetry</h3>
-          <p class="apple-card-desc">
-            Stop chasing team members for delays. SQLite telemetry measures turnaround time per stage, asset manufacturing cost, and team throughput.
-          </p>
-        </div>
-        <div class="apple-card-media" style="aspect-ratio: 16/9;">
-          <img src="../../assets/plates/plate_09_system_dashboard.webp" alt="Cost Telemetry">
+      <div id="custodia" class="spotlight-card col-6">
+        <span class="card-pill-tag cyan">02 // CUSTODIA DE MARCA</span>
+        <h3 class="card-h3">Immutable Brand Axiom Custody</h3>
+        <p class="card-desc">Your company core axioms are sealed. AI never hallucinates or breaches brand guidelines.</p>
+        <div class="card-aspect-media">
+          <img src="../../assets/plate_03_continuity_axis.webp" alt="Brand Custody" loading="lazy" width="800" height="450">
         </div>
       </div>
 
-      <div class="apple-bento-card apple-bento-col-6">
-        <div>
-          <span class="apple-card-tag emerald">⚡ PILAR 03 // APALANCAMIENTO 1 = 10</span>
-          <h3 class="apple-card-title">1 Operator Replaces an Agency</h3>
-          <p class="apple-card-desc">
-            Save $5k-$15k/mo on slow agency retainers. A single internal operator governs and approves 50-100 multi-channel assets in one afternoon.
-          </p>
-        </div>
-        <div class="apple-card-media" style="aspect-ratio: 16/9;">
-          <img src="../../assets/plates/plate_02_he_macro.webp" alt="Team Leverage">
+      <div id="leverage" class="spotlight-card col-6">
+        <span class="card-pill-tag iris">03 // APALANCAMIENTO 1=10</span>
+        <h3 class="card-h3">1 Operator = 10-Person Agency</h3>
+        <p class="card-desc">The HE module empowers one person to govern and batch-approve 50 pieces in 4 hours.</p>
+        <div class="card-aspect-media">
+          <img src="../../assets/plate_02_he_macro.webp" alt="Team Leverage" loading="lazy" width="800" height="450">
         </div>
       </div>
 
-      <div class="apple-bento-card apple-bento-col-6">
-        <div>
-          <span class="apple-card-tag purple">🔒 PILAR 04 // SOBERANÍA EMPRESARIAL</span>
-          <h3 class="apple-card-title">Local Apple Silicon Sovereignty</h3>
-          <p class="apple-card-desc">
-            Everything executes locally on your Mac. Proprietary business strategies and recordings never leak to third-party public AI clouds.
-          </p>
-        </div>
-        <div class="apple-card-media" style="aspect-ratio: 16/9;">
-          <img src="../../assets/plates/plate_04_shim_metrology.webp" alt="Local Sovereignty">
+      <div id="silicon" class="spotlight-card col-6">
+        <span class="card-pill-tag emerald">04 // SOBERANÍA EN APPLE SILICON</span>
+        <h3 class="card-h3">Total Privacy & Zero Cloud Bills</h3>
+        <p class="card-desc">Runs locally on Apple Silicon with Whisper and VideoToolbox. Your confidential data never leaks.</p>
+        <div class="card-aspect-media">
+          <img src="../../assets/plate_04_shim_metrology.webp" alt="Apple Silicon" loading="lazy" width="800" height="450">
         </div>
       </div>
 
     </div>
 
-    <!-- 6 Executive Quality Gates Matrix -->
-    <div class="apple-bento-card apple-bento-col-12" style="background: rgba(14, 18, 28, 0.9); border: 1px solid rgba(56, 189, 248, 0.35);">
-      <h3 style="font-size: 1.6rem; color: #fff; margin-bottom: 1.5rem; text-align: center;">
-        🏛️ The 6 Executive Quality Gates
-      </h3>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px;">
-        <div style="background: rgba(255,255,255,0.04); padding: 16px; border-radius: 12px; border-top: 3px solid #d4af37;">
-          <strong style="color: #fff; font-size: 14px; display: block; margin-bottom: 6px;">1. Tesis Aprobada</strong>
-          <p style="font-size: 12px; color: #94a3b8; margin: 0;">Dirección valida el ángulo y oferta comercial.</p>
-        </div>
-        <div style="background: rgba(255,255,255,0.04); padding: 16px; border-radius: 12px; border-top: 3px solid #38bdf8;">
-          <strong style="color: #fff; font-size: 14px; display: block; margin-bottom: 6px;">2. Guion Auditado</strong>
-          <p style="font-size: 12px; color: #94a3b8; margin: 0;">Revisión de afirmaciones y llamados a la acción.</p>
-        </div>
-        <div style="background: rgba(255,255,255,0.04); padding: 16px; border-radius: 12px; border-top: 3px solid #ec4899;">
-          <strong style="color: #fff; font-size: 14px; display: block; margin-bottom: 6px;">3. Verificación SHIM</strong>
-          <p style="font-size: 12px; color: #94a3b8; margin: 0;">IA audita audio y encuadre en el set (0 errores).</p>
-        </div>
-        <div style="background: rgba(255,255,255,0.04); padding: 16px; border-radius: 12px; border-top: 3px solid #a855f7;">
-          <strong style="color: #fff; font-size: 14px; display: block; margin-bottom: 6px;">4. Control de Marca</strong>
-          <p style="font-size: 12px; color: #94a3b8; margin: 0;">Diseño visual según el manual de identidad.</p>
-        </div>
-        <div style="background: rgba(255,255,255,0.04); padding: 16px; border-radius: 12px; border-top: 3px solid #34c759;">
-          <strong style="color: #fff; font-size: 14px; display: block; margin-bottom: 6px;">5. Firma Ejecutiva</strong>
-          <p style="font-size: 12px; color: #94a3b8; margin: 0;">Luz verde de la gerencia en un solo clic.</p>
-        </div>
-        <div style="background: rgba(255,255,255,0.04); padding: 16px; border-radius: 12px; border-top: 3px solid #f59e0b;">
-          <strong style="color: #fff; font-size: 14px; display: block; margin-bottom: 6px;">6. Retorno de ROI</strong>
-          <p style="font-size: 12px; color: #94a3b8; margin: 0;">Métricas de retención y ventas al negocio.</p>
-        </div>
-      </div>
-    </div>
   </main>
 
   
-  <footer class="apple-global-footer">
-    <div class="apple-footer-inner">
-      <div class="apple-footer-top">
-        <div class="apple-footer-col">
-          <h4>Content Ecosystem</h4>
-          <ul>
-            <li><a href="../../ecosistema/index.html">Short-Form Video (9:16)</a></li>
-            <li><a href="../../ecosistema/index.html">Visual Carousels (4:5)</a></li>
-            <li><a href="../../ecosistema/index.html">Authority Threads X/LinkedIn</a></li>
-            <li><a href="../../ecosistema/index.html">Newsletters & Email</a></li>
-            <li><a href="../../ecosistema/index.html">Audio & Podcasts</a></li>
-          </ul>
-        </div>
-        <div class="apple-footer-col">
-          <h4>13 Modular Tools</h4>
-          <ul>
-            <li><a href="../../herramientas/index.html">YOD // Inteligencia de Nicho</a></li>
-            <li><a href="../../herramientas/index.html">CONTENIDO // Eje de Continuidad</a></li>
-            <li><a href="../../herramientas/index.html">SHIM // Metrología 0.00% GAPs</a></li>
-            <li><a href="../../herramientas/index.html">VAV // Auto-Síntesis en 18s</a></li>
-            <li><a href="../../herramientas/index.html">HE // Despacho Kanban</a></li>
-          </ul>
-        </div>
-        <div class="apple-footer-col">
-          <h4>Executive Governance</h4>
-          <ul>
-            <li><a href="../../gerencia/index.html">Immutable Brand Custody</a></li>
-            <li><a href="../../gerencia/index.html">Cost & Bottleneck Telemetry</a></li>
-            <li><a href="../../gerencia/index.html">1 Operator = 10 Leverage</a></li>
-            <li><a href="../../gerencia/index.html">6 Executive Quality Gates</a></li>
-            <li><a href="../../gerencia/index.html">Apple Silicon Sovereignty</a></li>
-          </ul>
-        </div>
-        <div class="apple-footer-col">
-          <h4>Knowledge Base</h4>
-          <ul>
-            <li><a href="../../canon/index.html">Canon 37 TXT Library</a></li>
-            <li><a href="../../arquitectura/index.html">Four Worlds & Tree of Life</a></li>
-            <li><a href="../../guia/index.html">In 2 Minutes (Beginners)</a></li>
-            <li><a href="../../backup/index.html">🏛️ Legacy Backup Version</a></li>
-          </ul>
-        </div>
+  <footer style="background: #050508; border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 1.5rem 3rem 1.5rem; font-size: 0.85rem; color: #86868b;">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Synthesis Tools</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../en/tools/vav/motions/index.html">13 Motion Families</a></li>
+          <li><a href="../../en/tools/vav/captions/index.html">Kinetic Captions</a></li>
+          <li><a href="../../en/tools/vav/cuts/index.html">18s Auto-Cuts</a></li>
+          <li><a href="../../en/tools/shim/index.html">0.00% GAP Metrology</a></li>
+        </ul>
       </div>
-      <div class="apple-footer-bottom">
-        <p>Copyright © 2026 ABRAXAS OS. All rights reserved. High-Fidelity Local Silicon Architecture.</p>
-        <p class="apple-footer-hash">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Intelligence</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../en/tools/arquitecto/index.html">ARQUITECTO Coach</a></li>
+          <li><a href="../../en/tools/yod/index.html">YOD Intelligence</a></li>
+          <li><a href="../../en/tools/contenido/index.html">CONTENIDO Merkle-DAG</a></li>
+          <li><a href="../../en/tools/he/index.html">HE Batch Operations</a></li>
+        </ul>
       </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Governance & Docs</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../en/flujo/index.html">6-Phase Lifecycle</a></li>
+          <li><a href="../../en/gerencia/index.html">SQLite Cost Governance</a></li>
+          <li><a href="../../en/canon/index.html">Canon 37 TXT Library</a></li>
+          <li><a href="../../en/backup/index.html">Legacy Backup Snapshot</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="max-width: 1240px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <p>Copyright © 2026 ABRAXAS OS. All rights reserved. Deterministic Architecture on Apple Silicon.</p>
+      <p style="font-family: var(--font-mono); color: #d4af37; font-size: 0.78rem;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
     </div>
   </footer>
   
+  
+  <!-- Contextual Floating Arquitecto Widget (Principle 30) -->
+  <div id="floating-architect-widget">
+    <div id="architect-popup-card" class="architect-popup-card">
+      <div class="popup-header">
+        <span class="popup-title">👁️ ARQUITECTO // COACH & ASISTENTE</span>
+        <button id="architect-popup-close" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.1rem;">✕</button>
+      </div>
+      <p class="popup-body">
+        «ABRAXAS turns criterion into infrastructure.» A topic is not an idea. Open a narrative debt with your hook and pay it with your payoff.
+      </p>
+      <button id="btn-copy-prompt" class="btn-copy-prompt">
+        📋 Copy Optimized AI Prompt
+      </button>
+    </div>
+    
+    <div id="architect-pill-trigger" class="architect-pill-trigger">
+      <span class="architect-sparkle">✦</span>
+      <span class="architect-pill-text">Arquitecto Coach</span>
+    </div>
+  </div>
+
+  <!-- Dashboard Control Center Drawer (Principle 26) -->
+  <div id="control-center-drawer">
+    <div class="drawer-header-row">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.2rem; color: #d4af37;">▲</span>
+        <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700;">Panel de Control Central</h3>
+      </div>
+      <button id="btn-close-control-center" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.2rem;">✕</button>
+    </div>
+
+    <div class="drawer-nav-grid">
+      <a href="../../index.html" class="drawer-nav-btn">🏠 <span>Visión General (Home)</span></a>
+      <a href="../../v3/index.html" class="drawer-nav-btn">🍎 <span>Edición Oficial v3 MacBook Pro</span></a>
+      <a href="../../en/ecosistema/index.html" class="drawer-nav-btn">⚡ <span>Ecosistema 8-en-1</span></a>
+      <a href="../../en/gerencia/index.html" class="drawer-nav-btn">💼 <span>Gobernanza & ROI</span></a>
+      <a href="../../en/flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (6 Fases)</span></a>
+      <a href="../../en/tools/vav/motions/index.html" class="drawer-nav-btn">🎬 <span>13 Familias de Motion</span></a>
+      <a href="../../en/tools/vav/captions/index.html" class="drawer-nav-btn">💬 <span>Subtítulos Cinéticos Whisper</span></a>
+      <a href="../../en/tools/vav/cuts/index.html" class="drawer-nav-btn">✂️ <span>Cortes en 18s & RMS</span></a>
+      <a href="../../en/tools/shim/index.html" class="drawer-nav-btn">🔍 <span>Metrología SHIM 0.00% GAPs</span></a>
+      <a href="../../en/tools/arquitecto/index.html" class="drawer-nav-btn">👁️ <span>ARQUITECTO (Coach & Asistente)</span></a>
+      <a href="../../en/canon/index.html" class="drawer-nav-btn" style="border-color: rgba(212,175,55,0.4);">📚 <span>Biblioteca Canon 37 TXT</span></a>
+      <a href="../../en/backup/index.html" class="drawer-nav-btn">🏛️ <span>Respaldo / Backup Completo</span></a>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding: 18px; background: rgba(212,175,55,0.08); border-radius: 14px; border: 1px solid rgba(212,175,55,0.25);">
+      <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800;">LÍNEA BASE CERTIFICADA</span>
+      <p style="font-size: 0.82rem; color: #cbd5e1; margin-top: 4px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </div>
+  
+
+  <script src="../../assets/abraxas-engine-v3.js"></script>
 </body>
 </html>
