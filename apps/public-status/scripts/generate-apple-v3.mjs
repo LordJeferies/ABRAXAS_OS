@@ -129,7 +129,7 @@ const actsData = {
       solution: "Congela videos, carruseles, audios y copys en un solo bloque blindado con sello criptográfico SHA-256 que nunca se corrompe ni pierde resolución.",
       howItWorks: "Guarda los activos en Almacenamiento Direccionado por Contenido (CAS). Mover carpetas de disco nunca rompe enlaces y todos los medios cargan al instante con 100% de calidad.",
       cabala: "Sello YHSHVH (Pentagramatón). Las 4 barras del cuerpo material (Y-H-V-H) reciben el fuego sagrado de Shin (ש) en su centro, sellando el espíritu con la materia en un cuerpo indestructible.",
-      plate: "assets/plates/plate_08_he_assiah_operations.webp"
+      plate: "assets/plates/plate_08_contenido_portal.webp"
     },
     {
       num: "07",
@@ -162,7 +162,7 @@ const actsData = {
       solution: "Monitorea memoria y temperatura de Apple Silicon en tiempo real, exportando lotes de 50 videos y carruseles simultáneamente sin un solo cuelgue.",
       howItWorks: "El Ojo se conecta directamente a los procesadores Apple Silicon (M1/M2/M3/M4) mediante Metal y VideoToolbox, balanceando la carga entre GPU y Neural Engine sin estrangulamiento térmico.",
       cabala: "El Ojo del Ápice en la Pirámide. La mirada vigilante que supervisa el flujo de energía en la cúspide para garantizar que el templo físico no sufra rupturas de tensión.",
-      plate: "assets/plates/plate_06_optical_port_eye.webp"
+      plate: "assets/plates/plate_06_arquitecto_lens.webp"
     },
     {
       num: "10",
@@ -263,7 +263,7 @@ const actsData = {
       solution: "Freezes all videos, carousels, slides, audio stems, and written copys into an immutable SHA-256 cryptographic vault that never corrupts.",
       howItWorks: "Stores assets in Content-Addressable Storage (CAS). Moving disk folders or updating assets never breaks links, and all media renders at 100% native bit depth.",
       cabala: "The Seal of YHSHVH (Pentagrammaton). The 4 material elements (Y-H-V-H) receive the living flame of Shin (ש) at their core, sealing spirit and matter into an indestructible physical body.",
-      plate: "assets/plates/plate_08_he_assiah_operations.webp"
+      plate: "assets/plates/plate_08_contenido_portal.webp"
     },
     {
       num: "07",
@@ -296,7 +296,7 @@ const actsData = {
       solution: "Monitors Apple Silicon hardware memory and temperature in real time, batch-exporting 50 videos and carousels simultaneously with zero freezes.",
       howItWorks: "The Eye connects directly to Apple Silicon chips (M1/M2/M3/M4) via Metal and VideoToolbox, balancing compute across GPU and Neural Engine cores for maximum throughput.",
       cabala: "The Eye of the Apex. The vigilant watcher overseeing energy flow at the pyramid summit, ensuring the physical vessel never suffers structural breakdown.",
-      plate: "assets/plates/plate_06_optical_port_eye.webp"
+      plate: "assets/plates/plate_06_arquitecto_lens.webp"
     },
     {
       num: "10",

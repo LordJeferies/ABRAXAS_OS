@@ -238,7 +238,7 @@ function generateEcosistemaPage(locale) {
         <h3 class="card-h3">TikTok, Reels y YouTube Shorts</h3>
         <p class="card-desc">Auto-edición en 18s con eliminación de silencios, subtítulos cinéticos Whisper y 13 familias de motion.</p>
         <div class="card-aspect-media">
-          <img src="${root}assets/plate_05_vav_cathedral.webp" alt="Reels 9:16" loading="lazy" width="800" height="450">
+          <img src="${root}assets/plates/plate_05_vav_cathedral.webp" alt="Reels 9:16" loading="lazy" width="800" height="450">
         </div>
       </div>
 
@@ -247,7 +247,7 @@ function generateEcosistemaPage(locale) {
         <h3 class="card-h3">Instagram y LinkedIn PDF</h3>
         <p class="card-desc">Estructura editorial de 8 diapositivas con jerarquía visual de alto impacto y copy diseñado para guardados.</p>
         <div class="card-aspect-media">
-          <img src="${root}assets/plate_08_contenido_portal.webp" alt="Carousels 4:5" loading="lazy" width="800" height="450">
+          <img src="${root}assets/plates/plate_08_contenido_portal.webp" alt="Carousels 4:5" loading="lazy" width="800" height="450">
         </div>
       </div>
 
@@ -256,7 +256,7 @@ function generateEcosistemaPage(locale) {
         <h3 class="card-h3">X (Twitter) & LinkedIn Posts</h3>
         <p class="card-desc">Cadena de 7 tweets conectados aplicando dialéctica Tesis-Antítesis-Síntesis para máxima viralidad.</p>
         <div class="card-aspect-media">
-          <img src="${root}assets/plate_03_continuity_axis.webp" alt="Threads" loading="lazy" width="800" height="450">
+          <img src="${root}assets/plates/plate_03_continuity_axis.webp" alt="Threads" loading="lazy" width="800" height="450">
         </div>
       </div>
 
@@ -265,7 +265,7 @@ function generateEcosistemaPage(locale) {
         <h3 class="card-h3">Substack, Beehiiv & Broadcasts</h3>
         <p class="card-desc">Ensayo profundo en Markdown con gancho de retención de correo y llamado a la acción comercial directo.</p>
         <div class="card-aspect-media">
-          <img src="${root}assets/plate_07_moon_loop.webp" alt="Newsletters" loading="lazy" width="800" height="450">
+          <img src="${root}assets/plates/plate_07_moon_loop.webp" alt="Newsletters" loading="lazy" width="800" height="450">
         </div>
       </div>
 
@@ -274,7 +274,7 @@ function generateEcosistemaPage(locale) {
         <h3 class="card-h3">Spotify & Apple Podcasts</h3>
         <p class="card-desc">Masterización a -14 LUFS con balance a 45Hz y micro-cortes para episodios impecables.</p>
         <div class="card-aspect-media">
-          <img src="${root}assets/plate_04_shim_metrology.webp" alt="Podcasts" loading="lazy" width="800" height="450">
+          <img src="${root}assets/plates/plate_04_shim_metrology.webp" alt="Podcasts" loading="lazy" width="800" height="450">
         </div>
       </div>
 
@@ -283,7 +283,7 @@ function generateEcosistemaPage(locale) {
         <h3 class="card-h3">YouTube Video Ensayos</h3>
         <p class="card-desc">Guiones estructurados en 4 tiempos con retención superior al 60% y capítulos automáticos.</p>
         <div class="card-aspect-media">
-          <img src="${root}assets/plate_10_master_monument.webp" alt="YouTube Long" loading="lazy" width="800" height="450">
+          <img src="${root}assets/plates/plate_10_master_monument.webp" alt="YouTube Long" loading="lazy" width="800" height="450">
         </div>
       </div>
 
@@ -360,7 +360,7 @@ function generateGerenciaPage(locale) {
         <h3 class="card-h3">${isEs ? 'Métricas de Costo y Tiempos de Render' : 'SQLite Cost & Render Telemetry'}</h3>
         <p class="card-desc">${isEs ? 'Audita tiempos de síntesis, número de piezas despachadas y costo computacional por activo en milisegundos.' : 'Audit render times, dispatched asset counts, and exact compute cost per piece.'}</p>
         <div class="card-aspect-media">
-          <img src="${root}assets/plate_09_system_dashboard.webp" alt="Dashboard Telemetry" loading="lazy" width="800" height="450">
+          <img src="${root}assets/plates/plate_09_system_dashboard.webp" alt="Dashboard Telemetry" loading="lazy" width="800" height="450">
         </div>
       </div>
 
@@ -369,7 +369,7 @@ function generateGerenciaPage(locale) {
         <h3 class="card-h3">${isEs ? 'Protección de Tesis Inmutables' : 'Immutable Brand Axiom Custody'}</h3>
         <p class="card-desc">${isEs ? 'Los axiomas de tu empresa quedan sellados. La IA nunca inventará claims falsos ni violará las directrices corporativas.' : 'Your company core axioms are sealed. AI never hallucinates or breaches brand guidelines.'}</p>
         <div class="card-aspect-media">
-          <img src="${root}assets/plate_03_continuity_axis.webp" alt="Brand Custody" loading="lazy" width="800" height="450">
+          <img src="${root}assets/plates/plate_03_continuity_axis.webp" alt="Brand Custody" loading="lazy" width="800" height="450">
         </div>
       </div>
 
@@ -378,7 +378,7 @@ function generateGerenciaPage(locale) {
         <h3 class="card-h3">${isEs ? 'Un Operador Rinde como una Agencia Entera' : '1 Operator = 10-Person Agency'}</h3>
         <p class="card-desc">${isEs ? 'El módulo HE permite a un solo líder de marketing gobernar y aprobar 50 piezas en el tablero Kanban en 4 horas.' : 'The HE module empowers one person to govern and batch-approve 50 pieces in 4 hours.'}</p>
         <div class="card-aspect-media">
-          <img src="${root}assets/plate_02_he_macro.webp" alt="Team Leverage" loading="lazy" width="800" height="450">
+          <img src="${root}assets/plates/plate_02_he_macro.webp" alt="Team Leverage" loading="lazy" width="800" height="450">
         </div>
       </div>
 
@@ -387,7 +387,7 @@ function generateGerenciaPage(locale) {
         <h3 class="card-h3">${isEs ? 'Privacidad Total y Cero Costos de Nube' : 'Total Privacy & Zero Cloud Bills'}</h3>
         <p class="card-desc">${isEs ? 'Todo se ejecuta en tu MacBook Pro con Whisper local y VideoToolbox. Tus datos no se envían a servidores de terceros.' : 'Runs locally on Apple Silicon with Whisper and VideoToolbox. Your confidential data never leaks.'}</p>
         <div class="card-aspect-media">
-          <img src="${root}assets/plate_04_shim_metrology.webp" alt="Apple Silicon" loading="lazy" width="800" height="450">
+          <img src="${root}assets/plates/plate_04_shim_metrology.webp" alt="Apple Silicon" loading="lazy" width="800" height="450">
         </div>
       </div>
 
