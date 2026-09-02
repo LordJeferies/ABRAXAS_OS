@@ -500,11 +500,20 @@ function generateCaptionsPage(locale) {
   console.log(`[DeepDive Suite] Generated /${locale}/tools/vav/captions/index.html`);
 }
 
+
 // 3. GENERATE CUTS & 18S SYNTHESIS PAGE (/tools/vav/cuts/index.html)
 function generateCutsPage(locale) {
   const isEs = locale === 'es';
   const targetDir = path.join(docsDir, locale, 'tools/vav/cuts');
   fs.mkdirSync(targetDir, { recursive: true });
+
+  const quickItems = [
+    { label: '⚡ En 30s', href: '#resumen' },
+    { label: '🔬 Algoritmo RMS', href: '#algoritmo-rms' },
+    { label: '🎙️ Preservación Respiración', href: '#respiracion' },
+    { label: '🔊 Masterización -14 LUFS', href: '#mastering' },
+    { label: '🍎 Aceleración VideoToolbox', href: '#videotoolbox' }
+  ];
 
   const html = `<!DOCTYPE html>
 <html lang="${locale}">
@@ -518,49 +527,152 @@ function generateCutsPage(locale) {
 </head>
 <body class="theme-dark">
   ${getHeader(locale, 'cuts', 4)}
+  ${getInternalQuickMenu(quickItems)}
 
-  <main class="section-container" style="padding-top: 80px; padding-bottom: 80px; max-width: 1200px;">
+  <main class="section-container" style="padding-top: 60px; padding-bottom: 80px; max-width: 1240px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;">
     
-    <div class="section-title-wrap" style="text-align: center;">
-      <span class="section-eyebrow" style="color: #30d158;">VAV SYNTHESIS // SURGICAL CUTTING ENGINE</span>
-      <h1 class="headline-gradient" style="font-size: clamp(2.5rem, 5.5vw, 4.2rem);">
+    <div class="section-title-wrap" style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-eyebrow" style="color: #30d158; font-weight: 800; letter-spacing: 0.1em; font-family: var(--font-mono);">VAV SYNTHESIS // SURGICAL CUTTING ENGINE</span>
+      <h1 class="headline-gradient" style="font-size: clamp(2.5rem, 5.5vw, 4.2rem); margin-top: 10px;">
         ${isEs ? 'Auto-Edición en 18 Segundos.<br/>Cortes con Precisión de Microsegundos.' : '18-Second Auto-Editing.<br/>Sub-Millisecond Jump Cut Precision.'}
       </h1>
-      <p class="subhead" style="margin: 0 auto 2.5rem auto;">
+      <p class="subhead" style="margin: 0 auto; max-width: 860px; color: #94a3b8; font-size: 1.1rem; line-height: 1.6;">
         ${isEs 
-          ? 'Pasar horas cortando silencios y pausas manualmente en Premiere es cosa del pasado. VAV analiza la onda de audio y la energía espectral, eliminando el aire muerto sin cortar tus respiraciones naturales.'
+          ? 'Pasar horas cortando silencios y pausas manualmente en Premiere es cosa del pasado. VAV analiza la onda de audio y la energía espectral, eliminando el aire muerto sin cortar tus respiraciones naturales a velocidad de hardware local.'
           : 'Manual silence trimming in video editors is obsolete. VAV inspects audio waveforms and spectral energy, trimming dead pauses while preserving organic speech cadences.'}
       </p>
     </div>
 
-    <!-- Dual Summary & Technical Spec -->
-    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem; margin-bottom: 3.5rem;">
+    <!-- Dual Summary: En 30s + Especificación Algorítmica -->
+    <div id="resumen" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
       
-      <div class="bento-box bento-col-6" style="background: rgba(48, 209, 88, 0.08); border: 1px solid rgba(48, 209, 88, 0.35);">
-        <span class="apple-card-tag emerald">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
-        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">${isEs ? 'El Ritmo Perfecto sin Esfuerzo' : 'Flawless Pacing Without Effort'}</h3>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: #e2e8f0; line-height: 1.5;">
+      <div class="bento-box" style="background: rgba(48, 209, 88, 0.08); border: 1px solid rgba(48, 209, 88, 0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag emerald" style="color: #30d158; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">${isEs ? 'El Ritmo Perfecto sin Esfuerzo' : 'Flawless Pacing Without Effort'}</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #e2e8f0; line-height: 1.55;">
           <li>⏱️ <strong>De 8 Horas a 18 Segundos:</strong> Lo que a un editor humano le toma una jornada, ABRAXAS lo resuelve antes de que tomes un sorbo de café.</li>
           <li>🎙️ <strong>Preservación de Respiración:</strong> Aplica un margen inteligente de 80ms antes y después de cada palabra para que la voz suene fluida y humana.</li>
           <li>💥 <strong>Cero Cortes Abruptos:</strong> Aplica micro-fundidos de audio (crossfades de 5ms) para evitar clicks o chasquidos en los empalmes.</li>
           <li>🔊 <strong>Normalización a -14 LUFS:</strong> Tu audio sale masterizado con compresión multibanda listo para el estándar de TikTok y YouTube.</li>
         </ul>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">BENEFICIO EJECUTIVO</span>
+            <p>Un creador que publica 50 videos al mes ahorra más de 60 horas de edición manual repetitiva, reduciendo los costos de postproducción en un 92%.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="bento-box bento-col-6" style="background: rgba(255, 69, 58, 0.08); border: 1px solid rgba(255, 69, 58, 0.35);">
-        <span class="apple-card-tag ruby">🛠️ EN PROFUNDIDAD // ALGORITMO DE DETECCIÓN</span>
-        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">${isEs ? 'Detección de Umbral y Curva de Energía' : 'Threshold Detection & Energy Envelope'}</h3>
-        <p style="font-size: 0.92rem; color: #cbd5e1; line-height: 1.55; margin-bottom: 12px;">
+      <div class="bento-box" style="background: rgba(255, 69, 58, 0.08); border: 1px solid rgba(255, 69, 58, 0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag ruby" style="color: #ff453a; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">🛠️ EN PROFUNDIDAD // ALGORITMO DE DETECCIÓN</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">${isEs ? 'Detección de Umbral y Curva de Energía' : 'Threshold Detection & Energy Envelope'}</h3>
+        <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 14px;">
           ${isEs 
             ? 'El motor calcula el nivel RMS por ventana de 10ms. Si el nivel cae por debajo de -38 dBFS por más de 120ms, la región se marca como silencio y se remueve con compensación de fase en VideoToolbox.' 
             : 'The engine evaluates RMS levels in 10ms windows. If amplitude falls below -38 dBFS for >120ms, the region is trimmed with phase alignment in VideoToolbox.'}
         </p>
-        <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 11px; color: #ff453a; border: 1px solid rgba(255,255,255,0.1);">
+        <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 12px; color: #ff453a; border: 1px solid rgba(255,255,255,0.1);">
           silenceThreshold: -38dB, minDuration: 120ms, prePadding: 80ms, postPadding: 80ms
+        </div>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">PARÁMETROS DE AUDIO</span>
+            <p>• RMS Smoothing Window: 10ms FFT<br/>• Noise Floor Gate: -45 dBFS<br/>• Attack Time: 12ms / Release Time: 45ms</p>
+          </div>
         </div>
       </div>
 
     </div>
+
+    <!-- 1. SUBSECCIÓN: ALGORITMO RMS -->
+    <section id="algoritmo-rms" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #30d158; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #30d158; font-size: 0.8rem; font-weight: 800;">SUBSECCIÓN 01 // ANÁLISIS ESPECTRAL</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">${isEs ? 'Cómo Funciona el Escaneo RMS de Audio' : 'How the RMS Audio Scan Operates'}</h2>
+        <p style="color: #94a3b8; font-size: 1rem; margin: 0;">Inspección cuadro a cuadro sin pérdida de sincronía labial.</p>
+      </div>
+
+      <div class="spotlight-card col-12" style="background: #090a10; border: 1px solid rgba(48,209,88,0.3); padding: 2rem; position: relative;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <p style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.6;">
+          A diferencia de los editores convencionales que simplemente aplican una puerta de ruido rígida, VAV realiza una transformada rápida de Fourier (FFT) para diferenciar entre una pausa incómoda y un silencio expresivo necesario.
+        </p>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">MÉTRICA DE CORTE</span>
+            <p>La ecuación de corte evalúa la energía promedio en la banda vocal (200Hz - 4kHz). Si la potencia acumulada es inferior al umbral durante más de 3 cuadros consecutivos (100ms a 30fps), el segmento se descarta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SUBSECCIÓN: PRESERVACIÓN DE RESPIRACIONES -->
+    <section id="respiracion" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #38bdf8; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #38bdf8; font-size: 0.8rem; font-weight: 800;">SUBSECCIÓN 02 // FONÉTICA ORGÁNICA</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">${isEs ? 'Preservación de Respiración y Micro-Fades' : 'Breath Retention & Micro-Fades'}</h2>
+        <p style="color: #94a3b8; font-size: 1rem; margin: 0;">Voz humana natural sin el efecto robótico de los cortes de IA baratos.</p>
+      </div>
+
+      <div class="spotlight-card col-12" style="background: #090a10; border: 1px solid rgba(56,189,248,0.3); padding: 2rem; position: relative;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <p style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.6;">
+          El motor añade automáticamente un pre-padding de 80ms antes de la primera consonante y un post-padding de 80ms después de la última vocal, aplicando una rampa de volumen parabólica de 5ms para evitar cualquier artefacto digital.
+        </p>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">CROSSFADE CURVE</span>
+            <p>Función de micro-fundido: $V(t) = \sin^2\left(\frac{\pi t}{2 T}\right)$ para una transición acústica 100% transparente al oído humano.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SUBSECCIÓN: MASTERIZACIÓN -14 LUFS -->
+    <section id="mastering" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #d4af37; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #d4af37; font-size: 0.8rem; font-weight: 800;">SUBSECCIÓN 03 // INGENIERÍA DE SONIDO</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">${isEs ? 'Cadena de Masterización a -14 LUFS' : '-14 LUFS Mastering Chain'}</h2>
+        <p style="color: #94a3b8; font-size: 1rem; margin: 0;">Sonoridad profesional lista para las plataformas más exigentes.</p>
+      </div>
+
+      <div class="spotlight-card col-12" style="background: #090a10; border: 1px solid rgba(212,175,55,0.3); padding: 2rem; position: relative;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <p style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.6;">
+          Tu audio pasa por un ecualizador dinámico de 4 bandas, un de-esser quirúrgico en 6.5kHz y un limitador Brickwall configurado a -1.0 dBTP, garantizando que tu contenido suene potente, nítido y sin distorsión en teléfonos móviles y auriculares.
+        </p>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">CHAIN PRESETS</span>
+            <p>• High-pass: 80Hz (18dB/oct)<br/>• Dynamic Bell: -2.5dB at 350Hz (claridad)<br/>• Air Boost: +1.8dB at 10kHz (presencia)<br/>• Target: -14.0 LUFS Integrated / -1.0 dBTP Peak</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SUBSECCIÓN: ACELERACIÓN APPLE SILICON -->
+    <section id="videotoolbox" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #bf5af2; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #bf5af2; font-size: 0.8rem; font-weight: 800;">SUBSECCIÓN 04 // HARDWARE SOBERANO</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">${isEs ? 'Aceleración Nativa VideoToolbox en Apple Silicon' : 'Native VideoToolbox M-Series Acceleration'}</h2>
+        <p style="color: #94a3b8; font-size: 1rem; margin: 0;">Renders en 18 segundos gracias a los motores multimedia M1/M2/M3/M4.</p>
+      </div>
+
+      <div class="spotlight-card col-12" style="background: #090a10; border: 1px solid rgba(191,90,242,0.3); padding: 2rem; position: relative;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <p style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.6;">
+          Al aprovechar los codificadores de hardware dedicados ProRes y H.264/HEVC de Apple Silicon, el proceso de renderizado no consume la CPU principal, permitiéndote exportar lotes completos de 50 videos en minutos sin que tu Mac se caliente.
+        </p>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">HARDWARE ENGINES</span>
+            <p>• Hardware Encoder: Apple VideoToolbox HEVC/H.264<br/>• Color Space: Rec.709 / sRGB Color Primaries<br/>• Render Pipeline: Remotion + Metal Shaders</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -569,7 +681,7 @@ function generateCutsPage(locale) {
 </html>`;
 
   fs.writeFileSync(path.join(targetDir, 'index.html'), html, 'utf8');
-  console.log(`[DeepDive Suite] Generated /${locale}/tools/vav/cuts/index.html`);
+  console.log(`[DeepDive Suite] Generated enhanced /${locale}/tools/vav/cuts/index.html`);
 }
 
 // 4. GENERATE SHIM REALITY METROLOGY PAGE (/tools/shim/index.html)
