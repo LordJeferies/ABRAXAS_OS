@@ -51,7 +51,7 @@ function getUniversalHeader(locale, activePage, depth = 0) {
       <div class="localnav-right">
         <a href="${switchLangHref}" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${isEs ? 'EN' : 'ES'}</a>
         <button id="btn-open-control-center" class="btn-control-center">
-          <span>⚙️ Menú</span>
+          <span>🌳 Árbol / Menú</span>
         </button>
         <a href="${root}index.html" class="btn-apple-cta">${isEs ? 'Abrir Sistema' : 'Launch OS'}</a>
       </div>
@@ -162,7 +162,8 @@ function getUniversalFooter(locale, depth = 0) {
       <div>
         <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Gobernanza & Documentación' : 'Governance & Docs'}</h4>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-          <li><a href="${langPrefix}flujo/index.html">${isEs ? 'Ciclo de Vida de 6 Fases' : '6-Phase Lifecycle'}</a></li>
+          <li><a href="${langPrefix}mapa-sistema/index.html" style="color: #fef08a; font-weight: 700;">🗺️ ${isEs ? 'Árbol & Mapa Total (Raíces)' : 'Master Tree & Atlas'}</a></li>
+            <li><a href="${langPrefix}flujo/index.html">${isEs ? 'Ciclo de Vida de 6 Fases' : '6-Phase Lifecycle'}</a></li>
           <li><a href="${langPrefix}gerencia/index.html">${isEs ? 'Control de Costos SQLite' : 'SQLite Cost Governance'}</a></li>
           <li><a href="${langPrefix}canon/index.html">${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT Library'}</a></li>
           <li><a href="${langPrefix}backup/index.html">${isEs ? 'Versión Backup de Respaldo' : 'Legacy Backup Snapshot'}</a></li>

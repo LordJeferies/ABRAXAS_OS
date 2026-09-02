@@ -53,7 +53,7 @@ function getHeader(locale, activeTab, depth = 2) {
       <div class="localnav-right">
         <a href="${root}${otherLocale}/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${isEs ? 'EN' : 'ES'}</a>
         <button id="btn-open-control-center" class="btn-control-center">
-          <span>⚙️ Menú</span>
+          <span>🌳 Árbol / Menú</span>
         </button>
         <a href="${root}index.html" class="btn-apple-cta">${isEs ? 'Abrir Sistema' : 'Launch OS'}</a>
       </div>
@@ -107,6 +107,7 @@ function getFooter(locale, depth = 3) {
         <div class="footer-v3-col">
           <h4>${isEs ? 'Gobernanza & Procesos' : 'Governance & Flow'}</h4>
           <ul>
+            <li><a href="${langPrefix}mapa-sistema/index.html" style="color: #fef08a; font-weight: 700;">🗺️ ${isEs ? 'Árbol & Mapa Total (Raíces)' : 'Master Tree & Atlas'}</a></li>
             <li><a href="${langPrefix}flujo/index.html">${isEs ? 'Ciclo de Vida del Contenido' : 'Content Lifecycle Journey'}</a></li>
             <li><a href="${langPrefix}gerencia/index.html">${isEs ? 'Auditoría Gerencial SQLite' : 'SQLite Executive Audit'}</a></li>
             <li><a href="${langPrefix}canon/index.html">${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT Library'}</a></li>

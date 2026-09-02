@@ -106,7 +106,8 @@ function getUniversalFooter(locale, depth = 0) {
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
           <li><a href="${langPrefix}ecosistema/index.html">${isEs ? '⚡ Ecosistema 8-en-1' : '⚡ 8-in-1 Ecosystem'}</a></li>
           <li><a href="${langPrefix}gerencia/index.html">${isEs ? '💼 Control de Costos SQLite' : '💼 SQLite Cost Governance'}</a></li>
-          <li><a href="${langPrefix}flujo/index.html">${isEs ? '🔄 Ciclo de Vida de 6 Fases' : '🔄 6-Phase Lifecycle'}</a></li>
+          <li><a href="${langPrefix}mapa-sistema/index.html" style="color: #fef08a; font-weight: 700;">🗺️ ${isEs ? 'Árbol & Mapa Total (Raíces)' : 'Master Tree & Atlas'}</a></li>
+            <li><a href="${langPrefix}flujo/index.html">${isEs ? '🔄 Ciclo de Vida de 6 Fases' : '🔄 6-Phase Lifecycle'}</a></li>
           <li><a href="${langPrefix}canon/index.html">${isEs ? '📚 Biblioteca Canon 37 TXT' : '📚 Canon 37 TXT Library'}</a></li>
           <li><a href="${langPrefix}backup/index.html">${isEs ? '🏛️ Versión Backup de Respaldo' : '🏛️ Legacy Backup Snapshot'}</a></li>
         </ul>

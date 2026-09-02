@@ -289,15 +289,220 @@
     }
   }
 
-  function initControlCenter() {
-    const openBtn = document.getElementById('btn-open-control-center');
-    const closeBtn = document.getElementById('btn-close-control-center');
+  
+  // ==========================================================================
+  // MASTER HIERARCHICAL TREE MODAL (RAÍCES, SUB-RAÍCES Y SUB-TEMAS)
+  // ==========================================================================
+  function ensureMasterTreeModal() {
+    let modal = document.getElementById('abraxas-master-tree-modal');
+    if (modal) return modal;
 
-    if (openBtn) {
-      openBtn.addEventListener('click', () => {
-        window.appState.isDrawerOpen = true;
+    const isEs = document.documentElement.lang !== 'en';
+    const langPrefix = window.location.pathname.includes('/en/') ? '../../en/' : '../../es/';
+
+    modal = document.createElement('div');
+    modal.id = 'abraxas-master-tree-modal';
+    modal.style.cssText = 'position: fixed; inset: 0; z-index: 10000; background: rgba(0,0,0,0.88); backdrop-filter: blur(25px); display: none; align-items: center; justify-content: center; padding: 20px;';
+    
+    modal.innerHTML = `
+      <div style="background: #0d0d12; border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; width: 100%; max-width: 1080px; max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 30px 100px rgba(0,0,0,0.9); overflow: hidden;">
+        
+        <!-- Modal Header -->
+        <div style="padding: 20px 24px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.02);">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 1.4rem;">🌳</span>
+            <div>
+              <h3 style="color: #fff; font-size: 1.2rem; margin: 0; font-weight: 700;">${isEs ? 'Atlas y Árbol Total del Sistema' : 'Master System Hierarchy & Atlas'}</h3>
+              <p style="color: #94a3b8; font-size: 0.8rem; margin: 2px 0 0 0;">${isEs ? '11 Raíces Maestras • 35 Sub-raíces • Criterios y Enlaces Directos' : '11 Master Roots • 35 Sub-roots • Criteria & Direct Links'}</p>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <a href="${langPrefix}mapa-sistema/index.html" style="background: rgba(212,175,55,0.15); border: 1px solid rgba(212,175,55,0.4); color: #d4af37; padding: 6px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 700; text-decoration: none;">${isEs ? '📖 Ver Página Completa del Mapa' : '📖 View Full Map Page'}</a>
+            <button id="btn-close-tree-modal" style="background: rgba(255,255,255,0.1); border: none; color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center;">✕</button>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div style="padding: 12px 24px; background: rgba(0,0,0,0.5); border-bottom: 1px solid rgba(255,255,255,0.06);">
+          <input type="text" id="tree-search-input" placeholder="${isEs ? '🔍 Buscar por tema, herramienta, ecuación o concepto (ej. carrusel, 18s, facturas, merkle, lunas)...' : '🔍 Search by topic, tool, formula or concept (e.g. carousel, 18s, receipts, merkle, moons)...'}" style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); padding: 10px 16px; border-radius: 10px; color: #fff; font-size: 0.9rem; outline: none;">
+        </div>
+
+        <!-- Tree Body Container -->
+        <div id="tree-modal-body" style="padding: 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 18px;">
+          
+          <!-- Raíz 1 -->
+          <div class="tree-root-item" data-keywords="cosmogonia sol primordial sol negro rayo manifestacion piramide arbol vida ojo 3d lunas">
+            <div style="color: #fef08a; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 01 // ATZILUTH & KETER</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}cosmogonia/index.html" style="color: #fff; text-decoration: none;">☀️ 1. Arquitectura Cósmica, Génesis Solar & 10 Esferas</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}cosmogonia/index.html#genesis" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 1.1 Los Dos Soles y el Eclipse</a>
+              <a href="${langPrefix}cosmogonia/index.html#piramide" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 1.2 Pirámide de Amatista & Oro</a>
+              <a href="${langPrefix}cosmogonia/index.html#ojo-3d" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 1.3 Ojo Digital 3D & 3 Lunas</a>
+            </div>
+          </div>
+
+          <!-- Raíz 2 -->
+          <div class="tree-root-item" data-keywords="yod ganchos hook radar puntos ciegos branding method vectores origen destino 4 campanas">
+            <div style="color: #bf5af2; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 02 // CHOKHMAH & YOD</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}tools/yod/index.html" style="color: #fff; text-decoration: none;">🎯 2. Inteligencia Seminal, Radar de Ganchos & Branding</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}tools/yod/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 2.1 YOD Hook Evaluator (0-100)</a>
+              <a href="${langPrefix}branding-method/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 2.2 Branding Method (4 Vectores)</a>
+              <a href="${langPrefix}abraxas-core-example/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 2.3 Caso Real ABRAXAS Core</a>
+            </div>
+          </div>
+
+          <!-- Raíz 3 -->
+          <div class="tree-root-item" data-keywords="contenido lienzo merkle dag 8 formatos reels carrusel x thread newsletter podcast youtube">
+            <div style="color: #38bdf8; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 03 // BINAH & CONTENIDO</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}tools/contenido/index.html" style="color: #fff; text-decoration: none;">🌳 3. Eje de Continuidad en Merkle-DAG & Ecosistema 8-en-1</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}tools/contenido/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 3.1 Objeto Lienzo (6 Bloques)</a>
+              <a href="${langPrefix}ecosistema/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 3.2 Ramificación a 8 Formatos</a>
+            </div>
+          </div>
+
+          <!-- Raíz 4 -->
+          <div class="tree-root-item" data-keywords="shim metrologia gaps whisper teleprompter live omisiones levenshtein">
+            <div style="color: #bf5af2; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 04 // DA'AT & SHIM</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}tools/shim/index.html" style="color: #fff; text-decoration: none;">🔍 4. Metrología Lúcida en Set (0.00% GAPs con Whisper)</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}tools/shim/index.html#resumen" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 4.1 Live Teleprompter Inteligente</a>
+              <a href="${langPrefix}tools/shim/index.html#ecuacion" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 4.2 Distancia Levenshtein Fonética</a>
+            </div>
+          </div>
+
+          <!-- Raíz 5 -->
+          <div class="tree-root-item" data-keywords="vav cuts autocorte 18s motions 13 familias captions whisper vfx zooms framing multicam carousel tipografia png animacion">
+            <div style="color: #30d158; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 05 // TIFERET & VAV SÍNTESIS</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}tools/vav/cuts/index.html" style="color: #fff; text-decoration: none;">✂️ 5. La Suite Audiovisual VAV (7 Herramientas de Edición)</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}tools/vav/cuts/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 5.1 VAV Cuts (Auto-Corte 18s & Densidad)</a>
+              <a href="${langPrefix}tools/vav/captions/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 5.2 VAV Captions (Subtítulos Cinéticos)</a>
+              <a href="${langPrefix}tools/vav/motions/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 5.3 VAV Motions (13 Familias Remotion)</a>
+              <a href="${langPrefix}tools/vav/vfx/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 5.4 VAV VFX (Zooms & Efectos con Criterio)</a>
+              <a href="${langPrefix}tools/vav/framing/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 5.5 VAV Framing (Multi-Cámara de 1 Toma)</a>
+              <a href="${langPrefix}tools/vav/carousel/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 5.6 VAV Carousel (Tipografía & PNGs)</a>
+            </div>
+          </div>
+
+          <!-- Raíz 6 -->
+          <div class="tree-root-item" data-keywords="he kanban 50 lotes compuertas calidad gerencia sqlite roles equipo">
+            <div style="color: #ff453a; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 06 // GEVURAH & HE</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}tools/he/index.html" style="color: #fff; text-decoration: none;">📋 6. Despacho Kanban de 50 Lotes & Gobernanza HE</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}tools/he/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 6.1 Kanban de 50 Lotes en Mac</a>
+              <a href="${langPrefix}gerencia/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 6.2 Telemetría SQLite & Roles</a>
+            </div>
+          </div>
+
+          <!-- Raíz 7 -->
+          <div class="tree-root-item" data-keywords="luna comercial facturas ocr recibos closers roi ventas whatsapp mercadolibre bucle aprendizaje">
+            <div style="color: #30d158; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 07 // HOD & MALKHUT (3 LUNAS)</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}luna-comercial/index.html" style="color: #fff; text-decoration: none;">🌙 7. Luna Comercial, Escáner OCR de Facturas & ROI Real</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}luna-comercial/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 7.1 Escáner OCR de Facturas</a>
+              <a href="${langPrefix}cosmogonia/index.html#tres-lunas" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 7.2 Bucle Cerrado: S(t+1) = S(t) + A(t)</a>
+            </div>
+          </div>
+
+          <!-- Raíz 8 -->
+          <div class="tree-root-item" data-keywords="catedra formal 165 iq hilbert delta s e maquina estados algebra medios">
+            <div style="color: #38bdf8; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 08 // EPISTEMOLOGÍA & CIENCIA</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}catedra/index.html" style="color: #fff; text-decoration: none;">🏛️ 8. Cátedra Formal 165 IQ (Tratado Epistemológico)</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}catedra/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 8.1 Máquina de Estados delta(s, e)</a>
+              <a href="${langPrefix}catedra/index.html#hilbert" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 8.2 Espacio de Hilbert de Activos</a>
+            </div>
+          </div>
+
+          <!-- Raíz 9 -->
+          <div class="tree-root-item" data-keywords="scrum roadmap 1 semana mvp 1 mes enterprise backlog sprints fases">
+            <div style="color: #d4af37; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 09 // INGENIERÍA ÁGIL</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}scrum/index.html" style="color: #fff; text-decoration: none;">📋 9. Backlog Scrum: 1 Semana (MVP) vs 1 Mes (Enterprise)</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}scrum/index.html#sprint-1-semana" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 9.1 Sprint MVP de 1 Semana</a>
+              <a href="${langPrefix}scrum/index.html#sprint-1-mes" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 9.2 Rollout Enterprise de 1 Mes</a>
+            </div>
+          </div>
+
+          <!-- Raíz 10 -->
+          <div class="tree-root-item" data-keywords="gustos canon direccion arte negro oled 000000 deuda narrativa sf pro botones">
+            <div style="color: #bf5af2; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 10 // DIRECCIÓN DE ARTE</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}gustos-canon/index.html" style="color: #fff; text-decoration: none;">🎨 10. Canon de Gustos Visuales & Deuda Narrativa</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}gustos-canon/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 10.1 Estándar Apple MacBook Pro</a>
+              <a href="${langPrefix}gustos-canon/index.html#deuda-narrativa" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 10.2 Deuda Narrativa & Payoff</a>
+            </div>
+          </div>
+
+          <!-- Raíz 11 -->
+          <div class="tree-root-item" data-keywords="canon 37 txt buscador boveda sha256 prompt maestro mega prompt">
+            <div style="color: #d4af37; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">RAÍZ 11 // MEMORIA CANÓNICA</div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin: 4px 0 8px 0;"><a href="${langPrefix}canon/index.html" style="color: #fff; text-decoration: none;">📚 11. Biblioteca Canon 37 TXT & Prompt Maestro</a></h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px;">
+              <a href="${langPrefix}canon/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 11.1 Buscador Canon 37 TXT</a>
+              <a href="${langPrefix}prompt-maestro/index.html" style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; color: #cbd5e1; text-decoration: none; border: 1px solid rgba(255,255,255,0.06);">↳ 11.2 Mega-Prompt de Ingeniería</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Event listeners
+    const closeBtn = document.getElementById('btn-close-tree-modal');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
       });
     }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+
+    // Real-time search filter
+    const searchInput = document.getElementById('tree-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const items = modal.querySelectorAll('.tree-root-item');
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          const keywords = item.getAttribute('data-keywords') || '';
+          if (!query || text.includes(query) || keywords.includes(query)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    return modal;
+  }
+
+  function initControlCenter() {
+    const openBtns = document.querySelectorAll('#btn-open-control-center, .btn-open-tree-menu');
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modal = ensureMasterTreeModal();
+        modal.style.display = 'flex';
+        const searchInput = document.getElementById('tree-search-input');
+        if (searchInput) {
+          searchInput.value = '';
+          searchInput.focus();
+          const items = modal.querySelectorAll('.tree-root-item');
+          items.forEach(item => item.style.display = 'block');
+        }
+      });
+    });
+  }
 
     if (closeBtn) {
       closeBtn.addEventListener('click', () => {
