@@ -1,0 +1,66 @@
+MANTENER — ESENCIAL / ACTUAL
+============================
+
+     3.5MB  /Users/lordjef/Developer/VAV
+            Protegido: estado actual, referencias o provider/model usado.
+
+     1.1GB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL
+            Protegido: estado actual, referencias o provider/model usado.
+
+   275.5MB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/SHIM_CUTS_R1
+            Protegido: estado actual, referencias o provider/model usado.
+
+   179.0MB  /Users/lordjef/Desktop/abraxasos/vavcaptions/06_REFERENCIAS_SUBTITULOS
+            Protegido: estado actual, referencias o provider/model usado.
+
+     3.3MB  /Users/lordjef/Desktop/abraxasos/vavcaptions/07_REFERENCIAS_UI
+            Protegido: estado actual, referencias o provider/model usado.
+
+    25.8KB  /Users/lordjef/Desktop/abraxasos/vavmotions/00_MOTION_SYSTEM_REFERENCE_V1
+            Protegido: estado actual, referencias o provider/model usado.
+
+   927.6MB  /Users/lordjef/Desktop/ABRAXAS_V3_1_EXECUTABLE_AUTOMATION
+            Protegido: estado actual, referencias o provider/model usado.
+
+     4.4GB  /Users/lordjef/Desktop/Moka_Terminal_Cortes_48_FrameMatched_FINAL/Modelos_MLX
+            Protegido: estado actual, referencias o provider/model usado.
+
+     9.0MB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/CHAT_PRO_UPLOADS/VAV_CAPTIONS_CHAT_PRO_CORE_V14_20260828_123844.zip
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+     9.0MB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/CHAT_PRO_UPLOADS/VAV_CAPTIONS_CHAT_PRO_CORE_V14_20260828_131635.zip
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+    75.3MB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/CHAT_PRO_UPLOADS/VAV_ECOSYSTEM_CHAT_PRO_CORE_V14_20260828_123902.zip
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+     2.9MB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/CHAT_PRO_UPLOADS/VAV_ECOSYSTEM_CHAT_PRO_CORE_V14_20260828_131637/01_LIVE_REPO/VAV_LIVE_REPO_HANDOFF_V14_20260828_131633.zip
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+    75.3MB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/CHAT_PRO_UPLOADS/VAV_ECOSYSTEM_CHAT_PRO_CORE_V14_20260828_131637.zip
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+    63.5MB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/CHAT_PRO_UPLOADS/VAV_MOTIONS_CHAT_PRO_CORE_V14_20260828_123844.zip
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+    63.5MB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/CHAT_PRO_UPLOADS/VAV_MOTIONS_CHAT_PRO_CORE_V14_20260828_131635.zip
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+     2.9MB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/LIVE_HANDOFFS/VAV_LIVE_REPO_HANDOFF_V14_20260828_131633.zip
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+     1.5KB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/REPORTS/VERIFY_CONTINUITY_20260828_123904.txt
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+     1.5KB  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/REPORTS/VERIFY_CONTINUITY_20260828_131639.txt
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+    11.5KB  /Users/lordjef/Desktop/abraxasos/vavcaptions/03_REPORTES_Y_VERIFICACION/VAV_V12_1_VERIFY_20260828_131604.txt
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+     2.9MB  /Users/lordjef/Desktop/abraxasos/vavcaptions/para continuar o subir en otro chat/VAVCAPTIONS_CONTINUE_CORE_V12_20260828_125649.zip
+            Se conserva: una de las 2 versiones más recientes de su familia.
+
+    35.1MB  /Users/lordjef/Desktop/abraxasos/vavcaptions/para continuar o subir en otro chat/VAV_ECOSYSTEM_REFERENCES_V12_20260828_125649.zip
+            Se conserva: una de las 2 versiones más recientes de su familia.
+

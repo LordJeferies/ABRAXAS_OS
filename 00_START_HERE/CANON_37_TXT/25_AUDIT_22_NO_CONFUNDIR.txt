@@ -1,0 +1,18 @@
+VAV — NO CONFUNDIR
+==================
+
+1. V14 = generación de continuidad; no necesariamente versión de aplicación.
+2. V12.1 GREEN = evidencia verificada de un milestone de Captions.
+3. Repo vivo ~/Developer/VAV manda para saber qué código existe HOY.
+4. Documento/roadmap/ZIP de referencia NO demuestra implementación.
+5. Script de instalación de provider NO demuestra provider instalado.
+6. Provider instalado NO demuestra integración con Job Engine.
+7. Whisper != diarización.
+8. SemanticCaption != VisualSegment != Scene.
+9. Style != Structure != Placement != Motion.
+10. Motion Context != Caption Motion.
+11. Source visual overlay != VAV caption.
+12. Apple Vision != reconstrucción 3D completa.
+13. SAM2/Cutie deben diferenciar instalación, adapter e integración runtime.
+14. Preview Remotion y export final deben probar paridad visual real.
+15. Nunca declarar PASS visual sin fixture/render/evidencia.

@@ -1,0 +1,12 @@
+PROTECTED / CANON ROOTS
+========================================================================
+
+FOUND    /Users/lordjef/Developer/VAV
+FOUND    /Users/lordjef/Library/Application Support/VAV
+FOUND    /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL
+FOUND    /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/SHIM_CUTS_R1
+FOUND    /Users/lordjef/Desktop/abraxasos/vavcaptions/03_REPORTES_Y_VERIFICACION
+FOUND    /Users/lordjef/Desktop/abraxasos/vavcaptions/09_EVIDENCIA_EXPORTS
+FOUND    /Users/lordjef/Desktop/abraxasos/vavcaptions/06_REFERENCIAS_SUBTITULOS
+FOUND    /Users/lordjef/Desktop/abraxasos/vavcaptions/07_REFERENCIAS_UI
+FOUND    /Users/lordjef/Desktop/abraxasos/vavmotions/00_MOTION_SYSTEM_REFERENCE_V1

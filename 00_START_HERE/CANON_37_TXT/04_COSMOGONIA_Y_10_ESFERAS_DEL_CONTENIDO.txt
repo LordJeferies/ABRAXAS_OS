@@ -1,0 +1,73 @@
+================================================================================
+ABRAXAS OS — COSMOGONÍA SOLAR Y LAS 10 ESFERAS DEL CICLO DE VIDA DEL CONTENIDO
+================================================================================
+
+I. EL PROCESO COSMOGÓNICO DE CREACIÓN (LA ÉPICA VISUAL Y ARQUITECTÓNICA):
+
+1. EL SOL PRIMORDIAL Y EL SOL NEGRO:
+En el vacío primordial, un Sol de Luz Pura se crea de la nada representando la Voluntad Absoluta (Keter / Atziluth). Para evitar que la energía se disperse caóticamente, un Sol Negro gravitacional se superpone sobre él, generando un Eclipse de Concentración Focal que condensa la luz infinita en un punto ultra-denso (Chokhmah / YOD).
+
+2. EL RAYO DE MANIFESTACIÓN Y LA CAÍDA EN LA TIERRA:
+Del vórtice del eclipse se dispara un Rayo de Manifestación hacia la Tierra, portando la Gran Pirámide Dorada. Al impactar en el suelo terrestre, brotan del subsuelo cristales geológicos masivos que elevan la pirámide hacia lo alto de la atmósfera.
+
+3. LA GEODA DE AMATISTA Y LA CÚSPIDE DE ORO MACIZO:
+Los cristales que elevan la estructura se cubren de roca protectora y se transforman en una geoda translúcida de amatista púrpura imperial. La cima queda rematada en oro macizo puro: la morada del motor YOD (Inteligencia Seminal de Nicho).
+
+4. EL ÁRBOL DE LA VIDA (LAS 10 SEPHIROTH):
+En la base de la pirámide cristalina, las formaciones geométricas se organizan exactamente como el Árbol de la Vida. Las 10 Sephiroth y sus 22 conexiones sirven como canales físicos de datos por donde viaja el contenido.
+
+5. EL AGUJERO NEGRO Y EL OJO DIGITAL 3D DE ARQUITECTO:
+En la punta de oro se abre un micro agujero negro que absorbe luz circundante. Esta luz se reorganiza en un Ojo Digital 3D suspendido dentro de nubes volumétricas 3D. El Ojo canaliza la energía de los dos soles y desprende tres cristales hacia la estratosfera, dando origen a las Tres Lunas Orbitales.
+
+6. LAS TRES LUNAS ORBITALES Y EL BUCLE CERRADO DE APRENDIZAJE:
+- Luna 1 (El Publicador): Despacho a 8 plataformas.
+- Luna 2 (Analizador de Retención): Ingesta watch-time y drop-offs segundo a segundo.
+- Luna 3 (Luna Comercial & Gerencia de Equipo): Facturas OCR, Ventas WhatsApp/ML, Closers y ROI.
+Las tres lunas disparan sus rayos a la Tierra. La Tierra devuelve esa energía en compras y retención hacia la Pirámide y el Ojo: S(t+1) = S(t) + A(t).
+
+--------------------------------------------------------------------------------
+II. LAS 10 ESFERAS DEL CICLO DE VIDA DEL CONTENIDO (DE LA IDEA AL DINERO REAL):
+--------------------------------------------------------------------------------
+
+ESFERA 01: KETER // LA CORONA (VOLUNTAD PURA DE MARCA)
+- Herramienta: YOD Brand Core & Axiom Vault.
+- Función: Ingesta de la voz de marca, tesis inmutables y pilares de autoridad.
+- Estado: PLANNED (Intención Seminal).
+
+ESFERA 02: CHOKHMAH // SABIDURÍA (RADAR DIALÉCTICO DE GANCHOS)
+- Herramienta: YOD Niche Opportunity Engine.
+- Función: Escanea puntos ciegos del mercado y califica ganchos de 0 a 100.
+- Regla: Si el Hook Score < 85/100, la idea se devuelve para reformulación.
+
+ESFERA 03: BINAH // ENTENDIMIENTO (ESTRUCTURA Y ARQUITECTURA DE FORMATOS)
+- Herramienta: LIENZO Eje de Continuidad (Merkle-DAG).
+- Función: Transforma la tesis en una estructura de 4 tiempos (Hook, Tesis, Mecanismo, Payoff) lista para ramificarse.
+
+ESFERA 04: DA'AT // CONOCIMIENTO Y UMBRAL DE LA VERDAD (METROLOGÍA LÚCIDA)
+- Herramienta: SHIM Reality Metrology Gate.
+- Función: Audita el audio grabado en el set con Whisper Large V3.
+- Regla: Cero tolerancia a errores (0.00% GAPs). Si el audio se desvía del guion, se bloquea el avance.
+
+ESFERA 05: CHESED // EXPANSIÓN Y GENEROSIDAD (RAMIFICACIÓN 1➔8)
+- Herramienta: CONTENIDO Format Synthesizer.
+- Función: De la semilla validada nacen 8 formatos vivos: Reels 9:16, Carruseles 4:5, Hilos X, Newsletters, Podcasts, YouTube 16:9, Infografías y Artículos.
+
+ESFERA 06: GEVURAH // RIGOR Y RESTRICCIÓN (GOBERNANZA DE 50 LOTES)
+- Herramienta: HE Operations Desk (macOS Native).
+- Función: 6 compuertas de calidad inmutables: Safe Zones, directivas 'no_sfx', contraste WCAG AAA, tono de marca.
+
+ESFERA 07: TIFERET // BELLEZA Y ARMONÍA (LA CATEDRAL DE SÍNTESIS)
+- Herramienta: VAV Audio-Visual Engine & Remotion.
+- Función: Auto-corte en 18s con análisis RMS a -38 dBFS, subtítulos cinéticos Whisper, 13 familias de motion y masterización a -14 LUFS.
+
+ESFERA 08: NETZACH // VICTORIA E IMPACTO (DESPACHO MULTICANAL)
+- Herramienta: LUNA 1 (El Publicador).
+- Función: Empaqueta y despacha los activos con metadatos optimizados hacia las 8 plataformas sociales.
+
+ESFERA 09: HOD // RESONANCIA Y TELEMETRÍA (ANÁLISIS DE RETENCIÓN)
+- Herramienta: LUNA 2 (Analizador de Estadísticas Creativas).
+- Función: Mide porcentaje de visualización, puntos de abandono y re-alimenta a YOD para optimizar los ganchos del siguiente lote.
+
+ESFERA 10: MALKHUT // REINO Y MANIFESTACIÓN FÍSICA (COMERCIO & GERENCIA)
+- Herramienta: LUNA 3 (La Luna Comercial & Gerencia de Equipo en HE).
+- Función: Ingesta de facturas por foto/OCR, atribución de ventas en WhatsApp/MercadoLibre por contentId, comisiones de closers, cálculo de ROI y gobernanza del equipo.

@@ -1,0 +1,29 @@
+VAV CONFLICTS / GAPS
+========================================================================
+
+- SHARED / provider_registry: documentation/reference exists but live implementation was not proven.
+- SHARED / provider_registry: verify-like evidence exists but live code evidence was not found.
+- SHARED / visual_ownership: documentation/reference exists but live implementation was not proven.
+- VAVCAPTIONS / native_media_import: documentation/reference exists but live implementation was not proven.
+- VAVCAPTIONS / native_media_import: verify-like evidence exists but live code evidence was not found.
+- VAVCAPTIONS / qvr_v3_1: documentation/reference exists but live implementation was not proven.
+- VAVCAPTIONS / qvr_v3_1: verify-like evidence exists but live code evidence was not found.
+- VAVCAPTIONS / optical_flow: documentation/reference exists but live implementation was not proven.
+- VAVCAPTIONS / optical_flow: verify-like evidence exists but live code evidence was not found.
+- VAVCAPTIONS / depth_provider: documentation/reference exists but live implementation was not proven.
+- VAVCAPTIONS / depth_provider: verify-like evidence exists but live code evidence was not found.
+- VAVCAPTIONS / speaker_diarization: documentation/reference exists but live implementation was not proven.
+- VAVCAPTIONS / speaker_diarization: verify-like evidence exists but live code evidence was not found.
+- VAVMOTIONS / spatial_camera_grammar: documentation/reference exists but live implementation was not proven.
+- VAVMOTIONS / motion_primitives: documentation/reference exists but live implementation was not proven.
+- VAVMOTIONS / motion_primitives: verify-like evidence exists but live code evidence was not found.
+- VAVMOTIONS / motion_ai_roundtrip: documentation/reference exists but live implementation was not proven.
+- VAVCUTS / cuts_foundation: documentation/reference exists but live implementation was not proven.
+- VAVCUTS / cuts_foundation: verify-like evidence exists but live code evidence was not found.
+- VAVCUTS / cut_scene_analysis: documentation/reference exists but live implementation was not proven.
+- VAVCUTS / cut_scene_analysis: verify-like evidence exists but live code evidence was not found.
+- VAVSHIM / shim_foundation: documentation/reference exists but live implementation was not proven.
+- VAVSHIM / shim_reference_r1: documentation/reference exists but live implementation was not proven.
+- VAVSHIM / shim_interchange: documentation/reference exists but live implementation was not proven.
+
+A static audit cannot promote a feature to runtime GREEN by itself.

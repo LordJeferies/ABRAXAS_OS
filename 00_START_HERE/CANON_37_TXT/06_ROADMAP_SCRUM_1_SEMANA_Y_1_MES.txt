@@ -1,0 +1,64 @@
+================================================================================
+ABRAXAS OS — PLAN MAESTRO DE INGENIERÍA SCRUM (1 SEMANA MVP + 1 MES ENTERPRISE)
+================================================================================
+
+I. PLAN DE 1 SEMANA: SPRINT ULTRARRÁPIDO (MVP TOTALMENTE FUNCIONAL EN MAC)
+
+DÍA 1: CIMIENTOS DE DATOS Y CONTRATOS TYPESCRIPT
+- Tarea 1.1: Congelar esquemas TypeScript de ClientCore, Lienzo (6 bloques) y Merkle-DAG.
+- Tarea 1.2: Inicializar Content Addressable Storage (CAS) con firma SHA-256 en almacenamiento local.
+- Criterio de Aceptación: Suite de tests de tipos pasa sin errores (`tsc --noEmit`).
+
+DÍA 2: MOTOR YOD Y RADAR DE GANCHOS (0-100)
+- Tarea 2.1: Implementar evaluador de tensión dialéctica y cálculo de Hook Score (0-100).
+- Tarea 2.2: Generación automática de las 3 variantes de apertura por nicho.
+- Criterio de Aceptación: Prompt Compiler devuelve 8 formatos derivados sincronizados ante una semilla.
+
+DÍA 3: METROLOGÍA SHIM (WHISPER LOCAL A 0.00% GAPs)
+- Tarea 3.1: Conectar Whisper Large V3 a través de binario nativo optimizado para Apple Silicon.
+- Tarea 3.2: Implementar comparador de distancia Levenshtein normalizada con umbral de 0.00% GAPs.
+- Criterio de Aceptación: Detección precisa de palabras omitidas con timecode exacto en menos de 50ms.
+
+DÍA 4: MOTOR VAV DE AUTO-CORTE EN 18S Y SUBTÍTULOS
+- Tarea 4.1: Algoritmo de detección de silencios RMS (-38 dBFS, 120ms) con márgenes de respiración de 80ms.
+- Tarea 4.2: Compilador de subtítulos cinéticos palabra por palabra en Remotion con los 4 estilos.
+- Criterio de Aceptación: Video de 60s se auto-edita y renderiza en menos de 18s en un Mac M-Series.
+
+DÍA 5: LAS 13 FAMILIAS DE MOTION OFICIALES
+- Tarea 5.1: Integrar `@vav/visual-motion-domain` y compilar las 13 ecuaciones de física de resortes.
+- Tarea 5.2: Verificación de Safe Zones de subtítulos para evitar solapamientos visuales.
+- Criterio de Aceptación: Renders a 60 FPS estables sin caída de cuadros.
+
+DÍA 6: LA LUNA COMERCIAL, OCR DE FACTURAS Y CLOSERS
+- Tarea 6.1: Escáner OCR de comprobantes (WhatsApp, MercadoLibre, PDF, POS) y extracción automática de datos.
+- Tarea 6.2: Libro contable con cálculo de ROI de campaña y rendimiento de vendedores.
+- Criterio de Aceptación: Ingesta de ticket en 1 clic actualiza el libro de ventas y ROI al instante.
+
+DÍA 7: VENTANA OPERATIVA HE EN MACOS Y PRUEBA DE FUEGO
+- Tarea 7.1: Ensamblaje del tablero Kanban de 50 lotes en ventana nativa macOS con persistencia SQLite.
+- Tarea 7.2: Ejecución de un lote completo de 50 activos de prueba de punta a punta.
+- Criterio de Aceptación: 50 activos aprobados y exportados en menos de 4 horas de trabajo.
+
+--------------------------------------------------------------------------------
+II. PLAN DE 1 MES: ROLLOUT ENTERPRISE Y SOBERANÍA TOTAL EN APPLE SILICON
+--------------------------------------------------------------------------------
+
+SEMANA 1 (ARQUITECTURA DETERMINISTA & MÓDULOS BASE):
+- Consolidación del núcleo de 13 herramientas desacopladas.
+- Base de datos relacional SQLite 'metrics.db' con índices de telemetría comercial.
+- Bóveda de 37 dossiers canónicos sellados criptográficamente.
+
+SEMANA 2 (MOTOR DE SÍNTESIS VAV & METROLOGÍA SHIM PRO):
+- Optimización de Remotion con aceleración por hardware Apple VideoToolbox (ProRes / HEVC).
+- De-Esser quirúrgico en 6.5kHz y limitador Brickwall para masterización a -14 LUFS.
+- Soporte para los 8 shaders procedurales experimentales bajo el enum `LegacyMotionFamilyId`.
+
+SEMANA 3 (ARQUITECTO TOTAL PRODUCTION COACH & LAS 3 LUNAS):
+- Despliegue del motor de sugerencias contextuales (Editing Coach, VFX, SFX no_sfx, Music ducking).
+- Bucle de aprendizaje continuo: re-alimentación de curvas de retención a YOD.
+- Panel completo de gestión de asesores comerciales (Closers) con cálculo de comisiones.
+
+SEMANA 4 (EMPAQUETADO NATIVO, QA & CERTIFICACIÓN RELEASE):
+- Empaquetado en instalador DMG firmado para macOS Tahoe / Sequoia.
+- Pruebas de estrés: renderizado de 200 videos continuos sin fuga de memoria en Apple Silicon.
+- Documentación completa y congelamiento de la versión v3.3 Pro Certified.

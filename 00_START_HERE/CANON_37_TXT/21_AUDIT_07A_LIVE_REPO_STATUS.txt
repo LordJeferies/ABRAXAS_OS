@@ -1,0 +1,19 @@
+REPO=/Users/lordjef/Developer/VAV
+
+[git_root] exit=128
+fatal: not a git repository (or any of the parent directories): .git
+
+[git_branch] exit=128
+fatal: not a git repository (or any of the parent directories): .git
+
+[git_head] exit=128
+fatal: not a git repository (or any of the parent directories): .git
+
+[git_short_head] exit=128
+fatal: not a git repository (or any of the parent directories): .git
+
+[git_status] exit=128
+fatal: not a git repository (or any of the parent directories): .git
+
+[git_log_12] exit=128
+fatal: not a git repository (or any of the parent directories): .git

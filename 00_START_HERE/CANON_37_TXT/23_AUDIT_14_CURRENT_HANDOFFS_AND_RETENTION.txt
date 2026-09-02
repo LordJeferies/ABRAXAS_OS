@@ -1,0 +1,15 @@
+CURRENT V14 HANDOFFS / CHAT PACKS
+========================================================================
+
+latest_live_repo_handoff
+  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/LIVE_HANDOFFS/VAV_LIVE_REPO_HANDOFF_V14_20260828_132827.zip
+
+latest_captions_chat_pack
+  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/CHAT_PRO_UPLOADS/VAV_CAPTIONS_CHAT_PRO_CORE_V14_20260828_131635.zip
+
+latest_motions_chat_pack
+  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/CHAT_PRO_UPLOADS/VAV_MOTIONS_CHAT_PRO_CORE_V14_20260828_131635.zip
+
+latest_ecosystem_chat_pack
+  /Users/lordjef/Desktop/abraxasos/VAV_CONTINUITY_HUB/V14_UNIVERSAL/CHAT_PRO_UPLOADS/VAV_ECOSYSTEM_CHAT_PRO_CORE_V14_20260828_131637.zip
+

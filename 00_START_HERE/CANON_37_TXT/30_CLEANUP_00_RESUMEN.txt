@@ -1,0 +1,32 @@
+VAV STORAGE CLEANUP AUDIT
+=========================
+Fecha: 2026-08-28T13:23:52
+
+ESTADO DETECTADO
+V12.1 GREEN: YES
+V14 Continuity GREEN: YES
+VAVMotions Reference instalado: YES
+Shim/Cuts R1 instalado: YES
+
+RESULTADO
+Candidatos de alta confianza para enviar a Papelera: 2519
+Espacio potencial aproximado: 2.0GB
+Elementos de revisión manual: 300
+
+POLÍTICA DE SEGURIDAD
+- Este auditor NO borró ni movió ningún archivo.
+- Nunca marca automáticamente para borrar ~/Developer/VAV.
+- Nunca marca automáticamente referencias de subtítulos/UI.
+- Conserva las 2 versiones más recientes de handoffs/packs/reports conocidos.
+- Archivos personales/no reconocidos solo aparecen en REVISAR.
+- Se generó 08_MOVER_CANDIDATOS_A_PAPELERA.command, pero requiere escribir BORRAR.
+
+ARCHIVOS CLAVE DEL REPORTE
+01_MANTENER_ESENCIAL.txt
+02_CANDIDATOS_BORRAR_SEGURO.txt
+03_REVISAR_MANUALMENTE.txt
+04_DUPLICADOS_EXACTOS.txt
+05_MAYORES_ITEMS_DESKTOP_DOWNLOADS.txt
+06_ULTIMAS_VERSIONES_POR_FAMILIA.txt
+07_INVENTARIO_VAV.tsv
+08_MOVER_CANDIDATOS_A_PAPELERA.command

@@ -1,0 +1,68 @@
+================================================================================
+ABRAXAS OS — CANON MAESTRO DE CRITERIOS, DIRECCIÓN DE ARTE Y LEYES EDITORIALES
+================================================================================
+
+1. TESIS CENTRAL INMUTABLE:
+«ABRAXAS convierte criterio en infraestructura.»
+La IA no es el sistema: es un proveedor intercambiable y utilitario. Lo que hace único a ABRAXAS es que codifica las leyes del criterio humano de alto nivel (ritmo, verdad, dialéctica, deuda narrativa, metrología y retorno comercial) en reglas deterministas de software para Apple Silicon.
+
+2. PALETA OFICIAL DE COLORES APPLE MACBOOK PRO 2026:
+- Negro Puro OLED (Background): #000000
+- Space Black Chassis Tier 1: #0b0b0f
+- Space Black Chassis Tier 2: #161617
+- Space Black Chassis Tier 3: #1d1d1f
+- Space Black Borders / Dividers: #2d2d2f (rgba(255, 255, 255, 0.12))
+- Apple Focus Blue: #0071e3 / #2997ff
+- Saffron Spark / Oro Alquímico: #d4af37 (rgba(212, 175, 55, 1))
+- Electric Iris / Púrpura Imperial: #8052ff / #bf5af2
+- Emerald Success / Ventas: #30d158
+- Ruby Alert / Error Gate: #ff453a
+- Tipografía Principal: SF Pro Display, SF Pro Text (-apple-system, BlinkMacSystemFont)
+- Tipografía de Código / Telemetría: SF Mono, JetBrains Mono
+
+3. LOS 31 PRINCIPIOS DE ARQUITECTURA Y DISEÑO WEB:
+01. GSAP Timelines y ScrollTrigger con curvas cinematográficas power4.out.
+02. Arquitectura Data-Driven: 'window.siteConfig' desacoplando datos de plantillas.
+03. Optimización CRO & Ganchos de Retención: Lectura en Z y F con deuda narrativa.
+04. Prevención Estricta de CLS: Contenedores con aspect-ratio fijo (16:9, 4:5, 1:1) y loading='lazy'.
+05. Gestión de Estado Reactiva con JS Proxy ('window.appState').
+06. Smooth Scroll nativo con inercia física.
+07. Intersection Observer API para activación perezosa de canvas y videos.
+08. Elementos 3D y shaders WebGL en tiempo real a 60 FPS.
+09. Preloader Cinematográfico 0-100% con glyph reveal ▲.
+10. Componentes modulares desacoplados (CSS BEM / Tokens Apple).
+11. Bóveda CAS inmutable sellada con SHA-256.
+12. Metrología fonética con Whisper Large V3 a 0.00% GAPs.
+13. Auto-edición en 18 segundos con análisis RMS a -38 dBFS y márgenes de 80ms.
+14. Masterización de audio a -14 LUFS con limitador Brickwall a -1.0 dBTP.
+15. 13 familias de motion en Remotion con física de resortes elásticos.
+16. Subtítulos cinéticos palabra por palabra sincronizados por microsegundos.
+17. Textura táctil de grano fílmico del 3% (Dynamic 35mm Film Grain SVG/Canvas).
+18. Eje de Continuidad en Merkle-DAG (1 semilla -> 8 formatos sincronizados).
+19. Tablero Kanban de 50 lotes en macOS (HE) gobernado por 6 compuertas de calidad.
+20. Telemetría de retención creativa segundo a segundo (Luna 2).
+21. Luna Comercial (Luna 3) con ingesta OCR por foto de facturas y ROI real.
+22. Gestión y telemetría de asesores de venta (Closers) dentro de HE.
+23. Efecto Linterna (Mouse Spotlight): Tracking de --mouse-x y --mouse-y en tarjetas.
+24. Botones interactivos de expansión '+' en la esquina de cada cuadro informativo.
+25. Canvas Particle Brain: Red neuronal con partículas en silueta de Chevron ▲.
+26. Navegación SPA con Localnav de 52px y Control Center Drawer.
+27. Menús de Salto Rápido Internos (Sticky TOC) para acceso instantáneo por sección.
+28. Storytelling Sticky Layout estilo Apple MacBook Pro.
+29. Cátedra formal 165 IQ con máquina de estados finitos y álgebra de Hilbert.
+30. Widget flotante de Arquitecto (Live Activity) con botón para copiar prompts de IA.
+31. UI macOS 27" sobre Negro Puro #000000 sin cliches de IA ni degradados baratos.
+
+4. LEYES EDITORIALES DE RESPUESTA DIRECTA:
+- Ley 1: Tema != Idea. ("Productividad" es un tema hueco; una idea es una afirmación dialéctica comprobable).
+- Ley 2: Deuda Narrativa Obligatoria. El gancho promete una revelación de alto valor que el cuerpo y cierre pagan exactamente (Payoff).
+- Ley 3: Prohibición de AI-Slop. Cero frases como "en el vertiginoso mundo actual" o "desata tu potencial". Solo hechos, mecanismos y números.
+- Ley 4: Total Production Coach. Directiva 'no_sfx_needed' si no hay justificación narrativa. Música con side-chain ducking a -18dB.
+
+5. ANATOMÍA DEL OBJETO LIENZO (6 BLOQUES INMUTABLES):
+1. metadata_block: contentId, clientCoreId, author, createdAt, sha256_hash.
+2. thesis_intent_block: central_thesis, dialectic_hooks[3] (0-100), category_expansion.
+3. observed_audio_block: raw_wav_hash, whisper_tokens[], gap_score_0_00.
+4. derivatives_block: reel_9x16, carousel_4x5, thread_x, newsletter, podcast, youtube_16x9.
+5. coach_audit_block: editing_cuts[], vfx_plan, sfx_triggers, music_bpm.
+6. commerce_telemetry: units_sold, revenue_usd, closer_id, campaign_roi.

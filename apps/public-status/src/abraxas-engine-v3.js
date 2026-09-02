@@ -599,7 +599,7 @@
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.card-expand-btn');
   if (btn) {
-    const card = btn.closest('.spotlight-card, .highlight-card, .bento-card');
+    const card = btn.closest('.spotlight-card, .highlight-card, .bento-card, .bento-box, [style*="position: relative"], details');
     if (card) {
       const drawer = card.querySelector('.card-deepdive-drawer');
       if (drawer) {

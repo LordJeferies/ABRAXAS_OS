@@ -1,0 +1,46 @@
+================================================================================
+ABRAXAS OS — LAS 3 LUNAS DE TELEMETRÍA Y GERENCIA INTEGRAL DE EQUIPO EN HE
+================================================================================
+
+1. ARQUITECTURA DE LAS 3 LUNAS:
+
+🌙 LUNA 1: EL PUBLICADOR (DISTRIBUCIÓN)
+- Responsabilidad: Despacho automatizado de los 8 formatos vivos.
+- Adaptadores: TikTok Graph, Instagram Graph API, YouTube Data API v3, X/Twitter API v2, Substack Markdown API, Spotify for Podcasters.
+- Integración en HE: Vista de programación y estado de despacho de los 50 activos del lote.
+
+🌙 LUNA 2: ANALIZADOR DE ESTADÍSTICAS CREATIVAS (RETENCIÓN)
+- Responsabilidad: Auditoría segundo a segundo de la atención de la audiencia.
+- Métricas: Average Percentage Viewed (APV), Drop-off en el segundo 3 (Hook test), Tasa de repetición y guardados.
+- Bucle a YOD: S(t+1) = S(t) + A(t). Las estructuras que pierden audiencia se penalizan en el Prompt Compiler.
+
+🌙 LUNA 3: LA LUNA COMERCIAL & GERENCIA DE EQUIPO (INGRESOS & CLOSERS)
+- Responsabilidad: Atribución de dinero real, ingesta OCR de facturas, control de vendedores y cálculo de ROI de campaña.
+- Sub-Herramienta 1 (Escáner OCR de Facturas): Toma una foto o sube un PDF de recibo de WhatsApp, MercadoLibre, Shopify o ticket POS. La IA extrae automáticamente: Monto, Fecha, SKU, Nombre de Comprador y Canal.
+- Sub-Herramienta 2 (Libro Contable por contentId): Cada video, carrusel o hilo mantiene un registro vivo de unidades vendidas y facturación en USD.
+- Sub-Herramienta 3 (Gestión de Closers / Vendedores): Panel de control que mide el ratio de cierre y facturación del equipo de ventas asignado a los leads de contenido.
+- Sub-Herramienta 4 (Cálculo de ROI Matemático):
+  ROI = ((Ingresos Atribuidos - (Costo Producción + Pauta)) / (Costo Producción + Pauta)) * 100%
+
+--------------------------------------------------------------------------------
+2. CÓMO SE GOBIERNAN LAS 3 LUNAS DESDE LA VENTANA HE (ה):
+--------------------------------------------------------------------------------
+
+Dentro de la ventana operativa nativa de macOS de HE, el director de marketing o CEO accede a 4 vistas sincronizadas:
+
+1. VISTA TABLERO KANBAN DE 50 LOTES:
+   - Columnas: Semillas YOD -> Guiones en Lienzo -> Grabación SHIM -> Render VAV -> Publicación Luna 1 -> Telemetría Luna 2 y 3.
+
+2. VISTA GERENCIA DE EQUIPO Y ROLES:
+   - Asignación de permisos por rol:
+     * Operador Maestro (Aprobación final de lotes).
+     * Creador / Grabador (Acceso a teleprompter SHIM).
+     * Asesor Comercial / Closer (Ingesta de facturas y seguimiento de leads de WhatsApp/ML).
+     * Auditor de Calidad (Supervisión de compuertas).
+
+3. VISTA LIBRO DE VENTAS Y ATRIBUCIÓN:
+   - Tabla interactiva con filtros por campaña, producto, vendedor y canal.
+   - Gráfico de evolución temporal del ROI acumulativo.
+
+4. VISTA TELEMETRÍA SQLITE LOCAL:
+   - Base de datos relacional 'metrics.db' con persistencia offline, garantizando privacidad total y soberanía de datos sin depender de servidores en la nube.

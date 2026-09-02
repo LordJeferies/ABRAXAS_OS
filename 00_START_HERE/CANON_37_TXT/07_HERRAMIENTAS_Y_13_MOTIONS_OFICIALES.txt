@@ -1,0 +1,58 @@
+================================================================================
+ABRAXAS OS — LAS 15 HERRAMIENTAS, 13 MOTIONS, VAV VFX Y VAV FRAMING
+================================================================================
+
+1. INVENTARIO DE LAS 15 HERRAMIENTAS COMPLETAS:
+01. YOD (י) — Inteligencia de Nicho, Brand Core y Radar de Ganchos (0-100).
+02. LIENZO — Objeto vivo inmutable en Merkle-DAG a lo largo de 6 estados.
+03. CONTENIDO — Ramificación sincronizada en 8 formatos derivados.
+04. SHIM (ש) — Metrología Lúcida y auditoría fonética en set (0.00% GAPs).
+05. VAV CUTS (ו) — Auto-edición en 18s con selector de densidad de cortes (Cinematic / Dynamic / Hyper-Retention).
+06. VAV CAPTIONS — Subtítulos cinéticos Whisper con 4 estilos y safe zones.
+07. VAV MOTIONS — 13 familias de motion compuestas con física de resortes.
+08. VAV VFX — Motor de efectos ópticos, zooms dinámicos, mapa de profundidad y halation.
+09. VAV FRAMING — Multi-cámara dinámica desde 1 sola toma (Básicos y Experimentales).
+10. VAV MASTERING — Normalización acústica a -14 LUFS con de-esser en 6.5kHz.
+11. HE (ה) — Ventana operativa y tablero Kanban de 50 lotes en macOS.
+12. ARQUITECTO — Coach, Asistente, Guía 4D y Total Production Coach.
+13. LUNA 1 (PUBLICADOR) — Despacho y adaptadores a 8 plataformas sociales.
+14. LUNA 2 (ANALIZADOR DE RETENCIÓN) — Auditoría de watch-time y drop-offs.
+15. LUNA 3 (LUNA COMERCIAL & GERENCIA) — Facturas OCR, closers, comisiones y ROI.
+
+--------------------------------------------------------------------------------
+2. VAV CUTS // SELECTOR DE DENSIDAD DE CORTES:
+--------------------------------------------------------------------------------
+- Nivel 1: Cinematic Minimal (Cortes cada 10-15s para CEOs y YouTube 16:9).
+- Nivel 2: Dynamic Authority (Cortes cada 3-5s para Reels, Instagram y LinkedIn).
+- Nivel 3: Hyper-Retention Rush (Cortes cada 1.5-2.5s para TikTok y Shorts).
+
+--------------------------------------------------------------------------------
+3. VAV FRAMING // CATÁLOGO DE PLANOS DESDE 1 SOLA TOMA:
+--------------------------------------------------------------------------------
+ENCUADRES BÁSICOS:
+- Plano 01: Plano Medio Frontal (Medium Shot 1.0x).
+- Plano 02: Close-Up Emocional (Crop 1.35x en picos de tensión).
+- Plano 03: Ángulo 45° Desplazado (Regla de tercios para gráficos y textos).
+
+ENCUADRES EXPERIMENTALES:
+- Plano Exp 01: Ángulo Picado (High Angle / Deconstrucción de errores).
+- Plano Exp 02: Contrapicado de Autoridad (Low Angle / Momento del Payoff).
+- Plano Exp 03: Dutch Angle (Inclinación de 3° a 5° para momentos de paradoja).
+
+--------------------------------------------------------------------------------
+4. LAS 13 FAMILIAS DE MOTION OFICIALES (REMOTION SPRING ENGINE):
+--------------------------------------------------------------------------------
+Física de Resortes: mass: 0.5, damping: 12, stiffness: 100
+01. MOT_ZOOM_IN (Zoom óptico a rostro)
+02. MOT_ZOOM_OUT (Apertura de campo)
+03. MOT_PUSH_IN (Empuje sutil de tensión)
+04. MOT_PULL_OUT (Distanciamiento dramático)
+05. MOT_PAN_LEFT (Barrido lateral izquierdo)
+06. MOT_PAN_RIGHT (Barrido lateral derecho)
+07. MOT_SCALE (Impacto pop elástico)
+08. MOT_TRANSLATE (Desplazamiento de panel)
+09. MOT_FADE_IN (Disolvencia de entrada)
+10. MOT_FADE_OUT (Disolvencia de salida)
+11. MOT_REVEAL_WIPE (Barrido de máscara)
+12. MOT_BASIC_PARALLAX (Desfase espacial Z)
+13. MOT_BASIC_TRANSITION (Transición whip/dip)

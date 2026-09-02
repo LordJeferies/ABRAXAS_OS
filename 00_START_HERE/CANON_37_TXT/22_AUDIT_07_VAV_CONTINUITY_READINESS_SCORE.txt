@@ -1,0 +1,15 @@
+VAV CONTINUITY READINESS SCORE
+========================================================================
+
+live_repo_exists                         20
+v14_exists                               15
+app_support_exists                       10
+feature_matrix_generated                 15
+authority_graph_generated                10
+repo_code_map_generated                  10
+latest_live_handoff_found                10
+latest_ecosystem_pack_found              10
+
+STATIC READINESS SCORE: 100/100
+
+Runtime verification is intentionally NOT included in this static score.

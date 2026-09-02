@@ -1,0 +1,249 @@
+VAV ECOSYSTEM — CONTINUATION MASTER REQUEST
+
+Voy a subirte:
+
+1. VAV_ECOSYSTEM_FORENSIC_AUDIT_V2_*.zip
+2. el último VAV_LIVE_REPO_HANDOFF_V14_*.zip
+3. el último VAV_ECOSYSTEM_CHAT_PRO_CORE_V14_*.zip
+4. opcionalmente el último VAV_CAPTIONS_CHAT_PRO_CORE_V14_*.zip
+
+OBJETIVO GENERAL
+
+Continuar el desarrollo real del ecosistema VAV sin perder decisiones,
+arquitectura, criterios, fichas, referencias ni estado.
+
+ORDEN DE TRABAJO OBLIGATORIO
+
+VAVCAPTIONS
+→ VAVMOTIONS
+→ VAVCUTS
+→ VAVSHIM
+
+REGLA CRÍTICA
+
+NO asumas que una feature está implementada solo porque aparece en
+documentación, roadmap, ZIP histórico, ficha o prompt.
+
+La autoridad debe ser:
+
+1. código vivo / último Live Repo Handoff;
+2. verificación runtime fresca;
+3. continuidad actual V14;
+4. evidencia GREEN histórica;
+5. referencias canónicas;
+6. Downloads / historia.
+
+PRIMERA FASE — NO MODIFIQUES NADA TODAVÍA
+
+Lee y reconcilia el audit completo.
+
+Construye una PRE-EXECUTION MASTER TRUTH que contenga:
+
+- estado real actual de VAVCaptions;
+- estado real de VAVMotions;
+- estado real de VAVCuts;
+- estado real de VAVShim;
+- arquitectura compartida;
+- feature implementation matrix;
+- qué es WORKING_REAL;
+- qué es ALPHA_REAL;
+- qué es IMPLEMENTED_UNVERIFIED;
+- qué es STUB;
+- qué es DESIGNED_NOT_IMPLEMENTED;
+- qué es MISSING;
+- qué es REGRESSION_RISK;
+- conflictos entre documentos y código;
+- providers instalados vs integrados;
+- roadmap vigente por herramienta;
+- siguiente acción ejecutable por herramienta.
+
+Si para resolver una incertidumbre necesitas otro archivo de mi Mac,
+pídeme SOLO ese archivo o dame un comando de Terminal para extraer la
+respuesta. No inventes.
+
+SEGUNDA FASE — TERMINAR VAVCAPTIONS
+
+Usa el código real como fuente de verdad.
+
+Reconcilia específicamente:
+
+- CaptionPlan serializable/determinista;
+- Remotion preview;
+- Remotion quality export;
+- preview ↔ export parity;
+- ABRAXAS import/registry;
+- QVR V3.1;
+- Caption hierarchy;
+- SceneMap;
+- Visual Ownership;
+- timebase en microsegundos;
+- Vision contracts;
+- Apple Vision/native sidecar;
+- OCR;
+- person/foreground masks;
+- face/landmarks;
+- saliency;
+- optical flow;
+- LayerGraph;
+- negative space;
+- SAM2 provider;
+- Cutie provider;
+- depth provider;
+- depth-aware captions;
+- Scene Smart;
+- source overlay collision;
+- speakers/diarization si corresponde al roadmap actual.
+
+NO vuelvas a implementar algo que ya esté funcionando.
+
+Antes de cambiar código:
+- backup;
+- objetivos medibles;
+- regression risks;
+- tests que deberían fallar/pasar.
+
+Después:
+- targeted tests;
+- full tests;
+- typecheck;
+- build;
+- health;
+- cargo;
+- provider discovery;
+- app launch;
+- real media fixture;
+- Remotion export real;
+- frame parity / visual evidence cuando aplique.
+
+No declares GREEN sin evidencia.
+
+Si no puedes ejecutar directamente en mi Mac, entrégame un paquete seguro
+con:
+
+00_LEEME_PRIMERO.txt
+payload/
+APPLY.command
+VERIFY.command
+ROLLBACK.command
+RUN_VAV.command
+MANIFEST.json
+CURRENT_STATE_UPDATED.txt
+MASTER_PROMPT_UPDATED.txt
+
+APPLY debe:
+- localizar el repo correcto;
+- validar anchors/hashes;
+- crear backup timestamped;
+- detenerse si hay mismatch;
+- nunca hacer overwrite ciego.
+
+TERCERA FASE — CERRAR CAPTIONS
+
+Cuando VAVCaptions quede GREEN:
+
+- generar nuevo Live Repo Handoff;
+- generar reporte VERIFY;
+- actualizar VAV Master Truth;
+- actualizar roadmap;
+- actualizar feature matrix;
+- actualizar continuidad;
+- generar Chat Pack de Captions;
+- generar Ecosystem Chat Pack;
+- elevar generación de continuidad siguiente a V14
+  (por ejemplo V15 si corresponde).
+
+Solo entonces pasar a VAVMOTIONS.
+
+CUARTA FASE — VAVMOTIONS
+
+Usar las mismas piezas compartidas del ecosistema.
+
+No crear otra versión incompatible de:
+
+- timebase;
+- Project Session;
+- SceneMap;
+- Visual Ownership;
+- Vision;
+- LayerGraph;
+- Provider Registry;
+- Job Engine.
+
+Reconciliar:
+
+- Motion 00–07 canon;
+- fichas;
+- Portable TXT;
+- Motion Engine;
+- spatial/camera grammar;
+- depth/layers;
+- motion primitives;
+- ABRAXAS motion grammar;
+- AI decision roundtrip;
+- scene/context ownership;
+- Remotion implementation;
+- visual QA.
+
+Cerrar Motions con el mismo protocolo GREEN + continuity.
+
+QUINTA FASE — VAVCUTS
+
+Continuar con:
+
+- shared SceneMap;
+- shot/scene analysis;
+- optical flow;
+- visual similarity;
+- face/pose/saliency;
+- aesthetics/quality;
+- redundant shot detection;
+- cut decisions;
+- best frame;
+- timing;
+- project/session;
+- interchange con Captions/Motions.
+
+Cerrar Cuts con GREEN + continuity.
+
+SEXTA FASE — VAVSHIM
+
+Usar SHIM_CUTS_R1 como referencia, pero distinguir referencia de
+implementación real.
+
+Reconciliar:
+
+- foundation;
+- contracts;
+- interchange;
+- portability;
+- handoff;
+- shared architecture;
+- integrations con Captions/Motions/Cuts.
+
+Cerrar Shim con GREEN + continuity.
+
+PRINCIPIO FINAL
+
+No quiero cuatro aplicaciones aisladas.
+
+Quiero un ecosistema LEGO:
+
+VAV Shared
+├── Captions
+├── Motions
+├── Cuts
+└── Shim
+
+con contratos compatibles y una continuidad común.
+
+Comienza leyendo TODO lo subido y entrégame primero únicamente:
+
+PRE-EXECUTION MASTER TRUTH
++
+WHAT IS ACTUALLY REAL
++
+WHAT IS STILL MISSING
++
+NEXT EXECUTABLE STEP FOR VAVCAPTIONS
+
+Todavía no modifiques código hasta terminar esa reconciliación.

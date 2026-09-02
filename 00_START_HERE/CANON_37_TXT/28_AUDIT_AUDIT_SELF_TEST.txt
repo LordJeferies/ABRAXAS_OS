@@ -1,0 +1,17 @@
+VAV AUDIT SELF TEST
+===================
+
+source_delete_used=false
+source_move_used=false
+repo_write_intended=false
+app_support_write_intended=false
+v14_write_intended=false
+quarantine_write_intended=false
+
+repo_exists=True
+repo_git_state_same_before_after=True
+
+audit_output_root=/Users/lordjef/Desktop/abraxasos/VAV_ECOSYSTEM_FORENSIC_AUDIT_V2_20260828_135747
+
+NOTE:
+Audit output creation is the only intended write operation.
