@@ -269,6 +269,64 @@ function generateMotionsPage(locale) {
 
   </main>
 
+
+    <!-- TOTAL PRODUCTION COACH BREAKDOWN -->
+    <div class="section-title-wrap" style="text-align: center; margin-top: 5rem; margin-bottom: 3rem;">
+      <span class="section-eyebrow" style="color: #38bdf8;">UNIVERSAL COACHING ENGINE</span>
+      <h2 class="section-title" style="font-size: 2.2rem;">
+        ${isEs ? 'El Total Production Coach: Guía en Cualquier Software' : 'Total Production Coach: Guidance in Any App'}
+      </h2>
+      <p class="subhead" style="margin: 0 auto;">
+        ${isEs 
+          ? 'Incluso si editas en DaVinci Resolve, Premiere Pro, After Effects o Photoshop, ARQUITECTO te acompaña evaluando cada decisión creativa con reglas forenses.' 
+          : 'Even when editing in DaVinci, Premiere, After Effects, or Photoshop, ARQUITECTO guides your creative decisions with forensic rules.'}
+      </p>
+    </div>
+
+    <div class="viewer-bento-grid" style="margin-bottom: 4rem;">
+      
+      <div class="bento-box bento-col-6">
+        <span class="apple-card-tag gold">01 // EDITING COACH</span>
+        <h4 style="font-size: 1.3rem; color: #fff; margin-bottom: 8px;">${isEs ? 'Ritmo, Respiración y Cortes J/L' : 'Pacing, Breathing & J/L Cuts'}</h4>
+        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.55; margin-bottom: 12px;">
+          ${isEs 
+            ? 'Supervisa la estructura de corte, attention resets cada 4-6 segundos, continuidad espacial y lo más importante: <strong>cuándo NO agregar nada</strong> para respetar el impacto de una pausa dramática.' 
+            : 'Supervises cut structure, 4-6s attention resets, spatial continuity, and crucially: when NOT to add anything to preserve dramatic pauses.'}
+        </p>
+      </div>
+
+      <div class="bento-box bento-col-6">
+        <span class="apple-card-tag cyan">02 // VFX COACH</span>
+        <h4 style="font-size: 1.3rem; color: #fff; margin-bottom: 8px;">${isEs ? 'Efectos Visuales con Función Narrativa' : 'Purpose-Driven Visual Effects'}</h4>
+        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.55; margin-bottom: 12px;">
+          ${isEs 
+            ? 'Cero "efectos futuristas" genéricos. Cada VFX define: <code>WHAT CHANGES, WHEN, TRIGGER, WHY, DURATION, LAYER/PLACEMENT, NEGATIVES</code> para justificar su necesidad.' 
+            : 'Zero generic sci-fi clutter. Every VFX explicitly defines WHAT CHANGES, WHEN, TRIGGER, WHY, DURATION, and PLACEMENT.'}
+        </p>
+      </div>
+
+      <div class="bento-box bento-col-6">
+        <span class="apple-card-tag emerald">03 // SFX COACH</span>
+        <h4 style="font-size: 1.3rem; color: #fff; margin-bottom: 8px;">${isEs ? 'Diseño Sonoro Justificado' : 'Sound Design Discipline'}</h4>
+        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.55; margin-bottom: 12px;">
+          ${isEs 
+            ? 'Cada efecto sonoro debe tener un evento que lo detone. Si no hay cambio visual o énfasis dramático real, el coach emite la directiva <code>no_sfx_needed</code> para evitar ruido sensorial.' 
+            : 'Every sound effect must map to a discrete narrative trigger. If there is no real event, the coach enforces <code>no_sfx_needed</code>.'}
+        </p>
+      </div>
+
+      <div class="bento-box bento-col-6">
+        <span class="apple-card-tag purple">04 // MUSIC COACH</span>
+        <h4 style="font-size: 1.3rem; color: #fff; margin-bottom: 8px;">${isEs ? 'BPM, Textura, Ducking y Resolución' : 'BPM, Texture, Ducking & Resolution'}</h4>
+        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.55; margin-bottom: 12px;">
+          ${isEs 
+            ? 'Nada de "música inspiradora" genérica. Define el tempo exacto (BPM), la entrada de energía, el ducking lateral de -18dB cuando habla la voz y la resolución armónica.' 
+            : 'Defines exact BPM, texture, energy entry, -18dB sidechain voice ducking, and harmonic resolution tailored to the narrative arc.'}
+        </p>
+      </div>
+
+    </div>
+
   ${getFooter(locale)}
 </body>
 </html>`;
@@ -595,6 +653,20 @@ function generateArquitectoPage(locale) {
         ${isEs 
           ? 'ARQUITECTO es el cerebro cognitivo de ABRAXAS. No es un chatbot genérico: es una inteligencia especializada que conoce tu marca, tus audiencias, tus números y tus 13 herramientas a la perfección.'
           : 'ARQUITECTO is the cognitive brain of ABRAXAS. It acts as an unrelenting coach, tireless assistant, and strategic orchestrator.'}
+      </p>
+    </div>
+
+    
+    <!-- CRITERIA BANNER: ABRAXAS CONVIERTE CRITERIO EN INFRAESTRUCTURA -->
+    <div class="bento-box bento-col-12" style="background: linear-gradient(180deg, rgba(212,175,55,0.12) 0%, rgba(13,13,18,0.95) 100%); border: 1px solid rgba(212,175,55,0.45); margin-bottom: 3.5rem; padding: 3rem; text-align: center;">
+      <span class="apple-card-tag gold">TESIS FUNDACIONAL DE ABRAXAS</span>
+      <h2 style="font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; color: #fff; margin: 12px 0; letter-spacing: -0.02em;">
+        ${isEs ? '«ABRAXAS convierte criterio en infraestructura.»' : '«ABRAXAS turns criterion into infrastructure.»'}
+      </h2>
+      <p style="font-size: 1.05rem; color: #cbd5e1; max-width: 860px; margin: 0 auto; line-height: 1.6;">
+        ${isEs 
+          ? 'La IA no es el sistema: es un proveedor intercambiable. Lo que hace único a ABRAXAS es que codifica las leyes del criterio humano de alto nivel (ritmo, verdad, dialéctica, deuda narrativa y metrología) en reglas matemáticas deterministas.'
+          : 'AI is not the system: it is a swappable commodity. What makes ABRAXAS unique is that it codifies high-level human criterion into deterministic mathematical infrastructure.'}
       </p>
     </div>
 
