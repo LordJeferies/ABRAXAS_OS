@@ -1,3 +1,125 @@
+
+function getUniversalWidgets(locale, depth = 0) {
+  const isEs = locale === 'es';
+  const root = depth === 0 ? '' : '../'.repeat(depth);
+  const langPrefix = `${root}${locale}/`;
+
+  return `
+  <!-- Contextual Floating Arquitecto Widget -->
+  <div id="floating-architect-widget">
+    <div id="architect-popup-card" class="architect-popup-card">
+      <div class="popup-header">
+        <span class="popup-title">👁️ ARQUITECTO // CANON TOTAL</span>
+        <button id="architect-popup-close" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.1rem;">✕</button>
+      </div>
+      <p class="popup-body">
+        ${isEs 
+          ? '«ABRAXAS convierte criterio en infraestructura.» Recuerda: un tema no es una idea. Abre una deuda narrativa con tu hook y págala con el payoff. La Luna Comercial audita cada centavo.' 
+          : '«ABRAXAS turns criterion into infrastructure.» Narrative debt + payoff. Commercial Moon audits revenue.'}
+      </p>
+      <button id="btn-copy-prompt" class="btn-copy-prompt">
+        📋 ${isEs ? 'Copiar Prompt de Arquitectura para IA' : 'Copy Architecture Prompt for AI'}
+      </button>
+    </div>
+    
+    <div id="architect-pill-trigger" class="architect-pill-trigger">
+      <span class="architect-sparkle">✦</span>
+      <span class="architect-pill-text">Arquitecto Coach</span>
+    </div>
+  </div>
+
+  <!-- Dashboard Control Center Drawer (Master Directory) -->
+  <div id="control-center-drawer">
+    <div class="drawer-header-row">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.2rem; color: #d4af37;">▲</span>
+        <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700;">Directorio Maestro ABRAXAS</h3>
+      </div>
+      <button id="btn-close-control-center" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.2rem;">✕</button>
+    </div>
+
+    <div class="drawer-nav-grid">
+      <a href="${root}index.html" class="drawer-nav-btn">🏠 <span>Visión General (Home)</span></a>
+      <a href="${root}v3/index.html" class="drawer-nav-btn">🍎 <span>Edición v3 MacBook Pro</span></a>
+      <a href="${langPrefix}cosmogonia/index.html" class="drawer-nav-btn" style="border-color: rgba(254,240,138,0.4); color: #fef08a;">☀️ <span>Cosmogonía Solar, Pirámide & 3 Lunas</span></a>
+      <a href="${langPrefix}contexto/index.html" class="drawer-nav-btn">📖 <span>Contexto, Visión & Lógica Total</span></a>
+      <a href="${langPrefix}catedra/index.html" class="drawer-nav-btn" style="border-color: rgba(56,189,248,0.4); color: #38bdf8;">🏛️ <span>Cátedra 165 IQ (Tratado Formal)</span></a>
+      <a href="${langPrefix}luna-comercial/index.html" class="drawer-nav-btn" style="border-color: rgba(48,209,88,0.4); color: #30d158;">🌙 <span>Luna Comercial, Facturas OCR & ROI</span></a>
+      <a href="${langPrefix}branding-method/index.html" class="drawer-nav-btn" style="border-color: rgba(191,90,242,0.4); color: #bf5af2;">🎯 <span>Diagnóstico YOD & Campañas</span></a>
+      <a href="${langPrefix}abraxas-core-example/index.html" class="drawer-nav-btn" style="border-color: rgba(212,175,55,0.4); color: #d4af37;">💎 <span>Caso Real ABRAXAS Core</span></a>
+      <a href="${langPrefix}gustos-canon/index.html" class="drawer-nav-btn">🎨 <span>Gustos Visuales, Editoriales & Lienzos</span></a>
+      <a href="${langPrefix}scrum/index.html" class="drawer-nav-btn">📋 <span>Scrum & Roadmap Paso 0 a 100%</span></a>
+      <a href="${langPrefix}prompt-maestro/index.html" class="drawer-nav-btn">🤖 <span>Prompt de Página Maestro (HTML)</span></a>
+      <a href="${langPrefix}criterios-roadmap/index.html" class="drawer-nav-btn">🗺️ <span>Criterios & Roadmap Maestro</span></a>
+      <a href="${langPrefix}ecosistema/index.html" class="drawer-nav-btn">⚡ <span>Ecosistema 8-en-1</span></a>
+      <a href="${langPrefix}gerencia/index.html" class="drawer-nav-btn">💼 <span>Gobernanza & ROI</span></a>
+      <a href="${langPrefix}flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (6 Fases)</span></a>
+      <a href="${langPrefix}tools/vav/motions/index.html" class="drawer-nav-btn">🎬 <span>13 Familias de Motion</span></a>
+      <a href="${langPrefix}tools/vav/captions/index.html" class="drawer-nav-btn">💬 <span>Subtítulos Cinéticos Whisper</span></a>
+      <a href="${langPrefix}tools/vav/cuts/index.html" class="drawer-nav-btn">✂️ <span>Cortes en 18s & RMS</span></a>
+      <a href="${langPrefix}tools/shim/index.html" class="drawer-nav-btn">🔍 <span>Metrología SHIM 0.00% GAPs</span></a>
+      <a href="${langPrefix}tools/arquitecto/index.html" class="drawer-nav-btn">👁️ <span>ARQUITECTO (Coach & Asistente)</span></a>
+      <a href="${langPrefix}canon/index.html" class="drawer-nav-btn" style="border-color: rgba(212,175,55,0.4);">📚 <span>Biblioteca Canon 37 TXT</span></a>
+      <a href="${langPrefix}backup/index.html" class="drawer-nav-btn">🏛️ <span>Respaldo / Backup Completo</span></a>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding: 18px; background: rgba(212,175,55,0.08); border-radius: 14px; border: 1px solid rgba(212,175,55,0.25);">
+      <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800;">LÍNEA BASE CERTIFICADA</span>
+      <p style="font-size: 0.82rem; color: #cbd5e1; margin-top: 4px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </div>
+  `;
+}
+
+function getUniversalFooter(locale, depth = 0) {
+  const isEs = locale === 'es';
+  const root = depth === 0 ? '' : '../'.repeat(depth);
+  const langPrefix = `${root}${locale}/`;
+
+  return `
+  <footer style="background: #050508; border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 1.5rem 3rem 1.5rem; font-size: 0.85rem; color: #86868b;">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Cosmogonía & Estrategia' : 'Cosmology & Strategy'}</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="${langPrefix}cosmogonia/index.html" style="color: #fef08a; font-weight: 600;">☀️ ${isEs ? 'Cosmogonía Solar & 3 Lunas' : 'Solar Cosmology & 3 Moons'}</a></li>
+          <li><a href="${langPrefix}contexto/index.html">${isEs ? '📖 Contexto & Visión' : '📖 Context & Vision'}</a></li>
+          <li><a href="${langPrefix}catedra/index.html" style="color: #38bdf8; font-weight: 600;">🏛️ ${isEs ? 'Cátedra 165 IQ' : '165 IQ Lecture'}</a></li>
+          <li><a href="${langPrefix}luna-comercial/index.html" style="color: #30d158; font-weight: 600;">🌙 ${isEs ? 'Luna Comercial & OCR' : 'Sales Moon & OCR'}</a></li>
+          <li><a href="${langPrefix}branding-method/index.html" style="color: #bf5af2; font-weight: 600;">🎯 ${isEs ? 'Branding & Campañas' : 'Branding & Campaigns'}</a></li>
+          <li><a href="${langPrefix}abraxas-core-example/index.html" style="color: #d4af37; font-weight: 600;">💎 ${isEs ? 'Caso ABRAXAS Core' : 'ABRAXAS Core Case'}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Criterios & Ingeniería' : 'Criteria & Engineering'}</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="${langPrefix}gustos-canon/index.html">${isEs ? '🎨 Gustos & Lienzos' : '🎨 Taste & Lienzos'}</a></li>
+          <li><a href="${langPrefix}scrum/index.html">${isEs ? '📋 Scrum Paso 0 a 100%' : '📋 Scrum 0-100%'}</a></li>
+          <li><a href="${langPrefix}prompt-maestro/index.html">${isEs ? '🤖 Prompt de Página Maestro' : '🤖 Master Prompt'}</a></li>
+          <li><a href="${langPrefix}criterios-roadmap/index.html">${isEs ? '🗺️ Criterios & Roadmap' : '🗺️ Criteria & Roadmap'}</a></li>
+          <li><a href="${langPrefix}tools/vav/motions/index.html">${isEs ? '🎬 13 Familias de Motion' : '🎬 13 Motion Families'}</a></li>
+          <li><a href="${langPrefix}tools/shim/index.html">${isEs ? '🔍 Metrología SHIM 0% GAPs' : '🔍 SHIM 0% GAPs'}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Gobernanza & Documentación' : 'Governance & Docs'}</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="${langPrefix}ecosistema/index.html">${isEs ? '⚡ Ecosistema 8-en-1' : '⚡ 8-in-1 Ecosystem'}</a></li>
+          <li><a href="${langPrefix}gerencia/index.html">${isEs ? '💼 Control de Costos SQLite' : '💼 SQLite Cost Governance'}</a></li>
+          <li><a href="${langPrefix}flujo/index.html">${isEs ? '🔄 Ciclo de Vida de 6 Fases' : '🔄 6-Phase Lifecycle'}</a></li>
+          <li><a href="${langPrefix}canon/index.html">${isEs ? '📚 Biblioteca Canon 37 TXT' : '📚 Canon 37 TXT Library'}</a></li>
+          <li><a href="${langPrefix}backup/index.html">${isEs ? '🏛️ Versión Backup de Respaldo' : '🏛️ Legacy Backup Snapshot'}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="max-width: 1240px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <p>Copyright © 2026 ABRAXAS OS. ${isEs ? 'Todos los derechos reservados. Arquitectura Determinista en Apple Silicon.' : 'All rights reserved. Deterministic Architecture on Apple Silicon.'}</p>
+      <p style="font-family: var(--font-mono); color: #d4af37; font-size: 0.78rem;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </footer>
+  `;
+}
+
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -16,6 +138,18 @@ try {
   canonFiles = [];
 }
 
+const canonDossiersData = canonFiles.map((filename, idx) => {
+  const num = filename.split('_')[0];
+  const title = filename.replace('.txt', '').replace(/_/g, ' ');
+  let content = '';
+  try {
+    content = fs.readFileSync(path.join(canonDir, filename), 'utf-8');
+  } catch (err) {
+    content = 'Dossier canónico protegido.';
+  }
+  return { id: `dossier-${num}`, num, title, filename, content };
+});
+
 function getPreloaderHTML() {
   return `
   <div id="preloader">
@@ -28,348 +162,433 @@ function getPreloaderHTML() {
   `;
 }
 
-function getLocalnavHTML(locale, activeTab, depth = 1) {
+function getLocalnavHTML(locale, activeTab, depth = 0) {
   const isEs = locale === 'es';
-  const prefix = '../'.repeat(depth);
-  const esPrefix = `${prefix}es/`;
-  const enPrefix = `${prefix}en/`;
+  const root = depth === 0 ? '' : '../'.repeat(depth);
+  const langPrefix = `${root}${locale}/`;
+  const otherLocale = isEs ? 'en' : 'es';
+  const switchLangHref = `${root}${otherLocale}/index.html`;
 
   return `
+  <!-- Film Grain Overlay -->
+  <div class="film-grain-overlay"></div>
+
+  <!-- Master Sticky Localnav -->
   <nav class="apple-localnav" aria-label="Local Navigation">
     <div class="localnav-inner">
-      <a href="${prefix}index.html" class="localnav-brand">
+      <a href="${root}index.html" class="localnav-brand">
         <span>ABRAXAS OS</span>
-        <span class="tag">v3.0 PRO</span>
+        <span class="tag">v3.3 ALL-IN-ONE MASTER</span>
       </a>
       <div class="localnav-items">
-        <a href="${prefix}index.html" class="localnav-a ${activeTab === 'overview' ? 'active' : ''}">${isEs ? 'Visión general' : 'Overview'}</a>
-        <a href="${prefix}v3/index.html" class="localnav-a ${activeTab === 'v3' ? 'active' : ''}">🍎 Edición v3</a>
-        <a href="${prefix}${locale}/luna-comercial/index.html" class="localnav-a ${activeTab === 'luna-comercial' ? 'active' : ''}" style="color: #30d158; font-weight: 700;">🌙 ${isEs ? 'Luna de Ventas & ROI' : 'Sales Moon & ROI'}</a>
-        <a href="${prefix}${locale}/branding-method/index.html" class="localnav-a ${activeTab === 'branding-method' ? 'active' : ''}" style="color: #bf5af2;">🎯 ${isEs ? 'Branding YOD' : 'Branding YOD'}</a>
-        <a href="${prefix}${locale}/abraxas-core-example/index.html" class="localnav-a ${activeTab === 'abraxas-core-example' ? 'active' : ''}" style="color: #d4af37;">💎 ${isEs ? 'Caso Core' : 'Core Case'}</a>
-        <a href="${prefix}${locale}/criterios-roadmap/index.html" class="localnav-a ${activeTab === 'criterios-roadmap' ? 'active' : ''}">🗺️ ${isEs ? 'Roadmap' : 'Roadmap'}</a>
-        <a href="${prefix}${locale}/ecosistema/index.html" class="localnav-a ${activeTab === 'ecosistema' ? 'active' : ''}">${isEs ? 'Ecosistema 8-en-1' : '8-in-1 Ecosystem'}</a>
-        <a href="${prefix}${locale}/gerencia/index.html" class="localnav-a ${activeTab === 'gerencia' ? 'active' : ''}">${isEs ? 'Gerencia & ROI' : 'Governance & ROI'}</a>
-        <a href="${prefix}${locale}/flujo/index.html" class="localnav-a ${activeTab === 'flujo' ? 'active' : ''}">${isEs ? 'Ciclo de Vida' : 'Lifecycle Flow'}</a>
-        <a href="${prefix}${locale}/tools/vav/motions/index.html" class="localnav-a ${activeTab === 'motions' ? 'active' : ''}">🎬 Motions</a>
-        <a href="${prefix}${locale}/tools/vav/captions/index.html" class="localnav-a ${activeTab === 'captions' ? 'active' : ''}">💬 Captions</a>
-        <a href="${prefix}${locale}/tools/vav/cuts/index.html" class="localnav-a ${activeTab === 'cuts' ? 'active' : ''}">✂️ Cuts 18s</a>
-        <a href="${prefix}${locale}/tools/shim/index.html" class="localnav-a ${activeTab === 'shim' ? 'active' : ''}">🔍 SHIM (0% GAPs)</a>
-        <a href="${prefix}${locale}/tools/arquitecto/index.html" class="localnav-a ${activeTab === 'arquitecto' ? 'active' : ''}">👁️ Arquitecto</a>
-        <a href="${prefix}${locale}/canon/index.html" class="localnav-a ${activeTab === 'canon' ? 'active' : ''}" style="color: #d4af37;">📚 Canon 37 TXT</a>
-        <a href="${prefix}${locale}/backup/index.html" class="localnav-a ${activeTab === 'backup' ? 'active' : ''}">🏛️ Backup</a>
+        <a href="#welcome" class="localnav-a active">${isEs ? 'Inicio' : 'Home'}</a>
+        <a href="#cosmogonia" class="localnav-a" style="color: #fef08a;">☀️ Cosmogonía</a>
+        <a href="#viewer" class="localnav-a">⚡ Ecosistema 8-en-1</a>
+        <a href="#tres-lunas" class="localnav-a" style="color: #30d158;">🌙 3 Lunas & Ventas</a>
+        <a href="#branding" class="localnav-a" style="color: #bf5af2;">🎯 Branding YOD</a>
+        <a href="#coach" class="localnav-a">👁️ Production Coach</a>
+        <a href="#performance" class="localnav-a">🚀 Rendimiento</a>
+        <a href="#governance" class="localnav-a">💼 Gerencia</a>
+        <a href="#catedra" class="localnav-a" style="color: #38bdf8;">🏛️ Cátedra 165 IQ</a>
+        <a href="#scrum" class="localnav-a">📋 Scrum 0-100%</a>
+        <a href="#canon-library" class="localnav-a" style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="#backup" class="localnav-a">🏛️ Backup SHA-256</a>
+        <a href="${langPrefix}tools/vav/motions/index.html" class="localnav-a">🎬 Motions</a>
+        <a href="${langPrefix}tools/shim/index.html" class="localnav-a">🔍 SHIM</a>
       </div>
       <div class="localnav-right">
-        <a href="${prefix}${isEs ? 'en' : 'es'}/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${isEs ? 'EN' : 'ES'}</a>
+        <a href="${switchLangHref}" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${isEs ? 'EN' : 'ES'}</a>
         <button id="btn-open-control-center" class="btn-control-center">
-          <span>⚙️ Panel</span>
+          <span>⚙️ Menú Total</span>
         </button>
-        <a href="${prefix}index.html" class="btn-apple-cta">${isEs ? 'Abrir Sistema' : 'Launch OS'}</a>
+        <a href="#viewer" class="btn-apple-cta">${isEs ? 'Explorar Sistema' : 'Explore System'}</a>
       </div>
     </div>
   </nav>
   `;
 }
 
-function getFloatingWidgetsHTML(locale) {
+function getMasterUnifiedPage(locale, depth = 0) {
   const isEs = locale === 'es';
-  return `
-  <!-- Film Grain Overlay (Principle 17) -->
-  <div class="film-grain-overlay"></div>
+  const root = depth === 0 ? '' : '../'.repeat(depth);
+  const langPrefix = `${root}${locale}/`;
 
-  <!-- Contextual Floating Arquitecto Widget (Principle 30) -->
-  <div id="floating-architect-widget">
-    <div id="architect-popup-card" class="architect-popup-card">
-      <div class="popup-header">
-        <span class="popup-title">👁️ ARQUITECTO // COACH & ASISTENTE</span>
-        <button id="architect-popup-close" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.1rem;">✕</button>
-      </div>
-      <p class="popup-body">
-        ${isEs 
-          ? '«ABRAXAS convierte criterio en infraestructura.» Recuerda: un tema no es una idea. Abre una deuda narrativa con tu hook y págala exactamente con el payoff.' 
-          : '«ABRAXAS turns criterion into infrastructure.» A topic is not an idea. Open a narrative debt with your hook and pay it with your payoff.'}
-      </p>
-      <button id="btn-copy-prompt" class="btn-copy-prompt">
-        📋 ${isEs ? 'Preparar pregunta para IA' : 'Copy Optimized AI Prompt'}
-      </button>
-    </div>
-    
-    <div id="architect-pill-trigger" class="architect-pill-trigger">
-      <span class="architect-sparkle">✦</span>
-      <span class="architect-pill-text">Arquitecto Coach</span>
-    </div>
-  </div>
+  const quickJumpItems = [
+    { label: '⚡ En 30s', href: '#welcome' },
+    { label: '☀️ Cosmogonía Solar', href: '#cosmogonia' },
+    { label: '🎛️ Visor 8-en-1', href: '#viewer' },
+    { label: '🌙 Las 3 Lunas & OCR', href: '#tres-lunas' },
+    { label: '🎯 Branding & Campañas', href: '#branding' },
+    { label: '👁️ Total Production Coach', href: '#coach' },
+    { label: '🚀 Chips M-Series', href: '#performance' },
+    { label: '💼 Alta Dirección & ROI', href: '#governance' },
+    { label: '🏛️ Cátedra 165 IQ', href: '#catedra' },
+    { label: '📋 Scrum Backlog', href: '#scrum' },
+    { label: '📚 Buscador Canon 37 TXT', href: '#canon-library' },
+    { label: '🏛️ Bóveda de Respaldo', href: '#backup' }
+  ];
 
-  <!-- Dashboard Control Center Drawer (Principle 26) -->
-  <div id="control-center-drawer">
-    <div class="drawer-header-row">
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <span style="font-size: 1.2rem; color: #d4af37;">▲</span>
-        <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700;">Panel de Control Central</h3>
-      </div>
-      <button id="btn-close-control-center" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.2rem;">✕</button>
-    </div>
-
-    <div class="drawer-nav-grid">
-      <a href="index.html" class="drawer-nav-btn">🏠 <span>Visión General</span></a>
-      <a href="../v3/index.html" class="drawer-nav-btn">🍎 <span>Edición Oficial v3</span></a>
-      <a href="ecosistema/index.html" class="drawer-nav-btn">⚡ <span>Ecosistema 8-en-1</span></a>
-      <a href="gerencia/index.html" class="drawer-nav-btn">💼 <span>Gobernanza & ROI</span></a>
-      <a href="flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida</span></a>
-      <a href="tools/vav/motions/index.html" class="drawer-nav-btn">🎬 <span>13 Familias de Motion</span></a>
-      <a href="tools/vav/captions/index.html" class="drawer-nav-btn">💬 <span>Subtítulos Whisper</span></a>
-      <a href="tools/vav/cuts/index.html" class="drawer-nav-btn">✂️ <span>Cortes en 18s</span></a>
-      <a href="tools/shim/index.html" class="drawer-nav-btn">🔍 <span>Metrología SHIM</span></a>
-      <a href="tools/arquitecto/index.html" class="drawer-nav-btn">👁️ <span>ARQUITECTO Coach</span></a>
-      <a href="canon/index.html" class="drawer-nav-btn" style="border-color: rgba(212,175,55,0.4);">📚 <span>Biblioteca Canon 37 TXT</span></a>
-      <a href="backup/index.html" class="drawer-nav-btn">🏛️ <span>Respaldo / Backup</span></a>
-    </div>
-
-    <div style="margin-top: 2.5rem; padding: 18px; background: rgba(212,175,55,0.08); border-radius: 14px; border: 1px solid rgba(212,175,55,0.25);">
-      <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800;">LÍNEA BASE CERTIFICADA</span>
-      <p style="font-size: 0.82rem; color: #cbd5e1; margin-top: 4px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
-    </div>
-  </div>
-  `;
-}
-
-function getFooterHTML(locale) {
-  const isEs = locale === 'es';
-  return `
-  <footer style="background: #050508; border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 1.5rem 3rem 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
-    <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
-      <div>
-        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Herramientas de Síntesis' : 'Synthesis Tools'}</h4>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-          <li><a href="tools/vav/motions/index.html">${isEs ? '13 Familias de Motion' : '13 Motion Families'}</a></li>
-          <li><a href="tools/vav/captions/index.html">${isEs ? 'Subtítulos Cinéticos' : 'Kinetic Captions'}</a></li>
-          <li><a href="tools/vav/cuts/index.html">${isEs ? 'Cortes en 18s' : '18s Auto-Cuts'}</a></li>
-          <li><a href="tools/shim/index.html">${isEs ? 'Metrología 0.00% GAPs' : '0.00% GAP Metrology'}</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Inteligencia & Orquestación' : 'Intelligence'}</h4>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-          <li><a href="tools/arquitecto/index.html">${isEs ? 'ARQUITECTO Coach' : 'ARQUITECTO Coach'}</a></li>
-          <li><a href="tools/yod/index.html">${isEs ? 'YOD (Radar de Nicho)' : 'YOD Intelligence'}</a></li>
-          <li><a href="tools/contenido/index.html">${isEs ? 'CONTENIDO (Merkle-DAG)' : 'CONTENIDO Merkle-DAG'}</a></li>
-          <li><a href="tools/he/index.html">${isEs ? 'HE (Despacho de 50 Lotes)' : 'HE Batch Operations'}</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Gobernanza & Documentación' : 'Governance & Docs'}</h4>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-          <li><a href="flujo/index.html">${isEs ? 'Ciclo de Vida de 6 Fases' : '6-Phase Lifecycle'}</a></li>
-          <li><a href="gerencia/index.html">${isEs ? 'Control de Costos SQLite' : 'SQLite Cost Governance'}</a></li>
-          <li><a href="canon/index.html">${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT Library'}</a></li>
-          <li><a href="backup/index.html">${isEs ? 'Versión Backup de Respaldo' : 'Legacy Backup Snapshot'}</a></li>
-        </ul>
-      </div>
-    </div>
-    <div style="max-width: 1240px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-      <p>Copyright © 2026 ABRAXAS OS. ${isEs ? 'Todos los derechos reservados. Arquitectura Determinista en Apple Silicon.' : 'All rights reserved. Deterministic Architecture on Apple Silicon.'}</p>
-      <p style="font-family: var(--font-mono); color: var(--color-gold); font-size: 0.78rem;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
-    </div>
-  </footer>
-  `;
-}
-
-// 1. GENERATE MASTER ROOT & LOCALE HOMES
-function generateMasterHome(locale, isRoot = false) {
-  const isEs = locale === 'es';
-  const targetDir = isRoot ? docsDir : path.join(docsDir, locale);
-  fs.mkdirSync(targetDir, { recursive: true });
-
-  const html = `<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html lang="${locale}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${isEs ? 'ABRAXAS OS — Mente abierta. Poder total. (Edición Apple 2026)' : 'ABRAXAS OS — Open Mind. Total Power. (Apple Edition 2026)'}</title>
-  <meta name="description" content="${isEs ? 'El sistema operativo determinista de creación, producción, organización y aprendizaje de contenidos en Apple Silicon.' : 'Deterministic content operating system for high-velocity multi-format publishing on Apple Silicon.'}">
+  <title>${isEs ? 'ABRAXAS OS: La Experiencia Maestra Total Unificada (v3.3 All-In-One)' : 'ABRAXAS OS: The Master Unified Experience (v3.3 All-In-One)'}</title>
+  <meta name="description" content="${isEs ? 'Todas las versiones, módulos, cosmogonía solar, 3 lunas, diagnóstico YOD, metrología SHIM 0% GAPs, 13 motions, 37 dossiers y bóveda de respaldo unificados en una sola experiencia monumental.' : 'All versions, modules, solar cosmology, 3 moons, YOD diagnostic, SHIM metrology, 13 motions, 37 dossiers, and legacy vault unified in one master experience.'}">
   
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="${isRoot ? '' : '../'}assets/abraxas-apple-canon.css">
-  <link rel="stylesheet" href="${isRoot ? '' : '../'}assets/apple-macbook-pro-v3.css">
+  <link rel="stylesheet" href="${root}assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="${root}assets/apple-macbook-pro-v3.css">
 </head>
-<body>
-  ${getPreloaderHTML()}
-  ${getLocalnavHTML(locale, 'overview', isRoot ? 0 : 1)}
+<body class="theme-dark">
 
-  <!-- Hero Section with Particle Brain & Hardware Chassis -->
-  <header class="hero-wrapper">
-    <canvas id="brain-canvas"></canvas>
-    
-    <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
-      <span class="hero-eyebrow">ABRAXAS OS // APPLE SILICON 2026</span>
-      <h1 class="hero-h1">${isEs ? 'Mente abierta.<br/>Poder total.' : 'Open mind.<br/>Total power.'}</h1>
-      <p class="hero-subhead">
+  ${getPreloaderHTML()}
+  ${getLocalnavHTML(locale, 'overview', depth)}
+
+  <!-- Sticky Quick Jump TOC Bar -->
+  <div style="background: rgba(14, 14, 20, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.12); padding: 10px 1.5rem; position: sticky; top: 52px; z-index: 999; overflow-x: auto; scrollbar-width: none;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; gap: 8px; align-items: center; white-space: nowrap;">
+      <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800; margin-right: 6px;">TODAS LAS VERSIONES:</span>
+      ${quickJumpItems.map(item => `<a href="${item.href}" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">${item.label}</a>`).join('')}
+    </div>
+  </div>
+
+  <!-- Interactive HTML5 Canvas Particle Brain -->
+  <canvas id="brain-canvas"></canvas>
+
+  <main>
+
+    <!-- 1. SECTION: HERO / WELCOME -->
+    <section id="welcome" class="section-welcome" style="position: relative; padding-top: 60px;">
+      <div class="product-eyebrow">
+        ${isEs ? 'MACBOOK PRO 2026 // ABRAXAS OS ALL-IN-ONE MASTER EDITION' : 'MACBOOK PRO 2026 // ABRAXAS OS ALL-IN-ONE MASTER EDITION'}
+      </div>
+      <h1 class="headline-gradient">
+        ${isEs ? 'Mente abierta.<br/>Poder total.' : 'Mind-blowing.<br/>Head-turning.'}
+      </h1>
+      <p class="subhead">
         ${isEs 
-          ? 'El primer sistema operativo de contenidos que convierte criterio en infraestructura. Crea, auto-edita y gobierna 50 activos al mes en 8 formatos vivos desde una sola tarde de trabajo.' 
-          : 'The first deterministic content operating system turning high-level human criteria into software infrastructure.'}
+          ? 'Una sola semilla de marca. Ocho formatos vivos. Cero margen de error. ABRAXAS une cosmogonía, inteligencia estratégica, síntesis de video en 18s y telemetría comercial de 3 lunas en una sola arquitectura determinista en Apple Silicon.'
+          : 'One core brand seed. Eight living formats. Zero error margin. ABRAXAS unifies cosmology, strategic intelligence, 18s video synthesis, and 3-moon sales telemetry.'}
       </p>
 
-      <div class="hero-bifurcation">
-        <a href="${isRoot ? 'es/' : ''}ecosistema/index.html" class="btn-hero-iris">
-          <span>⚡ ${isEs ? 'Explorar Ecosistema 8-en-1' : 'Explore 8-in-1 Ecosystem'}</span>
-        </a>
-        <a href="${isRoot ? 'es/' : ''}gerencia/index.html" class="btn-hero-glass">
-          <span>💼 ${isEs ? 'Alta Dirección & ROI' : 'Governance & ROI'}</span>
-        </a>
+      <div class="hero-actions">
+        <a href="#cosmogonia" class="btn-pill-primary">☀️ ${isEs ? 'Ver Cosmogonía Solar' : 'Explore Solar Cosmology'}</a>
+        <a href="#tres-lunas" class="btn-pill-secondary">🌙 ${isEs ? 'Luna Comercial & Ventas' : 'Sales Moon & ROI'}</a>
+        <a href="#canon-library" class="btn-pill-secondary">📚 ${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT'}</a>
+        <a href="#backup" class="btn-pill-secondary">🏛️ ${isEs ? 'Bóveda de Respaldo' : 'Backup Vault'}</a>
       </div>
 
-      <!-- Master Hardware Chassis with Zero CLS (Principle 4) -->
-      <div class="hero-hardware-frame">
-        <div class="chassis-box">
-          <div class="chassis-screen">
-            <img src="${isRoot ? '' : '../'}assets/plate_01_hero.webp" alt="ABRAXAS OS Master Screen" loading="eager" width="1200" height="675">
+      <!-- Master Hardware Chassis (Aspect-ratio 16:9, Zero CLS) -->
+      <div class="hero-hardware-chassis">
+        <div class="hardware-bezel">
+          <div class="hardware-screen">
+            <img src="${root}assets/plates/plate_01_hero.webp" alt="ABRAXAS OS Hardware Chamber" loading="eager" width="1920" height="1080">
+            <div class="hardware-notch-badge">
+              ◈ ATZILUTH CORE CHAMBER // SILICON SOBERANÍA 2026
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- 4-Stat Apple Ribbon -->
-      <div class="metrics-ribbon">
-        <div class="metric-pill">
-          <div class="metric-num gold">18s</div>
-          <div class="metric-txt">${isEs ? 'Auto-Edición Quirúrgica' : 'Surgical Auto-Cut'}</div>
+      <!-- 4-Stat Ribbon -->
+      <div class="highlights-grid" style="margin-top: 3.5rem;">
+        <div class="highlight-card" style="position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <div class="highlight-stat gold">18s</div>
+          <div class="highlight-label">${isEs ? 'Auto-edición quirúrgica y síntesis en Apple Silicon' : 'Surgical auto-cut & synthesis on Apple Silicon'}</div>
+          <div class="card-deepdive-drawer">
+            <div class="deepdive-content-box">
+              <span class="deepdive-tag">ESPECIFICACIÓN 18S</span>
+              <p>Eliminación de pausas muertas por encima de 120ms a -38 dBFS preservando márgenes naturales de respiración de 80ms.</p>
+            </div>
+          </div>
         </div>
-        <div class="metric-pill">
-          <div class="metric-num cyan">1➔8</div>
-          <div class="metric-txt">${isEs ? 'Formatos Sincronizados' : 'Living Formats'}</div>
-        </div>
-        <div class="metric-pill">
-          <div class="metric-num iris">50</div>
-          <div class="metric-txt">${isEs ? 'Activos al Mes por Lote' : 'Assets / Month Batch'}</div>
-        </div>
-        <div class="metric-pill">
-          <div class="metric-num gold">0.00%</div>
-          <div class="metric-txt">${isEs ? 'Margen de Error (GAPs)' : 'Zero GAP Metrology'}</div>
-        </div>
-      </div>
 
-    </div>
-  </header>
-
-  <!-- Interactive 8-in-1 Format Viewer (Mírala en detalle) -->
-  <section class="section-wrap" id="section-viewer">
-    <div class="section-head">
-      <span class="tag">${isEs ? 'ECOSISTEMA DINÁMICO' : 'DYNAMIC ECOSYSTEM'}</span>
-      <h2 class="h2">${isEs ? 'Mírala en detalle.' : 'Take a closer look.'}</h2>
-      <p class="p">${isEs ? 'De una sola tesis nacen simultáneamente 8 formatos derivados listos para dominar cada plataforma.' : 'One master thesis branches simultaneously into 8 living multi-channel formats.'}</p>
-    </div>
-
-    <!-- Format Switcher Buttons -->
-    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
-      <button class="btn-control-center format-pill-btn active" data-format="reels">🎬 Videos Cortos (9:16)</button>
-      <button class="btn-control-center format-pill-btn" data-format="carousels">📑 Carruseles (4:5)</button>
-      <button class="btn-control-center format-pill-btn" data-format="threads">🧵 Hilos X/LinkedIn</button>
-      <button class="btn-control-center format-pill-btn" data-format="newsletters">✉️ Newsletters</button>
-      <button class="btn-control-center format-pill-btn" data-format="podcasts">🎙️ Audio & Podcasts</button>
-      <button class="btn-control-center format-pill-btn" data-format="youtube">📺 YouTube (16:9)</button>
-    </div>
-
-    <!-- Interactive Display Box -->
-    <div class="bento-grid">
-      <div class="spotlight-card col-8">
-        <div>
-          <span class="card-pill-tag gold" id="viewer-active-tag">TikTok / Reels / Shorts</span>
-          <h3 class="card-h3" id="viewer-active-title">Videos Cortos (9:16)</h3>
-          <p class="card-desc" id="viewer-active-desc">Subtítulos cinéticos Whisper palabra por palabra con 13 familias de motion y masterización sonora a -14 LUFS.</p>
+        <div class="highlight-card" style="position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <div class="highlight-stat cyan">1➔8</div>
+          <div class="highlight-label">${isEs ? 'Multiplicación de formatos desde una sola idea' : 'Living format multiplication from 1 seed'}</div>
+          <div class="card-deepdive-drawer">
+            <div class="deepdive-content-box">
+              <span class="deepdive-tag">MERKLE-DAG CASCADE</span>
+              <p>Actualizar el guion principal sincroniza automáticamente el Reel 9:16, Carrusel 4:5, Hilo de X y Newsletter.</p>
+            </div>
+          </div>
         </div>
-        <div class="card-aspect-media">
-          <img id="viewer-active-photo" src="${isRoot ? '' : '../'}assets/plate_05_vav_cathedral.webp" alt="Format Preview" loading="lazy" width="800" height="450">
+
+        <div class="highlight-card" style="position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <div class="highlight-stat iris">50</div>
+          <div class="highlight-label">${isEs ? 'Activos gobernados al mes en una sola tarde' : 'Assets governed per month in 1 afternoon'}</div>
+          <div class="card-deepdive-drawer">
+            <div class="deepdive-content-box">
+              <span class="deepdive-tag">GOBERNANZA BATCH</span>
+              <p>Aprobación simultánea de lotes mediante 6 compuertas de calidad inmutables en la ventana operativa de HE.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-card" style="position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <div class="highlight-stat emerald">0.00%</div>
+          <div class="highlight-label">${isEs ? 'Margen de error con Metrología SHIM Daat' : 'Error margin with SHIM Daat Metrology'}</div>
+          <div class="card-deepdive-drawer">
+            <div class="deepdive-content-box">
+              <span class="deepdive-tag">LEVENSHTEIN ACCURACY</span>
+              <p>Auditoría fonética continua con Whisper Large V3. Cero discrepancias no autorizadas entre plan y audio grabado.</p>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="spotlight-card col-4" style="background: rgba(14,14,20,0.9); border-color: rgba(212,175,55,0.3);">
-        <div>
-          <span class="card-pill-tag cyan">ESPECIFICACIÓN DE VELOCIDAD</span>
-          <h3 class="card-h3" id="viewer-active-speed">18s auto-corte</h3>
-          <p class="card-desc">Renderizado acelerado por Metal en GPU de Apple Silicon con cero pérdida generacional.</p>
+    <!-- 2. SECTION: COSMOGONÍA SOLAR & LA PIRÁMIDE -->
+    <section id="cosmogonia" class="section-wrap" style="padding-top: 80px;">
+      <div class="section-head" style="text-align: center;">
+        <span class="tag" style="color: #fef08a;">COSMOGONÍA SOLAR // EL PROCESO DE CREACIÓN</span>
+        <h2 class="h2">${isEs ? 'La Gran Pirámide, el Ojo 3D y los Dos Soles' : 'The Golden Pyramid, 3D Eye & Dual Suns'}</h2>
+        <p class="p">${isEs ? 'De la nada cósmica al Rayo de Manifestación: la geología mística de amatista y oro que modela el flujo de contenidos.' : 'From the primordial spark to the 3-Moon closed feedback loop.'}</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="spotlight-card col-6" style="background: #090a10; border-left: 4px solid #fef08a; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag gold">LOS DOS SOLES</span>
+          <h3 class="card-h3">${isEs ? 'El Sol Primordial y el Sol Negro' : 'The Primordial Spark & Black Sun'}</h3>
+          <p class="card-desc">${isEs ? 'El Sol de Luz Pura crea la intención infinita, mientras el Sol Negro la eclipsa para concentrar la energía en un punto focal hiperdenso (YOD).' : 'Infinite intention focused by gravitational eclipse.'}</p>
+          <div class="card-deepdive-drawer">
+            <div class="deepdive-content-box">
+              <span class="deepdive-tag">ATZILUTH ➔ CHOKHMAH</span>
+              <p>Mapeo ontológico: La Voluntad Pura (Keter) se condensa en el relámpago creativo (Kav) para alimentar los mundos inferiores.</p>
+            </div>
+          </div>
         </div>
-        <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
-          <a href="${isRoot ? 'es/' : ''}tools/vav/motions/index.html" class="btn-apple-cta" style="display: block; text-align: center; padding: 12px;">
-            ${isEs ? 'Ver 13 Familias de Motion' : 'View 13 Motion Families'}
-          </a>
+
+        <div class="spotlight-card col-6" style="background: #090a10; border-left: 4px solid #bf5af2; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag iris">LA PIRÁMIDE DE AMATISTA</span>
+          <h3 class="card-h3">${isEs ? 'Cúspide de Oro & Árbol de la Vida' : 'Gold Capstone & Tree of Life'}</h3>
+          <p class="card-desc">${isEs ? 'La pirámide es elevada por cristales que se transforman en amatista, con la cúspide en oro macizo y canales sefiróticos de flujo de datos.' : 'Amethyst geode with solid gold capstone and sephirot conduits.'}</p>
+          <div class="card-deepdive-drawer">
+            <div class="deepdive-content-box">
+              <span class="deepdive-tag">SEPHIROTIC CONDUITS</span>
+              <p>Las 10 Sephiroth y 22 senderos guían el tránsito del contenido desde la tesis abstracta hasta la exportación en Assiah.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Performance Chips Section -->
-  <section class="section-wrap" style="border-top: 1px solid rgba(255,255,255,0.08);">
-    <div class="section-head">
-      <span class="tag" style="color: #bf5af2;">RENDIMIENTO // ARQUITECTURA DE TRES MOTORES</span>
-      <h2 class="h2">${isEs ? 'Como estos tres motores<br/>no hay dos.' : 'Like these three engines<br/>there are none.'}</h2>
-      <p class="p">${isEs ? 'Tres procesadores deterministas trabajando en tándem para convertir tus ideas en activos inmutables.' : 'Three deterministic engines working in tandem to turn ideas into verified assets.'}</p>
-    </div>
-
-    <div class="bento-grid">
-      <div class="spotlight-card col-4">
-        <span class="card-pill-tag gold">MOTOR YOD י // ATZILUTH</span>
-        <h3 class="card-h3">${isEs ? 'Inteligencia de Nicho & Ganchos' : 'Niche Radar & Contrarian Hooks'}</h3>
-        <p class="card-desc">${isEs ? 'Escanea puntos ciegos en la industria y formula aperturas dialécticas de alto impacto con calificación de 0 a 100.' : 'Scans audience blind spots and outputs contrarian hooks scored 0-100.'}</p>
-        <a href="${isRoot ? 'es/' : ''}tools/yod/index.html" style="color: var(--color-gold); font-weight: 600; font-size: 0.88rem;">${isEs ? 'Conocer Motor YOD →' : 'Explore YOD Engine →'}</a>
+    <!-- 3. SECTION: INTERACTIVE 8-IN-1 FORMAT VIEWER -->
+    <section id="viewer" class="section-wrap" style="padding-top: 80px;">
+      <div class="section-head" style="text-align: center;">
+        <span class="tag" style="color: #2997ff;">ECOSISTEMA 8-EN-1 // MULTI-PLATAFORMA</span>
+        <h2 class="h2">${isEs ? 'Una Sola Idea. Ocho Formatos Vivos.' : 'One Core Idea. Eight Living Formats.'}</h2>
+        <p class="p">${isEs ? 'Selecciona un formato para ver su especificación de velocidad y su render de alta definición:' : 'Select a format to preview live specs and 8K visual rendering:'}</p>
       </div>
 
-      <div class="spotlight-card col-4">
-        <span class="card-pill-tag cyan">MOTOR VAV ו // YETZIRAH</span>
-        <h3 class="card-h3">${isEs ? 'Catedral de Síntesis en 18s' : '18s Synthesis Cathedral'}</h3>
-        <p class="card-desc">${isEs ? 'Corta silencios muertos con precisión de microsegundos, genera subtítulos cinéticos con Whisper y anima con 13 familias de motion.' : 'Trims dead pauses in 18s, synchronizes word-level kinetic subtitles, and renders 13 Remotion motion families.'}</p>
-        <a href="${isRoot ? 'es/' : ''}tools/vav/cuts/index.html" style="color: var(--color-cyan); font-weight: 600; font-size: 0.88rem;">${isEs ? 'Conocer Motor VAV →' : 'Explore VAV Engine →'}</a>
+      <div class="format-pills-row">
+        <button class="format-pill-btn active" data-format="reels">🎬 Videos Cortos (9:16)</button>
+        <button class="format-pill-btn" data-format="carousels">📑 Carruseles 4:5</button>
+        <button class="format-pill-btn" data-format="threads">🧵 Hilos de Autoridad</button>
+        <button class="format-pill-btn" data-format="newsletters">✉️ Newsletters</button>
+        <button class="format-pill-btn" data-format="podcasts">🎙️ Micro-Podcasts</button>
+        <button class="format-pill-btn" data-format="youtube">📺 YouTube 16:9</button>
       </div>
 
-      <div class="spotlight-card col-4">
-        <span class="card-pill-tag iris">MOTOR SHIM ש // DA\'AT</span>
-        <h3 class="card-h3">${isEs ? 'Metrología 0.00% GAPs' : '0.00% GAP Metrology'}</h3>
-        <p class="card-desc">${isEs ? 'Audita grabaciones en el set con Whisper y visión computacional, garantizando que ningún dato o guion salga con errores.' : 'Audits on-set recordings live via Whisper, guaranteeing zero errors.'}</p>
-        <a href="${isRoot ? 'es/' : ''}tools/shim/index.html" style="color: var(--color-iris-glow); font-weight: 600; font-size: 0.88rem;">${isEs ? 'Conocer Motor SHIM →' : 'Explore SHIM Engine →'}</a>
+      <div class="viewer-display-card">
+        <div class="viewer-media-col">
+          <div class="viewer-photo-wrap">
+            <img id="viewer-active-photo" src="${root}assets/plates/plate_05_vav_cathedral.webp" alt="Formato Activo" loading="lazy" width="1080" height="1080">
+          </div>
+        </div>
+        <div class="viewer-info-col">
+          <div class="viewer-spec-pill" id="viewer-active-tag">TikTok / Reels / Shorts</div>
+          <h3 class="viewer-h3" id="viewer-active-title">Videos Cortos (9:16)</h3>
+          <p class="viewer-p" id="viewer-active-desc">Subtítulos cinéticos Whisper palabra por palabra con 13 familias de motion y masterización a -14 LUFS.</p>
+          <div style="background: rgba(255,255,255,0.05); padding: 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); margin-top: 1.5rem;">
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #d4af37; font-weight: 700;">VELOCIDAD DE SÍNTESIS:</span>
+            <div id="viewer-active-speed" style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-top: 4px;">18s auto-corte</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Total Production Coach Spotlight -->
-  <section class="section-wrap" style="border-top: 1px solid rgba(255,255,255,0.08);">
-    <div class="section-head">
-      <span class="tag" style="color: var(--color-gold);">ARQUITECTO // TOTAL PRODUCTION COACH</span>
-      <h2 class="h2">${isEs ? '«ABRAXAS convierte criterio en infraestructura.»' : '«ABRAXAS turns criterion into infrastructure.»'}</h2>
-      <p class="p">${isEs ? 'ARQUITECTO no es un chatbot. Es tu coach, asistente y auditor con reglas forenses para edición, VFX, SFX y música.' : 'ARQUITECTO is not a chatbot. It is your coach, assistant, and auditor for editing, VFX, SFX, and music.'}</p>
-    </div>
-
-    <div class="bento-grid">
-      <div class="spotlight-card col-6" style="background: rgba(212,175,55,0.05); border-color: rgba(212,175,55,0.3);">
-        <span class="card-pill-tag gold">ROL 01 // EL COACH EXIGENTE</span>
-        <h3 class="card-h3">${isEs ? 'Desafía Premisas Débiles' : 'Challenges Weak Premises'}</h3>
-        <p class="card-desc">${isEs ? 'Te frena si intentas publicar contenido genérico. Te exige tesis reales, ganchos con deuda narrativa y payoffs legítimos.' : 'Halts generic fluff. Demands true thesis, narrative debt hooks, and legitimate payoffs.'}</p>
-        <a href="${isRoot ? 'es/' : ''}tools/arquitecto/index.html" class="btn-apple-cta" style="display: inline-block;">${isEs ? 'Ver los 4 Roles de Arquitecto' : 'Explore Arquitecto Roles'}</a>
+    <!-- 4. SECTION: LAS TRES LUNAS & TELEMETRÍA COMERCIAL -->
+    <section id="tres-lunas" class="section-wrap" style="padding-top: 80px;">
+      <div class="section-head" style="text-align: center;">
+        <span class="tag" style="color: #30d158;">COMMERCE TELEMETRY // LAS TRES LUNAS DE RETORNO</span>
+        <h2 class="h2">${isEs ? 'El Bucle de Tres Lunas: De Vistas a Ventas' : 'The Three Moons: From Views to Revenue'}</h2>
+        <p class="p">${isEs ? 'Publicación multicanal, análisis de retención segundo a segundo y libro contable de ventas con escáner OCR de facturas.' : 'Multi-channel dispatch, retention curves, and sales attribution with OCR invoice scanning.'}</p>
       </div>
 
-      <div class="spotlight-card col-6" style="background: rgba(56,189,248,0.05); border-color: rgba(56,189,248,0.3);">
-        <span class="card-pill-tag cyan">ROL 02 // EL ASISTENTE MULTICANAL</span>
-        <h3 class="card-h3">${isEs ? 'Ramifica en 8 Formatos Vivos' : 'Branches into 8 Living Formats'}</h3>
-        <p class="card-desc">${isEs ? 'Toma una nota de voz y genera simultáneamente guiones en 4 tiempos, diapositivas de carrusel, hilos de X y newsletters.' : 'Takes a raw voice note and outputs teleprompter scripts, 8 carousel slides, X threads, and newsletters.'}</p>
-        <a href="${isRoot ? 'es/' : ''}flujo/index.html" class="btn-hero-glass" style="display: inline-block;">${isEs ? 'Ver Ciclo de Vida Completo' : 'View Full Lifecycle Flow'}</a>
+      <div class="bento-grid">
+        <div class="spotlight-card col-4" style="position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag cyan">LUNA 01 // PUBLICADOR</span>
+          <h4 class="card-h3">Distribución a 8 Canales</h4>
+          <p class="card-desc">Despacho adaptativo con metadatos optimizados para cada red social.</p>
+          <div class="card-deepdive-drawer">
+            <div class="deepdive-content-box">
+              <span class="deepdive-tag">ADAPTADORES DE RED</span>
+              <p>Generación de paquetes independientes para TikTok, Instagram Graph API, YouTube Data API v3 y Substack.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="spotlight-card col-4" style="position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag iris">LUNA 02 // RETENCIÓN</span>
+          <h4 class="card-h3">Watch-Time Segundo a Segundo</h4>
+          <p class="card-desc">Ingesta de curvas de drop-off para re-alimentar la formulación de ganchos en YOD.</p>
+          <div class="card-deepdive-drawer">
+            <div class="deepdive-content-box">
+              <span class="deepdive-tag">CLOSED-LOOP LEARNING</span>
+              <p>Operador $S(t+1) = S(t) + A(t)$: YOD penaliza estructuras con caídas de retención superiores al 30% en los primeros 3 segundos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="spotlight-card col-4" style="position: relative; border-color: rgba(48,209,88,0.4);">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag emerald">LUNA 03 // VENTAS & OCR</span>
+          <h4 class="card-h3">Libro Contable & Closers</h4>
+          <p class="card-desc">Atribución de compras por WhatsApp y MercadoLibre con cálculo matemático de ROI.</p>
+          <div class="card-deepdive-drawer">
+            <div class="deepdive-content-box">
+              <span class="deepdive-tag">ECUACIÓN DE ROI</span>
+              <p>\\text{ROI} = \\frac{\\text{Ingresos Atribuidos} - \\text{Costo}}{\\text{Costo}} \\times 100\\%. Registro automático por foto de factura.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  ${getFooterHTML(locale)}
-  ${getFloatingWidgetsHTML(locale)}
+    <!-- 5. SECTION: BRANDING & CAMPAÑAS YOD -->
+    <section id="branding" class="section-wrap" style="padding-top: 80px;">
+      <div class="section-head" style="text-align: center;">
+        <span class="tag" style="color: #bf5af2;">ATZILUTH STRATEGY // YOD CAMPAIGN ENGINE</span>
+        <h2 class="h2">${isEs ? 'El ABRAXAS Branding Method & Diagnóstico' : 'ABRAXAS Branding Method & Diagnostic'}</h2>
+        <p class="p">${isEs ? 'La matriz de 4 vectores que convierte dolores fundacionales en autoridad de mercado incontestable:' : 'The 4-vector matrix mapping origin, destination, identity, and market authority:'}</p>
+      </div>
 
-  <!-- Scripts -->
-  <script src="${isRoot ? '' : '../'}assets/abraxas-engine-v3.js"></script>
+      <div class="bento-grid">
+        <div class="spotlight-card col-6" style="position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag ruby">1. ORIGEN (DOLOR)</span>
+          <h4 class="card-h3">De Dónde Vienes</h4>
+          <p class="card-desc">Cuellos de botella, dependencia de agencias lentas y mensajes desconectados.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Audita las fricciones que frenan el crecimiento orgánico.</p></div></div>
+        </div>
+        <div class="spotlight-card col-6" style="position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag emerald">2. DESTINO (VISIÓN)</span>
+          <h4 class="card-h3">A Dónde Quieres Ir</h4>
+          <p class="card-desc">Metas de facturación, soberanía productiva y liderazgo de categoría.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Define los parámetros objetivos de escalabilidad sin costo de servidores.</p></div></div>
+        </div>
+        <div class="spotlight-card col-6" style="position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag cyan">3. IDENTIDAD ACTUAL</span>
+          <h4 class="card-h3">Quién Eres Ahora</h4>
+          <p class="card-desc">Axiomas inmutables de marca, ventajas competitivas y casos de éxito reales.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Custodia inmutable del Brand Core para evitar alucinaciones.</p></div></div>
+        </div>
+        <div class="spotlight-card col-6" style="position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag iris">4. POTENCIAL EXPANDIDO</span>
+          <h4 class="card-h3">Quién Puedes Llegar a Ser</h4>
+          <p class="card-desc">Tesis de nicho contraria calificada de 0 a 100 que elimina la competencia por precio.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>YOD formula el ángulo de autoridad que comanda lealtad y conversión.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SECTION: TOTAL PRODUCTION COACH -->
+    <section id="coach" class="section-wrap" style="padding-top: 80px;">
+      <div class="section-head" style="text-align: center;">
+        <span class="tag" style="color: #d4af37;">FORENSIC CRITERIA // TOTAL PRODUCTION COACH</span>
+        <h2 class="h2">${isEs ? 'Las 5 Reglas del Total Production Coach' : 'Total Production Coach Rules'}</h2>
+        <p class="p">${isEs ? 'Auditoría estricta de edición, efectos, audio, música y motion para evitar la degradación estética:' : 'Forensic rules governing editing, VFX, SFX, music, and motion:'}</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="spotlight-card col-4" style="position: relative;"><button class="card-expand-btn" title="Expandir">+</button><span class="card-pill-tag gold">EDITING COACH</span><h4 class="card-h3">Cortes J y L</h4><p class="card-desc">El audio de la siguiente toma entra 300ms antes del corte visual para fluidez cinematográfica.</p><div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Prohibición de saltos de corte sin justificación de cambio de idea.</p></div></div></div>
+        <div class="spotlight-card col-4" style="position: relative;"><button class="card-expand-btn" title="Expandir">+</button><span class="card-pill-tag cyan">SFX COACH</span><h4 class="card-h3">no_sfx_needed</h4><p class="card-desc">Si un efecto sonoro no tiene anclaje visual o emocional directo, la directiva es silenciarlo.</p><div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Cero efectos 'whoosh' gratuitos que abaratan la percepción de lujo.</p></div></div></div>
+        <div class="spotlight-card col-4" style="position: relative;"><button class="card-expand-btn" title="Expandir">+</button><span class="card-pill-tag iris">MUSIC COACH</span><h4 class="card-h3">Ducking a -18dB</h4><p class="card-desc">La música de fondo se atenúa automáticamente para que la voz mantenga el 100% de inteligibilidad.</p><div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Compresión side-chain calibrada sobre la frecuencia vocal humana.</p></div></div></div>
+      </div>
+    </section>
+
+    <!-- 7. SECTION: CANON 37 TXT LIVE SEARCH & READER -->
+    <section id="canon-library" class="section-wrap" style="padding-top: 80px;">
+      <div class="section-head" style="text-align: center;">
+        <span class="tag" style="color: #d4af37;">CANONICAL CORPUS // BIBLIOTECA 37 TXT</span>
+        <h2 class="h2">${isEs ? 'El Canon Completo de 37 Dossiers' : 'The Complete 37 Dossiers Canon'}</h2>
+        <p class="p">${isEs ? 'Busca, filtra y lee el texto fundacional completo directamente en tu navegador con evidencia SHA-256:' : 'Search, filter, and read all 37 foundational dossiers in real time:'}</p>
+      </div>
+
+      <div class="spotlight-card col-12" style="background: #090a10; border: 1px solid var(--border-gold); padding: 2rem;">
+        <input type="text" id="canon-search-input" placeholder="🔍 Buscar en los 37 dossiers (ej. Daat, Merkle, VAV, 18s, ROI, YOD)..." style="width: 100%; padding: 14px 18px; border-radius: 10px; background: #000; color: #fff; border: 1px solid rgba(255,255,255,0.2); font-size: 0.95rem; outline: none; margin-bottom: 1.5rem;">
+        
+        <div id="canon-dossiers-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; max-height: 400px; overflow-y: auto;">
+          ${canonDossiersData.map(d => `
+            <div class="dossier-item-card" data-title="${d.title.toLowerCase()}" style="background: rgba(255,255,255,0.04); padding: 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); cursor: pointer;" onclick="document.getElementById('canon-modal-${d.id}').style.display='block'">
+              <span style="font-family: var(--font-mono); color: #d4af37; font-size: 0.75rem; font-weight: 800;">DOSSIER ${d.num}</span>
+              <h5 style="color: #fff; font-size: 0.92rem; margin: 4px 0;">${d.title}</h5>
+              <span style="color: #94a3b8; font-size: 0.78rem;">📄 ${d.filename}</span>
+            </div>
+            <div id="canon-modal-${d.id}" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(15px); z-index: 10000; padding: 2rem; overflow-y: auto;">
+              <div style="max-width: 860px; margin: 2rem auto; background: #0c0d14; border: 1px solid rgba(212,175,55,0.4); border-radius: 16px; padding: 2.5rem; position: relative;">
+                <button onclick="document.getElementById('canon-modal-${d.id}').style.display='none'" style="position: absolute; top: 18px; right: 18px; background: none; border: none; color: #fff; font-size: 1.4rem; cursor: pointer;">✕</button>
+                <span style="color: #d4af37; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800;">DOSSIER ${d.num} // CANON OFICIAL</span>
+                <h3 style="color: #fff; font-size: 1.6rem; margin: 8px 0 1.5rem 0;">${d.title}</h3>
+                <pre style="background: #000; padding: 18px; border-radius: 10px; font-family: var(--font-mono); font-size: 0.82rem; color: #cbd5e1; white-space: pre-wrap; max-height: 500px; overflow-y: auto; border: 1px solid rgba(255,255,255,0.1);">${d.content.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SECTION: BÓVEDA DE RESPALDO & SHA-256 -->
+    <section id="backup" class="section-wrap" style="padding-top: 80px; padding-bottom: 80px;">
+      <div class="spotlight-card col-12" style="background: linear-gradient(180deg, rgba(212,175,55,0.08) 0%, rgba(9,10,16,0.95) 100%); border: 1px solid rgba(212,175,55,0.35); text-align: center; padding: 3rem;">
+        <span class="card-pill-tag gold">HISTORICAL SNAPSHOT // BÓVEDA DE RESPALDO</span>
+        <h3 class="card-h3" style="font-size: 2rem;">Evidencia Criptográfica y Respaldo de Continuidad</h3>
+        <p class="card-desc" style="max-width: 800px; margin: 0 auto 1.5rem auto;">
+          Todo el conocimiento histórico, versiones anteriores, manuales y datasets canónicos están respaldados y sellados con hash criptográfico SHA-256.
+        </p>
+        <div style="font-family: var(--font-mono); font-size: 0.9rem; color: #d4af37; background: #000; padding: 12px 24px; border-radius: 10px; display: inline-block; border: 1px solid rgba(212,175,55,0.3);">
+          SHA-256: 91234741f0b3a1ac5bd7e4c0556fafa868d00769
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  ${getUniversalFooter(locale, depth)}
+  ${getUniversalWidgets(locale, depth)}
+
+  <script>
+    // Live Canon Search Filter
+    document.getElementById('canon-search-input')?.addEventListener('input', function(e) {
+      const q = e.target.value.toLowerCase();
+      document.querySelectorAll('.dossier-item-card').forEach(card => {
+        const title = card.getAttribute('data-title') || '';
+        card.style.display = title.includes(q) ? 'block' : 'none';
+      });
+    });
+  </script>
+  <script src="${root}assets/abraxas-engine-v3.js"></script>
 </body>
 </html>`;
-
-  fs.writeFileSync(path.join(targetDir, 'index.html'), html, 'utf8');
-  console.log(`[Master Awwwards Engine] Generated /${isRoot ? '' : locale + '/'}index.html`);
 }
 
-function executeMasterCompilation() {
-  generateMasterHome('es', true);  // Root /index.html in Spanish
-  generateMasterHome('es', false); // /es/index.html
-  generateMasterHome('en', false); // /en/index.html
-  console.log('✨ [Master Awwwards Engine] Complete master experience compiled flawlessly!');
+function compileMasterAwwwardsUnified() {
+  fs.writeFileSync(path.join(docsDir, 'index.html'), getMasterUnifiedPage('es', 0), 'utf8');
+  fs.writeFileSync(path.join(docsDir, 'es/index.html'), getMasterUnifiedPage('es', 1), 'utf8');
+  fs.writeFileSync(path.join(docsDir, 'en/index.html'), getMasterUnifiedPage('en', 1), 'utf8');
+  console.log('✨ [Master Unified Engine] Root /index.html and /es/ /en/ compiled with complete All-In-One experience!');
 }
 
-executeMasterCompilation();
+compileMasterAwwwardsUnified();
