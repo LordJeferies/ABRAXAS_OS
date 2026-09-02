@@ -50,57 +50,120 @@ function getHeader(locale, activePage, depth = 3) {
 }
 
 function getFooter(locale, depth = 3) {
+    function getMegaFooter(locale, depth = 2) {
   const isEs = locale === 'es';
-  const root = getRootPrefix(depth);
-  const langPrefix = `${root}${locale}/`;
+  let root = '';
+  if (depth === 1) root = '../';
+  else if (depth === 2) root = '../../';
+  else if (depth === 3) root = '../../../';
+  else if (depth === 4) root = '../../../../';
+
+  const lang = `${root}${locale}/`;
 
   return `
-  <footer style="background: #050508; border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 1.5rem 3rem 1.5rem; font-size: 0.85rem; color: #86868b; margin-top: 6rem;">
-    <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+  <!-- MEGA FOOTER UNIVERSAL ABRAXAS OS -->
+  <footer style="background: #040407; border-top: 1px solid rgba(255,255,255,0.1); padding: 5rem 1.5rem 3rem 1.5rem; font-size: 0.85rem; color: #86868b; margin-top: 6rem;">
+    <div style="max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+      
+      <!-- COL 1: ESTRUCTURA MONUMENTAL & CÁMARAS -->
       <div>
-        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 1rem;">${isEs ? 'La Gran Pirámide & Cámaras' : 'Great Pyramid & Chambers'}</h4>
+        <h4 style="color: #d4af37; font-size: 0.95rem; margin-bottom: 1rem; font-weight: 700;">▲ La Gran Pirámide</h4>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-          <li><a href="${langPrefix}piramide/index.html" style="color: #d4af37; font-weight: 700;">▲ ${isEs ? 'Estructura Monumental' : 'Monumental Structure'}</a></li>
-          <li><a href="${langPrefix}piramide/cuspide-oro/index.html">👑 ${isEs ? 'Cúspide de Oro (YOD & Singularidad)' : 'Gold Capstone (YOD & Singularity)'}</a></li>
-          <li><a href="${langPrefix}piramide/umbral-daat/index.html">👁️ ${isEs ? 'Umbral de Daat & SHIM (0.00% GAPs)' : 'Daat Threshold & SHIM (0.00% GAPs)'}</a></li>
-          <li><a href="${langPrefix}piramide/cristales-teluricos/index.html">💎 ${isEs ? 'Santuario de Cristales Telúricos' : 'Telluric Crystals Sanctuary'}</a></li>
-          <li><a href="${langPrefix}piramide/forja-vav/index.html">🎬 ${isEs ? 'La Gran Forja Audiovisual VAV (18s)' : 'VAV Audiovisual Forge (18s)'}</a></li>
-          <li><a href="${langPrefix}piramide/camara-sqlite/index.html">🗄️ ${isEs ? 'Cámara Subterránea SQLite (metrics.db)' : 'SQLite Subterranean Vault (metrics.db)'}</a></li>
+          <li><a href="${lang}piramide/index.html" style="color: #fff; font-weight: 600;">▲ Estructura Monumental</a></li>
+          <li><a href="${lang}piramide/cuspide-oro/index.html">👑 Cúspide de Oro (YOD)</a></li>
+          <li><a href="${lang}piramide/umbral-daat/index.html">👁️ Umbral Da'at & SHIM</a></li>
+          <li><a href="${lang}piramide/cristales-teluricos/index.html">💎 Cristales Telúricos</a></li>
+          <li><a href="${lang}piramide/forja-vav/index.html">🎬 Forja Audiovisual VAV (18s)</a></li>
+          <li><a href="${lang}piramide/camara-sqlite/index.html">🗄️ Bóveda SQLite (metrics.db)</a></li>
         </ul>
       </div>
+
+      <!-- COL 2: LOS DOS SOLES & LOS 4 MUNDOS -->
       <div>
-        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 1rem;">${isEs ? 'Los Dos Soles Pre-Sefiróticos' : 'The Two Pre-Sephirotic Suns'}</h4>
+        <h4 style="color: #fef08a; font-size: 0.95rem; margin-bottom: 1rem; font-weight: 700;">☀️ Soles & 4 Planos</h4>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-          <li><a href="${langPrefix}soles/sol-negro/index.html" style="color: #cbd5e1;">🌑 ${isEs ? 'El Sol Negro (Software & Sabiduría)' : 'The Black Sun (Engine & Laws)'}</a></li>
-          <li><a href="${langPrefix}soles/sol-blanco/index.html" style="color: #fef08a;">☀️ ${isEs ? 'El Sol Blanco (Marca del Cliente)' : 'The White Sun (Client Brand)'}</a></li>
-          <li><a href="${langPrefix}branding-method/index.html">🎯 ${isEs ? 'Branding Method & 4 Vectores' : 'Branding Method & 4 Vectors'}</a></li>
+          <li><a href="${lang}soles/sol-negro/index.html" style="color: #cbd5e1;">🌑 Sol Negro (Software & Ley)</a></li>
+          <li><a href="${lang}soles/sol-blanco/index.html" style="color: #fef08a;">☀️ Sol Blanco (Marca del Cliente)</a></li>
+          <li><a href="${lang}mundos/atziluth/index.html" style="color: #f59e0b;">🔥 Cara Sur: Atziluth (Mente)</a></li>
+          <li><a href="${lang}mundos/briah/index.html" style="color: #38bdf8;">🌊 Cara Occidente: Briah (Datos)</a></li>
+          <li><a href="${lang}mundos/yetzirah/index.html" style="color: #bf5af2;">💨 Cara Oriente: Yetzirah (Forja)</a></li>
+          <li><a href="${lang}mundos/assiah/index.html" style="color: #30d158;">🌱 Cara Norte: Assiah (Acción)</a></li>
         </ul>
       </div>
+
+      <!-- COL 3: LAS TRES LUNAS ORBITALES -->
       <div>
-        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 1rem;">${isEs ? 'Las 4 Caras (Dion Fortune)' : 'The 4 Faces (Dion Fortune)'}</h4>
+        <h4 style="color: #38bdf8; font-size: 0.95rem; margin-bottom: 1rem; font-weight: 700;">🛰️ Las Tres Lunas</h4>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-          <li><a href="${langPrefix}mundos/atziluth/index.html" style="color: #f59e0b;">🔥 Cara Sur: Atziluth (Mente / YOD)</a></li>
-          <li><a href="${langPrefix}mundos/briah/index.html" style="color: #38bdf8;">🌊 Cara Occidente: Briah (Datos / HE I)</a></li>
-          <li><a href="${langPrefix}mundos/yetzirah/index.html" style="color: #bf5af2;">💨 Cara Oriente: Yetzirah (Forja / VAV)</a></li>
-          <li><a href="${langPrefix}mundos/assiah/index.html" style="color: #30d158;">🌱 Cara Norte: Assiah (Acción / HE II)</a></li>
+          <li><a href="${lang}lunas/luna-1-publicador/index.html">🛰️ Luna 1: Despacho a 8 Redes</a></li>
+          <li><a href="${lang}lunas/luna-2-procesos-retencion/index.html">🛰️ Luna 2: Tareas & Retención</a></li>
+          <li><a href="${lang}lunas/luna-3-financiera-roi/index.html" style="color: #30d158; font-weight: 700;">🛰️ Luna 3: Finanzas, OCR & ROI</a></li>
+          <li><a href="${lang}luna-comercial/index.html#ventas-campana">🎯 Ventas por Campaña General</a></li>
+          <li><a href="${lang}luna-comercial/index.html#atribucion">🔗 Ventas por Pieza Individual</a></li>
         </ul>
       </div>
+
+      <!-- COL 4: PROCESOS, VENTAS & INGENIERÍA -->
       <div>
-        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 1rem;">${isEs ? 'Las Tres Lunas Orbitales' : 'The Three Orbital Moons'}</h4>
+        <h4 style="color: #30d158; font-size: 0.95rem; margin-bottom: 1rem; font-weight: 700;">💼 Ventas & Procesos</h4>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-          <li><a href="${langPrefix}lunas/luna-1-publicador/index.html">🛰️ Luna 1: Despacho a 8 Redes</a></li>
-          <li><a href="${langPrefix}lunas/luna-2-procesos-retencion/index.html">🛰️ Luna 2: Tareas de Equipo & Retención</a></li>
-          <li><a href="${langPrefix}lunas/luna-3-financiera-roi/index.html" style="color: #30d158; font-weight: 700;">🛰️ Luna 3: Finanzas, OCR & ROI</a></li>
+          <li><a href="${lang}proceso-ingenieria/index.html" style="color: #38bdf8; font-weight: 600;">⚙️ Proceso Técnico (Sin Cábala)</a></li>
+          <li><a href="${lang}speech-ventas/index.html" style="color: #30d158; font-weight: 700;">🔥 Speech de Ventas & Objeciones</a></li>
+          <li><a href="${lang}branding-method/index.html#campanas">🎯 Branding Method & 4 Campañas</a></li>
+          <li><a href="${lang}gerencia/index.html">💼 Gobernanza & Control de Costos</a></li>
+          <li><a href="${lang}abraxas-core-example/index.html">💎 Caso Real ABRAXAS Core</a></li>
+          <li><a href="${lang}criterios-roadmap/index.html">🗺️ Criterios & Roadmap</a></li>
         </ul>
       </div>
+
+      <!-- COL 5: LAS 10 HERRAMIENTAS CORE -->
+      <div>
+        <h4 style="color: #bf5af2; font-size: 0.95rem; margin-bottom: 1rem; font-weight: 700;">🔧 Las Herramientas</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="${lang}tools/yod/index.html">🧭 YOD (Cognitive Radar)</a></li>
+          <li><a href="${lang}tools/shim/index.html">🔍 SHIM (0.00% GAPs Set)</a></li>
+          <li><a href="${lang}tools/vav/cuts/index.html">✂️ VAV Cuts (Auto-Corte 18s)</a></li>
+          <li><a href="${lang}tools/vav/motions/index.html">🎬 VAV Motions (7 Motions)</a></li>
+          <li><a href="${lang}tools/vav/captions/index.html">💬 VAV Captions (Cinéticos)</a></li>
+          <li><a href="${lang}tools/vav/vfx/index.html">✨ VAV VFX (Ópticos 35mm)</a></li>
+          <li><a href="${lang}tools/vav/framing/index.html">📐 VAV Framing (Safe Zones 9:16)</a></li>
+          <li><a href="${lang}tools/vav/carousel/index.html">📑 VAV Carousel (4:5)</a></li>
+          <li><a href="${lang}tools/arquitecto/index.html">👁️ Arquitecto (Ojo 3D 9D)</a></li>
+          <li><a href="${lang}tools/he/index.html">🛡️ HE Desk (6 Compuertas)</a></li>
+          <li><a href="${lang}tools/contenido/index.html">📦 Contenido (Spine)</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 6: FILOSOFÍA, SCRUM & BIBLIOTECA -->
+      <div>
+        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 1rem; font-weight: 700;">📚 Canon & Filosofía</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="${lang}cosmogonia/index.html">☀️ Cosmogonía Solar Completa</a></li>
+          <li><a href="${lang}flujo/index.html">🔄 Ciclo de Keter a Malkut (40 Est.)</a></li>
+          <li><a href="${lang}catedra/index.html">🏛️ Cátedra 165 IQ (Alta Autoridad)</a></li>
+          <li><a href="${lang}gustos-canon/index.html">🎨 Canon de Gustos Apple 2026</a></li>
+          <li><a href="${lang}prompt-maestro/index.html">⚡ Prompt Maestro (100 Prompts)</a></li>
+          <li><a href="${lang}scrum/index.html">📋 Scrum & Backlog 100%</a></li>
+          <li><a href="${lang}canon/index.html">📚 Buscador Canon 37 TXT</a></li>
+          <li><a href="${lang}backup/index.html">🏛️ Bóveda de Respaldo SHA-256</a></li>
+        </ul>
+      </div>
+
     </div>
-    <div style="max-width: 1240px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-      <p>ABRAXAS OS &bull; Arquitectura Determinista en Apple Silicon. Soberanía Absoluta.</p>
-      <p style="font-family: var(--font-mono); color: #d4af37; font-size: 0.8rem;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+
+    <!-- Barra Inferior de Copyright y Hash -->
+    <div style="max-width: 1320px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <p style="color: #64748b;">ABRAXAS OS &bull; Sistema Operativo de Contenido Determinista en Apple Silicon. Todos los derechos reservados.</p>
+      <div style="display: flex; gap: 14px; align-items: center;">
+        <span style="font-family: var(--font-mono); color: #d4af37; font-size: 0.8rem;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></span>
+      </div>
     </div>
   </footer>
+  <!-- FIN MEGA FOOTER UNIVERSAL -->
   `;
 }
+    return getMegaFooter(locale, depth);
+  }
 
 function renderRichPage(filePath, data, locale, activePage, depth) {
   const root = getRootPrefix(depth);
