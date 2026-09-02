@@ -336,6 +336,8 @@ const actsData = {
 
 function generateAppleV3Page(locale, depth = 2) {
   const isEs = locale === 'es';
+  const root = depth === 1 ? '../' : depth === 2 ? '../../' : '';
+  const langPrefix = `${root}${locale}/`;
   const acts = actsData[locale];
   const targetDir = path.join(docsDir, locale, 'v3');
   fs.mkdirSync(targetDir, { recursive: true });
@@ -370,7 +372,7 @@ function generateAppleV3Page(locale, depth = 2) {
     <div class="hero-actions">
       <a href="#viewer" class="btn-pill-primary">${isEs ? '⚡ Explorar Ecosistema 8-en-1' : '⚡ Explore 8-in-1 Ecosystem'}</a>
       <a href="#governance" class="btn-pill-secondary">${isEs ? '💼 Para Gerencia y Directores' : '💼 For Executives'}</a>
-      <a href="../canon/index.html" class="btn-pill-secondary">${isEs ? '📚 Leer el Canon 37 TXT' : '📚 Read 37 TXT Canon'}</a>
+      <a href="${langPrefix}canon/index.html" class="btn-pill-secondary">${isEs ? '📚 Leer el Canon 37 TXT' : '📚 Read 37 TXT Canon'}</a>
     </div>
 
     <!-- Master Hardware Chassis with Plate 01 -->
@@ -461,7 +463,7 @@ function generateAppleV3Page(locale, depth = 2) {
               <li>🔒 <strong>${isEs ? 'Sellado CAS:' : 'CAS Vault:'}</strong> SHA-256 Inmutable</li>
             </ul>
           </div>
-          <a href="../ecosistema/index.html" class="btn-pill-primary" style="margin-top: 2rem; justify-content: center;">
+          <a href="${langPrefix}ecosistema/index.html" class="btn-pill-primary" style="margin-top: 2rem; justify-content: center;">
             ${isEs ? 'Ver Ecosistema Completo →' : 'View Full Ecosystem →'}
           </a>
         </div>
@@ -646,7 +648,7 @@ function generateAppleV3Page(locale, depth = 2) {
           ? 'Lee directamente los 37 textos canónicos: ontología, ingeniería 4D, gobernanza y los 100 prompts cinematográficos con buscador instantáneo.' 
           : 'Read all 37 authentic canonical dossiers: ontology, 4D engineering, governance, and 100 film prompts with live search.'}
       </p>
-      <a href="../canon/index.html" class="btn-pill-primary" style="font-size: 1.1rem; padding: 14px 32px;">
+      <a href="${langPrefix}canon/index.html" class="btn-pill-primary" style="font-size: 1.1rem; padding: 14px 32px;">
         ${isEs ? 'Abrir Biblioteca Canon 37 TXT →' : 'Open Canon 37 TXT Library →'}
       </a>
     </div>
@@ -688,10 +690,10 @@ function generateAppleV3Page(locale, depth = 2) {
         <div class="footer-v3-col">
           <h4>${isEs ? 'Base de Conocimiento' : 'Knowledge Base'}</h4>
           <ul>
-            <li><a href="../canon/index.html">${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT Library'}</a></li>
-            <li><a href="../arquitectura/index.html">${isEs ? 'Cábala & Arquitectura 4D' : 'Kabbalah & 4D Architecture'}</a></li>
-            <li><a href="../guia/index.html">${isEs ? 'Guía Rápida en 2 Minutos' : 'Quick 2-Minute Guide'}</a></li>
-            <li><a href="../backup/index.html">${isEs ? '🏛️ Versión Backup / Legacy' : '🏛️ Legacy Backup Version'}</a></li>
+            <li><a href="${langPrefix}canon/index.html">${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT Library'}</a></li>
+            <li><a href="${langPrefix}contexto/index.html">${isEs ? 'Cábala & Arquitectura 4D' : 'Kabbalah & 4D Architecture'}</a></li>
+            <li><a href="${langPrefix}catedra/index.html">${isEs ? 'Guía Rápida en 2 Minutos' : 'Quick 2-Minute Guide'}</a></li>
+            <li><a href="${langPrefix}backup/index.html">${isEs ? '🏛️ Versión Backup / Legacy' : '🏛️ Legacy Backup Version'}</a></li>
           </ul>
         </div>
       </div>
@@ -761,20 +763,36 @@ function generateAppleV3Page(locale, depth = 2) {
 
 function executeV3Master() {
   ['es', 'en'].forEach(locale => {
-    generateAppleV3Page(locale);
+    generateAppleV3Page(locale, 2);
   });
 
-  // Also create root /v3/index.html
-  const esV3 = fs.readFileSync(path.join(docsDir, 'es/v3/index.html'), 'utf8');
+  // Also create root /v3/index.html with depth 1
   const rootV3Dir = path.join(docsDir, 'v3');
   fs.mkdirSync(rootV3Dir, { recursive: true });
-  const rootV3Html = esV3
-    .replace(/href="\.\.\/\.\.\/assets\//g, 'href="../assets/')
-    .replace(/src="\.\.\/\.\.\/assets\//g, 'src="../assets/')
-    .replace(/href="\.\.\/canon\//g, 'href="../es/canon/')
-    .replace(/href="\.\.\/ecosistema\//g, 'href="../es/ecosistema/')
-    .replace(/href="\.\.\/backup\//g, 'href="../es/backup/')
-    .replace(/href="\.\.\/index\.html"/g, 'href="../index.html"');
+  const isEs = true;
+  const locale = 'es';
+  const depth = 1;
+  const root = '../';
+  const langPrefix = '../es/';
+  const acts = actsData.es;
+  
+  const rootV3Html = `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MacBook Pro — ABRAXAS OS Edition (v3 Oficial)</title>
+  <meta name="description" content="Mente abierta. Poder total. El Sistema Operativo de Contenidos a velocidad industrial en Apple Silicon.">
+  ${getHeadStyles(1)}
+</head>
+<body class="theme-dark">
+  ${getV3Localnav('es', 1)}
+  ${fs.readFileSync(path.join(docsDir, 'es/v3/index.html'), 'utf8').split('<section id="welcome"')[1].split('</body>')[0]}
+</body>
+</html>`
+    .replaceAll('../../assets/', '../assets/')
+    .replaceAll('../../es/', '../es/')
+    .replaceAll('../../index.html', '../index.html');
 
   fs.writeFileSync(path.join(rootV3Dir, 'index.html'), rootV3Html, 'utf8');
   console.log('[Apple v3 Engine] Generated root /v3/index.html successfully!');

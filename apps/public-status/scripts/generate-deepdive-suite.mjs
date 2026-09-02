@@ -73,8 +73,12 @@ function getInternalQuickMenu(items) {
   `;
 }
 
-function getFooter(locale) {
+
+function getFooter(locale, depth = 3) {
   const isEs = locale === 'es';
+  const root = getRootPrefix(depth);
+  const langPrefix = `${root}${locale}/`;
+
   return `
   <footer class="apple-footer-v3">
     <div class="footer-v3-inner">
@@ -82,28 +86,31 @@ function getFooter(locale) {
         <div class="footer-v3-col">
           <h4>${isEs ? 'Herramientas de Síntesis' : 'Synthesis Tools'}</h4>
           <ul>
-            <li><a href="../vav/motions/index.html">${isEs ? '13 Familias de Motion Remotion' : '13 Remotion Motion Families'}</a></li>
-            <li><a href="../vav/captions/index.html">${isEs ? 'Subtítulos Cinéticos Whisper' : 'Kinetic Subtitles Whisper'}</a></li>
-            <li><a href="../vav/cuts/index.html">${isEs ? 'Cortes Quirúrgicos en 18s' : '18s Surgical Auto-Cuts'}</a></li>
-            <li><a href="../shim/index.html">${isEs ? 'Metrología 0.00% GAPs' : '0.00% GAP Metrology'}</a></li>
+            <li><a href="${langPrefix}tools/vav/motions/index.html">${isEs ? '13 Familias de Motion Remotion' : '13 Remotion Motion Families'}</a></li>
+            <li><a href="${langPrefix}tools/vav/captions/index.html">${isEs ? 'Subtítulos Cinéticos Whisper' : 'Kinetic Subtitles Whisper'}</a></li>
+            <li><a href="${langPrefix}tools/vav/cuts/index.html">${isEs ? 'Cortes Quirúrgicos en 18s' : '18s Surgical Auto-Cuts'}</a></li>
+            <li><a href="${langPrefix}tools/vav/vfx/index.html">${isEs ? 'VAV VFX (Efectos & Zooms)' : 'VAV VFX (Effects & Zooms)'}</a></li>
+            <li><a href="${langPrefix}tools/vav/framing/index.html">${isEs ? 'VAV Framing (Multi-Cámara)' : 'VAV Framing (Multi-Camera)'}</a></li>
+            <li><a href="${langPrefix}tools/vav/carousel/index.html" style="color: #bf5af2;">${isEs ? '📑 VAV Carousel (Textos & PNGs)' : '📑 VAV Carousel (Text & PNGs)'}</a></li>
+            <li><a href="${langPrefix}tools/shim/index.html">${isEs ? 'Metrología 0.00% GAPs' : '0.00% GAP Metrology'}</a></li>
           </ul>
         </div>
         <div class="footer-v3-col">
           <h4>${isEs ? 'Inteligencia & Orquestación' : 'Intelligence & Orchestration'}</h4>
           <ul>
-            <li><a href="../arquitecto/index.html">${isEs ? 'Arquitecto (Coach & Asistente)' : 'Arquitecto (Coach & Assistant)'}</a></li>
-            <li><a href="../yod/index.html">${isEs ? 'YOD (Radar de Puntos Ciegos)' : 'YOD (Niche Blindspot Radar)'}</a></li>
-            <li><a href="../contenido/index.html">${isEs ? 'Contenido (Merkle-DAG 8 Formatos)' : 'Contenido (Merkle-DAG 8 Formats)'}</a></li>
-            <li><a href="../he/index.html">${isEs ? 'HE (Despacho de 50 Lotes)' : 'HE (50-Asset Batch Desk)'}</a></li>
+            <li><a href="${langPrefix}tools/arquitecto/index.html">${isEs ? 'Arquitecto (Coach & Asistente)' : 'Arquitecto (Coach & Assistant)'}</a></li>
+            <li><a href="${langPrefix}tools/yod/index.html">${isEs ? 'YOD (Radar de Puntos Ciegos)' : 'YOD (Niche Blindspot Radar)'}</a></li>
+            <li><a href="${langPrefix}tools/contenido/index.html">${isEs ? 'Contenido (Merkle-DAG 8 Formatos)' : 'Contenido (Merkle-DAG 8 Formats)'}</a></li>
+            <li><a href="${langPrefix}tools/he/index.html">${isEs ? 'HE (Despacho de 50 Lotes)' : 'HE (50-Asset Batch Desk)'}</a></li>
           </ul>
         </div>
         <div class="footer-v3-col">
           <h4>${isEs ? 'Gobernanza & Procesos' : 'Governance & Flow'}</h4>
           <ul>
-            <li><a href="../../flujo/index.html">${isEs ? 'Ciclo de Vida del Contenido' : 'Content Lifecycle Journey'}</a></li>
-            <li><a href="../../gerencia/index.html">${isEs ? 'Auditoría Gerencial SQLite' : 'SQLite Executive Audit'}</a></li>
-            <li><a href="../../canon/index.html">${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT Library'}</a></li>
-            <li><a href="../../backup/index.html">${isEs ? 'Versión Backup de Respaldo' : 'Legacy Backup Snapshot'}</a></li>
+            <li><a href="${langPrefix}flujo/index.html">${isEs ? 'Ciclo de Vida del Contenido' : 'Content Lifecycle Journey'}</a></li>
+            <li><a href="${langPrefix}gerencia/index.html">${isEs ? 'Auditoría Gerencial SQLite' : 'SQLite Executive Audit'}</a></li>
+            <li><a href="${langPrefix}canon/index.html">${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT Library'}</a></li>
+            <li><a href="${langPrefix}backup/index.html">${isEs ? 'Versión Backup de Respaldo' : 'Legacy Backup Snapshot'}</a></li>
           </ul>
         </div>
       </div>
@@ -358,7 +365,7 @@ function generateMotionsPage(locale) {
 
     </div>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 4)}
 </body>
 </html>`;
 
@@ -494,7 +501,7 @@ function generateCaptionsPage(locale) {
 
   </main>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 4)}
 </body>
 </html>`;
 
@@ -678,7 +685,7 @@ function generateCutsPage(locale) {
 
   </main>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 4)}
 </body>
 </html>`;
 
@@ -799,7 +806,7 @@ function generateShimPage(locale) {
 
   </main>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 3)}
 </body>
 </html>`;
 
@@ -913,7 +920,7 @@ function generateArquitectoPage(locale) {
 
   </main>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 3)}
 </body>
 </html>`;
 
@@ -1021,7 +1028,7 @@ function generateLifecycleFlowPage(locale) {
 
   </main>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 2)}
 </body>
 </html>`;
 
@@ -1094,7 +1101,7 @@ function generateContenidoPage(locale) {
 
   </main>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 3)}
 </body>
 </html>`;
 
@@ -1166,7 +1173,7 @@ function generateYodPage(locale) {
 
   </main>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 3)}
 </body>
 </html>`;
 
@@ -1238,7 +1245,7 @@ function generateHePage(locale) {
 
   </main>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 3)}
 </body>
 </html>`;
 
@@ -1367,7 +1374,7 @@ function generateVavVfxPage(locale) {
 
   </main>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 4)}
 </body>
 </html>`;
 
@@ -1526,12 +1533,177 @@ function generateVavFramingPage(locale) {
 
   </main>
 
-  ${getFooter(locale)}
+  ${getFooter(locale, 4)}
 </body>
 </html>`;
 
   fs.writeFileSync(path.join(targetDir, 'index.html'), html, 'utf8');
   console.log(`[DeepDive Suite] Generated /${locale}/tools/vav/framing/index.html`);
+}
+
+
+// GENERATE VAV CAROUSEL PAGE (/tools/vav/carousel/index.html)
+function generateVavCarouselPage(locale) {
+  const isEs = locale === 'es';
+  const targetDir = path.join(docsDir, locale, 'tools/vav/carousel');
+  fs.mkdirSync(targetDir, { recursive: true });
+
+  const quickItems = [
+    { label: '⚡ En 30s', href: '#resumen' },
+    { label: '📁 Auto-Carga de Imágenes', href: '#auto-carga' },
+    { label: '✨ Textos & Letras Animadas', href: '#animacion-letras' },
+    { label: '📄 Efectos PNG & Paper-Cut', href: '#png-papercut' },
+    { label: '🤖 Modo Manual vs IA', href: '#control' }
+  ];
+
+  const html = `<!DOCTYPE html>
+<html lang="${locale}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${isEs ? 'VAV Carousel: Tipografía Inteligente, Animación & PNGs — ABRAXAS OS' : 'VAV Carousel: Typography, Motion & PNG Layering — ABRAXAS OS'}</title>
+  <meta name="description" content="${isEs ? 'Cómo VAV Carousel coloca textos sobre imágenes limpias, compone PNGs sugeridos y convierte carruseles 4:5 en videos animados con efecto máquina de escribir y paper-cut.' : 'VAV Carousel turns static images into animated typographic carousels with typewriter and paper-cut animations.'}">
+  <link rel="stylesheet" href="../../../../assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="../../../../assets/apple-macbook-pro-v3.css">
+</head>
+<body class="theme-dark">
+  ${getHeader(locale, 'carousel', 4)}
+  ${getInternalQuickMenu(quickItems)}
+
+  <main class="section-container" style="padding-top: 60px; padding-bottom: 80px; max-width: 1240px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+    
+    <div class="section-title-wrap" style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-eyebrow" style="color: #bf5af2; font-weight: 800; letter-spacing: 0.1em; font-family: var(--font-mono);">VAV SÍNTESIS // MOTOR DE CARRUSELES 4:5 & ANIMACIÓN</span>
+      <h1 class="headline-gradient" style="font-size: clamp(2.5rem, 5.5vw, 4.2rem); margin-top: 10px;">
+        ${isEs ? 'VAV Carousel.<br/>De Fotos Limpias a Diapositivas Animadas.' : 'VAV Carousel.<br/>From Clean Plates to Animated Slides.'}
+      </h1>
+      <p class="subhead" style="margin: 0 auto; max-width: 860px; color: #94a3b8; font-size: 1.1rem; line-height: 1.6;">
+        ${isEs 
+          ? 'Coloca textos de alto impacto sobre imágenes generadas sin texto, añade elementos PNGs transparentes con sugerencias de composición espacial y transforma carruseles estáticos en videos animados con efectos de máquina de escribir y recortes de papel.'
+          : 'Place high-impact typography on clean background plates, layer PNG elements intelligently, and convert static carousels into animated micro-videos.'}
+      </p>
+    </div>
+
+    <!-- Dual Summary: En 30s + Especificación -->
+    <div id="resumen" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+      <div class="bento-box" style="background: rgba(191,90,242,0.08); border: 1px solid rgba(191,90,242,0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag purple" style="color: #bf5af2; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">${isEs ? 'Control Total Tipográfico y Gráfico' : 'Total Typographic & Visual Control'}</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #e2e8f0; line-height: 1.55;">
+          <li>📁 <strong>Carga Automática de Carpeta:</strong> Arrastra tus fotos limpias a la carpeta indicada por Arquitecto y el sistema monta los textos del guion al instante.</li>
+          <li>✍️ <strong>Animación de Letras:</strong> Elige entre aparición letra a letra (Typewriter), palabra por palabra elástica o fade-in en bloque.</li>
+          <li>📄 <strong>Composición de PNGs Sugeridos:</strong> Ubica stickers, diagramas y capturas con efecto 'Paper-Cut' o difuminado suave.</li>
+          <li>🎬 <strong>Doble Salida:</strong> Exporta tanto en imágenes estáticas 4:5 de alta definición como en video animado 60 FPS para Instagram y TikTok.</li>
+        </ul>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">MODO MANUAL & AGENTES IA</span>
+            <p>Puedes dejar que los agentes de IA redacten y ubiquen los textos automáticamente, o intervenir manualmente con el editor visual para ajustar kerning, safe zones y jerarquías.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-box" style="background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag cyan" style="color: #38bdf8; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">🛠️ EN PROFUNDIDAD // MOTOR DE DISPOSICIÓN ESPACIAL</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">${isEs ? 'Zonas de Respiración y Detección de Contraste' : 'Safe Zones & Contrast Detection'}</h3>
+        <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 14px;">
+          ${isEs 
+            ? 'VAV Carousel analiza la luminancia de la imagen de fondo en cuadrículas de 16x16. Si detecta áreas complejas, aplica automáticamente una capa de gradiente difuso "#000000" al 40% para garantizar legibilidad WCAG AAA.' 
+            : 'VAV Carousel computes 16x16 luminance grids and injects subtle gradient backdrops ensuring WCAG AAA readability.'}
+        </p>
+        <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 12px; color: #38bdf8; border: 1px solid rgba(255,255,255,0.1);">
+          carouselRules: { aspect: '4:5', safeMargin: '108px', textContrast: 'AAA', font: 'SF Pro Display' }
+        </div>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">ESPECIFICACIÓN DE RENDER</span>
+            <p>Renderizado vectorial por Remotion SVG + Canvas a 2160x2700px (calidad Retina 8K sin pixelación).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. SUBSECCIÓN: AUTO-CARGA -->
+    <section id="auto-carga" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #bf5af2; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #bf5af2; font-size: 0.8rem; font-weight: 800;">AUTOMATIZACIÓN // INGESTA DE CARPETA</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">${isEs ? 'Montaje Automático desde Imágenes Limpias' : 'Automated Staging from Clean Plates'}</h2>
+      </div>
+
+      <div class="spotlight-card col-12" style="background: #090a10; border: 1px solid rgba(191,90,242,0.3); padding: 2rem; position: relative;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <p style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.6;">
+          Arquitecto te indica la ruta de la carpeta del proyecto (ej. <code>/activos/carrusel_04/plates/</code>). Al guardar tus imágenes sin texto allí, VAV Carousel lee el guion del Lienzo, detecta el número de diapositivas (1 a 10) y genera una previsualización con la tipografía oficial, números de página y llamadas a la acción perfectamente alineadas.
+        </p>
+        <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Soporta formatos WebP, PNG, TIFF y JPG con asignación automática de orden por nombre de archivo.</p></div></div>
+      </div>
+    </section>
+
+    <!-- 2. SUBSECCIÓN: ANIMACIÓN DE LETRAS -->
+    <section id="animacion-letras" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #38bdf8; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #38bdf8; font-size: 0.8rem; font-weight: 800;">CINÉTICA // ESTILOS DE ANIMACIÓN DE TEXTO</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">${isEs ? 'Modos de Entrada de Tipografía' : 'Typography Animation Styles'}</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(56,189,248,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag cyan">MODO 01</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Typewriter (Máquina de Escribir)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Las letras aparecen una a una con cursor parpadeante, creando intriga y retención de lectura.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Velocidad configurable: 25ms a 60ms por carácter con micro-sonido mecánico opcional.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(212,175,55,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag gold">MODO 02</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Kinetic Elastic Pop</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Las palabras clave entran con un sutil rebote elástico (spring) para enfatizar datos y números.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Física Remotion con mass: 0.4 y stiffness: 120 para un impacto enérgico y moderno.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(48,209,88,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag emerald">MODO 03</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Smooth Block Fade</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Disolvencia suave y elegante de oraciones completas para marcas de lujo y estética sobria.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Transición de opacidad de 0 a 100% en 300ms con curva de aceleración cubic-bezier.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SUBSECCIÓN: PNGs & PAPERCUT -->
+    <section id="png-papercut" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #30d158; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #30d158; font-size: 0.8rem; font-weight: 800;">COMPOSICIÓN // CAPAS PNG & PAPERCUT</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">${isEs ? 'Superposición de Elementos Gráficos y Recortes' : 'PNG Layering & Paper-Cut Animation'}</h2>
+      </div>
+
+      <div class="spotlight-card col-12" style="background: #090a10; border: 1px solid rgba(48,209,88,0.3); padding: 2rem; position: relative;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <p style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.6;">
+          Cuando arrastras elementos PNGs transparentes (gráficos de barras, capturas de pantalla, sellos dorados o iconos), VAV Carousel sugiere la posición espacial óptima y aplica estilos de animación como:
+        </p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 12px; color: #cbd5e1; font-size: 0.92rem;">
+          <li>✂️ <strong>Efecto Paper-Cut:</strong> El PNG entra cayendo con sombra paralela realista como si se pegara sobre el papel.</li>
+          <li>🌫️ <strong>Difuminado Gaussian Reveal:</strong> Aparece desde un desenfoque progresivo suave.</li>
+          <li>🎈 <strong>Flotación Sutil:</strong> Micro-movimiento senoidal oscilatorio para dar vida a la diapositiva en formato video.</li>
+        </ul>
+        <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Cálculo de sombras dinámicas con CSS <code>drop-shadow(0 12px 24px rgba(0,0,0,0.45))</code>.</p></div></div>
+      </div>
+    </section>
+
+  </main>
+
+  ${getFooter(locale, 4)}
+</body>
+</html>`;
+
+  fs.writeFileSync(path.join(targetDir, 'index.html'), html, 'utf8');
+  console.log(`[DeepDive Suite] Generated /${locale}/tools/vav/carousel/index.html`);
 }
 
 function executeDeepDiveSuite() {
@@ -1541,6 +1713,7 @@ function executeDeepDiveSuite() {
     generateCutsPage(locale);
     generateVavVfxPage(locale);
     generateVavFramingPage(locale);
+    generateVavCarouselPage(locale);
     generateShimPage(locale);
     generateArquitectoPage(locale);
     generateContenidoPage(locale);
