@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Proceso Técnico y Operativo de ABRAXAS OS (Sin Misticismo) — ABRAXAS OS</title>
+  <meta name="description" content="La guía técnica, operativa y comercial exhaustiva de ABRAXAS OS: cómo funciona el software paso a paso desde el diagnóstico de nicho hasta el retorno en dólares en SQLite sin referencias místicas.">
+  <link rel="stylesheet" href="../../assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="../../assets/apple-macbook-pro-v3.css">
+</head>
+<body class="theme-dark">
+  
+  <div class="film-grain-overlay"></div>
+  <nav class="apple-localnav" aria-label="Local Navigation">
+    <div class="localnav-inner">
+      <a href="../../index.html" class="localnav-brand">
+        <span>ABRAXAS OS</span>
+        <span class="tag">ENGINEERING PIPELINE</span>
+      </a>
+      <div class="localnav-items">
+        <a href="../../index.html" class="localnav-a">Inicio</a>
+        <a href="#fase-1" class="localnav-a">1. Estrategia & YOD</a>
+        <a href="#fase-2" class="localnav-a">2. Campañas & Kanban</a>
+        <a href="#fase-3" class="localnav-a">3. Grabación & SHIM</a>
+        <a href="#fase-4" class="localnav-a">4. Forja VAV 18s</a>
+        <a href="#fase-5" class="localnav-a">5. Control Calidad</a>
+        <a href="#fase-6" class="localnav-a">6. Despacho a 8 Redes</a>
+        <a href="#fase-7" class="localnav-a">7. Retención & APV</a>
+        <a href="#fase-8" class="localnav-a" style="color: #30d158; font-weight: 700;">8. Finanzas, OCR & ROI</a>
+        <a href="#hardware" class="localnav-a">9. Apple Silicon</a>
+      </div>
+      <div class="localnav-right">
+        <a href="../../en/engineering-process/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">EN</a>
+        <a href="../../index.html" class="btn-apple-cta">Ver Ecosistema</a>
+      </div>
+    </div>
+  </nav>
+  
+
+  <main class="section-wrap" style="padding-top: 60px; max-width: 1240px; margin: 0 auto;">
+    
+    <!-- Hero Header -->
+    <div class="section-head" style="text-align: center; margin-bottom: 4rem;">
+      <span class="tag" style="color: #2997ff;">PURE ENGINEERING & BUSINESS OPERATIONS // SECULAR SPECIFICATION</span>
+      <h1 class="h2" style="margin-top: 12px; font-size: 3.2rem; line-height: 1.15;">
+        El Proceso Técnico de ABRAXAS OS.<br/>De la Estrategia al Retorno Financiero en Dólares.
+      </h1>
+      <p class="p" style="max-width: 920px; margin: 1.2rem auto 0 auto; font-size: 1.2rem; line-height: 1.6; color: #cbd5e1;">
+        Esta es la guía operativa estricta para ingenieros, fundadores, directores de operaciones (COO) y directores de marketing (CMO). Sin metáforas místicas ni lenguaje cabalístico: aquí se describe exactamente qué hace el software, qué bases de datos consulta, qué modelos de machine learning ejecuta en local y cómo una empresa industrializa 50 activos de contenido al mes cerrando ventas de alto valor.
+      </p>
+    </div>
+
+    <!-- Quick Navigation Anchor Pills -->
+    <div style="background: rgba(14, 14, 20, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 18px; margin-bottom: 4rem; display: flex; gap: 10px; align-items: center; overflow-x: auto; scrollbar-width: none;">
+      <span style="font-size: 0.78rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800; margin-right: 6px;">PIPELINE:</span>
+      <a href="#resumen" class="btn-control-center" style="font-size: 0.8rem; padding: 6px 14px; background: rgba(255,255,255,0.05);">⚡ Resumen en 60s</a>
+      <a href="#fase-1" class="btn-control-center" style="font-size: 0.8rem; padding: 6px 14px; background: rgba(255,255,255,0.05);">1. Estrategia & YOD</a>
+      <a href="#fase-2" class="btn-control-center" style="font-size: 0.8rem; padding: 6px 14px; background: rgba(255,255,255,0.05);">2. Campañas & Kanban</a>
+      <a href="#fase-3" class="btn-control-center" style="font-size: 0.8rem; padding: 6px 14px; background: rgba(255,255,255,0.05);">3. Grabación & SHIM</a>
+      <a href="#fase-4" class="btn-control-center" style="font-size: 0.8rem; padding: 6px 14px; background: rgba(255,255,255,0.05);">4. Forja VAV 18s</a>
+      <a href="#fase-5" class="btn-control-center" style="font-size: 0.8rem; padding: 6px 14px; background: rgba(255,255,255,0.05);">5. Control de Calidad</a>
+      <a href="#fase-6" class="btn-control-center" style="font-size: 0.8rem; padding: 6px 14px; background: rgba(255,255,255,0.05);">6. Despacho Multicanal</a>
+      <a href="#fase-7" class="btn-control-center" style="font-size: 0.8rem; padding: 6px 14px; background: rgba(255,255,255,0.05);">7. Retención & APV</a>
+      <a href="#fase-8" class="btn-control-center" style="font-size: 0.8rem; padding: 6px 14px; background: rgba(48,209,88,0.15); color: #30d158; border: 1px solid rgba(48,209,88,0.4);">8. Finanzas, OCR & ROI</a>
+      <a href="#hardware" class="btn-control-center" style="font-size: 0.8rem; padding: 6px 14px; background: rgba(255,255,255,0.05);">9. Hardware Apple Silicon</a>
+    </div>
+
+    <!-- 0. RESUMEN EN 60 SEGUNDOS -->
+    <section id="resumen" style="margin-bottom: 5rem;">
+      <div class="spotlight-card col-12" style="background: #090b14; border-left: 4px solid #2997ff; padding: 2.5rem;">
+        <span class="card-pill-tag cyan">RESUMEN EJECUTIVO EN 60 SEGUNDOS</span>
+        <h2 style="color: #fff; font-size: 1.8rem; margin: 10px 0;">¿Qué es ABRAXAS OS en Términos Industriales?</h2>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+          ABRAXAS OS es una estación de trabajo de software para macOS que reemplaza el desorden de 10 herramientas desconectadas (Notion, Google Docs, Premiere, CapCut, Asana, Drive, HootSuite y hojas de Excel de costos). Unifica en un único bucle cerrado: <strong>1.</strong> Diagnóstico de posicionamiento y redacción de ganchos de alta autoridad; <strong>2.</strong> Gobernanza de tareas en Kanban local; <strong>3.</strong> Teleprompter inteligente que verifica en set que el orador no cometa errores; <strong>4.</strong> Motor de edición automática que corta silencios y monta video en 18 segundos; <strong>5.</strong> Despacho a 8 redes sociales con Safe Zones; y <strong>6.</strong> Telemetría financiera en SQLite que cruza horas trabajadas por empleados contra facturas reales cobradas para calcular el ROI exacto por campaña.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
+          <div style="background: rgba(255,255,255,0.03); padding: 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+            <strong style="color: #38bdf8; display: block; margin-bottom: 4px;">100% Soberano y Local</strong>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Corre en los chips M-Series de tu Mac. Cero subidas de audio confidencial a la nube.</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); padding: 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+            <strong style="color: #30d158; display: block; margin-bottom: 4px;">Cero Suscripciones SaaS</strong>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Base de datos SQLite local metrics.db. Cero costos recurrentes por usuario o minuto de render.</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); padding: 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+            <strong style="color: #d4af37; display: block; margin-bottom: 4px;">Determinismo Puro</strong>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Mismas entradas = mismos hashes SHA-256. Cero alucinaciones de IA o drift editorial.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 1: ESTRATEGIA & DIAGNÓSTICO YOD -->
+    <section id="fase-1" style="margin-bottom: 5rem;">
+      <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
+        <span class="tag" style="color: #f59e0b;">FASE 1 // ESTRATEGIA DE CONTENIDO & DIAGNÓSTICO DE NICHO</span>
+        <h2 class="h2" style="font-size: 2.2rem; margin: 6px 0;">El Módulo YOD: De la Tesis de Negocio al Guion Inexpugnable</h2>
+        <p class="p" style="margin: 0; font-size: 1.05rem; color: #94a3b8;">Antes de grabar un solo segundo de video, el sistema extrae la verdad competitiva de la empresa.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="spotlight-card col-6" style="background: #090a12; border-left: 4px solid #f59e0b;">
+          <span class="card-pill-tag gold">LOS 4 VECTORES DEL BRANDING METHOD</span>
+          <h3 class="card-h3" style="margin-top: 10px;">La Matriz de Extracción Estratégica</h3>
+          <p class="card-desc" style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.65;">
+            El usuario completa una sola vez el cuestionario fundacional:
+          </p>
+          <ul style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6; margin-top: 10px; padding-left: 1.2rem;">
+            <li><strong>1. Origen:</strong> El dolor fundacional y los errores sistemáticos de tus competidores.</li>
+            <li><strong>2. Destino:</strong> Objetivos de facturación y cuota de mercado objetivo a 24 meses.</li>
+            <li><strong>3. Identidad:</strong> Ventajas tecnológicas comprobadas y axiomas innegociables.</li>
+            <li><strong>4. Potencial:</strong> Categoría de mercado de alto valor donde no compites por precio.</li>
+          </ul>
+        </div>
+
+        <div class="spotlight-card col-6" style="background: #090a12; border-left: 4px solid #38bdf8;">
+          <span class="card-pill-tag cyan">FILTROS MATEMÁTICOS DE CALIDAD</span>
+          <h3 class="card-h3" style="margin-top: 10px;">Filtro Hilbert y Hook Score >= 85/100</h3>
+          <p class="card-desc" style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.65;">
+            YOD evalúa cada propuesta de gancho y tesis en un espacio vectorial de Hilbert de alta dimensionalidad:
+          </p>
+          <ul style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6; margin-top: 10px; padding-left: 1.2rem;">
+            <li><strong>Coherencia Hilbert >= 0.88:</strong> Si el copy contiene clichés genéricos de IA ("en este video te enseño", "el secreto del éxito"), es bloqueado automáticamente.</li>
+            <li><strong>Hook Score >= 85:</strong> Ecuación ponderada: (Tensión × 0.4) + (Claridad × 0.3) + (Autoridad × 0.3).</li>
+            <li><strong>Compás de 4 Tiempos:</strong> Duración estricta de 18 segundos dividida en 4 pulsos métricos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 2: GOBERNANZA DE CAMPAÑAS & KANBAN -->
+    <section id="fase-2" style="margin-bottom: 5rem;">
+      <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
+        <span class="tag" style="color: #38bdf8;">FASE 2 // GOBERNANZA OPERATIVA & LOTES</span>
+        <h2 class="h2" style="font-size: 2.2rem; margin: 6px 0;">La Arquitectura de Campañas y el Tablero Kanban (HE Desk)</h2>
+        <p class="p" style="margin: 0; font-size: 1.05rem; color: #94a3b8;">No se gestionan videos sueltos. Se gobiernan lotes coordinados de 10 a 50 activos que impulsan ofertas comerciales.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="spotlight-card col-6" style="background: #090a12; border-left: 4px solid #38bdf8;">
+          <span class="card-pill-tag cyan">TOPOLOGÍA RELACIONAL N:M</span>
+          <h3 class="card-h3" style="margin-top: 10px;">1 Campaña ➔ Lote de 10 a 50 Piezas ➔ Múltiples Ofertas</h3>
+          <p class="card-desc" style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.65;">
+            Una campaña articula videos verticales (Reels 9:16), carruseles (4:5), ensayos largos y podcasts breves bajo un mismo <code>campaign_id</code> inmutable en el Merkle-DAG. Si un prospecto consume 3 videos distintos de la campaña antes de escribir a ventas por WhatsApp, la transacción se atribuye al lote completo sin pérdida de datos.
+          </p>
+        </div>
+
+        <div class="spotlight-card col-6" style="background: #090a12; border-left: 4px solid #bf5af2;">
+          <span class="card-pill-tag purple">CONTROL DE EQUIPO Y HORAS</span>
+          <h3 class="card-h3" style="margin-top: 10px;">Tablero Kanban de Tareas para Empleados</h3>
+          <p class="card-desc" style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.65;">
+            El módulo de operaciones asigna cada pieza a un responsable (guionista, editor, diseñador) a través de 5 estados estandarizados:
+          </p>
+          <ul style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6; margin-top: 10px; padding-left: 1.2rem;">
+            <li><code>BACKLOG</code> ➔ Ideas y guiones aprobados pendientes de asignación.</li>
+            <li><code>IN_PROGRESS</code> ➔ Edición o diseño activo con cronómetro de tiempo en marcha.</li>
+            <li><code>REVIEW</code> ➔ Revisión de calidad contra directivas de audio y safe zones.</li>
+            <li><code>BLOCKED</code> ➔ Tarea detenida (registra el costo financiero del cuello de botella).</li>
+            <li><code>DONE</code> ➔ Activo sellado con SHA-256 listo para distribución.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 3: GRABACIÓN & SHIM REALITY GATE -->
+    <section id="fase-3" style="margin-bottom: 5rem;">
+      <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
+        <span class="tag" style="color: #ef4444;">FASE 3 // AUDITORÍA ACÚSTICA EN TIEMPO REAL</span>
+        <h2 class="h2" style="font-size: 2.2rem; margin: 6px 0;">El Módulo SHIM: Verificación en Set a 0.00% GAPs (Whisper ANE)</h2>
+        <p class="p" style="margin: 0; font-size: 1.05rem; color: #94a3b8;">El plan no es la grabación. SHIM audita la toma física en vivo para impedir que se apaguen las luces del estudio con errores.</p>
+      </div>
+
+      <div class="spotlight-card col-12" style="background: #0b0c16; border-left: 4px solid #ef4444; padding: 2.5rem; margin-bottom: 2rem;">
+        <span class="card-pill-tag ruby">INFERENCIA LOCAL EN EL APPLE NEURAL ENGINE</span>
+        <h3 class="card-h3" style="margin-top: 10px; font-size: 1.6rem;">Auditoría Fonética Palabra por Palabra a < 40 Milisegundos</h3>
+        <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.65; margin: 10px 0 1.5rem 0;">
+          Mientras el fundador o portavoz habla frente a la cámara, el micrófono alimenta directamente el modelo cuantizado Whisper Large V3 sobre el Apple Neural Engine (ANE). El sistema compara la onda acústica real contra el guion aprobado:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border-left: 3px solid #30d158;">
+            <strong style="color: #30d158; display: block; margin-bottom: 4px;">Luz Verde (FOUND >= 0.95)</strong>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">La palabra o cifra clave fue dicha con exactitud fonética. El teleprompter avanza y confirma el beat.</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border-left: 3px solid #ef4444;">
+            <strong style="color: #ef4444; display: block; margin-bottom: 4px;">Luz Roja (GAP DETECTADO)</strong>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">El orador olvidó un número, cambió una afirmación o improvisó relleno. Estado: <code>BLOCKED</code>. Se repite la toma al instante.</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border-left: 3px solid #d4af37;">
+            <strong style="color: #d4af37; display: block; margin-bottom: 4px;">Certificado SHA-256</strong>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Solo las tomas con 0.00% GAPs reciben la firma SHA-256 que desbloquea la renderización en el motor de video.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 4: FORJA Y SÍNTESIS AUDIOVISUAL EN 18S -->
+    <section id="fase-4" style="margin-bottom: 5rem;">
+      <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
+        <span class="tag" style="color: #2997ff;">FASE 4 // ENSAMBLAJE AUTOMÁTICO DETERMINISTA</span>
+        <h2 class="h2" style="font-size: 2.2rem; margin: 6px 0;">El Motor VAV: Auto-Corte FFT, 7 Motions y Norma EBU R128</h2>
+        <p class="p" style="margin: 0; font-size: 1.05rem; color: #94a3b8;">La automatización matemática del montaje que reduce 4 horas de edición manual a 15 segundos.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="spotlight-card col-6" style="background: #090a12; border-left: 4px solid #2997ff;">
+          <span class="card-pill-tag cyan">CORTE QUIRÚRGICO DE SILENCIOS</span>
+          <h3 class="card-h3" style="margin-top: 10px;">Auto-Corte por FFT a -38 dBFS</h3>
+          <p class="card-desc" style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.65;">
+            El motor analiza el espectro de audio mediante Transformada Rápida de Fourier. Remueve silencios por debajo de -38 dBFS preservando exactamente 80ms de margen de respiración humana y aplicando micro-fades de 5ms en el cruce por cero para evitar clics acústicos. Duración final: exactamente 18 segundos.
+          </p>
+        </div>
+
+        <div class="spotlight-card col-6" style="background: #090a12; border-left: 4px solid #d4af37;">
+          <span class="card-pill-tag gold">CINEMATOGRAFÍA DETERMINISTA</span>
+          <h3 class="card-h3" style="margin-top: 10px;">Estructura Multicapa en 4 Tracks (V1-V4)</h3>
+          <p class="card-desc" style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.65;">
+            El timeline se ensambla con reglas fijas de broadcast:
+          </p>
+          <ul style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6; margin-top: 10px; padding-left: 1.2rem;">
+            <li><strong>Track V1:</strong> A-Roll del orador con reencuadre facial óptico.</li>
+            <li><strong>Track V2:</strong> B-Roll de evidencia física real (Regla de las 3 imágenes: Inicio, Intervención, Resultado).</li>
+            <li><strong>Track V3:</strong> Catálogo canónico de 7 motions (M0 a M6) con física de resortes damping 12.</li>
+            <li><strong>Track V4:</strong> Subtítulos cinéticos con resaltado de palabras de alto impacto.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 5: DESPACHO A 8 REDES & RETENCIÓN -->
+    <section id="fase-6" style="margin-bottom: 5rem;">
+      <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
+        <span class="tag" style="color: #38bdf8;">FASE 5 // DISTRIBUCIÓN ADAPTATIVA & FEEDBACK</span>
+        <h2 class="h2" style="font-size: 2.2rem; margin: 6px 0;">Distribución Multicanal (Luna 1) y Analítica de Retención (Luna 2)</h2>
+        <p class="p" style="margin: 0; font-size: 1.05rem; color: #94a3b8;">Despacho sin compresión destructiva y auditoría implacable de la curva de atención de la audiencia.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="spotlight-card col-6" style="background: #090a12; border-left: 4px solid #38bdf8;">
+          <span class="card-pill-tag cyan">LUNA 1: DESPACHO ADAPTATIVO</span>
+          <h3 class="card-h3" style="margin-top: 10px;">8 Canales en Safe Zones 9:16 al Milímetro</h3>
+          <p class="card-desc" style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.65;">
+            Transcodifica el master a TikTok, Instagram Reels, YouTube Shorts, X, LinkedIn, Substack, Podcasts y Medium. Mantiene libres 280px inferiores y 120px derechos para que los botones de like, compartir y comentarios jamás tapen el mensaje ni el rostro del creador.
+          </p>
+        </div>
+
+        <div class="spotlight-card col-6" style="background: #090a12; border-left: 4px solid #bf5af2;">
+          <span class="card-pill-tag purple">LUNA 2: BARRERA DE LOS 3 SEGUNDOS</span>
+          <h3 class="card-h3" style="margin-top: 10px;">Penalización Automática de Ganchos Débiles</h3>
+          <p class="card-desc" style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.65;">
+            Si la retención de audiencia cae por debajo del 60% en el segundo 3, Luna 2 penaliza con -25 puntos al Hook Score en YOD. El sistema aprende matemáticamente de la debilidad dialéctica y fuerza un ángulo más agresivo en el siguiente lote mensual.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 8: FINANZAS, OCR & RETORNO COMERCIAL -->
+    <section id="fase-8" style="margin-bottom: 5rem;">
+      <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
+        <span class="tag" style="color: #30d158;">FASE 6 // TELEMETRÍA FINANCIERA & BALANCE REAL</span>
+        <h2 class="h2" style="font-size: 2.2rem; margin: 6px 0;">La Luna Financiera (Luna 3): Costos Internos, OCR y ROI por Campaña</h2>
+        <p class="p" style="margin: 0; font-size: 1.05rem; color: #94a3b8;">La consola que conecta el esfuerzo de producción con el dinero real cobrado en la cuenta de banco.</p>
+      </div>
+
+      <!-- Bipartición Banner -->
+      <div class="spotlight-card col-12" style="background: #090f12; border-left: 4px solid #30d158; padding: 2.5rem; margin-bottom: 2rem;">
+        <span class="card-pill-tag emerald">EL PRINCIPIO DE BIPARTICIÓN ESTRICTA</span>
+        <h3 class="card-h3" style="margin-top: 10px; font-size: 1.6rem;">Separación Absoluta de Tablas en SQLite metrics.db</h3>
+        <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.65; margin: 8px 0 1.5rem 0;">
+          Los costos internos de salarios y horas de colaboradores se registran en <code>manufacturing_cost_ledger</code>, mientras que las facturas reales y ventas externas se almacenan en <code>sales_revenue_ledger</code>. Nunca se mezclan en la misma tabla: su único punto de encuentro es la vista de solo lectura <code>v_asset_pnl_roi</code>.
+        </p>
+
+        <div class="bento-grid">
+          <div class="spotlight-card col-6" style="background: #000; border: 1px solid rgba(255,255,255,0.1);">
+            <strong style="color: #f59e0b; display: block; font-size: 1.1rem; margin-bottom: 8px;">1. Costos de Fabricación al Centavo</strong>
+            <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.55; margin: 0;">
+              Suma horas de guionistas ($16) + horas de edición ($24) + QA ($4) = <strong>$44.00 USD por Reel</strong>. El lote completo de 16 piezas de una campaña cuesta <strong>$680.00 USD</strong>.
+            </p>
+          </div>
+
+          <div class="spotlight-card col-6" style="background: #000; border: 1px solid rgba(255,255,255,0.1);">
+            <strong style="color: #30d158; display: block; font-size: 1.1rem; margin-bottom: 8px;">2. Escáner OCR On-Device en Python</strong>
+            <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.55; margin: 0;">
+              Ingiere capturas de comprobantes de pago de WhatsApp, recibos de Stripe o transferencias bancarias. Extrae montos, fechas y los vincula a la campaña o pieza específica.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reporte Macro de Ventas por Campaña -->
+      <div class="spotlight-card col-12" style="background: #0a0b14; border: 1px solid rgba(48,209,88,0.3); padding: 2.5rem;">
+        <span class="card-pill-tag emerald">REPORTE REAL // MACRO CAMPAIGN SALES LEDGER</span>
+        <h3 class="card-h3" style="margin-top: 10px;">Atribución por Lote de Campaña General vs. Pieza Individual</h3>
+        <p class="card-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+          Este cuadro en vivo compara el costo del lote contra la facturación total de las ofertas vendidas:
+        </p>
+
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 0.85rem; color: #cbd5e1; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.15); color: #86868b;">
+                <th style="padding: 10px;">CAMPAÑA</th>
+                <th style="padding: 10px;">PIEZAS</th>
+                <th style="padding: 10px;">OFERTAS VINCULADAS</th>
+                <th style="padding: 10px;">COSTO LOTE</th>
+                <th style="padding: 10px;">VENTAS OCR</th>
+                <th style="padding: 10px;">GANANCIA NETA</th>
+                <th style="padding: 10px;">ROI REAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 12px; color: #fff; font-weight: 700;">CAMP_01 // Lanzamiento Q3</td>
+                <td style="padding: 12px;">16 piezas</td>
+                <td style="padding: 12px; color: #38bdf8;">Software Core + VIP</td>
+                <td style="padding: 12px; color: #f59e0b;">$680.00 USD</td>
+                <td style="padding: 12px; color: #30d158; font-weight: 700;">$13,450.00 USD</td>
+                <td style="padding: 12px; color: #30d158;">+$12,770.00 USD</td>
+                <td style="padding: 12px; color: #30d158; font-weight: 800;">+1,877%</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 12px; color: #fff; font-weight: 700;">CAMP_02 // Dogmas de IA</td>
+                <td style="padding: 12px;">12 piezas</td>
+                <td style="padding: 12px; color: #38bdf8;">Membresía Anual</td>
+                <td style="padding: 12px; color: #f59e0b;">$520.00 USD</td>
+                <td style="padding: 12px; color: #30d158; font-weight: 700;">$11,080.00 USD</td>
+                <td style="padding: 12px; color: #30d158;">+$10,560.00 USD</td>
+                <td style="padding: 12px; color: #30d158; font-weight: 800;">+2,030%</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; color: #fff; font-weight: 700;">CAMP_03 // Amanda & Joc Case</td>
+                <td style="padding: 12px;">8 piezas</td>
+                <td style="padding: 12px; color: #38bdf8;">Implementación High-Ticket</td>
+                <td style="padding: 12px; color: #f59e0b;">$380.00 USD</td>
+                <td style="padding: 12px; color: #30d158; font-weight: 700;">$10,775.00 USD</td>
+                <td style="padding: 12px; color: #30d158;">+$10,395.00 USD</td>
+                <td style="padding: 12px; color: #30d158; font-weight: 800;">+2,735%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASE 9: HARDWARE & APPLE SILICON -->
+    <section id="hardware" style="margin-bottom: 5rem;">
+      <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
+        <span class="tag" style="color: #2997ff;">FASE 7 // INFRAESTRUCTURA & SOBERANÍA</span>
+        <h2 class="h2" style="font-size: 2.2rem; margin: 6px 0;">La Máquina: Por qué Todo Corre Localmente en Apple Silicon</h2>
+        <p class="p" style="margin: 0; font-size: 1.05rem; color: #94a3b8;">Tu MacBook Pro es tu propio estudio de producción audiovisual y financiero sin dependencias externas.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="spotlight-card col-4" style="background: #090a12; border-left: 4px solid #2997ff;">
+          <span class="card-pill-tag cyan">VIDEOTOOLBOX PRORES</span>
+          <h4 class="card-h3">Aceleración por Hardware</h4>
+          <p class="card-desc" style="font-size: 0.88rem; color: #cbd5e1;">Renderizado con latencia inferior a 3.2s por minuto de video 4K utilizando los transcodificadores nativos de silicio.</p>
+        </div>
+
+        <div class="spotlight-card col-4" style="background: #090a12; border-left: 4px solid #f59e0b;">
+          <span class="card-pill-tag gold">NEURAL ENGINE 16 CORES</span>
+          <h4 class="card-h3">Whisper Large V3 a 40ms</h4>
+          <p class="card-desc" style="font-size: 0.88rem; color: #cbd5e1;">Toda la transcripción fonética y metrología acústica en set corre dentro del ANE sin enviar datos a APIs externas.</p>
+        </div>
+
+        <div class="spotlight-card col-4" style="background: #090a12; border-left: 4px solid #30d158;">
+          <span class="card-pill-tag emerald">UMA MEMORIA UNIFICADA</span>
+          <h4 class="card-h3">CAS Cero-Copia</h4>
+          <p class="card-desc" style="font-size: 0.88rem; color: #cbd5e1;">Traspaso de texturas y clips entre CPU, GPU y NPU sin cuellos de botella de bus, sellado con extensiones ARMv8 Crypto SHA-256.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusión y Enlaces Cruzados -->
+    <div class="spotlight-card col-12" style="background: linear-gradient(180deg, rgba(41,151,255,0.08) 0%, rgba(9,10,18,0.98) 100%); border: 1px solid rgba(41,151,255,0.3); text-align: center; padding: 4rem 2rem;">
+      <span class="card-pill-tag cyan">SISTEMA CERRADO DETERMINISTA</span>
+      <h3 style="color: #fff; font-size: 2.2rem; margin: 12px 0;">El Ciclo Cerrado de Producción y Ganancia</h3>
+      <p style="color: #cbd5e1; max-width: 780px; margin: 0 auto 2rem auto; font-size: 1.05rem; line-height: 1.6;">
+        Al operar todo el ciclo sobre una arquitectura de datos común, el contenido deja de ser un gasto publicitario impredecible y se convierte en una máquina determinista de adquisición de clientes con costo y retorno matemáticamente medibles.
+      </p>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="../../index.html" class="btn-apple-cta">Ir a la Portada All-in-One</a>
+        <a href="../../es/luna-comercial/index.html#ventas-campana" class="btn-control-center" style="padding: 10px 22px;">🌙 Ver Telemetría de Ventas en Luna 3</a>
+        <a href="../../es/branding-method/index.html" class="btn-control-center" style="padding: 10px 22px;">🎯 Ver Branding Method & Campañas</a>
+      </div>
+    </div>
+
+  </main>
+
+  
+  <footer style="background: #050508; border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 1.5rem 3rem 1.5rem; font-size: 0.85rem; color: #86868b; margin-top: 6rem;">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+      <div>
+        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 1rem;">Ingeniería & Pipeline</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="#fase-1" style="color: #d4af37;">1. Diagnóstico YOD & Semántica Hilbert</a></li>
+          <li><a href="#fase-2">2. Lotes de Campañas & Topología N:M</a></li>
+          <li><a href="#fase-3">3. Metrología en Set Whisper ANE</a></li>
+          <li><a href="#fase-4">4. Auto-Corte FFT a -38 dBFS & 7 Motions</a></li>
+          <li><a href="#fase-8" style="color: #30d158;">8. SQLite metrics.db & OCR Invoicing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 1rem;">Módulos en Producción</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../es/lunas/luna-1-publicador/index.html">🛰️ Luna 1: Despacho a 8 Redes</a></li>
+          <li><a href="../../es/lunas/luna-2-procesos-retencion/index.html">🛰️ Luna 2: Tareas Kanban & Retención</a></li>
+          <li><a href="../../es/lunas/luna-3-financiera-roi/index.html" style="color: #30d158;">🛰️ Luna 3: Finanzas al Centavo & ROI</a></li>
+          <li><a href="../../es/tools/shim/index.html">🔍 SHIM Reality Gate</a></li>
+          <li><a href="../../es/tools/vav/cuts/index.html">✂️ VAV Surgical Cuts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 1rem;">Soberanía & Seguridad</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="#hardware">Aceleración Nativa Apple Silicon M-Series</a></li>
+          <li><a href="#fase-8">Persistencia Local SQLite Cero Cloud</a></li>
+          <li><a href="#fase-3">Certificados SHA-256 Inmutables</a></li>
+          <li><a href="../../es/piramide/index.html">Versión Arquitectónica Monumental ➔</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="max-width: 1240px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <p>ABRAXAS OS &bull; Guía Técnica y Operativa Determinista en Apple Silicon.</p>
+      <p style="font-family: var(--font-mono); color: #d4af37; font-size: 0.8rem;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </footer>
+  
+</body>
+</html>
