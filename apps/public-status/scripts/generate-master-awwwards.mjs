@@ -1,0 +1,371 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const rootDir = path.resolve(__dirname, '../../..');
+const docsDir = path.join(rootDir, 'docs/abraxas-os-status');
+
+// Load canonical dossiers from disk
+const canonDir = path.join(rootDir, '00_START_HERE/CANON_37_TXT');
+let canonFiles = [];
+try {
+  canonFiles = fs.readdirSync(canonDir).filter(f => f.endsWith('.txt')).sort();
+} catch (e) {
+  canonFiles = [];
+}
+
+function getPreloaderHTML() {
+  return `
+  <div id="preloader">
+    <div class="preloader-glyph">▲</div>
+    <div class="preloader-count" id="preloader-counter">0%</div>
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar" id="preloader-bar"></div>
+    </div>
+  </div>
+  `;
+}
+
+function getLocalnavHTML(locale, activeTab, depth = 1) {
+  const isEs = locale === 'es';
+  const prefix = '../'.repeat(depth);
+  const esPrefix = `${prefix}es/`;
+  const enPrefix = `${prefix}en/`;
+
+  return `
+  <nav class="apple-localnav" aria-label="Local Navigation">
+    <div class="localnav-inner">
+      <a href="${prefix}index.html" class="localnav-brand">
+        <span>ABRAXAS OS</span>
+        <span class="tag">v3.0 PRO</span>
+      </a>
+      <div class="localnav-items">
+        <a href="${prefix}index.html" class="localnav-a ${activeTab === 'overview' ? 'active' : ''}">${isEs ? 'Visión general' : 'Overview'}</a>
+        <a href="${prefix}v3/index.html" class="localnav-a ${activeTab === 'v3' ? 'active' : ''}">🍎 Edición v3</a>
+        <a href="${prefix}${locale}/ecosistema/index.html" class="localnav-a ${activeTab === 'ecosistema' ? 'active' : ''}">${isEs ? 'Ecosistema 8-en-1' : '8-in-1 Ecosystem'}</a>
+        <a href="${prefix}${locale}/gerencia/index.html" class="localnav-a ${activeTab === 'gerencia' ? 'active' : ''}">${isEs ? 'Gerencia & ROI' : 'Governance & ROI'}</a>
+        <a href="${prefix}${locale}/flujo/index.html" class="localnav-a ${activeTab === 'flujo' ? 'active' : ''}">${isEs ? 'Ciclo de Vida' : 'Lifecycle Flow'}</a>
+        <a href="${prefix}${locale}/tools/vav/motions/index.html" class="localnav-a ${activeTab === 'motions' ? 'active' : ''}">🎬 Motions</a>
+        <a href="${prefix}${locale}/tools/vav/captions/index.html" class="localnav-a ${activeTab === 'captions' ? 'active' : ''}">💬 Captions</a>
+        <a href="${prefix}${locale}/tools/vav/cuts/index.html" class="localnav-a ${activeTab === 'cuts' ? 'active' : ''}">✂️ Cuts 18s</a>
+        <a href="${prefix}${locale}/tools/shim/index.html" class="localnav-a ${activeTab === 'shim' ? 'active' : ''}">🔍 SHIM (0% GAPs)</a>
+        <a href="${prefix}${locale}/tools/arquitecto/index.html" class="localnav-a ${activeTab === 'arquitecto' ? 'active' : ''}">👁️ Arquitecto</a>
+        <a href="${prefix}${locale}/canon/index.html" class="localnav-a ${activeTab === 'canon' ? 'active' : ''}" style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="${prefix}${locale}/backup/index.html" class="localnav-a ${activeTab === 'backup' ? 'active' : ''}">🏛️ Backup</a>
+      </div>
+      <div class="localnav-right">
+        <a href="${prefix}${isEs ? 'en' : 'es'}/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">${isEs ? 'EN' : 'ES'}</a>
+        <button id="btn-open-control-center" class="btn-control-center">
+          <span>⚙️ Panel</span>
+        </button>
+        <a href="${prefix}index.html" class="btn-apple-cta">${isEs ? 'Abrir Sistema' : 'Launch OS'}</a>
+      </div>
+    </div>
+  </nav>
+  `;
+}
+
+function getFloatingWidgetsHTML(locale) {
+  const isEs = locale === 'es';
+  return `
+  <!-- Film Grain Overlay (Principle 17) -->
+  <div class="film-grain-overlay"></div>
+
+  <!-- Contextual Floating Arquitecto Widget (Principle 30) -->
+  <div id="floating-architect-widget">
+    <div id="architect-popup-card" class="architect-popup-card">
+      <div class="popup-header">
+        <span class="popup-title">👁️ ARQUITECTO // COACH & ASISTENTE</span>
+        <button id="architect-popup-close" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.1rem;">✕</button>
+      </div>
+      <p class="popup-body">
+        ${isEs 
+          ? '«ABRAXAS convierte criterio en infraestructura.» Recuerda: un tema no es una idea. Abre una deuda narrativa con tu hook y págala exactamente con el payoff.' 
+          : '«ABRAXAS turns criterion into infrastructure.» A topic is not an idea. Open a narrative debt with your hook and pay it with your payoff.'}
+      </p>
+      <button id="btn-copy-prompt" class="btn-copy-prompt">
+        📋 ${isEs ? 'Preparar pregunta para IA' : 'Copy Optimized AI Prompt'}
+      </button>
+    </div>
+    
+    <div id="architect-pill-trigger" class="architect-pill-trigger">
+      <span class="architect-sparkle">✦</span>
+      <span class="architect-pill-text">Arquitecto Coach</span>
+    </div>
+  </div>
+
+  <!-- Dashboard Control Center Drawer (Principle 26) -->
+  <div id="control-center-drawer">
+    <div class="drawer-header-row">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.2rem; color: #d4af37;">▲</span>
+        <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700;">Panel de Control Central</h3>
+      </div>
+      <button id="btn-close-control-center" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.2rem;">✕</button>
+    </div>
+
+    <div class="drawer-nav-grid">
+      <a href="index.html" class="drawer-nav-btn">🏠 <span>Visión General</span></a>
+      <a href="../v3/index.html" class="drawer-nav-btn">🍎 <span>Edición Oficial v3</span></a>
+      <a href="ecosistema/index.html" class="drawer-nav-btn">⚡ <span>Ecosistema 8-en-1</span></a>
+      <a href="gerencia/index.html" class="drawer-nav-btn">💼 <span>Gobernanza & ROI</span></a>
+      <a href="flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida</span></a>
+      <a href="tools/vav/motions/index.html" class="drawer-nav-btn">🎬 <span>13 Familias de Motion</span></a>
+      <a href="tools/vav/captions/index.html" class="drawer-nav-btn">💬 <span>Subtítulos Whisper</span></a>
+      <a href="tools/vav/cuts/index.html" class="drawer-nav-btn">✂️ <span>Cortes en 18s</span></a>
+      <a href="tools/shim/index.html" class="drawer-nav-btn">🔍 <span>Metrología SHIM</span></a>
+      <a href="tools/arquitecto/index.html" class="drawer-nav-btn">👁️ <span>ARQUITECTO Coach</span></a>
+      <a href="canon/index.html" class="drawer-nav-btn" style="border-color: rgba(212,175,55,0.4);">📚 <span>Biblioteca Canon 37 TXT</span></a>
+      <a href="backup/index.html" class="drawer-nav-btn">🏛️ <span>Respaldo / Backup</span></a>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding: 18px; background: rgba(212,175,55,0.08); border-radius: 14px; border: 1px solid rgba(212,175,55,0.25);">
+      <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800;">LÍNEA BASE CERTIFICADA</span>
+      <p style="font-size: 0.82rem; color: #cbd5e1; margin-top: 4px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </div>
+  `;
+}
+
+function getFooterHTML(locale) {
+  const isEs = locale === 'es';
+  return `
+  <footer style="background: #050508; border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 1.5rem 3rem 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Herramientas de Síntesis' : 'Synthesis Tools'}</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="tools/vav/motions/index.html">${isEs ? '13 Familias de Motion' : '13 Motion Families'}</a></li>
+          <li><a href="tools/vav/captions/index.html">${isEs ? 'Subtítulos Cinéticos' : 'Kinetic Captions'}</a></li>
+          <li><a href="tools/vav/cuts/index.html">${isEs ? 'Cortes en 18s' : '18s Auto-Cuts'}</a></li>
+          <li><a href="tools/shim/index.html">${isEs ? 'Metrología 0.00% GAPs' : '0.00% GAP Metrology'}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Inteligencia & Orquestación' : 'Intelligence'}</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="tools/arquitecto/index.html">${isEs ? 'ARQUITECTO Coach' : 'ARQUITECTO Coach'}</a></li>
+          <li><a href="tools/yod/index.html">${isEs ? 'YOD (Radar de Nicho)' : 'YOD Intelligence'}</a></li>
+          <li><a href="tools/contenido/index.html">${isEs ? 'CONTENIDO (Merkle-DAG)' : 'CONTENIDO Merkle-DAG'}</a></li>
+          <li><a href="tools/he/index.html">${isEs ? 'HE (Despacho de 50 Lotes)' : 'HE Batch Operations'}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Gobernanza & Documentación' : 'Governance & Docs'}</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="flujo/index.html">${isEs ? 'Ciclo de Vida de 6 Fases' : '6-Phase Lifecycle'}</a></li>
+          <li><a href="gerencia/index.html">${isEs ? 'Control de Costos SQLite' : 'SQLite Cost Governance'}</a></li>
+          <li><a href="canon/index.html">${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT Library'}</a></li>
+          <li><a href="backup/index.html">${isEs ? 'Versión Backup de Respaldo' : 'Legacy Backup Snapshot'}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="max-width: 1240px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <p>Copyright © 2026 ABRAXAS OS. ${isEs ? 'Todos los derechos reservados. Arquitectura Determinista en Apple Silicon.' : 'All rights reserved. Deterministic Architecture on Apple Silicon.'}</p>
+      <p style="font-family: var(--font-mono); color: var(--color-gold); font-size: 0.78rem;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </footer>
+  `;
+}
+
+// 1. GENERATE MASTER ROOT & LOCALE HOMES
+function generateMasterHome(locale, isRoot = false) {
+  const isEs = locale === 'es';
+  const targetDir = isRoot ? docsDir : path.join(docsDir, locale);
+  fs.mkdirSync(targetDir, { recursive: true });
+
+  const html = `<!DOCTYPE html>
+<html lang="${locale}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${isEs ? 'ABRAXAS OS — Mente abierta. Poder total. (Edición Apple 2026)' : 'ABRAXAS OS — Open Mind. Total Power. (Apple Edition 2026)'}</title>
+  <meta name="description" content="${isEs ? 'El sistema operativo determinista de creación, producción, organización y aprendizaje de contenidos en Apple Silicon.' : 'Deterministic content operating system for high-velocity multi-format publishing on Apple Silicon.'}">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="${isRoot ? '' : '../'}assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="${isRoot ? '' : '../'}assets/apple-macbook-pro-v3.css">
+</head>
+<body>
+  ${getPreloaderHTML()}
+  ${getLocalnavHTML(locale, 'overview', isRoot ? 0 : 1)}
+
+  <!-- Hero Section with Particle Brain & Hardware Chassis -->
+  <header class="hero-wrapper">
+    <canvas id="brain-canvas"></canvas>
+    
+    <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+      <span class="hero-eyebrow">ABRAXAS OS // APPLE SILICON 2026</span>
+      <h1 class="hero-h1">${isEs ? 'Mente abierta.<br/>Poder total.' : 'Open mind.<br/>Total power.'}</h1>
+      <p class="hero-subhead">
+        ${isEs 
+          ? 'El primer sistema operativo de contenidos que convierte criterio en infraestructura. Crea, auto-edita y gobierna 50 activos al mes en 8 formatos vivos desde una sola tarde de trabajo.' 
+          : 'The first deterministic content operating system turning high-level human criteria into software infrastructure.'}
+      </p>
+
+      <div class="hero-bifurcation">
+        <a href="${isRoot ? 'es/' : ''}ecosistema/index.html" class="btn-hero-iris">
+          <span>⚡ ${isEs ? 'Explorar Ecosistema 8-en-1' : 'Explore 8-in-1 Ecosystem'}</span>
+        </a>
+        <a href="${isRoot ? 'es/' : ''}gerencia/index.html" class="btn-hero-glass">
+          <span>💼 ${isEs ? 'Alta Dirección & ROI' : 'Governance & ROI'}</span>
+        </a>
+      </div>
+
+      <!-- Master Hardware Chassis with Zero CLS (Principle 4) -->
+      <div class="hero-hardware-frame">
+        <div class="chassis-box">
+          <div class="chassis-screen">
+            <img src="${isRoot ? '' : '../'}assets/plate_01_hero.webp" alt="ABRAXAS OS Master Screen" loading="eager" width="1200" height="675">
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-Stat Apple Ribbon -->
+      <div class="metrics-ribbon">
+        <div class="metric-pill">
+          <div class="metric-num gold">18s</div>
+          <div class="metric-txt">${isEs ? 'Auto-Edición Quirúrgica' : 'Surgical Auto-Cut'}</div>
+        </div>
+        <div class="metric-pill">
+          <div class="metric-num cyan">1➔8</div>
+          <div class="metric-txt">${isEs ? 'Formatos Sincronizados' : 'Living Formats'}</div>
+        </div>
+        <div class="metric-pill">
+          <div class="metric-num iris">50</div>
+          <div class="metric-txt">${isEs ? 'Activos al Mes por Lote' : 'Assets / Month Batch'}</div>
+        </div>
+        <div class="metric-pill">
+          <div class="metric-num gold">0.00%</div>
+          <div class="metric-txt">${isEs ? 'Margen de Error (GAPs)' : 'Zero GAP Metrology'}</div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Interactive 8-in-1 Format Viewer (Mírala en detalle) -->
+  <section class="section-wrap" id="section-viewer">
+    <div class="section-head">
+      <span class="tag">${isEs ? 'ECOSISTEMA DINÁMICO' : 'DYNAMIC ECOSYSTEM'}</span>
+      <h2 class="h2">${isEs ? 'Mírala en detalle.' : 'Take a closer look.'}</h2>
+      <p class="p">${isEs ? 'De una sola tesis nacen simultáneamente 8 formatos derivados listos para dominar cada plataforma.' : 'One master thesis branches simultaneously into 8 living multi-channel formats.'}</p>
+    </div>
+
+    <!-- Format Switcher Buttons -->
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
+      <button class="btn-control-center format-pill-btn active" data-format="reels">🎬 Videos Cortos (9:16)</button>
+      <button class="btn-control-center format-pill-btn" data-format="carousels">📑 Carruseles (4:5)</button>
+      <button class="btn-control-center format-pill-btn" data-format="threads">🧵 Hilos X/LinkedIn</button>
+      <button class="btn-control-center format-pill-btn" data-format="newsletters">✉️ Newsletters</button>
+      <button class="btn-control-center format-pill-btn" data-format="podcasts">🎙️ Audio & Podcasts</button>
+      <button class="btn-control-center format-pill-btn" data-format="youtube">📺 YouTube (16:9)</button>
+    </div>
+
+    <!-- Interactive Display Box -->
+    <div class="bento-grid">
+      <div class="spotlight-card col-8">
+        <div>
+          <span class="card-pill-tag gold" id="viewer-active-tag">TikTok / Reels / Shorts</span>
+          <h3 class="card-h3" id="viewer-active-title">Videos Cortos (9:16)</h3>
+          <p class="card-desc" id="viewer-active-desc">Subtítulos cinéticos Whisper palabra por palabra con 13 familias de motion y masterización sonora a -14 LUFS.</p>
+        </div>
+        <div class="card-aspect-media">
+          <img id="viewer-active-photo" src="${isRoot ? '' : '../'}assets/plate_05_vav_cathedral.webp" alt="Format Preview" loading="lazy" width="800" height="450">
+        </div>
+      </div>
+
+      <div class="spotlight-card col-4" style="background: rgba(14,14,20,0.9); border-color: rgba(212,175,55,0.3);">
+        <div>
+          <span class="card-pill-tag cyan">ESPECIFICACIÓN DE VELOCIDAD</span>
+          <h3 class="card-h3" id="viewer-active-speed">18s auto-corte</h3>
+          <p class="card-desc">Renderizado acelerado por Metal en GPU de Apple Silicon con cero pérdida generacional.</p>
+        </div>
+        <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <a href="${isRoot ? 'es/' : ''}tools/vav/motions/index.html" class="btn-apple-cta" style="display: block; text-align: center; padding: 12px;">
+            ${isEs ? 'Ver 13 Familias de Motion' : 'View 13 Motion Families'}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Performance Chips Section -->
+  <section class="section-wrap" style="border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="section-head">
+      <span class="tag" style="color: #bf5af2;">RENDIMIENTO // ARQUITECTURA DE TRES MOTORES</span>
+      <h2 class="h2">${isEs ? 'Como estos tres motores<br/>no hay dos.' : 'Like these three engines<br/>there are none.'}</h2>
+      <p class="p">${isEs ? 'Tres procesadores deterministas trabajando en tándem para convertir tus ideas en activos inmutables.' : 'Three deterministic engines working in tandem to turn ideas into verified assets.'}</p>
+    </div>
+
+    <div class="bento-grid">
+      <div class="spotlight-card col-4">
+        <span class="card-pill-tag gold">MOTOR YOD י // ATZILUTH</span>
+        <h3 class="card-h3">${isEs ? 'Inteligencia de Nicho & Ganchos' : 'Niche Radar & Contrarian Hooks'}</h3>
+        <p class="card-desc">${isEs ? 'Escanea puntos ciegos en la industria y formula aperturas dialécticas de alto impacto con calificación de 0 a 100.' : 'Scans audience blind spots and outputs contrarian hooks scored 0-100.'}</p>
+        <a href="${isRoot ? 'es/' : ''}tools/yod/index.html" style="color: var(--color-gold); font-weight: 600; font-size: 0.88rem;">${isEs ? 'Conocer Motor YOD →' : 'Explore YOD Engine →'}</a>
+      </div>
+
+      <div class="spotlight-card col-4">
+        <span class="card-pill-tag cyan">MOTOR VAV ו // YETZIRAH</span>
+        <h3 class="card-h3">${isEs ? 'Catedral de Síntesis en 18s' : '18s Synthesis Cathedral'}</h3>
+        <p class="card-desc">${isEs ? 'Corta silencios muertos con precisión de microsegundos, genera subtítulos cinéticos con Whisper y anima con 13 familias de motion.' : 'Trims dead pauses in 18s, synchronizes word-level kinetic subtitles, and renders 13 Remotion motion families.'}</p>
+        <a href="${isRoot ? 'es/' : ''}tools/vav/cuts/index.html" style="color: var(--color-cyan); font-weight: 600; font-size: 0.88rem;">${isEs ? 'Conocer Motor VAV →' : 'Explore VAV Engine →'}</a>
+      </div>
+
+      <div class="spotlight-card col-4">
+        <span class="card-pill-tag iris">MOTOR SHIM ש // DA\'AT</span>
+        <h3 class="card-h3">${isEs ? 'Metrología 0.00% GAPs' : '0.00% GAP Metrology'}</h3>
+        <p class="card-desc">${isEs ? 'Audita grabaciones en el set con Whisper y visión computacional, garantizando que ningún dato o guion salga con errores.' : 'Audits on-set recordings live via Whisper, guaranteeing zero errors.'}</p>
+        <a href="${isRoot ? 'es/' : ''}tools/shim/index.html" style="color: var(--color-iris-glow); font-weight: 600; font-size: 0.88rem;">${isEs ? 'Conocer Motor SHIM →' : 'Explore SHIM Engine →'}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Total Production Coach Spotlight -->
+  <section class="section-wrap" style="border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="section-head">
+      <span class="tag" style="color: var(--color-gold);">ARQUITECTO // TOTAL PRODUCTION COACH</span>
+      <h2 class="h2">${isEs ? '«ABRAXAS convierte criterio en infraestructura.»' : '«ABRAXAS turns criterion into infrastructure.»'}</h2>
+      <p class="p">${isEs ? 'ARQUITECTO no es un chatbot. Es tu coach, asistente y auditor con reglas forenses para edición, VFX, SFX y música.' : 'ARQUITECTO is not a chatbot. It is your coach, assistant, and auditor for editing, VFX, SFX, and music.'}</p>
+    </div>
+
+    <div class="bento-grid">
+      <div class="spotlight-card col-6" style="background: rgba(212,175,55,0.05); border-color: rgba(212,175,55,0.3);">
+        <span class="card-pill-tag gold">ROL 01 // EL COACH EXIGENTE</span>
+        <h3 class="card-h3">${isEs ? 'Desafía Premisas Débiles' : 'Challenges Weak Premises'}</h3>
+        <p class="card-desc">${isEs ? 'Te frena si intentas publicar contenido genérico. Te exige tesis reales, ganchos con deuda narrativa y payoffs legítimos.' : 'Halts generic fluff. Demands true thesis, narrative debt hooks, and legitimate payoffs.'}</p>
+        <a href="${isRoot ? 'es/' : ''}tools/arquitecto/index.html" class="btn-apple-cta" style="display: inline-block;">${isEs ? 'Ver los 4 Roles de Arquitecto' : 'Explore Arquitecto Roles'}</a>
+      </div>
+
+      <div class="spotlight-card col-6" style="background: rgba(56,189,248,0.05); border-color: rgba(56,189,248,0.3);">
+        <span class="card-pill-tag cyan">ROL 02 // EL ASISTENTE MULTICANAL</span>
+        <h3 class="card-h3">${isEs ? 'Ramifica en 8 Formatos Vivos' : 'Branches into 8 Living Formats'}</h3>
+        <p class="card-desc">${isEs ? 'Toma una nota de voz y genera simultáneamente guiones en 4 tiempos, diapositivas de carrusel, hilos de X y newsletters.' : 'Takes a raw voice note and outputs teleprompter scripts, 8 carousel slides, X threads, and newsletters.'}</p>
+        <a href="${isRoot ? 'es/' : ''}flujo/index.html" class="btn-hero-glass" style="display: inline-block;">${isEs ? 'Ver Ciclo de Vida Completo' : 'View Full Lifecycle Flow'}</a>
+      </div>
+    </div>
+  </section>
+
+  ${getFooterHTML(locale)}
+  ${getFloatingWidgetsHTML(locale)}
+
+  <!-- Scripts -->
+  <script src="${isRoot ? '' : '../'}assets/abraxas-engine-v3.js"></script>
+</body>
+</html>`;
+
+  fs.writeFileSync(path.join(targetDir, 'index.html'), html, 'utf8');
+  console.log(`[Master Awwwards Engine] Generated /${isRoot ? '' : locale + '/'}index.html`);
+}
+
+function executeMasterCompilation() {
+  generateMasterHome('es', true);  // Root /index.html in Spanish
+  generateMasterHome('es', false); // /es/index.html
+  generateMasterHome('en', false); // /en/index.html
+  console.log('✨ [Master Awwwards Engine] Complete master experience compiled flawlessly!');
+}
+
+executeMasterCompilation();

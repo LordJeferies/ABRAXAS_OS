@@ -2,18 +2,24 @@
 set -e
 
 echo "=========================================="
-echo "⚡ ABRAXAS OS — MASTER DEEP-DIVE DEPLOY CONTROLLER"
+echo "⚡ ABRAXAS OS — MASTER AWWWARDS & APPLE DEPLOY CONTROLLER"
 echo "=========================================="
 
-# 1. Build latest Apple 2026, v3, and Deep-Dive suite assets
-echo "📦 [1/4] Rebuilding Master 2026, v3 & Deep-Dive Suites..."
+# 1. Build latest Apple 2026, v3, Deep-Dive & Awwwards Engine suites
+echo "📦 [1/4] Rebuilding Master 2026, v3, Deep-Dive & Awwwards Suites..."
 node apps/public-status/scripts/generate-master-2026.mjs
 node apps/public-status/scripts/generate-apple-v3.mjs
 node apps/public-status/scripts/generate-deepdive-suite.mjs
+node apps/public-status/scripts/generate-master-awwwards.mjs
+
 cp apps/public-status/src/apple-design-system.css docs/assets/apple-design-system.css 2>/dev/null || true
 cp apps/public-status/src/apple-design-system.css docs/abraxas-os-status/assets/apple-design-system.css 2>/dev/null || true
 cp apps/public-status/src/apple-macbook-pro-v3.css docs/assets/apple-macbook-pro-v3.css 2>/dev/null || true
 cp apps/public-status/src/apple-macbook-pro-v3.css docs/abraxas-os-status/assets/apple-macbook-pro-v3.css 2>/dev/null || true
+cp apps/public-status/src/abraxas-apple-canon.css docs/assets/abraxas-apple-canon.css 2>/dev/null || true
+cp apps/public-status/src/abraxas-apple-canon.css docs/abraxas-os-status/assets/abraxas-apple-canon.css 2>/dev/null || true
+cp apps/public-status/src/abraxas-engine-v3.js docs/assets/abraxas-engine-v3.js 2>/dev/null || true
+cp apps/public-status/src/abraxas-engine-v3.js docs/abraxas-os-status/assets/abraxas-engine-v3.js 2>/dev/null || true
 cp -r docs/abraxas-os-status/* docs/ 2>/dev/null || true
 touch docs/.nojekyll
 
@@ -23,7 +29,7 @@ killall git 2>/dev/null || true
 rm -f .git/index.lock
 git add -A
 if ! git diff --cached --quiet; then
-  git commit -m "feat(deepdive): comprehensive architecture pages for motions, captions, cuts, shim, arquitecto, and lifecycle $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+  git commit -m "feat(awwwards): official Apple MacBook Pro 2026 Awwwards edition with Particle Brain, Spotlight, and Zero-CLS $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
   git push origin main || true
   echo "✅ Core repository updated."
 else
@@ -39,7 +45,7 @@ if git clone --depth 1 https://github.com/LordJeferies/lordjeferies.github.io.gi
   cd "$TEMP_DIR"
   git add -A
   if ! git diff --cached --quiet; then
-    git commit -m "deploy: deep-dive suite release $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+    git commit -m "deploy: official Apple MacBook Pro 2026 Awwwards release $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
     git push origin main || true
     echo "✅ Root domain (lordjeferies.github.io) updated."
   else
@@ -58,7 +64,7 @@ if git clone --depth 1 https://github.com/LordJeferies/ABRAXAS_OS_STATUS.git "$T
   cd "$TEMP_DIR_STATUS"
   git add -A
   if ! git diff --cached --quiet; then
-    git commit -m "deploy: deep-dive suite mirror $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+    git commit -m "deploy: official Apple MacBook Pro 2026 Awwwards mirror $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
     git push origin main || true
     echo "✅ Status mirror updated."
   else
@@ -70,19 +76,17 @@ fi
 
 # 5. Verify live deployment status
 echo "🔍 [5/5] Verifying live URLs..."
-HTTP_ROOT=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/index.html || true)
+HTTP_ROOT=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/index.html || true)
 HTTP_V3=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/v3/index.html || true)
 HTTP_MOTIONS=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/vav/motions/index.html || true)
 HTTP_SHIM=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/shim/index.html || true)
 HTTP_ARQUI=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/arquitecto/index.html || true)
-HTTP_FLUJO=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/flujo/index.html || true)
 
-echo "🚀 Master Overview URL: https://lordjeferies.github.io/es/index.html [HTTP $HTTP_ROOT]"
+echo "🚀 Master Overview URL: https://lordjeferies.github.io/index.html [HTTP $HTTP_ROOT]"
 echo "🍎 Official v3 URL: https://lordjeferies.github.io/v3/index.html [HTTP $HTTP_V3]"
 echo "🎬 Motions Deep-Dive URL: https://lordjeferies.github.io/es/tools/vav/motions/index.html [HTTP $HTTP_MOTIONS]"
 echo "🔍 SHIM Metrology URL: https://lordjeferies.github.io/es/tools/shim/index.html [HTTP $HTTP_SHIM]"
 echo "👁️ Arquitecto Guide URL: https://lordjeferies.github.io/es/tools/arquitecto/index.html [HTTP $HTTP_ARQUI]"
-echo "🔄 Lifecycle Flow URL: https://lordjeferies.github.io/es/flujo/index.html [HTTP $HTTP_FLUJO]"
 echo "=========================================="
-echo "✨ All Deep-Dive Suites deployed successfully!"
+echo "✨ Master Awwwards & Apple Experience deployed successfully!"
 echo "=========================================="
