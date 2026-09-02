@@ -3,162 +3,239 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VAV / Motions — ABRAXAS OS</title>
-  <link rel="alternate" hreflang="en" href="../../../../en/tools/vav/motions/index.html">
-  <link rel="alternate" hreflang="es" href="../../../../es/tools/vav/motions/index.html">
-  <link rel="alternate" hreflang="x-default" href="../../../../en/tools/vav/motions/index.html">
-  <link rel="stylesheet" href="../../../../assets/status-v3.css">
+  <title>Las 13 Familias de Motion y Física de Animación — ABRAXAS OS</title>
+  <meta name="description" content="Cómo funcionan los motions en Remotion: física de resortes, interpolación, composición 3D, creación, inserción y edición en tiempo real.">
+  <link rel="stylesheet" href="../../../../assets/apple-macbook-pro-v3.css">
 </head>
-<body class="page-body">
+<body class="theme-dark">
   
-  <header id="global-header" class="site-header" role="banner">
-    <div class="header-inner">
-      <div class="header-left">
-        <a href="../../../index.html" class="brand-logo" aria-label="ABRAXAS OS Home">
-          <span class="brand-glyph">▲</span>
-          <span class="brand-text">ABRAXAS OS</span>
-        </a>
-        <span class="brand-tag">v1.0.0-rc1</span>
+  <nav class="localnav" aria-label="Local Navigation">
+    <div class="localnav-wrapper">
+      <a href="../../../../index.html" class="localnav-title">
+        <span>ABRAXAS OS</span>
+        <span class="badge">DOCS PRO</span>
+      </a>
+      <div class="localnav-menu">
+        <a href="../../../../index.html" class="localnav-link">Inicio</a>
+        <a href="../../../../v3/index.html" class="localnav-link">🍎 Edición v3</a>
+        <a href="../../../../es/ecosistema/index.html" class="localnav-link">⚡ Ecosistema 8-en-1</a>
+        <a href="../../../../es/flujo/index.html" class="localnav-link ">🔄 Ciclo de Vida</a>
+        <a href="../../../../es/tools/vav/motions/index.html" class="localnav-link active">🎬 Motions</a>
+        <a href="../../../../es/tools/vav/captions/index.html" class="localnav-link ">💬 Captions</a>
+        <a href="../../../../es/tools/vav/cuts/index.html" class="localnav-link ">✂️ Cuts 18s</a>
+        <a href="../../../../es/tools/shim/index.html" class="localnav-link ">🔍 SHIM (0% GAPs)</a>
+        <a href="../../../../es/tools/arquitecto/index.html" class="localnav-link ">👁️ Arquitecto</a>
+        <a href="../../../../es/tools/he/index.html" class="localnav-link ">💼 HE (50 Lotes)</a>
+        <a href="../../../../es/canon/index.html" class="localnav-link" style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../../../../es/backup/index.html" class="localnav-link">🏛️ Backup</a>
       </div>
-      <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
-        <a href="../../../index.html" class="nav-link ">Manifiesto</a>
-        <a href="../../../system/index.html" class="nav-link ">Sistema</a>
-        <a href="../../../architecture/index.html" class="nav-link ">Arquitectura</a>
-        <a href="../../../tools/index.html" class="nav-link active">Operadores</a>
-        <a href="../../../flow/index.html" class="nav-link ">Flujo</a>
-        <a href="../../../taste/index.html" class="nav-link ">Taste</a>
-        <a href="../../../proof/index.html" class="nav-link ">Evidencia</a>
-        <a href="../../../roadmap/index.html" class="nav-link ">Roadmap</a>
-        <a href="../../../principles/index.html" class="nav-link ">Principios</a>
-        <a href="../../../canon/index.html" class="nav-link " style="color: #d4af37; font-weight: 700;">📚 Canon 37 TXT</a>
-      </nav>
-      <div class="header-right">
-        <div class="locale-switcher" aria-label="Language selector">
-          <a href="../../../../en/tools/vav/motions/index.html" class="locale-btn " onclick="localStorage.setItem('abraxas_locale', 'en')">EN</a>
-          <span class="locale-sep">/</span>
-          <a href="#" class="locale-btn active" onclick="return false;">ES</a>
-        </div>
-        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Preguntar a Arquitecto">
-          <span class="architect-spark">✦</span> Preguntar a Arquitecto
-        </button>
+      <div class="localnav-actions">
+        <a href="../../../../en/index.html" class="localnav-link" style="font-family: monospace; font-weight: 700; color: #fff;">EN</a>
+        <a href="../../../../index.html" class="btn-apple-buy">Abrir Sistema</a>
       </div>
     </div>
-  </header>
+  </nav>
   
 
-  <main class="page-main">
-    <div class="page-container">
-      <div class="page-header">
-        <div class="breadcrumb"><a href="../../../index.html">Home</a> / <a href="../../../system/index.html">System</a> / <a href="../../index.html">Operadores</a> / <a href="../index.html">VAV</a> / <span>motions</span></div>
-        <div class="module-title-row">
-          <h1 class="page-title">VAV / Motions</h1>
-          <div class="truth-pill released_current">PUBLICADO (RC1)</div>
+  <main class="section-container" style="padding-top: 80px; padding-bottom: 80px; max-width: 1200px;">
+    
+    <!-- Hero Header -->
+    <div class="section-title-wrap" style="text-align: center;">
+      <span class="section-eyebrow" style="color: #bf5af2;">VAV SYNTHESIS // REMOTION MOTION ENGINE</span>
+      <h1 class="headline-gradient" style="font-size: clamp(2.5rem, 5.5vw, 4.2rem);">
+        Las 13 Familias de Motion.<br/>Física de Resortes y Animación en 18s.
+      </h1>
+      <p class="subhead" style="margin: 0 auto 2.5rem auto;">
+        Descubre cómo ABRAXAS inyecta movimiento profesional en cada segundo de video mediante ecuaciones físicas de resorte (spring physics), capas 3D y renderizado nativo por GPU en Apple Silicon.
+      </p>
+    </div>
+
+    <!-- DUAL BOX: RESUMEN EJECUTIVO + ESPECIFICACIÓN TÉCNICA -->
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem; margin-bottom: 3.5rem;">
+      
+      <!-- Resumen Ejecutivo (En 30 Segundos) -->
+      <div class="bento-box bento-col-6" style="background: rgba(191, 90, 242, 0.08); border: 1px solid rgba(191, 90, 242, 0.35);">
+        <div>
+          <span class="apple-card-tag purple">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+          <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">¿Qué son y cómo se usan los Motions?</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: #e2e8f0; line-height: 1.5;">
+            <li>✨ <strong>Sin fotogramas clave manuales:</strong> Los motions se calculan con física real (masa, rigidez, fricción), eliminando animaciones robóticas.</li>
+            <li>🎯 <strong>13 Familias Prediseñadas:</strong> Desde zoom cinético y rotación 3D hasta tarjetas flotantes y subrayados de impacto.</li>
+            <li>⏱️ <strong>Inserción Automática:</strong> El sistema analiza el guion y coloca el motion exacto en la palabra de mayor énfasis emocional.</li>
+            <li>🎨 <strong>Edición Instantánea:</strong> Cambias el estilo visual, escala o posición en un clic sin tener que renderizar en Premiere.</li>
+          </ul>
         </div>
-        <p class="page-description">Físicas de resorte, priors visuales ópticos, superposiciones de B-roll y transiciones suaves de diseño.</p>
       </div>
 
-      <div class="dossier-grid">
-        <div class="dossier-main-col">
-          <section class="dossier-section">
-            <h2 class="section-title">1. Rol Operativo</h2>
-            <p class="section-lead">Físicas de resorte, priors visuales ópticos, superposiciones de B-roll y transiciones suaves de diseño.</p>
-          </section>
-        </div>
-        <aside class="dossier-sidebar">
-          <div class="sidebar-card">
-            <h3>Evidencia y Verificación</h3>
-            <p>Verificado por pruebas de regresión actuales y evidencia de la versión congelada v1.0.0-rc1.</p>
+      <!-- Especificación Técnica (En Profundidad) -->
+      <div class="bento-box bento-col-6" style="background: rgba(41, 151, 255, 0.08); border: 1px solid rgba(41, 151, 255, 0.35);">
+        <div>
+          <span class="apple-card-tag cyan">🛠️ EN PROFUNDIDAD // INGENIERÍA DE REMOTION</span>
+          <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">Arquitectura de Renderizado y Física</h3>
+          <p style="font-size: 0.92rem; color: #cbd5e1; line-height: 1.55; margin-bottom: 12px;">
+            Cada motion se compila como un componente React en Remotion, evaluado a 60 FPS. La función <code>spring({ frame, fps, config: { damping, stiffness, mass } })</code> garantiza continuidad matemática sin saltos.
+          </p>
+          <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 11px; color: #38bdf8; border: 1px solid rgba(255,255,255,0.1);">
+            const scale = spring({ frame: currentFrame, fps: 60, config: { mass: 0.5, damping: 12, stiffness: 100 } });
           </div>
-        </aside>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- The 13 Motion Families Grid -->
+    <h2 class="section-title" style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">
+      Las 13 Familias de Motion en Detalle
+    </h2>
+
+    <div class="viewer-bento-grid" style="margin-bottom: 4rem;">
+      
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag gold">01 // KINETIC POP</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Impacto Pop Elástico</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Escala de 0.8 a 1.05 con rebote suave en 6 fotogramas. Ideal para palabras clave de venta o shock.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag cyan">02 // 3D CARD FLIP</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Giro Espacial 3D</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Rotación en eje Y con perspectiva CSS a 1000px y sombra dinámica para presentar datos.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag purple">03 // HIGHLIGHT SWEEP</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Barrido de Marcador</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Franja dorada que subraya el texto de izquierda a derecha sincronizada con la entonación de voz.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag emerald">04 // FLOATING BADGE</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Insignia Flotante</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Placa de vidrio con efecto de levitación senoidal continua (sine-wave float) para títulos.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag gold">05 // FOCUS ZOOM IN</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Zoom Óptico al Rostro</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Acercamiento de cámara del 10% al 15% en momentos de máxima tensión para romper la monotonía.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag cyan">06 // SPLIT GLITCH</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Distorsión Cromática</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Separación de canales RGB en 3 fotogramas en transiciones de contrates o giros argumentales.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag purple">07 // COUNTER NUMBER ROLL</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Contador Numérico</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Animación de números en odómetro que suben rápidamente de 0 a la cifra mencionada en el audio.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag emerald">08 // EMOJI BURST</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Explosión de Emojis</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Partículas de emojis temáticos con física de dispersión y gravedad suave en momentos cómicos.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag gold">09 // SIDE SLIDE PANEL</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Panel Lateral de Resumen</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Panel de vidrio que se desliza desde el lateral mostrando listas de puntos clave de 3 elementos.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag cyan">10 // PROGRESS BAR PULSE</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Barra de Progreso Viva</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Línea inferior de retención con brillo sutil que indica a la audiencia el avance del video.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag purple">11 // BENT REVEAL</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Revelado Curvo</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Máscara curva de revelado tipográfico con desenfoque de movimiento direccional.</p>
+      </div>
+
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag emerald">12 // SUB-BASS SHAKE</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Sacudida de Sub-Bajo</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Micro-sacudida de 2 píxeles acoplada al golpe de audio a 45Hz para impactos contundentes.</p>
+      </div>
+
+    </div>
+
+    <!-- How are Motions Created, Added, and Edited -->
+    <div class="bento-box bento-col-12" style="background: rgba(14, 18, 28, 0.9); border: 1px solid rgba(212, 175, 55, 0.35); padding: 3rem;">
+      <h3 style="font-size: 1.8rem; color: #fff; margin-bottom: 1.5rem; text-align: center;">
+        🛠️ El Flujo de Trabajo: ¿Cómo se Crean, Agregan y Editan los Motions?
+      </h3>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        
+        <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 14px; border-top: 3px solid #d4af37;">
+          <strong style="color: #fff; font-size: 1.1rem; display: block; margin-bottom: 8px;">1. Creación de Nuevos Motions</strong>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">
+            Los motions se programan como componentes modulares en TypeScript usando Remotion. Puedes definir curvas de resorte personalizadas, colores de marca y tipografías en el archivo de estilo global.
+          </p>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 14px; border-top: 3px solid #38bdf8;">
+          <strong style="color: #fff; font-size: 1.1rem; display: block; margin-bottom: 8px;">2. Inserción Automática en Video</strong>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">
+            El motor VAV lee las marcas de tiempo generadas por Whisper. Cuando detecta un cambio de ritmo o una palabra clave, inserta automáticamente el motion correspondiente sin intervención manual.
+          </p>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 14px; border-top: 3px solid #bf5af2;">
+          <strong style="color: #fff; font-size: 1.1rem; display: block; margin-bottom: 8px;">3. Edición en Tiempo Real</strong>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">
+            En la interfaz de ABRAXAS puedes hacer clic sobre cualquier motion en la línea de tiempo para cambiar su familia, ajustar la escala, desactivarlo o moverlo a otra palabra en milisegundos.
+          </p>
+        </div>
+
       </div>
     </div>
+
   </main>
 
   
-  <div id="public-architect-drawer" class="architect-drawer" aria-hidden="true" role="dialog" aria-label="Arquitecto Público">
-    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
-    <div class="architect-drawer-panel">
-      <div class="drawer-header">
-        <div class="drawer-title-group">
-          <span class="architect-spark">✦</span>
-          <h3>Arquitecto Público</h3>
-          <span class="drawer-badge">NLP Determinista</span>
+  <footer class="apple-footer-v3">
+    <div class="footer-v3-inner">
+      <div class="footer-v3-columns">
+        <div class="footer-v3-col">
+          <h4>Herramientas de Síntesis</h4>
+          <ul>
+            <li><a href="../vav/motions/index.html">13 Familias de Motion Remotion</a></li>
+            <li><a href="../vav/captions/index.html">Subtítulos Cinéticos Whisper</a></li>
+            <li><a href="../vav/cuts/index.html">Cortes Quirúrgicos en 18s</a></li>
+            <li><a href="../shim/index.html">Metrología 0.00% GAPs</a></li>
+          </ul>
         </div>
-        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close">✕</button>
-      </div>
-      <div class="drawer-body">
-        <p class="drawer-intro">Consulta la arquitectura canónica, límites de propiedad de módulos, estado de verdad o principios semánticos directamente.</p>
-        <div class="architect-form-group">
-          <input type="text" id="architect-query-input" class="architect-input" placeholder="ej., ¿Qué posee Shim? ¿Cómo sintetiza Vav?" aria-label="Query input">
-          <button id="architect-query-submit" class="architect-submit-btn">Consultar</button>
+        <div class="footer-v3-col">
+          <h4>Inteligencia & Orquestación</h4>
+          <ul>
+            <li><a href="../arquitecto/index.html">Arquitecto (Coach & Asistente)</a></li>
+            <li><a href="../yod/index.html">YOD (Radar de Puntos Ciegos)</a></li>
+            <li><a href="../contenido/index.html">Contenido (Merkle-DAG 8 Formatos)</a></li>
+            <li><a href="../he/index.html">HE (Despacho de 50 Lotes)</a></li>
+          </ul>
         </div>
-        <div class="quick-prompt-chips">
-          <span class="chip-label">Sugerencias:</span>
-          <button class="prompt-chip" data-q="Yod">YOD</button>
-          <button class="prompt-chip" data-q="Contenido">Contenido</button>
-          <button class="prompt-chip" data-q="Shim">SHIM</button>
-          <button class="prompt-chip" data-q="Vav">VAV</button>
-          <button class="prompt-chip" data-q="He">HE</button>
-          <button class="prompt-chip" data-q="OUT_OF_SYNC">OUT_OF_SYNC</button>
-        </div>
-        <div id="architect-response-container" class="architect-response-card" style="display: none;">
-          <div class="response-topic" id="architect-response-topic">TOPIC</div>
-          <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">Línea Base Verificada v1.0.0-rc1</div>
+        <div class="footer-v3-col">
+          <h4>Gobernanza & Procesos</h4>
+          <ul>
+            <li><a href="../../flujo/index.html">Ciclo de Vida del Contenido</a></li>
+            <li><a href="../../gerencia/index.html">Auditoría Gerencial SQLite</a></li>
+            <li><a href="../../canon/index.html">Biblioteca Canon 37 TXT</a></li>
+            <li><a href="../../backup/index.html">Versión Backup de Respaldo</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
-  
-  
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-col brand-col">
-        <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
-        <p class="footer-desc">El Sistema Operativo para Inteligencia Sistemática de Contenido, Gobernanza Operativa y Síntesis Audiovisual Determinista.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> Línea Base Histórica v1.0.0-rc1</div>
-      </div>
-      <div class="footer-col">
-        <h4>Arquitectura</h4>
-        <ul>
-          <li><a href="../../../system/index.html">Dashboard del Sistema</a></li>
-          <li><a href="../../../architecture/pyramid/index.html">Monumento de Giza</a></li>
-          <li><a href="../../../architecture/four-worlds/index.html">Cuatro Mundos</a></li>
-          <li><a href="../../../architecture/tree-of-life/index.html">Árbol de la Vida</a></li>
-          <li><a href="../../../architecture/content-state-space/index.html">Espacio de Estados XYZA</a></li>
-          <li><a href="../../../architecture/closed-loop/index.html">Ciclo Cerrado</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Canon y Taste</h4>
-        <ul>
-          <li><a href="../../../taste/index.html">El Sistema de Taste</a></li>
-          <li><a href="../../../principles/index.html">Principios Canónicos</a></li>
-          <li><a href="../../../proof/index.html">Evidencia Verificada</a></li>
-          <li><a href="../../../roadmap/index.html">Compuertas del Roadmap</a></li>
-          <li><a href="../../../flow/index.html">Blueprints de Pipeline</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Operadores</h4>
-        <ul>
-          <li><a href="../../../tools/yod/index.html">YOD</a></li>
-          <li><a href="../../../tools/contenido/index.html">CONTENIDO</a></li>
-          <li><a href="../../../tools/he/index.html">HE</a></li>
-          <li><a href="../../../tools/shim/index.html">SHIM</a></li>
-          <li><a href="../../../tools/vav/index.html">VAV</a></li>
-          <li><a href="../../../tools/publishing/index.html">PUBLISHING</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2026 ABRAXAS OS. Arquitectura de Ciclo Cerrado Determinista.</div>
-      <div class="footer-meta">
-        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
+      <div class="footer-v3-bottom">
+        <p>Copyright © 2026 ABRAXAS OS. Arquitectura Determinista de Contenidos en Apple Silicon.</p>
+        <p style="font-family: monospace; color: #d4af37; font-size: 11px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
       </div>
     </div>
   </footer>
   
-  <script type="module" src="../../../../assets/status-v3.js"></script>
 </body>
 </html>

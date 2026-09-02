@@ -2,13 +2,14 @@
 set -e
 
 echo "=========================================="
-echo "⚡ ABRAXAS OS — MASTER V3 APPLE DEPLOY CONTROLLER"
+echo "⚡ ABRAXAS OS — MASTER DEEP-DIVE DEPLOY CONTROLLER"
 echo "=========================================="
 
-# 1. Build latest Apple 2026 & v3 suite assets
-echo "📦 [1/4] Rebuilding Apple MacBook Pro v3 Suite & Canon 37 TXT library..."
+# 1. Build latest Apple 2026, v3, and Deep-Dive suite assets
+echo "📦 [1/4] Rebuilding Master 2026, v3 & Deep-Dive Suites..."
 node apps/public-status/scripts/generate-master-2026.mjs
 node apps/public-status/scripts/generate-apple-v3.mjs
+node apps/public-status/scripts/generate-deepdive-suite.mjs
 cp apps/public-status/src/apple-design-system.css docs/assets/apple-design-system.css 2>/dev/null || true
 cp apps/public-status/src/apple-design-system.css docs/abraxas-os-status/assets/apple-design-system.css 2>/dev/null || true
 cp apps/public-status/src/apple-macbook-pro-v3.css docs/assets/apple-macbook-pro-v3.css 2>/dev/null || true
@@ -22,7 +23,7 @@ killall git 2>/dev/null || true
 rm -f .git/index.lock
 git add -A
 if ! git diff --cached --quiet; then
-  git commit -m "feat(v3): official Apple MacBook Pro v3 release with 1:1 DOM layout $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+  git commit -m "feat(deepdive): comprehensive architecture pages for motions, captions, cuts, shim, arquitecto, and lifecycle $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
   git push origin main || true
   echo "✅ Core repository updated."
 else
@@ -38,7 +39,7 @@ if git clone --depth 1 https://github.com/LordJeferies/lordjeferies.github.io.gi
   cd "$TEMP_DIR"
   git add -A
   if ! git diff --cached --quiet; then
-    git commit -m "deploy: Apple MacBook Pro v3 official release $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+    git commit -m "deploy: deep-dive suite release $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
     git push origin main || true
     echo "✅ Root domain (lordjeferies.github.io) updated."
   else
@@ -57,7 +58,7 @@ if git clone --depth 1 https://github.com/LordJeferies/ABRAXAS_OS_STATUS.git "$T
   cd "$TEMP_DIR_STATUS"
   git add -A
   if ! git diff --cached --quiet; then
-    git commit -m "deploy: Apple MacBook Pro v3 official mirror $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+    git commit -m "deploy: deep-dive suite mirror $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
     git push origin main || true
     echo "✅ Status mirror updated."
   else
@@ -71,11 +72,17 @@ fi
 echo "🔍 [5/5] Verifying live URLs..."
 HTTP_ROOT=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/index.html || true)
 HTTP_V3=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/v3/index.html || true)
-HTTP_CANON=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/canon/index.html || true)
+HTTP_MOTIONS=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/vav/motions/index.html || true)
+HTTP_SHIM=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/shim/index.html || true)
+HTTP_ARQUI=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/arquitecto/index.html || true)
+HTTP_FLUJO=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/flujo/index.html || true)
 
 echo "🚀 Master Overview URL: https://lordjeferies.github.io/es/index.html [HTTP $HTTP_ROOT]"
 echo "🍎 Official v3 URL: https://lordjeferies.github.io/v3/index.html [HTTP $HTTP_V3]"
-echo "📚 Canon Library URL: https://lordjeferies.github.io/es/canon/index.html [HTTP $HTTP_CANON]"
+echo "🎬 Motions Deep-Dive URL: https://lordjeferies.github.io/es/tools/vav/motions/index.html [HTTP $HTTP_MOTIONS]"
+echo "🔍 SHIM Metrology URL: https://lordjeferies.github.io/es/tools/shim/index.html [HTTP $HTTP_SHIM]"
+echo "👁️ Arquitecto Guide URL: https://lordjeferies.github.io/es/tools/arquitecto/index.html [HTTP $HTTP_ARQUI]"
+echo "🔄 Lifecycle Flow URL: https://lordjeferies.github.io/es/flujo/index.html [HTTP $HTTP_FLUJO]"
 echo "=========================================="
-echo "✨ Apple MacBook Pro v3 experience deployed successfully!"
+echo "✨ All Deep-Dive Suites deployed successfully!"
 echo "=========================================="

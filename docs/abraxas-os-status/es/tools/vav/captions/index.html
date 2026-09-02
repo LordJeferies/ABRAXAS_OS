@@ -3,162 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VAV / Captions — ABRAXAS OS</title>
-  <link rel="alternate" hreflang="en" href="../../../../en/tools/vav/captions/index.html">
-  <link rel="alternate" hreflang="es" href="../../../../es/tools/vav/captions/index.html">
-  <link rel="alternate" hreflang="x-default" href="../../../../en/tools/vav/captions/index.html">
-  <link rel="stylesheet" href="../../../../assets/status-v3.css">
+  <title>Subtítulos Cinéticos & Tipografía Viral — ABRAXAS OS</title>
+  <meta name="description" content="Cómo funcionan los subtítulos cinéticos en ABRAXAS: sincronización palabra por palabra con Whisper, estilos de marca, emojis y animación.">
+  <link rel="stylesheet" href="../../../../assets/apple-macbook-pro-v3.css">
 </head>
-<body class="page-body">
+<body class="theme-dark">
   
-  <header id="global-header" class="site-header" role="banner">
-    <div class="header-inner">
-      <div class="header-left">
-        <a href="../../../index.html" class="brand-logo" aria-label="ABRAXAS OS Home">
-          <span class="brand-glyph">▲</span>
-          <span class="brand-text">ABRAXAS OS</span>
-        </a>
-        <span class="brand-tag">v1.0.0-rc1</span>
+  <nav class="localnav" aria-label="Local Navigation">
+    <div class="localnav-wrapper">
+      <a href="../../../../index.html" class="localnav-title">
+        <span>ABRAXAS OS</span>
+        <span class="badge">DOCS PRO</span>
+      </a>
+      <div class="localnav-menu">
+        <a href="../../../../index.html" class="localnav-link">Inicio</a>
+        <a href="../../../../v3/index.html" class="localnav-link">🍎 Edición v3</a>
+        <a href="../../../../es/ecosistema/index.html" class="localnav-link">⚡ Ecosistema 8-en-1</a>
+        <a href="../../../../es/flujo/index.html" class="localnav-link ">🔄 Ciclo de Vida</a>
+        <a href="../../../../es/tools/vav/motions/index.html" class="localnav-link ">🎬 Motions</a>
+        <a href="../../../../es/tools/vav/captions/index.html" class="localnav-link active">💬 Captions</a>
+        <a href="../../../../es/tools/vav/cuts/index.html" class="localnav-link ">✂️ Cuts 18s</a>
+        <a href="../../../../es/tools/shim/index.html" class="localnav-link ">🔍 SHIM (0% GAPs)</a>
+        <a href="../../../../es/tools/arquitecto/index.html" class="localnav-link ">👁️ Arquitecto</a>
+        <a href="../../../../es/tools/he/index.html" class="localnav-link ">💼 HE (50 Lotes)</a>
+        <a href="../../../../es/canon/index.html" class="localnav-link" style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../../../../es/backup/index.html" class="localnav-link">🏛️ Backup</a>
       </div>
-      <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
-        <a href="../../../index.html" class="nav-link ">Manifiesto</a>
-        <a href="../../../system/index.html" class="nav-link ">Sistema</a>
-        <a href="../../../architecture/index.html" class="nav-link ">Arquitectura</a>
-        <a href="../../../tools/index.html" class="nav-link active">Operadores</a>
-        <a href="../../../flow/index.html" class="nav-link ">Flujo</a>
-        <a href="../../../taste/index.html" class="nav-link ">Taste</a>
-        <a href="../../../proof/index.html" class="nav-link ">Evidencia</a>
-        <a href="../../../roadmap/index.html" class="nav-link ">Roadmap</a>
-        <a href="../../../principles/index.html" class="nav-link ">Principios</a>
-        <a href="../../../canon/index.html" class="nav-link " style="color: #d4af37; font-weight: 700;">📚 Canon 37 TXT</a>
-      </nav>
-      <div class="header-right">
-        <div class="locale-switcher" aria-label="Language selector">
-          <a href="../../../../en/tools/vav/captions/index.html" class="locale-btn " onclick="localStorage.setItem('abraxas_locale', 'en')">EN</a>
-          <span class="locale-sep">/</span>
-          <a href="#" class="locale-btn active" onclick="return false;">ES</a>
-        </div>
-        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Preguntar a Arquitecto">
-          <span class="architect-spark">✦</span> Preguntar a Arquitecto
-        </button>
+      <div class="localnav-actions">
+        <a href="../../../../en/index.html" class="localnav-link" style="font-family: monospace; font-weight: 700; color: #fff;">EN</a>
+        <a href="../../../../index.html" class="btn-apple-buy">Abrir Sistema</a>
       </div>
     </div>
-  </header>
+  </nav>
   
 
-  <main class="page-main">
-    <div class="page-container">
-      <div class="page-header">
-        <div class="breadcrumb"><a href="../../../index.html">Home</a> / <a href="../../../system/index.html">System</a> / <a href="../../index.html">Operadores</a> / <a href="../index.html">VAV</a> / <span>captions</span></div>
-        <div class="module-title-row">
-          <h1 class="page-title">VAV / Captions</h1>
-          <div class="truth-pill released_current">PUBLICADO (RC1)</div>
-        </div>
-        <p class="page-description">Sincronización de timestamps a nivel de palabra, jerarquías de estilo y animación cinética multilínea.</p>
+  <main class="section-container" style="padding-top: 80px; padding-bottom: 80px; max-width: 1200px;">
+    
+    <div class="section-title-wrap" style="text-align: center;">
+      <span class="section-eyebrow" style="color: #38bdf8;">VAV SYNTHESIS // KINETIC TYPOGRAPHY</span>
+      <h1 class="headline-gradient" style="font-size: clamp(2.5rem, 5.5vw, 4.2rem);">
+        Subtítulos Cinéticos Virales.<br/>Sincronización Palabra por Palabra.
+      </h1>
+      <p class="subhead" style="margin: 0 auto 2.5rem auto;">
+        El 80% de los videos en redes sociales se ven sin sonido. ABRAXAS convierte tu voz en tipografía cinética hipnótica con sincronización exacta a nivel de microsegundos.
+      </p>
+    </div>
+
+    <!-- Dual Summary & Tech Specs Grid -->
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem; margin-bottom: 3.5rem;">
+      
+      <div class="bento-box bento-col-6" style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.35);">
+        <span class="apple-card-tag cyan">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">¿Por qué nuestros subtítulos retienen más?</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: #e2e8f0; line-height: 1.5;">
+          <li>🎯 <strong>Word-by-Word Highlight:</strong> La palabra exacta que estás pronunciando se ilumina en dorado o amarillo neón al instante.</li>
+          <li>📝 <strong>Líneas Cortas (1 a 3 palabras):</strong> Evita bloques de texto pesados que aburren a la vista; mantiene un ritmo dinámico de lectura.</li>
+          <li>🔥 <strong>Auto-Inyección de Emojis:</strong> Coloca emojis contextuales en palabras de emoción (fuego, dinero, cohete, cerebro) sin buscarlos a mano.</li>
+          <li>📱 <strong>Zona Segura (Safe Zone) Garantizada:</strong> Los subtítulos nunca quedan tapados por los botones de TikTok, Reels o la descripción.</li>
+        </ul>
       </div>
 
-      <div class="dossier-grid">
-        <div class="dossier-main-col">
-          <section class="dossier-section">
-            <h2 class="section-title">1. Rol Operativo</h2>
-            <p class="section-lead">Sincronización de timestamps a nivel de palabra, jerarquías de estilo y animación cinética multilínea.</p>
-          </section>
+      <div class="bento-box bento-col-6" style="background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.35);">
+        <span class="apple-card-tag gold">🛠️ EN PROFUNDIDAD // MOTOR WHISPER + REMOTION</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">Extracción de Timestamps y Renderizado</h3>
+        <p style="font-size: 0.92rem; color: #cbd5e1; line-height: 1.55; margin-bottom: 12px;">
+          Whisper Large V3 Turbo genera un arreglo JSON con <code>start</code> y <code>end</code> en milisegundos para cada palabra. Remotion interpola la posición y aplica el shader de brillo en el frame exacto.
+        </p>
+        <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 11px; color: #d4af37; border: 1px solid rgba(255,255,255,0.1);">
+          { "word": "ABRAXAS", "start": 1.42, "end": 1.88, "highlight": true, "emoji": "⚡" }
         </div>
-        <aside class="dossier-sidebar">
-          <div class="sidebar-card">
-            <h3>Evidencia y Verificación</h3>
-            <p>Verificado por pruebas de regresión actuales y evidencia de la versión congelada v1.0.0-rc1.</p>
-          </div>
-        </aside>
       </div>
+
     </div>
+
+    <!-- 4 Preset Typography Styles -->
+    <h2 class="section-title" style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">
+      4 Estilos Tipográficos de Alta Retención
+    </h2>
+
+    <div class="viewer-bento-grid">
+      
+      <div class="bento-box bento-col-6">
+        <span class="apple-card-tag gold">ESTILO 01 // VIRAL GOLD</span>
+        <h4 style="font-size: 1.35rem; color: #fff; margin-bottom: 8px;">Viral Gold (The Authority Look)</h4>
+        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.5; margin-bottom: 1rem;">
+          Tipografía pesada en negro o blanco con iluminación dorada metálica en la palabra activa y trazo exterior negro de 8px para máxima legibilidad sobre cualquier fondo.
+        </p>
+        <div style="background: #000; padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(212,175,55,0.3);">
+          <span style="font-size: 1.8rem; font-weight: 900; color: #fff; font-family: 'SF Pro Display', sans-serif; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">EL SECRETO ES <span style="color: #fef08a; text-shadow: 0 0 16px rgba(212,175,55,0.8);">LA DISCIPLINA</span> ⚡</span>
+        </div>
+      </div>
+
+      <div class="bento-box bento-col-6">
+        <span class="apple-card-tag cyan">ESTILO 02 // CYBER NEON</span>
+        <h4 style="font-size: 1.35rem; color: #fff; margin-bottom: 8px;">Cyber Neon (Tech & Devs)</h4>
+        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.5; margin-bottom: 1rem;">
+          Letras estilo monospace con fondo de caja oscura translúcida y resplandor cian eléctrico, ideal para temas de software, finanzas e inteligencia artificial.
+        </p>
+        <div style="background: #000; padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(56,189,248,0.3);">
+          <span style="font-size: 1.6rem; font-weight: 800; color: #fff; font-family: 'SF Mono', monospace;"><span style="background: rgba(56,189,248,0.25); color: #38bdf8; padding: 4px 8px; border-radius: 4px; border: 1px solid rgba(56,189,248,0.5);">0.00% GAPs</span> DE ERROR</span>
+        </div>
+      </div>
+
+      <div class="bento-box bento-col-6">
+        <span class="apple-card-tag emerald">ESTILO 03 // CLEAN MINIMAL</span>
+        <h4 style="font-size: 1.35rem; color: #fff; margin-bottom: 8px;">Clean Minimal (Luxury Executive)</h4>
+        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.5; margin-bottom: 1rem;">
+          Tipografía minimalista con caja de vidrio esmerilado inferior para líderes ejecutivos y marcas premium que buscan elegancia sin ruido visual.
+        </p>
+        <div style="background: #000; padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.15);">
+          <span style="font-size: 1.4rem; font-weight: 600; color: #f5f5f7; font-family: -apple-system, sans-serif;">Custodia inmutable de marca</span>
+        </div>
+      </div>
+
+      <div class="bento-box bento-col-6">
+        <span class="apple-card-tag purple">ESTILO 04 // KINETIC IMPACT</span>
+        <h4 style="font-size: 1.35rem; color: #fff; margin-bottom: 8px;">Kinetic Impact (High Energy)</h4>
+        <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.5; margin-bottom: 1rem;">
+          Cada palabra aparece individualmente en el centro de la pantalla con rebote elástico a 100 WPM, forzando la vista del espectador a no soltar la pantalla.
+        </p>
+        <div style="background: #000; padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(191,90,242,0.3);">
+          <span style="font-size: 2rem; font-weight: 900; color: #bf5af2; font-family: sans-serif; letter-spacing: -0.03em;">¡DETÉN EL SCROLL! 💥</span>
+        </div>
+      </div>
+
+    </div>
+
   </main>
 
   
-  <div id="public-architect-drawer" class="architect-drawer" aria-hidden="true" role="dialog" aria-label="Arquitecto Público">
-    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
-    <div class="architect-drawer-panel">
-      <div class="drawer-header">
-        <div class="drawer-title-group">
-          <span class="architect-spark">✦</span>
-          <h3>Arquitecto Público</h3>
-          <span class="drawer-badge">NLP Determinista</span>
+  <footer class="apple-footer-v3">
+    <div class="footer-v3-inner">
+      <div class="footer-v3-columns">
+        <div class="footer-v3-col">
+          <h4>Herramientas de Síntesis</h4>
+          <ul>
+            <li><a href="../vav/motions/index.html">13 Familias de Motion Remotion</a></li>
+            <li><a href="../vav/captions/index.html">Subtítulos Cinéticos Whisper</a></li>
+            <li><a href="../vav/cuts/index.html">Cortes Quirúrgicos en 18s</a></li>
+            <li><a href="../shim/index.html">Metrología 0.00% GAPs</a></li>
+          </ul>
         </div>
-        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close">✕</button>
-      </div>
-      <div class="drawer-body">
-        <p class="drawer-intro">Consulta la arquitectura canónica, límites de propiedad de módulos, estado de verdad o principios semánticos directamente.</p>
-        <div class="architect-form-group">
-          <input type="text" id="architect-query-input" class="architect-input" placeholder="ej., ¿Qué posee Shim? ¿Cómo sintetiza Vav?" aria-label="Query input">
-          <button id="architect-query-submit" class="architect-submit-btn">Consultar</button>
+        <div class="footer-v3-col">
+          <h4>Inteligencia & Orquestación</h4>
+          <ul>
+            <li><a href="../arquitecto/index.html">Arquitecto (Coach & Asistente)</a></li>
+            <li><a href="../yod/index.html">YOD (Radar de Puntos Ciegos)</a></li>
+            <li><a href="../contenido/index.html">Contenido (Merkle-DAG 8 Formatos)</a></li>
+            <li><a href="../he/index.html">HE (Despacho de 50 Lotes)</a></li>
+          </ul>
         </div>
-        <div class="quick-prompt-chips">
-          <span class="chip-label">Sugerencias:</span>
-          <button class="prompt-chip" data-q="Yod">YOD</button>
-          <button class="prompt-chip" data-q="Contenido">Contenido</button>
-          <button class="prompt-chip" data-q="Shim">SHIM</button>
-          <button class="prompt-chip" data-q="Vav">VAV</button>
-          <button class="prompt-chip" data-q="He">HE</button>
-          <button class="prompt-chip" data-q="OUT_OF_SYNC">OUT_OF_SYNC</button>
-        </div>
-        <div id="architect-response-container" class="architect-response-card" style="display: none;">
-          <div class="response-topic" id="architect-response-topic">TOPIC</div>
-          <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">Línea Base Verificada v1.0.0-rc1</div>
+        <div class="footer-v3-col">
+          <h4>Gobernanza & Procesos</h4>
+          <ul>
+            <li><a href="../../flujo/index.html">Ciclo de Vida del Contenido</a></li>
+            <li><a href="../../gerencia/index.html">Auditoría Gerencial SQLite</a></li>
+            <li><a href="../../canon/index.html">Biblioteca Canon 37 TXT</a></li>
+            <li><a href="../../backup/index.html">Versión Backup de Respaldo</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
-  
-  
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-col brand-col">
-        <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
-        <p class="footer-desc">El Sistema Operativo para Inteligencia Sistemática de Contenido, Gobernanza Operativa y Síntesis Audiovisual Determinista.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> Línea Base Histórica v1.0.0-rc1</div>
-      </div>
-      <div class="footer-col">
-        <h4>Arquitectura</h4>
-        <ul>
-          <li><a href="../../../system/index.html">Dashboard del Sistema</a></li>
-          <li><a href="../../../architecture/pyramid/index.html">Monumento de Giza</a></li>
-          <li><a href="../../../architecture/four-worlds/index.html">Cuatro Mundos</a></li>
-          <li><a href="../../../architecture/tree-of-life/index.html">Árbol de la Vida</a></li>
-          <li><a href="../../../architecture/content-state-space/index.html">Espacio de Estados XYZA</a></li>
-          <li><a href="../../../architecture/closed-loop/index.html">Ciclo Cerrado</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Canon y Taste</h4>
-        <ul>
-          <li><a href="../../../taste/index.html">El Sistema de Taste</a></li>
-          <li><a href="../../../principles/index.html">Principios Canónicos</a></li>
-          <li><a href="../../../proof/index.html">Evidencia Verificada</a></li>
-          <li><a href="../../../roadmap/index.html">Compuertas del Roadmap</a></li>
-          <li><a href="../../../flow/index.html">Blueprints de Pipeline</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Operadores</h4>
-        <ul>
-          <li><a href="../../../tools/yod/index.html">YOD</a></li>
-          <li><a href="../../../tools/contenido/index.html">CONTENIDO</a></li>
-          <li><a href="../../../tools/he/index.html">HE</a></li>
-          <li><a href="../../../tools/shim/index.html">SHIM</a></li>
-          <li><a href="../../../tools/vav/index.html">VAV</a></li>
-          <li><a href="../../../tools/publishing/index.html">PUBLISHING</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2026 ABRAXAS OS. Arquitectura de Ciclo Cerrado Determinista.</div>
-      <div class="footer-meta">
-        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
+      <div class="footer-v3-bottom">
+        <p>Copyright © 2026 ABRAXAS OS. Arquitectura Determinista de Contenidos en Apple Silicon.</p>
+        <p style="font-family: monospace; color: #d4af37; font-size: 11px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
       </div>
     </div>
   </footer>
   
-  <script type="module" src="../../../../assets/status-v3.js"></script>
 </body>
 </html>

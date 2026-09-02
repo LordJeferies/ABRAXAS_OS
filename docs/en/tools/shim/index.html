@@ -3,260 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHIM (Metrology // Da'at Verification) — ABRAXAS OS</title>
-  <meta name="description" content="SHIM verifies the boundary between scripted intent and recorded reality. It detects missing takes, phonetic discrepancies, and audio gaps before synthesis.">
-  <link rel="alternate" hreflang="en" href="../../../en/tools/shim/index.html">
-  <link rel="alternate" hreflang="es" href="../../../es/tools/shim/index.html">
-  <link rel="alternate" hreflang="x-default" href="../../../en/tools/shim/index.html">
-  <link rel="stylesheet" href="../../../assets/status-v3.css">
+  <title>SHIM: 0.00% GAP Metrology & Set Verification — ABRAXAS OS</title>
+  <meta name="description" content="Deep dive into SHIM Reality Metrology, Whisper on-set audit, and zero error tolerance in ABRAXAS OS.">
+  <link rel="stylesheet" href="../../../assets/apple-macbook-pro-v3.css">
 </head>
-<body class="page-body">
+<body class="theme-dark">
   
-  <header id="global-header" class="site-header" role="banner">
-    <div class="header-inner">
-      <div class="header-left">
-        <a href="../../index.html" class="brand-logo" aria-label="ABRAXAS OS Home">
-          <span class="brand-glyph">▲</span>
-          <span class="brand-text">ABRAXAS OS</span>
-        </a>
-        <span class="brand-tag">v1.0.0-rc1</span>
+  <nav class="localnav" aria-label="Local Navigation">
+    <div class="localnav-wrapper">
+      <a href="../../../index.html" class="localnav-title">
+        <span>ABRAXAS OS</span>
+        <span class="badge">DOCS PRO</span>
+      </a>
+      <div class="localnav-menu">
+        <a href="../../../index.html" class="localnav-link">Home</a>
+        <a href="../../../v3/index.html" class="localnav-link">🍎 v3 Edition</a>
+        <a href="../../../en/ecosistema/index.html" class="localnav-link">⚡ 8-in-1 Ecosystem</a>
+        <a href="../../../en/flujo/index.html" class="localnav-link ">🔄 Lifecycle Flow</a>
+        <a href="../../../en/tools/vav/motions/index.html" class="localnav-link ">🎬 Motions</a>
+        <a href="../../../en/tools/vav/captions/index.html" class="localnav-link ">💬 Captions</a>
+        <a href="../../../en/tools/vav/cuts/index.html" class="localnav-link ">✂️ Cuts 18s</a>
+        <a href="../../../en/tools/shim/index.html" class="localnav-link active">🔍 SHIM (0% GAPs)</a>
+        <a href="../../../en/tools/arquitecto/index.html" class="localnav-link ">👁️ Arquitecto</a>
+        <a href="../../../en/tools/he/index.html" class="localnav-link ">💼 HE (50 Lotes)</a>
+        <a href="../../../en/canon/index.html" class="localnav-link" style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../../../en/backup/index.html" class="localnav-link">🏛️ Backup</a>
       </div>
-      <nav class="header-nav" role="navigation" aria-label="Primary Navigation">
-        <a href="../../index.html" class="nav-link ">Manifesto</a>
-        <a href="../../system/index.html" class="nav-link ">System</a>
-        <a href="../../architecture/index.html" class="nav-link ">Architecture</a>
-        <a href="../../tools/index.html" class="nav-link active">Operators</a>
-        <a href="../../flow/index.html" class="nav-link ">Flow</a>
-        <a href="../../taste/index.html" class="nav-link ">Taste</a>
-        <a href="../../proof/index.html" class="nav-link ">Proof</a>
-        <a href="../../roadmap/index.html" class="nav-link ">Roadmap</a>
-        <a href="../../principles/index.html" class="nav-link ">Principles</a>
-        <a href="../../canon/index.html" class="nav-link " style="color: #d4af37; font-weight: 700;">📚 Canon 37 TXT</a>
-      </nav>
-      <div class="header-right">
-        <div class="locale-switcher" aria-label="Language selector">
-          <a href="#" class="locale-btn active" onclick="return false;">EN</a>
-          <span class="locale-sep">/</span>
-          <a href="../../../es/tools/shim/index.html" class="locale-btn " onclick="localStorage.setItem('abraxas_locale', 'es')">ES</a>
-        </div>
-        <button id="header-architect-btn" class="header-architect-trigger" onclick="window.__ABRAXAS_OPEN_ARCHITECT__?.()" aria-label="Ask Arquitecto">
-          <span class="architect-spark">✦</span> Ask Arquitecto
-        </button>
+      <div class="localnav-actions">
+        <a href="../../../es/index.html" class="localnav-link" style="font-family: monospace; font-weight: 700; color: #fff;">ES</a>
+        <a href="../../../index.html" class="btn-apple-buy">Launch OS</a>
       </div>
     </div>
-  </header>
+  </nav>
   
 
-  <main class="page-main">
-    <div class="page-container">
-      <div class="page-header">
-        <div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../system/index.html">System</a> / <a href="../index.html">Operators</a> / <span>SHIM</span></div>
-        <div class="module-title-row">
-          <h1 class="page-title">SHIM</h1>
-          <div class="truth-pill post_rc1_candidate">WORKING CANDIDATE</div>
-        </div>
-        <div class="module-domain-badge">Domain: Metrology // Da'at Verification // ⚝ Da'at Metrology Threshold (Transverse scanning gallery between Beri'ah and Yetzirah)</div>
-        <p class="page-description">Empirical observation layer: Planned != Observed != Resolved invariant scanner.</p>
+  <main class="section-container" style="padding-top: 80px; padding-bottom: 80px; max-width: 1200px;">
+    
+    <div class="section-title-wrap" style="text-align: center;">
+      <span class="section-eyebrow" style="color: #bf5af2;">DAAT THRESHOLD // REALITY METROLOGY</span>
+      <h1 class="headline-gradient" style="font-size: clamp(2.5rem, 5.5vw, 4.2rem);">
+        SHIM: Reality Metrology.<br/>Zero Errors. 0.00% GAPs.
+      </h1>
+      <p class="subhead" style="margin: 0 auto 2.5rem auto;">
+        Daat is the sacred threshold where creative intention meets physical observation. SHIM inspects recordings live with zero error tolerance.
+      </p>
+    </div>
+
+    <!-- Dual Summary & Deep Dive -->
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem; margin-bottom: 3.5rem;">
+      
+      <div class="bento-box bento-col-6" style="background: rgba(191, 90, 242, 0.08); border: 1px solid rgba(191, 90, 242, 0.35);">
+        <span class="apple-card-tag purple">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">How SHIM Protects Every Stage?</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: #e2e8f0; line-height: 1.5;">
+          <li>🔍 <strong>Auditoría en Set (Live Teleprompter):</strong> Si te saltas una línea del guion mientras grabas, la pantalla se pone en ámbar y te pide regrabar solo esa frase.</li>
+          <li>📊 <strong>Detección de Datos Erróneos:</strong> Audita que los números, precios o nombres citados coincidan con el documento oficial de marca.</li>
+          <li>🎙️ <strong>Inspección Acústica:</strong> Detecta clipping, eco de habitación o ruido de fondo excesivo antes de que apagues las luces del set.</li>
+          <li>🔒 <strong>Bloqueo a Exportar:</strong> Si un activo tiene discrepancias no aprobadas, el sistema bloquea la exportación para proteger tu reputación.</li>
+        </ul>
       </div>
 
-      <div class="dossier-grid">
-        <div class="dossier-main-col">
-          <section class="dossier-section">
-            <h2 class="section-title">1. What It Is & Purpose</h2>
-            <p class="section-lead">SHIM verifies the boundary between scripted intent and recorded reality. It detects missing takes, phonetic discrepancies, and audio gaps before synthesis.</p>
-          </section>
-
-          <section class="dossier-section">
-            <h2 class="section-title">2. Spatial & Symbolic Association</h2>
-            <p>Da'at Metrology Threshold (Transverse scanning gallery between Beri'ah and Yetzirah)</p>
-            <div class="disclaimer-box"><small>This is an ABRAXAS visual and operational spatial association, not module identity. Tree states describe transformations of Contenido; modules act upon them.</small></div>
-          </section>
-
-          <section class="dossier-section">
-            <h2 class="section-title">3. Problem Solved</h2>
-            <p>Prevents downstream video rendering failures and misaligned captions caused by assuming a script matches raw audio without empirical verification.</p>
-          </section>
-
-          <section class="dossier-section">
-            <h2 class="section-title">4. Operational Example Flow</h2>
-            <div class="example-box">
-              <p class="example-flow-text"><code>Scripted script ingested -> Raw recording audio analyzed -> SHIM detects omitted paragraph -> Flags gap for human re-take or script revision.</code></p>
-            </div>
-          </section>
-
-          <section class="dossier-section">
-            <h2 class="section-title">5. Strict Ownership Boundaries</h2>
-            <div class="ownership-split-grid">
-              <div class="owns-col">
-                <h3 class="owns-title">✓ What SHIM OWNS</h3>
-                <ul class="boundary-list">
-                  <li>Discrepancy measurement</li>
-<li>Phonetic audio-to-text alignment</li>
-<li>Missing take detection</li>
-<li>Plan vs Observed delta reporting</li>
-                </ul>
-              </div>
-              <div class="not-owns-col">
-                <h3 class="not-owns-title">✗ What SHIM DOES NOT OWN</h3>
-                <ul class="boundary-list">
-                  <li>Final video cutting (owned by VAV)</li>
-<li>Social media distribution (owned by Publishing)</li>
-<li>Authoring script revisions (owned by Contenido)</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="dossier-section">
-            <h2 class="section-title">6. What It Is vs What It Is Not</h2>
-            <div class="what-is-table-wrap">
-              <table class="what-is-table">
-                <thead>
-                  <tr>
-                    <th>What SHIM IS</th>
-                    <th>What SHIM IS NOT</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>A metrology and verification engine enforcing empirical reality over assumptions.</td>
-                    <td>Not an automatic text re-writer, not a media player, and not a post-production compositor.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section class="dossier-section">
-            <h2 class="section-title">7. Current Status & Roadmap Gate</h2>
-            <div class="roadmap-gap-box">
-              <h4>Current Truth Status: <span class="highlight-text">WORKING CANDIDATE</span></h4>
-              <p>Active working candidate in local core runtime. Phonetic alignment and gap detection verified by unit tests; candidate for RC2.</p>
-            </div>
-          </section>
+      <div class="bento-box bento-col-6" style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.35);">
+        <span class="apple-card-tag cyan">🛠️ EN PROFUNDIDAD // LA ECUACIÓN DE GAP</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">Levenshtein Discrepancy Metrology</h3>
+        <p style="font-size: 0.92rem; color: #cbd5e1; line-height: 1.55; margin-bottom: 12px;">
+          SHIM computes phonetic edit distance between planned script and transcribed speech. If similarity falls under 98.5%, a timecoded GAP alert is generated.
+        </p>
+        <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 11px; color: #38bdf8; border: 1px solid rgba(255,255,255,0.1);">
+          GAP_SCORE = 1.0 - (LevenshteinDistance(T_plan, T_audio) / MaxLength) -> PASS if GAP == 0.00%
         </div>
+      </div>
 
-        <aside class="dossier-sidebar">
-          <div class="sidebar-card">
-            <h3>I/O Specifications</h3>
-            <div class="io-group">
-              <span class="io-label">Inputs:</span>
-              <ul class="io-list">
-                <li><code>Script canonical text</code></li>
-<li><code>Raw audio / video recordings</code></li>
-<li><code>Timecode markers</code></li>
-              </ul>
-            </div>
-            <div class="io-group">
-              <span class="io-label">Outputs:</span>
-              <ul class="io-list">
-                <li><code>Discrepancy report</code></li>
-<li><code>Phonetic word-alignment map</code></li>
-<li><code>Observation certificate</code></li>
-              </ul>
-            </div>
-          </div>
+    </div>
 
-          <div class="sidebar-card">
-            <h3>Connected Modules</h3>
-            <p class="conn-text">Scans inputs from Contenido and HE; delivers validated alignment maps into VAV for precision cutting.</p>
-          </div>
+    <!-- How SHIM Adapts to Everything -->
+    <h2 class="section-title" style="font-size: 2rem; margin-bottom: 1.5rem; text-align: center;">
+      How SHIM Adapts Across the Whole Pipeline
+    </h2>
 
-          <div class="sidebar-card">
-            <h3>Verified Evidence</h3>
-            <p>Active working candidate in local core runtime. Phonetic alignment and gap detection verified by unit tests; candidate for RC2.</p>
-            <a href="../../proof/index.html" class="tool-link-btn">View Proof Ledger →</a>
-          </div>
-        </aside>
+    <div class="viewer-bento-grid">
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag gold">FASE 1: PRE-PRODUCCIÓN</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Script Compliance</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Verifica que el guion cumpla con las leyes de tono de marca y no contenga frases prohibidas.</p>
+      </div>
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag cyan">FASE 2: EN EL SET</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Live Speech Audit</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Escucha en tiempo real mediante Whisper y te avisa al instante si omitiste una palabra clave.</p>
+      </div>
+      <div class="bento-box bento-col-4">
+        <span class="apple-card-tag purple">FASE 3: POST-EXPORTACIÓN</span>
+        <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">Visual Slide Inspection</h4>
+        <p style="font-size: 0.88rem; color: #94a3b8;">Escanea las diapositivas del carrusel y subtítulos para garantizar que no haya texto cortado.</p>
       </div>
     </div>
+
   </main>
 
   
-  <div id="public-architect-drawer" class="architect-drawer" aria-hidden="true" role="dialog" aria-label="Public Architect">
-    <div class="architect-drawer-backdrop" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()"></div>
-    <div class="architect-drawer-panel">
-      <div class="drawer-header">
-        <div class="drawer-title-group">
-          <span class="architect-spark">✦</span>
-          <h3>Public Architect</h3>
-          <span class="drawer-badge">Deterministic NLP</span>
+  <footer class="apple-footer-v3">
+    <div class="footer-v3-inner">
+      <div class="footer-v3-columns">
+        <div class="footer-v3-col">
+          <h4>Synthesis Tools</h4>
+          <ul>
+            <li><a href="../vav/motions/index.html">13 Remotion Motion Families</a></li>
+            <li><a href="../vav/captions/index.html">Kinetic Subtitles Whisper</a></li>
+            <li><a href="../vav/cuts/index.html">18s Surgical Auto-Cuts</a></li>
+            <li><a href="../shim/index.html">0.00% GAP Metrology</a></li>
+          </ul>
         </div>
-        <button class="drawer-close" onclick="window.__ABRAXAS_CLOSE_ARCHITECT__?.()" aria-label="Close">✕</button>
-      </div>
-      <div class="drawer-body">
-        <p class="drawer-intro">Query canonical architecture, module ownership boundaries, truth status, or semantic principles directly.</p>
-        <div class="architect-form-group">
-          <input type="text" id="architect-query-input" class="architect-input" placeholder="e.g., What does Shim own? How does Vav synthesize?" aria-label="Query input">
-          <button id="architect-query-submit" class="architect-submit-btn">Query</button>
+        <div class="footer-v3-col">
+          <h4>Intelligence & Orchestration</h4>
+          <ul>
+            <li><a href="../arquitecto/index.html">Arquitecto (Coach & Assistant)</a></li>
+            <li><a href="../yod/index.html">YOD (Niche Blindspot Radar)</a></li>
+            <li><a href="../contenido/index.html">Contenido (Merkle-DAG 8 Formats)</a></li>
+            <li><a href="../he/index.html">HE (50-Asset Batch Desk)</a></li>
+          </ul>
         </div>
-        <div class="quick-prompt-chips">
-          <span class="chip-label">Suggestions:</span>
-          <button class="prompt-chip" data-q="Yod">YOD</button>
-          <button class="prompt-chip" data-q="Contenido">Contenido</button>
-          <button class="prompt-chip" data-q="Shim">SHIM</button>
-          <button class="prompt-chip" data-q="Vav">VAV</button>
-          <button class="prompt-chip" data-q="He">HE</button>
-          <button class="prompt-chip" data-q="OUT_OF_SYNC">OUT_OF_SYNC</button>
-        </div>
-        <div id="architect-response-container" class="architect-response-card" style="display: none;">
-          <div class="response-topic" id="architect-response-topic">TOPIC</div>
-          <div class="response-body" id="architect-response-text">Response content...</div>
-          <div class="response-meta" id="architect-response-meta">v1.0.0-rc1 Verified Baseline</div>
+        <div class="footer-v3-col">
+          <h4>Governance & Flow</h4>
+          <ul>
+            <li><a href="../../flujo/index.html">Content Lifecycle Journey</a></li>
+            <li><a href="../../gerencia/index.html">SQLite Executive Audit</a></li>
+            <li><a href="../../canon/index.html">Canon 37 TXT Library</a></li>
+            <li><a href="../../backup/index.html">Legacy Backup Snapshot</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
-  
-  
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-col brand-col">
-        <div class="footer-logo"><span class="brand-glyph">▲</span> ABRAXAS OS</div>
-        <p class="footer-desc">The Operating System for Systematic Content Intelligence, Operational Governance, and Deterministic Audiovisual Synthesis.</p>
-        <div class="footer-truth-badge"><span class="truth-dot"></span> v1.0.0-rc1 Historical Baseline</div>
-      </div>
-      <div class="footer-col">
-        <h4>Architecture</h4>
-        <ul>
-          <li><a href="../../system/index.html">System Dashboard</a></li>
-          <li><a href="../../architecture/pyramid/index.html">Giza Monument</a></li>
-          <li><a href="../../architecture/four-worlds/index.html">Four Worlds</a></li>
-          <li><a href="../../architecture/tree-of-life/index.html">Tree of Life</a></li>
-          <li><a href="../../architecture/content-state-space/index.html">State Space XYZA</a></li>
-          <li><a href="../../architecture/closed-loop/index.html">Closed Loop</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Canon & Taste</h4>
-        <ul>
-          <li><a href="../../taste/index.html">The Taste System</a></li>
-          <li><a href="../../principles/index.html">Core Principles</a></li>
-          <li><a href="../../proof/index.html">Verified Evidence</a></li>
-          <li><a href="../../roadmap/index.html">Roadmap Gates</a></li>
-          <li><a href="../../flow/index.html">Pipeline Blueprints</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Operators</h4>
-        <ul>
-          <li><a href="../../tools/yod/index.html">YOD</a></li>
-          <li><a href="../../tools/contenido/index.html">CONTENIDO</a></li>
-          <li><a href="../../tools/he/index.html">HE</a></li>
-          <li><a href="../../tools/shim/index.html">SHIM</a></li>
-          <li><a href="../../tools/vav/index.html">VAV</a></li>
-          <li><a href="../../tools/publishing/index.html">PUBLISHING</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2026 ABRAXAS OS. Deterministic Closed-Loop Architecture.</div>
-      <div class="footer-meta">
-        <span class="footer-mono">RC1 Baseline SHA: 91234741f0</span>
+      <div class="footer-v3-bottom">
+        <p>Copyright © 2026 ABRAXAS OS. Deterministic Content Architecture on Apple Silicon.</p>
+        <p style="font-family: monospace; color: #d4af37; font-size: 11px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
       </div>
     </div>
   </footer>
   
-  <script type="module" src="../../../assets/status-v3.js"></script>
 </body>
 </html>
