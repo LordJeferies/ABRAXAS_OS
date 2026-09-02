@@ -80,7 +80,7 @@
   }
 
   // ==========================================================================
-  // 4. HTML5 CANVAS PARTICLE BRAIN ENGINE (Principle 25: Chevron Particles)
+  // 4. MASTER 3D SPATIAL PYRAMID & CONNECTED 'A' GLYPH ENGINE
   // ==========================================================================
   function initParticleBrain() {
     const canvas = document.getElementById('brain-canvas');
@@ -96,79 +96,359 @@
       height = canvas.height = window.innerHeight;
     });
 
-    const colors = ['rgba(128, 82, 255, ', 'rgba(212, 175, 55, ', 'rgba(41, 151, 255, ', 'rgba(48, 209, 88, '];
-    const particleCount = Math.min(width > 768 ? 60 : 25, 70);
-    const particles = [];
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
 
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height * 0.75,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 7 + 4,
-        colorBase: colors[Math.floor(Math.random() * colors.length)],
-        alpha: Math.random() * 0.5 + 0.25,
-        rot: Math.random() * Math.PI * 2,
-        rotSpeed: (Math.random() - 0.5) * 0.02
+    window.addEventListener('mousemove', (e) => {
+      targetMouseX = (e.clientX - width / 2) / (width / 2);
+      targetMouseY = (e.clientY - height / 2) / (height / 2);
+    });
+
+    // 3D Perspective Projection
+    const fov = 480;
+    function project(x, y, z, cx, cy) {
+      const depth = z + fov;
+      if (depth <= 10) return null;
+      const scale = fov / depth;
+      return {
+        x: cx + x * scale,
+        y: cy + y * scale,
+        scale: scale,
+        depth: depth
+      };
+    }
+
+    // 3D Euler Rotation
+    function rotatePoint(x, y, z, pitch, yaw, roll) {
+      const cosX = Math.cos(pitch);
+      const sinX = Math.sin(pitch);
+      const y1 = y * cosX - z * sinX;
+      const z1 = y * sinX + z * cosX;
+
+      const cosY = Math.cos(yaw);
+      const sinY = Math.sin(yaw);
+      const x2 = x * cosY + z1 * sinY;
+      const z2 = -x * sinY + z1 * cosY;
+
+      const cosZ = Math.cos(roll);
+      const sinZ = Math.sin(roll);
+      const x3 = x2 * cosZ - y1 * sinZ;
+      const y3 = x2 * sinZ + y1 * cosZ;
+
+      return { x: x3, y: y3, z: z2 };
+    }
+
+    // A. 3D FLOATING "A" GLYPH PARTICLES
+    const glyphCount = width > 768 ? 42 : 22;
+    const glyphs = [];
+    const colors = [
+      { r: 212, g: 175, b: 55 },   // Gold
+      { r: 128, g: 82,  b: 255 },  // Iris
+      { r: 41,  g: 151, b: 255 },  // Cyan
+      { r: 48,  g: 209, b: 88 }    // Emerald
+    ];
+
+    for (let i = 0; i < glyphCount; i++) {
+      glyphs.push({
+        x: (Math.random() - 0.5) * width * 1.4,
+        y: (Math.random() - 0.5) * height * 1.4,
+        z: Math.random() * 550 - 150,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        vz: (Math.random() - 0.5) * 0.25,
+        rotZ: Math.random() * Math.PI * 2,
+        vRotZ: (Math.random() - 0.5) * 0.012,
+        size: Math.random() * 8 + 12,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: Math.random() * 0.45 + 0.3
       });
     }
 
-    function renderChevron(p) {
+    function drawGlyphA(ctx, proj, rot, size, color, alpha) {
       ctx.save();
-      ctx.translate(p.x, p.y);
-      ctx.rotate(p.rot);
+      ctx.translate(proj.x, proj.y);
+      ctx.scale(proj.scale, proj.scale);
+      ctx.rotate(rot);
+
+      const s = size;
       ctx.beginPath();
-      // Draw Abraxas Chevron Symbol (Inverted V)
-      ctx.moveTo(0, -p.size);
-      ctx.lineTo(p.size * 0.85, p.size);
-      ctx.lineTo(p.size * 0.45, p.size * 0.75);
-      ctx.lineTo(0, -p.size * 0.3);
-      ctx.lineTo(-p.size * 0.45, p.size * 0.75);
-      ctx.lineTo(-p.size * 0.85, p.size);
+      // Outer triangle of the "A" / Delta
+      ctx.moveTo(0, -s);
+      ctx.lineTo(s * 0.8, s);
+      ctx.lineTo(s * 0.45, s);
+      ctx.lineTo(s * 0.28, s * 0.35);
+      ctx.lineTo(-s * 0.28, s * 0.35);
+      ctx.lineTo(-s * 0.45, s);
+      ctx.lineTo(-s * 0.8, s);
       ctx.closePath();
-      ctx.fillStyle = p.colorBase + p.alpha + ')';
-      ctx.fill();
+
+      // Inner triangle cutout
+      ctx.moveTo(0, -s * 0.45);
+      ctx.lineTo(s * 0.18, s * 0.12);
+      ctx.lineTo(-s * 0.18, s * 0.12);
+      ctx.closePath();
+
+      ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha * 0.85})`;
+      ctx.fill('evenodd');
+
+      ctx.strokeStyle = `rgba(255, 255, 255, ${alpha * 0.4})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
       ctx.restore();
     }
 
-    function animate() {
+    // B. 3D MONUMENTAL PYRAMID & INTERNAL SEPHIROTIC CHAMBERS
+    const pyrBase = 280;
+    const pyrHalf = pyrBase / 2;
+    const pyrHeight = pyrBase * 0.6365;
+
+    const baseVerts = [
+      { x: -pyrHalf, y: pyrHeight * 0.4, z: -pyrHalf },
+      { x: pyrHalf,  y: pyrHeight * 0.4, z: -pyrHalf },
+      { x: pyrHalf,  y: pyrHeight * 0.4, z: pyrHalf },
+      { x: -pyrHalf, y: pyrHeight * 0.4, z: pyrHalf }
+    ];
+
+    const apexVert = { x: 0, y: -pyrHeight * 0.6, z: 0 };
+
+    const chambers = [
+      { id: 'YOD', name: 'YOD APEX [CHOKHMAH]', x: 0, y: -pyrHeight * 0.42, z: 0, color: '#d4af37', radius: 14 },
+      { id: 'DAAT', name: 'DAAT METROLOGY [SHIM]', x: 0, y: -pyrHeight * 0.1, z: 18, color: '#2997ff', radius: 13 },
+      { id: 'TIFERET', name: 'TIFERET [VAV FORGE]', x: 0, y: pyrHeight * 0.12, z: 0, color: '#bf5af2', radius: 16 },
+      { id: 'HE', name: 'MALKHUT VAULT [HE]', x: 0, y: pyrHeight * 0.32, z: -15, color: '#30d158', radius: 20 }
+    ];
+
+    const internalConduits = [
+      [0, 1], [1, 2], [2, 3], [0, 2]
+    ];
+
+    function animate(time) {
       ctx.clearRect(0, 0, width, height);
 
-      // Connecting neural lines between nearby nodes
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
+      mouseX += (targetMouseX - mouseX) * 0.05;
+      mouseY += (targetMouseY - mouseY) * 0.05;
+
+      const maxScroll = Math.max(document.body.scrollHeight - window.innerHeight, 1);
+      const scrollProgress = Math.min(Math.max(window.scrollY / maxScroll, 0), 1);
+
+      // 1. UPDATE & DRAW CONNECTED 3D "A" GLYPHS
+      const projectedGlyphs = [];
+
+      for (let i = 0; i < glyphs.length; i++) {
+        const g = glyphs[i];
+        g.x += g.vx;
+        g.y += g.vy;
+        g.z += g.vz;
+        g.rotZ += g.vRotZ;
+
+        const boundX = width * 0.8;
+        const boundY = height * 0.8;
+        if (g.x < -boundX) g.x = boundX;
+        if (g.x > boundX) g.x = -boundX;
+        if (g.y < -boundY) g.y = boundY;
+        if (g.y > boundY) g.y = -boundY;
+        if (g.z < -200) g.z = 450;
+        if (g.z > 450) g.z = -200;
+
+        const pRot = rotatePoint(g.x, g.y, g.z, mouseY * 0.15, mouseX * 0.25, 0);
+        const proj = project(pRot.x, pRot.y, pRot.z, width / 2, height / 2);
+
+        if (proj) {
+          projectedGlyphs.push({ proj, glyph: g });
+        }
+      }
+
+      // Draw Neural Connection Lines between nearby "A"s
+      for (let i = 0; i < projectedGlyphs.length; i++) {
+        for (let j = i + 1; j < projectedGlyphs.length; j++) {
+          const p1 = projectedGlyphs[i];
+          const p2 = projectedGlyphs[j];
+
+          const dx = p1.proj.x - p2.proj.x;
+          const dy = p1.proj.y - p2.proj.y;
+          const dist2D = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist2D < 135) {
+            const lineAlpha = (1 - dist2D / 135) * 0.18;
             ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = 'rgba(212, 175, 55, ' + (1 - dist / 120) * 0.12 + ')';
-            ctx.lineWidth = 1;
+            ctx.moveTo(p1.proj.x, p1.proj.y);
+            ctx.lineTo(p2.proj.x, p2.proj.y);
+
+            const grad = ctx.createLinearGradient(p1.proj.x, p1.proj.y, p2.proj.x, p2.proj.y);
+            grad.addColorStop(0, `rgba(${p1.glyph.color.r}, ${p1.glyph.color.g}, ${p1.glyph.color.b}, ${lineAlpha})`);
+            grad.addColorStop(1, `rgba(${p2.glyph.color.r}, ${p2.glyph.color.g}, ${p2.glyph.color.b}, ${lineAlpha})`);
+
+            ctx.strokeStyle = grad;
+            ctx.lineWidth = Math.max(0.6 * p1.proj.scale, 0.4);
             ctx.stroke();
           }
         }
       }
 
-      particles.forEach((p) => {
-        p.x += p.vx;
-        p.y += p.vy;
-        p.rot += p.rotSpeed;
+      for (let i = 0; i < projectedGlyphs.length; i++) {
+        const item = projectedGlyphs[i];
+        drawGlyphA(ctx, item.proj, item.glyph.rotZ, item.glyph.size, item.glyph.color, item.glyph.alpha);
+      }
 
-        if (p.x < -20) p.x = width + 20;
-        if (p.x > width + 20) p.x = -20;
-        if (p.y < -20) p.y = height * 0.75 + 20;
-        if (p.y > height * 0.75 + 20) p.y = -20;
+      // 2. RENDER MONUMENTAL 3D PYRAMID WITH SCROLL EXPLODING SHELL
+      const pyrCenterX = width / 2;
+      const pyrCenterY = height * 0.48;
 
-        renderChevron(p);
+      const autoYaw = time * 0.00035;
+      const pyrYaw = scrollProgress * Math.PI * 4 + autoYaw + mouseX * 0.4;
+      const pyrPitch = 0.28 + Math.sin(scrollProgress * Math.PI) * 0.22 + mouseY * 0.2;
+
+      // Shell Opening: Explodes outwards revealing the inside
+      const shellOpening = Math.min(Math.max((scrollProgress - 0.05) * 2.5, 0), 1.0);
+
+      const faceNormals = [
+        { x: 0, y: -0.2, z: -1 },
+        { x: 1, y: -0.2, z: 0 },
+        { x: 0, y: -0.2, z: 1 },
+        { x: -1, y: -0.2, z: 0 }
+      ];
+
+      const faces = [
+        [0, 1, apexVert, 0],
+        [1, 2, apexVert, 1],
+        [2, 3, apexVert, 2],
+        [3, 0, apexVert, 3]
+      ];
+
+      // Draw Internal Chambers & Conduits
+      const rotChambers = chambers.map(c => {
+        const r = rotatePoint(c.x, c.y, c.z, pyrPitch, pyrYaw, 0);
+        const p = project(r.x, r.y, r.z, pyrCenterX, pyrCenterY);
+        return { ...c, rot: r, proj: p };
       });
+
+      // Internal Conduits
+      ctx.lineWidth = 1.4;
+      internalConduits.forEach(([c1Idx, c2Idx]) => {
+        const c1 = rotChambers[c1Idx];
+        const c2 = rotChambers[c2Idx];
+        if (c1.proj && c2.proj) {
+          ctx.beginPath();
+          ctx.moveTo(c1.proj.x, c1.proj.y);
+          ctx.lineTo(c2.proj.x, c2.proj.y);
+          ctx.strokeStyle = 'rgba(212, 175, 55, ' + (0.25 + shellOpening * 0.45) + ')';
+          ctx.setLineDash([4, 4]);
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
+      });
+
+      // Internal Chamber Nodes
+      rotChambers.forEach((ch, idx) => {
+        if (!ch.proj) return;
+        const rad = ch.radius * ch.proj.scale * (1 + Math.sin(time * 0.003 + idx) * 0.12);
+
+        const glow = ctx.createRadialGradient(ch.proj.x, ch.proj.y, 0, ch.proj.x, ch.proj.y, rad * 2.2);
+        glow.addColorStop(0, ch.color);
+        glow.addColorStop(0.4, ch.color + '66');
+        glow.addColorStop(1, 'transparent');
+
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(ch.proj.x, ch.proj.y, rad * 2.2, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(ch.proj.x, ch.proj.y, rad * 0.35, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (shellOpening > 0.3) {
+          ctx.save();
+          ctx.font = '10px "SF Mono", monospace';
+          ctx.fillStyle = ch.color;
+          ctx.fillText(ch.name, ch.proj.x + rad * 1.5, ch.proj.y + 3);
+          ctx.restore();
+        }
+      });
+
+      // Project Pyramid Outer Shell Faces
+      const shellDist = shellOpening * 75;
+      const shellOpacity = Math.max(0.65 - shellOpening * 0.45, 0.12);
+
+      faces.forEach(([v1Idx, v2Idx, apex, nIdx]) => {
+        const n = faceNormals[nIdx];
+        const offX = n.x * shellDist;
+        const offY = n.y * shellDist;
+        const offZ = n.z * shellDist;
+
+        const p1 = baseVerts[v1Idx];
+        const p2 = baseVerts[v2Idx];
+
+        const r1 = rotatePoint(p1.x + offX, p1.y + offY, p1.z + offZ, pyrPitch, pyrYaw, 0);
+        const r2 = rotatePoint(p2.x + offX, p2.y + offY, p2.z + offZ, pyrPitch, pyrYaw, 0);
+        const rA = rotatePoint(apex.x + offX, apex.y + offY, apex.z + offZ, pyrPitch, pyrYaw, 0);
+
+        const proj1 = project(r1.x, r1.y, r1.z, pyrCenterX, pyrCenterY);
+        const proj2 = project(r2.x, r2.y, r2.z, pyrCenterX, pyrCenterY);
+        const projA = project(rA.x, rA.y, rA.z, pyrCenterX, pyrCenterY);
+
+        if (!proj1 || !proj2 || !projA) return;
+
+        const cross = (proj2.x - proj1.x) * (projA.y - proj1.y) - (proj2.y - proj1.y) * (projA.x - proj1.x);
+        const isFront = cross < 0;
+
+        ctx.beginPath();
+        ctx.moveTo(proj1.x, proj1.y);
+        ctx.lineTo(proj2.x, proj2.y);
+        ctx.lineTo(projA.x, projA.y);
+        ctx.closePath();
+
+        const faceAlpha = isFront ? shellOpacity : shellOpacity * 0.3;
+        ctx.fillStyle = `rgba(15, 12, 28, ${faceAlpha})`;
+        ctx.fill();
+
+        ctx.strokeStyle = isFront
+          ? `rgba(212, 175, 55, ${faceAlpha * 1.4})`
+          : `rgba(128, 82, 255, ${faceAlpha * 0.7})`;
+        ctx.lineWidth = isFront ? 1.3 : 0.7;
+        ctx.stroke();
+
+        // Horizontal Course Masonry lines
+        for (let course = 0.25; course <= 0.75; course += 0.25) {
+          const cX1 = proj1.x + (projA.x - proj1.x) * course;
+          const cY1 = proj1.y + (projA.y - proj1.y) * course;
+          const cX2 = proj2.x + (projA.x - proj2.x) * course;
+          const cY2 = proj2.y + (projA.y - proj2.y) * course;
+
+          ctx.beginPath();
+          ctx.moveTo(cX1, cY1);
+          ctx.lineTo(cX2, cY2);
+          ctx.strokeStyle = `rgba(212, 175, 55, ${faceAlpha * 0.45})`;
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      });
+
+      // Golden Apex Glow
+      const rGoldApex = rotatePoint(apexVert.x, apexVert.y, apexVert.z, pyrPitch, pyrYaw, 0);
+      const projGoldApex = project(rGoldApex.x, rGoldApex.y, rGoldApex.z, pyrCenterX, pyrCenterY);
+
+      if (projGoldApex) {
+        const glowRad = 24 * projGoldApex.scale;
+        const goldGlow = ctx.createRadialGradient(projGoldApex.x, projGoldApex.y, 0, projGoldApex.x, projGoldApex.y, glowRad);
+        goldGlow.addColorStop(0, 'rgba(254, 240, 138, 0.9)');
+        goldGlow.addColorStop(0.35, 'rgba(212, 175, 55, 0.45)');
+        goldGlow.addColorStop(1, 'transparent');
+
+        ctx.fillStyle = goldGlow;
+        ctx.beginPath();
+        ctx.arc(projGoldApex.x, projGoldApex.y, glowRad, 0, Math.PI * 2);
+        ctx.fill();
+      }
 
       requestAnimationFrame(animate);
     }
 
-    animate();
+    requestAnimationFrame(animate);
   }
 
   // ==========================================================================
