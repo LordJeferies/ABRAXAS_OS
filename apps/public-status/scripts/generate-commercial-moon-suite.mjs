@@ -119,7 +119,7 @@ function getUniversalWidgets(locale, depth = 2) {
       <a href="${langPrefix}criterios-roadmap/index.html" class="drawer-nav-btn">🗺️ <span>Criterios & Roadmap Maestro</span></a>
       <a href="${langPrefix}ecosistema/index.html" class="drawer-nav-btn">⚡ <span>Ecosistema 8-en-1</span></a>
       <a href="${langPrefix}gerencia/index.html" class="drawer-nav-btn">💼 <span>Gobernanza & ROI</span></a>
-      <a href="${langPrefix}flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (6 Fases)</span></a>
+      <a href="${langPrefix}flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (10 Esferas)</span></a>
       <a href="${langPrefix}tools/vav/motions/index.html" class="drawer-nav-btn">🎬 <span>13 Familias de Motion</span></a>
       <a href="${langPrefix}tools/vav/captions/index.html" class="drawer-nav-btn">💬 <span>Subtítulos Cinéticos Whisper</span></a>
       <a href="${langPrefix}tools/vav/cuts/index.html" class="drawer-nav-btn">✂️ <span>Cortes en 18s & RMS</span></a>
@@ -167,7 +167,7 @@ function getUniversalFooter(locale, depth = 2) {
         <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Gobernanza & Documentación' : 'Governance & Docs'}</h4>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
           <li><a href="${langPrefix}mapa-sistema/index.html" style="color: #fef08a; font-weight: 700;">🗺️ ${isEs ? 'Árbol & Mapa Total (Raíces)' : 'Master Tree & Atlas'}</a></li>
-            <li><a href="${langPrefix}flujo/index.html">${isEs ? 'Ciclo de Vida de 6 Fases' : '6-Phase Lifecycle'}</a></li>
+            <li><a href="${langPrefix}flujo/index.html">${isEs ? 'Ciclo de Vida (10 Esferas)' : '6-Phase Lifecycle'}</a></li>
           <li><a href="${langPrefix}gerencia/index.html">${isEs ? 'Control de Costos SQLite' : 'SQLite Cost Governance'}</a></li>
           <li><a href="${langPrefix}canon/index.html">${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT Library'}</a></li>
           <li><a href="${langPrefix}backup/index.html">${isEs ? 'Versión Backup de Respaldo' : 'Legacy Backup Snapshot'}</a></li>
@@ -224,7 +224,7 @@ function generateLunaComercialPage(locale) {
     <!-- Dual Summary: En 30s + Especificación Técnica -->
     <div id="resumen" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(48,209,88,0.08); border-color: rgba(48,209,88,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag emerald">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
         <h3 class="card-h3">${isEs ? '¿Qué es y cómo funciona la Luna Comercial?' : 'What is the Commercial Moon?'}</h3>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem; color: #e2e8f0; line-height: 1.5;">
@@ -236,7 +236,7 @@ function generateLunaComercialPage(locale) {
       </div>
 
       <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(212,175,55,0.08); border-color: rgba(212,175,55,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">🛠️ EN PROFUNDIDAD // LA LUNA DE CONTENIDO VS LA LUNA COMERCIAL</span>
         <h3 class="card-h3">${isEs ? 'Dos Lunas Complementarias en Coherencia' : 'Two Complementary Telemetric Moons'}</h3>
         <p class="card-desc" style="font-size: 0.92rem; line-height: 1.55;">
@@ -256,7 +256,7 @@ function generateLunaComercialPage(locale) {
       </div>
 
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a0f; border-color: rgba(56,189,248,0.3);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <div style="overflow-x: auto;">
           <table style="width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 0.85rem; text-align: left;">
             <thead>
@@ -315,7 +315,7 @@ function generateLunaComercialPage(locale) {
     <!-- 2. Ingesta Ultrarrápida por Foto / OCR y Formulario -->
     <section id="ocr-facturas" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(128,82,255,0.08); border-color: rgba(128,82,255,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag iris">02 // INGESTA DE VENTAS POR FOTO / OCR</span>
         <h3 class="card-h3">${isEs ? 'Escaneo Inteligente de Facturas y Tickets' : 'OCR Receipt & Invoice Scanning'}</h3>
         <p class="card-desc">
@@ -329,7 +329,7 @@ function generateLunaComercialPage(locale) {
       </div>
 
       <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(56,189,248,0.08); border-color: rgba(56,189,248,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag cyan">FORMULARIO ÁGIL DE VENTA MANUAL</span>
         <h3 class="card-h3">${isEs ? 'Ajustes Cómodos en 3 Clics' : 'Frictionless 3-Click Manual Adjustments'}</h3>
         <p class="card-desc">
@@ -354,21 +354,21 @@ function generateLunaComercialPage(locale) {
 
       <div class="bento-grid">
         <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag gold">CLOSER #01 // ALTA CONVERSIÓN</span>
           <h4 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Mariana V. (WhatsApp B2B)</h4>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">Leads atendidos: <strong>84</strong><br/>Ventas cerradas: <strong>31 (36.9%)</strong><br/>Facturación total: <strong style="color: #30d158;">$18,400.00</strong></p>
         </div>
 
         <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag cyan">CLOSER #02 // ECOMMERCE & ML</span>
           <h4 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Jorge R. (MercadoLibre / DMs)</h4>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">Consultas atendidas: <strong>142</strong><br/>Ventas cerradas: <strong>58 (40.8%)</strong><br/>Facturación total: <strong style="color: #30d158;">$9,280.00</strong></p>
         </div>
 
         <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag iris">CLOSER #03 // HIGH-TICKET</span>
           <h4 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Daniela S. (Llamadas Directas)</h4>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">Llamadas agendadas: <strong>14</strong><br/>Contratos firmados: <strong>6 (42.8%)</strong><br/>Facturación total: <strong style="color: #30d158;">$30,000.00</strong></p>
@@ -379,7 +379,7 @@ function generateLunaComercialPage(locale) {
     <!-- 4. Cálculo de ROI y Canales -->
     <section id="roi-campanas" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(212,175,55,0.06); border-color: rgba(212,175,55,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">04 // FÓRMULA DE RETORNO SOBRE INVERSIÓN (ROI DE CAMPAÑA)</span>
         <h3 class="card-h3">${isEs ? 'Cálculo Matemático de Rentabilidad Real' : 'Mathematical Campaign ROI Calculation'}</h3>
         <p class="card-desc" style="font-size: 1rem; color: #e2e8f0; line-height: 1.6;">
@@ -400,6 +400,56 @@ function generateLunaComercialPage(locale) {
   ${getUniversalFooter(locale, depth)}
   ${getUniversalWidgets(locale, depth)}
 
+  
+  <script>
+    // OCR Simulate Button — Adds real new row to the ledger
+    let ocrCounter = 0;
+    const sampleProducts = [
+      { name: 'reel_nuevo_autoridad', format: 'Video 9:16 (Reels)', canal: 'WhatsApp Inbound', units: Math.floor(Math.random()*40+5), price: Math.floor(Math.random()*200+50) },
+      { name: 'carousel_coaching_pro', format: 'Carrusel 4:5 (IG)', canal: 'Instagram DM', units: Math.floor(Math.random()*25+3), price: Math.floor(Math.random()*150+80) },
+      { name: 'hilo_caso_exito', format: 'Hilo X / LinkedIn', canal: 'LinkedIn Inbound', units: Math.floor(Math.random()*10+1), price: Math.floor(Math.random()*500+200) },
+      { name: 'newsletter_especial', format: 'Newsletter Email', canal: 'Substack Referral', units: Math.floor(Math.random()*15+2), price: Math.floor(Math.random()*120+40) },
+      { name: 'youtube_manifiesto', format: 'YouTube 16:9', canal: 'Búsqueda Orgánica', units: Math.floor(Math.random()*8+1), price: Math.floor(Math.random()*800+300) },
+      { name: 'podcast_entrevista', format: 'Micro-Podcast', canal: 'Spotify Link', units: Math.floor(Math.random()*12+2), price: Math.floor(Math.random()*100+30) }
+    ];
+    
+    document.getElementById('btn-simulate-ocr')?.addEventListener('click', function() {
+      ocrCounter++;
+      const sample = sampleProducts[ocrCounter % sampleProducts.length];
+      const units = Math.floor(Math.random()*40+5);
+      const unitPrice = Math.floor(Math.random()*200+50);
+      const total = units * unitPrice;
+      const roi = Math.floor(Math.random()*2000+200);
+      const tbody = document.getElementById('ocr-live-ledger-body');
+      if (!tbody) return;
+      
+      const newRow = document.createElement('tr');
+      newRow.style.cssText = 'border-bottom: 1px solid rgba(255,255,255,0.06); color: #e2e8f0; animation: fadeIn 0.5s ease;';
+      newRow.innerHTML = [
+        "<td style=\"padding: 14px;\"><span style=\"color: #38bdf8;\">" + sample.name + "_" + String(ocrCounter).padStart(2, "0") + "</span></td>",
+        "<td>" + sample.format + "</td>",
+        "<td>" + sample.canal + "</td>",
+        "<td><strong>" + units + " artículos</strong></td>",
+        "<td><strong style=\"color: #30d158;\">$" + total.toLocaleString() + ".00</strong></td>",
+        "<td><span style=\"color: #fef08a; background: rgba(212,175,55,0.15); padding: 2px 6px; border-radius: 4px;\">+" + roi + "%</span></td>",
+        "<td><span style=\"color: #30d158;\">● Nuevo (OCR)</span></td>"
+      ].join("");
+      tbody.insertBefore(newRow, tbody.firstChild);
+      
+      // Flash animation
+      newRow.style.background = 'rgba(48,209,88,0.15)';
+      setTimeout(() => { newRow.style.background = 'transparent'; newRow.style.transition = 'background 1s ease'; }, 1500);
+      
+      // Update summary if exists
+      const summaryEl = document.getElementById('ocr-total-summary');
+      if (summaryEl) {
+        const currentTotal = parseInt(summaryEl.dataset.total || '22610');
+        const newTotal = currentTotal + total;
+        summaryEl.dataset.total = newTotal;
+        summaryEl.textContent = '$' + newTotal.toLocaleString() + '.00';
+      }
+    });
+  </script>
   <script src="${root}assets/abraxas-engine-v3.js"></script>
 </body>
 </html>`;
@@ -449,7 +499,7 @@ function generateBrandingMethodPage(locale) {
     <!-- Resumen Ejecutivo -->
     <div id="resumen" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(191,90,242,0.08); border-color: rgba(191,90,242,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag iris">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
         <h3 class="card-h3">${isEs ? '¿Cómo transforma YOD la estrategia de una empresa?' : 'How YOD Transforms Brand Strategy?'}</h3>
         <p class="card-desc" style="color: #e2e8f0; font-size: 1rem; line-height: 1.6;">
@@ -463,7 +513,7 @@ function generateBrandingMethodPage(locale) {
     
     <!-- Interactive YOD Diagnostic Tool -->
     <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(14, 14, 22, 0.95); border: 1px solid var(--border-gold); margin-bottom: 4rem; padding: 2.5rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
       <span class="card-pill-tag gold">SIMULADOR EN VIVO // YOD COGNITIVE RADAR</span>
       <h3 class="card-h3">${isEs ? 'Prueba el Diagnóstico de Nicho en Tiempo Real' : 'Test Real-Time Niche Diagnostic'}</h3>
       <p class="card-desc">${isEs ? 'Selecciona tu industria y haz clic para ver cómo YOD extrae los ángulos de autoridad y redacta los ganchos de venta:' : 'Select your industry and run the YOD diagnostic engine:'}</p>
@@ -513,7 +563,7 @@ function generateBrandingMethodPage(locale) {
 
       <div class="bento-grid">
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a10; border-left: 4px solid #ff453a;">
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag ruby">PASO 1 // ORIGEN</span>
           <h4 style="font-size: 1.3rem; color: #fff; margin-bottom: 8px;">1. ¿De dónde vienes? (El Dolor Fundacional)</h4>
           <p style="font-size: 0.92rem; color: #94a3b8; line-height: 1.55;">
@@ -522,7 +572,7 @@ function generateBrandingMethodPage(locale) {
         </div>
 
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a10; border-left: 4px solid #30d158;">
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag emerald">PASO 2 // DESTINO</span>
           <h4 style="font-size: 1.3rem; color: #fff; margin-bottom: 8px;">2. ¿A dónde quieres ir? (La Visión de Expansión)</h4>
           <p style="font-size: 0.92rem; color: #94a3b8; line-height: 1.55;">
@@ -531,7 +581,7 @@ function generateBrandingMethodPage(locale) {
         </div>
 
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a10; border-left: 4px solid #38bdf8;">
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag cyan">PASO 3 // IDENTIDAD ACTUAL</span>
           <h4 style="font-size: 1.3rem; color: #fff; margin-bottom: 8px;">3. ¿Quién eres ahora y qué te hace serlo?</h4>
           <p style="font-size: 0.92rem; color: #94a3b8; line-height: 1.55;">
@@ -540,7 +590,7 @@ function generateBrandingMethodPage(locale) {
         </div>
 
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a10; border-left: 4px solid #bf5af2;">
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag iris">PASO 4 // POTENCIAL EXPANDIDO (YOD ENGINE)</span>
           <h4 style="font-size: 1.3rem; color: #fff; margin-bottom: 8px;">4. ¿Quién más puedes ser? (La Tesis de Autoridad)</h4>
           <p style="font-size: 0.92rem; color: #cbd5e1; line-height: 1.55;">
@@ -559,28 +609,28 @@ function generateBrandingMethodPage(locale) {
 
       <div class="bento-grid">
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag gold">CAMPAÑA 01 // CONQUISTA DE NICHO</span>
           <h4 class="card-h3">Tesis Contraria & Destrucción de Mitos</h4>
           <p class="card-desc">Ataca las falsas creencias de tu industria. Posiciona tu producto como la única solución lógica mediante videos de 18s y carruseles 4:5.</p>
         </div>
 
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag cyan">CAMPAÑA 02 // REACTIVACIÓN DE BASE FRÍA</span>
           <h4 class="card-h3">Oferta Relámpago por WhatsApp & Email</h4>
           <p class="card-desc">Reactiva prospectos antiguos en tu base de datos mediante mensajes cortos con deuda narrativa y payoff irresistible.</p>
         </div>
 
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag iris">CAMPAÑA 03 // EL GRAN MONUMENTO</span>
           <h4 class="card-h3">Autoridad Institucional & Podcasts</h4>
           <p class="card-desc">Ensayos largos en YouTube (16:9) y episodios de podcast que educan a clientes de alto valor adquisitivo.</p>
         </div>
 
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag emerald">CAMPAÑA 04 // CIERRE HIGH-TICKET</span>
           <h4 class="card-h3">Lanzamiento en 4 Tiempos & Pitch Closer</h4>
           <p class="card-desc">Secuencia cronometrada que calienta la audiencia en 7 días y deriva a llamadas de cierre con guiones optimizados para vendedores.</p>
@@ -593,6 +643,56 @@ function generateBrandingMethodPage(locale) {
   ${getUniversalFooter(locale, depth)}
   ${getUniversalWidgets(locale, depth)}
 
+  
+  <script>
+    // OCR Simulate Button — Adds real new row to the ledger
+    let ocrCounter = 0;
+    const sampleProducts = [
+      { name: 'reel_nuevo_autoridad', format: 'Video 9:16 (Reels)', canal: 'WhatsApp Inbound', units: Math.floor(Math.random()*40+5), price: Math.floor(Math.random()*200+50) },
+      { name: 'carousel_coaching_pro', format: 'Carrusel 4:5 (IG)', canal: 'Instagram DM', units: Math.floor(Math.random()*25+3), price: Math.floor(Math.random()*150+80) },
+      { name: 'hilo_caso_exito', format: 'Hilo X / LinkedIn', canal: 'LinkedIn Inbound', units: Math.floor(Math.random()*10+1), price: Math.floor(Math.random()*500+200) },
+      { name: 'newsletter_especial', format: 'Newsletter Email', canal: 'Substack Referral', units: Math.floor(Math.random()*15+2), price: Math.floor(Math.random()*120+40) },
+      { name: 'youtube_manifiesto', format: 'YouTube 16:9', canal: 'Búsqueda Orgánica', units: Math.floor(Math.random()*8+1), price: Math.floor(Math.random()*800+300) },
+      { name: 'podcast_entrevista', format: 'Micro-Podcast', canal: 'Spotify Link', units: Math.floor(Math.random()*12+2), price: Math.floor(Math.random()*100+30) }
+    ];
+    
+    document.getElementById('btn-simulate-ocr')?.addEventListener('click', function() {
+      ocrCounter++;
+      const sample = sampleProducts[ocrCounter % sampleProducts.length];
+      const units = Math.floor(Math.random()*40+5);
+      const unitPrice = Math.floor(Math.random()*200+50);
+      const total = units * unitPrice;
+      const roi = Math.floor(Math.random()*2000+200);
+      const tbody = document.getElementById('ocr-live-ledger-body');
+      if (!tbody) return;
+      
+      const newRow = document.createElement('tr');
+      newRow.style.cssText = 'border-bottom: 1px solid rgba(255,255,255,0.06); color: #e2e8f0; animation: fadeIn 0.5s ease;';
+      newRow.innerHTML = [
+        "<td style=\"padding: 14px;\"><span style=\"color: #38bdf8;\">" + sample.name + "_" + String(ocrCounter).padStart(2, "0") + "</span></td>" +
+        "<td>" + sample.format + "</td>" +
+        "<td>" + sample.canal + "</td>" +
+        "<td><strong>" + units + " artículos</strong></td>" +
+        "<td><strong style=\"color: #30d158;\">$" + total.toLocaleString() + ".00</strong></td>" +
+        "<td><span style=\"color: #fef08a; background: rgba(212,175,55,0.15); padding: 2px 6px; border-radius: 4px;\">+" + roi + "%</span></td>" +
+        "<td><span style=\"color: #30d158;\">● Nuevo (OCR)</span></td>"
+      ].join("");
+      tbody.insertBefore(newRow, tbody.firstChild);
+      
+      // Flash animation
+      newRow.style.background = 'rgba(48,209,88,0.15)';
+      setTimeout(() => { newRow.style.background = 'transparent'; newRow.style.transition = 'background 1s ease'; }, 1500);
+      
+      // Update summary if exists
+      const summaryEl = document.getElementById('ocr-total-summary');
+      if (summaryEl) {
+        const currentTotal = parseInt(summaryEl.dataset.total || '22610');
+        const newTotal = currentTotal + total;
+        summaryEl.dataset.total = newTotal;
+        summaryEl.textContent = '$' + newTotal.toLocaleString() + '.00';
+      }
+    });
+  </script>
   <script src="${root}assets/abraxas-engine-v3.js"></script>
 </body>
 </html>`;
@@ -642,7 +742,7 @@ function generateAbraxasCoreExamplePage(locale) {
     <!-- Resumen Ejecutivo -->
     <div id="resumen" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(212,175,55,0.08); border-color: rgba(212,175,55,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
         <h3 class="card-h3">${isEs ? 'La Identidad de ABRAXAS OS en una Cápsula' : 'ABRAXAS OS Identity in a Capsule'}</h3>
         <p class="card-desc" style="color: #e2e8f0; font-size: 1rem; line-height: 1.6;">
@@ -662,28 +762,28 @@ function generateAbraxasCoreExamplePage(locale) {
 
       <div class="bento-grid">
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag ruby">ORIGEN (DE DÓNDE VENIMOS)</span>
           <h4 class="card-h3">El Caos de las Agencias Tradicionales</h4>
           <p class="card-desc">Creadores agotados saltando entre Premiere, Notion, ChatGPT y Canva, perdiendo días en editar silencios y terminando con contenido sin tesis ni ventas.</p>
         </div>
 
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag emerald">DESTINO (A DÓNDE VAMOS)</span>
           <h4 class="card-h3">El Estándar de Soberanía en Apple Silicon</h4>
           <p class="card-desc">Convertir a ABRAXAS OS en el sistema operativo indispensable para empresas, CEOs y agencias que exigen control absoluto de su marca y producción industrial.</p>
         </div>
 
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag cyan">QUIÉNES SOMOS AHORA</span>
           <h4 class="card-h3">Infraestructura Determinista Probada</h4>
           <p class="card-desc">Un motor de software verificado con pruebas de regresión, persistencia SQLite local, 37 dossiers canónicos y metrología SHIM 0.00% GAPs.</p>
         </div>
 
         <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag iris">QUIÉNES PODEMOS SER</span>
           <h4 class="card-h3">La Máquina de Autoridad y Rentabilidad</h4>
           <p class="card-desc">El ecosistema donde cada pieza de contenido genera demanda predecible y ventas auditadas en tiempo real mediante la Luna Comercial.</p>
@@ -699,7 +799,7 @@ function generateAbraxasCoreExamplePage(locale) {
       </div>
 
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(48,209,88,0.06); border-color: rgba(48,209,88,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag emerald">PITCH EN 4 TIEMPOS</span>
         <h3 class="card-h3">${isEs ? '«Deja de ser esclavo de la edición manual: toma el control con ABRAXAS»' : '«Take Total Command with ABRAXAS OS»'}</h3>
         <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-top: 1rem;">
@@ -716,6 +816,56 @@ function generateAbraxasCoreExamplePage(locale) {
   ${getUniversalFooter(locale, depth)}
   ${getUniversalWidgets(locale, depth)}
 
+  
+  <script>
+    // OCR Simulate Button — Adds real new row to the ledger
+    let ocrCounter = 0;
+    const sampleProducts = [
+      { name: 'reel_nuevo_autoridad', format: 'Video 9:16 (Reels)', canal: 'WhatsApp Inbound', units: Math.floor(Math.random()*40+5), price: Math.floor(Math.random()*200+50) },
+      { name: 'carousel_coaching_pro', format: 'Carrusel 4:5 (IG)', canal: 'Instagram DM', units: Math.floor(Math.random()*25+3), price: Math.floor(Math.random()*150+80) },
+      { name: 'hilo_caso_exito', format: 'Hilo X / LinkedIn', canal: 'LinkedIn Inbound', units: Math.floor(Math.random()*10+1), price: Math.floor(Math.random()*500+200) },
+      { name: 'newsletter_especial', format: 'Newsletter Email', canal: 'Substack Referral', units: Math.floor(Math.random()*15+2), price: Math.floor(Math.random()*120+40) },
+      { name: 'youtube_manifiesto', format: 'YouTube 16:9', canal: 'Búsqueda Orgánica', units: Math.floor(Math.random()*8+1), price: Math.floor(Math.random()*800+300) },
+      { name: 'podcast_entrevista', format: 'Micro-Podcast', canal: 'Spotify Link', units: Math.floor(Math.random()*12+2), price: Math.floor(Math.random()*100+30) }
+    ];
+    
+    document.getElementById('btn-simulate-ocr')?.addEventListener('click', function() {
+      ocrCounter++;
+      const sample = sampleProducts[ocrCounter % sampleProducts.length];
+      const units = Math.floor(Math.random()*40+5);
+      const unitPrice = Math.floor(Math.random()*200+50);
+      const total = units * unitPrice;
+      const roi = Math.floor(Math.random()*2000+200);
+      const tbody = document.getElementById('ocr-live-ledger-body');
+      if (!tbody) return;
+      
+      const newRow = document.createElement('tr');
+      newRow.style.cssText = 'border-bottom: 1px solid rgba(255,255,255,0.06); color: #e2e8f0; animation: fadeIn 0.5s ease;';
+      newRow.innerHTML = [
+        "<td style=\"padding: 14px;\"><span style=\"color: #38bdf8;\">" + sample.name + "_" + String(ocrCounter).padStart(2, "0") + "</span></td>" +
+        "<td>" + sample.format + "</td>" +
+        "<td>" + sample.canal + "</td>" +
+        "<td><strong>" + units + " artículos</strong></td>" +
+        "<td><strong style=\"color: #30d158;\">$" + total.toLocaleString() + ".00</strong></td>" +
+        "<td><span style=\"color: #fef08a; background: rgba(212,175,55,0.15); padding: 2px 6px; border-radius: 4px;\">+" + roi + "%</span></td>" +
+        "<td><span style=\"color: #30d158;\">● Nuevo (OCR)</span></td>"
+      ].join("");
+      tbody.insertBefore(newRow, tbody.firstChild);
+      
+      // Flash animation
+      newRow.style.background = 'rgba(48,209,88,0.15)';
+      setTimeout(() => { newRow.style.background = 'transparent'; newRow.style.transition = 'background 1s ease'; }, 1500);
+      
+      // Update summary if exists
+      const summaryEl = document.getElementById('ocr-total-summary');
+      if (summaryEl) {
+        const currentTotal = parseInt(summaryEl.dataset.total || '22610');
+        const newTotal = currentTotal + total;
+        summaryEl.dataset.total = newTotal;
+        summaryEl.textContent = '$' + newTotal.toLocaleString() + '.00';
+      }
+    });
+  </script>
   <script src="${root}assets/abraxas-engine-v3.js"></script>
 </body>
 </html>`;
@@ -764,7 +914,7 @@ function generateCriteriosRoadmapPage(locale) {
     <!-- Resumen Ejecutivo -->
     <div id="resumen" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(212,175,55,0.08); border-color: rgba(212,175,55,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
         <h3 class="card-h3">${isEs ? 'La Ley Suprema de Criterio de ABRAXAS' : 'The Supreme Law of Criteria'}</h3>
         <p class="card-desc" style="color: #e2e8f0; font-size: 1rem; line-height: 1.6;">
@@ -784,42 +934,42 @@ function generateCriteriosRoadmapPage(locale) {
 
       <div class="bento-grid">
         <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag gold">CRITERIO 01</span>
           <h4 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Tema ≠ Idea</h4>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">Un tema es una palabra hueca ("productividad"); una idea es una afirmación dialéctica comprobable con mecanismo de acción.</p>
         </div>
 
         <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag cyan">CRITERIO 02</span>
           <h4 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Deuda & Payoff</h4>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">El gancho promete una revelación específica; el cuerpo y cierre del contenido deben pagar exactamente esa deuda sin rodeos.</p>
         </div>
 
         <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag iris">CRITERIO 03</span>
           <h4 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Metrología Da'at (SHIM)</h4>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">La realidad observada manda sobre el plan. Si el audio grabado no coincide con el guion, el activo se bloquea hasta corregirse.</p>
         </div>
 
         <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag emerald">CRITERIO 04</span>
           <h4 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Anti-AI-Slop</h4>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">Prohibición de cliches visuales, neones gratuitos y textos genéricos de IA que degradan la percepción de lujo de la marca.</p>
         </div>
 
         <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag ruby">CRITERIO 05</span>
           <h4 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Total Production Coach</h4>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">Reglas estrictas para edición, VFX, SFX, música y motion. Si no hay justificación narrativa para un efecto, la directiva es <code>no_sfx_needed</code>.</p>
         </div>
 
         <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button>>
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag gold">CRITERIO 06</span>
           <h4 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Bucle de Doble Luna</h4>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.5;">La Luna de Contenido mejora la retención creativa y la Luna Comercial audita la rentabilidad de las ventas en dinero real.</p>
@@ -836,21 +986,21 @@ function generateCriteriosRoadmapPage(locale) {
 
       <div class="bento-grid">
         <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a0f; border-left: 4px solid #d4af37;">
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag gold">Q3 2026 // ESTADO ACTUAL (LÍNEA BASE VERIFICADA)</span>
           <h4 class="card-h3">Release Candidate 1 (RC1) & Suite Apple MacBook Pro 2026</h4>
           <p class="card-desc">Motor VAV de auto-edición en 18s, 13 familias de motion, metrología SHIM 0.00% GAPs, Luna Comercial con OCR y 37 dossiers canónicos sellados en SHA-256.</p>
         </div>
 
         <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a0f; border-left: 4px solid #38bdf8;">
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag cyan">Q4 2026 // FASE SIGUIENTE</span>
           <h4 class="card-h3">Integración Nativa Metal GPU & Modelos Locales M-Series</h4>
           <p class="card-desc">Inferencia de LLM local offline en Apple Neural Engine con latencia sub-10ms y composición de shaders 3D nativos en Swift.</p>
         </div>
 
         <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a0f; border-left: 4px solid #bf5af2;">
+        <button class="card-expand-btn" title="Expandir">+</button>
           <span class="card-pill-tag iris">Q1-Q2 2027 // EXPANSIÓN INDUSTRIAL</span>
           <h4 class="card-h3">Autonomía Multi-Empresa & Despliegue de Nodos Distribuidos</h4>
           <p class="card-desc">Sincronización P2P criptográfica entre estaciones de trabajo Mac Studio sin depender de servidores centrales.</p>
@@ -863,6 +1013,56 @@ function generateCriteriosRoadmapPage(locale) {
   ${getUniversalFooter(locale, depth)}
   ${getUniversalWidgets(locale, depth)}
 
+  
+  <script>
+    // OCR Simulate Button — Adds real new row to the ledger
+    let ocrCounter = 0;
+    const sampleProducts = [
+      { name: 'reel_nuevo_autoridad', format: 'Video 9:16 (Reels)', canal: 'WhatsApp Inbound', units: Math.floor(Math.random()*40+5), price: Math.floor(Math.random()*200+50) },
+      { name: 'carousel_coaching_pro', format: 'Carrusel 4:5 (IG)', canal: 'Instagram DM', units: Math.floor(Math.random()*25+3), price: Math.floor(Math.random()*150+80) },
+      { name: 'hilo_caso_exito', format: 'Hilo X / LinkedIn', canal: 'LinkedIn Inbound', units: Math.floor(Math.random()*10+1), price: Math.floor(Math.random()*500+200) },
+      { name: 'newsletter_especial', format: 'Newsletter Email', canal: 'Substack Referral', units: Math.floor(Math.random()*15+2), price: Math.floor(Math.random()*120+40) },
+      { name: 'youtube_manifiesto', format: 'YouTube 16:9', canal: 'Búsqueda Orgánica', units: Math.floor(Math.random()*8+1), price: Math.floor(Math.random()*800+300) },
+      { name: 'podcast_entrevista', format: 'Micro-Podcast', canal: 'Spotify Link', units: Math.floor(Math.random()*12+2), price: Math.floor(Math.random()*100+30) }
+    ];
+    
+    document.getElementById('btn-simulate-ocr')?.addEventListener('click', function() {
+      ocrCounter++;
+      const sample = sampleProducts[ocrCounter % sampleProducts.length];
+      const units = Math.floor(Math.random()*40+5);
+      const unitPrice = Math.floor(Math.random()*200+50);
+      const total = units * unitPrice;
+      const roi = Math.floor(Math.random()*2000+200);
+      const tbody = document.getElementById('ocr-live-ledger-body');
+      if (!tbody) return;
+      
+      const newRow = document.createElement('tr');
+      newRow.style.cssText = 'border-bottom: 1px solid rgba(255,255,255,0.06); color: #e2e8f0; animation: fadeIn 0.5s ease;';
+      newRow.innerHTML = [
+        "<td style=\"padding: 14px;\"><span style=\"color: #38bdf8;\">" + sample.name + "_" + String(ocrCounter).padStart(2, "0") + "</span></td>" +
+        "<td>" + sample.format + "</td>" +
+        "<td>" + sample.canal + "</td>" +
+        "<td><strong>" + units + " artículos</strong></td>" +
+        "<td><strong style=\"color: #30d158;\">$" + total.toLocaleString() + ".00</strong></td>" +
+        "<td><span style=\"color: #fef08a; background: rgba(212,175,55,0.15); padding: 2px 6px; border-radius: 4px;\">+" + roi + "%</span></td>" +
+        "<td><span style=\"color: #30d158;\">● Nuevo (OCR)</span></td>"
+      ].join("");
+      tbody.insertBefore(newRow, tbody.firstChild);
+      
+      // Flash animation
+      newRow.style.background = 'rgba(48,209,88,0.15)';
+      setTimeout(() => { newRow.style.background = 'transparent'; newRow.style.transition = 'background 1s ease'; }, 1500);
+      
+      // Update summary if exists
+      const summaryEl = document.getElementById('ocr-total-summary');
+      if (summaryEl) {
+        const currentTotal = parseInt(summaryEl.dataset.total || '22610');
+        const newTotal = currentTotal + total;
+        summaryEl.dataset.total = newTotal;
+        summaryEl.textContent = '$' + newTotal.toLocaleString() + '.00';
+      }
+    });
+  </script>
   <script src="${root}assets/abraxas-engine-v3.js"></script>
 </body>
 </html>`;

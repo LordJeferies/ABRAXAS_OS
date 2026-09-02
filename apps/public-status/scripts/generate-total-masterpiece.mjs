@@ -132,7 +132,7 @@ function getUniversalWidgets(locale, depth = 2) {
       <a href="${langPrefix}criterios-roadmap/index.html" class="drawer-nav-btn">🗺️ <span>Criterios & Roadmap Maestro</span></a>
       <a href="${langPrefix}ecosistema/index.html" class="drawer-nav-btn">⚡ <span>Ecosistema 8-en-1</span></a>
       <a href="${langPrefix}gerencia/index.html" class="drawer-nav-btn">💼 <span>Gobernanza & ROI</span></a>
-      <a href="${langPrefix}flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (6 Fases)</span></a>
+      <a href="${langPrefix}flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (10 Esferas)</span></a>
       <a href="${langPrefix}tools/vav/motions/index.html" class="drawer-nav-btn">🎬 <span>13 Familias de Motion</span></a>
       <a href="${langPrefix}tools/vav/captions/index.html" class="drawer-nav-btn">💬 <span>Subtítulos Cinéticos Whisper</span></a>
       <a href="${langPrefix}tools/vav/cuts/index.html" class="drawer-nav-btn">✂️ <span>Cortes en 18s & RMS</span></a>
@@ -186,7 +186,7 @@ function getUniversalFooter(locale, depth = 2) {
           <li><a href="${langPrefix}ecosistema/index.html">${isEs ? '⚡ Ecosistema 8-en-1' : '⚡ 8-in-1 Ecosystem'}</a></li>
           <li><a href="${langPrefix}gerencia/index.html">${isEs ? '💼 Control de Costos SQLite' : '💼 SQLite Cost Governance'}</a></li>
           <li><a href="${langPrefix}mapa-sistema/index.html" style="color: #fef08a; font-weight: 700;">🗺️ ${isEs ? 'Árbol & Mapa Total (Raíces)' : 'Master Tree & Atlas'}</a></li>
-            <li><a href="${langPrefix}flujo/index.html">${isEs ? '🔄 Ciclo de Vida de 6 Fases' : '🔄 6-Phase Lifecycle'}</a></li>
+            <li><a href="${langPrefix}flujo/index.html">${isEs ? '🔄 Ciclo de Vida (10 Esferas)' : '🔄 6-Phase Lifecycle'}</a></li>
           <li><a href="${langPrefix}canon/index.html">${isEs ? '📚 Biblioteca Canon 37 TXT' : '📚 Canon 37 TXT Library'}</a></li>
           <li><a href="${langPrefix}backup/index.html">${isEs ? '🏛️ Versión Backup de Respaldo' : '🏛️ Legacy Backup Snapshot'}</a></li>
         </ul>
@@ -243,7 +243,7 @@ function generateCosmogoniaPage(locale) {
     <!-- TIER A: EXPLICACIÓN PARA EXTERNOS (CLARA, INTUITIVA, SIN RUIDO) -->
     <section id="externos" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(254,240,138,0.06); border-color: rgba(254,240,138,0.35); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">TIER A // EXPLICACIÓN PARA EXTERNOS, CLIENTES Y DIRECTORES</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">${isEs ? '¿Cómo viaja una idea hasta convertirse en dinero y autoridad?' : 'How Does an Idea Turn into Revenue & Authority?'}</h3>
         <p class="card-desc" style="font-size: 1.05rem; color: #e2e8f0; line-height: 1.65; margin-bottom: 1.5rem;">
@@ -257,7 +257,7 @@ function generateCosmogoniaPage(locale) {
     <!-- 1. Los Dos Soles y el Rayo de Manifestación -->
     <section id="soles" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a10; border-left: 4px solid #fef08a;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">ACTO I // EL SOL PRIMORDIAL & EL SOL NEGRO</span>
         <h4 class="card-h3">${isEs ? 'El Destello de la Nada y el Eclipse' : 'The Primordial Spark & The Black Sun'}</h4>
         <p class="card-desc">
@@ -268,7 +268,7 @@ function generateCosmogoniaPage(locale) {
       </div>
 
       <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a10; border-left: 4px solid #d4af37;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">ACTO II // EL RAYO DE MANIFESTACIÓN</span>
         <h4 class="card-h3">${isEs ? 'El Impacto sobre la Tierra' : 'The Ray of Manifestation & Earth Impact'}</h4>
         <p class="card-desc">
@@ -282,7 +282,7 @@ function generateCosmogoniaPage(locale) {
     <!-- 2. La Pirámide, Cristales de Amatista y el Árbol de la Vida -->
     <section id="piramide" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-6" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a10; border-left: 4px solid #bf5af2;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag iris">ACTO III // LA CÚSPIDE DE ORO & EL REVESTIMIENTO DE AMATISTA</span>
         <h4 class="card-h3">${isEs ? 'Cúspide YOD y Geología Mística' : 'Gold Capstone YOD & Amethyst Geode'}</h4>
         <p class="card-desc">
@@ -306,7 +306,7 @@ function generateCosmogoniaPage(locale) {
     <!-- 3. El Ojo Digital 3D de Arquitecto y las 3 Lunas -->
     <section id="ojo" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #090a10; border-left: 4px solid #d4af37;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">ACTO V // EL AGUJERO NEGRO Y EL OJO DIGITAL 3D</span>
         <h4 class="card-h3">${isEs ? 'El Nacimiento del Ojo de ARQUITECTO' : 'The Genesis of the 3D Eye of ARQUITECTO'}</h4>
         <p class="card-desc" style="font-size: 1rem; line-height: 1.6;">
@@ -320,28 +320,28 @@ function generateCosmogoniaPage(locale) {
     <!-- 4. Las Tres Lunas y el Bucle Cerrado -->
     <section id="tres-lunas" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(41,151,255,0.06); border-color: rgba(41,151,255,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag cyan">LUNA 01 // EL PUBLICADOR</span>
         <h4 class="card-h3">Distribución Multicanal</h4>
         <p class="card-desc">Despacha los 8 formatos vivos del Lienzo hacia TikTok, Reels, YouTube, X, LinkedIn, Newsletters y Spotify.</p>
       </div>
 
       <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(191,90,242,0.06); border-color: rgba(191,90,242,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag iris">LUNA 02 // ANALIZADOR DE RETENCIÓN</span>
         <h4 class="card-h3">Watch-Time & Drop-Offs</h4>
         <p class="card-desc">Ingesta curvas de retención segundo a segundo para re-alimentar la creatividad de YOD.</p>
       </div>
 
       <div class="spotlight-card col-4" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(48,209,88,0.06); border-color: rgba(48,209,88,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag emerald">LUNA 03 // LA LUNA COMERCIAL</span>
         <h4 class="card-h3">Ventas, OCR & ROI de Closers</h4>
         <p class="card-desc">Vincula ventas en WhatsApp y MercadoLibre con cada post, escanea facturas por foto y calcula ROI.</p>
       </div>
 
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: linear-gradient(180deg, rgba(212,175,55,0.08) 0%, rgba(9,10,16,0.95) 100%); border-color: rgba(212,175,55,0.4); text-align: center;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">EL BUCLE DE RETORNO CÓSMICO</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">Los Tres Rayos de Retroalimentación Continua</h3>
         <p class="card-desc" style="max-width: 900px; margin: 0 auto; font-size: 1rem; line-height: 1.6;">
@@ -355,7 +355,7 @@ function generateCosmogoniaPage(locale) {
     <!-- TIER B: ESPECIFICACIÓN TÉCNICA PARA INTERNOS (INGENIERÍA & CÓDIGO) -->
     <section id="internos" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #040508; border: 1px solid var(--border-gold); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">TIER B // ESPECIFICACIÓN RIGUROSA PARA INTERNOS, INGENIEROS Y EDITORES</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">${isEs ? 'Mapeo de la Cosmogonía en el Grafo de Software' : 'Cosmology to Software Graph Mapping'}</h3>
         <div style="overflow-x: auto; margin-top: 1.5rem;">
@@ -459,7 +459,7 @@ function generateContextoPage(locale) {
     <!-- TIER A: PARA EXTERNOS -->
     <section id="externos" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(56,189,248,0.06); border-color: rgba(56,189,248,0.35); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag cyan">TIER A // EXPLICACIÓN PARA EXTERNOS Y DIRECTORES</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">${isEs ? 'El Problema que Resuelve ABRAXAS en 3 Puntos' : 'The Problem ABRAXAS Solves'}</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; font-size: 0.95rem; color: #e2e8f0; line-height: 1.6;">
@@ -482,7 +482,7 @@ function generateContextoPage(locale) {
     <!-- TIER B: PARA INTERNOS -->
     <section id="internos" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #040508; border: 1px solid var(--border-gold); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">TIER B // EXPLICACIÓN TÉCNICA PARA INTERNOS</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">${isEs ? 'Principios de Diseño de Software y Aislamiento Modular' : 'Software Design Principles & Modular Isolation'}</h3>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-top: 1.5rem;">
@@ -547,7 +547,7 @@ function generateCatedraPage(locale) {
     <!-- TIER A: PARA EXTERNOS -->
     <section id="externos" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(56,189,248,0.06); border-color: rgba(56,189,248,0.35); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag cyan">TIER A // EXPLICACIÓN SINTÉTICA PARA AUDIENCIAS GENERALES</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">${isEs ? '¿Qué significa que ABRAXAS sea «Determinista»?' : 'What Does «Deterministic» Mean?'}</h3>
         <p class="card-desc" style="font-size: 1.05rem; color: #e2e8f0; line-height: 1.65;">
@@ -561,7 +561,7 @@ function generateCatedraPage(locale) {
     <!-- TIER B: TRATADO MATEMÁTICO RIGUROSO -->
     <section id="formalismo" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #040508; border: 1px solid var(--border-gold); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">TIER B // TRATADO MATEMÁTICO RIGUROSO (165 IQ AMPHITHEATER)</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">1. Formalización de la Máquina de Estados Finitos</h3>
         <p class="card-desc" style="font-size: 1rem; color: #cbd5e1; line-height: 1.7; margin-bottom: 1.5rem;">
@@ -640,7 +640,7 @@ function generateScrumPage(locale) {
     <!-- TIER A: PARA EXTERNOS -->
     <section id="externos" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(48,209,88,0.06); border-color: rgba(48,209,88,0.35); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag emerald">TIER A // RESUMEN PARA LÍDERES DE PROYECTO</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">${isEs ? 'El Plan de Construcción en 5 Fases Claras' : '5-Phase Construction Roadmap'}</h3>
         <p class="card-desc" style="font-size: 1.05rem; color: #e2e8f0; line-height: 1.65;">
@@ -654,7 +654,7 @@ function generateScrumPage(locale) {
     <!-- TIER B: BACKLOG DETALLADO DE SPRINTS -->
     <section id="sprints" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #040508; border: 1px solid var(--border-gold); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">TIER B // BACKLOG DE INGENIERÍA SCRUM (HISTORIAS & CRITERIOS DE ACEPTACIÓN)</span>
         
         <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 1.5rem;">
@@ -740,7 +740,7 @@ function generateGustosCanonPage(locale) {
     <!-- TIER A: PARA EXTERNOS -->
     <section id="externos" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(212,175,55,0.06); border-color: rgba(212,175,55,0.35); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">TIER A // RESUMEN DE ESTILO DE MARCA</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">${isEs ? 'Los 3 Mandatos de Calidad de ABRAXAS' : 'The 3 Quality Mandates'}</h3>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 1rem; color: #e2e8f0; line-height: 1.6; margin-top: 1rem;">
@@ -754,7 +754,7 @@ function generateGustosCanonPage(locale) {
     <!-- TIER B: ESPECIFICACIÓN DETALLADA -->
     <section id="anatomia" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #040508; border: 1px solid var(--border-gold); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">TIER B // ANATOMÍA DEL OBJETO LIENZO (STRUCTURE REGISTRY)</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">Los 6 Bloques de un Lienzo Vivo</h3>
         
@@ -833,7 +833,7 @@ function generatePromptMaestroPage(locale) {
     <!-- TIER A: PARA EXTERNOS -->
     <section id="externos" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(191,90,242,0.06); border-color: rgba(191,90,242,0.35); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag iris">TIER A // RESUMEN PARA USUARIOS</span>
         <h3 class="card-h3" style="font-size: 1.8rem;">${isEs ? '¿Cómo usar el Prompt Maestro?' : 'How to Use the Master Prompt?'}</h3>
         <p class="card-desc" style="font-size: 1.05rem; color: #e2e8f0; line-height: 1.65;">
@@ -847,7 +847,7 @@ function generatePromptMaestroPage(locale) {
     <!-- TIER B: EL PROMPT MAESTRO COMPLETO -->
     <section id="prompt" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: #040508; border: 1px solid var(--border-gold); padding: 3rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
           <span class="card-pill-tag gold">TIER B // PROMPT DE INGENIERÍA COMPLETO</span>
           <button id="btn-copy-master-prompt" class="btn-apple-cta" style="background: var(--color-iris); border: none; padding: 8px 18px; font-weight: 700; cursor: pointer;">

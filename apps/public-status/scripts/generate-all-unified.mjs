@@ -115,7 +115,7 @@ function getUniversalWidgets(locale, depth = 0) {
       <a href="${root}v3/index.html" class="drawer-nav-btn">🍎 <span>Edición Oficial v3 MacBook Pro</span></a>
       <a href="${langPrefix}ecosistema/index.html" class="drawer-nav-btn">⚡ <span>Ecosistema 8-en-1</span></a>
       <a href="${langPrefix}gerencia/index.html" class="drawer-nav-btn">💼 <span>Gobernanza & ROI</span></a>
-      <a href="${langPrefix}flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (6 Fases)</span></a>
+      <a href="${langPrefix}flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (10 Esferas)</span></a>
       <a href="${langPrefix}tools/vav/motions/index.html" class="drawer-nav-btn">🎬 <span>13 Familias de Motion</span></a>
       <a href="${langPrefix}tools/vav/captions/index.html" class="drawer-nav-btn">💬 <span>Subtítulos Cinéticos Whisper</span></a>
       <a href="${langPrefix}tools/vav/cuts/index.html" class="drawer-nav-btn">✂️ <span>Cortes en 18s & RMS</span></a>
@@ -163,7 +163,7 @@ function getUniversalFooter(locale, depth = 0) {
         <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">${isEs ? 'Gobernanza & Documentación' : 'Governance & Docs'}</h4>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
           <li><a href="${langPrefix}mapa-sistema/index.html" style="color: #fef08a; font-weight: 700;">🗺️ ${isEs ? 'Árbol & Mapa Total (Raíces)' : 'Master Tree & Atlas'}</a></li>
-            <li><a href="${langPrefix}flujo/index.html">${isEs ? 'Ciclo de Vida de 6 Fases' : '6-Phase Lifecycle'}</a></li>
+            <li><a href="${langPrefix}flujo/index.html">${isEs ? 'Ciclo de Vida (10 Esferas)' : '6-Phase Lifecycle'}</a></li>
           <li><a href="${langPrefix}gerencia/index.html">${isEs ? 'Control de Costos SQLite' : 'SQLite Cost Governance'}</a></li>
           <li><a href="${langPrefix}canon/index.html">${isEs ? 'Biblioteca Canon 37 TXT' : 'Canon 37 TXT Library'}</a></li>
           <li><a href="${langPrefix}backup/index.html">${isEs ? 'Versión Backup de Respaldo' : 'Legacy Backup Snapshot'}</a></li>
@@ -220,7 +220,7 @@ function generateEcosistemaPage(locale) {
     <!-- Resumen Ejecutivo -->
     <div id="resumen" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(212,175,55,0.08); border-color: rgba(212,175,55,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
         <h3 class="card-h3">${isEs ? '¿Por qué la Multiplicación 1 a 8 Multiplica tu Autoridad?' : 'Why 1-to-8 Multiplication Amplifies Authority?'}</h3>
         <p class="card-desc" style="color: #e2e8f0; font-size: 1rem;">
@@ -343,7 +343,7 @@ function generateGerenciaPage(locale) {
     <!-- Resumen Ejecutivo -->
     <div id="resumen" class="bento-grid" style="margin-bottom: 4rem;">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(48,209,88,0.08); border-color: rgba(48,209,88,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag emerald">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
         <h3 class="card-h3">${isEs ? 'El Retorno Financiero de ABRAXAS OS' : 'The Financial ROI of ABRAXAS OS'}</h3>
         <p class="card-desc" style="color: #e2e8f0; font-size: 1rem;">
@@ -528,7 +528,7 @@ function generateBackupPage(locale) {
 
     <div class="bento-grid">
       <div class="spotlight-card col-12" style="position: relative;">
-        <button class="card-expand-btn" title="Expandir">+</button> style="background: rgba(255,69,58,0.06); border-color: rgba(255,69,58,0.35);">
+        <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag ruby">EVIDENCIA DE LÍNEA BASE</span>
         <h3 class="card-h3">Compromiso Criptográfico SHA-256</h3>
         <p class="card-desc">Todos los archivos fundacionales, pruebas unitarias y contratos de software están respaldados inmutablemente con el hash <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code>.</p>
