@@ -2,14 +2,15 @@
 set -e
 
 echo "=========================================="
-echo "⚡ ABRAXAS OS — MASTER COMMERCIAL MOON & AWWWARDS DEPLOY"
+echo "⚡ ABRAXAS OS — MASTER TOTAL DEPLOY"
 echo "=========================================="
 
 # 1. Build all suites
-echo "📦 [1/4] Rebuilding all suites with Commercial Moon, Branding Method & Criteria..."
+echo "📦 [1/4] Rebuilding all suites with Cosmogonía, Cátedra, Scrum, Gustos & Contexto..."
 node apps/public-status/scripts/generate-apple-v3.mjs
 node apps/public-status/scripts/generate-deepdive-suite.mjs
 node apps/public-status/scripts/generate-commercial-moon-suite.mjs
+node apps/public-status/scripts/generate-total-masterpiece.mjs
 node apps/public-status/scripts/generate-all-unified.mjs
 node apps/public-status/scripts/generate-master-awwwards.mjs
 
@@ -30,7 +31,7 @@ killall git 2>/dev/null || true
 rm -f .git/index.lock
 git add -A
 if ! git diff --cached --quiet; then
-  git commit -m "feat(commerce): commercial moon, sales telemetry, OCR invoice ingestion, branding method & criteria roadmap $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+  git commit -m "feat(total): cosmology, 3 moons, catedra 165 IQ, scrum 0-100, gustos canon & master prompt $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
   git push origin main || true
   echo "✅ Core repository updated."
 else
@@ -46,7 +47,7 @@ if git clone --depth 1 https://github.com/LordJeferies/lordjeferies.github.io.gi
   cd "$TEMP_DIR"
   git add -A
   if ! git diff --cached --quiet; then
-    git commit -m "deploy: commercial moon, sales telemetry & branding method $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+    git commit -m "deploy: cosmology, 3 moons, catedra 165 IQ, scrum 0-100 & master prompt $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
     git push origin main || true
     echo "✅ Root domain (lordjeferies.github.io) updated."
   else
@@ -65,7 +66,7 @@ if git clone --depth 1 https://github.com/LordJeferies/ABRAXAS_OS_STATUS.git "$T
   cd "$TEMP_DIR_STATUS"
   git add -A
   if ! git diff --cached --quiet; then
-    git commit -m "deploy: commercial moon mirror $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+    git commit -m "deploy: cosmology & catedra mirror $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
     git push origin main || true
     echo "✅ Status mirror updated."
   else
@@ -79,17 +80,23 @@ fi
 echo "🔍 [5/5] Verifying live URLs..."
 HTTP_ROOT=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/index.html || true)
 HTTP_V3=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/v3/index.html || true)
+HTTP_COSMO=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/cosmogonia/index.html || true)
+HTTP_CTX=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/contexto/index.html || true)
+HTTP_CAT=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/catedra/index.html || true)
+HTTP_SCRUM=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/scrum/index.html || true)
+HTTP_GUSTOS=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/gustos-canon/index.html || true)
+HTTP_PROMPT=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/prompt-maestro/index.html || true)
 HTTP_MOON=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/luna-comercial/index.html || true)
-HTTP_BRAND=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/branding-method/index.html || true)
-HTTP_CORE=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/abraxas-core-example/index.html || true)
-HTTP_ROADMAP=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/criterios-roadmap/index.html || true)
 
 echo "🚀 Master Overview URL: https://lordjeferies.github.io/index.html [HTTP $HTTP_ROOT]"
 echo "🍎 Official v3 URL: https://lordjeferies.github.io/v3/index.html [HTTP $HTTP_V3]"
-echo "🌙 Commercial Moon URL: https://lordjeferies.github.io/es/luna-comercial/index.html [HTTP $HTTP_MOON]"
-echo "🎯 Branding Method URL: https://lordjeferies.github.io/es/branding-method/index.html [HTTP $HTTP_BRAND]"
-echo "💎 ABRAXAS Core Example URL: https://lordjeferies.github.io/es/abraxas-core-example/index.html [HTTP $HTTP_CORE]"
-echo "🗺️ Criteria & Roadmap URL: https://lordjeferies.github.io/es/criterios-roadmap/index.html [HTTP $HTTP_ROADMAP]"
+echo "☀️ Cosmology & 3 Moons: https://lordjeferies.github.io/es/cosmogonia/index.html [HTTP $HTTP_COSMO]"
+echo "📖 Foundational Context: https://lordjeferies.github.io/es/contexto/index.html [HTTP $HTTP_CTX]"
+echo "🏛️ 165 IQ Lecture: https://lordjeferies.github.io/es/catedra/index.html [HTTP $HTTP_CAT]"
+echo "📋 Scrum 0-100%: https://lordjeferies.github.io/es/scrum/index.html [HTTP $HTTP_SCRUM]"
+echo "🎨 Taste Canon & Lienzos: https://lordjeferies.github.io/es/gustos-canon/index.html [HTTP $HTTP_GUSTOS]"
+echo "🤖 Master Prompt: https://lordjeferies.github.io/es/prompt-maestro/index.html [HTTP $HTTP_PROMPT]"
+echo "🌙 Commercial Moon: https://lordjeferies.github.io/es/luna-comercial/index.html [HTTP $HTTP_MOON]"
 echo "=========================================="
-echo "✨ Commercial Moon & Branding Method Suite deployed successfully!"
+echo "✨ Total Masterpiece Suite deployed successfully!"
 echo "=========================================="

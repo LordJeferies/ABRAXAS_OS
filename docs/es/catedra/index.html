@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cátedra Formal 165 IQ: Teoría General de Medios Deterministas — ABRAXAS OS</title>
+  <meta name="description" content="Exposición académica formal de nivel doctoral sobre la máquina de estados de ABRAXAS OS, el álgebra de Lienzos y la topología de Hilbert de activos discretos.">
+  <link rel="stylesheet" href="../../assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="../../assets/apple-macbook-pro-v3.css">
+</head>
+<body>
+  
+  <!-- Film Grain Overlay (3% 35mm dynamic grain) -->
+  <div class="film-grain-overlay"></div>
+
+  <!-- Master Sticky Localnav -->
+  <nav class="apple-localnav" aria-label="Local Navigation">
+    <div class="localnav-inner">
+      <a href="../../index.html" class="localnav-brand">
+        <span>ABRAXAS OS</span>
+        <span class="tag">v3.2 PRO</span>
+      </a>
+      <div class="localnav-items">
+        <a href="../../index.html" class="localnav-a ">Inicio</a>
+        <a href="../../v3/index.html" class="localnav-a ">🍎 v3 MacBook Pro</a>
+        <a href="../../es/cosmogonia/index.html" class="localnav-a " style="color: #fef08a;">☀️ Cosmogonía & 3 Lunas</a>
+        <a href="../../es/contexto/index.html" class="localnav-a ">📖 Contexto</a>
+        <a href="../../es/catedra/index.html" class="localnav-a active" style="color: #38bdf8;">🏛️ Cátedra 165 IQ</a>
+        <a href="../../es/luna-comercial/index.html" class="localnav-a " style="color: #30d158; font-weight: 700;">🌙 Luna Comercial & OCR</a>
+        <a href="../../es/branding-method/index.html" class="localnav-a " style="color: #bf5af2;">🎯 Branding & Campañas YOD</a>
+        <a href="../../es/abraxas-core-example/index.html" class="localnav-a " style="color: #d4af37;">💎 Caso ABRAXAS Core</a>
+        <a href="../../es/gustos-canon/index.html" class="localnav-a ">🎨 Gustos & Lienzos</a>
+        <a href="../../es/scrum/index.html" class="localnav-a ">📋 Scrum Paso 0 a 100%</a>
+        <a href="../../es/prompt-maestro/index.html" class="localnav-a ">🤖 Prompt de Página</a>
+        <a href="../../es/criterios-roadmap/index.html" class="localnav-a ">🗺️ Criterios & Roadmap</a>
+        <a href="../../es/ecosistema/index.html" class="localnav-a ">⚡ Ecosistema 8-en-1</a>
+        <a href="../../es/gerencia/index.html" class="localnav-a ">💼 Gerencia & ROI</a>
+        <a href="../../es/flujo/index.html" class="localnav-a ">🔄 Ciclo de Vida</a>
+        <a href="../../es/tools/vav/motions/index.html" class="localnav-a ">🎬 Motions</a>
+        <a href="../../es/tools/vav/captions/index.html" class="localnav-a ">💬 Captions</a>
+        <a href="../../es/tools/vav/cuts/index.html" class="localnav-a ">✂️ Cuts 18s</a>
+        <a href="../../es/tools/shim/index.html" class="localnav-a ">🔍 SHIM (0% GAPs)</a>
+        <a href="../../es/tools/arquitecto/index.html" class="localnav-a ">👁️ Arquitecto</a>
+        <a href="../../es/canon/index.html" class="localnav-a " style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../../es/backup/index.html" class="localnav-a ">🏛️ Backup</a>
+      </div>
+      <div class="localnav-right">
+        <a href="../../en/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">EN</a>
+        <button id="btn-open-control-center" class="btn-control-center">
+          <span>⚙️ Menú Total</span>
+        </button>
+        <a href="../../index.html" class="btn-apple-cta">Abrir Sistema</a>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div style="background: rgba(14, 14, 20, 0.88); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.12); padding: 10px 1.5rem; position: sticky; top: 52px; z-index: 999; overflow-x: auto; scrollbar-width: none;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; gap: 8px; align-items: center; white-space: nowrap;">
+      <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800; margin-right: 6px;">NAVEGAR SECCIÓN:</span>
+      <a href="#externos" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">⚡ En 30s (Externos)</a><a href="#postulado" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🎓 Postulado Epistemológico</a><a href="#formalismo" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📐 Formalismo Matemático</a><a href="#topologia" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🔬 Topología de Estados</a><a href="#internos" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🛠️ Especificación para Internos</a>
+    </div>
+  </div>
+  
+
+  <main class="section-wrap" style="padding-top: 50px;">
+    
+    <div class="section-head" style="text-align: center;">
+      <span class="tag" style="color: #38bdf8;">ACADEMIC AMPHITHEATER // FORMAL DOCTORAL TREATISE</span>
+      <h1 class="h2">Cátedra de Arquitectura Formal.<br/>Teoría General de Medios Deterministas.</h1>
+      <p class="p">Una disertación epistemológica y matemática sobre la transformación del criterio creativo humano en un autómata celular determinista sobre silicio.</p>
+    </div>
+
+    <!-- TIER A: PARA EXTERNOS -->
+    <section id="externos" style="margin-bottom: 4rem;">
+      <div class="spotlight-card col-12" style="background: rgba(56,189,248,0.06); border-color: rgba(56,189,248,0.35); padding: 3rem;">
+        <span class="card-pill-tag cyan">TIER A // EXPLICACIÓN SINTÉTICA PARA AUDIENCIAS GENERALES</span>
+        <h3 class="card-h3" style="font-size: 1.8rem;">¿Qué significa que ABRAXAS sea «Determinista»?</h3>
+        <p class="card-desc" style="font-size: 1.05rem; color: #e2e8f0; line-height: 1.65;">
+          En la mayoría de programas de diseño, el resultado depende del azar o de pulsar botones a ciegas. En ABRAXAS, la creación sigue leyes matemáticas exactas: una misma tesis de entrada produce siempre el mismo árbol sincronizado de 8 formatos, con la misma cadencia de corte y el mismo nivel acústico de -14 LUFS, garantizando calidad industrial predecible.
+        </p>
+      </div>
+    </section>
+
+    <!-- TIER B: TRATADO MATEMÁTICO RIGUROSO -->
+    <section id="formalismo" style="margin-bottom: 4rem;">
+      <div class="spotlight-card col-12" style="background: #040508; border: 1px solid var(--border-gold); padding: 3rem;">
+        <span class="card-pill-tag gold">TIER B // TRATADO MATEMÁTICO RIGUROSO (165 IQ AMPHITHEATER)</span>
+        <h3 class="card-h3" style="font-size: 1.8rem;">1. Formalización de la Máquina de Estados Finitos</h3>
+        <p class="card-desc" style="font-size: 1rem; color: #cbd5e1; line-height: 1.7; margin-bottom: 1.5rem;">
+          Sea $\mathcal{S} = \{ \text{PLANNED}, \text{OBSERVED}, \text{RESOLVED}, \text{PRODUCTION}, \text{PUBLICATION}, \text{LEARNING} \}$ el conjunto finito de estados ontológicos de un Lienzo $\mathcal{L}$. La función de transición $\delta: \mathcal{S} \times \Sigma \to \mathcal{S}$ está condicionada estrictamente por el operador de metrología $\mathcal{M}_{\text{SHIM}}$:
+          \[
+            \delta(s_t, e_t) = 
+            \begin{cases} 
+              s_{t+1}, & \text{si } \mathcal{M}_{\text{SHIM}}(e_t) = 0.00\% \text{ GAPs} \\
+              \text{LOCKED}, & \text{si } \mathcal{M}_{\text{SHIM}}(e_t) > 0.00\% \text{ GAPs}
+            \end{cases}
+          \]
+        </p>
+
+        <h3 class="card-h3" style="font-size: 1.8rem; margin-top: 2rem;">2. El Operador de Memoria Compuesta en la Dimensión A</h3>
+        <p class="card-desc" style="font-size: 1rem; color: #cbd5e1; line-height: 1.7;">
+          La evolución del conocimiento acumulativo de la marca entre lotes discretos $k \in \mathbb{N}$ satisface:
+          \[
+            S_{k+1} = S_k \oplus \left( \alpha \cdot \nabla \mathcal{R}_{\text{retención}} + \beta \cdot \nabla \mathcal{V}_{\text{facturación}} \right)
+          \]
+          donde $\alpha$ parametriza el gradiente de retención de la Luna 2 y $\beta$ parametriza el gradiente de ingresos atribuidos por la Luna Comercial 3.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer style="background: #050508; border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 1.5rem 3rem 1.5rem; font-size: 0.85rem; color: #86868b;">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Cosmogonía & Estrategia</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../es/cosmogonia/index.html" style="color: #fef08a; font-weight: 600;">☀️ Cosmogonía Solar & 3 Lunas</a></li>
+          <li><a href="../../es/contexto/index.html">📖 Contexto & Visión</a></li>
+          <li><a href="../../es/catedra/index.html" style="color: #38bdf8; font-weight: 600;">🏛️ Cátedra 165 IQ</a></li>
+          <li><a href="../../es/luna-comercial/index.html" style="color: #30d158; font-weight: 600;">🌙 Luna Comercial & OCR</a></li>
+          <li><a href="../../es/branding-method/index.html" style="color: #bf5af2; font-weight: 600;">🎯 Branding & Campañas</a></li>
+          <li><a href="../../es/abraxas-core-example/index.html" style="color: #d4af37; font-weight: 600;">💎 Caso ABRAXAS Core</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Criterios & Ingeniería</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../es/gustos-canon/index.html">🎨 Gustos & Lienzos</a></li>
+          <li><a href="../../es/scrum/index.html">📋 Scrum Paso 0 a 100%</a></li>
+          <li><a href="../../es/prompt-maestro/index.html">🤖 Prompt de Página Maestro</a></li>
+          <li><a href="../../es/criterios-roadmap/index.html">🗺️ Criterios & Roadmap</a></li>
+          <li><a href="../../es/tools/vav/motions/index.html">🎬 13 Familias de Motion</a></li>
+          <li><a href="../../es/tools/shim/index.html">🔍 Metrología SHIM 0% GAPs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Gobernanza & Documentación</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../es/ecosistema/index.html">⚡ Ecosistema 8-en-1</a></li>
+          <li><a href="../../es/gerencia/index.html">💼 Control de Costos SQLite</a></li>
+          <li><a href="../../es/flujo/index.html">🔄 Ciclo de Vida de 6 Fases</a></li>
+          <li><a href="../../es/canon/index.html">📚 Biblioteca Canon 37 TXT</a></li>
+          <li><a href="../../es/backup/index.html">🏛️ Versión Backup de Respaldo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="max-width: 1240px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <p>Copyright © 2026 ABRAXAS OS. Todos los derechos reservados. Arquitectura Determinista en Apple Silicon.</p>
+      <p style="font-family: var(--font-mono); color: #d4af37; font-size: 0.78rem;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </footer>
+  
+  
+  <!-- Contextual Floating Arquitecto Widget -->
+  <div id="floating-architect-widget">
+    <div id="architect-popup-card" class="architect-popup-card">
+      <div class="popup-header">
+        <span class="popup-title">👁️ ARQUITECTO // CANON TOTAL</span>
+        <button id="architect-popup-close" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.1rem;">✕</button>
+      </div>
+      <p class="popup-body">
+        «ABRAXAS convierte criterio en infraestructura.» Recuerda: un tema no es una idea. Abre una deuda narrativa con tu hook y págala con el payoff. La Luna Comercial audita cada centavo.
+      </p>
+      <button id="btn-copy-prompt" class="btn-copy-prompt">
+        📋 Copiar Prompt de Arquitectura para IA
+      </button>
+    </div>
+    
+    <div id="architect-pill-trigger" class="architect-pill-trigger">
+      <span class="architect-sparkle">✦</span>
+      <span class="architect-pill-text">Arquitecto Coach</span>
+    </div>
+  </div>
+
+  <!-- Dashboard Control Center Drawer (Master Directory) -->
+  <div id="control-center-drawer">
+    <div class="drawer-header-row">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.2rem; color: #d4af37;">▲</span>
+        <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700;">Directorio Maestro ABRAXAS</h3>
+      </div>
+      <button id="btn-close-control-center" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.2rem;">✕</button>
+    </div>
+
+    <div class="drawer-nav-grid">
+      <a href="../../index.html" class="drawer-nav-btn">🏠 <span>Visión General (Home)</span></a>
+      <a href="../../v3/index.html" class="drawer-nav-btn">🍎 <span>Edición v3 MacBook Pro</span></a>
+      <a href="../../es/cosmogonia/index.html" class="drawer-nav-btn" style="border-color: rgba(254,240,138,0.4); color: #fef08a;">☀️ <span>Cosmogonía Solar, Pirámide & 3 Lunas</span></a>
+      <a href="../../es/contexto/index.html" class="drawer-nav-btn">📖 <span>Contexto, Visión & Lógica Total</span></a>
+      <a href="../../es/catedra/index.html" class="drawer-nav-btn" style="border-color: rgba(56,189,248,0.4); color: #38bdf8;">🏛️ <span>Cátedra 165 IQ (Tratado Formal)</span></a>
+      <a href="../../es/luna-comercial/index.html" class="drawer-nav-btn" style="border-color: rgba(48,209,88,0.4); color: #30d158;">🌙 <span>Luna Comercial, Facturas OCR & ROI</span></a>
+      <a href="../../es/branding-method/index.html" class="drawer-nav-btn" style="border-color: rgba(191,90,242,0.4); color: #bf5af2;">🎯 <span>Diagnóstico YOD & Campañas</span></a>
+      <a href="../../es/abraxas-core-example/index.html" class="drawer-nav-btn" style="border-color: rgba(212,175,55,0.4); color: #d4af37;">💎 <span>Caso Real ABRAXAS Core</span></a>
+      <a href="../../es/gustos-canon/index.html" class="drawer-nav-btn">🎨 <span>Gustos Visuales, Editoriales & Lienzos</span></a>
+      <a href="../../es/scrum/index.html" class="drawer-nav-btn">📋 <span>Scrum & Roadmap Paso 0 a 100%</span></a>
+      <a href="../../es/prompt-maestro/index.html" class="drawer-nav-btn">🤖 <span>Prompt de Página Maestro (HTML)</span></a>
+      <a href="../../es/criterios-roadmap/index.html" class="drawer-nav-btn">🗺️ <span>Criterios & Roadmap Maestro</span></a>
+      <a href="../../es/ecosistema/index.html" class="drawer-nav-btn">⚡ <span>Ecosistema 8-en-1</span></a>
+      <a href="../../es/gerencia/index.html" class="drawer-nav-btn">💼 <span>Gobernanza & ROI</span></a>
+      <a href="../../es/flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (6 Fases)</span></a>
+      <a href="../../es/tools/vav/motions/index.html" class="drawer-nav-btn">🎬 <span>13 Familias de Motion</span></a>
+      <a href="../../es/tools/vav/captions/index.html" class="drawer-nav-btn">💬 <span>Subtítulos Cinéticos Whisper</span></a>
+      <a href="../../es/tools/vav/cuts/index.html" class="drawer-nav-btn">✂️ <span>Cortes en 18s & RMS</span></a>
+      <a href="../../es/tools/shim/index.html" class="drawer-nav-btn">🔍 <span>Metrología SHIM 0.00% GAPs</span></a>
+      <a href="../../es/tools/arquitecto/index.html" class="drawer-nav-btn">👁️ <span>ARQUITECTO (Coach & Asistente)</span></a>
+      <a href="../../es/canon/index.html" class="drawer-nav-btn" style="border-color: rgba(212,175,55,0.4);">📚 <span>Biblioteca Canon 37 TXT</span></a>
+      <a href="../../es/backup/index.html" class="drawer-nav-btn">🏛️ <span>Respaldo / Backup Completo</span></a>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding: 18px; background: rgba(212,175,55,0.08); border-radius: 14px; border: 1px solid rgba(212,175,55,0.25);">
+      <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800;">LÍNEA BASE CERTIFICADA</span>
+      <p style="font-size: 0.82rem; color: #cbd5e1; margin-top: 4px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </div>
+  
+
+  <script src="../../assets/abraxas-engine-v3.js"></script>
+</body>
+</html>

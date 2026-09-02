@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Context, Vision & Architecture — ABRAXAS OS</title>
+  <meta name="description" content="Foundational context and complete vision of ABRAXAS OS.">
+  <link rel="stylesheet" href="../../assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="../../assets/apple-macbook-pro-v3.css">
+</head>
+<body>
+  
+  <!-- Film Grain Overlay (3% 35mm dynamic grain) -->
+  <div class="film-grain-overlay"></div>
+
+  <!-- Master Sticky Localnav -->
+  <nav class="apple-localnav" aria-label="Local Navigation">
+    <div class="localnav-inner">
+      <a href="../../index.html" class="localnav-brand">
+        <span>ABRAXAS OS</span>
+        <span class="tag">v3.2 PRO</span>
+      </a>
+      <div class="localnav-items">
+        <a href="../../index.html" class="localnav-a ">Home</a>
+        <a href="../../v3/index.html" class="localnav-a ">🍎 v3 MacBook Pro</a>
+        <a href="../../en/cosmogonia/index.html" class="localnav-a " style="color: #fef08a;">☀️ Cosmology & 3 Moons</a>
+        <a href="../../en/contexto/index.html" class="localnav-a active">📖 Context</a>
+        <a href="../../en/catedra/index.html" class="localnav-a " style="color: #38bdf8;">🏛️ 165 IQ Lecture</a>
+        <a href="../../en/luna-comercial/index.html" class="localnav-a " style="color: #30d158; font-weight: 700;">🌙 Sales Moon & OCR</a>
+        <a href="../../en/branding-method/index.html" class="localnav-a " style="color: #bf5af2;">🎯 Branding & Campaigns</a>
+        <a href="../../en/abraxas-core-example/index.html" class="localnav-a " style="color: #d4af37;">💎 ABRAXAS Core Case</a>
+        <a href="../../en/gustos-canon/index.html" class="localnav-a ">🎨 Taste & Lienzos</a>
+        <a href="../../en/scrum/index.html" class="localnav-a ">📋 Scrum 0-100%</a>
+        <a href="../../en/prompt-maestro/index.html" class="localnav-a ">🤖 Master Prompt</a>
+        <a href="../../en/criterios-roadmap/index.html" class="localnav-a ">🗺️ Criteria & Roadmap</a>
+        <a href="../../en/ecosistema/index.html" class="localnav-a ">⚡ 8-in-1 Ecosystem</a>
+        <a href="../../en/gerencia/index.html" class="localnav-a ">💼 Governance & ROI</a>
+        <a href="../../en/flujo/index.html" class="localnav-a ">🔄 Lifecycle Flow</a>
+        <a href="../../en/tools/vav/motions/index.html" class="localnav-a ">🎬 Motions</a>
+        <a href="../../en/tools/vav/captions/index.html" class="localnav-a ">💬 Captions</a>
+        <a href="../../en/tools/vav/cuts/index.html" class="localnav-a ">✂️ Cuts 18s</a>
+        <a href="../../en/tools/shim/index.html" class="localnav-a ">🔍 SHIM (0% GAPs)</a>
+        <a href="../../en/tools/arquitecto/index.html" class="localnav-a ">👁️ Arquitecto</a>
+        <a href="../../en/canon/index.html" class="localnav-a " style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../../en/backup/index.html" class="localnav-a ">🏛️ Backup</a>
+      </div>
+      <div class="localnav-right">
+        <a href="../../es/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">ES</a>
+        <button id="btn-open-control-center" class="btn-control-center">
+          <span>⚙️ Menú Total</span>
+        </button>
+        <a href="../../index.html" class="btn-apple-cta">Launch OS</a>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div style="background: rgba(14, 14, 20, 0.88); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.12); padding: 10px 1.5rem; position: sticky; top: 52px; z-index: 999; overflow-x: auto; scrollbar-width: none;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; gap: 8px; align-items: center; white-space: nowrap;">
+      <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800; margin-right: 6px;">NAVEGAR SECCIÓN:</span>
+      <a href="#externos" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">⚡ En 30s (Externos)</a><a href="#vision" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🧭 La Visión del Creador</a><a href="#plataforma" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🏗️ Arquitectura de la Plataforma</a><a href="#proceso" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🔄 El Proceso de Creación</a><a href="#internos" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🛠️ Especificación para Internos</a>
+    </div>
+  </div>
+  
+
+  <main class="section-wrap" style="padding-top: 50px;">
+    
+    <div class="section-head" style="text-align: center;">
+      <span class="tag" style="color: #38bdf8;">FOUNDATIONAL CONTEXT // VISIÓN & LÓGICA</span>
+      <h1 class="h2">System Context & Philosophy.<br/>Why ABRAXAS Exists.</h1>
+      <p class="p">The complete architectural vision and operating logic of ABRAXAS OS.</p>
+    </div>
+
+    <!-- TIER A: PARA EXTERNOS -->
+    <section id="externos" style="margin-bottom: 4rem;">
+      <div class="spotlight-card col-12" style="background: rgba(56,189,248,0.06); border-color: rgba(56,189,248,0.35); padding: 3rem;">
+        <span class="card-pill-tag cyan">TIER A // EXPLICACIÓN PARA EXTERNOS Y DIRECTORES</span>
+        <h3 class="card-h3" style="font-size: 1.8rem;">The Problem ABRAXAS Solves</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; font-size: 0.95rem; color: #e2e8f0; line-height: 1.6;">
+          <div>
+            <strong style="color: #ff453a; display: block; margin-bottom: 6px;">1. El Agotamiento Creativo:</strong>
+            <p style="color: #94a3b8;">Intentar escribir por separado para TikTok, carruseles de Instagram, hilos de Twitter, correos y podcasts consume 40 horas semanales y genera mensajes desordenados.</p>
+          </div>
+          <div>
+            <strong style="color: #fef08a; display: block; margin-bottom: 6px;">2. La Trampa de la IA Genérica:</strong>
+            <p style="color: #94a3b8;">Los chatbots genéricos producen textos trillados que hunden la autoridad de tu marca y carecen de conexión con tu inventario de ventas real.</p>
+          </div>
+          <div>
+            <strong style="color: #30d158; display: block; margin-bottom: 6px;">3. La Solución Determinista:</strong>
+            <p style="color: #94a3b8;">ABRAXAS toma una sola tesis de autoridad y genera automáticamente los 8 formatos con auto-edición en 18s, metrología de cero errores y telemetría de ventas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIER B: PARA INTERNOS -->
+    <section id="internos" style="margin-bottom: 4rem;">
+      <div class="spotlight-card col-12" style="background: #040508; border: 1px solid var(--border-gold); padding: 3rem;">
+        <span class="card-pill-tag gold">TIER B // EXPLICACIÓN TÉCNICA PARA INTERNOS</span>
+        <h3 class="card-h3" style="font-size: 1.8rem;">Software Design Principles & Modular Isolation</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-top: 1.5rem;">
+          <li>🔒 <strong>Aislamiento de Fallos:</strong> Si el módulo de renderizado VAV experimenta un error de sintaxis en un shader, el árbol de Lienzo y la base de datos SQLite permanecen 100% intactos.</li>
+          <li>🌳 <strong>Inmutabilidad Criptográfica:</strong> Cada cambio en un guion o archivo multimedia genera un hash SHA-256 en el Content Addressable Storage (CAS), impidiendo la corrupción silenciosa de datos.</li>
+          <li>🍎 <strong>Soberanía Local M-Series:</strong> El sistema prioriza binarios nativos optimizados para Apple Neural Engine (ANE) y VideoToolbox para ejecutar inferencias y renders con cero coste de servidores en la nube.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer style="background: #050508; border-top: 1px solid rgba(255,255,255,0.08); padding: 5rem 1.5rem 3rem 1.5rem; font-size: 0.85rem; color: #86868b;">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Cosmology & Strategy</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../en/cosmogonia/index.html" style="color: #fef08a; font-weight: 600;">☀️ Solar Cosmology & 3 Moons</a></li>
+          <li><a href="../../en/contexto/index.html">📖 Context & Vision</a></li>
+          <li><a href="../../en/catedra/index.html" style="color: #38bdf8; font-weight: 600;">🏛️ 165 IQ Lecture</a></li>
+          <li><a href="../../en/luna-comercial/index.html" style="color: #30d158; font-weight: 600;">🌙 Sales Moon & OCR</a></li>
+          <li><a href="../../en/branding-method/index.html" style="color: #bf5af2; font-weight: 600;">🎯 Branding & Campaigns</a></li>
+          <li><a href="../../en/abraxas-core-example/index.html" style="color: #d4af37; font-weight: 600;">💎 ABRAXAS Core Case</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Criteria & Engineering</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../en/gustos-canon/index.html">🎨 Taste & Lienzos</a></li>
+          <li><a href="../../en/scrum/index.html">📋 Scrum 0-100%</a></li>
+          <li><a href="../../en/prompt-maestro/index.html">🤖 Master Prompt</a></li>
+          <li><a href="../../en/criterios-roadmap/index.html">🗺️ Criteria & Roadmap</a></li>
+          <li><a href="../../en/tools/vav/motions/index.html">🎬 13 Motion Families</a></li>
+          <li><a href="../../en/tools/shim/index.html">🔍 SHIM 0% GAPs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 1rem;">Governance & Docs</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="../../en/ecosistema/index.html">⚡ 8-in-1 Ecosystem</a></li>
+          <li><a href="../../en/gerencia/index.html">💼 SQLite Cost Governance</a></li>
+          <li><a href="../../en/flujo/index.html">🔄 6-Phase Lifecycle</a></li>
+          <li><a href="../../en/canon/index.html">📚 Canon 37 TXT Library</a></li>
+          <li><a href="../../en/backup/index.html">🏛️ Legacy Backup Snapshot</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="max-width: 1240px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <p>Copyright © 2026 ABRAXAS OS. All rights reserved. Deterministic Architecture on Apple Silicon.</p>
+      <p style="font-family: var(--font-mono); color: #d4af37; font-size: 0.78rem;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </footer>
+  
+  
+  <!-- Contextual Floating Arquitecto Widget -->
+  <div id="floating-architect-widget">
+    <div id="architect-popup-card" class="architect-popup-card">
+      <div class="popup-header">
+        <span class="popup-title">👁️ ARQUITECTO // CANON TOTAL</span>
+        <button id="architect-popup-close" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.1rem;">✕</button>
+      </div>
+      <p class="popup-body">
+        «ABRAXAS turns criterion into infrastructure.» Narrative debt + payoff. Commercial Moon audits revenue.
+      </p>
+      <button id="btn-copy-prompt" class="btn-copy-prompt">
+        📋 Copy Architecture Prompt for AI
+      </button>
+    </div>
+    
+    <div id="architect-pill-trigger" class="architect-pill-trigger">
+      <span class="architect-sparkle">✦</span>
+      <span class="architect-pill-text">Arquitecto Coach</span>
+    </div>
+  </div>
+
+  <!-- Dashboard Control Center Drawer (Master Directory) -->
+  <div id="control-center-drawer">
+    <div class="drawer-header-row">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.2rem; color: #d4af37;">▲</span>
+        <h3 style="font-size: 1.1rem; color: #fff; font-weight: 700;">Directorio Maestro ABRAXAS</h3>
+      </div>
+      <button id="btn-close-control-center" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.2rem;">✕</button>
+    </div>
+
+    <div class="drawer-nav-grid">
+      <a href="../../index.html" class="drawer-nav-btn">🏠 <span>Visión General (Home)</span></a>
+      <a href="../../v3/index.html" class="drawer-nav-btn">🍎 <span>Edición v3 MacBook Pro</span></a>
+      <a href="../../en/cosmogonia/index.html" class="drawer-nav-btn" style="border-color: rgba(254,240,138,0.4); color: #fef08a;">☀️ <span>Cosmogonía Solar, Pirámide & 3 Lunas</span></a>
+      <a href="../../en/contexto/index.html" class="drawer-nav-btn">📖 <span>Contexto, Visión & Lógica Total</span></a>
+      <a href="../../en/catedra/index.html" class="drawer-nav-btn" style="border-color: rgba(56,189,248,0.4); color: #38bdf8;">🏛️ <span>Cátedra 165 IQ (Tratado Formal)</span></a>
+      <a href="../../en/luna-comercial/index.html" class="drawer-nav-btn" style="border-color: rgba(48,209,88,0.4); color: #30d158;">🌙 <span>Luna Comercial, Facturas OCR & ROI</span></a>
+      <a href="../../en/branding-method/index.html" class="drawer-nav-btn" style="border-color: rgba(191,90,242,0.4); color: #bf5af2;">🎯 <span>Diagnóstico YOD & Campañas</span></a>
+      <a href="../../en/abraxas-core-example/index.html" class="drawer-nav-btn" style="border-color: rgba(212,175,55,0.4); color: #d4af37;">💎 <span>Caso Real ABRAXAS Core</span></a>
+      <a href="../../en/gustos-canon/index.html" class="drawer-nav-btn">🎨 <span>Gustos Visuales, Editoriales & Lienzos</span></a>
+      <a href="../../en/scrum/index.html" class="drawer-nav-btn">📋 <span>Scrum & Roadmap Paso 0 a 100%</span></a>
+      <a href="../../en/prompt-maestro/index.html" class="drawer-nav-btn">🤖 <span>Prompt de Página Maestro (HTML)</span></a>
+      <a href="../../en/criterios-roadmap/index.html" class="drawer-nav-btn">🗺️ <span>Criterios & Roadmap Maestro</span></a>
+      <a href="../../en/ecosistema/index.html" class="drawer-nav-btn">⚡ <span>Ecosistema 8-en-1</span></a>
+      <a href="../../en/gerencia/index.html" class="drawer-nav-btn">💼 <span>Gobernanza & ROI</span></a>
+      <a href="../../en/flujo/index.html" class="drawer-nav-btn">🔄 <span>Ciclo de Vida (6 Fases)</span></a>
+      <a href="../../en/tools/vav/motions/index.html" class="drawer-nav-btn">🎬 <span>13 Familias de Motion</span></a>
+      <a href="../../en/tools/vav/captions/index.html" class="drawer-nav-btn">💬 <span>Subtítulos Cinéticos Whisper</span></a>
+      <a href="../../en/tools/vav/cuts/index.html" class="drawer-nav-btn">✂️ <span>Cortes en 18s & RMS</span></a>
+      <a href="../../en/tools/shim/index.html" class="drawer-nav-btn">🔍 <span>Metrología SHIM 0.00% GAPs</span></a>
+      <a href="../../en/tools/arquitecto/index.html" class="drawer-nav-btn">👁️ <span>ARQUITECTO (Coach & Asistente)</span></a>
+      <a href="../../en/canon/index.html" class="drawer-nav-btn" style="border-color: rgba(212,175,55,0.4);">📚 <span>Biblioteca Canon 37 TXT</span></a>
+      <a href="../../en/backup/index.html" class="drawer-nav-btn">🏛️ <span>Respaldo / Backup Completo</span></a>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding: 18px; background: rgba(212,175,55,0.08); border-radius: 14px; border: 1px solid rgba(212,175,55,0.25);">
+      <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800;">LÍNEA BASE CERTIFICADA</span>
+      <p style="font-size: 0.82rem; color: #cbd5e1; margin-top: 4px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+    </div>
+  </div>
+  
+
+  <script src="../../assets/abraxas-engine-v3.js"></script>
+</body>
+</html>
