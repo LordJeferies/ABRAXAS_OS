@@ -151,17 +151,7 @@ const canonDossiersData = canonFiles.map((filename, idx) => {
   return { id: `dossier-${num}`, num, title, filename, content };
 });
 
-function getPreloaderHTML() {
-  return `
-  <div id="preloader">
-    <div class="preloader-glyph">▲</div>
-    <div class="preloader-count" id="preloader-counter">0%</div>
-    <div class="preloader-bar-wrap">
-      <div class="preloader-bar" id="preloader-bar"></div>
-    </div>
-  </div>
-  `;
-}
+function getPreloaderHTML() { return ""; }
 
 function getLocalnavHTML(locale, activeTab, depth = 0) {
   const isEs = locale === 'es';

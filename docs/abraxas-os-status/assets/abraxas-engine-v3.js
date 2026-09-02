@@ -73,45 +73,10 @@
   // 3. CINEMATIC PRELOADER (Principle 9)
   // ==========================================================================
   function initPreloader() {
-    const preloader = document.getElementById('preloader');
-    const counter = document.getElementById('preloader-counter');
-    const bar = document.getElementById('preloader-bar');
-    if (!preloader || !counter || !bar) return;
-
-    // Click to dismiss immediately
-    preloader.addEventListener(click, () => {
-      preloader.style.opacity = 0;
-      setTimeout(() => preloader.remove(), 200);
-    });
-
-    // Failsafe auto-dismiss after 1.2s regardless of timer
-    setTimeout(() => {
-      if (preloader && preloader.parentNode) {
-        preloader.style.opacity = 0;
-        setTimeout(() => preloader.remove(), 250);
-      }
-    }, 1200);
-
-    let progress = 0;
-    const interval = setInterval(() => {
-      progress += Math.floor(Math.random() * 12) + 6;
-      if (progress >= 100) {
-        progress = 100;
-        clearInterval(interval);
-        counter.textContent = '100%';
-        bar.style.width = '100%';
-        
-        setTimeout(() => {
-          preloader.style.transition = 'opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
-          preloader.style.opacity = '0';
-          preloader.style.transform = 'translateY(-20px)';
-          setTimeout(() => { preloader.style.display = 'none'; }, 500);
-        }, 120);
-      } else {
-        counter.textContent = progress + '%';
-        bar.style.width = progress + '%';
-      }
-    }, 20);
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.remove();
+    }
   }
 
   // ==========================================================================
