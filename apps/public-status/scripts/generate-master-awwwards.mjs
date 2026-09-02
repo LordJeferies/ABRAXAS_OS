@@ -411,15 +411,15 @@ function getMasterUnifiedPage(locale, depth = 0) {
           <h3 class="card-h3">${isEs ? 'El Árbol de la Vida: 10 Esferas y 22 Senderos' : 'Tree of Life: 10 Spheres & 22 Paths'}</h3>
           <p class="card-desc">${isEs ? 'En la base de la pirámide, los cristales crecen formando las 10 Sephiroth como canales de datos del contenido.' : '10 Sephiroth grow at the pyramid base as physical data conduits for content.'}</p>
           <div class="card-deepdive-drawer"><div class="deepdive-content-box">
-            <span class="deepdive-tag">LOS 4 MUNDOS EN LA ALTURA DE LA PIRÁMIDE (DION FORTUNE)</span>
-    <p><strong>Regla Dura (WORLD != FLOOR):</strong> La pirámide no divide mundos en caras exteriores ni pisos de oficina; se divide verticalmente en <strong>4 Regímenes de Densidad</strong> que albergan las 10 Sephiroth del Árbol de la Vida:</p>
+            <span class="deepdive-tag">LOS 4 MUNDOS = LAS 4 CARAS DE LA PIRÁMIDE (MODELO HOLOGRÁFICO DION FORTUNE)</span>
+    <p><strong>Doctrina de las 4 Caras (No se separan por pisos):</strong> La pirámide posee 4 caras exteriores que corresponden a los 4 Mundos tradicionales, y <strong>cada mundo contiene un Árbol de la Vida completo con sus 10 Sephiroth</strong>:</p>
     <ol style="color: #cbd5e1; font-size: 0.82rem; margin: 8px 0; padding-left: 1.2rem; line-height: 1.6;">
-      <li><strong>Atziluth (Cúspide de Oro / Nivel Mental / Fuego):</strong> Keter (Corona), Jojmá (Sabiduría) y Binah (Entendimiento). Herramientas: YOD Brand Core y LIENZO Merkle-DAG en CAS SHA-256.</li>
-      <li><strong>Da'at (Umbral Intersticial / Conciencia Activa):</strong> SHIM Reality Metrology Gate — Whisper sobre ANE a 0.00% GAPs resolviendo la tensión Chesed/Gevurah.</li>
-      <li><strong>Briah (Bloque Negro Superior / Nivel Astral / Agua):</strong> Jesed (CONTENIDO 1→8), Gevurah (HE 6 compuertas inmutables) y Tiféret (VAV Engine: auto-corte en 18s por FFT a -38 dBFS, 7 motions con 3 imágenes reales, EBU R128 a -14 LUFS).</li>
-      <li><strong>Yetzirah (Bloque Negro Medio / Nivel Etérico / Aire):</strong> Netsaj (perfiles técnicos a L1), Hod (telemetría a L2) y Yesod (Merkle-Packer: lote sellado).</li>
-      <li><strong>Assiah (Base y Bóveda / Nivel Físico / Tierra):</strong> Malkut (El Reino / Manifestación comercial, facturas OCR, libro contable en SQLite y cálculo de ROI real).</li>
+      <li><strong>Cara Sur — Atziluth (Emanación / YOD / Fuego):</strong> El Árbol de la Intención. Define la tesis, los axiomas y el Brand Purpose inmaterial (YOD Engine).</li>
+      <li><strong>Cara Occidente — Briah (Creación / HE / Agua):</strong> El Árbol de la Arquitectura. Estructura el Merkle-DAG inmutable en CAS SHA-256, ramifica de 1 a 8 en CONTENIDO y audita las 6 compuertas de HE.</li>
+      <li><strong>Cara Oriente — Yetzirah (Formación / VAV / Aire):</strong> El Árbol de la Forja Audiovisual. SHIM audita en set a 0.00% GAPs (Da'at), y VAV Engine forja la pieza en 18s por FFT a -38 dBFS con los 7 motions fijos y EBU R128.</li>
+      <li><strong>Cara Norte — Assiah (Acción / Segunda HE / Tierra):</strong> El Árbol de la Manifestación y Retorno Comercial. Despacho adaptativo a 8 redes (Luna 1), analítica de retención (Luna 2) y facturación OCR en SQLite con ROI real (Luna 3).</li>
     </ol>
+    <p>El Malkut de cada mundo superior toca y activa el Keter del mundo inferior, cerrando el bucle: <strong>S(t+1) = S(t) + A(t)</strong>.</p>
             <p style="margin-top: 8px;"><a href="${langPrefix}flujo/index.html" style="color: #2997ff; font-weight: 700;">🔗 Ver Ciclo de Vida Completo ➔</a></p>
           </div></div>
         </div>
