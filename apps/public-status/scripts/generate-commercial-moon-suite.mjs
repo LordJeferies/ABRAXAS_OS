@@ -238,12 +238,12 @@ function generateLunaComercialPage(locale) {
       <div class="spotlight-card col-6" style="position: relative;">
         <button class="card-expand-btn" title="Expandir">+</button>
         <span class="card-pill-tag gold">🛠️ EN PROFUNDIDAD // LA LUNA DE CONTENIDO VS LA LUNA COMERCIAL</span>
-        <h3 class="card-h3">${isEs ? 'Dos Lunas Complementarias en Coherencia' : 'Two Complementary Telemetric Moons'}</h3>
-        <p class="card-desc" style="font-size: 0.92rem; line-height: 1.55;">
-          ${isEs 
-            ? '<strong>Luna 1 (Contenido):</strong> Ingesta retención de audiencia y watch-time para que YOD perfeccione los ganchos.<br/><strong>Luna 2 (Comercial):</strong> Ingesta facturas, órdenes de WhatsApp y ventas de MercadoLibre para calcular el ROI real y alimentar el presupuesto de nuevas campañas.' 
-            : '<strong>Moon 1 (Content):</strong> Feeds audience retention into YOD to sharpen hooks.<br/><strong>Moon 2 (Commercial):</strong> Ingests sales orders, invoices, and sales reps conversion to compute true financial ROI.'}
-        </p>
+        <h3 class="card-h3">${isEs ? 'Las Tres Lunas en Coherencia Absoluta' : 'The Three Moons in Absolute Coherence'}</h3>
+    <p class="card-desc" style="font-size: 0.92rem; line-height: 1.55;">
+      ${isEs 
+        ? '<strong>Luna 1:</strong> Despacho y distribución a 8 redes.<br/><strong>Luna 2:</strong> Gestión de tareas de empleados, auditoría de procesos creativos y retención de audiencia.<br/><strong>Luna 3:</strong> Costo financiero de producción ($/activo según horas de Luna 2), facturación OCR y cálculo del ROI real de ventas.' 
+        : '<strong>Moon 1:</strong> 8-channel dispatch.<br/><strong>Moon 2:</strong> Employee task management, creative process audit, and audience retention.<br/><strong>Moon 3:</strong> Financial production cost (from Moon 2 hours), OCR invoicing, and true sales ROI.'}
+    </p>
       </div>
     </div>
 
