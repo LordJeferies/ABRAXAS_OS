@@ -109,7 +109,7 @@
                 <th style="padding: 12px 14px;">ESTADO</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="ocr-live-ledger-body">
               <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); color: #e2e8f0;">
                 <td style="padding: 14px;"><span style="color: #38bdf8;">reel_01_gancho_autoridad</span></td>
                 <td>Video 9:16 (Reels)</td>
@@ -140,6 +140,14 @@
             </tbody>
           </table>
         </div>
+      
+        <div style="margin-top: 1.5rem; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+          <button id="btn-simulate-ocr" class="btn-apple-cta" style="background: var(--color-emerald); padding: 12px 24px; font-size: 0.9rem; cursor: pointer; border: none; font-weight: 700;">
+            📸 Simular Foto de Factura / Ticket OCR
+          </button>
+          <span style="font-size: 0.8rem; color: #94a3b8;">Formatos soportados: Facturas PDF, JPG, Tickets POS y capturas de WhatsApp.</span>
+        </div>
+
       </div>
     </section>
 

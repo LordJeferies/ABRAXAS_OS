@@ -1,5 +1,5 @@
 /**
- * ABRAXAS OS — Master Apple & Awwwards Engine (v3.0.0 Pro)
+ * ABRAXAS OS — Master Apple & Awwwards Engine (v3.1.0 Pro Edition)
  * 31 Core Architectural & Visual Principles Integrated
  */
 
@@ -14,7 +14,7 @@
       name: "ABRAXAS OS",
       tagline: "Mente abierta. Poder total.",
       thesis: "ABRAXAS convierte criterio en infraestructura.",
-      version: "v3.0.0-PRO",
+      version: "v3.1.0-PRO",
       commitSha: "91234741f0b3a1ac5bd7e4c0556fafa868d00769"
     },
     colors: {
@@ -39,6 +39,15 @@
       { id: "youtube", name: "YouTube Ensayos (16:9)", speed: "4K Master", tag: "YouTube Long-form", photo: "plate_10_master_monument.webp", desc: "Guiones en 4 tiempos estructurados con el Eje de Continuidad para retención de audiencia superior al 60%." }
     ]
   };
+
+  // Helper to determine asset root path based on page URL depth
+  function getAssetRoot() {
+    const p = window.location.pathname;
+    if (p.includes('/tools/vav/') || p.includes('/tools/shim/') || p.includes('/tools/arquitecto/')) return '../../../../assets/';
+    if (p.includes('/tools/') || p.includes('/ecosistema/') || p.includes('/gerencia/') || p.includes('/flujo/') || p.includes('/canon/') || p.includes('/backup/') || p.includes('/luna-comercial/') || p.includes('/branding-method/') || p.includes('/abraxas-core-example/') || p.includes('/criterios-roadmap/')) return '../../assets/';
+    if (p.includes('/es/') || p.includes('/en/') || p.includes('/v3/')) return '../assets/';
+    return 'assets/';
+  }
 
   // ==========================================================================
   // 2. REACTIVE STATE MANAGEMENT VIA JS PROXY (Principle 5: window.appState)
@@ -71,7 +80,7 @@
 
     let progress = 0;
     const interval = setInterval(() => {
-      progress += Math.floor(Math.random() * 12) + 4;
+      progress += Math.floor(Math.random() * 12) + 6;
       if (progress >= 100) {
         progress = 100;
         clearInterval(interval);
@@ -79,16 +88,16 @@
         bar.style.width = '100%';
         
         setTimeout(() => {
-          preloader.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+          preloader.style.transition = 'opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
           preloader.style.opacity = '0';
-          preloader.style.transform = 'translateY(-30px)';
-          setTimeout(() => { preloader.style.display = 'none'; }, 600);
-        }, 150);
+          preloader.style.transform = 'translateY(-20px)';
+          setTimeout(() => { preloader.style.display = 'none'; }, 500);
+        }, 120);
       } else {
         counter.textContent = progress + '%';
         bar.style.width = progress + '%';
       }
-    }, 25);
+    }, 20);
   }
 
   // ==========================================================================
@@ -109,18 +118,18 @@
     });
 
     const colors = ['rgba(128, 82, 255, ', 'rgba(212, 175, 55, ', 'rgba(41, 151, 255, ', 'rgba(48, 209, 88, '];
-    const particleCount = Math.min(width > 768 ? 65 : 30, 80);
+    const particleCount = Math.min(width > 768 ? 60 : 25, 70);
     const particles = [];
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * width,
-        y: Math.random() * height * 0.8,
-        vx: (Math.random() - 0.5) * 0.6,
-        vy: (Math.random() - 0.5) * 0.6,
-        size: Math.random() * 8 + 4,
+        y: Math.random() * height * 0.75,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 7 + 4,
         colorBase: colors[Math.floor(Math.random() * colors.length)],
-        alpha: Math.random() * 0.5 + 0.2,
+        alpha: Math.random() * 0.5 + 0.25,
         rot: Math.random() * Math.PI * 2,
         rotSpeed: (Math.random() - 0.5) * 0.02
       });
@@ -131,7 +140,7 @@
       ctx.translate(p.x, p.y);
       ctx.rotate(p.rot);
       ctx.beginPath();
-      // Draw Abraxas Chevron Symbol (Inverted V / Open Triangle)
+      // Draw Abraxas Chevron Symbol (Inverted V)
       ctx.moveTo(0, -p.size);
       ctx.lineTo(p.size * 0.85, p.size);
       ctx.lineTo(p.size * 0.45, p.size * 0.75);
@@ -147,17 +156,17 @@
     function animate() {
       ctx.clearRect(0, 0, width, height);
 
-      // Draw subtle connecting neural lines between nearby nodes
+      // Connecting neural lines between nearby nodes
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 130) {
+          if (dist < 120) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = 'rgba(212, 175, 55, ' + (1 - dist / 130) * 0.15 + ')';
+            ctx.strokeStyle = 'rgba(212, 175, 55, ' + (1 - dist / 120) * 0.12 + ')';
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -171,8 +180,8 @@
 
         if (p.x < -20) p.x = width + 20;
         if (p.x > width + 20) p.x = -20;
-        if (p.y < -20) p.y = height * 0.8 + 20;
-        if (p.y > height * 0.8 + 20) p.y = -20;
+        if (p.y < -20) p.y = height * 0.75 + 20;
+        if (p.y > height * 0.75 + 20) p.y = -20;
 
         renderChevron(p);
       });
@@ -199,7 +208,7 @@
   }
 
   // ==========================================================================
-  // 6. FORMAT VIEWER CONTROLLER
+  // 6. FORMAT VIEWER CONTROLLER (Smart Crossfade & Image Resolution)
   // ==========================================================================
   function updateFormatViewer(formatId) {
     const format = window.siteConfig.formats.find(f => f.id === formatId) || window.siteConfig.formats[0];
@@ -213,11 +222,17 @@
     if (displaySpeed) displaySpeed.textContent = format.speed;
     if (displayTag) displayTag.textContent = format.tag;
     if (displayDesc) displayDesc.textContent = format.desc;
+    
     if (displayPhoto) {
-      displayPhoto.style.opacity = '0.3';
+      displayPhoto.style.transition = 'opacity 0.15s ease, transform 0.15s ease';
+      displayPhoto.style.opacity = '0.2';
+      displayPhoto.style.transform = 'scale(0.98)';
+      
       setTimeout(() => {
-        displayPhoto.src = `../../assets/${format.photo}`;
+        const rootPath = getAssetRoot();
+        displayPhoto.src = `${rootPath}${format.photo}`;
         displayPhoto.style.opacity = '1';
+        displayPhoto.style.transform = 'scale(1)';
       }, 120);
     }
 
@@ -255,9 +270,9 @@
 
     if (copyBtn) {
       copyBtn.addEventListener('click', () => {
-        const promptText = `Actúa como ARQUITECTO de ABRAXAS OS. Evalúa mi idea de contenido aplicando: 1. Tesis contraria de nicho, 2. Deuda narrativa legítima (Hook), 3. Payoff exacto, 4. Ramificación en 8 formatos derivados sincronizados con Merkle-DAG.`;
+        const promptText = `Actúa como ARQUITECTO de ABRAXAS OS. Evalúa mi idea aplicando: 1. Tesis contraria de nicho, 2. Deuda narrativa legítima (Hook), 3. Payoff exacto, 4. Ramificación en 8 formatos derivados sincronizados con Merkle-DAG y 5. Atribución de ventas en la Luna Comercial.`;
         navigator.clipboard.writeText(promptText).then(() => {
-          copyBtn.textContent = '✅ ¡Prompt Copiado!';
+          copyBtn.textContent = '✅ ¡Prompt Copiado al Portapapeles!';
           setTimeout(() => { copyBtn.textContent = '📋 Preparar pregunta para IA'; }, 2000);
         });
       });
@@ -292,7 +307,70 @@
   }
 
   // ==========================================================================
-  // 9. INITIALIZE EVERYTHING ON DOM READY
+  // 9. INTERACTIVE SIMULATORS (OCR Ticket Scanner & YOD Niche Wizard)
+  // ==========================================================================
+  function initInteractiveSimulators() {
+    // OCR Ticket Scanner Simulator (Luna Comercial Page)
+    const btnSimulateOcr = document.getElementById('btn-simulate-ocr');
+    const ocrLedgerBody = document.getElementById('ocr-live-ledger-body');
+    if (btnSimulateOcr && ocrLedgerBody) {
+      btnSimulateOcr.addEventListener('click', () => {
+        btnSimulateOcr.textContent = '⚡ Escaneando Factura con IA...';
+        btnSimulateOcr.disabled = true;
+
+        setTimeout(() => {
+          const sampleSkus = ['PACK_PRO_ANUAL', 'REEL_TEMPLATE_V3', 'CONSULTING_HOUR', 'MASTER_LICENSE'];
+          const sampleChannels = ['WhatsApp Business', 'MercadoLibre Pro', 'Shopify Store', 'POS Directo'];
+          const randomSku = sampleSkus[Math.floor(Math.random() * sampleSkus.length)];
+          const randomChannel = sampleChannels[Math.floor(Math.random() * sampleChannels.length)];
+          const randomAmount = (Math.random() * 800 + 150).toFixed(2);
+          
+          const newRow = document.createElement('tr');
+          newRow.style.borderBottom = '1px solid rgba(255,255,255,0.08)';
+          newRow.style.color = '#e2e8f0';
+          newRow.innerHTML = `
+            <td style="padding: 14px;"><span style="color: #38bdf8;">auto_ocr_${Date.now().toString().slice(-4)}</span></td>
+            <td>Video 9:16 (Reels)</td>
+            <td>${randomChannel}</td>
+            <td><strong>1 orden</strong></td>
+            <td><strong style="color: #30d158;">$${randomAmount}</strong></td>
+            <td><span style="color: #fef08a; background: rgba(212,175,55,0.15); padding: 2px 6px; border-radius: 4px;">+1,120%</span></td>
+            <td><span style="color: #30d158;">● Verificado OCR</span></td>
+          `;
+          ocrLedgerBody.prepend(newRow);
+          
+          btnSimulateOcr.textContent = '✅ ¡Factura Procesada y Registrada!';
+          setTimeout(() => {
+            btnSimulateOcr.textContent = '📸 Simular Foto de Factura / Ticket OCR';
+            btnSimulateOcr.disabled = false;
+          }, 2000);
+        }, 800);
+      });
+    }
+
+    // YOD Niche Diagnostic Simulator (Branding Method Page)
+    const btnRunDiagnostic = document.getElementById('btn-run-yod-diagnostic');
+    const diagnosticOutput = document.getElementById('yod-diagnostic-output');
+    if (btnRunDiagnostic && diagnosticOutput) {
+      btnRunDiagnostic.addEventListener('click', () => {
+        btnRunDiagnostic.textContent = '⚡ Procesando Tesis de Nicho con YOD...';
+        btnRunDiagnostic.disabled = true;
+
+        setTimeout(() => {
+          diagnosticOutput.style.display = 'block';
+          diagnosticOutput.scrollIntoView({ behavior: 'smooth' });
+          btnRunDiagnostic.textContent = '✅ Diagnóstico Generado con Éxito';
+          setTimeout(() => {
+            btnRunDiagnostic.textContent = '🧭 Ejecutar Diagnóstico Estratégico YOD';
+            btnRunDiagnostic.disabled = false;
+          }, 2500);
+        }, 1000);
+      });
+    }
+  }
+
+  // ==========================================================================
+  // 10. INITIALIZE ON DOM READY
   // ==========================================================================
   document.addEventListener('DOMContentLoaded', () => {
     initPreloader();
@@ -300,6 +378,7 @@
     initMouseSpotlight();
     initArchitectWidget();
     initControlCenter();
+    initInteractiveSimulators();
 
     document.querySelectorAll('.format-pill-btn').forEach((btn) => {
       btn.addEventListener('click', () => {

@@ -266,7 +266,7 @@ function generateLunaComercialPage(locale) {
                 <th style="padding: 12px 14px;">ESTADO</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="ocr-live-ledger-body">
               <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); color: #e2e8f0;">
                 <td style="padding: 14px;"><span style="color: #38bdf8;">reel_01_gancho_autoridad</span></td>
                 <td>Video 9:16 (Reels)</td>
@@ -297,6 +297,14 @@ function generateLunaComercialPage(locale) {
             </tbody>
           </table>
         </div>
+      
+        <div style="margin-top: 1.5rem; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+          <button id="btn-simulate-ocr" class="btn-apple-cta" style="background: var(--color-emerald); padding: 12px 24px; font-size: 0.9rem; cursor: pointer; border: none; font-weight: 700;">
+            📸 ${isEs ? 'Simular Foto de Factura / Ticket OCR' : 'Simulate OCR Invoice Upload'}
+          </button>
+          <span style="font-size: 0.8rem; color: #94a3b8;">Formatos soportados: Facturas PDF, JPG, Tickets POS y capturas de WhatsApp.</span>
+        </div>
+
       </div>
     </section>
 
@@ -438,6 +446,48 @@ function generateBrandingMethodPage(locale) {
             ? 'El usuario responde 3 preguntas fundacionales: <strong>1. ¿De dónde vienes?</strong> (estado actual y dolores), <strong>2. ¿A dónde quieres ir?</strong> (visión y metas), y <strong>3. ¿Quién eres ahora y qué te hace ser eso?</strong> (activos y fortalezas). YOD analiza los vacíos del mercado y define <em>«Quién más puedes llegar a ser»</em>, redactando automáticamente el Branding Method, las campañas activas, los guiones de podcasts y los argumentos de venta de tus vendedores.' 
             : 'User answers origin, destination, and current identity. YOD computes market blind spots, defining your maximum brand potential and auto-generating branding blueprints and sales pitches.'}
         </p>
+      </div>
+    </div>
+
+    
+    <!-- Interactive YOD Diagnostic Tool -->
+    <div class="spotlight-card col-12" style="background: rgba(14, 14, 22, 0.95); border: 1px solid var(--border-gold); margin-bottom: 4rem; padding: 2.5rem;">
+      <span class="card-pill-tag gold">SIMULADOR EN VIVO // YOD COGNITIVE RADAR</span>
+      <h3 class="card-h3">${isEs ? 'Prueba el Diagnóstico de Nicho en Tiempo Real' : 'Test Real-Time Niche Diagnostic'}</h3>
+      <p class="card-desc">${isEs ? 'Selecciona tu industria y haz clic para ver cómo YOD extrae los ángulos de autoridad y redacta los ganchos de venta:' : 'Select your industry and run the YOD diagnostic engine:'}</p>
+
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 1.5rem;">
+        <select id="select-niche-preset" style="background: #000; color: #fff; border: 1px solid rgba(255,255,255,0.2); padding: 10px 18px; border-radius: 8px; font-size: 0.9rem; outline: none;">
+          <option value="saas">Software B2B & Tecnología</option>
+          <option value="ecommerce">E-Commerce & Productos Físicos</option>
+          <option value="consulting">Consultoría & Servicios High-Ticket</option>
+          <option value="creator">Creadores de Contenido & Agencias</option>
+        </select>
+        <button id="btn-run-yod-diagnostic" class="btn-apple-cta" style="background: var(--color-iris); border: none; padding: 10px 24px; font-size: 0.9rem; cursor: pointer; font-weight: 700;">
+          🧭 ${isEs ? 'Ejecutar Diagnóstico Estratégico YOD' : 'Run YOD Strategic Diagnostic'}
+        </button>
+      </div>
+
+      <!-- Dynamic Output Box -->
+      <div id="yod-diagnostic-output" style="display: none; background: #000; border: 1px solid rgba(212,175,55,0.35); border-radius: 14px; padding: 20px; animation: slideUpPopup 0.3s ease;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 14px;">
+          <span style="font-family: var(--font-mono); color: #d4af37; font-size: 0.85rem; font-weight: 700;">◈ YOD ANALYSIS COMPLETE // CATEGORY EXPANSION</span>
+          <span style="font-family: var(--font-mono); color: #30d158; font-size: 0.8rem;">AUTORIDAD: 96/100</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; font-size: 0.88rem; color: #cbd5e1;">
+          <div>
+            <strong style="color: #fff; display: block; margin-bottom: 4px;">1. Tesis Contraria Identificada:</strong>
+            <p style="color: #94a3b8;">"Tu mercado está saturado de promesas vacías. La salida es convertir el proceso técnico en evidencia visual transparente."</p>
+          </div>
+          <div>
+            <strong style="color: #fff; display: block; margin-bottom: 4px;">2. Gancho Maestro Calificado (94/100):</strong>
+            <p style="color: #fef08a;">«El error que comete el 90% de las empresas al intentar escalar sin infraestructura determinista.»</p>
+          </div>
+          <div>
+            <strong style="color: #fff; display: block; margin-bottom: 4px;">3. Campaña Asignada:</strong>
+            <p style="color: #38bdf8;">Campaña 01 (Conquista de Nicho) ➔ 8 Formatos Sincronizados con Merkle-DAG.</p>
+          </div>
+        </div>
       </div>
     </div>
 
