@@ -52,7 +52,7 @@
   <div style="background: rgba(14, 14, 20, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px 1.5rem; position: sticky; top: 52px; z-index: 999; overflow-x: auto; scrollbar-width: none;">
     <div style="max-width: 1280px; margin: 0 auto; display: flex; gap: 8px; align-items: center; white-space: nowrap;">
       <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800; margin-right: 6px;">IR A:</span>
-      <a href="#resumen" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">⚡ En 30s</a><a href="#atribucion" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🔗 Vínculo Pieza-Venta</a><a href="#ocr-facturas" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📸 OCR de Facturas</a><a href="#vendedores" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">👥 Control de Vendedores & Closers</a><a href="#roi-campanas" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📊 Cálculo de ROI de Campañas</a><a href="#canales" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📱 Canales (WhatsApp, ML, MP)</a>
+      <a href="#resumen" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">⚡ En 30s</a><a href="#ventas-campana" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🎯 Ventas por Campaña</a><a href="#atribucion" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🔗 Ventas por Pieza</a><a href="#ocr-facturas" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📸 OCR de Facturas</a><a href="#vendedores" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">👥 Control de Vendedores & Closers</a><a href="#roi-campanas" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📊 Cálculo de ROI de Campañas</a><a href="#canales" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📱 Canales (WhatsApp, ML, MP)</a>
     </div>
   </div>
   
@@ -165,10 +165,88 @@
       </div>
     </section>
   
-    <!-- 1. Vínculo Pieza-Venta (Content Revenue Ledger) -->
+    
+    <!-- SECCIÓN DEDICADA: VENTAS POR CAMPAÑA GENERAL (MACRO LEDGER) -->
+    <section id="ventas-campana" style="margin-bottom: 4rem;">
+      <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
+        <span class="tag" style="color: #f59e0b;">01 // REPORTE MACRO DE VENTAS POR CAMPAÑA</span>
+        <h2 class="h2" style="font-size: 2rem;">Macro Campaign Sales Ledger</h2>
+        <p class="p" style="margin: 0; font-size: 1rem;">Aggregated audit of full campaigns. Evaluates commercial returns of 10-50 asset batches promoting single or multiple products simultaneously.</p>
+      </div>
+
+      <div class="spotlight-card col-12" style="position: relative; border-left: 4px solid #f59e0b; margin-bottom: 1.5rem;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <span class="card-pill-tag gold">TABLERO RELACIONAL SQLITE // CAMPAIGNS & PRODUCTS</span>
+            <h3 class="card-h3" style="margin: 4px 0 0 0;">Financial Summary by Active Campaign</h3>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #94a3b8;">Tabla: <code>campaigns</code> ⨝ <code>sales_transactions</code></span>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 0.85rem; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.15); color: #f59e0b;">
+                <th style="padding: 12px 14px;">CAMPAÑA ID / NOMBRE</th>
+                <th style="padding: 12px 14px;">OBJETIVO</th>
+                <th style="padding: 12px 14px;">PIEZAS EN LOTE</th>
+                <th style="padding: 12px 14px;">PRODUCTOS / SKUs</th>
+                <th style="padding: 12px 14px;">COSTO MANUFACTURA</th>
+                <th style="padding: 12px 14px;">VENTAS COBRADAS (OCR)</th>
+                <th style="padding: 12px 14px; text-align: right;">ROI CAMPAÑA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(245, 158, 11, 0.03);">
+                <td style="padding: 14px; font-weight: 700; color: #fff;">
+                  <code>CAMP_01 // Lanzamiento Ecosistema Q3</code><br/>
+                  <span style="font-size: 0.75rem; color: #94a3b8; font-weight: normal;">15 Ago – 01 Sep 2026</span>
+                </td>
+                <td style="padding: 14px;"><span class="badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">CONVERSIÓN DIRECTA</span></td>
+                <td style="padding: 14px; color: #cbd5e1;">16 piezas (10 reels, 4 carruseles, 2 hilos)</td>
+                <td style="padding: 14px; color: #e2e8f0;">Software Core ($1,000) + Membresía ($150)</td>
+                <td style="padding: 14px; color: #ef4444; font-weight: 700;">$680.00 USD</td>
+                <td style="padding: 14px; color: #30d158; font-weight: 700; font-size: 0.95rem;">$13,450.00 USD</td>
+                <td style="padding: 14px; text-align: right; color: #30d158; font-weight: 800; font-size: 1rem;">+1,877%</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <td style="padding: 14px; font-weight: 700; color: #fff;">
+                  <code>CAMP_02 // Destrucción de Dogmas IA</code><br/>
+                  <span style="font-size: 0.75rem; color: #94a3b8; font-weight: normal;">01 Ago – 15 Ago 2026</span>
+                </td>
+                <td style="padding: 14px;"><span class="badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc;">AUTORIDAD & HIGH-TICKET</span></td>
+                <td style="padding: 14px; color: #cbd5e1;">8 piezas (6 reels, 2 PDFs LinkedIn)</td>
+                <td style="padding: 14px; color: #e2e8f0;">Implementación VIP ($2,500)</td>
+                <td style="padding: 14px; color: #ef4444; font-weight: 700;">$352.00 USD</td>
+                <td style="padding: 14px; color: #30d158; font-weight: 700; font-size: 0.95rem;">$7,500.00 USD</td>
+                <td style="padding: 14px; text-align: right; color: #30d158; font-weight: 800; font-size: 1rem;">+2,030%</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(56, 189, 248, 0.02);">
+                <td style="padding: 14px; font-weight: 700; color: #fff;">
+                  <code>CAMP_03 // Caso Real Amanda & Joc</code><br/>
+                  <span style="font-size: 0.75rem; color: #94a3b8; font-weight: normal;">10 Jul – 25 Jul 2026</span>
+                </td>
+                <td style="padding: 14px;"><span class="badge" style="background: rgba(34, 197, 94, 0.15); color: #4ade80;">PRUEBA DE MECANISMO</span></td>
+                <td style="padding: 14px; color: #cbd5e1;">4 piezas (2 reels 18s, 2 carruseles 4:5)</td>
+                <td style="padding: 14px; color: #e2e8f0;">Licencia ABRAXAS v3.3 Pro ($4,990)</td>
+                <td style="padding: 14px; color: #ef4444; font-weight: 700;">$176.00 USD</td>
+                <td style="padding: 14px; color: #30d158; font-weight: 700; font-size: 0.95rem;">$4,990.00 USD</td>
+                <td style="padding: 14px; text-align: right; color: #30d158; font-weight: 800; font-size: 1rem;">+2,735%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 12px; line-height: 1.5;">
+          💡 <strong>Regla de Atribución Macro:</strong> Si una venta en WhatsApp o llamada con closer no puede atribuirse a un video en particular (porque el comprador vio múltiples piezas del lote), se imputa directamente al <code>campaign_id</code> correspondiente, garantizando que el ROI global de la campaña nunca sufra fugas de datos.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Vínculo Pieza-Venta (Content Revenue Ledger) -->
     <section id="atribucion" style="margin-bottom: 4rem;">
       <div class="section-head" style="text-align: left; margin-bottom: 2rem;">
-        <span class="tag" style="color: #38bdf8;">01 // REGISTRO DE ATRIBUCIÓN</span>
+        <span class="tag" style="color: #38bdf8;">02 // REGISTRO DE ATRIBUCIÓN POR PIEZA INDIVIDUAL</span>
         <h2 class="h2" style="font-size: 2rem;">Published Content Revenue Ledger</h2>
         <p class="p" style="margin: 0; font-size: 1rem;">Cada contenido mantiene un libro contable vivo donde se actualizan automáticamente las ventas generadas.</p>
       </div>
