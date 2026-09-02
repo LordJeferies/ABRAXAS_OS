@@ -1107,41 +1107,41 @@ function getMasterUnifiedPage(locale, depth = 0) {
         <!-- Las 4 Campañas Canónicas del Branding Method -->
         <div style="margin-bottom: 2rem;">
           <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 1.5rem; text-align: center;">${isEs ? 'Las 4 Campañas Pre-Diseñadas de Alta Conversión' : 'The 4 Pre-Designed High-Conversion Campaigns'}</h3>
-          <div class="bento-grid">
-            <div class="spotlight-card col-3" style="background: #0b0c16; border-top: 3px solid #d4af37;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 1rem;">
+            <div class="spotlight-card" style="background: #0b0c16; border-top: 3px solid #d4af37; padding: 1.75rem 1.4rem;">
               <span class="card-pill-tag gold">CAMPAÑA 01</span>
-              <h4 style="color: #fff; font-size: 1.05rem; margin: 8px 0;">${isEs ? 'Tesis & Autoridad' : 'Thesis & Authority'}</h4>
-              <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5;">
+              <h4 style="color: #fff; font-size: 1.15rem; margin: 10px 0 6px 0;">${isEs ? 'Tesis & Autoridad' : 'Thesis & Authority'}</h4>
+              <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.55; margin: 0;">
                 ${isEs 
                   ? 'Establece el territorio intelectual del fundador. Fija los axiomas inmutables y explica por qué tu solución es la única alternativa seria.' 
                   : 'Claims intellectual territory. Establishes immutable axioms and frames your solution as the only serious alternative.'}
               </p>
             </div>
 
-            <div class="spotlight-card col-3" style="background: #0b0c16; border-top: 3px solid #c084fc;">
+            <div class="spotlight-card" style="background: #0b0c16; border-top: 3px solid #c084fc; padding: 1.75rem 1.4rem;">
               <span class="card-pill-tag purple">CAMPAÑA 02</span>
-              <h4 style="color: #fff; font-size: 1.05rem; margin: 8px 0;">${isEs ? 'Destrucción de Dogmas' : 'Dogma Destruction'}</h4>
-              <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5;">
+              <h4 style="color: #fff; font-size: 1.15rem; margin: 10px 0 6px 0;">${isEs ? 'Destrucción de Dogmas' : 'Dogma Destruction'}</h4>
+              <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.55; margin: 0;">
                 ${isEs 
                   ? 'Ataque frontal a las mentiras y malas prácticas de los competidores de tu nicho. Erradica objeciones antes de que el cliente pregunte.' 
                   : 'Frontal attack on industry myths and bad practices. Destroys buyer objections before sales calls happen.'}
               </p>
             </div>
 
-            <div class="spotlight-card col-3" style="background: #0b0c16; border-top: 3px solid #38bdf8;">
+            <div class="spotlight-card" style="background: #0b0c16; border-top: 3px solid #38bdf8; padding: 1.75rem 1.4rem;">
               <span class="card-pill-tag cyan">CAMPAÑA 03</span>
-              <h4 style="color: #fff; font-size: 1.05rem; margin: 8px 0;">${isEs ? 'Prueba de Mecanismo' : 'Mechanism Proof'}</h4>
-              <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5;">
+              <h4 style="color: #fff; font-size: 1.15rem; margin: 10px 0 6px 0;">${isEs ? 'Prueba de Mecanismo' : 'Mechanism Proof'}</h4>
+              <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.55; margin: 0;">
                 ${isEs 
                   ? 'Evidencia técnica transparente. Muestra las entrañas de cómo funciona tu producto o servicio con datos duros y demostraciones reales.' 
                   : 'Transparent technical evidence. Displays how your system delivers results with real walkthroughs and proof.'}
               </p>
             </div>
 
-            <div class="spotlight-card col-3" style="background: #0b0c16; border-top: 3px solid #30d158;">
+            <div class="spotlight-card" style="background: #0b0c16; border-top: 3px solid #30d158; padding: 1.75rem 1.4rem;">
               <span class="card-pill-tag emerald">CAMPAÑA 04</span>
-              <h4 style="color: #fff; font-size: 1.05rem; margin: 8px 0;">${isEs ? 'Conversión Directa' : 'Direct Conversion'}</h4>
-              <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5;">
+              <h4 style="color: #fff; font-size: 1.15rem; margin: 10px 0 6px 0;">${isEs ? 'Conversión Directa' : 'Direct Conversion'}</h4>
+              <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.55; margin: 0;">
                 ${isEs 
                   ? 'Llamadas a la acción precisas hacia WhatsApp, pasarelas de pago o llamadas con closers. Convierte la autoridad acumulada en facturación.' 
                   : 'Sharp call to action pushing traffic into WhatsApp, checkouts, and closers, converting accumulated authority into cash.'}
@@ -1153,6 +1153,7 @@ function getMasterUnifiedPage(locale, depth = 0) {
         <div style="text-align: center; margin-top: 2.5rem;">
           <a href="${langPrefix}branding-method/index.html#campanas" class="btn-apple-cta" style="margin-right: 12px;">${isEs ? 'Ver el Generador de Campañas YOD ➔' : 'Explore YOD Campaign Generator ➔'}</a>
           <a href="${langPrefix}luna-comercial/index.html#ventas-campana" class="btn-control-center" style="padding: 10px 20px;">${isEs ? 'Ver Telemetría de Ventas por Campaña ➔' : 'View Campaign Sales Telemetry ➔'}</a>
+          <a href="${langPrefix}speech-ventas/index.html" class="btn-control-center" style="padding: 10px 20px; background: rgba(48,209,88,0.15); color: #30d158; border: 1px solid rgba(48,209,88,0.4);">📞 ${isEs ? 'Ver Speech de Ventas & Puntos de Dolor ➔' : 'View Sales Speech & Pain Points ➔'}</a>
         </div>
       </div>
     </section>
