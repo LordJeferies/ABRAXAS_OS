@@ -44,6 +44,10 @@ function getLocalnavHTML(locale, activeTab, depth = 1) {
       <div class="localnav-items">
         <a href="${prefix}index.html" class="localnav-a ${activeTab === 'overview' ? 'active' : ''}">${isEs ? 'Visión general' : 'Overview'}</a>
         <a href="${prefix}v3/index.html" class="localnav-a ${activeTab === 'v3' ? 'active' : ''}">🍎 Edición v3</a>
+        <a href="${prefix}${locale}/luna-comercial/index.html" class="localnav-a ${activeTab === 'luna-comercial' ? 'active' : ''}" style="color: #30d158; font-weight: 700;">🌙 ${isEs ? 'Luna de Ventas & ROI' : 'Sales Moon & ROI'}</a>
+        <a href="${prefix}${locale}/branding-method/index.html" class="localnav-a ${activeTab === 'branding-method' ? 'active' : ''}" style="color: #bf5af2;">🎯 ${isEs ? 'Branding YOD' : 'Branding YOD'}</a>
+        <a href="${prefix}${locale}/abraxas-core-example/index.html" class="localnav-a ${activeTab === 'abraxas-core-example' ? 'active' : ''}" style="color: #d4af37;">💎 ${isEs ? 'Caso Core' : 'Core Case'}</a>
+        <a href="${prefix}${locale}/criterios-roadmap/index.html" class="localnav-a ${activeTab === 'criterios-roadmap' ? 'active' : ''}">🗺️ ${isEs ? 'Roadmap' : 'Roadmap'}</a>
         <a href="${prefix}${locale}/ecosistema/index.html" class="localnav-a ${activeTab === 'ecosistema' ? 'active' : ''}">${isEs ? 'Ecosistema 8-en-1' : '8-in-1 Ecosystem'}</a>
         <a href="${prefix}${locale}/gerencia/index.html" class="localnav-a ${activeTab === 'gerencia' ? 'active' : ''}">${isEs ? 'Gerencia & ROI' : 'Governance & ROI'}</a>
         <a href="${prefix}${locale}/flujo/index.html" class="localnav-a ${activeTab === 'flujo' ? 'active' : ''}">${isEs ? 'Ciclo de Vida' : 'Lifecycle Flow'}</a>

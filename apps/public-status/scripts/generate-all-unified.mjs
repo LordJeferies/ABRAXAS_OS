@@ -33,6 +33,10 @@ function getUniversalHeader(locale, activePage, depth = 0) {
       <div class="localnav-items">
         <a href="${root}index.html" class="localnav-a ${activePage === 'home' ? 'active' : ''}">${isEs ? 'Inicio' : 'Home'}</a>
         <a href="${root}v3/index.html" class="localnav-a ${activePage === 'v3' ? 'active' : ''}">🍎 v3 MacBook Pro</a>
+        <a href="${langPrefix}luna-comercial/index.html" class="localnav-a ${activePage === 'luna-comercial' ? 'active' : ''}" style="color: #30d158; font-weight: 700;">🌙 ${isEs ? 'Luna de Ventas & ROI' : 'Sales Moon & ROI'}</a>
+        <a href="${langPrefix}branding-method/index.html" class="localnav-a ${activePage === 'branding-method' ? 'active' : ''}" style="color: #bf5af2;">🎯 ${isEs ? 'Branding YOD' : 'Branding YOD'}</a>
+        <a href="${langPrefix}abraxas-core-example/index.html" class="localnav-a ${activePage === 'abraxas-core-example' ? 'active' : ''}" style="color: #d4af37;">💎 ${isEs ? 'Caso Core' : 'Core Case'}</a>
+        <a href="${langPrefix}criterios-roadmap/index.html" class="localnav-a ${activePage === 'criterios-roadmap' ? 'active' : ''}">🗺️ ${isEs ? 'Roadmap' : 'Roadmap'}</a>
         <a href="${langPrefix}ecosistema/index.html" class="localnav-a ${activePage === 'ecosistema' ? 'active' : ''}">${isEs ? '⚡ Ecosistema 8-en-1' : '⚡ 8-in-1 Ecosystem'}</a>
         <a href="${langPrefix}gerencia/index.html" class="localnav-a ${activePage === 'gerencia' ? 'active' : ''}">${isEs ? '💼 Gerencia & ROI' : '💼 Governance & ROI'}</a>
         <a href="${langPrefix}flujo/index.html" class="localnav-a ${activePage === 'flujo' ? 'active' : ''}">${isEs ? '🔄 Ciclo de Vida' : '🔄 Lifecycle Flow'}</a>

@@ -2,13 +2,14 @@
 set -e
 
 echo "=========================================="
-echo "⚡ ABRAXAS OS — MASTER UNIFIED AWWWARDS & APPLE DEPLOY"
+echo "⚡ ABRAXAS OS — MASTER COMMERCIAL MOON & AWWWARDS DEPLOY"
 echo "=========================================="
 
-# 1. Build all suites with 100% bulletproof navigation & internal quick menus
-echo "📦 [1/4] Rebuilding all suites with universal navigation & TOC menus..."
+# 1. Build all suites
+echo "📦 [1/4] Rebuilding all suites with Commercial Moon, Branding Method & Criteria..."
 node apps/public-status/scripts/generate-apple-v3.mjs
 node apps/public-status/scripts/generate-deepdive-suite.mjs
+node apps/public-status/scripts/generate-commercial-moon-suite.mjs
 node apps/public-status/scripts/generate-all-unified.mjs
 node apps/public-status/scripts/generate-master-awwwards.mjs
 
@@ -29,7 +30,7 @@ killall git 2>/dev/null || true
 rm -f .git/index.lock
 git add -A
 if ! git diff --cached --quiet; then
-  git commit -m "feat(nav): universal bulletproof navigation across all pages and internal quick jump TOC menus $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+  git commit -m "feat(commerce): commercial moon, sales telemetry, OCR invoice ingestion, branding method & criteria roadmap $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
   git push origin main || true
   echo "✅ Core repository updated."
 else
@@ -45,7 +46,7 @@ if git clone --depth 1 https://github.com/LordJeferies/lordjeferies.github.io.gi
   cd "$TEMP_DIR"
   git add -A
   if ! git diff --cached --quiet; then
-    git commit -m "deploy: universal bulletproof navigation and TOC release $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+    git commit -m "deploy: commercial moon, sales telemetry & branding method $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
     git push origin main || true
     echo "✅ Root domain (lordjeferies.github.io) updated."
   else
@@ -64,7 +65,7 @@ if git clone --depth 1 https://github.com/LordJeferies/ABRAXAS_OS_STATUS.git "$T
   cd "$TEMP_DIR_STATUS"
   git add -A
   if ! git diff --cached --quiet; then
-    git commit -m "deploy: universal bulletproof navigation and TOC mirror $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
+    git commit -m "deploy: commercial moon mirror $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || true
     git push origin main || true
     echo "✅ Status mirror updated."
   else
@@ -78,29 +79,17 @@ fi
 echo "🔍 [5/5] Verifying live URLs..."
 HTTP_ROOT=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/index.html || true)
 HTTP_V3=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/v3/index.html || true)
-HTTP_ECO=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/ecosistema/index.html || true)
-HTTP_GER=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/gerencia/index.html || true)
-HTTP_FLUJO=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/flujo/index.html || true)
-HTTP_MOTIONS=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/vav/motions/index.html || true)
-HTTP_CAPTIONS=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/vav/captions/index.html || true)
-HTTP_CUTS=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/vav/cuts/index.html || true)
-HTTP_SHIM=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/shim/index.html || true)
-HTTP_ARQUI=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/tools/arquitecto/index.html || true)
-HTTP_CANON=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/canon/index.html || true)
-HTTP_BACKUP=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/backup/index.html || true)
+HTTP_MOON=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/luna-comercial/index.html || true)
+HTTP_BRAND=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/branding-method/index.html || true)
+HTTP_CORE=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/abraxas-core-example/index.html || true)
+HTTP_ROADMAP=$(curl -o /dev/null -s -w "%{http_code}\n" https://lordjeferies.github.io/es/criterios-roadmap/index.html || true)
 
 echo "🚀 Master Overview URL: https://lordjeferies.github.io/index.html [HTTP $HTTP_ROOT]"
 echo "🍎 Official v3 URL: https://lordjeferies.github.io/v3/index.html [HTTP $HTTP_V3]"
-echo "⚡ Ecosystem URL: https://lordjeferies.github.io/es/ecosistema/index.html [HTTP $HTTP_ECO]"
-echo "💼 Governance URL: https://lordjeferies.github.io/es/gerencia/index.html [HTTP $HTTP_GER]"
-echo "🔄 Lifecycle Flow URL: https://lordjeferies.github.io/es/flujo/index.html [HTTP $HTTP_FLUJO]"
-echo "🎬 Motions URL: https://lordjeferies.github.io/es/tools/vav/motions/index.html [HTTP $HTTP_MOTIONS]"
-echo "💬 Captions URL: https://lordjeferies.github.io/es/tools/vav/captions/index.html [HTTP $HTTP_CAPTIONS]"
-echo "✂️ Cuts URL: https://lordjeferies.github.io/es/tools/vav/cuts/index.html [HTTP $HTTP_CUTS]"
-echo "🔍 SHIM Metrology URL: https://lordjeferies.github.io/es/tools/shim/index.html [HTTP $HTTP_SHIM]"
-echo "👁️ Arquitecto Guide URL: https://lordjeferies.github.io/es/tools/arquitecto/index.html [HTTP $HTTP_ARQUI]"
-echo "📚 Canon 37 TXT URL: https://lordjeferies.github.io/es/canon/index.html [HTTP $HTTP_CANON]"
-echo "🏛️ Backup Snapshot URL: https://lordjeferies.github.io/es/backup/index.html [HTTP $HTTP_BACKUP]"
+echo "🌙 Commercial Moon URL: https://lordjeferies.github.io/es/luna-comercial/index.html [HTTP $HTTP_MOON]"
+echo "🎯 Branding Method URL: https://lordjeferies.github.io/es/branding-method/index.html [HTTP $HTTP_BRAND]"
+echo "💎 ABRAXAS Core Example URL: https://lordjeferies.github.io/es/abraxas-core-example/index.html [HTTP $HTTP_CORE]"
+echo "🗺️ Criteria & Roadmap URL: https://lordjeferies.github.io/es/criterios-roadmap/index.html [HTTP $HTTP_ROADMAP]"
 echo "=========================================="
-echo "✨ All pages deployed with 100% working navigation!"
+echo "✨ Commercial Moon & Branding Method Suite deployed successfully!"
 echo "=========================================="
