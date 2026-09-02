@@ -43,6 +43,8 @@ function getHeader(locale, activeTab, depth = 2) {
         <a href="${langPrefix}tools/vav/motions/index.html" class="localnav-a ${activeTab === 'motions' ? 'active' : ''}">🎬 Motions</a>
         <a href="${langPrefix}tools/vav/captions/index.html" class="localnav-a ${activeTab === 'captions' ? 'active' : ''}">💬 Captions</a>
         <a href="${langPrefix}tools/vav/cuts/index.html" class="localnav-a ${activeTab === 'cuts' ? 'active' : ''}">✂️ Cuts 18s</a>
+        <a href="${langPrefix}tools/vav/vfx/index.html" class="localnav-a ${activeTab === 'vfx' ? 'active' : ''}" style="color: #bf5af2;">✨ VAV VFX</a>
+        <a href="${langPrefix}tools/vav/framing/index.html" class="localnav-a ${activeTab === 'framing' ? 'active' : ''}" style="color: #38bdf8;">📐 VAV Framing</a>
         <a href="${langPrefix}tools/shim/index.html" class="localnav-a ${activeTab === 'shim' ? 'active' : ''}">🔍 SHIM (0% GAPs)</a>
         <a href="${langPrefix}tools/arquitecto/index.html" class="localnav-a ${activeTab === 'arquitecto' ? 'active' : ''}">👁️ Arquitecto</a>
         <a href="${langPrefix}canon/index.html" class="localnav-a ${activeTab === 'canon' ? 'active' : ''}" style="color: #d4af37;">📚 Canon 37 TXT</a>
@@ -1245,11 +1247,300 @@ function generateHePage(locale) {
 }
 
 
+
+// GENERATE VAV VFX PAGE (/tools/vav/vfx/index.html)
+function generateVavVfxPage(locale) {
+  const isEs = locale === 'es';
+  const targetDir = path.join(docsDir, locale, 'tools/vav/vfx');
+  fs.mkdirSync(targetDir, { recursive: true });
+
+  const quickItems = [
+    { label: '⚡ En 30s', href: '#resumen' },
+    { label: '🎛️ Selector de Densidad', href: '#densidad' },
+    { label: '🎨 Catálogo de Efectos', href: '#catalogo' },
+    { label: '👁️ Reglas VFX Coach', href: '#coach-rules' }
+  ];
+
+  const html = `<!DOCTYPE html>
+<html lang="${locale}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${isEs ? 'VAV VFX: Efectos Ópticos, Zooms y Movimientos de Cámara — ABRAXAS OS' : 'VAV VFX: Optical Effects, Zooms & Camera Movement — ABRAXAS OS'}</title>
+  <meta name="description" content="${isEs ? 'Cómo VAV VFX orquesta zooms dinámicos, movimientos de cámara, desenfoques de profundidad y efectos ópticos justificados por el Total Production Coach.' : 'VAV VFX optical effects and camera motion orchestrated by the Total Production Coach in ABRAXAS OS.'}">
+  <link rel="stylesheet" href="../../../../assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="../../../../assets/apple-macbook-pro-v3.css">
+</head>
+<body class="theme-dark">
+  ${getHeader(locale, 'vfx', 4)}
+  ${getInternalQuickMenu(quickItems)}
+
+  <main class="section-container" style="padding-top: 60px; padding-bottom: 80px; max-width: 1240px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+    
+    <div class="section-title-wrap" style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-eyebrow" style="color: #bf5af2; font-weight: 800; letter-spacing: 0.1em; font-family: var(--font-mono);">VAV SÍNTESIS // MOTOR DE EFECTOS ÓPTICOS & MOVIMIENTO</span>
+      <h1 class="headline-gradient" style="font-size: clamp(2.5rem, 5.5vw, 4.2rem); margin-top: 10px;">
+        ${isEs ? 'VAV VFX.<br/>Zooms, Movimientos y Efectos con Criterio.' : 'VAV VFX.<br/>Zooms, Camera Movement & Visual Impact.'}
+      </h1>
+      <p class="subhead" style="margin: 0 auto; max-width: 860px; color: #94a3b8; font-size: 1.1rem; line-height: 1.6;">
+        ${isEs 
+          ? 'Los efectos no son adornos: son anclajes de atención. VAV VFX genera movimientos de cámara, empujes ópticos, desenfoque de profundidad y transiciones cinéticas subordinadas estrictamente a la dialéctica de tu mensaje.'
+          : 'Effects are not decorations: they are attention anchors. VAV VFX generates camera movements and optical push-ins strictly aligned with narrative intent.'}
+      </p>
+    </div>
+
+    <!-- Dual Summary: En 30s + Especificación -->
+    <div id="resumen" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+      <div class="bento-box" style="background: rgba(191,90,242,0.08); border: 1px solid rgba(191,90,242,0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag purple" style="color: #bf5af2; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">${isEs ? 'Efectos que Elevan tu Marca' : 'Effects That Elevate Brand Luxury'}</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #e2e8f0; line-height: 1.55;">
+          <li>🎯 <strong>Cero Efectos Gratuitos:</strong> Cada zoom o destello responde a una palabra clave del guion.</li>
+          <li>🔍 <strong>Zooms Ópticos Progresivos:</strong> Empujes del 1.0x al 1.35x en picos emocionales de tensión.</li>
+          <li>🌫️ <strong>Mapa de Profundidad (Depth Map):</strong> Desenfoque suave del fondo para aislar al orador con estilo cinematográfico.</li>
+          <li>⚡ <strong>Control de Densidad:</strong> Tú eliges si quieres un estilo sobrio institucional o hiper-dinámico para TikTok.</li>
+        </ul>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">FILOSOFÍA VFX</span>
+            <p>El espectador nunca debe pensar "mira qué efecto le pusieron", sino sentir el impacto orgánico de la idea revelada.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-box" style="background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag cyan" style="color: #38bdf8; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">🛠️ EN PROFUNDIDAD // ORQUESTACIÓN TÉCNICA</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">${isEs ? 'Interpolación y Shader Pipeline' : 'Shader Pipeline & Timing'}</h3>
+        <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 14px;">
+          ${isEs 
+            ? 'VAV VFX evalúa los timestamps fonéticos de Whisper y asigna curvas de transformación cúbicas a 60 FPS aceleradas por Metal GPU, garantizando cero tirones o artefactos.' 
+            : 'VAV VFX syncs optical transforms with Whisper phonetic timestamps at 60 FPS via Metal GPU.'}
+        </p>
+        <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 12px; color: #38bdf8; border: 1px solid rgba(255,255,255,0.1);">
+          pipeline: [optical_push_in, depth_blur, halation_glow, chromatic_aberration_0_02]
+        </div>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">HARDWARE SHADERS</span>
+            <p>Compilado directamente en Metal Shading Language (MSL) para procesamiento a tiempo real en Apple Silicon M-Series.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selector de Densidad de Efectos -->
+    <section id="densidad" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #bf5af2; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #bf5af2; font-size: 0.8rem; font-weight: 800;">CONTROL DE RITMO // DENSIDAD DE EFECTOS</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">${isEs ? 'Selecciona la Cantidad de Efectos y Movimientos' : 'Select Effect & Motion Density'}</h2>
+        <p style="color: #94a3b8; font-size: 1rem; margin: 0;">Configura la intensidad visual según el canal de destino.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag gold">NIVEL 1 // SOBRIO & INSTITUCIONAL</span>
+          <h4 style="color: #fff; font-size: 1.25rem; margin: 8px 0;">Cinematic Minimal</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">1 efecto cada 12-15 segundos. Movimientos lentos y sutiles ideales para CEOs y YouTube 16:9.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Prioriza la serenidad visual y la autoridad sin sobrecargar la pantalla.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(56,189,248,0.4); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag cyan">NIVEL 2 // EQUILIBRADO (RECOMENDADO)</span>
+          <h4 style="color: #fff; font-size: 1.25rem; margin: 8px 0;">Dynamic Authority</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">1 efecto cada 4-6 segundos. Zooms de énfasis y re-encuadres para Reels y LinkedIn.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>El balance perfecto entre retención de audiencia y dignidad de marca.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(191,90,242,0.4); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag iris">NIVEL 3 // ALTA ENERGÍA</span>
+          <h4 style="color: #fff; font-size: 1.25rem; margin: 8px 0;">Hyper-Retention Rush</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">1 efecto cada 1.5-2.5 segundos. Glitches, sacudidas y saltos para TikTok y Shorts.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Diseñado para frenar el scroll agresivo en audiencias jóvenes de ritmo acelerado.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  ${getFooter(locale)}
+</body>
+</html>`;
+
+  fs.writeFileSync(path.join(targetDir, 'index.html'), html, 'utf8');
+  console.log(`[DeepDive Suite] Generated /${locale}/tools/vav/vfx/index.html`);
+}
+
+// GENERATE VAV FRAMING PAGE (/tools/vav/framing/index.html)
+function generateVavFramingPage(locale) {
+  const isEs = locale === 'es';
+  const targetDir = path.join(docsDir, locale, 'tools/vav/framing');
+  fs.mkdirSync(targetDir, { recursive: true });
+
+  const quickItems = [
+    { label: '⚡ En 30s', href: '#resumen' },
+    { label: '📐 Encuadres Básicos', href: '#basicos' },
+    { label: '🧪 Encuadres Experimentales', href: '#experimentales' },
+    { label: '🍏 Heurística Apple Motion', href: '#apple-motion' }
+  ];
+
+  const html = `<!DOCTYPE html>
+<html lang="${locale}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${isEs ? 'VAV Framing: Multi-Encuadres Dinámicos desde 1 Sola Toma — ABRAXAS OS' : 'VAV Framing: Multi-Angle Dynamic Framing from 1 Take — ABRAXAS OS'}</title>
+  <meta name="description" content="${isEs ? 'Cómo VAV Framing genera múltiples planos, ángulos picados, 45 grados, close-ups y encuadres experimentales a partir de un video de una sola toma con Apple Motion.' : 'VAV Framing creates multi-camera angles and dynamic framing from a single static video take in ABRAXAS OS.'}">
+  <link rel="stylesheet" href="../../../../assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="../../../../assets/apple-macbook-pro-v3.css">
+</head>
+<body class="theme-dark">
+  ${getHeader(locale, 'framing', 4)}
+  ${getInternalQuickMenu(quickItems)}
+
+  <main class="section-container" style="padding-top: 60px; padding-bottom: 80px; max-width: 1240px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+    
+    <div class="section-title-wrap" style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-eyebrow" style="color: #38bdf8; font-weight: 800; letter-spacing: 0.1em; font-family: var(--font-mono);">VAV SÍNTESIS // INTELIGENCIA DE ENCUADRE Y MULTI-CÁMARA</span>
+      <h1 class="headline-gradient" style="font-size: clamp(2.5rem, 5.5vw, 4.2rem); margin-top: 10px;">
+        ${isEs ? 'VAV Framing.<br/>Multi-Cámara Dinámica desde 1 Sola Toma.' : 'VAV Framing.<br/>Multi-Camera Dynamics from a Single Take.'}
+      </h1>
+      <p class="subhead" style="margin: 0 auto; max-width: 860px; color: #94a3b8; font-size: 1.1rem; line-height: 1.6;">
+        ${isEs 
+          ? 'Graba una sola vez mirando a la cámara. VAV Framing analiza lo que dices y lo que se ve en pantalla, generando automáticamente múltiples ángulos de cámara, primeros planos, planos laterales y encuadres experimentales sin perder resolución.'
+          : 'Record once facing the camera. VAV Framing computes gaze and speech emphasis, generating dynamic camera angles and experimental framings automatically.'}
+      </p>
+    </div>
+
+    <!-- Dual Summary: En 30s + Especificación -->
+    <div id="resumen" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+      <div class="bento-box" style="background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag cyan" style="color: #38bdf8; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">${isEs ? 'Como Tener un Director de Fotografía en tu Mac' : 'Like a Virtual Cinematographer'}</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #e2e8f0; line-height: 1.55;">
+          <li>🎥 <strong>De 1 Toma a 5 Ángulos:</strong> Transforma un plano estático en una producción con ritmo cinematográfico.</li>
+          <li>👁️ <strong>Detección de Mirada y Énfasis:</strong> Sabe cuándo estás diciendo la frase clave para saltar al Close-Up.</li>
+          <li>📐 <strong>Encuadres Básicos & Experimentales:</strong> Ángulos de 45°, picados, contrapicados, regla de tercios y Dutch angles.</li>
+          <li>💎 <strong>Cero Pérdida 4K:</strong> Si grabas en 4K, los re-encuadres a 1080p mantienen el 100% de nitidez óptica.</li>
+        </ul>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">PRODUCTIVIDAD EN SET</span>
+            <p>Ahorra el costo y tiempo de montar 3 cámaras simultáneas o sincronizar claquetas de audio.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-box" style="background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag gold" style="color: #d4af37; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">🛠️ EN PROFUNDIDAD // HEURÍSTICA APPLE MOTION</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">${isEs ? 'Mapeo Facial y Composición Espacial' : 'Spatial Facial Mapping'}</h3>
+        <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 14px;">
+          ${isEs 
+            ? 'VAV Framing rastrea 468 puntos faciales y la posición de los hombros, calculando el centro de gravedad visual para recortar y re-encuadrar manteniendo siempre los ojos en la línea áurea.' 
+            : 'VAV Framing tracks facial landmarks and shoulders to keep eyes aligned with the golden ratio line.'}
+        </p>
+        <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 12px; color: #d4af37; border: 1px solid rgba(255,255,255,0.1);">
+          framingMatrix: { faceCenter: [540, 720], cropFactor: 1.28, goldenRatioY: 0.38 }
+        </div>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">FRAME TRACKING</span>
+            <p>Aplica estabilización giroscópica virtual para que los movimientos de cabeza se sientan suaves y orgánicos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Catálogo de Encuadres Básicos vs Experimentales -->
+    <section id="basicos" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #38bdf8; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #38bdf8; font-size: 0.8rem; font-weight: 800;">CATÁLOGO DE PLANOS // BÁSICOS DE ALTA AUTORIDAD</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">${isEs ? 'Encuadres Básicos Fundacionales' : 'Foundational Framing Styles'}</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(56,189,248,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag cyan">PLANO 01</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Plano Medio Frontal (1.0x)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">El plano neutro de partida para introducir la tesis inicial con calma y claridad.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Cámara a la altura de los ojos con encuadre de busto completo.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(212,175,55,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag gold">PLANO 02</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Close-Up Emocional (1.35x)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Acercamiento a rostro que corta en el gancho o en el punto de dolor para crear intimidad.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Incrementa la retención psicológica obligando a mirar los ojos del orador.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(191,90,242,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag iris">PLANO 03</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Ángulo 45° Desplazado</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Desplaza al sujeto a la izquierda o derecha para dejar espacio a gráficos y motions.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Regla de los tercios con reserva espacial para títulos y tarjetas Bento.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experimentales" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #bf5af2; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #bf5af2; font-size: 0.8rem; font-weight: 800;">CATÁLOGO AVANZADO // PLANOS EXPERIMENTALES</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">${isEs ? 'Encuadres Experimentales y Disruptivos' : 'Experimental & Disruptive Framings'}</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(255,69,58,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag ruby">PLANO EXPERIMENTAL 01</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Ángulo Picado (High Angle)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Simulación cenital sutil para deconstruir un error técnico o mostrar vulnerabilidad.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Genera sensación de análisis quirúrgico y deconstrucción de datos.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(48,209,88,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag emerald">PLANO EXPERIMENTAL 02</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Contrapicado de Autoridad (Low Angle)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Ángulo desde abajo que proyecta una imagen monumental de seguridad y liderazgo.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Ideal para el momento del Payoff y la presentación de la solución definitiva.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(212,175,55,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag gold">PLANO EXPERIMENTAL 03</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Dutch Angle (Inclinación 4°)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Ligera rotación de cámara en momentos de contradicción dialéctica o misterio.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Despierta la mente del usuario rompiendo la monotonía horizontal.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  ${getFooter(locale)}
+</body>
+</html>`;
+
+  fs.writeFileSync(path.join(targetDir, 'index.html'), html, 'utf8');
+  console.log(`[DeepDive Suite] Generated /${locale}/tools/vav/framing/index.html`);
+}
+
 function executeDeepDiveSuite() {
   ['es', 'en'].forEach(locale => {
     generateMotionsPage(locale);
     generateCaptionsPage(locale);
     generateCutsPage(locale);
+    generateVavVfxPage(locale);
+    generateVavFramingPage(locale);
     generateShimPage(locale);
     generateArquitectoPage(locale);
     generateContenidoPage(locale);

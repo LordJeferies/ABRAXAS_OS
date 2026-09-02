@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAV VFX: Optical Effects, Zooms & Camera Movement — ABRAXAS OS</title>
+  <meta name="description" content="VAV VFX optical effects and camera motion orchestrated by the Total Production Coach in ABRAXAS OS.">
+  <link rel="stylesheet" href="../../../../assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="../../../../assets/apple-macbook-pro-v3.css">
+</head>
+<body class="theme-dark">
+  
+  <!-- Film Grain Overlay -->
+  <div class="film-grain-overlay"></div>
+
+  <!-- Apple Sticky Localnav -->
+  <nav class="apple-localnav" aria-label="Local Navigation">
+    <div class="localnav-inner">
+      <a href="../../../../index.html" class="localnav-brand">
+        <span>ABRAXAS OS</span>
+        <span class="tag">v3.0 PRO</span>
+      </a>
+      <div class="localnav-items">
+        <a href="../../../../index.html" class="localnav-a">Home</a>
+        <a href="../../../../v3/index.html" class="localnav-a">🍎 v3 MacBook Pro</a>
+        <a href="../../../../en/luna-comercial/index.html" class="localnav-a " style="color: #30d158; font-weight: 700;">🌙 Sales Moon & ROI</a>
+        <a href="../../../../en/branding-method/index.html" class="localnav-a " style="color: #bf5af2;">🎯 Branding YOD</a>
+        <a href="../../../../en/abraxas-core-example/index.html" class="localnav-a " style="color: #d4af37;">💎 Core Case</a>
+        <a href="../../../../en/criterios-roadmap/index.html" class="localnav-a ">🗺️ Roadmap</a>
+        <a href="../../../../en/ecosistema/index.html" class="localnav-a ">⚡ 8-in-1 Ecosystem</a>
+        <a href="../../../../en/gerencia/index.html" class="localnav-a ">💼 Governance & ROI</a>
+        <a href="../../../../en/flujo/index.html" class="localnav-a ">🔄 Lifecycle Flow</a>
+        <a href="../../../../en/tools/vav/motions/index.html" class="localnav-a ">🎬 Motions</a>
+        <a href="../../../../en/tools/vav/captions/index.html" class="localnav-a ">💬 Captions</a>
+        <a href="../../../../en/tools/vav/cuts/index.html" class="localnav-a ">✂️ Cuts 18s</a>
+        <a href="../../../../en/tools/vav/vfx/index.html" class="localnav-a active" style="color: #bf5af2;">✨ VAV VFX</a>
+        <a href="../../../../en/tools/vav/framing/index.html" class="localnav-a " style="color: #38bdf8;">📐 VAV Framing</a>
+        <a href="../../../../en/tools/shim/index.html" class="localnav-a ">🔍 SHIM (0% GAPs)</a>
+        <a href="../../../../en/tools/arquitecto/index.html" class="localnav-a ">👁️ Arquitecto</a>
+        <a href="../../../../en/canon/index.html" class="localnav-a " style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../../../../en/backup/index.html" class="localnav-a ">🏛️ Backup</a>
+      </div>
+      <div class="localnav-right">
+        <a href="../../../../es/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">ES</a>
+        <button id="btn-open-control-center" class="btn-control-center">
+          <span>⚙️ Menú</span>
+        </button>
+        <a href="../../../../index.html" class="btn-apple-cta">Launch OS</a>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div style="background: rgba(14, 14, 20, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px 1.5rem; position: sticky; top: 52px; z-index: 999; overflow-x: auto; scrollbar-width: none;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; gap: 8px; align-items: center; white-space: nowrap;">
+      <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800; margin-right: 6px;">IR A:</span>
+      <a href="#resumen" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">⚡ En 30s</a><a href="#densidad" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🎛️ Selector de Densidad</a><a href="#catalogo" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🎨 Catálogo de Efectos</a><a href="#coach-rules" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">👁️ Reglas VFX Coach</a>
+    </div>
+  </div>
+  
+
+  <main class="section-container" style="padding-top: 60px; padding-bottom: 80px; max-width: 1240px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+    
+    <div class="section-title-wrap" style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-eyebrow" style="color: #bf5af2; font-weight: 800; letter-spacing: 0.1em; font-family: var(--font-mono);">VAV SÍNTESIS // MOTOR DE EFECTOS ÓPTICOS & MOVIMIENTO</span>
+      <h1 class="headline-gradient" style="font-size: clamp(2.5rem, 5.5vw, 4.2rem); margin-top: 10px;">
+        VAV VFX.<br/>Zooms, Camera Movement & Visual Impact.
+      </h1>
+      <p class="subhead" style="margin: 0 auto; max-width: 860px; color: #94a3b8; font-size: 1.1rem; line-height: 1.6;">
+        Effects are not decorations: they are attention anchors. VAV VFX generates camera movements and optical push-ins strictly aligned with narrative intent.
+      </p>
+    </div>
+
+    <!-- Dual Summary: En 30s + Especificación -->
+    <div id="resumen" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+      <div class="bento-box" style="background: rgba(191,90,242,0.08); border: 1px solid rgba(191,90,242,0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag purple" style="color: #bf5af2; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">Effects That Elevate Brand Luxury</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #e2e8f0; line-height: 1.55;">
+          <li>🎯 <strong>Cero Efectos Gratuitos:</strong> Cada zoom o destello responde a una palabra clave del guion.</li>
+          <li>🔍 <strong>Zooms Ópticos Progresivos:</strong> Empujes del 1.0x al 1.35x en picos emocionales de tensión.</li>
+          <li>🌫️ <strong>Mapa de Profundidad (Depth Map):</strong> Desenfoque suave del fondo para aislar al orador con estilo cinematográfico.</li>
+          <li>⚡ <strong>Control de Densidad:</strong> Tú eliges si quieres un estilo sobrio institucional o hiper-dinámico para TikTok.</li>
+        </ul>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">FILOSOFÍA VFX</span>
+            <p>El espectador nunca debe pensar "mira qué efecto le pusieron", sino sentir el impacto orgánico de la idea revelada.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-box" style="background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag cyan" style="color: #38bdf8; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">🛠️ EN PROFUNDIDAD // ORQUESTACIÓN TÉCNICA</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">Shader Pipeline & Timing</h3>
+        <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 14px;">
+          VAV VFX syncs optical transforms with Whisper phonetic timestamps at 60 FPS via Metal GPU.
+        </p>
+        <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 12px; color: #38bdf8; border: 1px solid rgba(255,255,255,0.1);">
+          pipeline: [optical_push_in, depth_blur, halation_glow, chromatic_aberration_0_02]
+        </div>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">HARDWARE SHADERS</span>
+            <p>Compilado directamente en Metal Shading Language (MSL) para procesamiento a tiempo real en Apple Silicon M-Series.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selector de Densidad de Efectos -->
+    <section id="densidad" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #bf5af2; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #bf5af2; font-size: 0.8rem; font-weight: 800;">CONTROL DE RITMO // DENSIDAD DE EFECTOS</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">Select Effect & Motion Density</h2>
+        <p style="color: #94a3b8; font-size: 1rem; margin: 0;">Configura la intensidad visual según el canal de destino.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag gold">NIVEL 1 // SOBRIO & INSTITUCIONAL</span>
+          <h4 style="color: #fff; font-size: 1.25rem; margin: 8px 0;">Cinematic Minimal</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">1 efecto cada 12-15 segundos. Movimientos lentos y sutiles ideales para CEOs y YouTube 16:9.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Prioriza la serenidad visual y la autoridad sin sobrecargar la pantalla.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(56,189,248,0.4); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag cyan">NIVEL 2 // EQUILIBRADO (RECOMENDADO)</span>
+          <h4 style="color: #fff; font-size: 1.25rem; margin: 8px 0;">Dynamic Authority</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">1 efecto cada 4-6 segundos. Zooms de énfasis y re-encuadres para Reels y LinkedIn.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>El balance perfecto entre retención de audiencia y dignidad de marca.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(191,90,242,0.4); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag iris">NIVEL 3 // ALTA ENERGÍA</span>
+          <h4 style="color: #fff; font-size: 1.25rem; margin: 8px 0;">Hyper-Retention Rush</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">1 efecto cada 1.5-2.5 segundos. Glitches, sacudidas y saltos para TikTok y Shorts.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Diseñado para frenar el scroll agresivo en audiencias jóvenes de ritmo acelerado.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer class="apple-footer-v3">
+    <div class="footer-v3-inner">
+      <div class="footer-v3-columns">
+        <div class="footer-v3-col">
+          <h4>Synthesis Tools</h4>
+          <ul>
+            <li><a href="../vav/motions/index.html">13 Remotion Motion Families</a></li>
+            <li><a href="../vav/captions/index.html">Kinetic Subtitles Whisper</a></li>
+            <li><a href="../vav/cuts/index.html">18s Surgical Auto-Cuts</a></li>
+            <li><a href="../shim/index.html">0.00% GAP Metrology</a></li>
+          </ul>
+        </div>
+        <div class="footer-v3-col">
+          <h4>Intelligence & Orchestration</h4>
+          <ul>
+            <li><a href="../arquitecto/index.html">Arquitecto (Coach & Assistant)</a></li>
+            <li><a href="../yod/index.html">YOD (Niche Blindspot Radar)</a></li>
+            <li><a href="../contenido/index.html">Contenido (Merkle-DAG 8 Formats)</a></li>
+            <li><a href="../he/index.html">HE (50-Asset Batch Desk)</a></li>
+          </ul>
+        </div>
+        <div class="footer-v3-col">
+          <h4>Governance & Flow</h4>
+          <ul>
+            <li><a href="../../flujo/index.html">Content Lifecycle Journey</a></li>
+            <li><a href="../../gerencia/index.html">SQLite Executive Audit</a></li>
+            <li><a href="../../canon/index.html">Canon 37 TXT Library</a></li>
+            <li><a href="../../backup/index.html">Legacy Backup Snapshot</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-v3-bottom">
+        <p>Copyright © 2026 ABRAXAS OS. Deterministic Content Architecture on Apple Silicon.</p>
+        <p style="font-family: monospace; color: #d4af37; font-size: 11px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAV Framing: Multi-Angle Dynamic Framing from 1 Take — ABRAXAS OS</title>
+  <meta name="description" content="VAV Framing creates multi-camera angles and dynamic framing from a single static video take in ABRAXAS OS.">
+  <link rel="stylesheet" href="../../../../assets/abraxas-apple-canon.css">
+  <link rel="stylesheet" href="../../../../assets/apple-macbook-pro-v3.css">
+</head>
+<body class="theme-dark">
+  
+  <!-- Film Grain Overlay -->
+  <div class="film-grain-overlay"></div>
+
+  <!-- Apple Sticky Localnav -->
+  <nav class="apple-localnav" aria-label="Local Navigation">
+    <div class="localnav-inner">
+      <a href="../../../../index.html" class="localnav-brand">
+        <span>ABRAXAS OS</span>
+        <span class="tag">v3.0 PRO</span>
+      </a>
+      <div class="localnav-items">
+        <a href="../../../../index.html" class="localnav-a">Home</a>
+        <a href="../../../../v3/index.html" class="localnav-a">🍎 v3 MacBook Pro</a>
+        <a href="../../../../en/luna-comercial/index.html" class="localnav-a " style="color: #30d158; font-weight: 700;">🌙 Sales Moon & ROI</a>
+        <a href="../../../../en/branding-method/index.html" class="localnav-a " style="color: #bf5af2;">🎯 Branding YOD</a>
+        <a href="../../../../en/abraxas-core-example/index.html" class="localnav-a " style="color: #d4af37;">💎 Core Case</a>
+        <a href="../../../../en/criterios-roadmap/index.html" class="localnav-a ">🗺️ Roadmap</a>
+        <a href="../../../../en/ecosistema/index.html" class="localnav-a ">⚡ 8-in-1 Ecosystem</a>
+        <a href="../../../../en/gerencia/index.html" class="localnav-a ">💼 Governance & ROI</a>
+        <a href="../../../../en/flujo/index.html" class="localnav-a ">🔄 Lifecycle Flow</a>
+        <a href="../../../../en/tools/vav/motions/index.html" class="localnav-a ">🎬 Motions</a>
+        <a href="../../../../en/tools/vav/captions/index.html" class="localnav-a ">💬 Captions</a>
+        <a href="../../../../en/tools/vav/cuts/index.html" class="localnav-a ">✂️ Cuts 18s</a>
+        <a href="../../../../en/tools/vav/vfx/index.html" class="localnav-a " style="color: #bf5af2;">✨ VAV VFX</a>
+        <a href="../../../../en/tools/vav/framing/index.html" class="localnav-a active" style="color: #38bdf8;">📐 VAV Framing</a>
+        <a href="../../../../en/tools/shim/index.html" class="localnav-a ">🔍 SHIM (0% GAPs)</a>
+        <a href="../../../../en/tools/arquitecto/index.html" class="localnav-a ">👁️ Arquitecto</a>
+        <a href="../../../../en/canon/index.html" class="localnav-a " style="color: #d4af37;">📚 Canon 37 TXT</a>
+        <a href="../../../../en/backup/index.html" class="localnav-a ">🏛️ Backup</a>
+      </div>
+      <div class="localnav-right">
+        <a href="../../../../es/index.html" class="localnav-a" style="font-family: var(--font-mono); font-weight: 700; color: #fff;">ES</a>
+        <button id="btn-open-control-center" class="btn-control-center">
+          <span>⚙️ Menú</span>
+        </button>
+        <a href="../../../../index.html" class="btn-apple-cta">Launch OS</a>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div style="background: rgba(14, 14, 20, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 10px 1.5rem; position: sticky; top: 52px; z-index: 999; overflow-x: auto; scrollbar-width: none;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; gap: 8px; align-items: center; white-space: nowrap;">
+      <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #d4af37; font-weight: 800; margin-right: 6px;">IR A:</span>
+      <a href="#resumen" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">⚡ En 30s</a><a href="#basicos" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">📐 Encuadres Básicos</a><a href="#experimentales" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🧪 Encuadres Experimentales</a><a href="#apple-motion" class="btn-control-center" style="font-size: 0.76rem; padding: 4px 12px; background: rgba(255,255,255,0.06);">🍏 Heurística Apple Motion</a>
+    </div>
+  </div>
+  
+
+  <main class="section-container" style="padding-top: 60px; padding-bottom: 80px; max-width: 1240px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+    
+    <div class="section-title-wrap" style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-eyebrow" style="color: #38bdf8; font-weight: 800; letter-spacing: 0.1em; font-family: var(--font-mono);">VAV SÍNTESIS // INTELIGENCIA DE ENCUADRE Y MULTI-CÁMARA</span>
+      <h1 class="headline-gradient" style="font-size: clamp(2.5rem, 5.5vw, 4.2rem); margin-top: 10px;">
+        VAV Framing.<br/>Multi-Camera Dynamics from a Single Take.
+      </h1>
+      <p class="subhead" style="margin: 0 auto; max-width: 860px; color: #94a3b8; font-size: 1.1rem; line-height: 1.6;">
+        Record once facing the camera. VAV Framing computes gaze and speech emphasis, generating dynamic camera angles and experimental framings automatically.
+      </p>
+    </div>
+
+    <!-- Dual Summary: En 30s + Especificación -->
+    <div id="resumen" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+      <div class="bento-box" style="background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag cyan" style="color: #38bdf8; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">⚡ EN 30 SEGUNDOS // RESUMEN EJECUTIVO</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">Like a Virtual Cinematographer</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #e2e8f0; line-height: 1.55;">
+          <li>🎥 <strong>De 1 Toma a 5 Ángulos:</strong> Transforma un plano estático en una producción con ritmo cinematográfico.</li>
+          <li>👁️ <strong>Detección de Mirada y Énfasis:</strong> Sabe cuándo estás diciendo la frase clave para saltar al Close-Up.</li>
+          <li>📐 <strong>Encuadres Básicos & Experimentales:</strong> Ángulos de 45°, picados, contrapicados, regla de tercios y Dutch angles.</li>
+          <li>💎 <strong>Cero Pérdida 4K:</strong> Si grabas en 4K, los re-encuadres a 1080p mantienen el 100% de nitidez óptica.</li>
+        </ul>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">PRODUCTIVIDAD EN SET</span>
+            <p>Ahorra el costo y tiempo de montar 3 cámaras simultáneas o sincronizar claquetas de audio.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-box" style="background: rgba(212,175,55,0.08); border: 1px solid rgba(212,175,55,0.35); position: relative; padding: 2rem; border-radius: 16px;">
+        <button class="card-expand-btn" title="Expandir">+</button>
+        <span class="apple-card-tag gold" style="color: #d4af37; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800;">🛠️ EN PROFUNDIDAD // HEURÍSTICA APPLE MOTION</span>
+        <h3 style="font-size: 1.5rem; color: #fff; margin: 12px 0;">Spatial Facial Mapping</h3>
+        <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 14px;">
+          VAV Framing tracks facial landmarks and shoulders to keep eyes aligned with the golden ratio line.
+        </p>
+        <div style="background: #000; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 12px; color: #d4af37; border: 1px solid rgba(255,255,255,0.1);">
+          framingMatrix: { faceCenter: [540, 720], cropFactor: 1.28, goldenRatioY: 0.38 }
+        </div>
+        <div class="card-deepdive-drawer">
+          <div class="deepdive-content-box">
+            <span class="deepdive-tag">FRAME TRACKING</span>
+            <p>Aplica estabilización giroscópica virtual para que los movimientos de cabeza se sientan suaves y orgánicos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Catálogo de Encuadres Básicos vs Experimentales -->
+    <section id="basicos" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #38bdf8; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #38bdf8; font-size: 0.8rem; font-weight: 800;">CATÁLOGO DE PLANOS // BÁSICOS DE ALTA AUTORIDAD</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">Foundational Framing Styles</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(56,189,248,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag cyan">PLANO 01</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Plano Medio Frontal (1.0x)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">El plano neutro de partida para introducir la tesis inicial con calma y claridad.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Cámara a la altura de los ojos con encuadre de busto completo.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(212,175,55,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag gold">PLANO 02</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Close-Up Emocional (1.35x)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Acercamiento a rostro que corta en el gancho o en el punto de dolor para crear intimidad.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Incrementa la retención psicológica obligando a mirar los ojos del orador.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(191,90,242,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag iris">PLANO 03</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Ángulo 45° Desplazado</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Desplaza al sujeto a la izquierda o derecha para dejar espacio a gráficos y motions.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Regla de los tercios con reserva espacial para títulos y tarjetas Bento.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experimentales" style="margin-bottom: 4rem;">
+      <div style="border-left: 4px solid #bf5af2; padding-left: 1.5rem; margin-bottom: 2rem;">
+        <span style="font-family: var(--font-mono); color: #bf5af2; font-size: 0.8rem; font-weight: 800;">CATÁLOGO AVANZADO // PLANOS EXPERIMENTALES</span>
+        <h2 style="color: #fff; font-size: 2rem; margin: 6px 0;">Experimental & Disruptive Framings</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(255,69,58,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag ruby">PLANO EXPERIMENTAL 01</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Ángulo Picado (High Angle)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Simulación cenital sutil para deconstruir un error técnico o mostrar vulnerabilidad.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Genera sensación de análisis quirúrgico y deconstrucción de datos.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(48,209,88,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag emerald">PLANO EXPERIMENTAL 02</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Contrapicado de Autoridad (Low Angle)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Ángulo desde abajo que proyecta una imagen monumental de seguridad y liderazgo.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Ideal para el momento del Payoff y la presentación de la solución definitiva.</p></div></div>
+        </div>
+
+        <div class="spotlight-card" style="background: #090a10; border: 1px solid rgba(212,175,55,0.3); padding: 1.5rem; border-radius: 12px; position: relative;">
+          <button class="card-expand-btn" title="Expandir">+</button>
+          <span class="card-pill-tag gold">PLANO EXPERIMENTAL 03</span>
+          <h4 style="color: #fff; font-size: 1.2rem; margin: 8px 0;">Dutch Angle (Inclinación 4°)</h4>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Ligera rotación de cámara en momentos de contradicción dialéctica o misterio.</p>
+          <div class="card-deepdive-drawer"><div class="deepdive-content-box"><p>Despierta la mente del usuario rompiendo la monotonía horizontal.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer class="apple-footer-v3">
+    <div class="footer-v3-inner">
+      <div class="footer-v3-columns">
+        <div class="footer-v3-col">
+          <h4>Synthesis Tools</h4>
+          <ul>
+            <li><a href="../vav/motions/index.html">13 Remotion Motion Families</a></li>
+            <li><a href="../vav/captions/index.html">Kinetic Subtitles Whisper</a></li>
+            <li><a href="../vav/cuts/index.html">18s Surgical Auto-Cuts</a></li>
+            <li><a href="../shim/index.html">0.00% GAP Metrology</a></li>
+          </ul>
+        </div>
+        <div class="footer-v3-col">
+          <h4>Intelligence & Orchestration</h4>
+          <ul>
+            <li><a href="../arquitecto/index.html">Arquitecto (Coach & Assistant)</a></li>
+            <li><a href="../yod/index.html">YOD (Niche Blindspot Radar)</a></li>
+            <li><a href="../contenido/index.html">Contenido (Merkle-DAG 8 Formats)</a></li>
+            <li><a href="../he/index.html">HE (50-Asset Batch Desk)</a></li>
+          </ul>
+        </div>
+        <div class="footer-v3-col">
+          <h4>Governance & Flow</h4>
+          <ul>
+            <li><a href="../../flujo/index.html">Content Lifecycle Journey</a></li>
+            <li><a href="../../gerencia/index.html">SQLite Executive Audit</a></li>
+            <li><a href="../../canon/index.html">Canon 37 TXT Library</a></li>
+            <li><a href="../../backup/index.html">Legacy Backup Snapshot</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-v3-bottom">
+        <p>Copyright © 2026 ABRAXAS OS. Deterministic Content Architecture on Apple Silicon.</p>
+        <p style="font-family: monospace; color: #d4af37; font-size: 11px;">SHA-256: <code>91234741f0b3a1ac5bd7e4c0556fafa868d00769</code></p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
